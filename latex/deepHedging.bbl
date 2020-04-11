@@ -1,0 +1,105 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nyt/global//global/global}
+  \entry{finKont}{book}{}
+    \name{author}{1}{}{%
+      {{hash=BT}{%
+         family={Björk},
+         familyi={B\bibinitperiod},
+         given={Thomas},
+         giveni={T\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford}%
+    }
+    \strng{namehash}{BT1}
+    \strng{fullhash}{BT1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2009}
+    \field{labeldatesource}{year}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{edition}{Third edition}
+    \field{title}{Arbitrage Theory in Continuous Time}
+    \field{year}{2009}
+  \endentry
+
+  \entry{B-S-Paper}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BF}{%
+         family={Black},
+         familyi={B\bibinitperiod},
+         given={Fischer},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Scholes},
+         familyi={S\bibinitperiod},
+         given={Myron},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BFSM1}
+    \strng{fullhash}{BFSM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1973}
+    \field{labeldatesource}{year}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{number}{3}
+    \field{pages}{637\bibrangedash 654}
+    \field{title}{The Pricing of Options and Corporate Liabilities}
+    \verb{url}
+    \verb http://www.jstor.org/stable/1831029
+    \endverb
+    \field{volume}{81}
+    \field{journaltitle}{The Journal of Political Economy}
+    \field{year}{1973}
+    \field{urlday}{09}
+    \field{urlmonth}{02}
+    \field{urlyear}{2020}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Zucchi}{article}{}
+    \name{author}{1}{}{%
+      {{hash=ZK}{%
+         family={Zucchi},
+         familyi={Z\bibinitperiod},
+         given={Kristina},
+         giveni={K\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZK1}
+    \strng{fullhash}{ZK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{year}
+    \field{sortinit}{Z}
+    \field{sortinithash}{Z}
+    \field{title}{Did Derivatives Cause The Recession?}
+    \field{journaltitle}{Investopedia}
+    \field{year}{2019}
+  \endentry
+\enddatalist
+\endinput
