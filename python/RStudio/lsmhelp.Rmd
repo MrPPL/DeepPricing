@@ -1,0 +1,66 @@
+---
+title: "LSMAlgo"
+author: "Lind"
+date: "4/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+just inspiration:
+
+```{r}
+lsm <- function(n,d,S0, K, sigma, r, T){
+  # S0 = intial asset price
+  # K = strike price
+  # r = risk-free interest rate
+  # sigma = volatility
+  # T = maturity time
+  # n = number of paths simulated
+  # d = number of time steps in simulation
+  
+  s0 <- S0/K
+  dt = T/d
+  z = rnorm(n)
+  s.t = s0*exp((r-0.5*sigma^2)*T + sigma*z*T^(0.5))
+  s.t[(n+1):(2*n)] = s0*exp((r-0.5*sigma^2)*T - sigma*z*T^(0.5))
+  CC = pmax(1-s.t,0)
+  
+  payoffeu = exp(-r*T)*(CC[1:n]+CC[(n+1):(2*n)])/(2*K)
+  euprice = mean(payoffeu)
+  
+  for(k in (d-1):1){
+    z = rnorm(n)
+    mean = (log(s0)+k*log(s.t[1:n]))/(K+1)
+    vol = (k*dt/(K+1))^(0.5*z)
+    s.t.1 = exp(mean+sigma+vol)
+    mean = (log(s0)+k*log(s.t[(n+1):(2*n)]))/(k+1)
+    s.t.1[(n+1):(2*n)] = exp(mean-sigma*vol)
+    CE = pmax(1-s.t.1,0)
+    idx = (1:(2*n))[CE>0]
+    discountedCC = CC[idx]*exp(-r*dt)
+    basis1 <- exp(-s.t.1[idx]/2)
+    
+    basis2 <- basis1 * exp(1-s.t.1[idx])
+    
+    basis3 <- basis1 * (1-2*s.t.1[idx]+(s.t.1[idx]^2)/2)
+    
+    p = lm(discountedCC ~ basis1 + basis2 + basis3)$coefficients
+    estimatedCC = p[1] + p[2]*basis1 + p[3]*basis2 + p[4]*basis3
+    EF = rep(0, 2*n)
+    EF[idx] = (CE[idx]> estimatedCC)
+    CC = (EF==0)*CC * exp(-r*dt) + (EF==1)*CE
+    s.t = s.t.1
+  }
+  payoff = exp(-r*dt)*(CC[1:n]+CC[(n+1):(2*n)])/2
+  usprice = mean(payoff*K)
+  error = 1.96*sd(payoff*K)/sqrt(n)
+  earlyex = usprice - euprice
+  
+  return (data.frame(usprice, error, euprice))
+}
+lsm(n=1000,d=10,S0=1, K=1.1, sigma=0.2, r=0.06, T=1)
+```
+

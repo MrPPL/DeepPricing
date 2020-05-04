@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  11 MAR 2020 20:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  2 MAY 2020 17:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -113,13 +113,142 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 11--12
  []
 
 
+! LaTeX Error: Environment figure undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13 \begin{figure}
+                   [th]
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
 ! LaTeX Error: Missing \begin{document}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.13 I
+l.13 \begin{figure}[
+                    th]
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no ] in font nullfont!
+! Undefined control sequence.
+l.15 \includegraphics
+                     {Figures/brownianMotion.png}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no F in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no / in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no w in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no M in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no g in font nullfont!
+! Undefined control sequence.
+l.16 \decoRule
+              
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: \caption outside float.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 \caption
+             [A Wiener process trajectory]{}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no A in font nullfont!
+Missing character: There is no W in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no j in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+! LaTeX Error: \begin{document} ended by \end{figure}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.19 \end{figure}
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 13--20
+[]
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.21 I
       n the financial markets there is a lot of players and different types ...
 
 You're in trouble here.  Try typing  <return>  to proceed.
@@ -627,13 +756,13 @@ Missing character: There is no u in font nullfont!
 Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 13.
+(Font)              <7> on input line 21.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 13.
+(Font)              <5> on input line 21.
 ! Undefined control sequence.
 <recently read> \mathbb 
                         
-l.13 ...the equivalent martingale measure $\mathbb
+l.21 ...the equivalent martingale measure $\mathbb
                                                   {Q}$ to the objective meas...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -665,7 +794,7 @@ Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
 <recently read> \mathbb 
                         
-l.13 ...thbb{Q}$ to the objective measure $\mathbb
+l.21 ...thbb{Q}$ to the objective measure $\mathbb
                                                   {P}$), so we do not introd...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -801,7 +930,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no : in font nullfont!
 ! Undefined control sequence.
-l.14 \theoremstyle
+l.22 \theoremstyle
                   {assumption}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -826,7 +955,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.15 \begin{assumption}
+l.23 \begin{assumption}
                        {}\label{EfficientMarket}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -869,17 +998,17 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 13--17
+Overfull \hbox (20.0pt too wide) in paragraph at lines 21--25
 []
  []
 
 
-Overfull \hbox (7.90555pt too wide) in paragraph at lines 13--17
+Overfull \hbox (7.90555pt too wide) in paragraph at lines 21--25
 \OML/cmm/m/it/10 Q$
  []
 
 
-Overfull \hbox (7.80904pt too wide) in paragraph at lines 13--17
+Overfull \hbox (7.80904pt too wide) in paragraph at lines 21--25
 \OML/cmm/m/it/10 P$
  []
 
@@ -1182,7 +1311,7 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 6 in font nullfont!
 ! Undefined control sequence.
-l.23 (see p. 6 \parencite
+l.31 (see p. 6 \parencite
                          {finKont})
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1205,7 +1334,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.24 \end{assumption}
+l.32 \end{assumption}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1487,7 +1616,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.30 \subsection
+l.38 \subsection
                 {Financial Derivatives}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1502,7 +1631,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.30 \subsection{F
+l.38 \subsection{F
                   inancial Derivatives}
 You're in trouble here.  Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
@@ -1624,7 +1753,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 30--32
+Overfull \hbox (20.0pt too wide) in paragraph at lines 38--40
 []
  []
 
@@ -2043,7 +2172,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no y in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.39 \theoremstyle
+l.47 \theoremstyle
                   {definition}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2068,7 +2197,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.40 \begin{definition}
+l.48 \begin{definition}
                        {European Call Option:}\label{ECall}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2208,7 +2337,7 @@ Missing character: There is no v in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 39--42
+Overfull \hbox (20.0pt too wide) in paragraph at lines 47--50
 []
  []
 
@@ -2219,27 +2348,27 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.43 \begin{split}
+l.51 \begin{split}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-! LaTeX Error: \begin{equation} on input line 42 ended by \end{split}.
+! LaTeX Error: \begin{equation} on input line 50 ended by \end{split}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.45 \end{split}
+l.53 \end{split}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (124.9931pt too wide) detected at line 46
+Overfull \hbox (124.9931pt too wide) detected at line 54
 \OML/cmm/m/it/10 ^^^\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 S\OT1/cmr/m/n/10 (\OML/cm
 m/m/it/10 T\OT1/cmr/m/n/10 )) = []\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 S\OT1/cmr/
 m/n/10 (\OML/cmm/m/it/10 T\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/
@@ -2326,14 +2455,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.48 \end{definition}
+l.56 \end{definition}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.49 \parencite
+l.57 \parencite
                {finKont}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2349,7 +2478,7 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 ! Undefined control sequence.
-l.56 \subsection
+l.64 \subsection
                 {Self-financing portfolio (Without consumption)}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2567,7 +2696,7 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no : in font nullfont!
 ! Undefined control sequence.
-l.58 \theoremstyle
+l.66 \theoremstyle
                   {definition}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2592,7 +2721,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.59 \begin{definition}
+l.67 \begin{definition}
                        {Self-financing portfolio}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -2660,7 +2789,7 @@ Missing character: There is no ) in font nullfont!
 Missing character: There is no = in font nullfont!
 Missing character: There is no ( in font nullfont!
 ! Undefined control sequence.
-l.60 ...f N+1 assets: h(t)=($h_0(t),h_1(t), \dotsc
+l.68 ...f N+1 assets: h(t)=($h_0(t),h_1(t), \dotsc
                                                   , h_{N}$) is self-financin...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2689,17 +2818,17 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 56--61
+Overfull \hbox (20.0pt too wide) in paragraph at lines 64--69
 []
  []
 
 
-Overfull \hbox (24.62622pt too wide) in paragraph at lines 56--61
+Overfull \hbox (24.62622pt too wide) in paragraph at lines 64--69
 \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )$
  []
 
 
-Overfull \hbox (69.9528pt too wide) in paragraph at lines 56--61
+Overfull \hbox (69.9528pt too wide) in paragraph at lines 64--69
 \OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/cm
 m/m/it/10 ; h[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/cmm/m/i
 t/10 ; ; h[]$
@@ -2712,27 +2841,27 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.62 \begin{split}
+l.70 \begin{split}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-! LaTeX Error: \begin{equation} on input line 61 ended by \end{split}.
+! LaTeX Error: \begin{equation} on input line 69 ended by \end{split}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.64 \end{split}
+l.72 \end{split}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (105.8102pt too wide) detected at line 65
+Overfull \hbox (105.8102pt too wide) detected at line 73
 []\OML/cmm/m/it/10 dV[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) = [
 ] \OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\OML/
 cmm/m/it/10 dS[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )
@@ -2805,7 +2934,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.68 \end{definition}
+l.76 \end{definition}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3030,28 +3159,28 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (9.46123pt too wide) in paragraph at lines 65--70
+Overfull \hbox (9.46123pt too wide) in paragraph at lines 73--78
  $\OML/cmm/m/it/10 S[]$
  []
 
 
-Overfull \hbox (15.62338pt too wide) in paragraph at lines 65--70
+Overfull \hbox (15.62338pt too wide) in paragraph at lines 73--78
 \OML/cmm/m/it/10 i[]th$
  []
 
 
-Overfull \hbox (35.18173pt too wide) in paragraph at lines 65--70
+Overfull \hbox (35.18173pt too wide) in paragraph at lines 73--78
 \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 ) =
  []
 
 
-Overfull \hbox (67.00647pt too wide) in paragraph at lines 65--70
+Overfull \hbox (67.00647pt too wide) in paragraph at lines 73--78
 [][] \OML/cmm/m/it/10 h[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )\O
 ML/cmm/m/it/10 S[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 t\OT1/cmr/m/n/10 )$
  []
 
 ! Undefined control sequence.
-l.74 \subsection
+l.82 \subsection
                 {Arbitrage}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3257,7 +3386,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.76 \theoremstyle
+l.84 \theoremstyle
                   {definition}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3282,7 +3411,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.77 \begin{definition}
+l.85 \begin{definition}
                        {Arbitrage:}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3373,7 +3502,7 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no t in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 74--79
+Overfull \hbox (20.0pt too wide) in paragraph at lines 82--87
 []
  []
 
@@ -3384,27 +3513,27 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.80 \begin{split}
+l.88 \begin{split}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-! LaTeX Error: \begin{equation} on input line 79 ended by \end{split}.
+! LaTeX Error: \begin{equation} on input line 87 ended by \end{split}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.84 \end{split}
+l.92 \end{split}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-Overfull \hbox (205.3505pt too wide) detected at line 85
+Overfull \hbox (205.3505pt too wide) detected at line 93
 []\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (0) = 0[] \OML/cmm/m/it/10 P\OT1/cmr/m/n/
 10 (\OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T\OT1/cmr/m/n/10 ) \O
 MS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 0) = 1[] \OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (
@@ -3489,7 +3618,7 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no 9 in font nullfont!
 Missing character: There is no 6 in font nullfont!
 ! Undefined control sequence.
-l.87 (see p. 96 \parencite
+l.95 (see p. 96 \parencite
                           {finKont})
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3512,7 +3641,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.88 \end{definition}
+l.96 \end{definition}
                      
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -3579,7 +3708,7 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no o in font nullfont!
 Missing character: There is no n in font nullfont!
 ! Undefined control sequence.
-l.89 ...cing portfolio fullfilling equation \eqref
+l.97 ...cing portfolio fullfilling equation \eqref
                                                   {Arbitrage} would give the...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3925,8 +4054,8 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.95 \subsection
-                {Complete Market and Hedging}
+l.103 \subsection
+                 {Complete Market and Hedging}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -4129,7 +4258,7 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no i in font nullfont!
 Missing character: There is no m in font nullfont!
 ! Undefined control sequence.
-l.96 ...efine a hedge for an simply T-claim \eqref
+l.104 ...fine a hedge for an simply T-claim \eqref
                                                   {tClaim}.
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4145,8 +4274,8 @@ Missing character: There is no i in font nullfont!
 Missing character: There is no m in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.97 \theoremstyle
-                  {definition}
+l.105 \theoremstyle
+                   {definition}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -4170,8 +4299,8 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.98 \begin{definition}
-                       {Hedging and completeness for T-claim:}
+l.106 \begin{definition}
+                        {Hedging and completeness for T-claim:}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
@@ -4273,7 +4402,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 95--100
+Overfull \hbox (20.0pt too wide) in paragraph at lines 103--108
 []
  []
 
@@ -4287,12 +4416,12 @@ Missing character: There is no . in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (38.80327pt too wide) in paragraph at lines 101--102
+Overfull \hbox (38.80327pt too wide) in paragraph at lines 109--110
 \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 T\OT1/cmr/m/n/10 ) =
  []
 
 
-Overfull \hbox (9.06943pt too wide) in paragraph at lines 101--102
+Overfull \hbox (9.06943pt too wide) in paragraph at lines 109--110
 \OML/cmm/m/it/10 X$ 
  []
 
@@ -4452,7 +4581,7 @@ Missing character: There is no 1 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no 5 in font nullfont!
 ! Undefined control sequence.
-l.105 (see p. 115 \parencite
+l.113 (see p. 115 \parencite
                             {finKont})
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4475,7 +4604,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.106 \end{definition}
+l.114 \end{definition}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -4600,7 +4729,7 @@ Missing character: There is no l in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no . in font nullfont!
 ! Undefined control sequence.
-l.113 \section
+l.121 \section
               {Black-Scholes Formula two dimensionel}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4706,7 +4835,7 @@ Missing character: There is no : in font nullfont!
 ! Undefined control sequence.
 <recently read> \theoremstyle 
                               
-l.115 \theoremstyle
+l.123 \theoremstyle
                    {assumption}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4731,7 +4860,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.116 \begin{assumption}
+l.124 \begin{assumption}
                         {Black-Scholes assumptions}\label{BS-Assumption}
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -4806,7 +4935,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no o in font nullfont!
 ! Undefined control sequence.
-l.117 ...ng ideal conditions in addition to \eqref
+l.125 ...ng ideal conditions in addition to \eqref
                                                   {EfficientMarket}:
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -4831,7 +4960,7 @@ Missing character: There is no e in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no : in font nullfont!
 
-Overfull \hbox (20.0pt too wide) in paragraph at lines 113--118
+Overfull \hbox (20.0pt too wide) in paragraph at lines 121--126
 []
  []
 
@@ -4957,7 +5086,7 @@ Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
 Missing character: There is no . in font nullfont!
 
-Overfull \hbox (6.0729pt too wide) in paragraph at lines 120--120
+Overfull \hbox (6.0729pt too wide) in paragraph at lines 128--128
 \OML/cmm/m/it/10 ^^[$ 
  []
 
@@ -5050,7 +5179,7 @@ Missing character: There is no s in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no e in font nullfont!
 ! Undefined control sequence.
-l.121 ...is a simple option ("European" see \eqref
+l.129 ...is a simple option ("European" see \eqref
                                                   {ECall}).
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5075,7 +5204,7 @@ Missing character: There is no 6 in font nullfont!
 Missing character: There is no 4 in font nullfont!
 Missing character: There is no 0 in font nullfont!
 ! Undefined control sequence.
-l.123 (see p. 640 \parencite
+l.131 (see p. 640 \parencite
                             {B-S-Paper})
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5100,14 +5229,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.124 \end{assumption}
+l.132 \end{assumption}
                       
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.126 \parencite
+l.134 \parencite
                 {finKont}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -5130,10 +5259,10 @@ Missing character: There is no t in font nullfont!
 
  
 Here is how much of TeX's memory you used:
- 18 strings out of 492982
- 263 string characters out of 6134896
- 57920 words of memory out of 5000000
- 3684 multiletter control sequences out of 15000+600000
+ 20 strings out of 492982
+ 278 string characters out of 6134896
+ 58920 words of memory out of 5000000
+ 3686 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  18i,3n,12p,823b,88s stack positions out of 5000i,500n,10000p,200000b,80000s
