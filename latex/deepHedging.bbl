@@ -80,6 +80,70 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
+  \entry{binomial-Paper}{article}{}
+    \name{author}{2}{}{%
+      {{hash=CJ}{%
+         family={Cox},
+         familyi={C\bibinitperiod},
+         given={John},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=SRMR}{%
+         family={Stephen\bibnamedelima Ross},
+         familyi={S\bibinitperiod\bibinitdelim R\bibinitperiod},
+         given={Mark\bibnamedelima Rubinstein},
+         giveni={M\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{CJSRMR1}
+    \strng{fullhash}{CJSRMR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1979}
+    \field{labeldatesource}{year}
+    \field{sortinit}{C}
+    \field{sortinithash}{C}
+    \field{pages}{229\bibrangedash 263}
+    \field{title}{Option princing: A simplified approach}
+    \field{volume}{7}
+    \field{journaltitle}{Journal of Financial Economics}
+    \field{year}{1979}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Merton73}{article}{}
+    \name{author}{1}{}{%
+      {{hash=MRC}{%
+         family={Merton},
+         familyi={M\bibinitperiod},
+         given={Robert\bibnamedelima C.},
+         giveni={R\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MRC1}
+    \strng{fullhash}{MRC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1973}
+    \field{labeldatesource}{year}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{number}{1}
+    \field{pages}{141\bibrangedash 183}
+    \field{title}{Theory of Rational Option Pricing}
+    \verb{url}
+    \verb http://links.jstor.org/sici?sici=0005-8556%28197321%294%3A1%3C141%3AT
+    \verb OROP%3E2.0.CO%3B2-0
+    \endverb
+    \field{volume}{4}
+    \field{journaltitle}{The Bell Journal of Economics and Management Science}
+    \field{year}{1973}
+    \field{urlday}{14}
+    \field{urlmonth}{05}
+    \field{urlyear}{2020}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{Zucchi}{article}{}
     \name{author}{1}{}{%
       {{hash=ZK}{%

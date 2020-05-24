@@ -18,7 +18,8 @@
 \label{fig:BM}
 \end{figure}
 
-In the financial markets there is a lot of players and different types of investments. The classical investments are bonds and stocks, where you either lending or buying equity. The big players are banks, investmentbanks, insurance companies and cooperates. The derivatives are a function based on the underlying assets e.g. the classical investments mentioned. This function can be constructed in many ways, hence it gives more options to construct your portfolio. When pricing financial product we use the market to price derivatives (This correspond to the equivalent martingale measure $\mathbb{Q}$ to the objective measure $\mathbb{P}$), so we do not introduce arbitrage to the market. In the classic Black Scholes formula for European options, we will assume following about the market:
+
+In the financial markets there is a lot of players and different types of investments. The classical investments are bonds and stocks, where you either lending or buying equity. The big players are banks, investment banks, insurance companies and corporations. The derivatives are depending on an underlying asset, where the dependency is specified in the contract. The options discussion in the introduction are all depending on a underlying stock. The contract can be constructed in many ways, hence it gives more options to construct your portfolio (see Appendix \ref{AppendixA} for examples). When pricing financial product we use the market to price derivatives (This correspond to the equivalent martingale measure $\mathbb{Q}$ to the objective measure $\mathbb{P}$), so we do not introduce arbitrage to the market. In the classic Black Scholes formula for European options, we will assume following about the market:
 \theoremstyle{assumption}
 \begin{assumption}{}\label{EfficientMarket}
 We assume following institutional facts:
@@ -30,7 +31,7 @@ We assume following institutional facts:
 \end{enumerate}
 (see p. 6 \parencite{finKont})
 \end{assumption}
-We can discuss these assumptions at length, but in order to progress mathematically, we need to accept them for now. There is some justification for luquidity on vanilla options, because those options gets traded on large scale. Before going into the mathematics of the Black Scholes formula, we need to introduce key concepts.
+We can discuss these assumptions at length, but in order to progress mathematically, we need to accept them for now. There is some justification for liquidity on vanilla options, because those options gets traded on large scale. Before going into the mathematics of the Black Scholes formula, we need to introduce key concepts.
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
@@ -41,12 +42,11 @@ There a broad range of different derivatives. In this thesis, we will mainly div
 \item Simple derivatives (T-claims)
 \item Exotic derivatives
 \end{enumerate}
-The first class is the simple derivaties or T-claims. These are simple because you can only exercise them at maturity. The exotic derivatives is all kind of functions on the underlying assets, where you have more options than exercise at termination time. There are so many derivatives, hence the list will not be comprehensive at all. Some important simple derivatives will be the European calls and puts, because we can price analytically.
-
+The first class is the simple derivaties or T-claims. These are simple because you can only exercise them at maturity (time T). The exotic derivatives is all kind of functions on the underlying assets, where you have more options than exercise at termination time. There are so many derivatives, hence the list will not be comprehensive at all. Some important simple derivatives will be the European calls and puts, because we can price analytically.
 
 \theoremstyle{definition}
 \begin{definition}{European Call Option:}\label{ECall}
-A Europeann call option is a option where the owner of the option has the option to exercise at maturity. The function for the derivative:
+A Europeann call option is a option where the owner of the option has the option to exercise at maturity. The contract function for the derivative:
 \begin{equation}
 \begin{split}
 \phi(S(T))=\max\{S(T)-K, 0\}
@@ -54,6 +54,8 @@ A Europeann call option is a option where the owner of the option has the option
 \end{equation}
 Where S(T) is the price of underlying asset at maturity and K is the agreed strike price.
 \end{definition}
+For illustration of above contract see appendix \ref{AppendixA}.
+
 \parencite{finKont}
 
 
@@ -65,7 +67,8 @@ Where S(T) is the price of underlying asset at maturity and K is the agreed stri
 A self-financing portfolio h, is a portfolio h which doesn't get any external injection of money. h is the number of each assets in our portfolio. We denote $V^{h}(t)$ the value of our portfolio h at time t, hence:
 \theoremstyle{definition}
 \begin{definition}{Self-financing portfolio}
-A portfolio consisting of N+1 assets: h(t)=($h_0(t),h_1(t), \dotsc, h_{N}$) is self-financing if:
+A portfolio consisting of N+1 assets: \\
+h(t)=($h_0(t),h_1(t), \dotsc, h_{N}$) is self-financing if:
 \begin{equation}\label{SF}
 \begin{split}
 dV^{h}(t)=\sum_{i=0}^{N} h_{i}(t) dS_{i}(t)
@@ -80,7 +83,7 @@ The important takeaway is that a S-F portfolio is kind of a budget restriction. 
 %	SUBSECTION 3
 %-----------------------------------
 \subsection{Arbitrage}
-Arbitrage is the financial term for a "free lunch". An investor can profit without bearing risk, if there is arbitrage on the market. In order to mispricing of new derivatives we want to price derivatives to be arbitrage free.  
+Arbitrage is the financial term for a "free lunch". An investor can profit without bearing risk, if there is arbitrage on the market. In order to avoid making a "money machine", we want to price derivatives to be arbitrage free.  
 \theoremstyle{definition}
 \begin{definition}{Arbitrage:}
 An arbitrage possibility on a financial market is a self-financed portfolio h suct that
@@ -94,7 +97,7 @@ P(V^{h}(T)>0)>1
 We say that the market is arbitrage free if there aro no arbitrage possibilities.\\
 (see p. 96 \parencite{finKont})
 \end{definition}
-From the definition a self-financing portfolio fullfilling equation \eqref{Arbitrage} would give the possiblility for arbitrage. The investor in this portfolio starts with 0 dollars, and without injecting any money, the investor is certain of not losing any money. In addition he has a positive probality by ending up with more than 0 on terminate time. Arbitrage is a way to price financial products "fair". To price "fair" and hedge againt risk will be the topics for this thesis.
+From the definition a self-financing portfolio fullfilling equation \eqref{Arbitrage} would give the possiblility for arbitrage. The investor in this portfolio starts with 0 dollars, and without injecting any money, the investor is certain of not losing any money. In addition he has a positive probability by ending up with more than 0 at maturity. Arbitrage is a way to price financial products "fair". To price "fair" and hedge againt risk will be the topics for this thesis.
 
 %-----------------------------------
 %	SUBSECTION 4
@@ -112,7 +115,7 @@ I.e. h is an hedge portfolio for X if it is guaranteed to pay in all circumstanc
 The market is complete, if every derivative is hedgable.
 (see p. 115 \parencite{finKont})
 \end{definition}
-Hedging and completeness means the same for other derivatives than T-claims, but for now we only the T-claim for the B-S Analytical formula.
+Hedging and completeness means the same for other derivatives than T-claims, but for now we will only show the concepts for the T-claim.
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
@@ -131,4 +134,48 @@ We assume following ideal conditions in addition to \eqref{EfficientMarket}:
 (see p. 640 \parencite{B-S-Paper})
 \end{assumption}
 
+We assume the underlying stock follows a geometric brownian motion:
+\begin{equation}\label{GBM}
+\begin{split}
+S(t)=S(0) \cdot \exp \bigg( \alpha -\frac{1}{2} \sigma^2) t + \sigma W(t) \bigg)
+\end{split}
+\end{equation}
+The $\mu$ and $\sigma$ have clear empirical meanings.
+
+
+\begin{theorem}\label{BS-PDE}
+blabla
+\begin{align}
+F_t(t,s)+rsF_s(t,s)+\frac{1}{2} s^2 \sigma^2(t,s)F_{ss}(t,s) -rF(t,s)&=0\\
+F(T,s)&=\Phi(s)
+\end{align}
+\end{theorem}
+The below proposition is a consequence of the B-S equation:
+
+\theoremstyle{proposition}
+\begin{proposition}{Black-Scholes: }\label{BS-price-EuroCall}
+The price of a European call option with strike K and maturity T is given by the formula  $\Pi(t)=F(t,S(t)$, where
+\begin{align*}
+F(t,s)=s \cdot N(d_1(t,s)) - e^{-r(T-t)}\cdot K \cdot N(d_2(t,s))
+\end{align*}
+N is the cumulative distribution function of a standard normal distribution $\mathcal{N}(0,1)$ and
+\begin{align*}
+d_1(t,s)=\frac{1}{\sigma\cdot \sqrt{T-t}} \cdot \bigg( \ln(\frac{s}{K}) + (r+\frac{1}{w} \sigma^2) (T-t) \bigg)\\
+d_2(t,s)=d_1(s,t)-\sigma \sqrt{T-t}
+\end{align*}
+(see p. 105 \parencite{	finKont})
+\end{proposition}
+
+
+The above formula for the European call option is actually the same for an American call option, but is not true for an American put option or for call options paying dividends. The result for the American call option was shown by Merton \parencite{Merton73}, that the intrinsic value is never greater than the worth of the option given by the risk-neutral pricing formula.z
 \parencite{finKont}
+
+\section{Mathematical framework}
+The underlying stock is a random process, which we do not know in advance.
+
+\subsection{Fundamental theorems of asset pricing}
+Indispensable tool
+
+
+\subsection{Equivalent martingale measure}
+

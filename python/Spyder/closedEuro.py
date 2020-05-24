@@ -20,7 +20,7 @@ def priceECall(t,s, sigma, K, r, T):
 def priceEPut(t,s, sigma, K, r, T):
     return (K*np.exp(-r*(T-t)) + priceECall(t,s, sigma, K, r, T) - s)
 
-print(priceEPut(0,36,0.2,40,0.06,1))
+#print(priceEPut(0,36,0.2,40,0.06,1))
 #nice it worked
 
 #Present result nicely with pandas
@@ -42,4 +42,4 @@ for s in stockValues:
             dict1['Time to maturity'].append(T)
             dict1['Closed form European'].append(priceEPut(0,s,volatility,40,0.06,T))
             
-print(DataFrame(dict1))
+#print(DataFrame(dict1))

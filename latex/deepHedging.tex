@@ -57,6 +57,8 @@ headsepline, % Uncomment to get a line under the header
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 
+\theoremstyle{proposition}
+\newtheorem{proposition}{Proposition}[section]
 
 \newtheorem*{remark}{Remark}
 
@@ -236,6 +238,10 @@ The acknowledgments and the people to thank go here, don't forget to include you
 \textbf{GBM} & \textbf{G}eometric \textbf{B}rownian \textbf{M}otion
 \end{abbreviations}
 
+
+%----------------------------------------------------------------------------------------
+%	SYMBOLS
+%----------------------------------------------------------------------------------------
 \begin{symbols}{lll} % Include a list of Symbols (a three column table)
 c &	European call option price \\
 p &	European put option price \\
@@ -246,14 +252,28 @@ $\sigma$ &	Volatility of stock price \\
 C &	American Call option price \\
 P &	American Put option price \\
 $S_T$ &Stock price at option maturity \\
-r &	Risk-free rate for maturity T with cont comp \\
+r &	Continuous compounding risk-free rate \\
 %Symbol & Name & Unit \\
 $V^{h}(t)$ & Value process\\
 $X$ & Simple Derivative\\
+$\Phi$ & Contract function\\
+$W_t$ & Weiner process (a synonym brownian motion).\\
 \addlinespace % Gap to separate the Roman symbols from the Greek
-
-
 \end{symbols}
+
+%----------------------------------------------------------------------------------------
+%	Option Vocabulary DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+%\begin{constants}{lr@{${}={}$}l} % The list of physical constants is a three column table
+
+% The \SI{}{} command is provided by the siunitx package, see its documentation for instructions on how to use it
+
+%Vanilla option: & Call or put option that has no special or unusual features.\\
+%Constant Name & $Symbol$ & $Constant Value$ with units\\
+
+%\end{constants}
+
 
 %----------------------------------------------------------------------------------------
 %	DEDICATION
@@ -274,7 +294,7 @@ $X$ & Simple Derivative\\
 
 \include{Chapters/Chapter1}
 \include{Chapters/Chapter2} 
-%\include{Chapters/Chapter3}
+\include{Chapters/Chapter3}
 %\include{Chapters/Chapter4} 
 %\include{Chapters/Chapter5} 
 %\include{Chapters/Chapterinfo}

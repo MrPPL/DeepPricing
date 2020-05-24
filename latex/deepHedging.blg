@@ -4,6 +4,7 @@ The top-level auxiliary file: deepHedging.aux
 The style file: biblatex.bst
 A level-1 auxiliary file: Chapters/Chapter1.aux
 A level-1 auxiliary file: Chapters/Chapter2.aux
+A level-1 auxiliary file: Chapters/Chapter3.aux
 A level-1 auxiliary file: Appendices/AppendixA.aux
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -24,44 +25,44 @@ Database file #2: thesis.bib
 Biblatex version: 3.8
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 4 entries,
+You've used 6 entries,
             6268 wiz_defined-function locations,
-            1204 strings with 8996 characters,
-and the built_in function-call counts, 14876 in all, are:
-= -- 731
-> -- 594
-< -- 101
-+ -- 502
-- -- 347
-* -- 972
-:= -- 1563
+            1223 strings with 9399 characters,
+and the built_in function-call counts, 26497 in all, are:
+= -- 1382
+> -- 1055
+< -- 171
++ -- 913
+- -- 651
+* -- 1862
+:= -- 2745
 add.period$ -- 0
-call.type$ -- 4
-change.case$ -- 38
-chr.to.int$ -- 55
-cite$ -- 6
-duplicate$ -- 1521
-empty$ -- 1391
-format.name$ -- 162
-if$ -- 2964
+call.type$ -- 6
+change.case$ -- 60
+chr.to.int$ -- 81
+cite$ -- 10
+duplicate$ -- 2596
+empty$ -- 2490
+format.name$ -- 276
+if$ -- 5218
 int.to.chr$ -- 0
-int.to.str$ -- 7
+int.to.str$ -- 11
 missing$ -- 0
-newline$ -- 105
-num.names$ -- 132
-pop$ -- 1027
+newline$ -- 169
+num.names$ -- 214
+pop$ -- 1680
 preamble$ -- 1
-purify$ -- 47
+purify$ -- 76
 quote$ -- 0
-skip$ -- 576
+skip$ -- 918
 stack$ -- 0
-substring$ -- 1030
-swap$ -- 471
-text.length$ -- 103
-text.prefix$ -- 3
+substring$ -- 2247
+swap$ -- 823
+text.length$ -- 167
+text.prefix$ -- 5
 top$ -- 1
-type$ -- 124
+type$ -- 192
 warning$ -- 0
-while$ -- 196
+while$ -- 313
 width$ -- 0
-write$ -- 102
+write$ -- 164

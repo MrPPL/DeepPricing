@@ -11,5 +11,15 @@
 \contentsline {subsection}{\numberline {2.1.3}Arbitrage}{5}{subsection.25}
 \contentsline {subsection}{\numberline {2.1.4}Complete Market and Hedging}{5}{subsection.28}
 \contentsline {section}{\numberline {2.2}Black-Scholes Formula two dimensionel}{5}{section.30}
-\contentsline {chapter}{\numberline {A}Frequently Asked Questions}{7}{appendix.32}
-\contentsline {chapter}{Bibliography}{9}{appendix*.33}
+\contentsline {section}{\numberline {2.3}Mathematical framework}{6}{section.37}
+\contentsline {subsection}{\numberline {2.3.1}Fundamental theorems of asset pricing}{6}{subsection.38}
+\contentsline {subsection}{\numberline {2.3.2}Equivalent martingale measure}{6}{subsection.39}
+\contentsline {chapter}{\numberline {3}Classical numerical results}{7}{chapter.40}
+\contentsline {section}{\numberline {3.1}Binomial Pricing model}{7}{section.41}
+\contentsline {subsection}{\numberline {3.1.1}Arbitrage and hedging in binomial model}{7}{subsection.42}
+\contentsline {subsection}{\numberline {3.1.2}Numerical results}{8}{subsection.43}
+\contentsline {section}{\numberline {3.2}Least Square Monte Carlo Method}{8}{section.44}
+\contentsline {section}{\numberline {3.3}Comparision}{8}{section.45}
+\contentsline {chapter}{\numberline {A}Option contracts}{9}{appendix.46}
+\contentsline {section}{\numberline {A.1}European Call and Put}{9}{section.47}
+\contentsline {chapter}{Bibliography}{11}{appendix*.50}

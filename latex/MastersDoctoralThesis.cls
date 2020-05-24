@@ -479,12 +479,12 @@ KOMA-script documentation for details.}]{fancyhdr}
 
 
 %----------------------------------------------------------------------------------------
-%	PHYSICAL CONSTANTS PAGE DESIGN
+%	Option vocabulary PAGE DESIGN
 %----------------------------------------------------------------------------------------
 
-\newcommand{\constantsname}{Physical Constants}
-\providecaptionname{english,british,american}{\constantsname}{Physical Constants}
-\providecaptionname{ngerman,german,austrian,naustrian}{\constantsname}{Physikalische Konstanten}
+\newcommand{\constantsname}{Option Vocabulary}
+\providecaptionname{english,british,american}{\constantsname}{Option Vocabulary}
+\providecaptionname{ngerman,german,austrian,naustrian}{\constantsname}{Option Vocabulary}
 
 \NewDocumentEnvironment{constants}{ m }{%
 	\ifbool{nolistspace}{\begingroup\singlespacing}{}
