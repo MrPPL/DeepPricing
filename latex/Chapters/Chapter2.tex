@@ -19,7 +19,7 @@
 \end{figure}
 
 
-In the financial markets there is a lot of players and different types of investments. The classical investments are bonds and stocks, where you either lending or buying equity. The big players are banks, investment banks, insurance companies and corporations. The derivatives are depending on an underlying asset, where the dependency is specified in the contract. The options discussion in the introduction are all depending on a underlying stock. The contract can be constructed in many ways, hence it gives more options to construct your portfolio (see Appendix \ref{AppendixA} for examples). When pricing financial product we use the market to price derivatives (This correspond to the equivalent martingale measure $\mathbb{Q}$ to the objective measure $\mathbb{P}$), so we do not introduce arbitrage to the market. In the classic Black Scholes formula for European options, we will assume following about the market:
+In the financial markets there is a lot of players and different types of investments. The classical investments are bonds and stocks, where you either lending or buying equity. The big players are commercial banks, investment banks, insurance companies and pension funds. The derivatives are depending on an underlying asset, where the dependency is specified in the contract. The options discussion in the introduction are all depending on a underlying stock. The contract can be constructed in many ways, hence it gives more options to construct your portfolio (see Appendix \ref{AppendixA} for examples). When pricing financial product we use the market to price derivatives (This correspond to the equivalent martingale measure $\mathbb{Q}$ to the objective measure $\mathbb{P}$), so we do not introduce arbitrage to the market. In the classic Black Scholes formula for European options, we will assume following about the market:
 \theoremstyle{assumption}
 \begin{assumption}{}\label{EfficientMarket}
 We assume following institutional facts:
@@ -135,15 +135,18 @@ We assume following ideal conditions in addition to \eqref{EfficientMarket}:
 \end{assumption}
 
 We assume the underlying stock follows a geometric brownian motion:
+$dS(t)=\alpha S dt + \sigma S dW_t$ where the solution to the SDE is given as
 \begin{equation}\label{GBM}
 \begin{split}
-S(t)=S(0) \cdot \exp \bigg( \alpha -\frac{1}{2} \sigma^2) t + \sigma W(t) \bigg)
+S(t)=S(0) \cdot \exp \bigg( (\alpha -\frac{1}{2} \sigma^2) t + \sigma W(t) \bigg)
 \end{split}
 \end{equation}
+
 The $\mu$ and $\sigma$ have clear empirical meanings.
 
 
 \begin{theorem}\label{BS-PDE}
+\textbf{Black-Scholes PDE:}
 blabla
 \begin{align}
 F_t(t,s)+rsF_s(t,s)+\frac{1}{2} s^2 \sigma^2(t,s)F_{ss}(t,s) -rF(t,s)&=0\\
@@ -153,8 +156,8 @@ F(T,s)&=\Phi(s)
 The below proposition is a consequence of the B-S equation:
 
 \theoremstyle{proposition}
-\begin{proposition}{Black-Scholes: }\label{BS-price-EuroCall}
-The price of a European call option with strike K and maturity T is given by the formula  $\Pi(t)=F(t,S(t)$, where
+\begin{proposition}{}\label{BS-price-EuroCall}
+\textbf{Black-Scholes formula for call option:} The price of a European call option with strike K and maturity T is given by the formula  $\Pi(t)=F(t,S(t)$, where
 \begin{align*}
 F(t,s)=s \cdot N(d_1(t,s)) - e^{-r(T-t)}\cdot K \cdot N(d_2(t,s))
 \end{align*}
@@ -167,15 +170,13 @@ d_2(t,s)=d_1(s,t)-\sigma \sqrt{T-t}
 \end{proposition}
 
 
-The above formula for the European call option is actually the same for an American call option, but is not true for an American put option or for call options paying dividends. The result for the American call option was shown by Merton \parencite{Merton73}, that the intrinsic value is never greater than the worth of the option given by the risk-neutral pricing formula.z
-\parencite{finKont}
-
-\section{Mathematical framework}
-The underlying stock is a random process, which we do not know in advance.
-
-\subsection{Fundamental theorems of asset pricing}
-Indispensable tool
+The above formula for the European call option is actually the same for an American call option, but is not true for an American put option or for call options paying dividends. The result for the American call option was shown by Merton \parencite{Merton73}, that the intrinsic value is never greater than the worth of the option given by the risk-neutral valuation formula \parencite{finKont}.
 
 
-\subsection{Equivalent martingale measure}
 
+\begin{theorem}\label{RNVF}
+\textbf{Risk-neutral valuation formula:} Given Q is the EMM
+\begin{align}
+\Pi(t, X)= exp(-r(T-t))\cdot E_{t,x}^Q[X]
+\end{align}
+\end{theorem}

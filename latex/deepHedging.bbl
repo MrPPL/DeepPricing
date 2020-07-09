@@ -80,6 +80,60 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
+  \entry{Buffett02}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BW}{%
+         family={Buffett},
+         familyi={B\bibinitperiod},
+         given={Warren},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BW1}
+    \strng{fullhash}{BW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2002}
+    \field{labeldatesource}{year}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Berkshire Hathaway's (BRK.B) annual letters to shareholders}
+    \verb{url}
+    \verb https://www.berkshirehathaway.com/letters/2002pdf.pdf
+    \endverb
+    \field{year}{2002}
+    \field{urlday}{23}
+    \field{urlmonth}{06}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{Buffett08}{article}{}
+    \name{author}{1}{}{%
+      {{hash=BW}{%
+         family={Buffett},
+         familyi={B\bibinitperiod},
+         given={Warren},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BW1}
+    \strng{fullhash}{BW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2008}
+    \field{labeldatesource}{year}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{title}{Berkshire Hathaway's (BRK.B) annual letters to shareholders}
+    \verb{url}
+    \verb https://www.berkshirehathaway.com/letters/2008ltr.pdf
+    \endverb
+    \field{year}{2008}
+    \field{urlday}{23}
+    \field{urlmonth}{06}
+    \field{urlyear}{2020}
+  \endentry
+
   \entry{binomial-Paper}{article}{}
     \name{author}{2}{}{%
       {{hash=CJ}{%
@@ -109,6 +163,60 @@
     \field{journaltitle}{Journal of Financial Economics}
     \field{year}{1979}
     \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Hull}{book}{}
+    \name{author}{1}{}{%
+      {{hash=HJC}{%
+         family={Hull},
+         familyi={H\bibinitperiod},
+         given={John\bibnamedelima C.},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Pearson Education}%
+    }
+    \strng{namehash}{HJC1}
+    \strng{fullhash}{HJC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{title}{Options, Futures, and Other Derivatives}
+    \field{volume}{Tenth edition}
+    \field{year}{2018}
+  \endentry
+
+  \entry{lsm}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LFA}{%
+         family={Longstaff},
+         familyi={L\bibinitperiod},
+         given={Francis\bibnamedelima A.},
+         giveni={F\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=SES}{%
+         family={Schwartz},
+         familyi={S\bibinitperiod},
+         given={Eduardo\bibnamedelima S.},
+         giveni={E\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LFASES1}
+    \strng{fullhash}{LFASES1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2001}
+    \field{labeldatesource}{year}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{title}{Valuing American Options by Simulation: A Simple
+  Least-Squares Approach}
+    \field{journaltitle}{The Review of Financial Studies}
+    \field{year}{2001}
   \endentry
 
   \entry{Merton73}{article}{}
@@ -142,28 +250,6 @@
     \field{urlmonth}{05}
     \field{urlyear}{2020}
     \warn{\item Invalid format of field 'month'}
-  \endentry
-
-  \entry{Zucchi}{article}{}
-    \name{author}{1}{}{%
-      {{hash=ZK}{%
-         family={Zucchi},
-         familyi={Z\bibinitperiod},
-         given={Kristina},
-         giveni={K\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{ZK1}
-    \strng{fullhash}{ZK1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{labelyear}{2019}
-    \field{labeldatesource}{year}
-    \field{sortinit}{Z}
-    \field{sortinithash}{Z}
-    \field{title}{Did Derivatives Cause The Recession?}
-    \field{journaltitle}{Investopedia}
-    \field{year}{2019}
   \endentry
 \enddatalist
 \endinput
