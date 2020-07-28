@@ -1,9 +1,17 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Fri Apr 10 22:04:05 2020
-"Closed form European put"
-@author: ppl
+///////////////////////// TOP OF FILE COMMENT BLOCK ////////////////////////////
+//
+// Title:           Monte Carlo simulation of stock with constant volatility and risk free rate
+// Course:          Master thesis, 2020
+//
+// Author:          Peter Pommergård Lind
+// Email:           ppl_peter@protonmail.com
+// Encoding:        utf-8
+///////////////////////////////// CITATIONS ////////////////////////////////////
+//
+// Options, Futures, and Other Derivatives by John C. Hull 10th edition
+//
+/////////////////////////////// 80 COLUMNS WIDE ////////////////////////////////
 """
 
 import numpy as np
@@ -42,4 +50,4 @@ for s in stockValues:
             dict1['Time to maturity'].append(T)
             dict1['Closed form European'].append(priceEPut(0,s,volatility,40,0.06,T))
             
-print(DataFrame(dict1))
+#print(DataFrame(dict1))

@@ -46,7 +46,6 @@ def simStockPath(n, T, L, S, r, sigma):
 
 #%%
 np.random.normal(loc=0, scale=4.0, size=10)
-2
 #!!!!!!!!!!!!!!! OBS : Antithetic !!!!!!!!!!!!!!!!!!!!
 #%%
 stockMatrix = simStockPath(n=5, T=1, L=4, S=36, r=0.06, sigma=0.2)
@@ -56,7 +55,7 @@ def findCashFlow(simPath, K, r):
     and the interest rate r (a number), the function finds the optimal stopping
     stragedy for a american put option. The output is a cashflow df"""
     inMoneyMatrix = simPath.iloc[:,1:].applymap(lambda x: max(K-x, 0))
-½    cashFlowMatrix = np.zeros((simPath.shape[0],simPath.shape[1]-1))
+    cashFlowMatrix = np.zeros((simPath.shape[0],simPath.shape[1]-1))
     stopRule = np.zeros((simPath.shape[0],simPath.shape[1]-1))
     for j in reversed(range(cashFlowMatrix.shape[1])):
         # European option

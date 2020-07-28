@@ -24,9 +24,9 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: deepHedging-blx.bib
 Database file #2: thesis.bib
 Warning--I'm ignoring Buffett08's extra "author" field
---line 81 of file thesis.bib
+--line 73 of file thesis.bib
 Warning--I'm ignoring Buffett02's extra "author" field
---line 90 of file thesis.bib
+--line 82 of file thesis.bib
 Biblatex version: 3.8
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
