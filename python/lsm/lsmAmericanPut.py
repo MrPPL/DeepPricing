@@ -108,17 +108,18 @@ def cashflow(spot, r, vol, timePointsYear, strike, T, n):
     
     return (cashFlow)
 
+cashFlowMatrix = cashflow(spot, r, vol, timePointsYear, strike, T, n)
 
-
-def findPV(spot, r, vol, timePointsYear, strike, T, n):
-    cashFlowMatrix = cashflow(spot, r, vol, timePointsYear, strike, T, n)
+def findPV(r, cashFlowMatrix, timePointsYear):
+    """Find present value of a cashflow matrix starting at 1. timestep"""
     PV = 0
+    timeSteps = 1/timePointsYear
     for i in range(cashFlowMatrix.shape[0]):
         for j in range(cashFlowMatrix.shape[1]):
-            PV += cashFlowMatrix[i,j]*np.exp(-r*(j+1))
+            PV += cashFlowMatrix[i,j]*np.exp(-r*((j+1)*timeSteps))
     return (PV/cashFlowMatrix.shape[0])
     
-print(findPV(spot, r, vol, timePointsYear, strike, T, n))
+print(findPV(r=0.06, cashFlowMatrix=cashFlowMatrix, timePointsYear = 1))
 
 
 
