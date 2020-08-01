@@ -71,9 +71,41 @@ The comparision will be applied for every node in each timestep $\Delta t$  and 
 The other classical result in this section is somewhat more technical without familarity with statistics, but on the other hand the least square method and linear regression is a well known and testet in statistics. In our setting we regress the expected payoff by continuation of the contract and compare it to the intrinsic value. The dependent variable is the expected value and the independent variables is a set of othogonal basis functions in $L^2(\Omega, \mathcal{F}, Q)$. Typical choices for basis functions could be weighted Laguerre -, Hermit -, and Jacob polynomials. This kind of regression is a nonlinear expansion of the linear model. In order to create data, we will simulate paths according to the underlying risky asset. 
 
 \subsection{Application of the LSM method}
-We want to valuate an American put option with a stock as underlying asset. We assume the stock follows a GBM: $dS(t)=rSdt + \sigma S dW_t$ where $\sigma$ and r is constant (see solution to SDE equation \ref{GBM}). We simulate 100.000 paths for the stock, where 50.000 of the paths is antithetic of the first 50.000 using 50 exercise points per year.
+We want to valuate an American put option with a stock as underlying asset. We assume the stock follows a GBM: $dS(t)=rSdt + \sigma S dW_t$ where $\sigma$ and r is constant (see solution to SDE equation \ref{GBM}). We simulate 100.000 paths for the stock, where 50.000 of the paths is antithetic of the first 50.000 using 50 exercise points per year. 
 
 \parencite{lsm}  
 
-\section{Comparision}
-
+\subsection{Numerical results}
+By the above two algorithms for valuation, we choose to vary spot, volatility and maturity for pricing an American put option with K=40 and r=0.06. This table will serve as reference for the machine learning algorithm in chapter (!TODO chapter for machine learning). For the binomial tree we use 100 timesteps, which gives stable results (compare to figure \ref{fig:binConv}). 
+\begin{table}[th]
+\caption{Valuation of American put option with K=40 and r=0.06.}
+\label{tab:treatments}
+\centering
+\begin{tabular}{l l l l l l l }
+\toprule
+\textbf{Spot} & \textbf{$\sigma$} & \textbf{T} & \textbf{Closed form European} & \textbf{Binomial Tree} & \textbf{LSM} & \textbf{abs. diff.} \\
+\midrule
+36 & 0.2 & 1 & 3.844 & 4.488 & 4.478 & 0.010\\
+36 & 0.2 & 2 & 3.763 & 4.846 & 4.828 & 0.018\\
+36 & 0.4 & 1 & 6.711 & 7.119 & 7.092 & 0.027\\
+36 & 0.4 & 2 & 7.700 & 8.508 & 8.500 & 0.008\\
+38 & 0.2 & 1 & 2.852 & 3.260 & 3.245 & 0.015\\
+38 & 0.2 & 2 & 2.991 & 3.748 & 3.735 & 0.013\\
+38 & 0.4 & 1 & 5.834 & 6.165 & 6.144 & 0.021\\
+38 & 0.4 & 2 & 6.979 & 7.689 & 7.665 & 0.024\\
+40 & 0.2 & 1 & 2.066 & 2.316 & 2.313 & 0.003\\
+40 & 0.2 & 2 & 2.356 & 2.885 & 2.881 & 0.004\\
+40 & 0.4 & 1 & 5.060 & 5.310 & 5.326 & 0.016\\
+40 & 0.4 & 2 & 6.326 & 6.914 & 6.908 & 0.006\\
+42 & 0.2 & 1 & 1.465 & 1.622 & 1.622 & 0.000\\
+42 & 0.2 & 2 & 1.841 & 2.217 & 2.212 & 0.005\\
+42 & 0.4 & 1 & 4.379 & 4.602 & 4.596 & 0.006\\
+42 & 0.4 & 2 & 5.736 & 6.264 & 6.243 & 0.021\\
+44 & 0.2 & 1 & 1.017 & 1.117 & 1.113 & 0.004\\
+44 & 0.2 & 2 & 1.429 & 1.697 & 1.688 & 0.009\\
+44 & 0.4 & 1 & 3.783 & 3.956 & 3.962 & 0.006\\
+44 & 0.4 & 2 & 5.202 & 5.656 & 5.649 & 0.007\\
+\bottomrule\\
+\end{tabular}
+\end{table}
+We see the maximum difference between the two algorithms is 0.027 at S=38, $\sigma=0.4$ and T=2. The other obvious fact is that the european put has a lower value than its American counterpart, because the continuous exercise feature adds additional value to the put option. 

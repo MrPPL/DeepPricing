@@ -1,0 +1,3 @@
+[console_scripts]
+longstaff_schwartz = longstaff_schwartz.cli:main
+

@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: longstaff-schwartz
+Version: 0.1.0
+Summary: A Python implementation of the Longstaff-Schwartz linear regression algorithm for the evaluation of call rights and American options.
+Home-page: https://github.com/luphord/longstaff_schwartz
+Author: luphord
+Author-email: luphord@protonmail.com
+License: MIT license
+Keywords: longstaff_schwartz
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: Click (>=6.0)
+Requires-Dist: numpy (>=1.14)
+Requires-Dist: scipy (>=1.2)
+Requires-Dist: matplotlib (>=3.0)
+Requires-Dist: jupyter (>=1.0)
+
+============================
+Longstaff-Schwartz Algorithm
+============================
+
+
+.. image:: https://img.shields.io/pypi/v/longstaff_schwartz.svg
+        :target: https://pypi.python.org/pypi/longstaff_schwartz
+
+.. image:: https://img.shields.io/travis/luphord/longstaff_schwartz.svg
+        :target: https://travis-ci.org/luphord/longstaff_schwartz
+
+.. image:: https://readthedocs.org/projects/longstaff-schwartz/badge/?version=latest
+        :target: https://longstaff-schwartz.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+
+
+A Python implementation of the Longstaff-Schwartz linear regression algorithm for the evaluation of call rights and American options.
+
+* Documentation: https://longstaff-schwartz.readthedocs.io
+* Free software: MIT license
+
+Talks
+-----
+
+* PyData Meetup 2019-09-18: Slides_, `Jupyter Notebook`_
+* PyConDE 2019-10-10: `Slides <https://raw.githack.com/luphord/longstaff_schwartz/master/talks/talk_pyconde_2019-10-10/index.html>`__, `Jupyter Notebook <https://github.com/luphord/longstaff_schwartz/blob/master/talks/talk_pyconde_2019-10-10/Notebook_PyConDE_2019-10-10.ipynb>`__
+
+.. _Slides: https://raw.githack.com/luphord/longstaff_schwartz/master/talks/talk_meetup_2019-09-18/index.html
+.. _`Jupyter Notebook`: https://github.com/luphord/longstaff_schwartz/blob/master/talks/talk_meetup_2019-09-18/Notebook_Meetup_2019-09-18.ipynb
+
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.0 (2019-08-05)
+------------------
+
+* First release on PyPI.
+
+

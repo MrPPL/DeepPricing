@@ -50,4 +50,4 @@ for s in stockValues:
             dict1['Time to maturity'].append(T)
             dict1['Closed form European'].append(priceEPut(0,s,volatility,40,0.06,T))
             
-#print(DataFrame(dict1))
+print(DataFrame(dict1))

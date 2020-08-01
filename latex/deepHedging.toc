@@ -13,11 +13,16 @@
 \contentsline {section}{\numberline {2.2}Black-Scholes Formula two dimensionel}{6}{section.30}
 \contentsline {chapter}{\numberline {3}Classical numerical results}{7}{chapter.39}
 \contentsline {section}{\numberline {3.1}Binomial Pricing model}{7}{section.40}
-\contentsline {subsection}{\numberline {3.1.1}Mathematics in binomial model}{8}{subsection.42}
+\contentsline {subsection}{\numberline {3.1.1}Mathematics in Binomial Pricing model}{8}{subsection.42}
 \contentsline {section}{\numberline {3.2}Least Square Monte Carlo Method}{9}{section.46}
 \contentsline {subsection}{\numberline {3.2.1}Application of the LSM method}{9}{subsection.47}
-\contentsline {section}{\numberline {3.3}Comparision}{9}{section.48}
-\contentsline {chapter}{\numberline {A}Option contracts}{11}{appendix.49}
-\contentsline {section}{\numberline {A.1}European Call and Put}{11}{section.50}
-\contentsline {chapter}{\numberline {B}Mathematical definitions}{13}{appendix.53}
-\contentsline {chapter}{Bibliography}{15}{appendix*.56}
+\contentsline {subsection}{\numberline {3.2.2}Numerical results}{9}{subsection.48}
+\contentsline {chapter}{\numberline {4}Theoretical background for Machine Learning}{11}{chapter.50}
+\contentsline {section}{\numberline {4.1}Main Section 1}{11}{section.51}
+\contentsline {subsection}{\numberline {4.1.1}Subsection 1}{11}{subsection.52}
+\contentsline {subsection}{\numberline {4.1.2}Subsection 2}{11}{subsection.53}
+\contentsline {section}{\numberline {4.2}Main Section 2}{11}{section.54}
+\contentsline {chapter}{\numberline {A}Option contracts}{13}{appendix.55}
+\contentsline {section}{\numberline {A.1}European Call and Put}{13}{section.56}
+\contentsline {chapter}{\numberline {B}Mathematical definitions}{15}{appendix.59}
+\contentsline {chapter}{Bibliography}{17}{appendix*.62}
