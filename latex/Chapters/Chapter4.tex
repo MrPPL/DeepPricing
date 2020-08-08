@@ -1,6 +1,6 @@
 % Chapter Template
 
-\chapter{Theoretical background for Machine Learning} % Main chapter title
+\chapter{Deep Learning} % Main chapter title
 
 \label{Chapter4} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
@@ -8,8 +8,8 @@
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 
-\section{Main Section 1}
-
+\section{Main concepts in Deep learning}
+Deep Learning is a specialized field in Machine Learning, which means it is within the field of applied statistics. Like in statistics and Machine Learning the basic components of a Deep Learning algorithm are a dataset, cost function, optimazation algorithm and a model. E.g. in the lsm method we assumed the model was Gaussian, dataset was the simulated paths, the lose function was the mean square error and the optimazation algorithm was solving the normal equations. Deep learning is about studying neural networks which allows for greater flexiblity than standard methods like linear regression. "Deep" comes from that a neural network consists of multiple layers, where the depth tells you how many layers the network has. The network consists of a input layer, hidden layers and finally a output layer where the input and output layers are observable to the user. To fit a model we need to provide weights, bias and the activation function for each layer, hence the ouput is a chain of functions applied to the input. In order to measure the performance of the model, we need a function to measure the difference on the response variable and the actually observed response. This function is referred as the loss function, where the cost function is the average over the loss functions. The cost function tells us how good our model is on the data. The cost function is key to improving our model or in machine learning lingo learning the model, hence we applied a optimization algorithm to find the optimal set of weights in order to improve the cost function.  \parencite{Goodfellow-et-al-2016}
 
 
 %-----------------------------------

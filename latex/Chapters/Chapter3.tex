@@ -9,11 +9,14 @@
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 
-In this section will we revisit the two classical results in computational finance the Binomial model and the Least Square Monte Carlo (LSM) approach. The models will both serve as reference for the Machine Learning model and provides insight into valuation of American options.
+In this section will we look at the two classical valuaing algorithms in computational finance the Binomial model and the Least Square Monte Carlo (LSM) approach. The models will both serve as reference for the Machine Learning model and provides insight into valuation of American options.
 
+%-----------------------------------
+%	SUBSECTION 1
+%-----------------------------------
 
 \section{Binomial Pricing model}
-The Binomial model provides an intuitive and easy implementable model for valuing American and European options. The Binomial model comes handy, when no analytical model exists for american options. The Binomial model also has its limitations, because it is not suited for valuing path dependent options or options with several underlying factors. The key difference on the Binomial model and the other numerical procudures is that the Binomial model is build on a discrete framework. \\
+The Binomial model provides an intuitive and easy implementable model for valuing American and European options. The Binomial model comes handy, when no analytical model exists for American options. The Binomial model also has its limitations, because it is not suited for valuing path dependent options or options with several underlying factors. The key difference on the Binomial model and the other numerical procudures is that the Binomial model is build on a discrete framework. \\
 
 The central concepts arbitrage and completeness from continuous time also work in the discrete time setup. The paper \parencite{binomial-Paper} which introduced the binomial model to option pricing came after the Black-Scholes model described in section \ref{Chapter2} \parencite{B-S-Paper}. The main reason for developing a model in discrete time, is that the the discrete time approach gives a simplified model in terms of the mathematics and highlights the essential concepts in option pricing theory. You can argue that the simpler mathematics in this model makes the binomial model more instructive and clear. Besides being easier to understand for non-mathematician it works nicely with other options than the European options like American options.\\
 
@@ -30,12 +33,13 @@ To value a american put option, we lay out all the possible path of the stock, b
 \end{figure}
 
 
+%-----------------------------------
+%	SUBSECTION 2
+%-----------------------------------
 
-%-----------------------------------
-%	SUBSECTION 1
-%-----------------------------------
-\subsection{Mathematics in Binomial Pricing model}
-The mathematics behind the binomial model are simpel and we will this section to provide the basic. For each time step ($\Delta t$), we assume the stock (S) can move up (u) or down (d). In order to avoid arbitrage we find the risk neutral measure q for the binomial tree. The risk neutral measure q is chosen s.t. the expected return is the risk-free rate r.
+
+\subsection{Mathematics in Binomial valuation model}
+The mathematics behind the binomial model is simpel and we will in this section provide the basic mathematics. First we need to construct the tree, then afterwards work backwards in the tree for valuation. For each time step ($\Delta t$), we assume the stock (S) can move up (u) or down (d). In order to avoid arbitrage we find the risk neutral measure q for the binomial tree, where q is the probability for the stock moves up. The risk neutral measure q is chosen s.t. the expected return is the risk-free rate r.
 
 \begin{theorem}\label{RNVF-Discrete}
 \textbf{Risk-neutral valuation formula in discrete time. }
@@ -54,13 +58,10 @@ Now we have determined the three parameters needed for constructing a binomial t
 
 We want to value an American put option, hence we need to work backward in the tree and comparing in each node the intrinsic value with the conditional expection (see theorem \ref{RNVF-Discrete}) by:
 \begin{equation}
-max\{ K-S(t), e^{-r \Delta t} \exp(- r \Delta t) \cdot E^Q[P(t+\Delta t,T)|P(t,T)=p] \}
+max\{ K-S(t), \exp(- r \Delta t) \cdot E^Q[P(t+\Delta t,T)|P(t,T)=p] \}
 \end{equation}
 The comparision will be applied for every node in each timestep $\Delta t$  and all the way back in time to the initialization date. By this precedure we get present value of the American option at initialization.
 
-%-----------------------------------
-%	SUBSECTION 2
-%-----------------------------------
 
 
 %----------------------------------------------------------------------------------------
@@ -68,15 +69,26 @@ The comparision will be applied for every node in each timestep $\Delta t$  and 
 %----------------------------------------------------------------------------------------
 
 \section{Least Square Monte Carlo Method}
-The other classical result in this section is somewhat more technical without familarity with statistics, but on the other hand the least square method and linear regression is a well known and testet in statistics. In our setting we regress the expected payoff by continuation of the contract and compare it to the intrinsic value. The dependent variable is the expected value and the independent variables is a set of othogonal basis functions in $L^2(\Omega, \mathcal{F}, Q)$. Typical choices for basis functions could be weighted Laguerre -, Hermit -, and Jacob polynomials. This kind of regression is a nonlinear expansion of the linear model. In order to create data, we will simulate paths according to the underlying risky asset. 
+The other classical result in this section is of an different nature, because it is based on simulation and linear regresion. In our setting we regress the expected payoff by continuation of the contract and compare it to the intrinsic value. The dependent variable in the regression is the expected value of continuation and the independent variables is a set of othogonal basis functions in $L^2(\Omega, \mathcal{F}, Q)$ of the simulated paths. Typical choices for basis functions could be weighted Laguerre -, Hermit -, and Jacob polynomials. This kind of regression is a nonlinear expansion of the linear model. In order to create data, we will simulate paths according to the underlying risky asset. 
 
-\subsection{Application of the LSM method}
-We want to valuate an American put option with a stock as underlying asset. We assume the stock follows a GBM: $dS(t)=rSdt + \sigma S dW_t$ where $\sigma$ and r is constant (see solution to SDE equation \ref{GBM}). We simulate 100.000 paths for the stock, where 50.000 of the paths is antithetic of the first 50.000 using 50 exercise points per year. 
+\subsection{LSM method for an American put}           
+We want to valuate an American put option with a stock as underlying asset. We take the same assumptions as in Chapter \ref{Chapter2} (see assumption \ref{BS-Assumption}) except the option is an American option. Hence in order to simulate the paths of the stock, we simulate from an GBM: $dS(t)=rSdt + \sigma S dW_t$ where $\sigma$ and r is constant (see solution to SDE equation \ref{GBM}). We simulate 100.000 paths for the stock. Like in the binomial model, we work backward to decide the optimal stopping time. The computer is discrete, hence we simulate the stock path as an Bermuda option, where we have 50 timesteps per year. \\
 
-\parencite{lsm}  
+At maturity the cashflow from the option is the same as for an European put option, hence the cashflow from each path is $C(\omega,T;T, T)=max(K-S_T,0)$. We use the notation $C(\omega, s; t, T)$ denote the path of cash flows generated by the option condition on the option not being exercised before t and the option holder follw the optimal stopping strategy for all s, $t<s\leq T$.
+(inspired by \parencite{lsm} p. 121). The continuation value is given by:
+\begin{equation}\label{continuation-value}
+\begin{split}
+F(\omega; t_k)=E^Q[\sum_{j=k+1}^K \exp(-\int_{t_k}^{t_j} r(\omega,s) ds)C(\omega,t_j; t_k, T)|\mathcal{F}_{t_k}]
+\end{split}
+\end{equation}
+where $r(\omega,t)$ is risk free interest rate, and the $\mathcal{F}_{t_k}$ is the filtration at time $t_k$.\\
+
+The optimal stopping strategy is then by comparing this continuation value with the intrinsic value at each time step. By working backward in time until the initialization of the option, we have specified the optimal stopping times and the cashflows associated with exercising at the optimal stopping times. To estimate the condition expection in equation \ref{continuation-value}, we regres with the basis functions taking on the underlying asset for the option being the independent variable:
+$$F(\omega;t_{K-1})= \sum_{j=0}^\infty a_j L_j(X)$$
+where a is the coefficients for the regression, L is the basis function, where the argument is the underlying asset $X$ \parencite{lsm}.
 
 \subsection{Numerical results}
-By the above two algorithms for valuation, we choose to vary spot, volatility and maturity for pricing an American put option with K=40 and r=0.06. This table will serve as reference for the machine learning algorithm in chapter (!TODO chapter for machine learning). For the binomial tree we use 100 timesteps, which gives stable results (compare to figure \ref{fig:binConv}). 
+By the above two algorithms for valuation, we choose to vary spot, volatility and maturity for pricing an American put option with K=40 and r=0.06. This table will serve as reference for the machine learning algorithm in chapter (!TODO chapter for machine learning). For the binomial tree we use 100 timesteps, which gives stable results (compare to figure \ref{fig:binConv}) and for the lsm we use $10^5$ paths with 50 timesteps per year. The European option is valued by using BS closed form solution for a call option (see proposition \ref{BS-price-EuroCall}) and Put-call parity (see proposion \ref{Put-call-parity}).
 \begin{table}[th]
 \caption{Valuation of American put option with K=40 and r=0.06.}
 \label{tab:treatments}
