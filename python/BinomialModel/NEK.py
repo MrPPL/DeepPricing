@@ -9,14 +9,14 @@ from itertools import product
 
 ## tabel 1
 # American put min. option 1 year
-spot = 10
-strike = 10
+spot = [100,100]
+strike = 100
 r=0.1 # instataneous rate of return
 vol = 0.2 #volatilities for assets
 T = 1 #maturity 
-corr = 0.1 #correlation between assets
-steps = 20 #timesteps
-d = 3 #underlying assets
+corr = 0.5 #correlation between assets
+steps = 3 #timesteps
+d = 2 #underlying assets
 
 #calculations
 stepSize = T/steps # length of time step
@@ -71,16 +71,28 @@ def createTree(corrMatrix, r, d, vol, steps, T, lattice, spot):
             y = np.matmul(L,np.transpose(u[key]))
             tree[key] = np.transpose(np.transpose(np.exp(y)) * tree[0])
     return tree
-
+spot = spot[0]
 Tree = createTree(corrMatrix=corrMatrix, r=r, d=d, vol=vol, steps=steps, T=T, lattice=lattice, spot=spot)
+Tree
 
-#find Euro call max. NEK
-def EurCalMax(steps, Tree, T, r, strike):
-    callValue = 0
-    for arr in Tree[steps-1]:
-        callValue += max(0, max(arr)-strike)
+def callMaxEuro(S,K):
+    return max(max(S)-K,0)
 
-    return (callValue/Tree[steps-1].shape[0])*np.exp(-r*T)
+valueTree = {}
+for key in reversed(range(steps)):
+    if key == steps-1:
+        udfaldVec = []
+        for udfald in range((steps)**d):
+            stockPrice = []
+            for stock in range(len(Tree[key])):
+                stockPrice.append(Tree[key][stock][udfald])
+            udfaldVec.append(callMaxEuro(S=stockPrice,K=strike))
+        valueTree[key] = udfaldVec
+    else:
+        pass
+        for poss in range(m):
+            pass
 
-print(EurCalMax(steps, Tree, T, r, strike))
 
+Tree
+valueTree

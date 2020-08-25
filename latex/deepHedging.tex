@@ -63,6 +63,15 @@ headsepline, % Uncomment to get a line under the header
 \newtheorem*{remark}{Remark}
 
 
+\makeatletter
+\renewcommand\paragraph{\@startsection{paragraph}{4}{\z@}%
+            {-2.5ex\@plus -1ex \@minus -.25ex}%
+            {1.25ex \@plus .25ex}%
+            {\normalfont\normalsize\bfseries}}
+\makeatother
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+
 \renewcommand\qedsymbol{$\blacksquare$} %change QED after proof
 
 \usepackage{amssymb,amsmath}
@@ -91,7 +100,7 @@ headsepline, % Uncomment to get a line under the header
 %	THESIS INFORMATION
 %----------------------------------------------------------------------------------------
 
-\thesistitle{Deep hedging} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
+\thesistitle{Multivariate contingent claims} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
 \supervisor{Dr. David \textsc{Skovmand}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
 \examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
 \degree{Master Thesis in Actuarial Mathematics} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
@@ -235,6 +244,7 @@ The acknowledgments and the people to thank go here, don't forget to include you
 \textbf{FPT2} & \textbf{F}undamental \textbf{P}ricing \textbf{T}heorem \textbf{II}\\
 \textbf{GBM} & \textbf{G}eometric \textbf{B}rownian \textbf{M}otion\\
 \textbf{LIBOR} & \textbf{L}ondon \textbf{I}nter\textbf{b}ank \textbf{O}ffered \textbf{R}ate\\
+\textbf{RNVF} & \textbf{R}isk \textbf{N}eutral \textbf{V}aluation \textbf{F}ormula\\
 \textbf{SDE} & \textbf{S}tochastic \textbf{D}ifferential \textbf{E}quation\\
 \textbf{S-F} & \textbf{S}elf-\textbf{F}inancing\\
 \end{abbreviations}
@@ -248,7 +258,7 @@ c &	European call option price \\
 p &	European put option price \\
 K &	Strike price \\
 T &	Maturity in years \\ 
-$\sigma$ &	Volatility of stock price \\
+$\sigma$ &	Volatility of asset \\
 C &	American Call option price \\
 P &	American Put option price \\
 $S_0$ &	Stock price today \\
@@ -259,9 +269,11 @@ r &	Continuous compounding risk-free yearly interest rate \\
 $V^{h}(t)$ & Value process\\
 $X$ & Simple Derivative\\
 $\Phi$ & Contract function\\
-$W_t$ & Weiner process (synonym brownian motion)\\
+$W_t$ & Weiner process under martingale measure Q (synonym brownian motion)\\
+$\bar{W}_t$ & Weiner process under probabilty measure P\\
 $p_{ij}$ & Correlation coefficient between asset i and j\\
 $\mu_i$ & drift of the continuous lognormal distribution\\
+$F(t,S(t))$ & pricing function of S(t) to time t\\
 \addlinespace % Gap to separate the Roman symbols from the Greek
 \end{symbols}
 

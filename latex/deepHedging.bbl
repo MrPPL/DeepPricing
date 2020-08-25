@@ -80,6 +80,60 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
+  \entry{BEG}{article}{}
+    \name{author}{3}{}{%
+      {{hash=BPP}{%
+         family={Boyle},
+         familyi={B\bibinitperiod},
+         given={Phelim\bibnamedelima P.},
+         giveni={P\bibinitperiod\bibinitdelim P\bibinitperiod},
+      }}%
+      {{hash=EJ}{%
+         family={Evnine},
+         familyi={E\bibinitperiod},
+         given={Jeremy},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=GS}{%
+         family={Gibbs},
+         familyi={G\bibinitperiod},
+         given={Stephen},
+         giveni={S\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {eng}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \keyw{American option ; Options contracts ; Approximation ; Pricing ;
+  Financial securities ; Eigenfunctions ; Financial economics ; Binomials ;
+  Contingent claims ; European option}
+    \strng{namehash}{BPPEJGS1}
+    \strng{fullhash}{BPPEJGS1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1989}
+    \field{labeldatesource}{year}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    We develop a numerical approximation method for valuing multivariate
+  contingent claims. The approach is based on an n-dimensional extension of the
+  lattice binomial method. Closed-form solutions for the jump probabilities and
+  the jump amplitudes are obtained. The accuracy of the method is illustrated
+  in the case of European options when there are three underlying assets.%
+    }
+    \field{issn}{0893-9454}
+    \field{number}{2}
+    \field{pages}{241\bibrangedash 250}
+    \field{title}{Numerical Evaluation of Multivariate Contingent Claims}
+    \field{volume}{2}
+    \field{journaltitle}{The Review of financial studies}
+    \field{year}{1989}
+  \endentry
+
   \entry{Buffett02}{article}{}
     \name{author}{1}{}{%
       {{hash=BW}{%
@@ -134,7 +188,7 @@
     \field{urlyear}{2020}
   \endentry
 
-  \entry{binomial-Paper}{article}{}
+  \entry{CRR}{article}{}
     \name{author}{2}{}{%
       {{hash=CJ}{%
          family={Cox},
@@ -163,6 +217,36 @@
     \field{journaltitle}{Journal of Financial Economics}
     \field{year}{1979}
     \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{NEK}{article}{}
+    \name{author}{1}{}{%
+      {{hash=EN}{%
+         family={Ekvall},
+         familyi={E\bibinitperiod},
+         given={Niklas},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{EN1}
+    \strng{fullhash}{EN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1996}
+    \field{labeldatesource}{year}
+    \field{sortinit}{E}
+    \field{sortinithash}{E}
+    \field{number}{2}
+    \field{pages}{214\bibrangedash 228}
+    \field{title}{A lattice approach for pricing of multivariate contingent
+  claims}
+    \verb{url}
+    \verb https://EconPapers.repec.org/RePEc:eee:ejores:v:91:y:1996:i:2:p:214-2
+    \verb 28
+    \endverb
+    \field{volume}{91}
+    \field{journaltitle}{European Journal of Operational Research}
+    \field{year}{1996}
   \endentry
 
   \entry{Goodfellow-et-al-2016}{book}{}
@@ -227,6 +311,38 @@
     \field{year}{2018}
   \endentry
 
+  \entry{Johnson87}{article}{}
+    \name{author}{1}{}{%
+      {{hash=JH}{%
+         family={Johnson},
+         familyi={J\bibinitperiod},
+         given={Herb},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{JH1}
+    \strng{fullhash}{JH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{1987}
+    \field{labeldatesource}{year}
+    \field{sortinit}{J}
+    \field{sortinithash}{J}
+    \field{number}{3}
+    \field{pages}{277\bibrangedash 283}
+    \field{title}{Options on the Maximum or the Minimum of Several Assets}
+    \verb{url}
+    \verb https://www.jstor.org/stable/2330963?seq=1
+    \endverb
+    \field{volume}{22}
+    \field{journaltitle}{The Journal of Financial and Quantitative Analysis}
+    \field{year}{1987}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
   \entry{lsm}{article}{}
     \name{author}{2}{}{%
       {{hash=LFA}{%
@@ -287,6 +403,27 @@
     \field{urlmonth}{05}
     \field{urlyear}{2020}
     \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{Ouwehand2006}{inproceedings}{}
+    \name{author}{1}{}{%
+      {{hash=OP}{%
+         family={Ouwehand},
+         familyi={O\bibinitperiod},
+         given={P.},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{OP1}
+    \strng{fullhash}{OP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{labeldatesource}{year}
+    \field{sortinit}{O}
+    \field{sortinithash}{O}
+    \field{title}{PRICING RAINBOW OPTIONS}
+    \field{year}{2006}
   \endentry
 \enddatalist
 \endinput

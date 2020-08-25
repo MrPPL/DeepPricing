@@ -1,8 +1,51 @@
 % Appendix Template
 
-\chapter{Mathematical definitions} % Main appendix title
+\chapter{Mathematical results and definitions} % Main appendix title
 
 \label{AppendixB} % Change X to a consecutive letter; for referencing this appendix elsewhere, use \ref{AppendixX}
+
+\begin{theorem}\label{Ito}
+\textbf{Itô's formula multidimensional} Let the n-dimensional process X have dynamics given by:
+\begin{align}
+dX(t)=\mu(t)dt+\sigma(t)dW(t)
+\end{align}
+Then the process $f(t,X(t))$ has stochastic differential given by:
+\begin{equation}
+\begin{split}
+df(t,X(t))=\frac{\partial f(t,X(t))}{\partial t}  dt + \sum_{i=1}^{n} \frac{\partial f(t,X(t))}{\partial x_i}  dX_i(t) + \frac{1}{2} \sum_{i,j=1}^{n} \frac{\partial^2 f(t,X(t))}{\partial x_i \partial x_j}  dX_i(t)dX_j(t)  
+\end{split}
+\end{equation}
+Note: \[ dW_i \cdot dW_j= \begin{cases} 
+      \rho_{ij}dt & \textbf{For correlated Weiner processes} \\
+      0 & \textbf{For independent Weiner processes} \\
+   \end{cases}
+\]
+(see page 58-60 \parencite{finKont})
+\end{theorem}
+
+\begin{theorem}\label{Girsanov}
+\textbf{The Girsanov Theorem} 
+Assume the probability space $(\Omega, \mathcal{F}, P, \mathcal{F}_t^{W^p})$ and let the Girsanov kernel $\phi$ be any d-dimensional adapted column vector process. Choose a fixed T and define the process L on $[0,T]$ by:\\
+$dL_t=\phi(t)^T\cdot L_t d\bar{W}_t^P$\\
+$L_0=1$.\\
+Assume that $E^P[L_T]=1$ and define the new probability measure $Q$ on $\mathcal{F}_T$ by:\\
+$$L_T=\frac{dQ}{dP} \quad on \ \mathcal{F}_T$$
+Then
+\begin{align}
+d\bar{W}(t)=\phi(t)dt + dW(t)
+\end{align}
+Where $W(t)$ is the Q-Wiener process and $\bar{W}(t)$ is the P-Wiener process
+(see page 164 \parencite{finKont})
+\end{theorem}
+
+\theoremstyle{definition}
+\begin{definition}{Stopping time in continuous time: }\label{stopTime}
+A nonnegative random variable $\tau$ is called a stopping time w.r.t. the filtration $\mathcal{F}$ if it satisfies the condition:
+\begin{align}
+\{\tau \leq t \} \in \mathcal{F}_t \quad \forall t \geq 0
+\end{align}
+(see page 329 \parencite{finKont})
+\end{definition}
 
 \theoremstyle{definition}
 \begin{definition}{Orthogonal vectors: }\label{OrthogonalVec}
@@ -14,4 +57,5 @@ We will use the notation:
 \overrightarrow{a} \bot \overrightarrow{b}
 \end{split}
 \end{equation}
+
 \end{definition}

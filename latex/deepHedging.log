@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  13 AUG 2020 19:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  25 AUG 2020 13:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1716,7 +1716,7 @@ LaTeX Info: Redefining \pageref on input line 6443.
 )
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of hyperref version, that doesn't
-(scrhack)             need that hack, on input line 114.
+(scrhack)             need that hack, on input line 123.
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -1731,17 +1731,17 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip80
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 114.
-Package hyperref Info: Option `hypertexnames' set `false' on input line 114.
-Package hyperref Info: Option `colorlinks' set `true' on input line 114.
-Package hyperref Info: Option `unicode' set `true' on input line 114.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 123.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 123.
+Package hyperref Info: Option `colorlinks' set `true' on input line 123.
+Package hyperref Info: Option `unicode' set `true' on input line 123.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2018/02/06 v6.86b Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 114.
+Package hyperref Info: Option `breaklinks' set `true' on input line 123.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -1756,23 +1756,23 @@ Package csquotes Info: ... found 'babel' package.
 ) (./Appendices/AppendixB.aux))
 \openout1 = `deepHedging.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 114.
-LaTeX Font Info:    ... okay on input line 114.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 114.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 123.
+LaTeX Font Info:    ... okay on input line 123.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 123.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
@@ -1929,14 +1929,14 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package scrlayer Info: Setting magic \footheight to \baselineskip while
-(scrlayer)             \begin{document} on input line 114.
-Package scrbase Info: activating english \abbrevname on input line 114.
-Package scrbase Info: activating english \byname on input line 114.
-Package scrbase Info: activating english \acknowledgementname on input line 114
+(scrlayer)             \begin{document} on input line 123.
+Package scrbase Info: activating english \abbrevname on input line 123.
+Package scrbase Info: activating english \byname on input line 123.
+Package scrbase Info: activating english \acknowledgementname on input line 123
 .
-Package scrbase Info: activating english \authorshipname on input line 114.
-Package scrbase Info: activating english \constantsname on input line 114.
-Package scrbase Info: activating english \symbolsname on input line 114.
+Package scrbase Info: activating english \authorshipname on input line 123.
+Package scrbase Info: activating english \constantsname on input line 123.
+Package scrbase Info: activating english \symbolsname on input line 123.
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
@@ -1955,7 +1955,12 @@ Package biblatex Warning: BibTeX reported the following issues
 
 
 Package biblatex Warning: BibTeX reported the following issues
-(biblatex)                with 'binomial-Paper':
+(biblatex)                with 'CRR':
+(biblatex)                - Invalid format of field 'month'.
+
+
+Package biblatex Warning: BibTeX reported the following issues
+(biblatex)                with 'Johnson87':
 (biblatex)                - Invalid format of field 'month'.
 
 
@@ -1964,10 +1969,10 @@ Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                - Invalid format of field 'month'.
 
 )
-Package biblatex Info: Reference section=0 on input line 114.
-Package biblatex Info: Reference segment=0 on input line 114.
+Package biblatex Info: Reference section=0 on input line 123.
+Package biblatex Info: Reference segment=0 on input line 123.
 \AtBeginShipoutBox=\box56
-Package hyperref Info: Link coloring ON on input line 114.
+Package hyperref Info: Link coloring ON on input line 123.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -1976,62 +1981,62 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count436
 )
-LaTeX Info: Redefining \ref on input line 114.
-LaTeX Info: Redefining \pageref on input line 114.
-LaTeX Info: Redefining \nameref on input line 114.
+LaTeX Info: Redefining \ref on input line 123.
+LaTeX Info: Redefining \pageref on input line 123.
+LaTeX Info: Redefining \nameref on input line 123.
 
 (./deepHedging.out) (./deepHedging.out)
 \@outlinefile=\write5
 \openout5 = `deepHedging.out'.
 
 \c__siunitx_mathsf_int=\count437
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 114.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 123.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 114
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 123
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 114
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 123
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 114
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 123
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 114
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 123
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 114.
+(Font)              scaled to size 11.40997pt on input line 123.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 114.
+(Font)              scaled to size 8.33606pt on input line 123.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 114.
+(Font)              scaled to size 6.25204pt on input line 123.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 114.
+(Font)              scaled to size 11.40997pt on input line 123.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 114.
+(Font)              scaled to size 8.33606pt on input line 123.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 114.
+(Font)              scaled to size 6.25204pt on input line 123.
 \c__siunitx_mathtt_int=\count438
 
 1: section
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 132.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 141.
 [1
 
 
@@ -2042,15 +2047,15 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
 --------------------
  Declaration of Authorship
 --------------------
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 172.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 181.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 172.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 181.
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--178
+Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
@@ -2064,7 +2069,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 177--178
  Abstract
 --------------------
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 203.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 212.
 1: section
 [7] [8
 
@@ -2077,22 +2082,22 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 221.
- (./deepHedging.toc)
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 230.
+ (./deepHedging.toc
+1: section
+[11])
 \tf@toc=\write6
 \openout6 = `deepHedging.toc'.
 
-
-1: section
-[11] [12
-
-] (./deepHedging.lof)
+ [12] (./deepHedging.lof)
 \tf@lof=\write7
 \openout7 = `deepHedging.lof'.
 
 
 1: section
-[13] [14
+[13
+
+] [14
 
 ] (./deepHedging.lot)
 \tf@lot=\write8
@@ -2107,6 +2112,10 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 [17] [18
 
 ]
+Overfull \hbox (21.97044pt too wide) in alignment at lines 256--278
+ [] [] [] 
+ []
+
 1: section
 [19] [20
 
@@ -2126,7 +2135,7 @@ Chapter 1.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 3.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 10--299
+Underfull \hbox (badness 10000) in paragraph at lines 10--311
 
  []
 
@@ -2144,138 +2153,205 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--299
 ]
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 11.
-<Figures/brownianMotion.png, id=269, 395.4775pt x 279.0425pt>
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 13.
+<Figures/brownianMotion.png, id=352, 395.4775pt x 279.0425pt>
 File: Figures/brownianMotion.png Graphic file (type png)
 <use Figures/brownianMotion.png>
-Package pdftex.def Info: Figures/brownianMotion.png  used on input line 15.
+Package pdftex.def Info: Figures/brownianMotion.png  used on input line 17.
 (pdftex.def)             Requested size: 395.47653pt x 279.04181pt.
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 22.
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
 
-Package amsthm Warning: Unknown theoremstyle `assumption' on input line 23.
+Package amsthm Warning: Unknown theoremstyle `assumption' on input line 25.
 
 1: section
 [3 <./Figures/brownianMotion.png>]
 LaTeX Font Info:    Font shape `OMS/ppl/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 29.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 39.
- [4]
-
-LaTeX Warning: Reference `tClaim' on page 5 undefined on input line 107.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 41.
 
 
-Package amsthm Warning: Unknown theoremstyle `assumption' on input line 126.
+LaTeX Warning: Reference `BMHigherDim' on page 4 undefined on input line 47.
+
+[4] [5]
+
+LaTeX Warning: Reference `finMarket' on page 6 undefined on input line 129.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--127
+Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
 
-[5]
+[6]
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/it' tried instead on input line 149.
+(Font)              Font shape `T1/ppl/b/it' tried instead on input line 161.
 
 
-Package amsthm Warning: Unknown theoremstyle `proposition' on input line 158.
+Package amsthm Warning: Unknown theoremstyle `proposition' on input line 168.
 
 
-Package amsthm Warning: Unknown theoremstyle `proposition' on input line 185.
+Package amsthm Warning: Unknown theoremstyle `proposition' on input line 189.
 
-[6]) [7]
+
+Overfull \hbox (2.86809pt too wide) in paragraph at lines 187--190
+\T1/ppl/m/n/10.95 By above dis-cus-sion and dis-re-gard-ing "patho-log-i-cal mo
+d-els" (will use the term gener-
+ []
+
+[7]
+Overfull \hbox (11.00745pt too wide) in paragraph at lines 200--202
+[][]\T1/ppl/b/n/10.95 Theorem 2.2.2. []\T1/ppl/b/it/10.95 Sec-ond Fun-da-men-ta
+l Pric-ing The-o-rem of Math-e-mat-i-cal Fi-nance(FFT2):
+ []
+
+[8]
+
+Package amsthm Warning: Unknown theoremstyle `assumption' on input line 253.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 250--254
+
+ []
+
+
+Package amsthm Warning: Unknown theoremstyle `proposition' on input line 281.
+
+[9]
+
+Package amsthm Warning: Unknown theoremstyle `proposition' on input line 295.
+
+
+Overfull \hbox (10.35168pt too wide) in paragraph at lines 324--326
+[]\T1/ppl/m/n/10.95 To find the op-ti-mal stop-ping time we in-tro-duce the op-
+ti-mal value func-tion V(t,X(t)). 
+ []
+
+[10] [11]) [12]
 \openout2 = `Chapters/Chapter3.aux'.
 
- (./Chapters/Chapter3.tex [8
-
-
-
-]
+ (./Chapters/Chapter3.tex
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \hbox (badness 10000) in paragraph at lines 14--16
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
+Underfull \hbox (badness 10000) in paragraph at lines 17--18
 
  []
 
-
-Overfull \hbox (17.33351pt too wide) in paragraph at lines 25--26
-\T1/ppl/m/n/10.95 based on the $\OML/zplm/m/it/10.95 S[]\OT1/ppl/m/n/10.95 , \O
-ML/zplm/m/it/10.95 ^^[$ \T1/ppl/m/n/10.95 and $\OML/zplm/m/it/10.95 T$\T1/ppl/m
-/n/10.95 . We need to spec-ify the num-ber of timesteps ($\OT1/zplm/m/n/10.95 ^
-^A\OML/zplm/m/it/10.95 t \OT1/zplm/m/n/10.95 = [] \OML/zplm/m/it/10.95 where N 
-\OT1/zplm/m/n/10.95 =
- []
-
-<Figures/binConv.png, id=345, 406.51875pt x 279.0425pt>
-File: Figures/binConv.png Graphic file (type png)
-<use Figures/binConv.png>
-Package pdftex.def Info: Figures/binConv.png  used on input line 29.
-(pdftex.def)             Requested size: 406.51775pt x 279.04181pt.
-
-Overfull \hbox (2.48866pt too wide) in paragraph at lines 29--31
- [][] 
- []
-
-1: section
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 52--53
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 56--58
-
- []
-
-[10 <./Figures/binConv.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 75--76
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 83--85
-
- []
-
-[11]) [12]
-\openout2 = `Chapters/Chapter4.aux'.
-
- (./Chapters/Chapter4.tex
-Chapter 4.
-)
 1: section
 [13
 
 
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
+
+ []
+
+<Figures/binConv.png, id=512, 406.51875pt x 279.0425pt>
+File: Figures/binConv.png Graphic file (type png)
+<use Figures/binConv.png>
+Package pdftex.def Info: Figures/binConv.png  used on input line 25.
+(pdftex.def)             Requested size: 406.51775pt x 279.04181pt.
+
+Overfull \hbox (2.48866pt too wide) in paragraph at lines 25--27
+ [][] 
+ []
+
+[14 <./Figures/binConv.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--52
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 70--71
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 78--80
+
+ []
+
+
+LaTeX Warning: Reference `Put-call-parity' on page 16 undefined on input line 9
+0.
+
+[16] [17]
+Underfull \hbox (badness 10000) in paragraph at lines 179--181
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 192--194
+
+ []
+
+
+Overfull \hbox (40.71971pt too wide) detected at line 205
+\OML/zplm/m/it/10.95 Q[]\OT1/zplm/m/n/10.95 [[]([]) \OML/zplm/m/it/10.95 < \OT1
+/ppl/m/n/10.95 0, []\OT1/zplm/m/n/10.95 ([]) \OML/zplm/m/it/10.95 < \OT1/ppl/m/
+n/10.95 0, []\OT1/zplm/m/n/10.95 ([]) \OML/zplm/m/it/10.95 < \OT1/ppl/m/n/10.95
+ 0\OT1/zplm/m/n/10.95 ] = \OML/zplm/m/it/10.95 N[]\OT1/zplm/m/n/10.95 (\OMS/zpl
+m/m/n/10.95 ^^@\OML/zplm/m/it/10.95 d[]\OT1/ppl/m/n/10.95 , \OMS/zplm/m/n/10.95
+ ^^@\OML/zplm/m/it/10.95 d[]\OT1/ppl/m/n/10.95 , \OMS/zplm/m/n/10.95 ^^@\OML/zp
+lm/m/it/10.95 d[]\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/10.95 ^^Z[]\OT1/ppl/m/n/10
+.95 , \OML/zplm/m/it/10.95 ^^Z[]\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/10.95 ^^Z[]
+\OT1/zplm/m/n/10.95 )
+ []
+
+
+Overfull \hbox (18.88824pt too wide) in paragraph at lines 214--216
+\T1/ppl/m/n/10.95 We can ex-tend the above re-sult to best of as-sets and cash 
+by let-ting $\OML/zplm/m/it/10.95 S[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 
+t\OT1/zplm/m/n/10.95 ) = \OML/zplm/m/it/10.95 K []\OT1/zplm/m/n/10.95 (\OMS/zpl
+m/m/n/10.95 ^^@\OML/zplm/m/it/10.95 r\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 
+T \OMS/zplm/m/n/10.95 ^^@
+ []
+
+[19]) [20]
+\openout2 = `Chapters/Chapter4.aux'.
+
+ (./Chapters/Chapter4.tex
+Chapter 4.
+)
+1: section
+[21
+
+
+
+]
 \openout2 = `Appendices/AppendixA.aux'.
 
- (./Appendices/AppendixA.tex [14
+ (./Appendices/AppendixA.tex [22
 
 
 
 ]
 Appendix A.
-<Figures/euroCall.png, id=394, 390.45876pt x 279.0425pt>
+<Figures/euroCall.png, id=601, 390.45876pt x 279.0425pt>
 File: Figures/euroCall.png Graphic file (type png)
 <use Figures/euroCall.png>
 Package pdftex.def Info: Figures/euroCall.png  used on input line 12.
 (pdftex.def)             Requested size: 390.4578pt x 279.04181pt.
-<Figures/euroPut.png, id=395, 390.45876pt x 279.0425pt>
+<Figures/euroPut.png, id=602, 390.45876pt x 279.0425pt>
 File: Figures/euroPut.png Graphic file (type png)
 <use Figures/euroPut.png>
 Package pdftex.def Info: Figures/euroPut.png  used on input line 22.
@@ -2285,39 +2361,52 @@ Package pdftex.def Info: Figures/euroPut.png  used on input line 22.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 1: section
-[15 <./Figures/euroCall.png>] [16 <./Figures/euroPut.png>]
+[23 <./Figures/euroCall.png>] [24 <./Figures/euroPut.png>]
 \openout2 = `Appendices/AppendixB.aux'.
 
 
 (./Appendices/AppendixB.tex
 Appendix B.
-)
+
+Overfull \hbox (1.13211pt too wide) detected at line 17
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 27--32
+
+ []
+
 1: section
-[17
+[25
 
 
 
-] [18
-
-
-]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 325.
+]) [26]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 337.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 329.
+Overfull \hbox (13.26485pt too wide) in paragraph at lines 337--337
+[][]\T1/ppl/m/n/10.95 Ekvall, Niklas (1996). ^^P  A lat-tice ap-proach for pric
+-ing of mul-ti-vari-ate con-tin-gent claims^^Q.
+ []
 
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 341.
 1: section
-[19]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 329.
+[27
+
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 341.
  (./deepHedging.aux (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux)
 (./Chapters/Chapter3.aux) (./Chapters/Chapter4.aux) (./Appendices/AppendixA.aux
 ) (./Appendices/AppendixB.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 329.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 329.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 341.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 341.
 Package rerunfilecheck Info: File `deepHedging.out' has not changed.
-(rerunfilecheck)             Checksum: 7A3568C7ADC392620136EA31E6D83669;4414.
+(rerunfilecheck)             Checksum: 208B068F07FCDDDA64C1364535ECB414;7834.
 
 
 LaTeX Warning: There were undefined references.
@@ -2327,13 +2416,13 @@ Package logreq Info: Writing requests to 'deepHedging.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35175 strings out of 492982
- 703186 string characters out of 6134896
- 925168 words of memory out of 5000000
- 38213 multiletter control sequences out of 15000+600000
- 586394 words of font info for 121 fonts, out of 8000000 for 9000
+ 35353 strings out of 492982
+ 705699 string characters out of 6134896
+ 928251 words of memory out of 5000000
+ 38327 multiletter control sequences out of 15000+600000
+ 598387 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 59i,27n,80p,10384b,2025s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 59i,27n,78p,10384b,2376s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
@@ -2347,10 +2436,10 @@ onts/type1/urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/u
 rw/palatino/uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino
 /uplr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on deepHedging.pdf (41 pages, 271680 bytes).
+Output written on deepHedging.pdf (49 pages, 320570 bytes).
 PDF statistics:
- 508 PDF objects out of 1000 (max. 8388607)
- 439 compressed objects within 5 object streams
- 115 named destinations out of 1000 (max. 500000)
- 229 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 736 PDF objects out of 1000 (max. 8388607)
+ 657 compressed objects within 7 object streams
+ 179 named destinations out of 1000 (max. 500000)
+ 349 words of extra memory for PDF output out of 10000 (max. 10000000)
 
