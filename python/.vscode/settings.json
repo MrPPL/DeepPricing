@@ -1,4 +1,4 @@
 {
-    "python.pythonPath": "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/python/bin/python3.6",
+    "python.pythonPath": "/usr/bin/python3",
     "git.ignoreLimitWarning": true
 }

@@ -1,24 +1,26 @@
 
 \chapter{Classical numerical results and Benchmarks} % Main chapter title
 
+TODO:Equidistant time steps
+
 \label{Chapter3} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-By last section we saw the American put was an example of an option that required numerical procedures to be priced fair. The American put is far from the only example of a derivative with not a closed form solution. The two first sections deals with pricing American put option with 1 underlying stock, where in the last section we try to price options with several underlying risky assets. \\
+By last section we saw the American put was an example of an option that required numerical procedures to be priced fair. The American put is far from the only example of a derivative without a closed-form solution. In this chapter the two first sections deals with pricing American put option with 1 underlying risky asset, where in the last section we try to price options with several underlying risky assets. \\
 
-The two first sections is two classical valuing algorithms in computational finance the Binomial model \parencite{CRR} and the Least Square Monte Carlo (LSM \parencite{lsm}) approach with one underlying asset. The binomial model is an example of a strategy to approximate the B-S model and the LSM is a method trying to solve the variational inequalities. We could also have chosen to solve the free boundary problem with implicit finite difference, but we chose to focus on the two other numerical procedures. The final section in this chapter will be trying to value exotic options with several underlying assets. Here we will extend the binomial pricing model to multidimensional (\parencite{NEK} and \parencite{BEG}) and provide some closed form solutions (\parencite{Johnson87} and \parencite{Ouwehand2006}). Hence the chapter have two purposes to gain insight into valuation for exotic options and provide some benchmarks for the Neural Network in the coming chapters.
+The two first sections is two classical valuing algorithms in computational finance the Binomial model \parencite{CRR} and the Least Square Monte Carlo (LSM \parencite{lsm}) approach with one underlying asset. The binomial model is an example of a strategy to approximate the B-S model and the LSM is a method trying to solve the variational inequalities. We could also have chosen to solve the free boundary problem with implicit finite difference, but we chose to focus on the two other numerical procedures. The final section in this chapter will be trying to value exotic options with several underlying assets. Here we will extend the binomial pricing model to multidimensional (\parencite{NEK} and \parencite{BEG}) and provide some closed form solutions (\parencite{Johnson87} and \parencite{Ouwehand2006}). Therefore the chapter have two purposes to gain insight into valuation for exotic options and provide some benchmarks for the Neural Network in the coming chapters.
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
-\section{Binomial Pricing model}
+\section{Binomial Pricing Model}
 The classical \parencite{CRR} presented in this section will be used for pricing an American put stock option and to build the foundation for the multidimensional binomial model \parencite{BEG}.
 The Binomial model provides an intuitive and easy implementable model for valuing American and European options. The Binomial model comes handy, when no analytical model exists e.g. an American put option. The Binomial model also has its limitations, because it is not suited for valuing path dependent options or options with a lot of several underlying factors. The key difference on the Binomial model and the other numerical procedures is that the Binomial model is build on a discrete framework. \\
 
-The central concepts arbitrage and completeness from continuous time also work in the discrete time setup. The paper \parencite{CRR} which introduced the binomial model to option pricing came after the Black-Scholes model described in section \ref{Chapter2} \parencite{B-S-Paper}. The main reason for developing a model in discrete time, is that the the discrete time approach gives a simplified model in terms of the mathematics and highlights the essential concepts in arbitrage theory. You can argue that the simpler mathematics in this model makes the binomial model more instructive and clear. Besides being easier to understand for non-mathematician it works nicely with other options than the European options like American options.\\
+The central concepts arbitrage and completeness from continuous time also work in the discrete time setup. The paper \parencite{CRR} which introduced the binomial model to option pricing came after the Black-Scholes model described in section \ref{Chapter2} \parencite{B-S-Paper}. The main reason for developing a model in discrete time, is that the discrete time approach gives a simplified model in terms of the mathematics and highlights the essential concepts in arbitrage theory. You can argue that the simpler mathematics in this model makes the binomial model more instructive and clear. Besides being easier to understand for non-mathematician it works nicely with other options than the European options like American options.\\
 
-Even though we assume the stock price moves at discrete time instead in continuous time. It can actually be shown for a European Option that if the number of time-steps in the tree approaches infinity, then the Binomial model will converge to the continuous time closed form solution for a European option \parencite{CRR} \parencite{Hull}. Hence the binomial pricing model will be equivalent with the continuous time analytical pricing model derived by Fischer Black and Myron Scholes in the limit for European options \parencite{CRR}.\\
+Even though we assume the stock price moves at discrete time instead in continuous time it can actually be shown for a European Option that if the number of time-steps in the tree approaches infinity. The Binomial model will then converge to the continuous time closed form solution for a European option \parencite{CRR} \parencite{Hull}. Hence the binomial pricing model will be equivalent with the continuous time analytical pricing model derived by Fischer Black and Myron Scholes in the limit for European options \parencite{CRR}.\\
 
-To value a American put option, we lay out all the possible path of the stock, based on the $S_0,\sigma$ and $T$. We need to specify the number of time-steps ($\Delta t = \frac{T}{N} \ where \ N=No. \ of  \ steps$) for the tree, where for each step, we add another possible value for the stock. We only add 1 more possibility for each time-step because the tree recombines. The precision for the algorithm increases with the number of steps and the option value stabilizes (see Figure \ref{fig:binConv}). For valuing an American put option, we value the exercise value at maturity (time T) for all possible outcomes for the stock. Then we use backward induction where we compare the intrinsic value with the conditional expectation, where we choose the maximum of these two \parencite{Hull}. 
+To value an American put option, we lay out all the possible path of the stock, based on the $S_0,\sigma$ and $T$. We need to specify the number of time-steps ($\Delta t = \frac{T}{N} \ where \ N=No. \ of  \ steps$) for the tree, where for each step, we add another possible value for the stock. We only add 1 more possibility for each time-step because the tree recombines. The precision for the algorithm increases with the number of steps and the option value stabilizes (see Figure \ref{fig:binConv}). For valuing an American put option, we value the exercise value at maturity (time T) for all possible outcomes for the stock. Then we use backward induction where we compare the intrinsic value with the conditional expectation, where we choose the maximum of these two \parencite{Hull}. 
  
 \begin{figure}[th]
 \centering
@@ -33,7 +35,7 @@ To value a American put option, we lay out all the possible path of the stock, b
 %-----------------------------------
 
 \subsection{Mathematics in Binomial valuation model}
-The mathematics behind the Binomial model is simple and we will in this section provide the basic mathematics. First we need to construct the tree, then afterwards work backwards in the tree for valuation. For each time step ($\Delta t$), we assume the stock (S) can move up (u) or down (d). In order to avoid arbitrage we find the risk neutral measure q (martingale measure) for the binomial tree, where q is the probability for the stock moves up. The risk neutral measure q is chosen s.t. the expected return is the risk-free rate r.
+The mathematics behind the Binomial model is simple and we will in this section provide the basic mathematics. First we need to construct the tree, then afterwards work backwards in the tree for valuation. For each time step ($\Delta t$), we assume the stock (S) moves up ($S \cdot u$) or down ($S \cdot d$). In order to avoid arbitrage we need to find the risk neutral measure q (martingale measure) for the binomial tree.  The probability for the stock moves up is q. The risk neutral measure q is chosen such that the expected return is the risk-free rate r for the risk neutral portfolio.
 
 \begin{theorem}\label{RNVF-Discrete}
 \textbf{Risk-neutral valuation formula in discrete time. }
@@ -60,14 +62,14 @@ The comparison will be applied for every node in each time-step $\Delta t$  and 
 %	SECTION 2
 %----------------------------------------------------------------------------------------
 
-\section{Least Square Monte Carlo Method}
-The other classical result in this section is of an different nature, because it is based on simulation and linear regression. In our setting we regress the expected payoff by continuation of the contract and compare it to the intrinsic value. The dependent variable in the regression is the expected value of continuation and the independent variables is a set of orthogonal basis functions in $L^2(\Omega, \mathcal{F}, Q)$ of the simulated paths. Typical choices for basis functions could be weighted Laguerre -, Hermit -, and Jacob polynomials. This kind of regression is a nonlinear expansion of the linear model. In order to create data, we will simulate paths according to the underlying risky asset. 
+\section{Least Square Monte Carlo Method}\label{LSM}
+The classical result in this section is of a different nature, because it is based on simulation and linear regression. In our setting we regress the expected payoff by continuation of the contract and compare it to the intrinsic value. The dependent variable in the regression is the expected value of continuation and the independent variables is a set of orthogonal basis functions in $L^2(\Omega, \mathcal{F}, Q)$ of the simulated paths. Typical choices for basis functions could be weighted Laguerre -, Hermit -, and Jacob polynomials. This kind of regression is a nonlinear expansion of the linear model. In order to create data, we will simulate paths according to the underlying risky asset. 
 
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
 \subsection{LSM method for an American put}           
-We want to valuate an American put option with a stock as underlying asset. We take the same assumptions as in Chapter \ref{Chapter2} (see assumption \ref{BS-Assumption}) except the option is an American option. Hence in order to simulate the paths of the stock, we simulate from an GBM: $dS(t)=rSdt + \sigma S dW_t$ where $\sigma$ and r is constant (see solution to SDE equation \ref{GBM}). We simulate 100.000 paths for the stock. Like in the binomial model, we work backward to decide the optimal stopping time. The computer is discrete, hence we simulate the stock path as an Bermuda option, where we have 50 time-steps per year. I.e. we approximate the American option with a Bermudan option on same underlying. \\
+We want to valuate an American put option with a stock as underlying asset. We take the same assumptions as in Chapter \ref{Chapter2} (see assumption \ref{BS-Assumption}) except the option is an American option. Hence in order to simulate the paths of the stock, we simulate from a GBM: $dS(t)=rSdt + \sigma S dW_t$ where $\sigma$ and r are constant (see solution to SDE equation \ref{GBM}). We simulate 100.000 paths for the stock. Like in the binomial model, we work backward to decide the optimal stopping time. The computer is discrete, hence we simulate the stock path as an Bermuda option, where we have 50 time-steps per year. I.e. we approximate the American option with a Bermudan option on same underlying. \\
 
 At maturity the cash flow from the option is the same as for an European put option, hence the cash flow from each path is $C(\omega,T;T, T)=max(K-S_T,0)$. We use the notation $C(\omega, s; t, T)$ denote the path of cash flows generated by the option condition on the option not being exercised before t and the option holder follow the optimal stopping strategy for all s, $t<s\leq T$.
 (inspired by \parencite{lsm} p. 121). The continuation value is given by:
@@ -78,7 +80,7 @@ F(\omega; t_k)=E^Q[\sum_{j=k+1}^K \exp(-\int_{t_k}^{t_j} r(\omega,s) ds)C(\omega
 \end{equation}
 where $r(\omega,t)$ is risk free interest rate, and the $\mathcal{F}_{t_k}$ is the filtration at time $t_k$.\\
 
-The optimal stopping strategy is then by comparing this continuation value with the intrinsic value at each time step. By working backward in time until the initialization of the option, we have specified the optimal stopping times and the cash flows associated with exercising at the optimal stopping times. To estimate the condition expectation in equation \ref{continuation-value}, we regres with the basis functions taking on the underlying asset for the option being the independent variable:
+We get the optimal stopping strategy by comparing thr continuation value with the intrinsic value at each time step. By working backward in time until the initialization of the option, we have specified the optimal stopping times and the cash flows associated with exercising at the optimal stopping times. To estimate the condition expectation in equation \ref{continuation-value}, we regres with the basis functions taking on the underlying asset for the option being the independent variable:
 $$F(\omega;t_{K-1})= \sum_{j=0}^\infty a_j L_j(X)$$
 where a is the coefficients for the regression, L is the basis function, where the argument is the underlying asset $X$ \parencite{lsm}.
 
@@ -130,7 +132,7 @@ We see the maximum difference between the two algorithms is 0.027 at S=38, $\sig
 In this section will we provide closed form solution for some special cases of European multivariate contingent claims. Furthermore we present a lattice approach in multidimensional for pricing both European and American multivariate contingent claims. The basic assumptions and results are given in section \ref{MultiDimModel}.
 
 \subsection{Analytical formulas for Rainbow options}
-We derive closed form solutions to European call and put options depending on several variables, for simplicity will we focus on pricing options with 2 or 3 underlying stocks. We apply the intuition given in \parencite{Johnson87} and the results given in \parencite{Ouwehand2006}. The options we will consider is the geometric mean -, maximum - and minimum call option.
+We derive closed form solutions to European call and put options depending on several variables, for simplicity we will focus on pricing options with 2 or 3 underlying stocks. We apply the intuition given in \parencite{Johnson87} and the results given in \parencite{Ouwehand2006}. The derivatives we will consider are the geometric mean -, maximum - and minimum call option.
 
 \subsubsection{Geometric basket call option}
 For a geometric basket call option the contract function is given by:
@@ -164,7 +166,7 @@ We arrive at the price by skipping some arguments:
 where $d_1=\frac{\ln(\frac{F}{K}) + \frac{1}{2} \sigma^2 T}{\sigma \cdot \sqrt{T}}$ and $d_2=d_1-\sigma \sqrt{T}$
 
 \subsubsection{Options on the Maximum or the Minimum of Several Assets}
-Here we restrict ourselves to consider the case with three underlying stocks like in \parencite{BEG} and \parencite{Ouwehand2006}, but the formula can be generalized to higher dimensions. The contract function we will consider is:
+Here we restrict ourselves to consider the case with three underlying stocks like in \parencite{BEG} and \parencite{Ouwehand2006}, but the formula can be generalized to higher dimensions. The contract functions we consider are:
 \begin{enumerate}
 \item[•] Best of assets or cash: $\Phi(S(T))=\max\{S_1,S_2,\ldots,S_n,K\}$
 \item[•] Call on max: $\Phi(S(T))=\max\{\max(S_1,S_2,\ldots,S_n)-K,0\}$
@@ -179,7 +181,7 @@ The best of assets will both provide a price and the method for pricing call on 
 $$S_i(T) \cdot 1_{S_i(T)>S_j(T): i\neq j}$$
 Hence the best of assets derivative is a sum of above equation for each asset. So we are considering four cases, because we assumed WLOG n=4. \\
 
-For i=1 we set $S_1$ to be the numeraire asset with martingale measure $\mathbb{Q}_1$. then we see by using RNVF (see proposition \ref{RNVF}):
+For i=1 we set $S_1$ to be the numeraire asset with martingale measure $\mathbb{Q}_1$. Then we see by using RNVF (see proposition \ref{RNVF}):
 \begin{equation}
 \begin{split}
 \Pi_1(t, \mathcal{X})&=S_1(t)E_t^{Q_1}[1_{S_1(T)>S_2(T), S_1(T)>S_3(T), S_1(T)>S_4(T)}]\\

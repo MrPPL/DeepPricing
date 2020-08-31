@@ -9,7 +9,7 @@ from itertools import product
 
 ## tabel 1
 # American put min. option 1 year
-spot = [100,100]
+spot = 100
 strike = 100
 r=0.1 # instataneous rate of return
 vol = 0.2 #volatilities for assets
@@ -71,7 +71,7 @@ def createTree(corrMatrix, r, d, vol, steps, T, lattice, spot):
             y = np.matmul(L,np.transpose(u[key]))
             tree[key] = np.transpose(np.transpose(np.exp(y)) * tree[0])
     return tree
-spot = spot[0]
+
 Tree = createTree(corrMatrix=corrMatrix, r=r, d=d, vol=vol, steps=steps, T=T, lattice=lattice, spot=spot)
 Tree
 

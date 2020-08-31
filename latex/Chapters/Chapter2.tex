@@ -39,16 +39,16 @@ We can discuss these assumptions at length, but in order to progress mathematica
 %-----------------------------------
 
 \subsection{Financial Derivatives}
-There a broad range of different derivatives. In this thesis, we will mainly divide derivatives into two classes. 
+There is a broad range of different derivatives. In this thesis, we will mainly divide derivatives into two classes. 
 \begin{enumerate}
 \item Simple derivatives (T-claims)
 \item Exotic derivatives (e.g. American options)
 \end{enumerate}
-The first class is the simple derivatives. These are simple because you can only exercise them at maturity (time T). The exotic derivatives is all kind of functions on the underlying assets, where you can e.g. have a option to exercise from inception to maturity (see section \ref{AmericanOptions}) or a contract on several underlying stocks (see section \ref{BMHigherDim}). There are so many derivatives, hence the list will not be comprehensive at all. Some important simple derivatives will be the European calls and puts, because we can price analytically.
+The first class is the simple derivatives. These are simple because you can only exercise them at maturity (time T). The exotic derivatives are all kind of functions on the underlying assets, where you can e.g. have an option to exercise from inception to maturity (see section \ref{AmericanOptions}) or a contract on several underlying stocks (see section \ref{BMHigherDim}). There are so many derivatives, hence the list will not be comprehensive at all. Some important simple derivatives will be the European calls and puts, because we can price analytically.
 
 \theoremstyle{definition}
 \begin{definition}{European Call Option:}\label{ECall}
-A European call option is a option where the owner of the option has the option to exercise at maturity. The contract function for the derivative:
+A European call option is an option where the owner of the option has the option to exercise at maturity. The contract function for the derivative:
 \begin{equation}
 \begin{split}
 \Phi(S(T))=\max\{S(T)-K, 0\}
@@ -83,7 +83,7 @@ The important takeaway is that a S-F portfolio is kind of a budget restriction. 
 %	SUBSECTION 3
 %-----------------------------------
 \subsection{Arbitrage}
-Arbitrage is the financial term for a "free lunch". If there is arbitrage in the market an investor can profit without bearing risk. In order to avoid making a "money machine", we want to price derivatives to not introduce arbitrage to the market.  
+Arbitrage is the financial term for a "free lunch". If there is arbitrage in the market an investor can profit without bearing risk. In order to avoid making a "money machine", we want to price derivatives by not introducing arbitrage to the market.  
 \theoremstyle{definition}
 \begin{definition}{Arbitrage:}
 An arbitrage possibility on a financial market is a self-financed portfolio h suct that
@@ -97,14 +97,14 @@ P(V^{h}(T)>0)>1
 We say that the market is arbitrage free if there aro no arbitrage possibilities.\\
 (see p. 96 \parencite{finKont})
 \end{definition}
-From the definition of a self-financing portfolio fulfilling equation \eqref{Arbitrage} would give the possibility for arbitrage. The investor in this portfolio starts with 0 dollars, and without injecting any money, the investor is certain of not losing any money. In addition he has a positive probability by ending up with more than 0 at maturity. Arbitrage is a way to price financial products "fair". To price "fair" and hedge against risk will be the topics for this thesis.
+From the definition of a self-financing portfolio fulfilling equation \eqref{Arbitrage} would give the possibility for arbitrage. The investor in this portfolio starts with 0 dollars, and without injecting any money, the investor is certain of not losing any money. In addition he has a positive probability by ending up with more than 0 at maturity. Arbitrage is a way to price financial products "fair". To price "fair" and hedge against risk will be the topics for the rest of this thesis.
 
 %-----------------------------------
 %	SUBSECTION 4
 %-----------------------------------
 
 \subsection{Complete Market and Hedging}
-Hedging is a concepts to protect against exposure to risk. A hedge is simply a risk neutralization action in order to minimize the overall risk. In the definition below, we define a hedge for an simply T-claim.
+Hedging is a concept to protect against exposure to risk. A hedge is simply a risk neutralization action in order to minimize the overall risk. In the definition below, we define a hedge for an simply T-claim.
 \theoremstyle{definition}
 \begin{definition}{Hedging and completeness for T-claim:}
 A T-claim X can be hedged, if there exist a self-financing portfolio h such that:
@@ -126,7 +126,7 @@ Hedging and completeness means the same for other derivatives than T-claims, but
 %----------------------------------------------------------------------------------------
 
 \section{Multidimensional Models}\label{MultiDimModel}
-There is two main method for deriving arbitrage free and complete markets. The classical approach is the delta hedging approach (see \parencite{B-S-Paper} and \parencite{CRR}). The more advanced mathematical approach is the martingale approach (see \parencite{finKont}). In this section will we focus on the martingale approach and show the delta hedging approach is a special case of the more general martingale theory. For the martingale approach the First and Second Fundamental Theorems of Mathematical Finance will be the key for obtaining a fair market. Besides the model assumptions will we also assumes the financial market assumptions in section \ref{finMarket}.
+There is two main method for deriving arbitrage free and complete markets. The classical approach is the delta hedging approach \parencite{B-S-Paper} and \parencite{CRR}). The more advanced mathematical approach is the martingale approach  \parencite{finKont}. In this section we will focus on the martingale approach and show the delta hedging approach is a special case of the more general martingale theory. For the martingale approach the First and Second Fundamental Theorems of Mathematical Finance will be the key for obtaining a fair market. Besides the model assumptions will we also assumes the financial market assumptions in section \ref{FinMarket}.
 
 \subsection{Model assumptions}
 Let us consider a filtered probability space $(\Omega, \mathcal{F}, P, \mathcal{F}_t^{\bar{W}})$. Note the assumption that filtration is only generated from the Wiener process, so the $\bar{W}$ is the only random source and we assume $\bar{W}_i$ is k-dimensional. I.e. we assume that we are in a Wiener world, where all processes are Wiener driven. A priori we assume a market $(B(t),S_1(t), S_2(t),\ldots, S_n(t))$, where ${S_i(t)}_{i=1,2,\ldots,n}$ is n risky assets S(t) and B(t) is the risk free asset. By assumptions their dynamics are given by:\\
@@ -247,8 +247,8 @@ F(T,s)&=\Phi(s)
 %	SECTION 3
 %----------------------------------------------------------------------------------------
 \section{Classical Black-Scholes Formulas}\label{classicBS}
-We will not carrying the classical delta hedging approach in \parencite{B-S-Paper}. Instead we use the general multidimensional martingale approach to derive the essential formulas for pricing. 
-To derive a form solution to the European call and put option, we concentrate at a special case of the multidimensional framework, where we only have the risk free asset and one risky asset. 
+We will not do the classical delta hedging approach in \parencite{B-S-Paper}. Instead we use the general multidimensional martingale approach to derive the essential formulas for pricing. 
+To derive a closed-form solution to the European call and put option, we concentrate at a special case of the multidimensional framework, where we only have the risk free asset and one risky asset. 
 We further restrict ourselves to:\\
 \theoremstyle{assumption}
 \begin{assumption}{Black-Scholes assumptions}\label{BS-Assumption}
@@ -276,7 +276,7 @@ Where $\alpha$ is the local mean rate of return and $\sigma$ is the volatility o
 \Pi(t, X)= exp(-r(T-t))\cdot E_{t,x}^Q[X]
 \end{align}
 \end{theorem}
-From the RNVF we can derive a closed form solution for both a European call and put option. We will provide the European call option and the put-call-parity. From the put-call-parity relationship we derive the European put option from the call option.
+From the RNVF we can derive a closed form solution for both a European call and put option. We will provide the European call option and the put-call-parity, because from the put-call-parity relationship we derive the European put option from the call option.
 
 \theoremstyle{proposition}
 \begin{proposition}{}\label{BS-price-EuroCall}
@@ -337,7 +337,7 @@ By using a dynamic programming argument with three strategies:
 \item[•] Stop immediately
 \item[•] Wait one time-step h and then use optimal stopping strategy $\hat{\tau}_{t+h}$
 \end{enumerate}
-Jumping over some argument and like in this section assuming "enough regularity". We arrive at two important propositions for numerically evaluating American options.
+Jumping over some argument and like in this section assuming "enough regularity", we arrive at two important propositions for numerically evaluating American options.
 
 \begin{proposition}{\textbf{variational inequalities}}\label{varInEq}
 Given enough regularity, the optimal value function is characterized by the following relations:
@@ -376,15 +376,17 @@ $$\max_{0 \leq \tau\leq T}\{E[\exp(-r \tau) \max\{S_{\tau} - K, 0\}]\}$$
 Hence we want to maximize the expectation of the process:
 $$ \max\{ \exp(-r t) S_{t} - \exp(-r t) K, 0 \}$$
 
-From the theory developed we know that $\exp(r\cdot t) \cdot S_t$ is a Q-martingale and $\exp(r\cdot t) \cdot K$ is a deterministic decreasing function hence a supermartingale. Then $\exp(r\cdot t) \cdot S_t - \exp(r\cdot t) \cdot K$ is a submartingale. Applying the function max which is a convex and increasing transformation on a submartingale is still a submartingale. Hence the optimal stopping time is $\hat{\tau}=T$.
+From the theory developed we know that $\exp(r\cdot t) \cdot S_t$ is a Q-martingale and $\exp(r\cdot t) \cdot K$ is a deterministic decreasing function hence a supermartingale. Then $\exp(r\cdot t) \cdot S_t - \exp(r\cdot t) \cdot K$ is a submartingale. Applying the function max which is a convex and increasing functionther on a submartingale is still a submartingale. Hence the optimal stopping time is $\hat{\tau}=T$.
 
 \subsection{American put}
 For the American put the optimal stopping problem is:
 $$\max_{0 \leq \tau\leq T}\{E[\exp(-r \tau) \max\{K - S_{\tau}, 0\}]\}$$
-There is no analytical formula for American put, hence numerical procedures are required. For practical use there is three strategies to find the fair price for the option:
+There is no analytical formula for American put, hence numerical procedures are required. For practical use there are three strategies to find the fair price for the option:
 \begin{enumerate}
 \item[•] Solve the free boundary free problem numerically (see \ref{freeBoundary})
 \item[•] Solve the variational inequalities numerically (see \ref{varInEq})
 \item[•] Approximate the Black-Scholes model by a binomial model and compute the exact binomial American put price.
 \end{enumerate}
-We will in the following sections try to valuate with both the binomial model and solving the variational inequalities \parencite{finKont}.
+parencite{finKont}\\
+
+We will in the following chapters try to valuate with both the binomial model and solving the variational inequalities.
