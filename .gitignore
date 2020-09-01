@@ -1,3 +1,5 @@
 python/deepLearning/data/largeEuroData.csv
 python/deepLearning/data/mediumEuroData.csv
 python/deepLearning/data/smallEuroData.csv
+python/deepLearning/data/largeCEuroData.csv
+python/deepLearning/data/mediumCEuroData.csv

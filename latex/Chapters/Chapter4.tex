@@ -113,7 +113,15 @@ Rectified Linear Unit is one of the most popular choices since is does not suffe
         \alpha \cdot x & otherwise \\
     \end{dcases}
 \]\\
-The fact that ReLU can have some hidden covariates that is zero can be an advantage, but also a disadvantage since some neurons may die out as all the neurons are zero. The Leaky ReLU is designed to give such neurons a chance to get back into action, but not too easily, so $\alpha>0$ is chosen small ( typical $a=0.01$ ) 
+The fact that ReLU can have some hidden covariates that is zero can be an advantage, but also a disadvantage since some neurons may die out as all the neurons are zero. The Leaky ReLU is designed to give such neurons a chance to get back into action, but not too easily, so $\alpha>0$ is chosen small ( typical $\alpha=0.01$ ) 
+
+\item[•] ELU - exponential linear unit:  \[ g(a)=
+    \begin{dcases}
+        a & if \ a \geq 0 \\
+        \alpha(\exp(a)-1) \cdot x & otherwise \\
+    \end{dcases}
+\]\\
+Like the Leaky ReLU the ELU is designed to avoid the dead ReLU problem. 
 \end{enumerate}
 
 With a understanding of a single neuron we continue to the architecture of a MLPs \parencite{Goodfellow-et-al-2016} \parencite{Mackay18}.
@@ -226,7 +234,7 @@ A layer is a vector of each neuron, therefore we started with presenting a singl
 	\label{fig:multilayer-perceptron}
 \end{figure}
 
-So the MLPs is not like classical linear regression in section \ref{LSM} where a single linear transformation from input to output is applied. The unique attribute of neural network is the ability to approximate any kind of function (Universal Apporximate Theorem page 194 \parencite{Goodfellow-et-al-2016}), because of the flexiblility with applying multiple functions to the input layer. The neural network has a lot of different design options, where e.g. hidden layers, layer width, activation functions etc. are hyperparameters. To fit a model we need to initial weights, initial bias and an activation function for each layer. In order to measure the performance of the model, we need a function to measure the difference the approximation $f(\bm{x};\bm{\theta})$ and the target value $f^*(\bm{x})$. This function is referred as the loss function, where the cost function is the average over the loss functions. The cost function tells us how close predicts $f(\bm{x};\bm{\theta})$ the target y. The cost function is key to improving our model or in machine learning lingo training the model, hence the next section will cover model training \parencite{Goodfellow-et-al-2016}.
+So the MLPs is not like classical linear regression in section \ref{LSM} where a single linear transformation from input to output is applied. The unique attribute of neural network is the ability to approximate any kind of function (Universal Apporximate Theorem page 194 \parencite{Goodfellow-et-al-2016}), because of the flexiblility with applying multiple functions to the input layer. The neural network has a lot of different design options, where e.g. hidden layers, layer width, deepth, activation functions etc. are hyperparameters. To fit a model we need to initial weights, initial bias and an activation function for each layer. In order to measure the performance of the model, we need a function to measure the difference the approximation $f(\bm{x};\bm{\theta})$ and the target value $f^*(\bm{x})$. This function is referred as the loss function, where the cost function is the average over the loss functions. The cost function tells us how close predicts $f(\bm{x};\bm{\theta})$ the target y. The cost function is key to improving our model or in machine learning lingo training the model, hence the next section will cover model training \parencite{Goodfellow-et-al-2016}.
 
 %-----------------------------------
 %	SUBSECTION 3
@@ -237,6 +245,9 @@ So the MLPs is not like classical linear regression in section \ref{LSM} where a
 
 
 \subsection{Training the Network}
+
+
+Training is essential function minimization where you search in the weightspace that produce a functiont that fit training data well. Objective function to measure how the given weights perform.
 Quantifying loss
 Gradients is essential for model optimization
 stepwidth is our learning rate
@@ -276,6 +287,12 @@ SO three steps:
 %	SUBSECTION 4
 %-----------------------------------
 \subsection{Regularization}
+Overfitting. generalize performance adversed affected.
+early stopping
+
+Dropout
+
+
 The unique attribute of neural network is the ability to approximate any kind of function (Universal Apporximate Theorem), because of the flexiblility with applying multiple functions to the input layer. The neural network has a lot of different design options, where e.g. hidden layers, layer width, activation functions etc. are hyperparameters.
 
 
