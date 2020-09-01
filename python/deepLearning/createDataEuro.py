@@ -53,7 +53,7 @@ def findY(X):
     Y = np.empty((X.shape[0],1))
     count=0
     for row in X:
-        Y[count] = closedEuro.priceEPut(t=0,s=row[0],sigma=row[3],K=row[1],r=row[2], T=row[4])
+        Y[count] = closedEuro.priceECall(t=0,s=row[0],sigma=row[3],K=row[1],r=row[2], T=row[4])
         count+=1
     return Y
 
@@ -67,14 +67,14 @@ T = (0.1,3.0)
 parVec = [spot,K,r,vol, T]
 
 # number of samples
-nSamp=3 * 10**6
+nSamp=3 * 10**5
 #make data
 X = quasiSampling(parVec, nSamp)
 Y = findY(X)
 
 import pandas as pd
 df = pd.DataFrame({'y':Y[:,0],'spot':X[:,0],'K':X[:,1],'r':X[:,2], 'vol':X[:,3], 'T':X[:,4]})
-df.to_csv("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/data/largeEuroData.csv")
+df.to_csv("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/data/mediumCEuroData.csv")
 
 
     

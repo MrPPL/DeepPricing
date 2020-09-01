@@ -52,3 +52,4 @@ for s in stockValues:
             
 #print(DataFrame(dict1))
 
+print(priceECall(t=0,s=499.66,sigma=0.773,K=8.09,r=0.025,T=2.56))

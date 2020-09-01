@@ -23,7 +23,7 @@ import matplotlib.pyplot as pyplot
 class EuroParDataset(Dataset):
     def __init__(self):
         # Initialize data, download, etc.
-        xy = np.loadtxt("./deepLearning/data/mediumEuroData.csv", delimiter=',', dtype=np.float32, skiprows=1)
+        xy = np.loadtxt("./deepLearning/data/mediumCEuroData.csv", delimiter=',', dtype=np.float32, skiprows=1)
         self.n_samples = xy.shape[0]
         # here the first column is the class label, the rest are the features
         self.x_data = torch.from_numpy(xy[:, 2:]) # size [n_samples, n_features]
@@ -55,7 +55,7 @@ hidden_size4 = 100
 outputSize = 1
 num_epochs = 10
 batchSize = 64
-learning_rate = 0.001
+learning_rate = 0.01
 validation_split = 0.2
 shuffle_dataset = True
 random_seed= 42
@@ -73,9 +73,6 @@ train_sampler = SubsetRandomSampler(train_indices)
 valid_sampler = SubsetRandomSampler(val_indices)
 
 # Load whole dataset with DataLoader
-# shuffle: shuffle data, good for training
-# num_workers: faster loading with multiple subprocesses
-# !!! IF YOU GET AN ERROR DURING LOADING, SET num_workers TO 0 !!!
 #use dataloader to effectice minibatching
 train_loader = DataLoader(dataset=dataset,
                           batch_size=batchSize,
@@ -94,6 +91,7 @@ class NeuralNet(nn.Module):
         self.input_size = input_size
         self.l1 = nn.Linear(input_size, hidden_size1)
         self.leaky_relu = nn.LeakyReLU()
+        self.relu = nn.ReLU()
         self.l2 = nn.Linear(hidden_size1, hidden_size2)
         self.l3 = nn.Linear(hidden_size2, hidden_size3)
         self.l4 = nn.Linear(hidden_size3, hidden_size4)
@@ -104,7 +102,7 @@ class NeuralNet(nn.Module):
         out = self.leaky_relu(out)
         out = F.elu(self.l2(out))
         out= self.l3(out)
-        out = self.leaky_relu(out)
+        out = self.relu(out)
         out = F.elu(self.l4(out))
         out = self.l5(out)
         return out
@@ -115,30 +113,36 @@ model = NeuralNet(input_size, hidden_size1, hidden_size2, hidden_size3, hidden_s
 criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
-#training loop
 # Train the model
 n_total_steps = len(train_loader)
+#enumereate epoch
 for epoch in range(num_epochs):
-    for i, (X, y) in enumerate(train_loader):  
+    epoch_loss = 0
+    for i, (X, y) in enumerate(train_loader):  #one batch of samples       
+        optimizer.zero_grad() # zero the gradient buffer
+
         #forward pass and loss
         y_predicted = model(X)
         loss = criterion(y_predicted,y)
         
         # Backward and optimize
-        optimizer.zero_grad() # zero the gradient buffer
         loss.backward()
         optimizer.step() #does weight update
-        
-        if (i+1) % 5 == 0:
-            print (f'Epoch [{epoch+1}/{num_epochs}], Step [{i+1}/{n_total_steps}], Loss: {loss.item():.4f}')
-        
 
-# Test the model
-# In test phase, we don't need to compute gradients (for memory efficiency)
-# evaluate the model
+        # accumulate loss
+        epoch_loss += loss
+
+    epoch_loss /= n_total_steps
+    print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {epoch_loss:.4f}')
+
+##############
+# Evaluate Model
+###############
+from numpy import vstack
+from sklearn.metrics import mean_squared_error
 def evaluate_model(test_dl, model):
     predictions, actuals = list(), list()
-    for i, (inputs, targets) in enumerate(test_dl):
+    for i, (inputs, targets) in enumerate(validation_loader):
         # evaluate the model on the test set
         yhat = model(inputs)
         # retrieve numpy array
@@ -152,5 +156,26 @@ def evaluate_model(test_dl, model):
     # calculate mse
     mse = mean_squared_error(actuals, predictions)
     return mse
+
+# evaluate the model
+mse = evaluate_model(validation_loader, model)
+print('MSE: %.3f, RMSE: %.3f' % (mse, np.sqrt(mse)))
+
+############
+# Make predictions
+###########
+# make a class prediction for one row of data
+def predict(row, model):
+    # convert row to data
+    row = torch.tensor([row])
+    # make prediction
+    yhat = model(row)
+    # retrieve numpy array
+    yhat = yhat.detach().numpy()
+    return yhat
+
+row = [5,7,0.02, 0.5, 1]
+yhat = predict(row, model)
+print('Predicted: %.3f' % yhat)
 
     

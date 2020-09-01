@@ -372,6 +372,36 @@
     \field{year}{2001}
   \endentry
 
+  \entry{Mackay18}{book}{}
+    \name{author}{1}{}{%
+      {{hash=MDJC}{%
+         family={MacKay},
+         familyi={M\bibinitperiod},
+         given={David J.\bibnamedelima C.},
+         giveni={D\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim
+  C\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {eng}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \strng{namehash}{MDJC1}
+    \strng{fullhash}{MDJC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{edition}{Repr. with corr.}
+    \field{isbn}{0521642981}
+    \field{title}{Information theory, inference and learning algorithms}
+    \field{year}{2018}
+  \endentry
+
   \entry{Merton73}{article}{}
     \name{author}{1}{}{%
       {{hash=MRC}{%
