@@ -4,21 +4,21 @@
 \contentsline {chapter}{Abstract}{vii}{section*.2}
 \contentsline {chapter}{Acknowledgements}{ix}{section*.3}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.12}
-\contentsline {chapter}{\numberline {2}Arbitrage theory in continuous time finance}{3}{chapter.13}
-\contentsline {section}{\numberline {2.1}Financial markets}{3}{section.14}
+\contentsline {chapter}{\numberline {2}Arbitrage Theory In Continuous Time Finance}{3}{chapter.13}
+\contentsline {section}{\numberline {2.1}Financial Markets}{3}{section.14}
 \contentsline {subsection}{\numberline {2.1.1}Financial Derivatives}{4}{subsection.17}
-\contentsline {subsection}{\numberline {2.1.2}Self-financing portfolio (Without consumption)}{5}{subsection.22}
+\contentsline {subsection}{\numberline {2.1.2}Self-financing Portfolio (Without Consumption)}{5}{subsection.22}
 \contentsline {subsection}{\numberline {2.1.3}Arbitrage}{5}{subsection.25}
-\contentsline {subsection}{\numberline {2.1.4}Complete Market and Hedging}{5}{subsection.28}
+\contentsline {subsection}{\numberline {2.1.4}Complete Market And Hedging}{5}{subsection.28}
 \contentsline {section}{\numberline {2.2}Multidimensional Models}{6}{section.30}
-\contentsline {subsection}{\numberline {2.2.1}Model assumptions}{6}{subsection.31}
-\contentsline {subsection}{\numberline {2.2.2}Arbitrage free model}{7}{subsection.34}
+\contentsline {subsection}{\numberline {2.2.1}Model Assumptions}{6}{subsection.31}
+\contentsline {subsection}{\numberline {2.2.2}Arbitrage Free Model}{7}{subsection.34}
 \contentsline {subsection}{\numberline {2.2.3}Complete model}{8}{subsection.41}
 \contentsline {subsection}{\numberline {2.2.4}Pricing and connection to classical approach}{8}{subsection.44}
 \contentsline {section}{\numberline {2.3}Classical Black-Scholes Formulas}{9}{section.51}
-\contentsline {section}{\numberline {2.4}American Options and optimal stopping}{10}{section.58}
-\contentsline {subsection}{\numberline {2.4.1}American call without dividends}{11}{subsection.65}
-\contentsline {subsection}{\numberline {2.4.2}American put}{12}{subsection.66}
+\contentsline {section}{\numberline {2.4}American Options And Optimal Stopping}{10}{section.58}
+\contentsline {subsection}{\numberline {2.4.1}American Call Without Dividends}{11}{subsection.65}
+\contentsline {subsection}{\numberline {2.4.2}American Put}{12}{subsection.66}
 \contentsline {chapter}{\numberline {3}Classical numerical results and Benchmarks}{13}{chapter.67}
 \contentsline {section}{\numberline {3.1}Binomial Pricing Model}{13}{section.68}
 \contentsline {subsection}{\numberline {3.1.1}Mathematics in Binomial valuation model}{15}{subsection.70}
@@ -33,19 +33,22 @@
 \contentsline {paragraph}{\numberline {3.3.1.2.2}Call on max and call on min}{20}{paragraph.94}
 \contentsline {subsection}{\numberline {3.3.2}Lattice approach for multivariate contingent claims}{20}{subsection.96}
 \contentsline {chapter}{\numberline {4}Deep Learning}{21}{chapter.97}
-\contentsline {section}{\numberline {4.1}Multilayer Perceptrons}{21}{section.98}
-\contentsline {subsection}{\numberline {4.1.1}A Single Neuron}{21}{subsection.99}
-\contentsline {subsubsection}{\numberline {4.1.1.1}Activation functions}{22}{subsubsection.102}
-\contentsline {subsection}{\numberline {4.1.2}Architecture Of MLPs}{23}{subsection.103}
-\contentsline {subsection}{\numberline {4.1.3}Training the Network}{24}{subsection.108}
-\contentsline {subsubsection}{\numberline {4.1.3.1}Backpropagation}{25}{subsubsection.109}
-\contentsline {subsection}{\numberline {4.1.4}Regularization}{25}{subsection.110}
-\contentsline {chapter}{\numberline {5}Option Pricing And Feedforward Neural Network}{27}{chapter.111}
-\contentsline {section}{\numberline {5.1}Deep Learning European Options}{27}{section.112}
-\contentsline {subsection}{\numberline {5.1.1}Subsection 1}{27}{subsection.114}
-\contentsline {subsection}{\numberline {5.1.2}Subsection 2}{27}{subsection.115}
-\contentsline {section}{\numberline {5.2}Deep Learning American Options}{27}{section.116}
-\contentsline {chapter}{\numberline {A}Option contracts}{29}{appendix.117}
-\contentsline {section}{\numberline {A.1}European Call and Put}{29}{section.118}
-\contentsline {chapter}{\numberline {B}Mathematical results and definitions}{31}{appendix.121}
-\contentsline {chapter}{Bibliography}{33}{appendix*.131}
+\contentsline {section}{\numberline {4.1}Multilayer Perceptrons}{22}{section.98}
+\contentsline {subsection}{\numberline {4.1.1}A Single Neuron}{23}{subsection.99}
+\contentsline {subsubsection}{\numberline {4.1.1.1}Activation functions}{23}{subsubsection.102}
+\contentsline {subsection}{\numberline {4.1.2}Architecture Of MLPs}{24}{subsection.103}
+\contentsline {subsection}{\numberline {4.1.3}Training The Network}{26}{subsection.108}
+\contentsline {subsection}{\numberline {4.1.4}Regularization}{27}{subsection.109}
+\contentsline {chapter}{\numberline {5}Option Pricing And Deep Learning}{29}{chapter.110}
+\contentsline {section}{\numberline {5.1}Multilayer Perceptrons Regression For European Options}{29}{section.111}
+\contentsline {subsection}{\numberline {5.1.1}Data}{29}{subsection.112}
+\contentsline {subsection}{\numberline {5.1.2}Optimization and cost function}{29}{subsection.114}
+\contentsline {subsection}{\numberline {5.1.3}Model Performance}{29}{subsection.115}
+\contentsline {section}{\numberline {5.2}Multilayer Perceptrons Regression For American Options}{29}{section.116}
+\contentsline {subsection}{\numberline {5.2.1}Data}{29}{subsection.117}
+\contentsline {subsection}{\numberline {5.2.2}Optimization and cost function}{29}{subsection.118}
+\contentsline {subsection}{\numberline {5.2.3}Model Performance}{29}{subsection.119}
+\contentsline {chapter}{\numberline {A}Option contracts}{31}{appendix.120}
+\contentsline {section}{\numberline {A.1}European Call and Put}{31}{section.121}
+\contentsline {chapter}{\numberline {B}Mathematical results and definitions}{33}{appendix.124}
+\contentsline {chapter}{Bibliography}{35}{appendix*.134}

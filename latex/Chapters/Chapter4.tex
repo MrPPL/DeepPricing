@@ -4,16 +4,24 @@
 
 \label{Chapter4} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-We lay the foundation for deep learning, because we want to explore the application of deep learning in arbitrage teory specially to option pricing in the next chapter. Deep learning experiences a renaissance, because of the technology improvements in hardware and software. The collection of data has also significant improved the field. Deep learning is a specialized field in machine learning, where you focus on a special architecture of models. Like in machine learning the basic components of a deep learning algorithm are a dataset, cost function, optimazation algorithm and a model. E.g. in the lsm method we assumed the model was gaussian, dataset was the simulated paths, the loss function was the mean square error and the optimazation algorithm was solving the normal equations. Deep learning is about studying neural networks which allows for greater flexiblity than standard methods like linear regression. "Deep" comes from that a neural network consists of multiple layers, where the depth tells you how many layers the network has.\\
+Deep learning is a field in machine learning, which using multilayer structure to archive models with high capacity. The task for machine learning is to learn from data with respekt to some performance measure. "A computter program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E" (\parencite{Goodfellow-et-al-2016} p. 97). Classical tasks T could be classification or regression, where they differ on their output values. The former has discrete outputs, where regression has continuous output and will be our task for the MLPs. Measuring performance depends on the task, but for regression a typical performance measure is mean squared error (MSE):
+$$\frac{1}{n}\sum_{i=1} (y_i-\hat{y}_i)^2$$
+There are multiple methods how to penalize the error e.g. mean absolute error (MAE) and coefficient of determination $R^2=\frac{\frac{1}{n}\sum_{i=1} (y_i-\hat{y}_i)^2}{\frac{1}{n}\sum_{i=1} (y_i-\bar{y})^2}$. The- experience comes from data, where the data can be given with or without target values $\bm{y}$. In machine learning the task is quite different depending on targets is given or not, hence the algorithms are split into categories supervised and unsupervised learning. The terminology supervised comes from a teacher gives you the target values $\bm{y}$ that the algorithms tries to predict from $\matr{X}$.\\
 
-All the algorithms applied will be within supervised learning, where we try to fit the best between the features and the response variable. Furthermore all our algorithms will be based on the multilayer perceptrons (MLPs) for regression, hence it will also be the main focus.
+Machine learning is not about making overly complex models to fit your data perfectly, because then the model will most likely fit new data badly known as overfitting. The models can also be too simpel, where the opposite case namely underfitting. IF machine leearning only cared about performance on the given data for training, then machine learning would be essentially optimization. The key difference is that machine learning wish to obtain statistical generalization to unseen data. The practical way to measure generalization error is to measure it on a test set. In machine learning the data is split into test data and training data. The training data is used for training the model, where if training error is big the function could be too simple and underfitting could be the issue. There two sides of performance making the training error small and making the gap between training and test error small as well. A techinique known as regularization is one approach to reduce test error. The regularizer is added to the cost function $J(\theta)$, which is essentially the function to minimize in order to train the model. There is a lot different regularization methods, where in the MLPs section \ref{multilayerPerceptron} will present some useful for deep learning models. For training is can sometimes also be useful to have a validation data set to see how your model generalize, because the test set cannot be used to make model choices. Besides the parameter estimated within the model, there is a need for model designs (hyperparameters). I.e hyperparameters is determine outside the learning algorithm where one example could be model capacity.\\
+
+The parameter within the model is found by minimizing the cost function $J(\theta)$. In some cases there exits either a closed form solution or the cost function is convex making the optimization problem easier to handle. The complexity of MLPs makes the cost function nonconvex and iterative optimization procedures is needed. The basic iterative procedure is the gradient descent where the concept is to reapetedly making small move in parameters toward better configuration. The most popular gradient methods in deep learning is Adam, RMSProp, AdaGrad and stochastic gradient descent (SGD). The methods will be discussed in more details in section \ref{trainNetwork}. To sum up a machine learning model needs a dataset, a model, a cost function and an optimization algorithm. With a understanding of basic machine learning will be the foundation for deep learning.\\
+
+Deep learning experiences a renaissance, because of the technology improvements in hardware and software. The collection of data has also significant improved the field. Deep learning is a specialized field in machine learning, where you focus on a special architecture of models. Like in machine learning the basic components of a deep learning algorithm are a dataset, cost function, optimazation algorithm and a model. E.g. in the lsm method we assumed the model was gaussian, dataset was the simulated paths, the loss function was the mean square error and the optimazation algorithm was a closed form solution. Deep learning is about studying neural networks which allows for greater flexiblity than standard methods like linear regression. "Deep" comes from that a neural network consists of multiple layers, where the depth tells you how many layers the network has. All the algorithms applied will be within supervised learning, where we try to fit the best between the features and the response variable. Furthermore all our algorithms will be based on the multilayer perceptrons (MLPs) for regression, hence it will also be the main focus. The advantage of a multi-layer model is that for each layer the updated set of covariates can be more finely tuned to better explain the data. These network of models are called feedforward because the information only travels forward in the neural network, through the input nodes then through the hidden layers (single or many layers) and finally through the output nodes \parencite{Goodfellow-et-al-2016}. 
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 
-\section{Multilayer Perceptrons}
-The goal of the multilayer perceptrons (MLPs) is to approximate a function $f^*(x)$, where the MLPs defines a mapping $f(x;\theta)$ to approximate $f^*(x)$. The task is to find the best $\theta$ such that the approximatation $f(x;\theta)$ is close to the targets provided for some defined objective function. To build the network we start with zooming in on a single neuron, which is one node of a directed acyclic graph (see figure \ref{fig:multilayer-perceptron}). Note the MLPs is called a feedforward network, because all the connections between the neurons are directed such that the network forms a directed acyclic graph.
+\section{Multilayer Perceptrons}\label{multilayerPerceptron}
+The goal of the multilayer perceptrons (MLPs) is to approximate a function $f^*(x)$, where the MLPs defines a mapping $f(x;\theta)$ to approximate $f^*(x)$. The task is to find the best $\theta$ such that the approximatation $f(x;\theta)$ is close to the targets measured by a defined cost function $J(\theta)$. With the minimized cost function the goal is to archive statistical generalazation i.e. useful results for test data not used for training. \\
+
+The first step for MLPs is building the network, where we start with zooming in on a single neuron, which is one node of a directed acyclic graph (see figure \ref{fig:multilayer-perceptron}). Note the MLPs is called a feedforward network, because all the connections between the neurons are directed such that the network forms a directed acyclic graph.
 
 %-----------------------------------
 %	SUBSECTION 1
@@ -80,7 +88,7 @@ The single neuron has a number P features of inputs $x_p$ and one output $\hat{y
 
 The function from inputs to output for a single neuron is:
 \begin{align}   
-\hat{y}=g(w_0 + \bm{x}^T \bm{w}) \quad where \quad \bm{w}=\begin{pmatrix}
+\hat{y}=g(w_0 + \bm{x}^T \bm{w}) \quad where \quad \bm{x}=\begin{pmatrix}
 x_1 \\
 \vdots\\
 x_p
@@ -90,7 +98,7 @@ w_1 \\
 w_p
 \end{pmatrix}
 \end{align}
-The $\matr{W}$ is the weight matrix and $w_0$ is the bias term. The term inside the function g is the activation of the neuron and it is denoted:
+The $\bm{w}$ is the weight matrix (this case a vector) and $w_0$ is the bias term. The term inside the function g is the activation of the neuron and it is a affine transformation denoted:
 $$a= w_0 + \bm{x}^T \bm{w}$$
 The function g is the activation function and it is essential for the flexibility of the MLPs. There exits numerous of activations function only the imagination is the limit. We will list the most common and discuss the them \parencite{Mackay18}.
 
@@ -99,15 +107,18 @@ The function g is the activation function and it is essential for the flexibilit
 %	SUBSUBSECTION 1
 %-----------------------------------
 \subsubsection{Activation functions}
-Activation functions are important feature for neural network, because they allow for non-linearities and flexibility. Activation functions apply a non-linear transformation and decide whether a neuron should be activated or not. Without activation functions or the identity function $g(a)=a$ the whole network would essentially be a linear regression model. Some popular activation functions:
+Activation functions are important for neural network, because they allow for non-linearities and flexibility. Activation functions apply a non-linear transformation and decide whether a neuron should be activated or not. Without activation functions or the identity function $g(a)=a$ the whole network would essentially be a linear regression model. Some popular activation functions:
 \begin{enumerate}
 \item[•] Sigmoid function: $g(a)=\frac{1}{1+\exp(-a)}$\\
-This is the traditional choice, also called logistic function. Popular in classification but can suffer from vanishing gradient (TODO) in deep learning.
+
+This is the traditional choice, also called logistic function. Popular in classification but can suffer from vanishing gradient in deep learning.
 \item[•] Hyperbolic tangent function: $g(a)=\frac{e^a-e^{-a}}{e^a+e^{-a}}$\\
+
 A scaled and shifted sigmoid function and likewise suffers from the vanishing gradient problem. The range is $(-1,1)$ and centered at zero. Often used for hidden layers.
 \item[•] ReLU function: $g(a)=\max(0,a)$.\\
+
 Rectified Linear Unit is one of the most popular choices since is does not suffer from the vanishing gradient problem. The MLPs often becomes more sparse because it sets some features to zero. It is claimed that ReLU learns muliple times faster than both the hyberbolic tangent and the sigmoid function.
-\item[•] Leaky ReLU function better version than Relu:  \[ g(a)=
+\item[•] Leaky ReLU function:  \[ g(a)=
     \begin{dcases}
         a & if \ a \geq 0 \\
         \alpha \cdot x & otherwise \\
@@ -130,19 +141,19 @@ With a understanding of a single neuron we continue to the architecture of a MLP
 %-----------------------------------
 %	SUBSECTION 2
 %-----------------------------------
-\subsection{Architecture Of MLPs}
-A MLPs constist of a input layer, where all $p$ features enters, $L$ hidden layers, and an output layer. Each hidden layer and the output layer consists of multiple neurons, where the width of the layer is the number of neurons in that layer ($m^l$) (see figure \ref{fig:multilayer-perceptron}). The networks inputs are called the input layer, the output layer is the output of the neural network. The layers between the input and output layer are hidden layers. This could be an explanation why the field is called Deep learning, because we a deep structure of layers. In each hidden layer a linear combination of the featurss from the previous layer is made and then an activation function is applied in order to create the new hidden features in that layer (see figure \ref{fig:multilayer-perceptron}). The output in MLPs is a larged nested function, where the input layer go through a chain of functions until reaching the output.
+\subsection{Architecture Of MLPs}\label{architectureMLPs}
+A MLPs constist of a input layer, where all $p$ features enters, $L$ hidden layers, and an output layer. Each hidden layer and the output layer consists of multiple neurons, where the width of the layer is the number of neurons in that layer ($m^l$) (see figure \ref{fig:multilayer-perceptron}). The networks inputs are called the input layer, the output layer is the output of the neural network. The layers between the input and output layer are hidden layers. This could be an explanation why the field is called Deep learning, because of a deep structure of layers. In each hidden layer a linear combination of the featurss from the previous layer is made and then an activation function is applied in order to create the new hidden features in that layer (see figure \ref{fig:multilayer-perceptron}). The output in MLPs is a larged nested function, where the input layer go through a chain of functions until reaching the output.
 \begin{align}
 \bm{f}(\bm{x};\bm{\theta})=\bm{f}_1 \circ \bm{f}_2 \circ \cdots \circ \bm{f}_{L+1}\\
 where \ \bm{f}_i : \mathbf{R}^{m^{i-1}} \to \mathbf{R}^{m^{i}} \quad i=1,\ldots, L+1
 \end{align}
-Each function in the composition of functions correspond to layer of neurons.
+Each function in the composition of functions correspond to a layer of neurons.
 \begin{align}
 \bm{f}_i(x)=\bm{g}(\matr{W}^T \bm{x} + \bm{w_0}) \quad x\in \mathbf{R}^{m^{i-1}} \ and \ \matr{W} \in \mathbf{R}^{\bm{m^{i-1}} \times \bm{m^{i}} }
 \end{align}
 So the function maps a vector to a vector, the hidden layers will often be denoted $\bm{h}$ where for each single neuron, we map a vector to a scalar by:
 $$h_i=g(\bm{x}^T \cdot \matr{W}_{:,i} + (w_0)_{i})$$
-A layer is a vector of each neuron, therefore we started with presenting a single neuron network (section \ref{singleNeuron}).
+A layer is a vector of each neuron, hence the transformation from one layer to the next can be interpreted as multiple vector to skalar transformations, where each skalar/neuron act in parallelle. The different view motivatives the initial presentation of single neuron network (section \ref{singleNeuron}).
 
 \usetikzlibrary{decorations.pathreplacing}
 \usetikzlibrary{fadings}
@@ -234,71 +245,49 @@ A layer is a vector of each neuron, therefore we started with presenting a singl
 	\label{fig:multilayer-perceptron}
 \end{figure}
 
-So the MLPs is not like classical linear regression in section \ref{LSM} where a single linear transformation from input to output is applied. The unique attribute of neural network is the ability to approximate any kind of function (Universal Apporximate Theorem page 194 \parencite{Goodfellow-et-al-2016}), because of the flexiblility with applying multiple functions to the input layer. The neural network has a lot of different design options, where e.g. hidden layers, layer width, deepth, activation functions etc. are hyperparameters. To fit a model we need to initial weights, initial bias and an activation function for each layer. In order to measure the performance of the model, we need a function to measure the difference the approximation $f(\bm{x};\bm{\theta})$ and the target value $f^*(\bm{x})$. This function is referred as the loss function, where the cost function is the average over the loss functions. The cost function tells us how close predicts $f(\bm{x};\bm{\theta})$ the target y. The cost function is key to improving our model or in machine learning lingo training the model, hence the next section will cover model training \parencite{Goodfellow-et-al-2016}.
+So the MLPs is not like classical linear regression in section \ref{LSM} where a single linear transformation from input to output is applied. The unique attribute of neural network is the ability to approximate any kind of function (Universal Apporximate Theorem page 194 \parencite{Goodfellow-et-al-2016}), because of the flexiblility with applying multiple functions to the input layer. The neural network has a lot of different design options, where e.g. hidden layers, layer width, deepth, activation functions etc. are hyperparameters. In general it is recommended to use too many hidden covariates (neurons) rather than too few, and instead introduce some kind of penalty to avoid that the model becomes overly large, which will discuss further in section \ref{regularization}.\\
+
+To fit a model the model need initialization of weights, biases and activation functions. In order to measure the performance of the model, we need a function to measure the difference between the approximation $f(\bm{x};\bm{\theta})$ and the target value $f^*(\bm{x})$. This function is referred as the loss function, where the cost function is the average over the loss functions. The cost function tells how close the predition $f(\bm{x};\bm{\theta})$ is to the target y. The cost function is key to improving our model or in machine learning lingo training the model, hence the next section will cover model training \parencite{Goodfellow-et-al-2016}.
 
 %-----------------------------------
 %	SUBSECTION 3
 %-----------------------------------
+\subsection{Training The Network}\label{trainNetwork}
+Training the network is key to obtaining for building a useful model. The performance of the model is measured by the cost function. One example of a cost function is the risk function:
+\begin{align*}
+J(\theta)=E_{(\bm{x},y)\sim p_{data}} L(f(\bm{x};\bm{\theta}),y)
+\end{align*}
+The true probability function generating the data ($p_{data}$) is unknown to us, hence the empirical risk function is often chosen:
+\begin{align*}
+J(\theta)=E_{(\bm{x},y)\sim \hat{p}_{data}} L(f(\bm{x};\bm{\theta)},y)= \frac{1}{n}\sum_{i=1}^{n} L(f(x_i;\theta),y_i)
+\end{align*}
+I.e. the cost function is a way to measure the approximation of $f^*(x)$ by our model $f(\bm{x};\bm{\theta})$. The training is important e.g. imagine after random initialization of parameter and construction of the MLPs we reported the output given the inputs of the model. This model would probably result in a high cost function value and bad performance because the given weights would produce a function that do not fit training data. The way out of the high cost function is to try to minimize the cost function over the weightspace hence training for MLPs is essentially a optimization of a nonconvex function. Remember the MLPs is a chain of functions (section \ref{architectureMLPs}) where the structure often makes the optimization a nonconvex problem hence a global minimum is seldom archived. Other pitfalls for optimization of MLPs are weight space symmentry (nonidentifiable), steep cliffs, saddle points, vanishing and exploding gradient.\\
+
+The actual optimization algorithms for MLPs is based on gradients, where we make small local moves. The overall goal is to find $\theta$ to reduce the test error. Within gradient methods there is batch gradient descend and minibatch stochastic gradient descend, where the former is training on the whole dataset, and the latter is only for a subset of the dataset. The minibatch methods have the advantage it can parrallize hence faster training. A epoch is a measure of the number of iterations the training vectors are used to update the weights. For the minibatching techniques it is important to random sample from the whole dataset in order to get unbiased gradient estimation. \\
+
+Commen method to estimate the parameters is gradient descent, stochastic gradient descent (SGD) and Adam, where all the optimization algorithms are iterative. The goal is to find critical points $\nabla J(\theta)=0$, to obtain the critical points the iterative methods moves in the opposite direction of sign of derivative $\nabla J(\theta)$. I.e. the move updates the parameters where the stepsize is our learning rate $\eta$:
+$$\theta_{new}=\theta_{old} - \eta \nabla J(\theta_{old}) $$
+$J(\theta)$ is the cost function, where the choice for the models we consider will be the empirical risk measure, where the loss function $L$ will be quadratic:
+$$J(\theta)= \frac{1}{n}\sum_{i=1}^{n} L(f(x_i;\theta),y_i)=\frac{1}{n}\sum_{i=1}^{n} (y_i-\hat{y}_i)^2$$
+Gradient descend use the whole batch for each update, where Adam and SGD use minibatches for each update. The Adam algortihm use a adaptive learning rate, where the two others use constant or descending learning rate. The Adam method makes greater progress in more gently sloped directions of weightspace compared to SGD and gradient descent.\\ 
+
+Besides choosing a optimization procedure the initialization of the parameters are important. There is a lot different suggestions to initialize parameters, but there is no general golden rule at the moment because lack of understanding of the optimization procedure in neural nets. Often the practioners tend to use simple and heuristic methods where it has been shown the initialization needs to break symmetry.\\
+
+The most common way of finding gradients is the backpropagation algoritm, where the basic idea is the chain rule from calculus: $\frac{dz}{dx}= \frac{dz}{dy} \frac{dy}{dx}$\\
+To understand backpropagation is often useful with a computational graph created by forward propagation, where the backpropagation compute the derivative from output layer to input layer by going backward in the computational graph. The training process is a forward-backward algorithm. Different starting values of $\theta$ will result in different parameters. The good news is that these predictors typically do not differ by very much. It is recommended to work with a set of different starting values, and then use as a final predictor the average of the individual predictors stemming from each starting value \parencite{Goodfellow-et-al-2016}.
 
 
-
-
-
-\subsection{Training the Network}
-
-
-Training is essential function minimization where you search in the weightspace that produce a functiont that fit training data well. Objective function to measure how the given weights perform.
-Quantifying loss
-Gradients is essential for model optimization
-stepwidth is our learning rate
-we want to minimize the loss with an optimization algorithm to find the optimal set of weights
-
-In general it is recommended to use too many hidden covariates (neurons) rather than too few, and instead introduce some kind of penalty to avoid that the model becomes overly large.
-\\
-The estimation goal is to minimize a function on the form
-$$Q(\theta) = \sum_{i=1}^n L(x_i, \beta^T z^{(L)})$$
-where the loss function $L$ often is quadratic.\\
-An alternative is to minimize the negative of the log likelihood. \textbf{This is what done in classification.}
-A method to estimate the parameters is the gradient descent or the stochastic gradient descent. Here it is necessary to compute the gradient of the objective function. The most common way of doing so is the backpropagation algoritm. This is a forward-backward algorithm. Different starting values of $\theta$ will result in different parameters. The good news is that these predictors typically do not differ by very much. It is recommended to one should work with a set of different starting values, and then use as a final predictor the average of the individual predictors stemming from each starting value. It is also possible to use bagging.
-\\
-Important to standardize the covariates. And highly correlated covariates should be trimmed down.\\
-It is also a good idea to standardize the hidden covariates as well. This is called batch normalization and can accelarate the training of a network considerably.
-\\
-It is recommended to use batch normalization  in combination with dropout.
-\\
-It is possible to use ridge or lasso like penalty.
-\\
-\\
-A method that is good at improving the quality is dropout. The idea of dropout is that in the estimation, when updating the gradient, each node is kept with probability $p$, independently of each other. This is a regularization tool.\\
-
-The last update to the output layer is just linear regression\\
-The advantage of a multi-layer model is that for each layer the updated set of covariates can be more finely tuned to better explain the data. 
-
-\subsubsection{Backpropagation}
-The chain rule: $\frac{dz}{dx}= \frac{dz}{dy} \frac{dy}{dx}$
-coputational graph - local gradient -> gradient, because we want to minimize the loss function
-so we want $\frac{\partial Loss}{\partial x}$ use chain rule to find the "final gradient".
-SO three steps:
-1. forward pass: compute Loss
-2. compute local gradients
-3. backward pass: compute $\dfrac{\partial Loss}{\partial weights}$ using chain rule
 
 %-----------------------------------
 %	SUBSECTION 4
 %-----------------------------------
-\subsection{Regularization}
-Overfitting. generalize performance adversed affected.
-early stopping
+\subsection{Regularization}\label{regularization}
+The number of parameters and the capacity of neural networks arise often the problem of overfitting, i.e. the model does not generalize well on new data. Regularization is a technique that constains our optimization problem to discourage complex models, hence avoid the problem of overfitting. Some common methods for deep learning is parameter norm regularization, early stopping and dropout.\\
 
-Dropout
+Early stopping is a effective and simple method for regularization. Compared to parameter norm regularization the early stopping algorithm does not harm the learning dynamics. The early stopping method is also computational efficient, hence it makes a popular regularization method for deep learning. The idea of early stopping is that the iterative training algorihm keeps improving the train error, but training too extensively leads the test error to rise. The idea is then to split your data into validation and train datasets, where you determine the best $\hat{\theta}$ and the corresponding training steps $\hat{i}$ by iterative comparing the cost function on the validation set. The algorithm stops after a predefined number of steps without improving the cost function on the validation set.\\
 
+Like early stopping the dropout method is computationally inexpensive. The idea is to removing neuron randomly at each training loop, i.e. when updating the gradient, each node is kept with probability $p$, independently of each other. To perform dropout a binary mask is sampled independently for each iterations, where the probability $p$ for 1 is another hyperparameter. The goal is to minimize $E_{\bm{\mu}} J(\bm{\theta}, \bm{\mu})$ where $\bm{\mu}$ is the mask. The result of the procedure is more robust features and a regularizing effect on most models.\\
 
-The unique attribute of neural network is the ability to approximate any kind of function (Universal Apporximate Theorem), because of the flexiblility with applying multiple functions to the input layer. The neural network has a lot of different design options, where e.g. hidden layers, layer width, activation functions etc. are hyperparameters.
+There is a lot of design options for deep learning, where the choices should be specific for the given task. There is a no free luncg theorem for machine learning, which says no model is superior for all tasks (see page 114 \parencite{Goodfellow-et-al-2016}). The design for specific tasks are important where training error and test error can be improved by designing the model for the given task. Another aspekt is the computational resources i.e. the memory space and computational time. \\
 
-
-%----------------------------------------------------------------------------------------
-%	SECTION 2
-%----------------------------------------------------------------------------------------
-
-These network of models are called feedforward because the information only travels forward in the neural network, through the input nodes then through the hidden layers (single or many layers) and finally through the output nodes. 
-
+Pricing derivatives with deep learning methods have two clear benefits. The first is computational time, where after a model is trained, then the model is far superior to methods as monte carlo simulation or similar. Another advantage is the non-linearities of the model making it possible to fit more complex functions \parencite{Goodfellow-et-al-2016}.

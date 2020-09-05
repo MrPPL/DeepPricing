@@ -136,31 +136,38 @@ for epoch in range(num_epochs):
     epoch_loss /= n_total_steps
     print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {epoch_loss:.4f}')
 
+
+
 ##############
 # Evaluate Model
 ###############
 from numpy import vstack
 from sklearn.metrics import mean_squared_error
-def evaluate_model(test_dl, model):
-    predictions, actuals = list(), list()
-    for i, (inputs, targets) in enumerate(validation_loader):
-        # evaluate the model on the test set
-        yhat = model(inputs)
-        # retrieve numpy array
-        yhat = yhat.detach().numpy()
-        actual = targets.numpy()
-        actual = actual.reshape((len(actual), 1))
-        # store
-        predictions.append(yhat)
-        actuals.append(actual)
-    predictions, actuals = vstack(predictions), vstack(actuals)
-    # calculate mse
-    mse = mean_squared_error(actuals, predictions)
-    return mse
+predictions, actuals = list(), list()
+for i, (inputs, targets) in enumerate(validation_loader):
+    # evaluate the model on the test set
+    yhat = model(inputs)
+    # retrieve numpy array
+    yhat = yhat.detach().numpy()
+    actual = targets.numpy()
+    actual = actual.reshape((len(actual), 1))
+    # store
+    predictions.append(yhat)
+    actuals.append(actual)
+predictions, actuals = vstack(predictions), vstack(actuals)
 
-# evaluate the model
-mse = evaluate_model(validation_loader, model)
+#model performance
+# calculate mse
+mse = mean_squared_error(actuals, predictions)
 print('MSE: %.6f, RMSE: %.6f' % (mse, np.sqrt(mse)))
+
+# Plot
+import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.rcParams['agg.path.chunksize']=200000
+plt.plot(predictions, actuals, 'b')
+plt.show()
+
 
 ############
 # Make predictions

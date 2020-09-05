@@ -1,6 +1,6 @@
 % Chapter Template
 
-\chapter{Arbitrage theory in continuous time finance} % Main chapter title
+\chapter{Arbitrage Theory In Continuous Time Finance} % Main chapter title
 
 \label{Chapter2} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
@@ -10,7 +10,7 @@ Arbitrage theory in continuous time finance is a very broad field with a lot of 
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 
-\section{Financial markets}\label{FinMarket}
+\section{Financial Markets}\label{FinMarket}
 
 \begin{figure}[th]
 \centering
@@ -63,7 +63,7 @@ For illustration of above contract see appendix \ref{AppendixA} \parencite{finKo
 %	SUBSECTION 2
 %-----------------------------------
 
-\subsection{Self-financing portfolio (Without consumption)}
+\subsection{Self-financing Portfolio (Without Consumption)}
 A self-financing portfolio h, is a portfolio h which doesn't get any external injection of money. h is the number of each assets in our portfolio. We denote $V^{h}(t)$ the value of our portfolio h at time t, hence:
 \theoremstyle{definition}
 \begin{definition}{Self-financing portfolio}
@@ -103,7 +103,7 @@ From the definition of a self-financing portfolio fulfilling equation \eqref{Arb
 %	SUBSECTION 4
 %-----------------------------------
 
-\subsection{Complete Market and Hedging}
+\subsection{Complete Market And Hedging}
 Hedging is a concept to protect against exposure to risk. A hedge is simply a risk neutralization action in order to minimize the overall risk. In the definition below, we define a hedge for an simply T-claim.
 \theoremstyle{definition}
 \begin{definition}{Hedging and completeness for T-claim:}
@@ -128,7 +128,7 @@ Hedging and completeness means the same for other derivatives than T-claims, but
 \section{Multidimensional Models}\label{MultiDimModel}
 There is two main method for deriving arbitrage free and complete markets. The classical approach is the delta hedging approach \parencite{B-S-Paper} and \parencite{CRR}). The more advanced mathematical approach is the martingale approach  \parencite{finKont}. In this section we will focus on the martingale approach and show the delta hedging approach is a special case of the more general martingale theory. For the martingale approach the First and Second Fundamental Theorems of Mathematical Finance will be the key for obtaining a fair market. Besides the model assumptions will we also assumes the financial market assumptions in section \ref{FinMarket}.
 
-\subsection{Model assumptions}
+\subsection{Model Assumptions}
 Let us consider a filtered probability space $(\Omega, \mathcal{F}, P, \mathcal{F}_t^{\bar{W}})$. Note the assumption that filtration is only generated from the Wiener process, so the $\bar{W}$ is the only random source and we assume $\bar{W}_i$ is k-dimensional. I.e. we assume that we are in a Wiener world, where all processes are Wiener driven. A priori we assume a market $(B(t),S_1(t), S_2(t),\ldots, S_n(t))$, where ${S_i(t)}_{i=1,2,\ldots,n}$ is n risky assets S(t) and B(t) is the risk free asset. By assumptions their dynamics are given by:\\
 \begin{align}
 dS(t)=D[S(t)]\alpha(t)dt+D[S(t)]\sigma(t)d\bar{W}(t)\label{GBM-P} \\
@@ -155,7 +155,7 @@ $\\
 volatility matrix $\sigma=\{\sigma_{ij}(t)\}_{i=1,\ldots,n,j=1,\ldots,k}$, local mean of rate of return vector $\alpha=(\alpha_1(t), \alpha_2(t), \ldots, \alpha_n(t))^T$, and D(x) denotes a diagonal matrix with vector x as its diagonal.\\ 
 Furthermore the Wiener processes covariance is $Cov(dW_i(t)dW_j(t))=\rho_{ij}dt$ where $\rho_{i,i}=1$
 
-\subsection{Arbitrage free model}
+\subsection{Arbitrage Free Model}
 The first problem we are faced with in arbitrage theory is to price the derivative, i.e. finding $\Pi(t,\mathcal{X})$ the price at time t without introducing arbitrage to the market $(B(t), S(t), \Pi(t))$. The First Fundamental Theorem tells us how to price $\Pi(t)$.
 \begin{theorem}\label{FFT1}
 \textbf{First Fundamental Pricing Theorem of Mathematical Finance(FFT1): } The market model is free of arbitrage if and only if there exist a martingale measure, i.e. a measure $Q\sim P$ s.t. the processes:
@@ -310,7 +310,7 @@ The above formula for the European call option is actually the same for an Ameri
 %	SECTION 4
 %----------------------------------------------------------------------------------------
 
-\section{American Options and optimal stopping}\label{AmericanOptions}
+\section{American Options And Optimal Stopping}\label{AmericanOptions}
 The American options adds additional complexity to the pricing problem, because compared to the European option the American option can be exercised at any time from inception to maturity. The main problem with American options is to find a optimal stopping time, i.e.
 \begin{align}
 \max_{0 \leq \tau\leq T}\{E[\Phi(\tau,X_{\tau})]\}
@@ -368,7 +368,7 @@ $$C=\{(t,x): V(t,x)>\Phi(t,x) \}$$
 
 We will see in the American put section why these two propositions are useful.
 
-\subsection{American call without dividends}
+\subsection{American Call Without Dividends}
 The American call options is a special case, because the optimal stopping time is always at the options maturity. With martingale machinery it means the value-process is a submartingale, which mean the $\hat{\tau}=T$.
 
 The optimal stopping problem is:
@@ -378,7 +378,7 @@ $$ \max\{ \exp(-r t) S_{t} - \exp(-r t) K, 0 \}$$
 
 From the theory developed we know that $\exp(r\cdot t) \cdot S_t$ is a Q-martingale and $\exp(r\cdot t) \cdot K$ is a deterministic decreasing function hence a supermartingale. Then $\exp(r\cdot t) \cdot S_t - \exp(r\cdot t) \cdot K$ is a submartingale. Applying the function max which is a convex and increasing functionther on a submartingale is still a submartingale. Hence the optimal stopping time is $\hat{\tau}=T$.
 
-\subsection{American put}
+\subsection{American Put}
 For the American put the optimal stopping problem is:
 $$\max_{0 \leq \tau\leq T}\{E[\exp(-r \tau) \max\{K - S_{\tau}, 0\}]\}$$
 There is no analytical formula for American put, hence numerical procedures are required. For practical use there are three strategies to find the fair price for the option:

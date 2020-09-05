@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  1 SEP 2020 11:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  5 SEP 2020 11:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2528,7 +2528,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--320
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 13.
-<Figures/brownianMotion.png, id=401, 395.4775pt x 279.0425pt>
+<Figures/brownianMotion.png, id=416, 395.4775pt x 279.0425pt>
 File: Figures/brownianMotion.png Graphic file (type png)
 <use Figures/brownianMotion.png>
 Package pdftex.def Info: Figures/brownianMotion.png  used on input line 17.
@@ -2635,7 +2635,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-<Figures/binConv.png, id=561, 406.51875pt x 279.0425pt>
+<Figures/binConv.png, id=577, 406.51875pt x 279.0425pt>
 File: Figures/binConv.png Graphic file (type png)
 <use Figures/binConv.png>
 Package pdftex.def Info: Figures/binConv.png  used on input line 27.
@@ -2707,35 +2707,63 @@ T \OMS/zplm/m/n/10.95 ^^@
  (./Chapters/Chapter4.tex
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 7--8
+Underfull \hbox (badness 10000) in paragraph at lines 8--10
 
  []
 
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 25.92514pt on input line 51.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 21.61124pt on input line 51.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 51.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 25.92514pt on input line 51.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 21.61124pt on input line 51.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 15.0049pt on input line 51.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 53.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 53.
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 11--12
+
+ []
 
 1: section
 [21
 
 
 
-] [22]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+[22]
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 25.92514pt on input line 59.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 21.61124pt on input line 59.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 15.0049pt on input line 59.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 25.92514pt on input line 59.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 21.61124pt on input line 59.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 15.0049pt on input line 59.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 61.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 10.42007pt on input line 61.
+
+Underfull \hbox (badness 10000) in paragraph at lines 112--113
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 115--116
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 118--119
+
+ []
+
+[23] [24]
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryfadings.code.tex
 File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.1a (rcs-revision 1.2)
@@ -2744,56 +2772,97 @@ File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.1a (rcs-revision 1.2)
 .tex
 File: pgflibraryfadings.code.tex 2008/02/07 v3.0.1a (rcs-revision 1.3)
 ))
-Overfull \hbox (1.36829pt too wide) in paragraph at lines 224--225
+Overfull \hbox (1.36829pt too wide) in paragraph at lines 243--244
  [][] 
  []
 
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 225.
+(Font)              scaled to size 7.91925pt on input line 244.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 225.
-[23]
-Overfull \hbox (2.6813pt too wide) in paragraph at lines 240--244
-\T1/ppl/m/n/10.95 Quantifying loss Gra-di-ents is es-sen-tial for model op-ti-m
-iza-tion step-width is our learn-
- []
+(Font)              scaled to size 7.91925pt on input line 244.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 248--262
+Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 248--262
+[25]
+Underfull \hbox (badness 10000) in paragraph at lines 263--265
 
  []
 
-[24]) [25]
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--267
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 271--273
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 274--275
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 285--286
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 291--292
+
+ []
+
+[27]) [28]
 \openout2 = `Chapters/Chapter5.aux'.
 
- (./Chapters/Chapter5.tex [26
+ (./Chapters/Chapter5.tex
+Chapter 5.
+
+Overfull \hbox (1.2127pt too wide) in paragraph at lines 13--13
+[]\T1/ppl/b/n/14.4 Multilayer Per-cep-trons Re-gres-sion For Eu-ro-pean Op-tion
+s 
+ []
+
+
+Overfull \hbox (2.00444pt too wide) in paragraph at lines 49--49
+[]\T1/ppl/b/n/14.4 Multilayer Per-cep-trons Re-gres-sion For Amer-i-can Op-tion
+s 
+ []
+
+)
+1: section
+[29
 
 
 
 ]
-Chapter 5.
-)
-1: section
-[27]
 \openout2 = `Appendices/AppendixA.aux'.
 
- (./Appendices/AppendixA.tex [28
+ (./Appendices/AppendixA.tex [30
 
 
 
 ]
 Appendix A.
-<Figures/euroCall.png, id=756, 390.45876pt x 279.0425pt>
+<Figures/euroCall.png, id=793, 390.45876pt x 279.0425pt>
 File: Figures/euroCall.png Graphic file (type png)
 <use Figures/euroCall.png>
 Package pdftex.def Info: Figures/euroCall.png  used on input line 13.
 (pdftex.def)             Requested size: 390.4578pt x 279.04181pt.
-<Figures/euroPut.png, id=757, 390.45876pt x 279.0425pt>
+<Figures/euroPut.png, id=794, 390.45876pt x 279.0425pt>
 File: Figures/euroPut.png Graphic file (type png)
 <use Figures/euroPut.png>
 Package pdftex.def Info: Figures/euroPut.png  used on input line 23.
@@ -2803,7 +2872,7 @@ Package pdftex.def Info: Figures/euroPut.png  used on input line 23.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 1: section
-[29 <./Figures/euroCall.png>] [30 <./Figures/euroPut.png>]
+[31 <./Figures/euroCall.png>] [32 <./Figures/euroPut.png>]
 \openout2 = `Appendices/AppendixB.aux'.
 
 
@@ -2820,11 +2889,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--32
  []
 
 1: section
-[31
+[33
 
 
 
-]) [32]
+]) [34]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 346.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
@@ -2836,7 +2905,7 @@ Overfull \hbox (13.26485pt too wide) in paragraph at lines 346--346
  []
 
 1: section
-[33
+[35
 
 
 ]
@@ -2848,7 +2917,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 350.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 350.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 350.
 Package rerunfilecheck Info: File `deepHedging.out' has not changed.
-(rerunfilecheck)             Checksum: 35565C00C01C5996CA8A90ECE1F00F1D;9281.
+(rerunfilecheck)             Checksum: 17EC2281447130A02CD3F107A7410C2C;9972.
 
 
 LaTeX Warning: There were undefined references.
@@ -2861,32 +2930,33 @@ Package logreq Info: Writing requests to 'deepHedging.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47421 strings out of 492982
- 973751 string characters out of 6134896
- 1171037 words of memory out of 5000000
- 50069 multiletter control sequences out of 15000+600000
- 639980 words of font info for 258 fonts, out of 8000000 for 9000
+ 47444 strings out of 492982
+ 974008 string characters out of 6134896
+ 1167365 words of memory out of 5000000
+ 50081 multiletter control sequences out of 15000+600000
+ 641430 words of font info for 264 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,27n,78p,10384b,2396s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pf
-b></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texmf/fonts/ty
-pe1/public/cm-super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw
-/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/up
-lbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on deepHedging.pdf (55 pages, 362017 bytes).
+public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbb.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/mathpazo/fplmbi.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/mathpazo/fplmr.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/mathpazo/fplmri.pfb></usr/share/texmf/fonts/type1/pu
+blic/cm-super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palat
+ino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on deepHedging.pdf (57 pages, 381561 bytes).
 PDF statistics:
- 902 PDF objects out of 1000 (max. 8388607)
- 780 compressed objects within 8 object streams
- 201 named destinations out of 1000 (max. 500000)
- 629 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 944 PDF objects out of 1000 (max. 8388607)
+ 818 compressed objects within 9 object streams
+ 206 named destinations out of 1000 (max. 500000)
+ 653 words of extra memory for PDF output out of 10000 (max. 10000000)
 
