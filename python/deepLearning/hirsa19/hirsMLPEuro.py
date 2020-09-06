@@ -158,15 +158,38 @@ predictions, actuals = vstack(predictions), vstack(actuals)
 
 #model performance
 # calculate mse
+from sklearn.metrics import r2_score
+from sklearn.metrics import mean_absolute_error
 mse = mean_squared_error(actuals, predictions)
 print('MSE: %.6f, RMSE: %.6f' % (mse, np.sqrt(mse)))
+print ('R Squared =',r2_score(actuals, predictions))
+print ('MAE =',mean_absolute_error(actuals, predictions))
 
 # Plot
+def abline(slope, intercept):
+    """Plot a line from slope and intercept"""
+    axes = plt.gca()
+    x_vals = np.array(axes.get_xlim())
+    y_vals = intercept + slope * x_vals
+    plt.plot(x_vals, y_vals, 'r--', linewidth=1)
+
 import matplotlib.pyplot as plt
 import matplotlib
-matplotlib.rcParams['agg.path.chunksize']=200000
-plt.plot(predictions, actuals, 'b')
+from matplotlib import rcParams
+
+rcParams['figure.figsize']=6,4
+plt.scatter(predictions, actuals, alpha=0.5, s=1)
+plt.xlabel("Predictions Price/Strike Price")
+plt.ylabel("Actual Price/Strike Price")
+plt.title("Multilayer Perceptrons Predictions Vs. Actual Targets")
+plt.legend(loc=2) #location of legend
+plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
+plt.style.use('ggplot')
+abline(1,0)
+rcParams['agg.path.chunksize']=10**4
+plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/PredictionEuroC.png")
 plt.show()
+
 
 
 ############

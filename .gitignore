@@ -3,3 +3,6 @@ python/deepLearning/data/mediumEuroData.csv
 python/deepLearning/data/smallEuroData.csv
 python/deepLearning/data/largeCEuroData.csv
 python/deepLearning/data/mediumCEuroData.csv
+python/deepLearning/hirsa19/Rplotting/plotSimData.html
+python/deepLearning/hirsa19/Rplotting/plotSimData.Rmd
+python/deepLearning/hirsa19/.Rhistory

@@ -232,14 +232,14 @@ The classical approach to arbitrage free and complete market models is based on 
 Applying Kolmogorov backward equation on eg. \ref{MarkovRNVF}, we obtain the BS-PDE for the pricing function F(t,S(t))=$\Pi(t; \mathcal{X})$.
 
 \begin{theorem}\label{BSPDEMultiDim}
-\textbf{Black Scholes PDE: } Consider the contract $\mathcal{X}=\Phi(S(T))$. In order not to introduce arbitrage to the market, the pricing function $F(t,s)$ must solve the boundary value problem.(TODO)
+\textbf{Black Scholes PDE: } Consider the contract $\mathcal{X}=\Phi(\bm{S}(T))$. In order not to introduce arbitrage to the market, the pricing function $F(t,s)$ must solve the boundary value problem.
 \begin{equation}
 \begin{split}
-F_t(t,s)+rsF_s(t,s)+\frac{1}{2} s^2 \sigma^2(t,s)F_{ss}(t,s) -rF(t,s)&=0\\
+F_t(t,s)+\sum_{i=1}^{n} rs_iF_i(t,s)+\frac{1}{2} tr\{\sigma^* D[S] F_{ss} D[S] \sigma\} -rF(t,s)&=0\\
 F(T,s)&=\Phi(s)
 \end{split}
 \end{equation}
-(see p. 155 \parencite{finKont})
+(see p. 203 \parencite{finKont})
 \end{theorem}
 
 

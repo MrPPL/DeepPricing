@@ -42,13 +42,21 @@
 \contentsline {chapter}{\numberline {5}Option Pricing And Deep Learning}{29}{chapter.110}
 \contentsline {section}{\numberline {5.1}Multilayer Perceptrons Regression For European Options}{29}{section.111}
 \contentsline {subsection}{\numberline {5.1.1}Data}{29}{subsection.112}
-\contentsline {subsection}{\numberline {5.1.2}Optimization and cost function}{29}{subsection.114}
-\contentsline {subsection}{\numberline {5.1.3}Model Performance}{29}{subsection.115}
-\contentsline {section}{\numberline {5.2}Multilayer Perceptrons Regression For American Options}{29}{section.116}
-\contentsline {subsection}{\numberline {5.2.1}Data}{29}{subsection.117}
-\contentsline {subsection}{\numberline {5.2.2}Optimization and cost function}{29}{subsection.118}
-\contentsline {subsection}{\numberline {5.2.3}Model Performance}{29}{subsection.119}
-\contentsline {chapter}{\numberline {A}Option contracts}{31}{appendix.120}
-\contentsline {section}{\numberline {A.1}European Call and Put}{31}{section.121}
-\contentsline {chapter}{\numberline {B}Mathematical results and definitions}{33}{appendix.124}
-\contentsline {chapter}{Bibliography}{35}{appendix*.134}
+\contentsline {subsection}{\numberline {5.1.2}Training}{29}{subsection.115}
+\contentsline {subsection}{\numberline {5.1.3}Model Performance}{29}{subsection.116}
+\contentsline {section}{\numberline {5.2}Multilayer Perceptrons Regression For American Options}{29}{section.118}
+\contentsline {subsection}{\numberline {5.2.1}Data}{29}{subsection.119}
+\contentsline {subsection}{\numberline {5.2.2}Optimization and cost function}{29}{subsection.121}
+\contentsline {subsection}{\numberline {5.2.3}Model Performance}{29}{subsection.122}
+\contentsline {chapter}{\numberline {6}Discussion and Further Investigation}{33}{chapter.123}
+\contentsline {section}{\numberline {6.1}Main Section 1}{33}{section.124}
+\contentsline {subsection}{\numberline {6.1.1}Subsection 1}{33}{subsection.125}
+\contentsline {subsection}{\numberline {6.1.2}Subsection 2}{33}{subsection.126}
+\contentsline {section}{\numberline {6.2}Main Section 2}{33}{section.127}
+\contentsline {chapter}{\numberline {7}Conclusion}{35}{chapter.128}
+\contentsline {section}{\numberline {7.1}Main Section 1}{35}{section.129}
+\contentsline {subsection}{\numberline {7.1.1}Subsection 1}{35}{subsection.130}
+\contentsline {chapter}{\numberline {A}Option contracts}{37}{appendix.131}
+\contentsline {section}{\numberline {A.1}European Call and Put}{37}{section.132}
+\contentsline {chapter}{\numberline {B}Mathematical results and definitions}{39}{appendix.135}
+\contentsline {chapter}{Bibliography}{41}{appendix*.145}
