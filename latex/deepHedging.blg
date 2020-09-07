@@ -28,51 +28,51 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: deepHedging-blx.bib
 Database file #2: thesis.bib
 Warning--I'm ignoring Buffett08's extra "author" field
---line 119 of file thesis.bib
+--line 118 of file thesis.bib
 Warning--I'm ignoring Buffett02's extra "author" field
---line 128 of file thesis.bib
+--line 127 of file thesis.bib
 Biblatex version: 3.8
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 15 entries,
+You've used 17 entries,
             6268 wiz_defined-function locations,
-            1295 strings with 11398 characters,
-and the built_in function-call counts, 74414 in all, are:
-= -- 4236
-> -- 2578
-< -- 545
-+ -- 2282
-- -- 1442
-* -- 5240
-:= -- 7091
+            1306 strings with 12866 characters,
+and the built_in function-call counts, 85084 in all, are:
+= -- 4872
+> -- 2835
+< -- 614
++ -- 2560
+- -- 1547
+* -- 6084
+:= -- 8129
 add.period$ -- 0
-call.type$ -- 15
-change.case$ -- 268
+call.type$ -- 17
+change.case$ -- 296
 chr.to.int$ -- 130
-cite$ -- 28
-duplicate$ -- 7599
-empty$ -- 6997
-format.name$ -- 812
-if$ -- 15105
+cite$ -- 32
+duplicate$ -- 8849
+empty$ -- 7962
+format.name$ -- 968
+if$ -- 17302
 int.to.chr$ -- 0
-int.to.str$ -- 38
+int.to.str$ -- 44
 missing$ -- 0
-newline$ -- 450
-num.names$ -- 717
-pop$ -- 4669
+newline$ -- 522
+num.names$ -- 811
+pop$ -- 5366
 preamble$ -- 1
-purify$ -- 317
+purify$ -- 358
 quote$ -- 0
-skip$ -- 2736
+skip$ -- 3108
 stack$ -- 0
-substring$ -- 6613
-swap$ -- 2335
-text.length$ -- 428
-text.prefix$ -- 14
+substring$ -- 7509
+swap$ -- 2658
+text.length$ -- 494
+text.prefix$ -- 16
 top$ -- 1
-type$ -- 498
+type$ -- 566
 warning$ -- 0
-while$ -- 793
+while$ -- 927
 width$ -- 0
-write$ -- 436
+write$ -- 506
 (There were 2 warnings)

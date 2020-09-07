@@ -10,8 +10,9 @@
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Multilayer perceptrons with $(L+1)$-layers}}{25}{figure.caption.107}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {5.1}{\ignorespaces Marginal distributions for european call}}{30}{figure.caption.114}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{31}{figure.caption.117}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Marginal distributions for american put}}{32}{figure.caption.120}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{32}{figure.caption.119}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{33}{figure.caption.121}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Marginal distributions for american put}}{34}{figure.caption.125}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

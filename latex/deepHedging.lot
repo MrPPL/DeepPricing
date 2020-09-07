@@ -6,7 +6,9 @@
 \contentsline {table}{\numberline {3.1}{\ignorespaces Valuation of American put option with K=40 and r=0.06.\relax }}{17}{table.caption.78}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Parameter range\relax }}{29}{table.caption.113}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Parameter range\relax }}{30}{table.caption.113}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Prediction results for european call test data for in sample\relax }}{31}{table.caption.118}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Prediction results for european call test data for in sample polynomial regression\relax }}{34}{table.caption.122}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

@@ -52,9 +52,8 @@ def quasiSampling(parVec, samples):
 def findY(X):
     Y = np.empty((X.shape[0],1))
     count=0
-    K=100 #sets strike to 100
     for row in X:
-        Y[count] = closedEuro.priceECall(t=0,s=row[0]*K,sigma=row[3],K=100,r=row[2], T=row[1])/K
+        Y[count] = closedEuro.priceECall(t=0,s=row[0],sigma=row[3],K=1,r=row[2], T=row[1])
         count+=1
     return Y
 
@@ -67,14 +66,14 @@ vol = (0.05,0.5)
 parVec = [moneyness,T,r,vol]
 
 # number of samples
-nSamp=3 * 10**5
+nSamp=240 * 10**3
 #make data
 X = quasiSampling(parVec, nSamp)
 Y = findY(X)
 
 import pandas as pd
 df = pd.DataFrame({'y':Y[:,0],'moneyness':X[:,0],'T':X[:,1],'r':X[:,2], 'vol':X[:,3]})
-df.to_csv("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/hirsa19/data/mediumCEuroData.csv")
+df.to_csv("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/hirsa19/data/mediumCEuroDataTrain.csv")
 
 
     

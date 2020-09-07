@@ -249,6 +249,45 @@
     \field{year}{1996}
   \endentry
 
+  \entry{FergusonRyan2018}{article}{}
+    \name{author}{2}{}{%
+      {{hash=FR}{%
+         family={Ferguson},
+         familyi={F\bibinitperiod},
+         given={Ryan},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Green},
+         familyi={G\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {eng}%
+    }
+    \strng{namehash}{FRGA1}
+    \strng{fullhash}{FRGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2018}
+    \field{labeldatesource}{year}
+    \field{sortinit}{F}
+    \field{sortinithash}{F}
+    \field{abstract}{%
+    This paper uses deep learning to value derivatives. The approach is broadly
+  applicable, and we use a call option on a basket of stocks as an example. We
+  show that the deep learning model is accurate and very fast, capable of
+  producing valuations a million times faster than traditional models. We
+  develop a methodology to randomly generate appropriate training data and
+  explore the impact of several parameters including layer width and depth,
+  training data quality and quantity on model speed and accuracy.%
+    }
+    \field{title}{Deeply Learning Derivatives}
+    \field{year}{2018}
+  \endentry
+
   \entry{Goodfellow-et-al-2016}{book}{}
     \name{author}{3}{}{%
       {{hash=GI}{%
@@ -284,6 +323,56 @@
     \field{note}{\url{http://www.deeplearningbook.org}}
     \field{title}{Deep Learning}
     \field{year}{2016}
+  \endentry
+
+  \entry{HirsaAli2019}{article}{}
+    \name{author}{3}{}{%
+      {{hash=HA}{%
+         family={Hirsa},
+         familyi={H\bibinitperiod},
+         given={Ali},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=KT}{%
+         family={Karatas},
+         familyi={K\bibinitperiod},
+         given={Tugce},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=OA}{%
+         family={Oskoui},
+         familyi={O\bibinitperiod},
+         given={Amir},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {eng}%
+    }
+    \strng{namehash}{HAKTOA1}
+    \strng{fullhash}{HAKTOA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{year}
+    \field{sortinit}{H}
+    \field{sortinithash}{H}
+    \field{abstract}{%
+    We apply supervised deep neural networks (DNNs) for pricing and calibration
+  of both vanilla and exotic options under both diffusion and pure jump
+  processes with and without stochastic volatility. We train our neural network
+  models under different number of layers, neurons per layer, and various
+  different activation functions in order to find which combinations work
+  better empirically. For training, we consider various different loss
+  functions and optimization routines. We demonstrate that deep neural networks
+  exponentially expedite option pricing compared to commonly used option
+  pricing methods which consequently make calibration and parameter estimation
+  super fast.%
+    }
+    \field{title}{Supervised Deep Neural Networks (DNNs) for
+  Pricing/Calibration of Vanilla/Exotic Options Under Various Different
+  Processes}
+    \field{year}{2019}
   \endentry
 
   \entry{Hull}{book}{}

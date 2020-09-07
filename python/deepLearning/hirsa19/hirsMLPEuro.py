@@ -182,7 +182,7 @@ plt.scatter(predictions, actuals, alpha=0.5, s=1)
 plt.xlabel("Predictions Price/Strike Price")
 plt.ylabel("Actual Price/Strike Price")
 plt.title("Multilayer Perceptrons Predictions Vs. Actual Targets")
-plt.legend(loc=2) #location of legend
+#plt.legend(loc=2) #location of legend
 plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
 plt.style.use('ggplot')
 abline(1,0)

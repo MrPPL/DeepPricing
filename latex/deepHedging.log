@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  6 SEP 2020 20:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  7 SEP 2020 19:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2118,10 +2118,7 @@ Package csquotes Info: ... found 'babel' package.
 (./deepHedging.aux (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux)
 (./Chapters/Chapter3.aux) (./Chapters/Chapter4.aux) (./Chapters/Chapter5.aux
 
-LaTeX Warning: Label `tab:treatments' multiply defined.
-
-
-LaTeX Warning: Label `fig:marginalEuro' multiply defined.
+LaTeX Warning: Label `tab:euroParRange' multiply defined.
 
 
 LaTeX Warning: Label `fig:marginalEuro' multiply defined.
@@ -2493,7 +2490,7 @@ Overfull \hbox (21.97044pt too wide) in alignment at lines 265--287
  []
 
 
-Overfull \hbox (21.97044pt too wide) in alignment at lines 287--288
+Overfull \hbox (21.97044pt too wide) in alignment at lines 287--289
  [] [] [] 
  []
 
@@ -2516,7 +2513,7 @@ Chapter 1.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 3.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 10--321
+Underfull \hbox (badness 10000) in paragraph at lines 10--322
 
  []
 
@@ -2535,7 +2532,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--321
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 13.
-<Figures/brownianMotion.png, id=462, 395.4775pt x 279.0425pt>
+<Figures/brownianMotion.png, id=485, 395.4775pt x 279.0425pt>
 File: Figures/brownianMotion.png Graphic file (type png)
 <use Figures/brownianMotion.png>
 Package pdftex.def Info: Figures/brownianMotion.png  used on input line 17.
@@ -2642,7 +2639,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-<Figures/binConv.png, id=623, 406.51875pt x 279.0425pt>
+<Figures/binConv.png, id=645, 406.51875pt x 279.0425pt>
 File: Figures/binConv.png Graphic file (type png)
 <use Figures/binConv.png>
 Package pdftex.def Info: Figures/binConv.png  used on input line 27.
@@ -2843,64 +2840,75 @@ Overfull \hbox (1.2127pt too wide) in paragraph at lines 13--13
 s 
  []
 
-<Figures/marginalEuroCall.png, id=832, 505.89pt x 361.35pt>
-File: Figures/marginalEuroCall.png Graphic file (type png)
-<use Figures/marginalEuroCall.png>
-Package pdftex.def Info: Figures/marginalEuroCall.png  used on input line 37.
-(pdftex.def)             Requested size: 505.88875pt x 361.34912pt.
-
-Overfull \hbox (101.85966pt too wide) in paragraph at lines 37--39
- [][] 
- []
-
-<Figures/PredictionEuroC.png, id=833, 433.62pt x 289.08pt>
-File: Figures/PredictionEuroC.png Graphic file (type png)
-<use Figures/PredictionEuroC.png>
-Package pdftex.def Info: Figures/PredictionEuroC.png  used on input line 56.
-(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
-
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 56--58
- [][] 
- []
-
-
-Overfull \hbox (2.00444pt too wide) in paragraph at lines 65--65
-[]\T1/ppl/b/n/14.4 Multilayer Per-cep-trons Re-gres-sion For Amer-i-can Op-tion
-s 
- []
-
-<Figures/marginalAmerPut.png, id=834, 505.89pt x 361.35pt>
-File: Figures/marginalAmerPut.png Graphic file (type png)
-<use Figures/marginalAmerPut.png>
-Package pdftex.def Info: Figures/marginalAmerPut.png  used on input line 74.
-(pdftex.def)             Requested size: 505.88875pt x 361.34912pt.
-
-Overfull \hbox (101.85966pt too wide) in paragraph at lines 74--76
- [][] 
- []
-
-)
 1: section
 [29
 
 
 
-] [30 <./Figures/marginalEuroCall.png>] [31 <./Figures/PredictionEuroC.png>] [3
-2 <./Figures/marginalAmerPut.png>]
+]
+<Figures/marginalEuroCall.png, id=862, 433.62pt x 289.08pt>
+File: Figures/marginalEuroCall.png Graphic file (type png)
+<use Figures/marginalEuroCall.png>
+Package pdftex.def Info: Figures/marginalEuroCall.png  used on input line 43.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 43--45
+ [][] 
+ []
+
+[30 <./Figures/marginalEuroCall.png>]
+<Figures/PredictionEuroC.png, id=870, 433.62pt x 289.08pt>
+File: Figures/PredictionEuroC.png Graphic file (type png)
+<use Figures/PredictionEuroC.png>
+Package pdftex.def Info: Figures/PredictionEuroC.png  used on input line 87.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 87--89
+ [][] 
+ []
+
+<Figures/polynomialEuroC.png, id=873, 433.62pt x 505.89pt>
+File: Figures/polynomialEuroC.png Graphic file (type png)
+<use Figures/polynomialEuroC.png>
+Package pdftex.def Info: Figures/polynomialEuroC.png  used on input line 99.
+(pdftex.def)             Requested size: 433.61894pt x 505.88875pt.
+
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 99--101
+ [][] 
+ []
+
+[31] [32 <./Figures/PredictionEuroC.png>]
+Overfull \hbox (2.00444pt too wide) in paragraph at lines 130--130
+[]\T1/ppl/b/n/14.4 Multilayer Per-cep-trons Re-gres-sion For Amer-i-can Op-tion
+s 
+ []
+
+<Figures/marginalAmerPut.png, id=883, 433.62pt x 289.08pt>
+File: Figures/marginalAmerPut.png Graphic file (type png)
+<use Figures/marginalAmerPut.png>
+Package pdftex.def Info: Figures/marginalAmerPut.png  used on input line 139.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 139--141
+ [][] 
+ []
+
+[33 <./Figures/polynomialEuroC.png>]) [34 <./Figures/marginalAmerPut.png>]
+[35]
 \openout2 = `Chapters/Chapter6.aux'.
 
- (./Chapters/Chapter6.tex
-Chapter 6.
-)
-1: section
-[33
+ (./Chapters/Chapter6.tex [36
 
 
 
 ]
+Chapter 6.
+)
+1: section
+[37]
 \openout2 = `Chapters/Chapter7.aux'.
 
- (./Chapters/Chapter7.tex [34
+ (./Chapters/Chapter7.tex [38
 
 
 
@@ -2908,21 +2916,21 @@ Chapter 6.
 Chapter 7.
 )
 1: section
-[35]
+[39]
 \openout2 = `Appendices/AppendixA.aux'.
 
- (./Appendices/AppendixA.tex [36
+ (./Appendices/AppendixA.tex [40
 
 
 
 ]
 Appendix A.
-<Figures/euroCall.png, id=871, 390.45876pt x 279.0425pt>
+<Figures/euroCall.png, id=922, 390.45876pt x 279.0425pt>
 File: Figures/euroCall.png Graphic file (type png)
 <use Figures/euroCall.png>
 Package pdftex.def Info: Figures/euroCall.png  used on input line 13.
 (pdftex.def)             Requested size: 390.4578pt x 279.04181pt.
-<Figures/euroPut.png, id=872, 390.45876pt x 279.0425pt>
+<Figures/euroPut.png, id=923, 390.45876pt x 279.0425pt>
 File: Figures/euroPut.png Graphic file (type png)
 <use Figures/euroPut.png>
 Package pdftex.def Info: Figures/euroPut.png  used on input line 23.
@@ -2932,7 +2940,7 @@ Package pdftex.def Info: Figures/euroPut.png  used on input line 23.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 1: section
-[37 <./Figures/euroCall.png>] [38 <./Figures/euroPut.png>]
+[41 <./Figures/euroCall.png>] [42 <./Figures/euroPut.png>]
 \openout2 = `Appendices/AppendixB.aux'.
 
 
@@ -2949,36 +2957,36 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--32
  []
 
 1: section
-[39
+[43
 
 
 
-]) [40]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 349.
+]) [44]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 350.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (13.26485pt too wide) in paragraph at lines 349--349
+Overfull \hbox (13.26485pt too wide) in paragraph at lines 350--350
 [][]\T1/ppl/m/n/10.95 Ekvall, Niklas (1996). ^^P  A lat-tice ap-proach for pric
 -ing of mul-ti-vari-ate con-tin-gent claims^^Q.
  []
 
 1: section
-[41
+[45
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 353.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 353.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 354.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 354.
  (./deepHedging.aux (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux)
 (./Chapters/Chapter3.aux) (./Chapters/Chapter4.aux) (./Chapters/Chapter5.aux)
 (./Chapters/Chapter6.aux) (./Chapters/Chapter7.aux) (./Appendices/AppendixA.aux
 ) (./Appendices/AppendixB.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 353.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 353.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 354.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 354.
 Package rerunfilecheck Info: File `deepHedging.out' has not changed.
-(rerunfilecheck)             Checksum: AE5EAEE3C6C1950943EA76CEB5C04627;10952.
+(rerunfilecheck)             Checksum: 47B7EC21F5DCD7AFA15214D32468BCB9;11682.
 
 
 LaTeX Warning: There were undefined references.
@@ -2991,10 +2999,10 @@ Package logreq Info: Writing requests to 'deepHedging.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47509 strings out of 492982
- 975285 string characters out of 6134896
- 1172488 words of memory out of 5000000
- 50112 multiletter control sequences out of 15000+600000
+ 47543 strings out of 492982
+ 975969 string characters out of 6134896
+ 1175220 words of memory out of 5000000
+ 50133 multiletter control sequences out of 15000+600000
  641430 words of font info for 264 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,27n,78p,10384b,2396s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3014,10 +3022,10 @@ ino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on deepHedging.pdf (63 pages, 451655 bytes).
+Output written on deepHedging.pdf (67 pages, 521078 bytes).
 PDF statistics:
- 1027 PDF objects out of 1200 (max. 8388607)
- 889 compressed objects within 9 object streams
- 223 named destinations out of 1000 (max. 500000)
- 732 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1081 PDF objects out of 1200 (max. 8388607)
+ 936 compressed objects within 10 object streams
+ 235 named destinations out of 1000 (max. 500000)
+ 761 words of extra memory for PDF output out of 10000 (max. 10000000)
 
