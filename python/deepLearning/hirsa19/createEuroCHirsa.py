@@ -66,14 +66,14 @@ vol = (0.05,0.5)
 parVec = [moneyness,T,r,vol]
 
 # number of samples
-nSamp=240 * 10**3
+nSamp= 10**1
 #make data
 X = quasiSampling(parVec, nSamp)
 Y = findY(X)
 
 import pandas as pd
 df = pd.DataFrame({'y':Y[:,0],'moneyness':X[:,0],'T':X[:,1],'r':X[:,2], 'vol':X[:,3]})
-df.to_csv("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/hirsa19/data/mediumCEuroDataTrain.csv")
+df.to_csv("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/hirsa19/data/1MCEuroData.csv")
 
 
     

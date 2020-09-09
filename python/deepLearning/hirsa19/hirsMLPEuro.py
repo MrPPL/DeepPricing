@@ -21,9 +21,9 @@ import matplotlib.pyplot as pyplot
 # implement __init__ , __getitem__ , and __len__
 
 class EuroParDataset(Dataset):
-    def __init__(self):
+    def __init__(self, dataPath):
         # Initialize data, download, etc.
-        xy = np.loadtxt("./deepLearning/hirsa19/data/mediumCEuroData.csv", delimiter=',', dtype=np.float32, skiprows=1)
+        xy = np.loadtxt(dataPath, delimiter=',', dtype=np.float32, skiprows=1)
         self.n_samples = xy.shape[0]
         # here the first column is the class label, the rest are the features
         self.x_data = torch.from_numpy(xy[:, 2:]) # size [n_samples, n_features]
@@ -39,7 +39,7 @@ class EuroParDataset(Dataset):
 
 
 # create dataset
-dataset = EuroParDataset()
+dataset = EuroParDataset("./deepLearning/hirsa19/data/mediumCEuroData.csv")
 # get first sample and unpack
 first_data = dataset[0]
 features, labels = first_data
@@ -117,6 +117,7 @@ optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 # Train the model
 n_total_steps = len(train_loader)
 #enumereate epoch
+print(optimizer.state_dict())
 for epoch in range(num_epochs):
     epoch_loss = 0
     for i, (X, y) in enumerate(train_loader):  #one batch of samples       
@@ -136,11 +137,15 @@ for epoch in range(num_epochs):
     epoch_loss /= n_total_steps
     print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {epoch_loss:.4f}')
 
+print(optimizer.state_dict())
 
+# save model
+torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/Models/hirsaModel.pth")
 
 ##############
 # Evaluate Model
 ###############
+model.eval()
 from numpy import vstack
 from sklearn.metrics import mean_squared_error
 predictions, actuals = list(), list()
@@ -155,6 +160,7 @@ for i, (inputs, targets) in enumerate(validation_loader):
     predictions.append(yhat)
     actuals.append(actual)
 predictions, actuals = vstack(predictions), vstack(actuals)
+
 
 #model performance
 # calculate mse
@@ -189,24 +195,3 @@ abline(1,0)
 rcParams['agg.path.chunksize']=10**4
 plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/PredictionEuroC.png")
 plt.show()
-
-
-
-############
-# Make predictions
-###########
-# make a class prediction for one row of data
-def predict(row, model):
-    # convert row to data
-    row = torch.tensor([row])
-    # make prediction
-    yhat = model(row)
-    # retrieve numpy array
-    yhat = yhat.detach().numpy()
-    return yhat
-
-row = [0.9,0.02, 0.5, 1]
-yhat = predict(row, model)
-print('Predicted: %.3f' % yhat)
-
-    
