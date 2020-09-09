@@ -288,6 +288,57 @@
     \field{year}{2018}
   \endentry
 
+  \entry{GasparRaquel20}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GRM}{%
+         family={Gaspar},
+         familyi={G\bibinitperiod},
+         given={Raquel\bibnamedelima M},
+         giveni={R\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+      {{hash=LSD}{%
+         family={Lopes},
+         familyi={L\bibinitperiod},
+         given={Sara\bibnamedelima D},
+         giveni={S\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+      {{hash=SB}{%
+         family={Sequeira},
+         familyi={S\bibinitperiod},
+         given={Bernardo},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {eng}%
+    }
+    \list{publisher}{1}{%
+      {MDPI AG}%
+    }
+    \keyw{Deep learning ; Studies ; Problems ; Algorithms ; Simulation ;
+  Partial differential equations ; Neural networks ; Back propagation ; Hedging
+  ; Put & call options ; Securities prices ; American put options ; machine
+  learning ; least-squares Monte Carlo ; neural networks}
+    \strng{namehash}{GRMLSDSB1}
+    \strng{fullhash}{GRMLSDSB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{G}
+    \field{sortinithash}{G}
+    \field{issn}{2227-9091}
+    \field{number}{3}
+    \field{pages}{73\bibrangedash }
+    \field{title}{Neural Network Pricing of American Put Options}
+    \field{volume}{8}
+    \list{location}{1}{%
+      {Basel}%
+    }
+    \field{journaltitle}{Risks (Basel)}
+    \field{year}{2020}
+  \endentry
+
   \entry{Goodfellow-et-al-2016}{book}{}
     \name{author}{3}{}{%
       {{hash=GI}{%

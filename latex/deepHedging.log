@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  9 SEP 2020 15:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  9 SEP 2020 16:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2132,6 +2132,9 @@ LaTeX Warning: Label `tab:euroPerformanceComparision' multiply defined.
 
 LaTeX Warning: Label `fig:PredictionOutMoneyAmerP' multiply defined.
 
+
+LaTeX Warning: Label `tab:treatments' multiply defined.
+
 ) (./Chapters/Chapter6.aux) (./Chapters/Chapter7.aux)
 (./Appendices/AppendixA.aux) (./Appendices/AppendixB.aux))
 \openout1 = `deepHedging.aux'.
@@ -2541,7 +2544,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 10--322
 Chapter 2.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 13.
-<Figures/brownianMotion.png, id=514, 395.4775pt x 279.0425pt>
+<Figures/brownianMotion.png, id=516, 395.4775pt x 279.0425pt>
 File: Figures/brownianMotion.png Graphic file (type png)
 <use Figures/brownianMotion.png>
 Package pdftex.def Info: Figures/brownianMotion.png  used on input line 17.
@@ -2648,7 +2651,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
-<Figures/binConv.png, id=673, 406.51875pt x 279.0425pt>
+<Figures/binConv.png, id=675, 406.51875pt x 279.0425pt>
 File: Figures/binConv.png Graphic file (type png)
 <use Figures/binConv.png>
 Package pdftex.def Info: Figures/binConv.png  used on input line 27.
@@ -2871,7 +2874,7 @@ s
 
 
 ]
-<Figures/marginalEuroCall.png, id=889, 433.62pt x 289.08pt>
+<Figures/marginalEuroCall.png, id=891, 433.62pt x 289.08pt>
 File: Figures/marginalEuroCall.png Graphic file (type png)
 <use Figures/marginalEuroCall.png>
 Package pdftex.def Info: Figures/marginalEuroCall.png  used on input line 43.
@@ -2882,7 +2885,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 43--45
  []
 
 [30 <./Figures/marginalEuroCall.png>]
-<Figures/PredictionEuroC.png, id=897, 433.62pt x 289.08pt>
+<Figures/PredictionEuroC.png, id=899, 433.62pt x 289.08pt>
 File: Figures/PredictionEuroC.png Graphic file (type png)
 <use Figures/PredictionEuroC.png>
 Package pdftex.def Info: Figures/PredictionEuroC.png  used on input line 87.
@@ -2893,7 +2896,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 87--89
  []
 
 [31]
-<Figures/polynomialEuroC.png, id=904, 433.62pt x 505.89pt>
+<Figures/polynomialEuroC.png, id=906, 433.62pt x 505.89pt>
 File: Figures/polynomialEuroC.png Graphic file (type png)
 <use Figures/polynomialEuroC.png>
 Package pdftex.def Info: Figures/polynomialEuroC.png  used on input line 101.
@@ -2905,7 +2908,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 101--103
 
 [32 <./Figures/PredictionEuroC.png>] [33 <./Figures/polynomialEuroC.png>]
 [34]
-<Figures/polynomialOutMoneyEuroC.png, id=924, 433.62pt x 505.89pt>
+<Figures/polynomialOutMoneyEuroC.png, id=926, 433.62pt x 505.89pt>
 File: Figures/polynomialOutMoneyEuroC.png Graphic file (type png)
 <use Figures/polynomialOutMoneyEuroC.png>
 Package pdftex.def Info: Figures/polynomialOutMoneyEuroC.png  used on input lin
@@ -2917,7 +2920,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 178--180
  []
 
 [35]
-<Figures/PredictionOutMoneyEuroC.png, id=929, 433.62pt x 289.08pt>
+<Figures/PredictionOutMoneyEuroC.png, id=931, 433.62pt x 289.08pt>
 File: Figures/PredictionOutMoneyEuroC.png Graphic file (type png)
 <use Figures/PredictionOutMoneyEuroC.png>
 Package pdftex.def Info: Figures/PredictionOutMoneyEuroC.png  used on input lin
@@ -2934,7 +2937,7 @@ Overfull \hbox (2.00444pt too wide) in paragraph at lines 213--213
 s 
  []
 
-<Figures/marginalAmerPut.png, id=935, 433.62pt x 289.08pt>
+<Figures/marginalAmerPut.png, id=937, 433.62pt x 289.08pt>
 File: Figures/marginalAmerPut.png Graphic file (type png)
 <use Figures/marginalAmerPut.png>
 Package pdftex.def Info: Figures/marginalAmerPut.png  used on input line 222.
@@ -2945,7 +2948,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 222--224
  []
 
 [37 <./Figures/PredictionOutMoneyEuroC.png>]
-<Figures/PredictionAmerP.png, id=941, 433.62pt x 289.08pt>
+<Figures/PredictionAmerP.png, id=943, 433.62pt x 289.08pt>
 File: Figures/PredictionAmerP.png Graphic file (type png)
 <use Figures/PredictionAmerP.png>
 Package pdftex.def Info: Figures/PredictionAmerP.png  used on input line 270.
@@ -2956,7 +2959,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 270--272
  []
 
 [38 <./Figures/marginalAmerPut.png>]
-<Figures/PredictionOutMoneyAmerP.png, id=947, 433.62pt x 289.08pt>
+<Figures/PredictionOutMoneyAmerP.png, id=950, 433.62pt x 289.08pt>
 File: Figures/PredictionOutMoneyAmerP.png Graphic file (type png)
 <use Figures/PredictionOutMoneyAmerP.png>
 Package pdftex.def Info: Figures/PredictionOutMoneyAmerP.png  used on input lin
@@ -2968,7 +2971,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 278--280
  []
 
 [39 <./Figures/PredictionAmerP.png>]
-<Figures/PredictionLongTAmerP.png, id=955, 433.62pt x 289.08pt>
+<Figures/PredictionLongTAmerP.png, id=957, 433.62pt x 289.08pt>
 File: Figures/PredictionLongTAmerP.png Graphic file (type png)
 <use Figures/PredictionLongTAmerP.png>
 Package pdftex.def Info: Figures/PredictionLongTAmerP.png  used on input line 2
@@ -2980,23 +2983,23 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 286--288
  []
 
 [40 <./Figures/PredictionOutMoneyAmerP.png>]
-Overfull \hbox (0.40623pt too wide) in paragraph at lines 302--302
+Overfull \hbox (0.40623pt too wide) in paragraph at lines 340--340
 []\T1/ppl/b/n/14.4 Multilayer Per-cep-trons Re-gres-sion For Op-ti-mal Stop-pin
 g 
  []
 
-) [41 <./Figures/PredictionLongTAmerP.png>]
+) [41 <./Figures/PredictionLongTAmerP.png>] [42]
 \openout2 = `Chapters/Chapter6.aux'.
 
- (./Chapters/Chapter6.tex [42
+ (./Chapters/Chapter6.tex
+Chapter 6.
+)
+1: section
+[43
 
 
 
 ]
-Chapter 6.
-)
-1: section
-[43]
 \openout2 = `Chapters/Chapter7.aux'.
 
  (./Chapters/Chapter7.tex [44
@@ -3016,12 +3019,12 @@ Chapter 7.
 
 ]
 Appendix A.
-<Figures/euroCall.png, id=989, 390.45876pt x 279.0425pt>
+<Figures/euroCall.png, id=993, 390.45876pt x 279.0425pt>
 File: Figures/euroCall.png Graphic file (type png)
 <use Figures/euroCall.png>
 Package pdftex.def Info: Figures/euroCall.png  used on input line 13.
 (pdftex.def)             Requested size: 390.4578pt x 279.04181pt.
-<Figures/euroPut.png, id=990, 390.45876pt x 279.0425pt>
+<Figures/euroPut.png, id=994, 390.45876pt x 279.0425pt>
 File: Figures/euroPut.png Graphic file (type png)
 <use Figures/euroPut.png>
 Package pdftex.def Info: Figures/euroPut.png  used on input line 23.
@@ -3077,7 +3080,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 354.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 354.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 354.
 Package rerunfilecheck Info: File `deepHedging.out' has not changed.
-(rerunfilecheck)             Checksum: DFB420B2D5F8A5BF952379885E848F86;12271.
+(rerunfilecheck)             Checksum: 75F61AD6FD0A4BDD71CAB48E9C50DCCF;12271.
 
 
 LaTeX Warning: There were undefined references.
@@ -3090,13 +3093,13 @@ Package logreq Info: Writing requests to 'deepHedging.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47589 strings out of 492982
- 977230 string characters out of 6134896
- 1176808 words of memory out of 5000000
- 50161 multiletter control sequences out of 15000+600000
+ 47597 strings out of 492982
+ 977680 string characters out of 6134896
+ 1177724 words of memory out of 5000000
+ 50167 multiletter control sequences out of 15000+600000
  640517 words of font info for 260 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,27n,81p,10384b,2396s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,27n,78p,10384b,2396s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -3113,10 +3116,10 @@ ino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on deepHedging.pdf (73 pages, 694320 bytes).
+Output written on deepHedging.pdf (73 pages, 696090 bytes).
 PDF statistics:
- 1150 PDF objects out of 1200 (max. 8388607)
- 989 compressed objects within 10 object streams
- 252 named destinations out of 1000 (max. 500000)
+ 1156 PDF objects out of 1200 (max. 8388607)
+ 995 compressed objects within 10 object streams
+ 254 named destinations out of 1000 (max. 500000)
  802 words of extra memory for PDF output out of 10000 (max. 10000000)
 

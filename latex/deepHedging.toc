@@ -51,17 +51,17 @@
 \contentsline {subsection}{\numberline {5.2.1}Data}{38}{subsection.129}
 \contentsline {subsection}{\numberline {5.2.2}Optimization and cost function}{38}{subsection.132}
 \contentsline {subsection}{\numberline {5.2.3}Model Performance}{38}{subsection.133}
-\contentsline {section}{\numberline {5.3}Multilayer Perceptrons Regression For European Basket Call Max}{41}{section.138}
-\contentsline {section}{\numberline {5.4}Multilayer Perceptrons Regression For Optimal Stopping}{41}{section.139}
-\contentsline {chapter}{\numberline {6}Discussion and Further Investigation}{43}{chapter.140}
-\contentsline {section}{\numberline {6.1}Main Section 1}{43}{section.141}
-\contentsline {subsection}{\numberline {6.1.1}Subsection 1}{43}{subsection.142}
-\contentsline {subsection}{\numberline {6.1.2}Subsection 2}{43}{subsection.143}
-\contentsline {section}{\numberline {6.2}Main Section 2}{43}{section.144}
-\contentsline {chapter}{\numberline {7}Conclusion}{45}{chapter.145}
-\contentsline {section}{\numberline {7.1}Main Section 1}{45}{section.146}
-\contentsline {subsection}{\numberline {7.1.1}Subsection 1}{45}{subsection.147}
-\contentsline {chapter}{\numberline {A}Option contracts}{47}{appendix.148}
-\contentsline {section}{\numberline {A.1}European Call and Put}{47}{section.149}
-\contentsline {chapter}{\numberline {B}Mathematical results and definitions}{49}{appendix.152}
-\contentsline {chapter}{Bibliography}{51}{appendix*.162}
+\contentsline {section}{\numberline {5.3}Multilayer Perceptrons Regression For European Basket Call Max}{41}{section.139}
+\contentsline {section}{\numberline {5.4}Multilayer Perceptrons Regression For Optimal Stopping}{41}{section.140}
+\contentsline {chapter}{\numberline {6}Discussion and Further Investigation}{43}{chapter.141}
+\contentsline {section}{\numberline {6.1}Main Section 1}{43}{section.142}
+\contentsline {subsection}{\numberline {6.1.1}Subsection 1}{43}{subsection.143}
+\contentsline {subsection}{\numberline {6.1.2}Subsection 2}{43}{subsection.144}
+\contentsline {section}{\numberline {6.2}Main Section 2}{43}{section.145}
+\contentsline {chapter}{\numberline {7}Conclusion}{45}{chapter.146}
+\contentsline {section}{\numberline {7.1}Main Section 1}{45}{section.147}
+\contentsline {subsection}{\numberline {7.1.1}Subsection 1}{45}{subsection.148}
+\contentsline {chapter}{\numberline {A}Option contracts}{47}{appendix.149}
+\contentsline {section}{\numberline {A.1}European Call and Put}{47}{section.150}
+\contentsline {chapter}{\numberline {B}Mathematical results and definitions}{49}{appendix.153}
+\contentsline {chapter}{Bibliography}{51}{appendix*.163}

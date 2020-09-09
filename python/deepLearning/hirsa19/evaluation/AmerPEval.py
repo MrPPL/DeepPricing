@@ -134,8 +134,8 @@ plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
 plt.style.use('ggplot')
 abline(1,0)
 rcParams['agg.path.chunksize']=10**4
-plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/PredictionLongTAmerP.png")
-plt.show()
+#plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/PredictionLongTAmerP.png")
+#plt.show()
 
 
 
@@ -152,8 +152,11 @@ def predict(row, model):
     yhat = yhat.detach().numpy()
     return yhat
 
-row = [0.9,0.02, 0.5, 1]
-yhat = predict(row, loaded_model)
-print('Predicted: %.3f' % yhat)
+#moneyness, maturity, r, volatilty
+for S in range(36,46, 2):
+    moneyness = S/40
+    row = [moneyness, 2, 0.06, 0.4]
+    yhat = predict(row, loaded_model)*40
+    print('Predicted: %.3f' % yhat)
 
     
