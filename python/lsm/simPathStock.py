@@ -52,3 +52,60 @@ def simStockPath(spot, r, vol, timePointsYear, T, n):
 # Simulate pathStock
 stockMatrix = simStockPath(spot=36, r=0.06, vol=0.2, timePointsYear=5, T=1, n=5)
 
+
+import numpy as np
+import pandas as pd
+from sklearn.linear_model import LinearRegression
+import simPathStock
+
+#Variables for american put
+spot=36
+r=0.06
+vol=0.2
+timePointsYear=50
+T=1
+n= 10**4
+strike = 40  
+steps = timePointsYear*T
+
+#stockMatrix
+import numpy.random as npr
+xi = npr.normal(0,np.sqrt(1/steps),(n,steps)) #simulate normal fordelt with T/steps standard deviation
+W = np.apply_along_axis(np.cumsum,1,xi) # sum r.v. normals row wise
+W = np.concatenate((np.zeros((n,1)),W),1) # add zero as initial value
+drift = np.linspace(0,r-(vol**2)/2,steps+1) # drift of GBM: r-(1/2) * vol**2
+drift = np.reshape(drift,(1,steps+1)) # add zero 
+drift = np.repeat(drift,n,axis=0) # make same dimensions
+S = spot * np.exp(drift + vol * W)
+
+
+dS = np.diff(S,1,1)
+tim = np.linspace(0,1,steps+1)
+
+tSinput = []
+for i in range(steps):
+    timv = np.repeat(tim[i],n)
+    timv = np.reshape(timv,(n,1))
+    Sv = np.reshape(S[:,i],(n,1))
+    tSinput.append(np.concatenate((timv,Sv),1))
+
+###############
+### Illustrate simulated paths
+##############
+import matplotlib.pyplot as plt
+from matplotlib import rcParams
+plt.plot(tim,S[0],tim,S[1],tim,S[2])
+plt.xlabel("Time")
+plt.ylabel("Price")
+plt.style.use('ggplot')
+rcParams['figure.figsize']=6,4
+plt.title("Sample paths for stocks using GBM assumption")
+#plt.legend(loc=2) #location of legend
+plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
+#plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/samplePath.png")
+#plt.show()
+
+############
+## data
+############
+stockMatrix = S

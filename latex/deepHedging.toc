@@ -27,9 +27,9 @@
 \contentsline {subsection}{\numberline {3.2.2}Numerical results}{16}{subsection.77}
 \contentsline {section}{\numberline {3.3}Benchmarks in higher dimensions}{17}{section.79}
 \contentsline {subsection}{\numberline {3.3.1}Analytical formulas for Rainbow options}{17}{subsection.80}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Geometric basket call option}{17}{subsubsection.81}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Geometric basket call option}{18}{subsubsection.81}
 \contentsline {subsubsection}{\numberline {3.3.1.2}Options on the Maximum or the Minimum of Several Assets}{18}{subsubsection.86}
-\contentsline {paragraph}{\numberline {3.3.1.2.1}Best of assets or cash}{18}{paragraph.87}
+\contentsline {paragraph}{\numberline {3.3.1.2.1}Best of assets or cash}{19}{paragraph.87}
 \contentsline {paragraph}{\numberline {3.3.1.2.2}Call on max and call on min}{20}{paragraph.94}
 \contentsline {subsection}{\numberline {3.3.2}Lattice approach for multivariate contingent claims}{20}{subsection.96}
 \contentsline {chapter}{\numberline {4}Deep Learning}{21}{chapter.97}

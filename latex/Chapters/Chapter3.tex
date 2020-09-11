@@ -90,7 +90,7 @@ where a is the coefficients for the regression, L is the basis function, where t
 
 \subsection{Numerical results}
 By the above two algorithms for valuation, we choose to vary spot, volatility and maturity for pricing an American put option with K=40 and r=0.06. This table will serve as reference for the machine learning algorithm in chapter (!TODO chapter for machine learning). For the binomial tree we use 100 time-steps, which gives stable results (compare to figure \ref{fig:binConv}) and for the LSM we use $10^5$ paths with 50 time-steps per year. The European option is valued by using BS closed form solution for a call option (see proposition \ref{BS-price-EuroCall}) and Put-call parity (see proposition \ref{Put-call-parity}).
-\begin{table}[th]
+\begin{table}[H]
 \caption{Valuation of American put option with K=40 and r=0.06.}
 \label{tab:treatments}
 \centering

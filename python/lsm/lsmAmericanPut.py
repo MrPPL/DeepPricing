@@ -7,41 +7,60 @@ import simPathStock
 spot=36
 r=0.06
 vol=0.2
-timePointsYear=50
+timePointsYear=5
 T=1
-n= 10**3
+n= 10**1
 strike = 40  
+steps = timePointsYear*T
 
 #stockMatrix
-from longstaff_schwartz.algorithm import longstaff_schwartz
-from longstaff_schwartz.stochastic_process import GeometricBrownianMotion
+import numpy.random as npr
+xi = npr.normal(0,np.sqrt(1/steps),(n,steps)) #simulate normal fordelt with T/steps standard deviation
+W = np.apply_along_axis(np.cumsum,1,xi) # sum r.v. normals row wise
+W = np.concatenate((np.zeros((n,1)),W),1) # add zero as initial value
+drift = np.linspace(0,r-(vol**2)/2,steps+1) # drift of GBM: r-(1/2) * vol**2
+drift = np.reshape(drift,(1,steps+1)) # add zero 
+drift = np.repeat(drift,n,axis=0) # make same dimensions
+S = spot * np.exp(drift + vol * W)
 
-# Model parameters
-t = np.linspace(0, 1, 50)  # timegrid for simulation
-r = 0.06  # riskless rate
-sigma = 0.2  # annual volatility of underlying
-n = 10**3  # number of simulated paths
-
-# Simulate the underlying
-gbm = GeometricBrownianMotion(mu=r, sigma=sigma)
-rnd = np.random.RandomState(1234)
-stockMatrix = 36 * gbm.simulate(t, n, rnd)  # x.shape == (t.size, n)
-
-
-#contract function
+#contract function + exercise value 2d numpy array
 putCall = lambda S, K: K-S if (K > S) else 0 
+putCall_vec = np.vectorize(putCall)
+intrinsic = putCall_vec(S,40.0)
+CFL =intrinsic[:,1:]
 
-#Intrinsic matrix
-def intrinsic(spot, timePointsYear, strike, T, n, stockMatrix):
-    """ Finds the intrinsic value matrix """
-    timePoints = T * timePointsYear
-    intrinsicM = np.zeros((n, timePoints+1))
-    count=1
-    for timePoint in reversed(stockMatrix.T):
-        intrinsicRow = [putCall(S, strike) for S in timePoint]
-        intrinsicM[:,-count] = intrinsicRow
-        count+=1
-    return intrinsicM
+XputCall = lambda S, K: S if (K > S) else 0 
+XputCall_vec = np.vectorize(XputCall)
+X = XputCall_vec(S,40.0)
+Xsh = np.delete(arr=X,obj=steps,axis=1)
+X2sh = np.multiply(Xsh,Xsh)
+X2sh
+
+Y1 = intrinsic*np.exp(-1*r*(T/steps))
+Y2 = np.concatenate((np.zeros((n,steps-1)),Y1[:,steps:]),axis=1)
+
+CV = np.zeros((n,steps-1))
+
+from sklearn.linear_model import LinearRegression
+
+for i in range(steps-1,0,-1):
+    coef = np.array((Xsh[:,i-1], X2sh[:,i-1])).T
+    reg1 = LinearRegression().fit(X=coef,y=Y2[:,i:])
+    CV[:,i-1:] = reg1.predict(coef)
+    for j in range(len(intrinsic)):
+        if intrinsic[j,i-1]>CV[j,i-1]:
+            Y2[j,i-1] = Y1[j,i-1] 
+        else:
+            Y2[j,i-1] = Y2[j,i]*np.exp(-1*r*(T/steps))
+    
+CVp = np.concatenate((CV, np.zeros((n,1))),axis=1)
+POF = (0 if CVp>CFL else CFL)
+
+############
+## data
+############
+
+
 
 
 #regression
@@ -113,7 +132,7 @@ def cashflow(spot, r, vol, timePointsYear, strike, T, n, choice, stockMatrix):
     
     return (cashFlow)
 
-cashFlowMatrix = cashflow(spot, r, vol, timePointsYear, strike, T, n, 1, stockMatrix)
+cashFlowMatrix = cashflow(spot=36, r=0.06, vol=0.2, timePointsYear=50, strike=40, T=1, n=n, choice=1, stockMatrix=S)
 
 def findPV(r, cashFlowMatrix, timePointsYear):
     """Find present value of a cashflow matrix starting at 1. timestep"""

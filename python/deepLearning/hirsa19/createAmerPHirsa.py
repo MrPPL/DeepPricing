@@ -61,20 +61,20 @@ def findY(X):
 
 #parameter ranges for european options
 moneyness = (0.8,1.2)
-T = (3.0,5.0)
+T = (1/252,3.0)
 r = (0.01,0.03)
 vol = (0.05,0.5)
 parVec = [moneyness,T,r,vol]
 
 # number of samples
-nSamp=6 * 10**4
+nSamp=10**6
 #make data
 X = quasiSampling(parVec, nSamp)
 Y = findY(X)
 
 import pandas as pd
 df = pd.DataFrame({'y':Y[:,0],'moneyness':X[:,0],'T':X[:,1],'r':X[:,2], 'vol':X[:,3]})
-df.to_csv("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/hirsa19/data/longT60KPAmerData.csv")
+df.to_csv("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/hirsa19/data/1MPAmerData.csv")
 
 
     
