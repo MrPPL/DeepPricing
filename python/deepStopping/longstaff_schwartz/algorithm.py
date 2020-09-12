@@ -23,8 +23,8 @@ def longstaff_schwartz_iter(X, t, df, fit, exercise_payoff,
         
         # fit curve
         fitted = fit(x[itm], cashflow[itm])
-        model = NeuralNet(inputSize,hidden_size1,hidden_size2,outputSize)
-        model.load_state_dict(torch.load("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/longstaff_schwartz-master/Models/NNFit.pth"))
+        model = NeuralNet(inputSize, hidden_size1, hidden_size2, outputSize)
+        model.load_state_dict(torch.load("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepStopping/Models/NNFit.pth"))
         model.eval()
         Z = torch.from_numpy(x)
         Z = Z.view(len(x),1)   
@@ -83,18 +83,22 @@ def longstaff_schwartz_american_option_quadratic(X, t, r, strike):
 #Design model
 #hyperparameters
 inputSize = 1
-hidden_size1=120
-hidden_size2=120
+hidden_size1=85
+hidden_size2=85
+hidden_size3=10**2
+hidden_size4=10**2
 outputSize = 1
+
+#Design model
 class NeuralNet(nn.Module):
     def __init__(self, input_size, hidden_size1, hidden_size2, output_size):
         super(NeuralNet, self).__init__()
         self.input_size = input_size
         self.l1 = nn.Linear(input_size, hidden_size1)
-        self.leaky_relu_1 = nn.LeakyReLU()
+        self.leaky_relu_1 = nn.Tanh()
         self.l2 = nn.Linear(hidden_size1,hidden_size2)
-        self.leaky_relu_2 = nn.LeakyReLU()
-        self.l3 = nn.Linear(hidden_size2, output_size)
+        self.leaky_relu_2 = nn.ReLU()
+        self.l3 = nn.Linear(hidden_size2,outputSize)
     
     def forward(self,x):
         out = self.l1(x)

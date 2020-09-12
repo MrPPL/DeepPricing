@@ -9,14 +9,14 @@ from torchsummary import summary
 start = datetime.datetime.now()
 
 # Model parameters
-t = np.linspace(0, 1, 100)  # timegrid for simulation
+t = np.linspace(0, 1, 50)  # timegrid for simulation
 r = 0.06  # riskless rate
 sigma = 0.2  # annual volatility of underlying
-n = 10**5  # number of simulated paths
+n = 10**3  # number of simulated paths
 
 # Simulate the underlying
 gbm = GeometricBrownianMotion(mu=r, sigma=sigma)
-rnd = np.random.RandomState(1234)
+rnd = np.random.RandomState(100)
 x = 36 * gbm.simulate(t, n, rnd)  # x.shape == (t.size, n)
 
 # Payoff (exercise) function
@@ -41,8 +41,10 @@ def fit_neural(x, y):
     Y = Y.view(len(x),1)
     #hyperparameters
     inputSize = 1
-    hidden_size1=120
-    hidden_size2=120
+    hidden_size1=85
+    hidden_size2=85
+    hidden_size3=10**2
+    hidden_size4=10**2
     outputSize = 1
     learning_rate = 0.01
     
@@ -52,10 +54,10 @@ def fit_neural(x, y):
             super(NeuralNet, self).__init__()
             self.input_size = input_size
             self.l1 = nn.Linear(input_size, hidden_size1)
-            self.leaky_relu_1 = nn.LeakyReLU()
+            self.leaky_relu_1 = nn.Tanh()
             self.l2 = nn.Linear(hidden_size1,hidden_size2)
-            self.leaky_relu_2 = nn.LeakyReLU()
-            self.l3 = nn.Linear(hidden_size2,output_size)
+            self.leaky_relu_2 = nn.ReLU()
+            self.l3 = nn.Linear(hidden_size2,outputSize)
         
         def forward(self,x):
             out = self.l1(x)
@@ -65,7 +67,7 @@ def fit_neural(x, y):
             out = self.l3(out)
             return out
 
-    model = NeuralNet(inputSize, hidden_size1, hidden_size2, outputSize)
+    model = NeuralNet(inputSize, hidden_size1,hidden_size2, outputSize)
     #model = nn.Linear(inputSize, outputSize)
 
     #loss and optimizer
@@ -73,26 +75,28 @@ def fit_neural(x, y):
     optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
     # Train the model
-    num_epochs = 1 
+    num_epochs = 100
     #enumereate epoch
+    from sklearn.metrics import mean_squared_error
     for epoch in range(num_epochs):
         epoch_loss = 0
-        for i in range(10):
-            optimizer.zero_grad() # zero the gradient buffer
-            #forward pass and loss
-            y_predicted = model(X[i].float())
-            loss = criterion(y_predicted,Y[i].float())
-            
-            # Backward and optimize
-            loss.backward()
-            optimizer.step() #does weight update
+        optimizer.zero_grad() # zero the gradient buffer
+        #forward pass and loss
+        y_predicted = model(X.float())
+        loss = criterion(y_predicted,Y.float()) 
+        # Backward and optimize
+        loss.backward()
+        optimizer.step() #does weight update
 
-            # accumulate loss
-            epoch_loss += loss
+        # accumulate loss
+        epoch_loss += loss
 
         epoch_loss /= len(x)
         print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {epoch_loss:.4f}')
-    torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/longstaff_schwartz-master/Models/NNFit.pth")
+    yhat = model(X.float()).detach().numpy()
+    mse = mean_squared_error(Y,yhat)
+    print('MSE: %.6f' % (mse))
+    torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepStopping/Models/NNFit.pth")
     pass
 
 
