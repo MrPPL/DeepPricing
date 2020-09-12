@@ -1,5 +1,7 @@
 import numpy as np
 from numpy.polynomial import Polynomial
+import torch 
+import torch.nn as nn
 
 
 def longstaff_schwartz_iter(X, t, df, fit, exercise_payoff,
@@ -18,12 +20,21 @@ def longstaff_schwartz_iter(X, t, df, fit, exercise_payoff,
         itm = itm_select(exercise, x) \
             if itm_select \
             else np.full(x.shape, True)
+        
         # fit curve
         fitted = fit(x[itm], cashflow[itm])
+        model = NeuralNet(inputSize,hidden_size1,hidden_size2,outputSize)
+        model.load_state_dict(torch.load("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/longstaff_schwartz-master/Models/NNFit.pth"))
+        model.eval()
+        Z = torch.from_numpy(x)
+        Z = Z.view(len(x),1)   
+        yhat = model(Z.float())
+        # retrieve numpy array
+        yhat = yhat.detach().numpy()
+        continuation = yhat
         # approximate continuation value
-        continuation = fitted(x)
         # boolean index where exercise is beneficial
-        ex_idx = itm & (exercise > continuation)
+        ex_idx = itm & (exercise > continuation.flatten())
         # update cashflows with early exercises
         cashflow[ex_idx] = exercise[ex_idx]
 
@@ -67,3 +78,28 @@ def longstaff_schwartz_american_option_quadratic(X, t, r, strike):
     for cashflow, *_ in ls_american_option_quadratic_iter(X, t, r, strike):
         pass
     return cashflow.mean(axis=0) * np.exp(-r * (t[1] - t[0]))
+
+
+#Design model
+#hyperparameters
+inputSize = 1
+hidden_size1=120
+hidden_size2=120
+outputSize = 1
+class NeuralNet(nn.Module):
+    def __init__(self, input_size, hidden_size1, hidden_size2, output_size):
+        super(NeuralNet, self).__init__()
+        self.input_size = input_size
+        self.l1 = nn.Linear(input_size, hidden_size1)
+        self.leaky_relu_1 = nn.LeakyReLU()
+        self.l2 = nn.Linear(hidden_size1,hidden_size2)
+        self.leaky_relu_2 = nn.LeakyReLU()
+        self.l3 = nn.Linear(hidden_size2, output_size)
+    
+    def forward(self,x):
+        out = self.l1(x)
+        out = self.leaky_relu_1(out)
+        out = self.l2(out)
+        out = self.leaky_relu_2(out)
+        out = self.l3(out)
+        return out

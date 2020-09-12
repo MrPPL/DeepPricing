@@ -53,7 +53,7 @@ hidden_size2 = 120
 hidden_size3 = 120
 outputSize = 1
 num_epochs = 10
-batchSize = 64
+batchSize = 1
 learning_rate = 0.01
 validation_split = 0.2
 shuffle_dataset = True
@@ -124,6 +124,7 @@ for epoch in range(num_epochs):
         optimizer.zero_grad() # zero the gradient buffer
 
         #forward pass and loss
+        breakpoint()
         y_predicted = model(X)
         loss = criterion(y_predicted,y)
         
