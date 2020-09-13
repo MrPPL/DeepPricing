@@ -26,7 +26,7 @@ To value an American put option, we lay out all the possible path of the stock, 
 \centering
 \includegraphics{Figures/binConv.png}
 \decoRule
-\caption[Convergence of Binomial model]{}
+\caption[Convergence Of Binomial Model]{}
 \label{fig:binConv}
 \end{figure}
 
@@ -65,6 +65,14 @@ The comparison will be applied for every node in each time-step $\Delta t$  and 
 \section{Least Square Monte Carlo Method}\label{LSM}
 The classical result in this section is of a different nature, because it is based on simulation and linear regression. In our setting we regress the expected payoff by continuation of the contract and compare it to the intrinsic value. The dependent variable in the regression is the expected value of continuation and the independent variables is a set of orthogonal basis functions in $L^2(\Omega, \mathcal{F}, Q)$ of the simulated paths. Typical choices for basis functions could be weighted Laguerre -, Hermit -, and Jacob polynomials. This kind of regression is a nonlinear expansion of the linear model. In order to create data, we will simulate paths according to the underlying risky asset. 
 
+\begin{figure}[H]
+\centering
+\includegraphics{Figures/LSMFit1.png}
+\decoRule
+\caption[Polynomial Regression Of Continuation Value]{By zooming in on a specific point of time in backward induction approach, we see how the algorithm regress the continuation value}
+\label{fig:binConv}
+\end{figure}
+
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
@@ -79,6 +87,14 @@ F(\omega; t_k)=E^Q[\sum_{j=k+1}^K \exp(-\int_{t_k}^{t_j} r(\omega,s) ds)C(\omega
 \end{split}
 \end{equation}
 where $r(\omega,t)$ is risk free interest rate, and the $\mathcal{F}_{t_k}$ is the filtration at time $t_k$.\\
+
+\begin{figure}[H]
+\centering
+\includegraphics{Figures/LSMFit2.png}
+\decoRule
+\caption[Optimal Stopping Decision]{The optimal stopping decisions by the Least Square Monte Carlo Method}
+\label{fig:binConv}
+\end{figure}
 
 We get the optimal stopping strategy by comparing thr continuation value with the intrinsic value at each time step. By working backward in time until the initialization of the option, we have specified the optimal stopping times and the cash flows associated with exercising at the optimal stopping times. To estimate the condition expectation in equation \ref{continuation-value}, we regres with the basis functions taking on the underlying asset for the option being the independent variable:
 $$F(\omega;t_{K-1})= \sum_{j=0}^\infty a_j L_j(X)$$

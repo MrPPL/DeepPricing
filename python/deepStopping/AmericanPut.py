@@ -6,6 +6,7 @@ import datetime
 import torch
 import torch.nn as nn
 from torchsummary import summary
+
 start = datetime.datetime.now()
 
 # Model parameters
@@ -96,8 +97,7 @@ def fit_neural(x, y):
     yhat = model(X.float()).detach().numpy()
     mse = mean_squared_error(Y,yhat)
     print('MSE: %.6f' % (mse))
-    torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepStopping/Models/NNFit.pth")
-    pass
+    return model
 
 
 # Selection of paths to consider for exercise
@@ -111,7 +111,7 @@ def itm(payoff, spot):
 # df = discounting for a periode
 # fit = fit_quadratic
 npv_american = longstaff_schwartz(X=x, t=t, df=constant_rate_df,
-                                        fit=fit_neural, exercise_payoff=put_payoff, itm_select=itm)
+                                        fit=fit_quadratic, exercise_payoff=put_payoff, itm_select=itm)
 
 
 # Check results
