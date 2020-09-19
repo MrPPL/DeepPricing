@@ -7,6 +7,11 @@ import torch
 import torch.nn as nn
 from torchsummary import summary
 
+import torch
+import numpy as np
+from torch.utils.data import TensorDataset, DataLoader
+
+
 start = datetime.datetime.now()
 
 # Model parameters
@@ -35,69 +40,75 @@ def fit_quadratic(x, y):
         return np.polynomial.Polynomial.fit(x, y, 2, rcond=None)
 
 def fit_neural(x, y):
-    # convert to tensors
-    X = torch.from_numpy(x)
-    X = X.view(len(x),1)   
-    Y = torch.from_numpy(y)
-    Y = Y.view(len(x),1)
-    #hyperparameters
-    inputSize = 1
-    hidden_size1=85
-    hidden_size2=85
-    hidden_size3=10**2
-    hidden_size4=10**2
-    outputSize = 1
-    learning_rate = 0.01
-    
-    #Design model
-    class NeuralNet(nn.Module):
-        def __init__(self, input_size, hidden_size1, hidden_size2, output_size):
-            super(NeuralNet, self).__init__()
-            self.input_size = input_size
-            self.l1 = nn.Linear(input_size, hidden_size1)
-            self.leaky_relu_1 = nn.Tanh()
-            self.l2 = nn.Linear(hidden_size1,hidden_size2)
-            self.leaky_relu_2 = nn.ReLU()
-            self.l3 = nn.Linear(hidden_size2,outputSize)
-        
-        def forward(self,x):
-            out = self.l1(x)
-            out = self.leaky_relu_1(out)
-            out = self.l2(out)
-            out = self.leaky_relu_2(out)
-            out = self.l3(out)
-            return out
+        # convert to tensors
+        X = torch.Tensor(x)
+        X = X.view(len(x),1)   
+        Y = torch.Tensor(y)
+        Y = Y.view(len(x),1)
 
-    model = NeuralNet(inputSize, hidden_size1,hidden_size2, outputSize)
-    #model = nn.Linear(inputSize, outputSize)
+        my_dataset = TensorDataset(X,Y) # create your datset
 
-    #loss and optimizer
-    criterion = nn.MSELoss()
-    optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+        batchSize = 128
+        train_loader = DataLoader(dataset=my_dataset,
+                                batch_size=batchSize,
+                                num_workers=2,
+                                shuffle=True)
+        #hyperparameters
+        inputSize = 1
+        hidden_size1=85
+        hidden_size2=85
+        hidden_size3=10**2
+        hidden_size4=10**2
+        outputSize = 1
+        learning_rate = 0.001
 
-    # Train the model
-    num_epochs = 100
-    #enumereate epoch
-    from sklearn.metrics import mean_squared_error
-    for epoch in range(num_epochs):
-        epoch_loss = 0
-        optimizer.zero_grad() # zero the gradient buffer
-        #forward pass and loss
-        y_predicted = model(X.float())
-        loss = criterion(y_predicted,Y.float()) 
-        # Backward and optimize
-        loss.backward()
-        optimizer.step() #does weight update
+        #Design model
+        class NeuralNet(nn.Module):
+                def __init__(self, input_size, hidden_size1, hidden_size2, output_size):
+                        super(NeuralNet, self).__init__()
+                        self.input_size = input_size
+                        self.l1 = nn.Linear(input_size, hidden_size1)
+                        self.leaky_relu_1 = nn.Tanh()
+                        self.l2 = nn.Linear(hidden_size1,hidden_size2)
+                        self.leaky_relu_2 = nn.Tanh()
+                        self.l3 = nn.Linear(hidden_size2,outputSize)
+                
+                def forward(self,x):
+                        out = self.l1(x)
+                        out = self.leaky_relu_1(out)
+                        out = self.l2(out)
+                        out = self.leaky_relu_2(out)
+                        out = self.l3(out)
+                        return out
 
-        # accumulate loss
-        epoch_loss += loss
+        model = NeuralNet(inputSize, hidden_size1,hidden_size2, outputSize)
+        #model = nn.Linear(inputSize, outputSize)
 
-        epoch_loss /= len(x)
-        print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {epoch_loss:.4f}')
-    yhat = model(X.float()).detach().numpy()
-    mse = mean_squared_error(Y,yhat)
-    print('MSE: %.6f' % (mse))
-    return model
+        #loss and optimizer
+        criterion = nn.MSELoss()
+        optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+
+        # Train the model
+        num_epochs = 10
+        n_total_steps = len(train_loader)
+        #enumereate epoch
+        for epoch in range(num_epochs):
+                epoch_loss = 0
+                for i, (X, y) in enumerate(train_loader):  #one batch of samples       
+                        optimizer.zero_grad() # zero the gradient buffer
+                        #forward pass and loss
+                        y_predicted = model(X)
+                        loss = criterion(y_predicted,y)
+                        # Backward and optimize
+                        loss.backward()
+                        optimizer.step() #does weight update
+                        # accumulate loss
+                        epoch_loss += loss
+                epoch_loss /= n_total_steps
+                if (epoch+1) % 10 == 0: 
+                        print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {epoch_loss:.4f}')
+        #enumereate epoch
+        return model
 
 
 # Selection of paths to consider for exercise
@@ -111,7 +122,7 @@ def itm(payoff, spot):
 # df = discounting for a periode
 # fit = fit_quadratic
 npv_american = longstaff_schwartz(X=x, t=t, df=constant_rate_df,
-                                        fit=fit_quadratic, exercise_payoff=put_payoff, itm_select=itm)
+                                        fit=fit_neural, exercise_payoff=put_payoff, itm_select=itm)
 
 
 # Check results

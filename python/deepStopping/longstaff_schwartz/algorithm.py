@@ -23,15 +23,14 @@ def longstaff_schwartz_iter(X, t, df, fit, exercise_payoff,
         
         # fit curve
         fitted = fit(x[itm], cashflow[itm])
-        #model.load_state_dict(torch.load("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepStopping/Models/NNFit.pth"))
         fitted.eval()
+        # approximate continuation value
         Z = torch.from_numpy(x)
         Z = Z.view(len(x),1)   
         yhat = fitted(Z.float())
         ## retrieve numpy array
         yhat = yhat.detach().numpy()
         continuation = yhat
-        # approximate continuation value
         # boolean index where exercise is beneficial
         ex_idx = itm & (exercise > continuation.flatten())
         # update cashflows with early exercises

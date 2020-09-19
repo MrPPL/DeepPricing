@@ -6,62 +6,62 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.12}
 \contentsline {chapter}{\numberline {2}Arbitrage Theory In Continuous Time Finance}{3}{chapter.13}
 \contentsline {section}{\numberline {2.1}Financial Markets}{3}{section.14}
-\contentsline {subsection}{\numberline {2.1.1}Financial Derivatives}{4}{subsection.17}
-\contentsline {subsection}{\numberline {2.1.2}Self-financing Portfolio (Without Consumption)}{5}{subsection.22}
-\contentsline {subsection}{\numberline {2.1.3}Arbitrage}{5}{subsection.25}
-\contentsline {subsection}{\numberline {2.1.4}Complete Market And Hedging}{5}{subsection.28}
-\contentsline {section}{\numberline {2.2}Multidimensional Models}{6}{section.30}
-\contentsline {subsection}{\numberline {2.2.1}Model Assumptions}{6}{subsection.31}
-\contentsline {subsection}{\numberline {2.2.2}Arbitrage Free Model}{7}{subsection.34}
-\contentsline {subsection}{\numberline {2.2.3}Complete model}{8}{subsection.41}
-\contentsline {subsection}{\numberline {2.2.4}Pricing and connection to classical approach}{8}{subsection.44}
-\contentsline {section}{\numberline {2.3}Classical Black-Scholes Formulas}{9}{section.51}
-\contentsline {section}{\numberline {2.4}American Options And Optimal Stopping}{10}{section.58}
-\contentsline {subsection}{\numberline {2.4.1}American Call Without Dividends}{11}{subsection.65}
-\contentsline {subsection}{\numberline {2.4.2}American Put}{12}{subsection.66}
-\contentsline {chapter}{\numberline {3}Classical numerical results and Benchmarks}{13}{chapter.67}
-\contentsline {section}{\numberline {3.1}Binomial Pricing Model}{13}{section.68}
-\contentsline {subsection}{\numberline {3.1.1}Mathematics in Binomial valuation model}{15}{subsection.70}
-\contentsline {section}{\numberline {3.2}Least Square Monte Carlo Method}{15}{section.74}
-\contentsline {subsection}{\numberline {3.2.1}LSM method for an American put}{16}{subsection.76}
-\contentsline {subsection}{\numberline {3.2.2}Numerical results}{17}{subsection.79}
-\contentsline {section}{\numberline {3.3}Benchmarks in higher dimensions}{18}{section.81}
-\contentsline {subsection}{\numberline {3.3.1}Analytical formulas for Rainbow options}{18}{subsection.82}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Geometric basket call option}{19}{subsubsection.83}
-\contentsline {subsubsection}{\numberline {3.3.1.2}Options on the Maximum or the Minimum of Several Assets}{19}{subsubsection.88}
-\contentsline {paragraph}{\numberline {3.3.1.2.1}Best of assets or cash}{20}{paragraph.89}
-\contentsline {paragraph}{\numberline {3.3.1.2.2}Call on max and call on min}{21}{paragraph.96}
-\contentsline {subsection}{\numberline {3.3.2}Lattice approach for multivariate contingent claims}{21}{subsection.98}
-\contentsline {chapter}{\numberline {4}Deep Learning}{23}{chapter.99}
-\contentsline {section}{\numberline {4.1}Multilayer Perceptrons}{24}{section.100}
-\contentsline {subsection}{\numberline {4.1.1}A Single Neuron}{25}{subsection.101}
-\contentsline {subsubsection}{\numberline {4.1.1.1}Activation functions}{25}{subsubsection.104}
-\contentsline {subsection}{\numberline {4.1.2}Architecture Of MLPs}{26}{subsection.105}
-\contentsline {subsection}{\numberline {4.1.3}Training The Network}{28}{subsection.110}
-\contentsline {subsection}{\numberline {4.1.4}Regularization}{29}{subsection.111}
-\contentsline {chapter}{\numberline {5}Option Pricing And Deep Learning}{31}{chapter.112}
-\contentsline {section}{\numberline {5.1}Multilayer Perceptrons Regression For European Options}{31}{section.113}
-\contentsline {subsection}{\numberline {5.1.1}Data}{31}{subsection.114}
-\contentsline {subsection}{\numberline {5.1.2}Training}{33}{subsection.117}
-\contentsline {subsubsection}{\numberline {5.1.2.1}Hyperparameter Tuning}{33}{subsubsection.118}
-\contentsline {subsection}{\numberline {5.1.3}Model Performance In-Sample}{33}{subsection.119}
-\contentsline {subsection}{\numberline {5.1.4}Polynomial Regression}{34}{subsection.122}
-\contentsline {subsection}{\numberline {5.1.5}Out of sample predictions}{36}{subsection.125}
-\contentsline {section}{\numberline {5.2}Multilayer Perceptrons Regression For American Options}{40}{section.130}
-\contentsline {subsection}{\numberline {5.2.1}Data}{40}{subsection.131}
-\contentsline {subsection}{\numberline {5.2.2}Optimization and cost function}{40}{subsection.134}
-\contentsline {subsection}{\numberline {5.2.3}Model Performance}{40}{subsection.135}
-\contentsline {section}{\numberline {5.3}Multilayer Perceptrons Regression For European Basket Call Max}{43}{section.141}
-\contentsline {section}{\numberline {5.4}Multilayer Perceptrons Regression For Optimal Stopping}{43}{section.142}
-\contentsline {chapter}{\numberline {6}Discussion and Further Investigation}{45}{chapter.143}
-\contentsline {section}{\numberline {6.1}Main Section 1}{45}{section.144}
-\contentsline {subsection}{\numberline {6.1.1}Subsection 1}{45}{subsection.145}
-\contentsline {subsection}{\numberline {6.1.2}Subsection 2}{45}{subsection.146}
-\contentsline {section}{\numberline {6.2}Main Section 2}{45}{section.147}
-\contentsline {chapter}{\numberline {7}Conclusion}{47}{chapter.148}
-\contentsline {section}{\numberline {7.1}Main Section 1}{47}{section.149}
-\contentsline {subsection}{\numberline {7.1.1}Subsection 1}{47}{subsection.150}
-\contentsline {chapter}{\numberline {A}Option contracts}{49}{appendix.151}
-\contentsline {section}{\numberline {A.1}European Call and Put}{49}{section.152}
-\contentsline {chapter}{\numberline {B}Mathematical results and definitions}{51}{appendix.155}
-\contentsline {chapter}{Bibliography}{53}{appendix*.165}
+\contentsline {subsection}{\numberline {2.1.1}Financial Derivatives}{4}{subsection.16}
+\contentsline {subsection}{\numberline {2.1.2}Self-financing Portfolio (Without Consumption)}{5}{subsection.23}
+\contentsline {subsection}{\numberline {2.1.3}Arbitrage}{6}{subsection.28}
+\contentsline {subsection}{\numberline {2.1.4}Complete Market And Hedging}{7}{subsection.31}
+\contentsline {section}{\numberline {2.2}Multidimensional Models}{7}{section.33}
+\contentsline {subsection}{\numberline {2.2.1}Model Assumptions}{7}{subsection.34}
+\contentsline {subsection}{\numberline {2.2.2}Arbitrage Free Model}{8}{subsection.38}
+\contentsline {subsection}{\numberline {2.2.3}Complete model}{10}{subsection.46}
+\contentsline {subsection}{\numberline {2.2.4}Pricing and connection to classical approach}{10}{subsection.49}
+\contentsline {section}{\numberline {2.3}Classical Black-Scholes Formulas}{11}{section.56}
+\contentsline {section}{\numberline {2.4}American Options And Optimal Stopping}{12}{section.63}
+\contentsline {subsection}{\numberline {2.4.1}American Call Without Dividends}{13}{subsection.70}
+\contentsline {subsection}{\numberline {2.4.2}American Put}{14}{subsection.71}
+\contentsline {chapter}{\numberline {3}Classical numerical results and Benchmarks}{15}{chapter.72}
+\contentsline {section}{\numberline {3.1}Binomial Pricing Model}{15}{section.73}
+\contentsline {subsection}{\numberline {3.1.1}Mathematics in Binomial valuation model}{17}{subsection.75}
+\contentsline {section}{\numberline {3.2}Least Square Monte Carlo Method}{17}{section.79}
+\contentsline {subsection}{\numberline {3.2.1}LSM method for an American put}{18}{subsection.82}
+\contentsline {subsection}{\numberline {3.2.2}Numerical results}{20}{subsection.85}
+\contentsline {section}{\numberline {3.3}Benchmarks in higher dimensions}{21}{section.87}
+\contentsline {subsection}{\numberline {3.3.1}Analytical formulas for Rainbow options}{21}{subsection.88}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Geometric basket call option}{21}{subsubsection.89}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Options on the Maximum or the Minimum of Several Assets}{22}{subsubsection.94}
+\contentsline {paragraph}{\numberline {3.3.1.2.1}Best of assets or cash}{22}{paragraph.95}
+\contentsline {paragraph}{\numberline {3.3.1.2.2}Call on max and call on min}{23}{paragraph.102}
+\contentsline {subsection}{\numberline {3.3.2}Lattice approach for multivariate contingent claims}{23}{subsection.104}
+\contentsline {chapter}{\numberline {4}Deep Learning}{25}{chapter.105}
+\contentsline {section}{\numberline {4.1}Multilayer Perceptrons}{26}{section.106}
+\contentsline {subsection}{\numberline {4.1.1}A Single Neuron}{27}{subsection.107}
+\contentsline {subsubsection}{\numberline {4.1.1.1}Activation functions}{27}{subsubsection.110}
+\contentsline {subsection}{\numberline {4.1.2}Architecture Of MLPs}{28}{subsection.111}
+\contentsline {subsection}{\numberline {4.1.3}Training The Network}{30}{subsection.116}
+\contentsline {subsection}{\numberline {4.1.4}Regularization}{31}{subsection.117}
+\contentsline {chapter}{\numberline {5}Option Pricing And Deep Learning}{33}{chapter.118}
+\contentsline {section}{\numberline {5.1}Multilayer Perceptrons Regression For European Options}{33}{section.119}
+\contentsline {subsection}{\numberline {5.1.1}Data}{33}{subsection.120}
+\contentsline {subsection}{\numberline {5.1.2}Training}{35}{subsection.123}
+\contentsline {subsubsection}{\numberline {5.1.2.1}Hyperparameter Tuning}{35}{subsubsection.124}
+\contentsline {subsection}{\numberline {5.1.3}Model Performance In-Sample}{36}{subsection.126}
+\contentsline {subsection}{\numberline {5.1.4}Polynomial Regression}{37}{subsection.129}
+\contentsline {subsection}{\numberline {5.1.5}Out of sample predictions}{39}{subsection.132}
+\contentsline {section}{\numberline {5.2}Multilayer Perceptrons Regression For American Options}{43}{section.137}
+\contentsline {subsection}{\numberline {5.2.1}Data}{43}{subsection.138}
+\contentsline {subsection}{\numberline {5.2.2}Optimization and cost function}{43}{subsection.141}
+\contentsline {subsection}{\numberline {5.2.3}Model Performance}{43}{subsection.142}
+\contentsline {section}{\numberline {5.3}Multilayer Perceptrons Regression For European Basket Call Max}{46}{section.148}
+\contentsline {section}{\numberline {5.4}Multilayer Perceptrons Regression For Optimal Stopping}{46}{section.149}
+\contentsline {chapter}{\numberline {6}Discussion and Further Investigation}{49}{chapter.150}
+\contentsline {section}{\numberline {6.1}Main Section 1}{49}{section.151}
+\contentsline {subsection}{\numberline {6.1.1}Subsection 1}{49}{subsection.152}
+\contentsline {subsection}{\numberline {6.1.2}Subsection 2}{49}{subsection.153}
+\contentsline {section}{\numberline {6.2}Main Section 2}{49}{section.154}
+\contentsline {chapter}{\numberline {7}Conclusion}{51}{chapter.155}
+\contentsline {section}{\numberline {7.1}Main Section 1}{51}{section.156}
+\contentsline {subsection}{\numberline {7.1.1}Subsection 1}{51}{subsection.157}
+\contentsline {chapter}{\numberline {A}Option contracts}{53}{appendix.158}
+\contentsline {section}{\numberline {A.1}European Call and Put}{53}{section.159}
+\contentsline {chapter}{\numberline {B}Mathematical results and definitions}{55}{appendix.162}
+\contentsline {chapter}{Bibliography}{57}{appendix*.172}

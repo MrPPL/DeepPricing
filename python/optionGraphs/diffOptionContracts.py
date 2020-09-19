@@ -19,18 +19,19 @@ def EuroPut(K,S):
 
 from matplotlib import pyplot as plt
 
+plt.style.use('ggplot')
+fig, ax = plt.subplots(1, 2)
+fig.set_size_inches(6, 4)
 x = np.arange(0, 200, 0.5)
 y = [EuroCall(100, S) for S in x]
-plt.plot(x,y)
-plt.xlabel("Underlying asset: S(T)")
-plt.ylabel("Value of derivative X")
-plt.title('European Call option with strike 100')
-plt.show()
-
-x = np.arange(0, 200, 0.5)
-y = [EuroPut(100, S) for S in x]
-plt.plot(x,y)
-plt.xlabel("Underlying asset: S(T)")
-plt.ylabel("Value of derivative X")
-plt.title('European Put option with strike 100')
+ax[0].set_title('Call With Strike K=100')
+ax[0].set_xlabel("Underlying asset: S(T)")
+ax[0].set_ylabel("Value of derivative")
+ax[0].plot(x, y, 'r', linewidth=1)
+x1 = np.arange(0, 200, 0.5)
+y1 = [EuroPut(100, S) for S in x]
+ax[1].set_title('Put With Strike K=100')
+ax[1].set_xlabel("Underlying asset: S(T)")
+ax[1].plot(x1, y1, 'c', linewidth=1)
+#plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/contractfct.png")
 plt.show()

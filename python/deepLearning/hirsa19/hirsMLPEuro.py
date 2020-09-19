@@ -53,7 +53,7 @@ hidden_size2 = 120
 hidden_size3 = 120
 outputSize = 1
 num_epochs = 10
-batchSize = 1
+batchSize = 64
 learning_rate = 0.01
 validation_split = 0.2
 shuffle_dataset = True
@@ -117,14 +117,12 @@ optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 # Train the model
 n_total_steps = len(train_loader)
 #enumereate epoch
-print(optimizer.state_dict())
 for epoch in range(num_epochs):
     epoch_loss = 0
     for i, (X, y) in enumerate(train_loader):  #one batch of samples       
         optimizer.zero_grad() # zero the gradient buffer
 
         #forward pass and loss
-        breakpoint()
         y_predicted = model(X)
         loss = criterion(y_predicted,y)
         
@@ -137,8 +135,6 @@ for epoch in range(num_epochs):
 
     epoch_loss /= n_total_steps
     print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {epoch_loss:.4f}')
-
-print(optimizer.state_dict())
 
 # save model
 torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/Models/hirsaModel.pth")
@@ -169,8 +165,8 @@ from sklearn.metrics import r2_score
 from sklearn.metrics import mean_absolute_error
 mse = mean_squared_error(actuals, predictions)
 print('MSE: %.6f, RMSE: %.6f' % (mse, np.sqrt(mse)))
-print ('R Squared =',r2_score(actuals, predictions))
-print ('MAE =',mean_absolute_error(actuals, predictions))
+print ('R Squared: %.6f' % (r2_score(actuals, predictions)))
+print ('MAE: %.6f' % mean_absolute_error(actuals, predictions))
 
 # Plot
 def abline(slope, intercept):
@@ -194,5 +190,5 @@ plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
 plt.style.use('ggplot')
 abline(1,0)
 rcParams['agg.path.chunksize']=10**4
-plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/PredictionEuroC.png")
+#plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/PredictionEuroC.png")
 plt.show()
