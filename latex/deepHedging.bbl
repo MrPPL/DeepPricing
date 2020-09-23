@@ -595,5 +595,47 @@
     \field{title}{PRICING RAINBOW OPTIONS}
     \field{year}{2006}
   \endentry
+
+  \entry{Shiryaev06}{book}{}
+    \name{author}{2}{}{%
+      {{hash=SA}{%
+         family={Shiryaev},
+         familyi={S\bibinitperiod},
+         given={Albert},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=PG}{%
+         family={Peskir},
+         familyi={P\bibinitperiod},
+         given={Goran},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {eng}%
+    }
+    \list{publisher}{1}{%
+      {Springer Basel AG}%
+    }
+    \keyw{Boundary value problems ; Optimal stopping (Mathematical statistics)
+  ; Nonlinear integral equations ; Economics, Mathematical}
+    \strng{namehash}{SAPG1}
+    \strng{fullhash}{SAPG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2006}
+    \field{labeldatesource}{year}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{<h>Optimal</h> <h>Stopping</h> and
+  <h>Free</h>-<h>Boundary</h> <h>Problems</h>}
+    \field{isbn}{3764324198}
+    \field{series}{Lectures in Mathematics. ETH Zurich}
+    \field{title}{Optimal Stopping and Free-Boundary Problems}
+    \list{location}{1}{%
+      {Basel}%
+    }
+    \field{year}{2006}
+  \endentry
 \enddatalist
 \endinput

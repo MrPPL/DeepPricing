@@ -5,22 +5,23 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Contract Functions}}{5}{figure.caption.22}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Sample Path For Stocks}}{8}{figure.caption.37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Convergence Of Binomial Model}}{16}{figure.caption.74}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Polynomial Regression Of Continuation Value}}{18}{figure.caption.81}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Optimal Stopping Decision}}{19}{figure.caption.84}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Convergence Of Binomial Model}}{17}{figure.caption.77}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Convergence Of Binomial Model}}{18}{figure.caption.78}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Polynomial Regression Of Continuation Value}}{20}{figure.caption.81}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Optimal Stopping Decision}}{21}{figure.caption.84}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces A single neuron\relax }}{27}{figure.caption.108}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Multilayer perceptrons with $(L+1)$-layers}}{29}{figure.caption.115}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A single neuron\relax }}{29}{figure.caption.109}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Multilayer perceptrons with $(L+1)$-layers}}{31}{figure.caption.116}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Marginal distributions for european call}}{34}{figure.caption.122}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{37}{figure.caption.128}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{38}{figure.caption.130}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{41}{figure.caption.135}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{42}{figure.caption.136}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Marginal distributions for american put}}{43}{figure.caption.139}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{44}{figure.caption.144}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{45}{figure.caption.145}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{46}{figure.caption.146}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Marginal distributions for european call}}{36}{figure.caption.123}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{39}{figure.caption.129}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{40}{figure.caption.131}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{43}{figure.caption.136}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{44}{figure.caption.137}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Marginal distributions for american put}}{45}{figure.caption.140}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{46}{figure.caption.145}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{47}{figure.caption.146}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{48}{figure.caption.147}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

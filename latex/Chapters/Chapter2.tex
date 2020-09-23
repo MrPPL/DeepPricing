@@ -225,10 +225,10 @@ Then disregarding integrability problems, the model is complete if and only if k
 
 \subsection{Pricing and connection to classical approach}
 The pricing formula for arbitrage free market model is the risk neutral valuation formula:
-\begin{proposition}{}\label{RNVF}
+\begin{proposition}{\textbf{Risk Neutral Valuation Formula}}\label{RNVF}
 To avoid arbitrage, $\mathcal{X}$ must be priced according to the formula:
 \begin{align}
-\Pi(t;\mathcal{X})=S_0(t)E^Q[\frac{\mathcal{X}}{S_0}|\mathcal{F}_t]
+\Pi(t;\mathcal{X})=S_0(t)E^Q[\frac{\mathcal{X}}{S_0(T)}|\mathcal{F}_t]
 \end{align}
 Note if we choose our numeraire $S_0(t)=B(t)$ then
 \begin{align}
@@ -236,13 +236,13 @@ Note if we choose our numeraire $S_0(t)=B(t)$ then
 \end{align}
 (see p. 155 \parencite{finKont})
 \end{proposition}
+Proposition \ref{RNVF} will raise the question if there is more than one fair price for the derivative. The answer is found in FTT2, the market is complete if and only if the measure Q is unique. Intuitively it means that if you can replicate the derivative with a portfolio, then this hedge should only earn risk free interest rate. \\
 
-The classical approach to arbitrage free and complete market models is based on a Markovian model assumption and k=n. Assume we are in a Wiener world, where the probability space $(\Omega, \mathcal{F}, P, \mathcal{F}_t^{\bar{W}_t}$ is given. Furthermore we assume $\alpha$ and $\sigma$ are deterministic functions and constant over time. $\sigma$ is also assumed invertible. Under these more restrictive assumptions the risk neutral valuation formula for a simple T-claim is given by the Markov property:
+The classical approach in \parencite{B-S-Paper} to arbitrage free and complete market models is based on a Markovian model assumption. For the model to have markovian property, we assume k=n and the probability space is $(\Omega, \mathcal{F}, P, \mathcal{F}_t^{\bar{W}_t})$. Furthermore we assume $\bm{\alpha}$ and $\bm{\sigma}$ are deterministic and constant over time. $\bm{\sigma}$ is also assumed invertible. Under these more restrictive assumptions the risk neutral valuation formula for a simple T-claim is given by
 \begin{align}\label{MarkovRNVF}
 \exp(-r(T-t))E^Q[\mathcal{X}|S(t)]
 \end{align}
-
-Applying Kolmogorov backward equation on eg. \ref{MarkovRNVF}, we obtain the BS-PDE for the pricing function F(t,S(t))=$\Pi(t; \mathcal{X})$.
+The Markov property implies that the price only depend on the current state of $\bm{S}$, and then applying Kolmogorov backward equation on eg. \ref{MarkovRNVF}, we obtain the BS-PDE for the pricing function F(t,S(t))=$\Pi(t; \mathcal{X})$.
 
 \begin{theorem}\label{BSPDEMultiDim}
 \textbf{Black Scholes PDE: } Consider the contract $\mathcal{X}=\Phi(\bm{S}(T))$. In order not to introduce arbitrage to the market, the pricing function $F(t,s)$ must solve the boundary value problem.
@@ -261,17 +261,17 @@ F(T,s)&=\Phi(s)
 %----------------------------------------------------------------------------------------
 \section{Classical Black-Scholes Formulas}\label{classicBS}
 We will not do the classical delta hedging approach in \parencite{B-S-Paper}. Instead we use the general multidimensional martingale approach to derive the essential formulas for pricing. 
-To derive a closed-form solution to the European call and put option, we concentrate at a special case of the multidimensional framework, where we only have the risk free asset and one risky asset. 
-We further restrict ourselves to:\\
+To derive a closed-form solution to the European call and put option, we concentrate at a special case of the multidimensional framework, where we only have the risk free asset and one risky asset in the financial market model. 
+We further restrict ourselves to:
 \theoremstyle{assumption}
-\begin{assumption}{Black-Scholes assumptions}\label{BS-Assumption}
+\begin{assumption}{\textbf{Black-Scholes assumptions}:}\label{BS-Assumption}
 We assume following ideal conditions in addition to \eqref{EfficientMarket}:
 \begin{enumerate}
 \item[•] The short-term interest rate is known and is constant through time 
 \item[•] The stock price follows a Geometric Brownian Motion. The $\sigma$ is constant.\item[•] The stock pays no dividends or other distributions.
-\item[•] The option is a simple option ("European" see \eqref{ECall}).
+\item[•] The option is a simple option ("European").
 \end{enumerate}
-(see p. 640 \parencite{B-S-Paper})
+(p. 640 \parencite{B-S-Paper})
 \end{assumption}
 
 We assume the underlying stock follows a geometric brownian motion:
@@ -281,15 +281,13 @@ $dS(t)=\alpha S dt + \sigma S dW_t$ where the solution to the SDE is given as
 S(t)=S(0) \cdot \exp \bigg( (\alpha -\frac{1}{2} \sigma^2) t + \sigma W(t) \bigg)
 \end{split}
 \end{equation}
-Where $\alpha$ is the local mean rate of return and $\sigma$ is the volatility of S. By above assumptions we are in a Markovian model, and we know the Black Scholes PDE in this setup (see eq.  \ref{BSPDEMultiDim}). By Feynman-Kac we have the risk neutral valuation formula.
-
-\begin{theorem}\label{BRNVF}
-\textbf{Risk-neutral valuation formula:} Given Q is the martingale measure
-\begin{align}
-\Pi(t, X)= exp(-r(T-t))\cdot E_{t,x}^Q[X]
-\end{align}
-\end{theorem}
-From the RNVF we can derive a closed form solution for both a European call and put option. We will provide the European call option and the put-call-parity, because from the put-call-parity relationship we derive the European put option from the call option.
+Where $\alpha$ is the local mean rate of return and $\sigma$ is the volatility of S are constants. By above assumptions we are in a Markovian model, and we know that the Black Scholes PDE in this setup (see eq.  \ref{BSPDEMultiDim}) from the risk neutral valuation formula. The solution of the SDE of S under Q dynamics is:
+\begin{equation*}\label{GBM}
+\begin{split}
+S(t)=S(0) \cdot \exp \bigg( (r -\frac{1}{2} \sigma^2) t + \sigma W(t) \bigg)
+\end{split}
+\end{equation*}
+By the simple option assumption the Kolmogorov backward equation for the RNVF gives the BS-PDE. The PDE can then be solved analytically and then we arrive at a closed form solution for european call and put options. The european call and put option can also be derived directly with the RNVF. 
 
 \theoremstyle{proposition}
 \begin{proposition}{}\label{BS-price-EuroCall}
@@ -304,6 +302,7 @@ d_2(t,s)=d_1(s,t)-\sigma \sqrt{T-t}
 \end{align*}
 (see p. 105 \parencite{finKont})
 \end{proposition}
+We provided only the price for the european call option, but the european put price can easily be obtained by applying the put-call-parity for european options and vice virsa .
 
 \theoremstyle{proposition}
 \begin{proposition}{}\label{put-call-parity}
@@ -315,16 +314,31 @@ p(t,s)=K\cdot \exp(-r(T-t))+c(t,s)-s
 (see p. 126 \parencite{finKont})
 \end{proposition}
 
-The put-call-parity holds only for European options, but the framework developed in this section will be useful for benchmarks and control variate for the numerical procedures.
+The aim for this thesis is to price american put options, but the european option provide a reference price in a closed form format. The put-call-parity holds only for european options, where for the american option there is a bound on the difference in price:
+$$S_0 - K \leq C-P \leq S_0 - K \cdot e^{-rT}$$
 
-The above formula for the European call option is actually the same for an American call option, but is not true for an American put option or for call options paying dividends. The result for the American call option was shown by Merton \parencite{Merton73}, that the intrinsic value is never greater than the worth of the option given by the risk-neutral valuation formula. In section \ref{AmericanOptions} we will show a martingale approach to prove the value of a European and American call coincides when the underlying is a non-dividend paying stock \parencite{finKont}.
+The above formula for the European call option is actually the same for an American call option, but is not true for an American put option or for call options with underlying stock paying dividends. The result for the American call option was shown by Merton \parencite{Merton73}, that the intrinsic value is never greater than the worth of the option given by the risk-neutral valuation formula. In section \ref{AmericanOptions} we will show a martingale approach to prove the value of a European and American call coincides when the underlying is a non-dividend paying stock.
 
 %----------------------------------------------------------------------------------------
 %	SECTION 4
 %----------------------------------------------------------------------------------------
 
 \section{American Options And Optimal Stopping}\label{AmericanOptions}
-The American options adds additional complexity to the pricing problem, because compared to the European option the American option can be exercised at any time from inception to maturity. The main problem with American options is to find a optimal stopping time, i.e.
+The American options adds additional complexity to the pricing problem, because compared to the European option the American option can be exercised at any time from inception to maturity. The exercise feature of the american option makes a optimal stopping problem for american put option. We will assume a finite horizon, because all the derivative in this thesis will be prices in that time frame. The arbitrage free price for an american put option with finite horizon is:
+\begin{align}\label{optFinite}
+V(t,s)=\sup_{0\leq \tau \leq T-t} E_{t,s}[\exp(-r \tau) (K-S(t+\tau))^+]
+\end{align}
+Equation \ref{optFinite} gives a describtion how to price the american put option, the V(t,s) is the value of the option to time t and given $S(t)=s$. $\tau$ is a stopping time of the GBM.
+\theoremstyle{definition}
+\begin{definition}{\textbf{Stopping time}:}
+A random variable $\tau:\Omega \to [0,\infty]$ is called a Markov time if $(\tau \leq t)\in \mathcal{F}_{t}$ for all $t\geq 0$. A Markov time is called a stopping time if $\tau<\infty$ P-a.s.
+(p. 27 \parencite{Shiryaev06})
+\end{definition}
+The value of the options is given by exercising the option at the optimal stopping time, hence the problem is a optimal stopping problem. 
+TODO!
+
+
+The main problem with American options is to find a optimal stopping time, i.e.
 \begin{align}
 \max_{0 \leq \tau\leq T}\{E[\Phi(\tau,X_{\tau})]\}
 \end{align}

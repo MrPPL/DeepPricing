@@ -1,42 +1,29 @@
 
 \chapter{Classical numerical results and Benchmarks} % Main chapter title
 
-TODO:Equidistant time steps
-
 \label{Chapter3} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
 By last section we saw the American put was an example of an option that required numerical procedures to be priced fair. The American put is far from the only example of a derivative without a closed-form solution. In this chapter the two first sections deals with pricing American put option with 1 underlying risky asset, where in the last section we try to price options with several underlying risky assets. \\
 
-The two first sections is two classical valuing algorithms in computational finance the Binomial model \parencite{CRR} and the Least Square Monte Carlo (LSM \parencite{lsm}) approach with one underlying asset. The binomial model is an example of a strategy to approximate the B-S model and the LSM is a method trying to solve the variational inequalities. We could also have chosen to solve the free boundary problem with implicit finite difference, but we chose to focus on the two other numerical procedures. The final section in this chapter will be trying to value exotic options with several underlying assets. Here we will extend the binomial pricing model to multidimensional (\parencite{NEK} and \parencite{BEG}) and provide some closed form solutions (\parencite{Johnson87} and \parencite{Ouwehand2006}). Therefore the chapter have two purposes to gain insight into valuation for exotic options and provide some benchmarks for the Neural Network in the coming chapters.
+The two first sections is two classical valuing algorithms in computational finance the Cox-Ross-Rubinstein (CRR) binomial model \parencite{CRR} and the Least Square Monte Carlo (LSM \parencite{lsm}) approach with one underlying asset. The binomial model is an example of a strategy to approximate the B-S model and the LSM is a method trying to solve the variational inequalities. We could also have chosen to solve the free boundary problem with implicit finite difference, but we chose to focus on the two other numerical procedures. The final section in this chapter will be trying to value exotic options with several underlying assets. Here we will extend the binomial pricing model to multidimensional (\parencite{NEK} and \parencite{BEG}) and provide some closed form solutions (\parencite{Johnson87} and \parencite{Ouwehand2006}). Therefore the chapter have two purposes to gain insight into valuation for exotic options and provide some benchmarks for the Neural Network in the coming chapters.
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 \section{Binomial Pricing Model}
-The classical \parencite{CRR} presented in this section will be used for pricing an American put stock option and to build the foundation for the multidimensional binomial model \parencite{BEG}.
-The Binomial model provides an intuitive and easy implementable model for valuing American and European options. The Binomial model comes handy, when no analytical model exists e.g. an American put option. The Binomial model also has its limitations, because it is not suited for valuing path dependent options or options with a lot of several underlying factors. The key difference on the Binomial model and the other numerical procedures is that the Binomial model is build on a discrete framework. \\
+The classical binomial model presented in this section inspired by \parencite{CRR} \parencite{Hull} \parencite{finKont} will be used for pricing an american put stock option and to build the foundation for the multidimensional binomial model \parencite{BEG}. The Binomial model provides an intuitive and easy implementable model for valuing american and european options. The binomial model comes handy, when no analytical model exists e.g. for an american put option. The Binomial model also has its limitations, because it is not suited for valuing path dependent options or options with a lot of several underlying factors. The key difference on the Binomial model and the other numerical procedures is that the binomial model is build on a discrete framework. \\
 
-The central concepts arbitrage and completeness from continuous time also work in the discrete time setup. The paper \parencite{CRR} which introduced the binomial model to option pricing came after the Black-Scholes model described in section \ref{Chapter2} \parencite{B-S-Paper}. The main reason for developing a model in discrete time, is that the discrete time approach gives a simplified model in terms of the mathematics and highlights the essential concepts in arbitrage theory. You can argue that the simpler mathematics in this model makes the binomial model more instructive and clear. Besides being easier to understand for non-mathematician it works nicely with other options than the European options like American options.\\
-
-Even though we assume the stock price moves at discrete time instead in continuous time it can actually be shown for a European Option that if the number of time-steps in the tree approaches infinity. The Binomial model will then converge to the continuous time closed form solution for a European option \parencite{CRR} \parencite{Hull}. Hence the binomial pricing model will be equivalent with the continuous time analytical pricing model derived by Fischer Black and Myron Scholes in the limit for European options \parencite{CRR}.\\
-
-To value an American put option, we lay out all the possible path of the stock, based on the $S_0,\sigma$ and $T$. We need to specify the number of time-steps ($\Delta t = \frac{T}{N} \ where \ N=No. \ of  \ steps$) for the tree, where for each step, we add another possible value for the stock. We only add 1 more possibility for each time-step because the tree recombines. The precision for the algorithm increases with the number of steps and the option value stabilizes (see Figure \ref{fig:binConv}). For valuing an American put option, we value the exercise value at maturity (time T) for all possible outcomes for the stock. Then we use backward induction where we compare the intrinsic value with the conditional expectation, where we choose the maximum of these two \parencite{Hull}. 
- 
-\begin{figure}[th]
-\centering
-\includegraphics{Figures/binConv.png}
-\decoRule
-\caption[Convergence Of Binomial Model]{}
-\label{fig:binConv}
-\end{figure}
-
-%-----------------------------------
-%	SUBSECTION 1
-%-----------------------------------
-
-\subsection{Mathematics in Binomial valuation model}
-The mathematics behind the Binomial model is simple and we will in this section provide the basic mathematics. First we need to construct the tree, then afterwards work backwards in the tree for valuation. For each time step ($\Delta t$), we assume the stock (S) moves up ($S \cdot u$) or down ($S \cdot d$). In order to avoid arbitrage we need to find the risk neutral measure q (martingale measure) for the binomial tree.  The probability for the stock moves up is q. The risk neutral measure q is chosen such that the expected return is the risk-free rate r for the risk neutral portfolio.
-
+We work with the financial market $(\Omega, \mathcal{F}, \mathbb{F}, P, S_0, S_1)$, where the filtration is generated by $S_1$, $\mathbb{F}= \sigma(\mathcal{F}_{k})_{k=0,1,\ldots, T}$ and the sigma algebra is chosen to be $\mathcal{F}=\mathcal{F}_{T}$. It is well known from discrete arbitrage teory, that the binomial market model with two assets, where $u>r>d>-1$ is complete and arbitrage free model. The u,d and r describes the evolution of the discrete stochastic process for the stock and the free interest rate on the bank account. 
+\begin{align*}
+S_{0}(k)=S_{0}(0) \cdot \exp(\Delta t \cdot r \cdot k) \quad where \ S_{0}(0)=1\\
+S_{1}(k)=S_{1}(0)\prod_{j=1}^{k} Y_{j} \quad where \ Y_1,Y_2, \ldots, Y_k \ are \ i.i.d. \ and \ S_1(0)>0
+\end{align*}
+We assume that the $Y_i=$\[ \begin{cases} 
+      u & with \ probability \ p \\
+      d & with \ probability \ (1-p)
+   \end{cases}
+\]
+Remember that in arbitrage teory we work with the market expectation, hence we want the equivalent martingale measure. The risk neutral valuation formula holds also in discrete time:
 \begin{theorem}\label{RNVF-Discrete}
 \textbf{Risk-neutral valuation formula in discrete time. }
 Assume there exists a risk free asset. Then the market is arbitrage free if and only if there exists a risk neutral measure $Q \sim P$ s.t.
@@ -45,18 +32,47 @@ s= \exp(- r \Delta t) \cdot E^Q[S(t+\Delta t)|S(t)=s]
 \end{align}
 Where $\Delta t$ is a single time-step.
 \end{theorem}
-From the above theorem, we can calculate the risk neutral measure as:\\
+From the above theorem, we can calculate the equivalent martingale measure:\\
 $$q=\frac{e^{\Delta t}-d}{u-d}$$
-
-The d and u is chosen s.t. they match volatility. So we choose:
-$$u= \exp(\sigma \sqrt{\Delta t}) \quad d= \exp(-\sigma \sqrt{\Delta t})$$
-Now we have determined the three parameters needed for constructing a binomial tree \parencite{CRR} \parencite{Hull} \parencite{finKont}.\\
-
-We want to value an American put option, hence we need to work backward in the tree and comparing in each node the intrinsic value with the conditional expectation (see theorem \ref{RNVF-Discrete}) by:
+The martingale measure q is unique in the binomial model, because it is complete. We have seen that the binomial model with the market ($S_0(k), S_1(k)$) is a arbitrage free and complete model, hence we are left with the question how to introduce a derivative with payoff $H$. The binomial model gives a recursice formula, because the filtration $\mathbb{F}$ has the structure of a binary tree. I.e. the one-step transition probabilities are the same in each node throughout the tree, because of the i.i.d. assumption.
 \begin{equation}
-max\{ K-S(t), \exp(- r \Delta t) \cdot E^Q[P(t+\Delta t,T)|P(t,T)=p] \}
+\begin{split}
+V(k-1)=\exp(-r \Delta t) (qV^{u}(k)+(1-q)V^{d}(k))\\
+with \ terminal \ condition \ V(T)=H 
+\end{split}
 \end{equation}
-The comparison will be applied for every node in each time-step $\Delta t$  and all the way back in time to the initialization date. By this procedure we get present value of the American option at initialization.
+The path-independence payoff for the american put makes the tree recombining, so there is only T+1 terminal nodes at maturity. If the derivative was path-dependent e.g. an asian option, then we have a non-recombinin tree and $2^{T}$ terminal nodes. This is a computational inefficient, which explains that the binomial model should not be used for path-depending derivatives. The problem with a derivative with several underlying e.g. a basket option is also the increasing number of nodes, because now you have $2^d$ possible one-step transitions.\\
+
+\begin{figure}[H]
+\centering
+\includegraphics{Figures/BinomialTree.png}
+\decoRule
+\caption[Convergence Of Binomial Model]{{'S0min': 40, 'depth': 50, 'basedepth': 1, 'basefactor': 1, 'spd': 1, 'up': 1.0106, 'options': 1} Price for a american put option based on the binomial model, where the independent variable is the number of time-steps. Vol. is an abbreviation for volatility.}
+\label{fig:BinomialTree}
+\end{figure}
+
+
+To value an American put option, we lay out all the possible path of the stock based on $S_1(0),\sigma$ and $T$. First we need to construct the tree, then afterwards work backwards in the tree for valuation. To construct the tree we need to specify the number of equidistant time-steps $\Delta t$ ($\Delta t = \frac{T}{N} \ where \ N=No. \ of  \ steps$) for the tree, where for each step we add another possible value for the stock. We only add 1 more possibility for each time-step because the tree recombines.  The d and u is chosen s.t. they match volatility. So we choose:
+$$u= \exp(\sigma \sqrt{\Delta t}) \quad d= \exp(-\sigma \sqrt{\Delta t})$$
+For valuing an American put option, we value the exercise value at maturity (time T) for all possible outcomes for the stock. Then we use backward induction where we compare the intrinsic value with the conditional expectation, where we choose the maximum of these two. If we denote $V_{j}(k)$ as the value of the option to time $k\cdot \Delta t$ and j is the node at that time. For an put option we have at maturity:
+$$V_{j}(k)=\max(K-S_1(0)\cdot u^{j} \cdot d^{N-j},0) \quad for \ j=0,1,\ldots, N \ and \ k=0,1,\ldots, T$$
+At each node we compare the intrinsic value with the continuation value, where the continuation value is given for each node by the two possible one-step transitions:
+$$V_{j}(k)=\exp(-r \Delta t) (q   \cdot V_{j+1}(k+1) + (1-q) \cdot V_{j}(k+1)) \quad for \ j=0,1,\ldots, N $$
+Remember from above that the binomial model has a recursive structure, hence use backward induction to value the option:
+$$V_{j}(k)=\max(K-S_1(0)\cdot u^{j} \cdot d^{N-j},\exp(-r \Delta t) (q   \cdot V_{j+1}(k+1) + (1-q) \cdot V_{j}(k+1))) \quad for \ j=0,1,\ldots, N$$
+The first term in the max function is the intrinsic value and the second term is the condition expectation by RNVF. The comparison will be applied for every node in each time-step $\Delta t$  and all the way back in time to the initialization date. By this procedure we get present value of the American option. One design decision is to choose number of time-steps considering a trade-off between computational efficientcy and accurary. The precision for the algorithm increases with the number of steps and the option value stabilizes for increasing number of steps (see Figure \ref{fig:binConv})
+\begin{figure}[H]
+\centering
+\includegraphics{Figures/binConv.png}
+\decoRule
+\caption[Convergence Of Binomial Model]{Price for a american put option based on the binomial model, where the independent variable is the number of time-steps. Vol. is an abbreviation for volatility.}
+\label{fig:binConv}
+\end{figure}
+Figure \ref{fig:binConv} illustrates that around 40 steps the option value stabilizes for an option with 1 year to maturity.\\
+
+The central concepts arbitrage and completeness from continuous time also work in the discrete time setup. The paper \parencite{CRR} which introduced the binomial model to option pricing came after the Black-Scholes model described in section \ref{Chapter2} \parencite{B-S-Paper}. The main reason for developing a model in discrete time, is that the discrete time approach gives a simplified model in terms of the mathematics and highlights the essential concepts in arbitrage theory. You can argue that the simpler mathematics in this model makes the binomial model more instructive and clear. Besides being easier to understand for non-mathematician it works nicely with other options than the european options like american options.\\
+
+Even though we assume the stock price moves at discrete time instead in continuous time it can actually be shown for a European Option that if the number of time-steps in the tree approaches infinity. The Binomial model will then converge to the continuous time closed form solution for a European option \parencite{CRR} \parencite{Hull}. Hence the binomial pricing model will be equivalent with the continuous time analytical pricing model derived by Fischer Black and Myron Scholes in the limit for European options \parencite{CRR}. 
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
@@ -116,6 +132,13 @@ To estimate the condition expectation in equation \ref{continuation-value}, we r
 $$F(\omega;t_{K-1})= \sum_{j=0}^\infty a_j L_j(X)$$
 where a is the coefficients for the regression, L is the basis function, where the argument is the underlying asset $X$ \parencite{lsm}.
 
+The LSM approach gives a lower bound for the true price of the option given optimal stopping choice:
+\theoremstyle{proposition}
+\begin{proposition}{}\label{BS-price-EuroCall}
+\textbf{Lower Bound To True Value:} For any finite choice of M, K, and vector $\theta\in \mathbb{R}^{M \times (K-1)}$ representing the coefficients for the M basis functions at rach of the K-1 early exercise dates, let $LSM(\omega;M,K)$ denote the discounted cash flow resulting from the following the LSM rule of exercising when the immediate exercise value is positive and greater tahn or equal to $\hat{F}_{M}(\omega_{l};t_{k})$ as defined by $\theta$. Then the following inequality holds almost surely,
+$$V(X)\geq \lim_{N\to \infty} \dfrac{1}{N}\sum_{i=1}^{N} LSM(\omega_i;M,K)$$
+(p. 124 \parencite{lsm})
+\end{proposition}
 
 %-----------------------------------
 %	SUBSECTION 2
