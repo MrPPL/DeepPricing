@@ -31,12 +31,13 @@ Warning--I'm ignoring Buffett08's extra "author" field
 --line 130 of file thesis.bib
 Warning--I'm ignoring Buffett02's extra "author" field
 --line 139 of file thesis.bib
+Warning--I didn't find a database entry for "Kim02"
 Biblatex version: 3.8
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 19 entries,
             6268 wiz_defined-function locations,
-            1327 strings with 13670 characters,
+            1329 strings with 13680 characters,
 and the built_in function-call counts, 98552 in all, are:
 = -- 5785
 > -- 3130
@@ -75,4 +76,4 @@ warning$ -- 0
 while$ -- 1067
 width$ -- 0
 write$ -- 592
-(There were 2 warnings)
+(There were 3 warnings)

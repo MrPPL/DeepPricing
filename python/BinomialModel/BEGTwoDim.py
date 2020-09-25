@@ -1,20 +1,9 @@
 ##########
-## Tree method
+## Tree method 2-dimensionel inspired by BEG
 ##########
-#model parameters
-S10 = 100
-S20 = 100
-K=200
-Sb=260
-r=0.01
-sigma1 = 0.3
-sigma2 = 0.2
-T = 1
-rho = 0.5
-NStep = 10
 import numpy as np
 
-def BEG(Nstep, T, sigma1, sigma2, r, rho, S10, S20, K):
+def BEG(Nstep, T, sigma1, sigma2, r, rho, S10, S20, K, amer):
     # invariant quantities
     N = NStep
     deltaT = T/N
@@ -45,34 +34,31 @@ def BEG(Nstep, T, sigma1, sigma2, r, rho, S10, S20, K):
     
     for i in range(0,2*N+1,2):
         for j in range(0,2*N+1,2):
-            if (S1Vals[i] + S2Vals[j]) >= Sb:
-                CVals[i,j] = 0
-            else:
-                CVals[i,j] = max(0,S1Vals[i]+S2Vals[j]-K)
+            CVals[i,j] = max(0,K-min(S1Vals[i],S2Vals[j]))
             
     # roll back
     for tau in range(N):
         for i in range(tau+1,2*N+1-tau,2):
             for j in range(tau+1,2*N+1-tau,2):
-                if (S1Vals[i] + S2Vals[j]) >= Sb:
-                    CVals[i,j] = 0
+                if amer==True:
+                    CVals[i,j] = max(max(0,K-min(S1Vals[i],S2Vals[j])) ,p_uu*CVals[i+1,j+1]+ p_ud*CVals[i+1,j-1]+p_du*CVals[i-1,j+1]+p_dd*CVals[i-1,j-1])
                 else:
-                    CVals[i,j] = p_uu*CVals[i+1,j+1]+ p_ud*CVals[i+1,j-1]+p_du*CVals[i-1,j+1]+p_dd*CVals[i-1,j-1]
+                    CVals[i,j] = max(0 ,p_uu*CVals[i+1,j+1]+ p_ud*CVals[i+1,j-1]+p_du*CVals[i-1,j+1]+p_dd*CVals[i-1,j-1])
+                    
 
     price = CVals[N,N]
     return price
 
 
 #model parameters
-S10 = 100
-S20 = 100
-K=200
-Sb=260
-r=0.01
-sigma1 = 0.3
-sigma2 = 0.2
-T = 1
+S10 = 40
+S20 = 40
+K= 40
+r=0.04879
+sigma1 = 0.2
+sigma2 = 0.3
+T = 7/12
 rho = 0.5
-NStep = 1000
+NStep = 100
 
-print(BEG(Nstep=NStep, T=T, sigma1=sigma1, sigma2=sigma2, r=r, rho=rho, S10=S10, S20=S20, K=K))
+print(BEG(Nstep=NStep, T=T, sigma1=sigma1, sigma2=sigma2, r=r, rho=rho, S10=S10, S20=S20, K=K, amer=False))

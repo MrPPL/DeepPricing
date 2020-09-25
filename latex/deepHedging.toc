@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {2.4.1}American Call Without Dividends}{14}{subsection.70}
 \contentsline {subsection}{\numberline {2.4.2}American Put}{14}{subsection.71}
 \contentsline {chapter}{\numberline {3}Classical numerical results and Benchmarks}{15}{chapter.72}
-\contentsline {section}{\numberline {3.1}Binomial Pricing Model}{15}{section.73}
+\contentsline {section}{\numberline {3.1}Cox Ross Rubenstein Model}{15}{section.73}
 \contentsline {section}{\numberline {3.2}Least Square Monte Carlo Method}{19}{section.79}
 \contentsline {subsection}{\numberline {3.2.1}LSM method for an American put}{20}{subsection.82}
 \contentsline {subsection}{\numberline {3.2.2}Numerical results}{22}{subsection.86}
@@ -30,37 +30,38 @@
 \contentsline {subsubsection}{\numberline {3.3.1.2}Options on the Maximum or the Minimum of Several Assets}{24}{subsubsection.95}
 \contentsline {paragraph}{\numberline {3.3.1.2.1}Best of assets or cash}{24}{paragraph.96}
 \contentsline {paragraph}{\numberline {3.3.1.2.2}Call on max and call on min}{25}{paragraph.103}
-\contentsline {subsection}{\numberline {3.3.2}Lattice approach for multivariate contingent claims}{25}{subsection.105}
-\contentsline {chapter}{\numberline {4}Deep Learning}{27}{chapter.106}
-\contentsline {section}{\numberline {4.1}Multilayer Perceptrons}{28}{section.107}
-\contentsline {subsection}{\numberline {4.1.1}A Single Neuron}{29}{subsection.108}
-\contentsline {subsubsection}{\numberline {4.1.1.1}Activation functions}{29}{subsubsection.111}
-\contentsline {subsection}{\numberline {4.1.2}Architecture Of MLPs}{30}{subsection.112}
-\contentsline {subsection}{\numberline {4.1.3}Training The Network}{32}{subsection.117}
-\contentsline {subsection}{\numberline {4.1.4}Regularization}{33}{subsection.118}
-\contentsline {chapter}{\numberline {5}Option Pricing And Deep Learning}{35}{chapter.119}
-\contentsline {section}{\numberline {5.1}Multilayer Perceptrons Regression For European Options}{35}{section.120}
-\contentsline {subsection}{\numberline {5.1.1}Data}{35}{subsection.121}
-\contentsline {subsection}{\numberline {5.1.2}Training}{37}{subsection.124}
-\contentsline {subsubsection}{\numberline {5.1.2.1}Hyperparameter Tuning}{37}{subsubsection.125}
-\contentsline {subsection}{\numberline {5.1.3}Model Performance In-Sample}{38}{subsection.127}
-\contentsline {subsection}{\numberline {5.1.4}Polynomial Regression}{39}{subsection.130}
-\contentsline {subsection}{\numberline {5.1.5}Out of sample predictions}{41}{subsection.133}
-\contentsline {section}{\numberline {5.2}Multilayer Perceptrons Regression For American Options}{45}{section.138}
-\contentsline {subsection}{\numberline {5.2.1}Data}{45}{subsection.139}
-\contentsline {subsection}{\numberline {5.2.2}Optimization and cost function}{45}{subsection.142}
-\contentsline {subsection}{\numberline {5.2.3}Model Performance}{45}{subsection.143}
-\contentsline {section}{\numberline {5.3}Multilayer Perceptrons Regression For European Basket Call Max}{48}{section.149}
-\contentsline {section}{\numberline {5.4}Multilayer Perceptrons Regression For Optimal Stopping}{48}{section.150}
-\contentsline {chapter}{\numberline {6}Discussion and Further Investigation}{51}{chapter.151}
-\contentsline {section}{\numberline {6.1}Main Section 1}{51}{section.152}
-\contentsline {subsection}{\numberline {6.1.1}Subsection 1}{51}{subsection.153}
-\contentsline {subsection}{\numberline {6.1.2}Subsection 2}{51}{subsection.154}
-\contentsline {section}{\numberline {6.2}Main Section 2}{51}{section.155}
-\contentsline {chapter}{\numberline {7}Conclusion}{53}{chapter.156}
-\contentsline {section}{\numberline {7.1}Main Section 1}{53}{section.157}
-\contentsline {subsection}{\numberline {7.1.1}Subsection 1}{53}{subsection.158}
-\contentsline {chapter}{\numberline {A}Option contracts}{55}{appendix.159}
-\contentsline {section}{\numberline {A.1}European Call and Put}{55}{section.160}
-\contentsline {chapter}{\numberline {B}Mathematical results and definitions}{57}{appendix.163}
-\contentsline {chapter}{Bibliography}{59}{appendix*.173}
+\contentsline {subsection}{\numberline {3.3.2}Lattice approach for multivariate contingent claims}{26}{subsection.105}
+\contentsline {subsection}{\numberline {3.3.3}Numerical And Analytical Results}{28}{subsection.108}
+\contentsline {chapter}{\numberline {4}Deep Learning}{29}{chapter.110}
+\contentsline {section}{\numberline {4.1}Multilayer Perceptrons}{30}{section.111}
+\contentsline {subsection}{\numberline {4.1.1}A Single Neuron}{31}{subsection.112}
+\contentsline {subsubsection}{\numberline {4.1.1.1}Activation functions}{31}{subsubsection.115}
+\contentsline {subsection}{\numberline {4.1.2}Architecture Of MLPs}{32}{subsection.116}
+\contentsline {subsection}{\numberline {4.1.3}Training The Network}{34}{subsection.121}
+\contentsline {subsection}{\numberline {4.1.4}Regularization}{35}{subsection.122}
+\contentsline {chapter}{\numberline {5}Option Pricing And Deep Learning}{37}{chapter.123}
+\contentsline {section}{\numberline {5.1}Multilayer Perceptrons Regression For European Options}{37}{section.124}
+\contentsline {subsection}{\numberline {5.1.1}Data}{37}{subsection.125}
+\contentsline {subsection}{\numberline {5.1.2}Training}{39}{subsection.128}
+\contentsline {subsubsection}{\numberline {5.1.2.1}Hyperparameter Tuning}{39}{subsubsection.129}
+\contentsline {subsection}{\numberline {5.1.3}Model Performance In-Sample}{40}{subsection.131}
+\contentsline {subsection}{\numberline {5.1.4}Polynomial Regression}{41}{subsection.134}
+\contentsline {subsection}{\numberline {5.1.5}Out of sample predictions}{43}{subsection.137}
+\contentsline {section}{\numberline {5.2}Multilayer Perceptrons Regression For American Options}{47}{section.142}
+\contentsline {subsection}{\numberline {5.2.1}Data}{47}{subsection.143}
+\contentsline {subsection}{\numberline {5.2.2}Optimization and cost function}{47}{subsection.146}
+\contentsline {subsection}{\numberline {5.2.3}Model Performance}{47}{subsection.147}
+\contentsline {section}{\numberline {5.3}Multilayer Perceptrons Regression For European Basket Call Max}{50}{section.153}
+\contentsline {section}{\numberline {5.4}Multilayer Perceptrons Regression For Optimal Stopping}{50}{section.154}
+\contentsline {chapter}{\numberline {6}Discussion and Further Investigation}{53}{chapter.155}
+\contentsline {section}{\numberline {6.1}Main Section 1}{53}{section.156}
+\contentsline {subsection}{\numberline {6.1.1}Subsection 1}{53}{subsection.157}
+\contentsline {subsection}{\numberline {6.1.2}Subsection 2}{53}{subsection.158}
+\contentsline {section}{\numberline {6.2}Main Section 2}{53}{section.159}
+\contentsline {chapter}{\numberline {7}Conclusion}{55}{chapter.160}
+\contentsline {section}{\numberline {7.1}Main Section 1}{55}{section.161}
+\contentsline {subsection}{\numberline {7.1.1}Subsection 1}{55}{subsection.162}
+\contentsline {chapter}{\numberline {A}Option contracts}{57}{appendix.163}
+\contentsline {section}{\numberline {A.1}European Call and Put}{57}{section.164}
+\contentsline {chapter}{\numberline {B}Mathematical results and definitions}{59}{appendix.167}
+\contentsline {chapter}{Bibliography}{61}{appendix*.177}
