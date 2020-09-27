@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  25 SEP 2020 20:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  26 SEP 2020 12:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2469,12 +2469,27 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
 --------------------
  Acknowledgements
 --------------------
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 233--234
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 235--236
+
+ []
+
 1: section
 [9] [10
 
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 238.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 244.
  (./deepHedging.toc
 1: section
 [11])
@@ -2504,12 +2519,12 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 [17] [18
 
 ]
-Overfull \hbox (21.97044pt too wide) in alignment at lines 265--287
+Overfull \hbox (21.97044pt too wide) in alignment at lines 271--293
  [] [] [] 
  []
 
 
-Overfull \hbox (21.97044pt too wide) in alignment at lines 287--290
+Overfull \hbox (21.97044pt too wide) in alignment at lines 293--296
  [] [] [] 
  []
 
@@ -2532,7 +2547,7 @@ Chapter 1.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 3.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 10--323
+Underfull \hbox (badness 10000) in paragraph at lines 10--329
 
  []
 
@@ -3189,12 +3204,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--32
 
 
 ]) [60]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 351.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 357.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (13.26485pt too wide) in paragraph at lines 351--351
+Overfull \hbox (13.26485pt too wide) in paragraph at lines 357--357
 [][]\T1/ppl/m/n/10.95 Ekvall, Niklas (1996). ^^P  A lat-tice ap-proach for pric
 -ing of mul-ti-vari-ate con-tin-gent claims^^Q.
  []
@@ -3204,14 +3219,14 @@ Overfull \hbox (13.26485pt too wide) in paragraph at lines 351--351
 
 
 ] [62]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 355.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 355.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 361.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 361.
  (./deepHedging.aux (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux) (./Chap
 ters/Chapter3.aux) (./Chapters/Chapter4.aux) (./Chapters/Chapter5.aux) (./Chapt
 ers/Chapter6.aux) (./Chapters/Chapter7.aux)
 (./Appendices/AppendixA.aux) (./Appendices/AppendixB.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 355.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 355.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 361.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 361.
 Package rerunfilecheck Info: File `deepHedging.out' has not changed.
 (rerunfilecheck)             Checksum: E30E934353CB05BE3C173FC8E55F9211;12263.
 
@@ -3233,7 +3248,7 @@ Package logreq Info: Writing requests to 'deepHedging.run.xml'.
 Here is how much of TeX's memory you used:
  47674 strings out of 492982
  979215 string characters out of 6134896
- 1178539 words of memory out of 5000000
+ 1179539 words of memory out of 5000000
  50212 multiletter control sequences out of 15000+600000
  641966 words of font info for 262 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3254,7 +3269,7 @@ ino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on deepHedging.pdf (84 pages, 989625 bytes).
+Output written on deepHedging.pdf (84 pages, 990334 bytes).
 PDF statistics:
  1261 PDF objects out of 1440 (max. 8388607)
  1078 compressed objects within 11 object streams
