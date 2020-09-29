@@ -82,8 +82,8 @@ d=2
 S = [40]*d
 vol = [0.2,0.3, 0]
 corr = 0.5
-r = 0.04879
-T = 7/12
+r = 0.06
+T = 1
 K = 40
 
 
@@ -98,7 +98,6 @@ def callMax2(S, K, r, T, corr1, corr2, corr3):
     cmax -= K*np.exp(-r*T)*(1-multivariate_normal.cdf(x = np.array([-d2(0),-d2(1)]), cov=corr3))
     return cmax
 print("callMax 2 dim: ", callMax2(S,K,r,T,corr1,corr2, corr3))
-print("putMin 2 dim: ", callMax2(S,K,r,T,corr1,corr2, corr3) - callMax2(S,0,r,T,corr1,corr2, corr3) + K*np.exp(-r*T))
 
 #Nice relationship Johnson
 import closedEuro
@@ -112,7 +111,6 @@ corr2 = np.array([ [1, -rho(0,2,1)],[-rho(0,2,1),1]])
 corr3 = np.array([[1,corr],[corr,1]])
 def callMin2(S, K, r, T, corr1, corr2, corr3):
     cmin = 0
-    breakpoint()
     cmin += S[0]*multivariate_normal.cdf(x = np.array([d2Prime(1,0),d1(0)]), cov=corr1)
     cmin += S[1]*multivariate_normal.cdf(x = np.array([d2Prime(0,1),d1(1)]), cov=corr2)
     cmin -= K*np.exp(-r*T)*(multivariate_normal.cdf(x = np.array([d2(0),d2(1)]), cov=corr3))

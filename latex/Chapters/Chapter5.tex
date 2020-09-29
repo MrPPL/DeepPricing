@@ -4,32 +4,87 @@
 
 \label{Chapter5} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-Deep learning can be applied to option valuation in different ways. The first method is to simulate input parameter, i.e. the market parameters and model parameters and then using a classical method for calculating target values $\bm{y}$ for the given input parameters $\matr{X}$. The method falls within supervised regression where we will use a MLPs network introduced in section \ref{multilayerPerceptron} to approximate the mapping. The risky assets are modelled with black scholes theory, ence from earlier chapters the generations of labels for european and american stock options are already presented (Chapter \ref{Chapter2}, \ref{Chapter3}). The theory in chapter \ref{Chapter4} will be specialized for the specific task and discussed. The supervised MLPs regression will be used to valuate european call options and american put options. The advantage of MLPs is the model can easily be extendend to high dimensional data, where the e.g. polynomial regression (section \ref{LSM}) is prone to overfit and slow compared to MLPs. After the two sections with MLPs calibrated to pricing models the MLPs will be applied to approximate optimal exercise strategy similar to LSM.
+Deep learning can be applied to option valuation in different ways. After the two sections with MLPs calibrated to pricing models the MLPs will be applied to approximate optimal exercise strategy similar to LSM. The second method is to simulate input parameter, i.e. the market parameters and model parameters and then using a classical method for calculating target values $\bm{y}$ for the given input parameters $\matr{X}$. The method falls within supervised regression where we will use a MLPs network introduced in section \ref{multilayerPerceptron} to approximate the mapping. The risky assets are modelled with black scholes theory from earlier chapters hence the generations of labels for european and american stock options are already presented (Chapter \ref{Chapter2}, \ref{Chapter3}). The theory in chapter \ref{Chapter4} will be specialized for the specific task and discussed. The supervised MLPs regression will be used to valuate european call options and american put options. The advantage of MLPs is the model can easily be extendend to high dimensional data, where the e.g. polynomial regression (section \ref{LSM}) is prone to overfit and slow compared to MLPs. 
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
+\section{Multilayer Perceptrons Regression For Optimal Stopping}
 
-\section{Multilayer Perceptrons Regression For European Options}
-The european call and put option have a analytical solution in the black scholes model, hence to generate the targets value only require the parameters $r, \sigma, K, S(0)$ and $T$. The section is inspired by \parencite{HirsaAli2019} and \parencite{GasparRaquel20}, where the aim is to show good replication of the derivative price in a controlled setup. In the performance section we will look at how the MLPs performs compared to standard polynomial regression. We aim to learn the derivative price for a european call option in the given parameter ranges, but we look also at parameter ranges outside of the training set.
+
+%----------------------------------------------------------------------------------------
+%	SECTION 2
+%----------------------------------------------------------------------------------------
+Universal approximate theorem
+
+\section{Multilayer Perceptrons Regression Pricing From Existing Methods}
+The MLPs pricing method differs on the other methods, because it is only data drivin in the sense it is model free. The MLPs could easily be used to real data, which is investigated in \parencite{GasparRaquel20}. We revisit the work from \parencite{HirsaAli2019}, where we try to extend the pricing models to options with two underlying risky assets. The model will be the classical GBM model presented in earliar chapters. By choosing the GBM model the MLPs pricing method is ready for investigation both for vanilla options and exotic options. We stress that the MLPs pricing method is not restricted to GBM assumption, but can be applied to other models such as Hesten, Variance Gamma and real data. The advantage with MLPs is fast calibration and parameter estimation compared to classical methods binomial lattice and LSM. With the increased speed for pricing it can cost accurary specially if the data is sparse, which can arise when using the method for exotic options on real market data. For practical application the accuracy is severe if the predicted price is not within the bid-ask spread, because the aim is to price fast without introducing arbitrage. We will present results for european, american and other exotic options presented in earliar chapters with MLPs pricing methods.\\
+
+For deep learning the hyperparameters is important for finding the right model for pricing, where different choices will be empirical presented under training. For the given task polynomial regression can also be used, but we will see later why MLPs regression is preferred. The section is split into three sections "Data", "Training" and "Performance", where the european call, american put, european put minimum and american put minimum option will be presented.
 
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
 \subsection{Data}
-Remember the 5 parameters for pricing an european call option (proposition \ref{BS-price-EuroCall}).  The european call option is a linear homogeneous function in $(S_0,K)$, hence the valuation formula can be modified:
+The generation of labels are the computational expensive part of the MLPs method, because the method needs enough samples to approximate the function $f^*$ well. The upside after generation of labels that the method is computationally fast and easy to implement with basic knowledge of deep learning. The labels will be generated by existing methods presented in chapter \ref{Chapter3}, where the input parameters will be quasi sampled with halton sequences.\\
+
+For both the european call and the american put the parameter in-sample will be the same, where we remember the 5 parameters for pricing an european call option (proposition \ref{BS-price-EuroCall}). The european call and american put option is a first order homogeneous function in $(S(0),K)$, hence the valuation formula can be modified:
 $$\frac{c(S_0,K)}{K}=c(\frac{S_0}{K},1)$$
-The alternative representation above reduces the number of parameters needed for simulation to 4, because instead of simulate both $S$ and $K$ moneyness ($\frac{S_0}{K}$) is only  simulated. The input matrix $\matr{X}$ is different combinations of the 4 parameters within the parameter range (table \ref{tab:euroParRange}), where it is assumed the number of trading days are 252 in a year. The other parameter ranges are moneyness between 0.8 and 1.2, risk free rate of return betweenkun 1-3 \% and volatility between 0.05 and 0.5. 
+The alternative representation above reduces the number of parameters needed for simulation to 4, because instead of simulate both $S$ and $K$ moneyness ($\frac{S_0}{K}$) is only  simulated. The input matrix $\matr{X}$ is different combinations of the 4 parameters within the parameter range (table \ref{tab:euroParRange}), where it is assumed the number of trading days are 252 in a year. The other parameter ranges are moneyness between 0.8 and 1.2, risk free rate of return betweenkun 1-3 \% and volatility between 0.05 and 0.5. \\
+
+The european put minimum and american put minimum option for two underlyings will require additional parameters, because now we have two spots, volatilities and correlation between the assets. The first order homegeneity does not hold for multivariate contingent claims, hence the strike and the two spots are needed.
+The labels for the european option will be generated by BS pricing formula for call options, where the american put option will be generated by the CRR model. The change of numeraire approach will be used for pricing european put minimum option and the multidimension lattice approach will be used for pricing american put minimum option.
+   
+
+The european call and put option have a analytical solution in the black scholes model, hence to generate the targets value only require the parameters $r, \sigma, K, S(0)$ and $T$. The section is inspired by \parencite{HirsaAli2019} and \parencite{GasparRaquel20}, where the aim is to show good replication of the derivative price in a controlled setup. In the performance section we will look at how the MLPs performs compared to standard polynomial regression. We aim to learn the derivative price for a european call option in the given parameter ranges, but we look also at parameter ranges outside of the training set.
+
+\begin{table}[H]
+\caption[Parameter Ranges For MLPs]{Parameter ranges for american put and european call options}
+\label{tab:euroParRange}
+\centering
+\begin{tabular}{l l l l l l l l l l l}
+\toprule
+\textbf{Derivative} & \textbf{r} & \textbf{T} & \textbf{Moneyness1} & \textbf{Moneyness2} & $\sigma_1$ & $\sigma_2$ & $\rho$ \\
+\midrule
+Euro. Call & 1\%-3\% & 1d - 3y & 0.8-1.2 & & 0.05-0.5 & &\\ 
+Amer. Put & 1\%-3\% & 1d - 3y & 0.8-1.2 & & 0.05-0.5 & & \\ 
+\bottomrule\\
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\caption[Parameter Ranges For MLPs]{Parameter ranges for american put and european call options}
+\label{tab:euroParRange}
+\centering
+\begin{tabular}{l l l l l l l l l l l}
+\toprule
+\textbf{Derivative} & \textbf{r} & \textbf{T} & K & $S_1(0)$ & $S_2(0)$ & $\sigma_1$ & $\sigma_2$ & $\rho$ \\
+\midrule
+Euro. Put Min. & 1\%-3\% & 1d - 3y & 100 & 80-120 & 80-120 & 0.05-0.5 & 0.05-0.5 & 0.05-0.5\\ 
+Amer. Put Min. & 1\%-3\% & 1d - 3y & 100 & 80-120 & 80-120 & 0.05-0.5 & 0.05-0.5 & 0.05-0.5\\
+\bottomrule\\
+\end{tabular}
+\end{table}
+ 
+\begin{figure}[H]
+\centering
+\includegraphics{Figures/marginalAmerPut.png}
+\decoRule
+\caption[Marginal distributions for american put]{Quasi random simulation with halton sequence}
+\label{fig:marginalAmerPut}
+\end{figure}
 
 \begin{table}[H]
 \caption{Parameter range}
-\label{tab:euroParRange}
+\label{tab:totalEuroParRange}
 \centering
-\begin{tabular}{l l l l l l }
+\begin{tabular}{l l l l l l l }
 \toprule
-\textbf{Moneyness} & \textbf{r} & \textbf{$\sigma$} & \textbf{T} \\
+\textbf{Dataset} & \textbf{Moneyness} & \textbf{r} & \textbf{$\sigma$} & \textbf{T} \\
 \midrule
-0.8-1.2 & 1\%-3\% & 0.05-0.5 & 1 day - 3 years\\ 
+In-Sample & 0.8-1.2 & 1\%-3\% & 0.05-0.5 & 1/252-3.0\\ 
+Out-Of-Money & 1.2-1.4 & 1\%-3\% & 0.05-0.5 & 1/252-3.0\\ 
+Longer Maturity & 0.8-1.2 & 1\%-3\% & 0.05-0.5 & 3-0-5.0\\ 
 \bottomrule\\
 \end{tabular}
 \end{table}
@@ -251,28 +306,7 @@ We see that the 2. degree polynomial is best on most of the performance measures
 %-----------------------------------
 \subsection{Data}
 
-\begin{figure}[H]
-\centering
-\includegraphics{Figures/marginalAmerPut.png}
-\decoRule
-\caption[Marginal distributions for american put]{Quasi random simulation with halton sequence}
-\label{fig:marginalAmerPut}
-\end{figure}
 
-\begin{table}[H]
-\caption{Parameter range}
-\label{tab:totalEuroParRange}
-\centering
-\begin{tabular}{l l l l l l l }
-\toprule
-\textbf{Dataset} & \textbf{Moneyness} & \textbf{r} & \textbf{$\sigma$} & \textbf{T} \\
-\midrule
-In-Sample & 0.8-1.2 & 1\%-3\% & 0.05-0.5 & 1/252-3.0\\ 
-Out-Of-Money & 1.2-1.4 & 1\%-3\% & 0.05-0.5 & 1/252-3.0\\ 
-Longer Maturity & 0.8-1.2 & 1\%-3\% & 0.05-0.5 & 3-0-5.0\\ 
-\bottomrule\\
-\end{tabular}
-\end{table}
 
 %-----------------------------------
 %	SUBSECTION 2
@@ -359,17 +393,13 @@ To compare the results by
 
 
 The results are promosing, because the MLPs are model free in the sense, that we could have simulated out for any model, where MLPs then learn from data only. By observing this the method can be extended to real market data in fact \parencite{GasparRaquel20} have resently showed good results for a MLPs for real market data. The next section will investigate the curse of dimensionality and the application of MLPs in this context.
-
-%----------------------------------------------------------------------------------------
-%	SECTION 3
-%----------------------------------------------------------------------------------------
-\section{Multilayer Perceptrons Regression For European Basket Call Max}
-
 \parencite{FergusonRyan2018}
 
 
-%----------------------------------------------------------------------------------------
-%	SECTION 3
-%----------------------------------------------------------------------------------------
-\section{Multilayer Perceptrons Regression For Optimal Stopping}
+
+
+
+
+
+
 

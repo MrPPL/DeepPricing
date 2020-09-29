@@ -2,7 +2,6 @@
 ## Tree method 2-dimensionel inspired by BEG
 ##########
 import numpy as np
-
 def BEG(Nstep, T, sigma1, sigma2, r, rho, S10, S20, K, amer):
     # invariant quantities
     N = NStep
@@ -43,10 +42,10 @@ def BEG(Nstep, T, sigma1, sigma2, r, rho, S10, S20, K, amer):
                 if amer==True:
                     CVals[i,j] = max(max(0,K-min(S1Vals[i],S2Vals[j])) ,p_uu*CVals[i+1,j+1]+ p_ud*CVals[i+1,j-1]+p_du*CVals[i-1,j+1]+p_dd*CVals[i-1,j-1])
                 else:
-                    CVals[i,j] = max(0 ,p_uu*CVals[i+1,j+1]+ p_ud*CVals[i+1,j-1]+p_du*CVals[i-1,j+1]+p_dd*CVals[i-1,j-1])
+                    CVals[i,j] = p_uu*CVals[i+1,j+1]+ p_ud*CVals[i+1,j-1]+p_du*CVals[i-1,j+1]+p_dd*CVals[i-1,j-1]
                     
-
     price = CVals[N,N]
+    print(price)
     return price
 
 
@@ -54,11 +53,11 @@ def BEG(Nstep, T, sigma1, sigma2, r, rho, S10, S20, K, amer):
 S10 = 40
 S20 = 40
 K= 40
-r=0.04879
+r=0.06
 sigma1 = 0.2
 sigma2 = 0.3
-T = 7/12
+T = 1
 rho = 0.5
 NStep = 100
 
-print(BEG(Nstep=NStep, T=T, sigma1=sigma1, sigma2=sigma2, r=r, rho=rho, S10=S10, S20=S20, K=K, amer=False))
+#print(BEG(Nstep=NStep, T=T, sigma1=sigma1, sigma2=sigma2, r=r, rho=rho, S10=S10, S20=S20, K=K, amer=False))

@@ -330,24 +330,27 @@ $$V_{i_1,\ldots, i_d}(t)=\max\{\Phi(t,\bm{S}(t)), \exp(-r\Delta t) \bigg(p_1 V_{
 With the recursive formulas we can valuate multivaraite contigent claims for a variety of exotics including the american put option with several underlying risky assets. The increasing dimensions also increase the number of one-step transition probabilities, hence the \parencite{NEK} approach (NEK) tries with setting all the probabilities equal to 0.5 and than determine the jump sizes. The NEK approach overcome the issue with negative probabilities for higher dimensions and following \parencite{NEK} the algorithm seems also to have faster convergence. The NEK and BEG approaches are both good for low dimensionel option problems, but both still suffers the curse of dimensionality. The simulations methods on the otherhand has somewhat an advantage for higher dimesions, but e.g. the LSM needed basis function grows exponential with the underlyings. We choose to present the BEG approach, because it is a natural extension of the already presented CRR model, which we already build inituition opon.\\
 
 \subsection{Numerical And Analytical Results}
+In table \ref{tab:multidimTree} we look how the binomial lattice approach to multivariate contingent claims performs compared with the analytical solution also derived in this section. For the exotic european options we have a closed form solution, so we can measure how the binomial lattice approach works in those cases. With solutions from the lattice approach within a small range of the closed form solution gives us confidence in the multivariate binomial model for pricing e.g. american put options, where there is no closed form solution.
 \begin{table}[H]
 \caption{Valuation of multivariate contigent claims with two underlyings with K=40, $S_1(0)=S_2(0)=40$, $\sigma_1=0.2, \sigma_2=0.3$, T=1, $\rho=0.5$  and r=0.06.}
-\label{tab:treatments}
+\label{tab:multidimTree}
 \centering
 \begin{tabular}{l l l l}
 \toprule
 \textbf{Derivative type} & \textbf{Method} & \textbf{No. Steps} & \textbf{Price} \\
 \midrule
-European Put Minimum & BEG & 100 & 3.790\\
-& Analytic form & & \\
-European Call Minimum & BEG & 100 & \\
-& Analytic form & & 14.636\\
-European Call Maximum & BEG & 100 & \\
-& Analytic form & & 7.7996946812090755\\
+European Put Minimum & BEG & 10 & 4.248 \\
+ & BEG & 50 & 4.341 \\
+ & BEG & 100 & 4.352 \\
+& Analytic form & & 4.363\\
+European Call Minimum & BEG & 100 & 2.475\\
+& Analytic form & & 2.483\\
+European Call Maximum & BEG & 100 & 7.787\\
+& Analytic form & & 7.800\\
 American Put Minimum & BEG & 10 & 3.830\\
  &  & 50 & 3.884\\
  &  & 100 & 3.890\\
 \bottomrule\\
 \end{tabular}
 \end{table}
-
+From table \ref{tab:multidimTree} we see that the BEG approach has highest accuracy for 100 equidistant time-steps hence we choose to price with N=100 for the multivariate binomial model. The biggest absolute difference is 0.013 which is reasonable within the market spread for trading. The results are promising for valuation of american put options based on several underlying assets. This table will serve as reference and benchmark for the more recent approaches with neural networks in chapter \ref{Chapter6}.

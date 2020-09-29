@@ -11,18 +11,18 @@
 \contentsline {figure}{\numberline {3.4}{\ignorespaces Optimal Stopping Decision}}{21}{figure.caption.84}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Three Dimensionel Binomial Lattice}}{27}{figure.caption.107}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces A single neuron\relax }}{31}{figure.caption.113}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Multilayer perceptrons with $(L+1)$-layers}}{33}{figure.caption.120}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A single neuron\relax }}{31}{figure.caption.114}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Multilayer perceptrons with $(L+1)$-layers}}{33}{figure.caption.121}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Marginal distributions for european call}}{38}{figure.caption.127}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{41}{figure.caption.133}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{42}{figure.caption.135}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{45}{figure.caption.140}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{46}{figure.caption.141}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Marginal distributions for american put}}{47}{figure.caption.144}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{48}{figure.caption.149}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{49}{figure.caption.150}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{50}{figure.caption.151}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Marginal distributions for american put}}{39}{figure.caption.130}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Marginal distributions for european call}}{40}{figure.caption.132}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{43}{figure.caption.138}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{44}{figure.caption.140}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{47}{figure.caption.145}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{48}{figure.caption.146}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{49}{figure.caption.152}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{50}{figure.caption.153}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{51}{figure.caption.154}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
