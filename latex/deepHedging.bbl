@@ -436,19 +436,19 @@
       }}%
     }
     \list{publisher}{1}{%
-      {Pearson Education}%
+      {Pearson Global Education}%
     }
     \strng{namehash}{HJC1}
     \strng{fullhash}{HJC1}
     \field{labelnamesource}{author}
     \field{labeltitlesource}{title}
-    \field{labelyear}{2018}
+    \field{labelyear}{2017}
     \field{labeldatesource}{year}
     \field{sortinit}{H}
     \field{sortinithash}{H}
     \field{title}{Options, Futures, and Other Derivatives}
-    \field{volume}{Tenth edition}
-    \field{year}{2018}
+    \field{volume}{Ninth edition}
+    \field{year}{2017}
   \endentry
 
   \entry{Johnson87}{article}{}

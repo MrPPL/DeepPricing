@@ -44,24 +44,24 @@
 \contentsline {section}{\numberline {5.1}Multilayer Perceptrons Regression For Optimal Stopping}{37}{section.125}
 \contentsline {section}{\numberline {5.2}Multilayer Perceptrons Regression Pricing From Existing Methods}{37}{section.126}
 \contentsline {subsection}{\numberline {5.2.1}Data}{38}{subsection.127}
-\contentsline {subsection}{\numberline {5.2.2}Training}{41}{subsection.133}
-\contentsline {subsubsection}{\numberline {5.2.2.1}Hyperparameter Tuning}{41}{subsubsection.134}
-\contentsline {subsection}{\numberline {5.2.3}Model Performance In-Sample}{42}{subsection.136}
-\contentsline {subsection}{\numberline {5.2.4}Polynomial Regression}{42}{subsection.139}
-\contentsline {subsection}{\numberline {5.2.5}Out of sample predictions}{45}{subsection.142}
-\contentsline {section}{\numberline {5.3}Multilayer Perceptrons Regression For American Options}{48}{section.147}
-\contentsline {subsection}{\numberline {5.3.1}Data}{48}{subsection.148}
-\contentsline {subsection}{\numberline {5.3.2}Optimization and cost function}{48}{subsection.149}
-\contentsline {subsection}{\numberline {5.3.3}Model Performance}{48}{subsection.150}
-\contentsline {chapter}{\numberline {6}Discussion and Further Investigation}{53}{chapter.156}
-\contentsline {section}{\numberline {6.1}Main Section 1}{53}{section.157}
-\contentsline {subsection}{\numberline {6.1.1}Subsection 1}{53}{subsection.158}
-\contentsline {subsection}{\numberline {6.1.2}Subsection 2}{53}{subsection.159}
-\contentsline {section}{\numberline {6.2}Main Section 2}{53}{section.160}
-\contentsline {chapter}{\numberline {7}Conclusion}{55}{chapter.161}
-\contentsline {section}{\numberline {7.1}Main Section 1}{55}{section.162}
-\contentsline {subsection}{\numberline {7.1.1}Subsection 1}{55}{subsection.163}
-\contentsline {chapter}{\numberline {A}Option contracts}{57}{appendix.164}
-\contentsline {section}{\numberline {A.1}European Call and Put}{57}{section.165}
-\contentsline {chapter}{\numberline {B}Mathematical results and definitions}{59}{appendix.168}
-\contentsline {chapter}{Bibliography}{61}{appendix*.178}
+\contentsline {subsection}{\numberline {5.2.2}Training}{41}{subsection.132}
+\contentsline {subsubsection}{\numberline {5.2.2.1}Hyperparameter Tuning}{43}{subsubsection.134}
+\contentsline {subsection}{\numberline {5.2.3}Model Performance In-Sample}{43}{subsection.135}
+\contentsline {subsection}{\numberline {5.2.4}Polynomial Regression}{43}{subsection.138}
+\contentsline {subsection}{\numberline {5.2.5}Out of sample predictions}{46}{subsection.141}
+\contentsline {section}{\numberline {5.3}Multilayer Perceptrons Regression For American Options}{49}{section.146}
+\contentsline {subsection}{\numberline {5.3.1}Data}{49}{subsection.147}
+\contentsline {subsection}{\numberline {5.3.2}Optimization and cost function}{49}{subsection.148}
+\contentsline {subsection}{\numberline {5.3.3}Model Performance}{49}{subsection.149}
+\contentsline {chapter}{\numberline {6}Discussion and Further Investigation}{55}{chapter.155}
+\contentsline {section}{\numberline {6.1}Main Section 1}{55}{section.156}
+\contentsline {subsection}{\numberline {6.1.1}Subsection 1}{55}{subsection.157}
+\contentsline {subsection}{\numberline {6.1.2}Subsection 2}{55}{subsection.158}
+\contentsline {section}{\numberline {6.2}Main Section 2}{55}{section.159}
+\contentsline {chapter}{\numberline {7}Conclusion}{57}{chapter.160}
+\contentsline {section}{\numberline {7.1}Main Section 1}{57}{section.161}
+\contentsline {subsection}{\numberline {7.1.1}Subsection 1}{57}{subsection.162}
+\contentsline {chapter}{\numberline {A}Option contracts}{59}{appendix.163}
+\contentsline {section}{\numberline {A.1}European Call and Put}{59}{section.164}
+\contentsline {chapter}{\numberline {B}Mathematical results and definitions}{61}{appendix.167}
+\contentsline {chapter}{Bibliography}{63}{appendix*.177}

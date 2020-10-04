@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  28 SEP 2020 20:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  3 OCT 2020 11:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2125,15 +2125,6 @@ LaTeX Warning: Label `BS-price-EuroCall' multiply defined.
 
 ) (./Chapters/Chapter4.aux) (./Chapters/Chapter5.aux
 
-LaTeX Warning: Label `tab:euroParRange' multiply defined.
-
-
-LaTeX Warning: Label `tab:euroParRange' multiply defined.
-
-
-LaTeX Warning: Label `tab:totalEuroParRange' multiply defined.
-
-
 LaTeX Warning: Label `tab:euroPerformanceComparision' multiply defined.
 
 
@@ -2594,7 +2585,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 55--57
 
  []
 
-<Figures/contractfct.png, id=546, 433.62pt x 289.08pt>
+<Figures/contractfct.png, id=545, 433.62pt x 289.08pt>
 File: Figures/contractfct.png Graphic file (type png)
 <use Figures/contractfct.png>
 Package pdftex.def Info: Figures/contractfct.png  used on input line 63.
@@ -2627,7 +2618,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--147
  []
 
 [7]
-<Figures/samplePath.png, id=592, 433.62pt x 289.08pt>
+<Figures/samplePath.png, id=591, 433.62pt x 289.08pt>
 File: Figures/samplePath.png Graphic file (type png)
 <use Figures/samplePath.png>
 Package pdftex.def Info: Figures/samplePath.png  used on input line 155.
@@ -2712,7 +2703,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
-<Figures/BinomialTree.png, id=708, 433.62pt x 361.35pt>
+<Figures/BinomialTree.png, id=707, 433.62pt x 361.35pt>
 File: Figures/BinomialTree.png Graphic file (type png)
 <use Figures/BinomialTree.png>
 Package pdftex.def Info: Figures/BinomialTree.png  used on input line 48.
@@ -2739,7 +2730,7 @@ L/zplm/m/it/10.95 q\OT1/zplm/m/n/10.95 ) \OMS/zplm/m/n/10.95 ^^A \OML/zplm/m/it
 /n/10.95 = \OT1/ppl/m/n/10.95 0, 1, [] , \OML/zplm/m/it/10.95 N
  []
 
-<Figures/binConv.png, id=723, 433.62pt x 289.08pt>
+<Figures/binConv.png, id=722, 433.62pt x 289.08pt>
 File: Figures/binConv.png Graphic file (type png)
 <use Figures/binConv.png>
 Package pdftex.def Info: Figures/binConv.png  used on input line 65.
@@ -2760,7 +2751,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--73
  []
 
 [18 <./Figures/binConv.png>]
-<Figures/LSMFit1.png, id=739, 433.62pt x 289.08pt>
+<Figures/LSMFit1.png, id=738, 433.62pt x 289.08pt>
 File: Figures/LSMFit1.png Graphic file (type png)
 <use Figures/LSMFit1.png>
 Package pdftex.def Info: Figures/LSMFit1.png  used on input line 97.
@@ -2780,7 +2771,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--119
 
  []
 
-<Figures/LSMFit2.png, id=755, 433.62pt x 289.08pt>
+<Figures/LSMFit2.png, id=754, 433.62pt x 289.08pt>
 File: Figures/LSMFit2.png Graphic file (type png)
 <use Figures/LSMFit2.png>
 Package pdftex.def Info: Figures/LSMFit2.png  used on input line 124.
@@ -2836,7 +2827,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--302
  []
 
 [25] [26]
-<Figures/Three-dimensional-binomial-lattice.png, id=827, 853.1875pt x 470.75874
+<Figures/Three-dimensional-binomial-lattice.png, id=826, 853.1875pt x 470.75874
 pt>
 File: Figures/Three-dimensional-binomial-lattice.png Graphic file (type png)
 <use Figures/Three-dimensional-binomial-lattice.png>
@@ -3035,139 +3026,144 @@ Underfull \hbox (badness 10000) in paragraph at lines 29--30
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 32--34
-
+Overfull \hbox (36.82625pt too wide) in paragraph at lines 55--63
+ [][] 
  []
 
 [38]
-Overfull \hbox (33.02745pt too wide) in paragraph at lines 59--67
- [][] 
+Overfull \hbox (0.18445pt too wide) in paragraph at lines 66--68
+\T1/ppl/m/n/10.95 After the sim-u-la-tion of com-bi-na-tions of the in-put pa-r
+am-e-ters within the given ranges
  []
 
-<Figures/marginalAmerPut.png, id=990, 433.62pt x 289.08pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 66--68
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
+
+ []
+
+[39]
+<Figures/marginalAmerPut.png, id=999, 433.62pt x 289.08pt>
 File: Figures/marginalAmerPut.png Graphic file (type png)
 <use Figures/marginalAmerPut.png>
-Package pdftex.def Info: Figures/marginalAmerPut.png  used on input line 71.
+Package pdftex.def Info: Figures/marginalAmerPut.png  used on input line 75.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 71--73
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 75--77
  [][] 
  []
 
-[39 <./Figures/marginalAmerPut.png>]
-<Figures/marginalEuroCall.png, id=998, 433.62pt x 289.08pt>
-File: Figures/marginalEuroCall.png Graphic file (type png)
-<use Figures/marginalEuroCall.png>
-Package pdftex.def Info: Figures/marginalEuroCall.png  used on input line 96.
-(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+[40 <./Figures/marginalAmerPut.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 115--117
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 96--98
- [][] 
  []
 
-[40 <./Figures/marginalEuroCall.png>] [41]
-<Figures/PredictionEuroC.png, id=1013, 433.62pt x 289.08pt>
+[41] [42]
+<Figures/PredictionEuroC.png, id=1019, 433.62pt x 289.08pt>
 File: Figures/PredictionEuroC.png Graphic file (type png)
 <use Figures/PredictionEuroC.png>
-Package pdftex.def Info: Figures/PredictionEuroC.png  used on input line 176.
+Package pdftex.def Info: Figures/PredictionEuroC.png  used on input line 208.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 176--178
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 208--210
  [][] 
  []
 
-[42]
-<Figures/polynomialEuroC.png, id=1020, 433.62pt x 505.89pt>
+<Figures/polynomialEuroC.png, id=1022, 433.62pt x 505.89pt>
 File: Figures/polynomialEuroC.png Graphic file (type png)
 <use Figures/polynomialEuroC.png>
-Package pdftex.def Info: Figures/polynomialEuroC.png  used on input line 190.
+Package pdftex.def Info: Figures/polynomialEuroC.png  used on input line 222.
 (pdftex.def)             Requested size: 433.61894pt x 505.88875pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 190--192
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 222--224
  [][] 
  []
 
-[43 <./Figures/PredictionEuroC.png>] [44 <./Figures/polynomialEuroC.png>]
-[45]
-<Figures/polynomialOutMoneyEuroC.png, id=1040, 433.62pt x 505.89pt>
+[43] [44 <./Figures/PredictionEuroC.png>] [45 <./Figures/polynomialEuroC.png>]
+[46]
+<Figures/polynomialOutMoneyEuroC.png, id=1046, 433.62pt x 505.89pt>
 File: Figures/polynomialOutMoneyEuroC.png Graphic file (type png)
 <use Figures/polynomialOutMoneyEuroC.png>
 Package pdftex.def Info: Figures/polynomialOutMoneyEuroC.png  used on input lin
-e 267.
+e 299.
 (pdftex.def)             Requested size: 433.61894pt x 505.88875pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 267--269
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 299--301
  [][] 
  []
 
-[46]
-<Figures/PredictionOutMoneyEuroC.png, id=1045, 433.62pt x 289.08pt>
+[47]
+<Figures/PredictionOutMoneyEuroC.png, id=1051, 433.62pt x 289.08pt>
 File: Figures/PredictionOutMoneyEuroC.png Graphic file (type png)
 <use Figures/PredictionOutMoneyEuroC.png>
 Package pdftex.def Info: Figures/PredictionOutMoneyEuroC.png  used on input lin
-e 275.
+e 307.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 275--277
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 307--309
  [][] 
  []
 
-[47 <./Figures/polynomialOutMoneyEuroC.png>]
-Overfull \hbox (2.00444pt too wide) in paragraph at lines 302--302
+[48 <./Figures/polynomialOutMoneyEuroC.png>]
+Overfull \hbox (2.00444pt too wide) in paragraph at lines 334--334
 []\T1/ppl/b/n/14.4 Multilayer Per-cep-trons Re-gres-sion For Amer-i-can Op-tion
 s 
  []
 
-<Figures/PredictionAmerP.png, id=1051, 433.62pt x 289.08pt>
+<Figures/PredictionAmerP.png, id=1057, 433.62pt x 289.08pt>
 File: Figures/PredictionAmerP.png Graphic file (type png)
 <use Figures/PredictionAmerP.png>
-Package pdftex.def Info: Figures/PredictionAmerP.png  used on input line 338.
+Package pdftex.def Info: Figures/PredictionAmerP.png  used on input line 370.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 338--340
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 370--372
  [][] 
  []
 
-[48 <./Figures/PredictionOutMoneyEuroC.png>]
-<Figures/PredictionOutMoneyAmerP.png, id=1057, 433.62pt x 289.08pt>
+[49 <./Figures/PredictionOutMoneyEuroC.png>]
+<Figures/PredictionOutMoneyAmerP.png, id=1063, 433.62pt x 289.08pt>
 File: Figures/PredictionOutMoneyAmerP.png Graphic file (type png)
 <use Figures/PredictionOutMoneyAmerP.png>
 Package pdftex.def Info: Figures/PredictionOutMoneyAmerP.png  used on input lin
-e 346.
+e 378.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 346--348
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 378--380
  [][] 
  []
 
-[49 <./Figures/PredictionAmerP.png>]
-<Figures/PredictionLongTAmerP.png, id=1063, 433.62pt x 289.08pt>
+[50 <./Figures/PredictionAmerP.png>]
+<Figures/PredictionLongTAmerP.png, id=1069, 433.62pt x 289.08pt>
 File: Figures/PredictionLongTAmerP.png Graphic file (type png)
 <use Figures/PredictionLongTAmerP.png>
 Package pdftex.def Info: Figures/PredictionLongTAmerP.png  used on input line 3
-54.
+86.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 354--356
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 386--388
  [][] 
  []
 
-[50 <./Figures/PredictionOutMoneyAmerP.png>]) [51 <./Figures/PredictionLongTAme
-rP.png>] [52]
+[51 <./Figures/PredictionOutMoneyAmerP.png>]) [52 <./Figures/PredictionLongTAme
+rP.png>] [53]
 \openout2 = `Chapters/Chapter6.aux'.
 
- (./Chapters/Chapter6.tex
-Chapter 6.
-)
-1: section
-[53
+ (./Chapters/Chapter6.tex [54
 
 
 
 ]
+Chapter 6.
+)
+1: section
+[55]
 \openout2 = `Chapters/Chapter7.aux'.
 
- (./Chapters/Chapter7.tex [54
+ (./Chapters/Chapter7.tex [56
 
 
 
@@ -3175,21 +3171,21 @@ Chapter 6.
 Chapter 7.
 )
 1: section
-[55]
+[57]
 \openout2 = `Appendices/AppendixA.aux'.
 
- (./Appendices/AppendixA.tex [56
+ (./Appendices/AppendixA.tex [58
 
 
 
 ]
 Appendix A.
-<Figures/euroCall.png, id=1099, 390.45876pt x 279.0425pt>
+<Figures/euroCall.png, id=1110, 390.45876pt x 279.0425pt>
 File: Figures/euroCall.png Graphic file (type png)
 <use Figures/euroCall.png>
 Package pdftex.def Info: Figures/euroCall.png  used on input line 13.
 (pdftex.def)             Requested size: 390.4578pt x 279.04181pt.
-<Figures/euroPut.png, id=1100, 390.45876pt x 279.0425pt>
+<Figures/euroPut.png, id=1111, 390.45876pt x 279.0425pt>
 File: Figures/euroPut.png Graphic file (type png)
 <use Figures/euroPut.png>
 Package pdftex.def Info: Figures/euroPut.png  used on input line 23.
@@ -3199,7 +3195,7 @@ Package pdftex.def Info: Figures/euroPut.png  used on input line 23.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 1: section
-[57 <./Figures/euroCall.png>] [58 <./Figures/euroPut.png>]
+[59 <./Figures/euroCall.png>] [60 <./Figures/euroPut.png>]
 \openout2 = `Appendices/AppendixB.aux'.
 
 
@@ -3216,11 +3212,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--32
  []
 
 1: section
-[59
+[61
 
 
 
-]) [60]
+]) [62]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 357.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
@@ -3232,10 +3228,10 @@ Overfull \hbox (13.26485pt too wide) in paragraph at lines 357--357
  []
 
 1: section
-[61
+[63
 
 
-] [62]
+] [64]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 361.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 361.
  (./deepHedging.aux (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux) (./Chap
@@ -3245,7 +3241,7 @@ ers/Chapter6.aux) (./Chapters/Chapter7.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 361.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 361.
 Package rerunfilecheck Info: File `deepHedging.out' has not changed.
-(rerunfilecheck)             Checksum: C31EF45D287FF6985B4B4F6C870AF811;12101.
+(rerunfilecheck)             Checksum: 05244791149B81AF22A2F52C40D7FA80;12101.
 
 
 LaTeX Warning: There were undefined references.
@@ -3263,10 +3259,10 @@ Package logreq Info: Writing requests to 'deepHedging.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47678 strings out of 492982
- 979272 string characters out of 6134896
- 1179775 words of memory out of 5000000
- 50215 multiletter control sequences out of 15000+600000
+ 47676 strings out of 492982
+ 979166 string characters out of 6134896
+ 1180054 words of memory out of 5000000
+ 50213 multiletter control sequences out of 15000+600000
  641966 words of font info for 262 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,27n,82p,10384b,2396s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3286,10 +3282,10 @@ ino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on deepHedging.pdf (84 pages, 995239 bytes).
+Output written on deepHedging.pdf (86 pages, 970355 bytes).
 PDF statistics:
- 1270 PDF objects out of 1440 (max. 8388607)
- 1087 compressed objects within 11 object streams
- 281 named destinations out of 1000 (max. 500000)
- 827 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1281 PDF objects out of 1440 (max. 8388607)
+ 1098 compressed objects within 11 object streams
+ 282 named destinations out of 1000 (max. 500000)
+ 822 words of extra memory for PDF output out of 10000 (max. 10000000)
 

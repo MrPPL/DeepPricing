@@ -7,19 +7,15 @@ from torch.utils.data import Dataset, DataLoader
 import math
 from torch.utils.data.sampler import SubsetRandomSampler
 import matplotlib.pyplot as pyplot
+from numpy import vstack
+from sklearn.metrics import mean_squared_error
+from sklearn.metrics import r2_score
+from sklearn.metrics import mean_absolute_error
+from torch.utils.tensorboard import SummaryWriter
 
-# gradient computation etc. not efficient for whole data set
-# -> divide dataset into small batches
-# epoch = one forward and backward pass of ALL training samples
-# batch_size = number of training samples used in one forward/backward pass
-# number of iterations = number of passes, each pass (forward+backward) using [batch_size] number of sampes
-# e.g : 100 samples, batch_size=20 -> 100/20=5 iterations for 1 epoch
-
-# --> DataLoader can do the batch computation for us
-# Implement a custom Dataset:
-# inherit Dataset
-# implement __init__ , __getitem__ , and __len__
-
+##########
+# Dataset Class
+##########
 class EuroParDataset(Dataset):
     def __init__(self, dataPath):
         # Initialize data, download, etc.
@@ -36,22 +32,22 @@ class EuroParDataset(Dataset):
     # we can call len(dataset) to return the size
     def __len__(self):
         return self.n_samples
+    
+######################
+# Get data
+####################
+writer = SummaryWriter('runs/300K')
+dataset = EuroParDataset("./deepLearning/hirsa19/data/300KCEuroData.csv")
+n_samples, n_features = dataset.x_data.shape
 
-
-# create dataset
-dataset = EuroParDataset("./deepLearning/hirsa19/data/mediumCEuroData.csv")
-# get first sample and unpack
-first_data = dataset[0]
-features, labels = first_data
-print(features, labels)
-
+#####################
 #hyperparameters
-n_samples, n_features = len(dataset), len(features)
+####################
 input_size = n_features
 hidden_size1 = 120
 hidden_size2 = 120
 hidden_size3 = 120
-outputSize = 1
+outputSize = dataset.y_data.shape[1]
 num_epochs = 10
 batchSize = 64
 learning_rate = 0.01
@@ -59,6 +55,9 @@ validation_split = 0.2
 shuffle_dataset = True
 random_seed= 42
 
+######################
+# Split data
+#####################
 # Creating data indices for training and validation splits:
 indices = list(range(n_samples))
 split = int(np.floor(validation_split * n_samples))
@@ -83,7 +82,10 @@ validation_loader = DataLoader(dataset=dataset,
                                num_workers=2, 
                                sampler=valid_sampler)
 
-#Design model
+#########################
+# Design Model
+###################
+#fully connected Neural net
 class NeuralNet(nn.Module):
     def __init__(self, input_size, hidden_size1, hidden_size2, hidden_size3, output_size):
         super(NeuralNet, self).__init__()
@@ -94,7 +96,7 @@ class NeuralNet(nn.Module):
         self.leaky_relu_2 = nn.LeakyReLU()
         self.l3 = nn.Linear(hidden_size2, hidden_size3)
         self.leaky_relu_3 = nn.LeakyReLU()
-        self.l4 = nn.Linear(hidden_size3, outputSize)
+        self.l4 = nn.Linear(hidden_size3, output_size)
         self.leaky_relu_4 = nn.LeakyReLU()
     
     def forward(self,x):
@@ -110,41 +112,45 @@ class NeuralNet(nn.Module):
 
 model = NeuralNet(input_size, hidden_size1, hidden_size2, hidden_size3, outputSize)
 
+##################
+# Train the model
+########################
+
 #loss and optimizer
 criterion = nn.MSELoss()
 optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
-# Train the model
+dataset[0][0]
+writer.add_graph(model, dataset[0][0])
+
 n_total_steps = len(train_loader)
 #enumereate epoch
 for epoch in range(num_epochs):
     epoch_loss = 0
+    predictions, actuals = list(), list()
     for i, (X, y) in enumerate(train_loader):  #one batch of samples       
         optimizer.zero_grad() # zero the gradient buffer
 
         #forward pass and loss
         y_predicted = model(X)
         loss = criterion(y_predicted,y)
-        
+        writer.add_scalar("Each batch loss training", loss, epoch)
         # Backward and optimize
         loss.backward()
         optimizer.step() #does weight update
 
         # accumulate loss
-        epoch_loss += loss
-
+        epoch_loss += loss.item()
     epoch_loss /= n_total_steps
-    print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {epoch_loss:.4f}')
-
+    print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {epoch_loss:.9f}')
+    writer.add_scalar("Loss/train", epoch_loss, epoch)
 # save model
-torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/Models/hirsaModel.pth")
-
+#torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/Models/hirsaModel.pth")
+writer.flush()
 ##############
 # Evaluate Model
 ###############
 model.eval()
-from numpy import vstack
-from sklearn.metrics import mean_squared_error
 predictions, actuals = list(), list()
 for i, (inputs, targets) in enumerate(validation_loader):
     # evaluate the model on the test set
@@ -164,11 +170,14 @@ predictions, actuals = vstack(predictions), vstack(actuals)
 from sklearn.metrics import r2_score
 from sklearn.metrics import mean_absolute_error
 mse = mean_squared_error(actuals, predictions)
+writer.add_scalar("Validation MSE", mse)
 print('MSE: %.6f, RMSE: %.6f' % (mse, np.sqrt(mse)))
 print ('R Squared: %.6f' % (r2_score(actuals, predictions)))
 print ('MAE: %.6f' % mean_absolute_error(actuals, predictions))
 
-# Plot
+##################
+# Plot model performance
+#################
 def abline(slope, intercept):
     """Plot a line from slope and intercept"""
     axes = plt.gca()
@@ -181,14 +190,14 @@ import matplotlib
 from matplotlib import rcParams
 
 rcParams['figure.figsize']=6,4
-plt.scatter(predictions, actuals, alpha=0.5, s=1)
+plt.style.use('ggplot')
+plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
+plt.scatter(predictions, actuals, alpha=0.5, s=1, color='c')
 plt.xlabel("Predictions Price/Strike Price")
 plt.ylabel("Actual Price/Strike Price")
 plt.title("Multilayer Perceptrons Predictions Vs. Actual Targets")
 #plt.legend(loc=2) #location of legend
-plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
-plt.style.use('ggplot')
 abline(1,0)
 rcParams['agg.path.chunksize']=10**4
 #plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/PredictionEuroC.png")
-plt.show()
+#plt.show()
