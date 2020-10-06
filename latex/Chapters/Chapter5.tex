@@ -115,7 +115,19 @@ The in-sample data is the simulated data within the parameter ranges for the dif
 $$J(\theta)= \frac{1}{n} \sum_{i=1}^{n}(y_i-\hat{y}_i)^2$$
 The MSE penalizes outliers stronger than e.g. mean absolute error (MAE), but it penalize small deviations less. To update the weights the Adam optimization algorithm is chosen with learning rate set to $\eta=0.001$, which is a standard choice for MLPs. \\
 
-We test empirically the best hyperparameters for the MLPs, where the validation set is used. The first investigation is to look how well the model performs on varying dataset sizes, where the goal is to quantify how large datasets is needed for having a high quality model. The datasets for an european call option considered are in-sample datasets of size 1K, 10K, 100K, 300k, 1M data samples, where the validation set is subsampled from the training data set. By inspiration from \parencite{HirsaAli2019} we choose to test the datasets with a MLPs with 4 layers, 120 neurons in each hidden layer and 1 output. In each layer we choose the activation function leaky ReLU, which is one of the most popular choices for activation functions. The number of data samples is relevant for real data, because for real market data there is not unlimited market data available.
+We test empirically the best hyperparameters for the MLPs, where the validation set is used. The first investigation is to look how well the model performs on varying dataset sizes, where the goal is to quantify how large datasets is needed for having a high quality model. The datasets for an european call option considered are in-sample datasets of size 100, 1K, 10K, 100K, 300k, 1M data samples, where the validation set is subsampled from the training data set. By inspiration from \parencite{HirsaAli2019} we choose to test the datasets with a MLPs with 4 layers, 120 neurons in each hidden layer and 1 output. In each layer we choose the activation function leaky ReLU, which is one of the most popular choices for activation functions. The number of data samples is relevant for real data, because for real market data there is not unlimited market data available.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\textwidth]{Figures/euroTestDataset.png}
+\decoRule
+\caption[Effect of dataset size]{Effect of gather more data on training and validation loss, where the x-axis is number of epoch-1 and y-axis is the loss for the training and validation loop. The orange line with the largest is for 100 datapoints, the grey line for 1000 datapoints, the green line 10K datapoints, the three last lines blends together where it is for 100K,300K and 1M datapoints. More can be seem at \href{https://tensorboard.dev/experiment/JURHMdo6Ra6MRW5XnlYwkg/\#scalars&run=EuroCall\%2FEuroMLP1K\&\_smoothingWeight=0\&runSelectionState=eyJFdXJvQ2FsbC9FdXJvTUxQMTAwIjp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMTAwLzE2MDE5MjcyNTMuOTkyMTYxMyI6dHJ1ZSwiRXVyb0NhbGwvRXVyb01MUDEwMC8xNjAxOTI3MjU0LjAwODY1NTUiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxMDAvMTYwMTkyNzI1NC4wMjYzMTA3Ijp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMTAwLzE2MDE5MjcyNTQuMDQzODcyIjp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMTAwLzE2MDE5MjcyNTQuMDU3NjkwNCI6dHJ1ZSwiRXVyb0NhbGwvRXVyb01MUDEwMC8xNjAxOTI3MjU0LjA2NzcyOTIiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxMDAvMTYwMTkyNzI1NC4wODIzMDczIjp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMTAwLzE2MDE5MjcyNTQuMDg5ODkzNiI6dHJ1ZSwiRXVyb0NhbGwvRXVyb01MUDEwMC8xNjAxOTI3MjU0LjEwMDA5ODQiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxMDAvMTYwMTkyNzI1NC4xMTk4NSI6dHJ1ZSwiRXVyb0NhbGwvRXVyb01MUDEwMEsiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxMEsiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxSyI6dHJ1ZSwiRXVyb0NhbGwvRXVyb01MUDFNIjp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMU0vMTYwMTkyNzQ4NC44MzczMjQ5Ijp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMU0vMTYwMTkyNzUzMS42OTg0MjciOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxTS8xNjAxOTI3NTgwLjYxOTQwODQiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxTS8xNjAxOTI3NjMxLjEwNjM5ODgiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxTS8xNjAxOTI3Njc3LjEzMTg4MjIiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxTS8xNjAxOTI3NzIyLjg2Nzk2ODMiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxTS8xNjAxOTI3NzY4LjY2MDgwODYiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxTS8xNjAxOTI3ODE0LjA0NjU0NiI6dHJ1ZSwiRXVyb0NhbGwvRXVyb01MUDFNLzE2MDE5Mjc4NTkuMDAzNzc5Ijp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMU0vMTYwMTkyNzkwNC4xODYyODciOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAzMDBLIjp0cnVlfQ\%3D\%3D}[TensorBoard EuroMLP]}
+\label{fig:dataComparisonEuroMLP}
+\end{figure}
+
+From figure \ref{fig:dataComparisonEuroMLP} we see that the the model performs very well for in-sample data with only 1K datapoints, when looking closer at the tensorboard the validation error is not lower for 1M datapoints than 100K and 300K datapoints. The model is only trained once on each datasets, so there is some randomness on each run, but the picture is clear. The model to interpolate prices for european call options in-sample data does not significant improve with gathering more data than 1K-10K datapoints this is good news for using the method on real market data. In the article \parencite{GasparRaquel20} they conduct a study to price american put options with real market data, where they conclude they got better results than for LSM with around 40K datapoints which is in line with the result in figure \ref{fig:dataComparisonEuroMLP}. For our controlled setup with simulated data we can choose arbitrary many datapoints albeit making the method more computational expensive. By above discussion we choose to work with 300K datapoints i.e. the same dataset size as in \parencite{HirsaAli2019} in order to compare results, the new thing compared to \parencite{HirsaAli2019} is that we will also try to price bivariate contingent claims with the MLPs regression method. The main focus in the rest of this section is to train the model for pricing multivariate contigent claims.\\
+\\
+
 
 \begin{table}[H]
 \caption{Performance of in-sample and out-of-sample dataset of different sizes for MLPs regression on a european call option}
@@ -180,6 +192,39 @@ does not know anything about the function
 
 The hyperparameter chosen is based on \parencite{HirsaAli2019}, nevertheless we will try with elu. ELU has linear asymptotes, which is the desired behaviour in valuation problems: financial products are often linearly extrapolated and this behaviour is often enforced. For example, in finite difference methods, we generally work with linear boundary conditions. ELU is also considered a best practice presently in the deep learning community, for very different reasons related to speed and stability of numerical optimization.
 
+\subsubsection{Polynomial Regression}
+The dataset in the MLPs regression is the same for the polynomial regression, further we choose same performance metrics, but the model and model training is obvously different from the MLPs. There is exists now a closed form solution for the optimation problem by solving the "normal equations" and we have a linear model. We fit polynomials up to degree 6 for comparision of the model capacity and fit.  
+$$y_i=\beta_0 + \beta_1 \cdot x_i + \cdots + \beta_n \cdot x_i^n + \epsilon_i \quad where \ n=1,2,\ldots,6$$
+From the illustration (figure \ref{fig:PolynomialEuroC}) is it clear, that the in-sample fit improves with increased model capacity. The linear regression is too simple for pricing european option, but it looks like the 6 order polynomial actually performs better than the MLPs in the in-sample test set (see also table \ref{tab:euroPerformance}). It is important to note that we want predictive strength for our model, i.e. a small generalization. The out-of-sample data will reveal if the high order polynomial or MLPs have overfitted the data.
+\begin{figure}[H]
+\centering
+\includegraphics{Figures/polynomialEuroC.png}
+\decoRule
+\caption[Polynomial Regression Predictions Vs. Actual Prices]{Predicted price based on polynomial regression of varying degree}
+\label{fig:PolynomialEuroC}
+\end{figure}
+
+The table is created to compare the performance for each model. The table confirms that the linear regression has a worse fit than the other models with higher capacity. The difference on the MLPs and higher order polynomial regression models less than $6\cdot 10^{-4}$ for coefficient of determination and less than $15 \cdot 10^{-3}$. The difference is negible so the fit for MLPs and polynomial regression of degree 4-6 performs all very well on the data.
+
+\begin{table}[th]
+\caption{Prediction results for european call test data for in sample polynomial regression}
+\label{tab:euroPerformance}
+\centering
+\begin{tabular}{l l l l l l l l }
+\toprule
+\textbf{Model} & \textbf{Dataset} & \textbf{MSE} & \textbf{RMSE} & \textbf{MAE} & \textbf{$R^2$} \\
+\midrule
+Linear Reg. & In-Sample & 0.000631 & 0.025122 & 0.018264 & 0.937445\\
+2. degree &  & 0.000069 & 0.008298 & 0.006136 & 0.993175\\
+4. degree &  & 0.000004 & 0.002059 & 0.001282 & 0.999580\\
+5. degree &  & 0.000002 & 0.001407 & 0.000864 & 0.999804\\
+MLPs &  & 0.000003 & 0.001628 & 0.001337 & 0.999736\\
+3. degree & In-Sample & 1.31e-05 & 0.00362470 & 0.002559 & 0.998698\\
+6. degree & In-Sample & 9.23e-07 & 0.000961 & 0.000592 & 0.999908\\
+MLPs & In-Sample & 0.000006 & 0.002419 & 0.001966 & 0.99942\\
+\bottomrule\\
+\end{tabular}
+\end{table}
 
 
 %-----------------------------------
@@ -213,39 +258,7 @@ The performance measures are generally good, we see MAE, MSE and RMSE all have v
 
 Illustration of the model fit is also provided, where the plot shows $\frac{c(S_0,K)}{K}$ predicted from the model and observed target values. The conclusion from the performance metrics is also present in the figure, where we see the model predicts close to target values over the whole range. Before moving on to pricing for american options, we investigate if polynomial regression can perform as MLPs
 
-\subsection{Polynomial Regression}
-The dataset in the MLPs regression is the same for the polynomial regression, further we choose same performance metrics, but the model and model training is obvously different from the MLPs. There is exists now a closed form solution for the optimation problem by solving the "normal equations" and we have a linear model. We fit polynomials up to degree 6 for comparision of the model capacity and fit.  
-$$y_i=\beta_0 + \beta_1 \cdot x_i + \cdots + \beta_n \cdot x_i^n + \epsilon_i \quad where \ n=1,2,\ldots,6$$
-From the illustration (figure \ref{fig:PolynomialEuroC}) is it clear, that the in-sample fit improves with increased model capacity. The linear regression is too simple for pricing european option, but it looks like the 6 order polynomial actually performs better than the MLPs in the in-sample test set (see also table \ref{tab:euroPerformance}). It is important to note that we want predictive strength for our model, i.e. a small generalization. The out-of-sample data will reveal if the high order polynomial or MLPs have overfitted the data.
-\begin{figure}[H]
-\centering
-\includegraphics{Figures/polynomialEuroC.png}
-\decoRule
-\caption[Polynomial Regression Predictions Vs. Actual Prices]{Predicted price based on polynomial regression of varying degree}
-\label{fig:PolynomialEuroC}
-\end{figure}
 
-The table is created to compare the performance for each model. The table confirms that the linear regression has a worse fit than the other models with higher capacity. The difference on the MLPs and higher order polynomial regression models less than $6\cdot 10^{-4}$ for coefficient of determination and less than $15 \cdot 10^{-3}$. The difference is negible so the fit for MLPs and polynomial regression of degree 4-6 performs all very well on the data.
-
-\begin{table}[th]
-\caption{Prediction results for european call test data for in sample polynomial regression}
-\label{tab:euroPerformance}
-\centering
-\begin{tabular}{l l l l l l l l }
-\toprule
-\textbf{Model} & \textbf{Dataset} & \textbf{MSE} & \textbf{RMSE} & \textbf{MAE} & \textbf{$R^2$} \\
-\midrule
-Linear Reg. & In-Sample & 0.000631 & 0.025122 & 0.018264 & 0.937445\\
-2. degree &  & 0.000069 & 0.008298 & 0.006136 & 0.993175\\
-4. degree &  & 0.000004 & 0.002059 & 0.001282 & 0.999580\\
-5. degree &  & 0.000002 & 0.001407 & 0.000864 & 0.999804\\
-MLPs &  & 0.000003 & 0.001628 & 0.001337 & 0.999736\\
-3. degree & In-Sample & 1.31e-05 & 0.00362470 & 0.002559 & 0.998698\\
-6. degree & In-Sample & 9.23e-07 & 0.000961 & 0.000592 & 0.999908\\
-MLPs & In-Sample & 0.000006 & 0.002419 & 0.001966 & 0.99942\\
-\bottomrule\\
-\end{tabular}
-\end{table}
 
 \subsection{Out of sample predictions}
 All the models considered had good performance on the in-sample dataset except of the too simple models linear regression and 2. degree polynomial regreesion. To test the predictive strength for the models, we test the models with out-of-sample data. Specifically we consider longer maturity and deep-out-of-money options (see table \ref{tab:totalEuroParRange})

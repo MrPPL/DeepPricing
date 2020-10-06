@@ -1,17 +1,16 @@
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 import numpy as np
 import torchvision
 from torch.utils.data import Dataset, DataLoader
-import math
-from torch.utils.data.sampler import SubsetRandomSampler
 import matplotlib.pyplot as pyplot
 from numpy import vstack
 from sklearn.metrics import mean_squared_error
 from sklearn.metrics import r2_score
 from sklearn.metrics import mean_absolute_error
 from torch.utils.tensorboard import SummaryWriter
+from tqdm import tqdm #follow progress in training
+from torch.utils.data import random_split
 
 ##########
 # Dataset Class
@@ -33,55 +32,15 @@ class EuroParDataset(Dataset):
     def __len__(self):
         return self.n_samples
     
-######################
-# Get data
-####################
-writer = SummaryWriter('runs/300K')
-dataset = EuroParDataset("./deepLearning/hirsa19/data/300KCEuroData.csv")
-n_samples, n_features = dataset.x_data.shape
-
-#####################
-#hyperparameters
-####################
-input_size = n_features
-hidden_size1 = 120
-hidden_size2 = 120
-hidden_size3 = 120
-outputSize = dataset.y_data.shape[1]
-num_epochs = 10
-batchSize = 64
-learning_rate = 0.01
-validation_split = 0.2
-shuffle_dataset = True
-random_seed= 42
-
-######################
-# Split data
-#####################
-# Creating data indices for training and validation splits:
-indices = list(range(n_samples))
-split = int(np.floor(validation_split * n_samples))
-if shuffle_dataset:
-    np.random.seed(random_seed)
-    np.random.shuffle(indices)
-train_indices, val_indices = indices[split:], indices[:split]
-
-# Creating PT data samplers and loaders:
-train_sampler = SubsetRandomSampler(train_indices)
-valid_sampler = SubsetRandomSampler(val_indices)
-
-# Load whole dataset with DataLoader
-#use dataloader to effectice minibatching
-train_loader = DataLoader(dataset=dataset,
-                          batch_size=batchSize,
-                          num_workers=2,
-                          sampler=train_sampler)
-
-validation_loader = DataLoader(dataset=dataset,
-                               batch_size=batchSize, 
-                               num_workers=2, 
-                               sampler=valid_sampler)
-
+    # get indexes for train and test rows
+    def get_splits(self, n_test=0.2, n_valid=0.2):
+        # determine sizes
+        test_size = round(n_test * len(self.x_data))
+        valid_size = round(n_valid * len(self.x_data))
+        train_size = len(self.x_data) - test_size - valid_size
+        # calculate the split
+        return random_split(self, [train_size, valid_size, test_size])
+    
 #########################
 # Design Model
 ###################
@@ -109,95 +68,125 @@ class NeuralNet(nn.Module):
         out= self.l4(out)
         out = self.leaky_relu_4(out)
         return out
+######################
+# prepare the dataset
+####################
+def prepare_data(dataPath):
+    # calculate split
+    train, valid, test = dataset.get_splits()
+    # prepare data loaders
+    train_dl = DataLoader(train, batch_size=32, shuffle=True)
+    valid_dl = DataLoader(valid, batch_size=32, shuffle=True)
+    test_dl = DataLoader(test, batch_size=1024, shuffle=False)
+    return train_dl, valid_dl, test_dl
 
-model = NeuralNet(input_size, hidden_size1, hidden_size2, hidden_size3, outputSize)
+def train_model(train_dl, valid_dl, model):
+    #loss and optimizer
+    criterion = nn.MSELoss()
+    optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
+    #enumereate epoch
+    for epoch in range(num_epochs):
+        model.train()
+        epoch_loss = 0
+        val_epoch_loss = 0
+        loop = tqdm(enumerate(train_dl), total=len(train_dl), leave=False) #bar progress when trainin
+        loop1 = tqdm(enumerate(valid_dl), total=len(valid_dl), leave=False) #bar progress when validation
+        for i, (X, y) in loop:  #one batch of samples       
+            optimizer.zero_grad() # zero the gradient buffer
+            #forward pass and loss
+            y_predicted = model(X)
+            loss = criterion(y_predicted,y) #loss
+            #writer.add_scalar("Loss/train", loss, epoch)
+            # Backward and optimize
+            loss.backward()
+            optimizer.step() #does weight update
+            loop.set_description(f'Epoch [{epoch+1}/{num_epochs}]')
+            loop.set_postfix(loss = loss.item())
 
-##################
-# Train the model
-########################
+            # accumulate loss
+            epoch_loss += loss.item()
+        with torch.no_grad():
+            model.eval()
+            for i, (X, y) in loop1:  #one batch of samples 
+                optimizer.zero_grad() # zero the gradient buffer
+                #forward pass and loss
+                y_predicted = model(X)
+                loss = criterion(y_predicted,y) #loss
+                loop.set_description(f'Epoch [{epoch+1}/{num_epochs}]')
+                loop.set_postfix(loss = loss.item())
 
-#loss and optimizer
-criterion = nn.MSELoss()
-optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
-
-dataset[0][0]
-writer.add_graph(model, dataset[0][0])
-
-n_total_steps = len(train_loader)
-#enumereate epoch
-for epoch in range(num_epochs):
-    epoch_loss = 0
+                # accumulate loss
+                val_epoch_loss += loss.item()
+                      
+            
+            
+        epoch_loss /= len(train_dl)
+        val_epoch_loss /= len(valid_dl)
+        print(f'Epoch [{epoch+1}/{num_epochs}], Train Loss: {epoch_loss:.9f}')
+        writer.add_scalar("Loss/Train", epoch_loss, epoch)
+        print(f'Epoch [{epoch+1}/{num_epochs}], Validation Loss: {val_epoch_loss:.9f}')
+        writer.add_scalar("Loss/Validation", val_epoch_loss, epoch)
+        writer.add_hparams({'lr': learning_rate},{'Loss Train': epoch_loss, 'Loss Validation': val_epoch_loss })
+    
+# evaluate the model on test set
+def evaluate_model(test_dl, model):
+    model.eval()
     predictions, actuals = list(), list()
-    for i, (X, y) in enumerate(train_loader):  #one batch of samples       
-        optimizer.zero_grad() # zero the gradient buffer
-
-        #forward pass and loss
-        y_predicted = model(X)
-        loss = criterion(y_predicted,y)
-        writer.add_scalar("Each batch loss training", loss, epoch)
-        # Backward and optimize
-        loss.backward()
-        optimizer.step() #does weight update
-
-        # accumulate loss
-        epoch_loss += loss.item()
-    epoch_loss /= n_total_steps
-    print (f'Epoch [{epoch+1}/{num_epochs}], Loss: {epoch_loss:.9f}')
-    writer.add_scalar("Loss/train", epoch_loss, epoch)
-# save model
-#torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/Models/hirsaModel.pth")
-writer.flush()
-##############
-# Evaluate Model
-###############
-model.eval()
-predictions, actuals = list(), list()
-for i, (inputs, targets) in enumerate(validation_loader):
-    # evaluate the model on the test set
-    yhat = model(inputs)
+    for i, (inputs, targets) in enumerate(test_dl):
+        # evaluate the model on the test set
+        yhat = model(inputs)
+        # retrieve numpy array
+        yhat = yhat.detach().numpy()
+        actual = targets.numpy()
+        actual = actual.reshape((len(actual), 1))
+        # store
+        predictions.append(yhat)
+        actuals.append(actual)
+    return vstack(predictions), vstack(actuals)
+############
+# make a class prediction for one row of data
+#############
+def predict(row, model):
+    # convert row to data
+    row = Tensor([row])
+    # make prediction
+    yhat = model(row)
     # retrieve numpy array
     yhat = yhat.detach().numpy()
-    actual = targets.numpy()
-    actual = actual.reshape((len(actual), 1))
-    # store
-    predictions.append(yhat)
-    actuals.append(actual)
-predictions, actuals = vstack(predictions), vstack(actuals)
+    return yhat
 
 
-#model performance
+#prepare data
+dataPath = "./deepLearning/hirsa19/data/10KCEuroData.csv"
+dataset = EuroParDataset(dataPath)
+train_dl, valid_dl, test_dl = prepare_data(dataPath)
+print(len(train_dl.dataset), len(valid_dl), len(test_dl.dataset))
+#define network
+#hyperparameters
+input_size = dataset.x_data.shape[1]
+hidden_size1 = 120
+hidden_size2 = 120
+hidden_size3 = 120
+outputSize = dataset.y_data.shape[1]
+num_epochs = 10
+batchSize = 64
+learning_rate = 0.01
+
+model = NeuralNet(input_size, hidden_size1, hidden_size2, hidden_size3, outputSize)
+#writer = SummaryWriter('runs/EuroCall/EuroMLP1M')
+writer.add_graph(model, dataset.x_data)
+#train the model
+train_model(train_dl, valid_dl, model)
+writer.flush() # all pending method events has been written to disk
+writer.close()
+# evaluate the model
 # calculate mse
-from sklearn.metrics import r2_score
-from sklearn.metrics import mean_absolute_error
+actuals, predictions = evaluate_model(test_dl, model)
 mse = mean_squared_error(actuals, predictions)
-writer.add_scalar("Validation MSE", mse)
 print('MSE: %.6f, RMSE: %.6f' % (mse, np.sqrt(mse)))
-print ('R Squared: %.6f' % (r2_score(actuals, predictions)))
-print ('MAE: %.6f' % mean_absolute_error(actuals, predictions))
 
-##################
-# Plot model performance
-#################
-def abline(slope, intercept):
-    """Plot a line from slope and intercept"""
-    axes = plt.gca()
-    x_vals = np.array(axes.get_xlim())
-    y_vals = intercept + slope * x_vals
-    plt.plot(x_vals, y_vals, 'r--', linewidth=1)
+# save model
+#torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/Models/hirsaModel.pth")
 
-import matplotlib.pyplot as plt
-import matplotlib
-from matplotlib import rcParams
 
-rcParams['figure.figsize']=6,4
-plt.style.use('ggplot')
-plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
-plt.scatter(predictions, actuals, alpha=0.5, s=1, color='c')
-plt.xlabel("Predictions Price/Strike Price")
-plt.ylabel("Actual Price/Strike Price")
-plt.title("Multilayer Perceptrons Predictions Vs. Actual Targets")
-#plt.legend(loc=2) #location of legend
-abline(1,0)
-rcParams['agg.path.chunksize']=10**4
-#plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/PredictionEuroC.png")
-#plt.show()
+
