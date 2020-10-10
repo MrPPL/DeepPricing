@@ -483,6 +483,71 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
+  \entry{KohlerMichael2010}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KM}{%
+         family={Kohler},
+         familyi={K\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KA}{%
+         family={Krzyżak},
+         familyi={K\bibinitperiod},
+         given={Adam},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=TN}{%
+         family={Todorovic},
+         familyi={T\bibinitperiod},
+         given={Nebojsa},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {eng}%
+    }
+    \list{publisher}{1}{%
+      {Blackwell Publishing Inc}%
+    }
+    \keyw{optimal stopping ; nonparametric regression ; neural networks ; rate
+  of convergence ; regression‐based Monte Carlo methods ; American options ;
+  consistency ; Computer science ; Monte Carlo method ; Neural networks ;
+  Analysis ; Pricing ; Markov processes ; Mathematical optimization}
+    \strng{namehash}{KMKATN1}
+    \strng{fullhash}{KMKATN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2010}
+    \field{labeldatesource}{year}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \field{abstract}{%
+    Pricing of American options in discrete time is considered, where the
+  option is allowed to be based on several underlyings. It is assumed that the
+  price processes of the underlyings are given Markov processes. We use the
+  Monte Carlo approach to generate artificial sample paths of these price
+  processes, and then we use the least squares neural networks regression
+  estimates to estimate from this data the so‐called continuation values,
+  which are defined as mean values of the American options for given values of
+  the underlyings at time t subject to the constraint that the options are
+  not exercised at time t. Results concerning consistency and rate of
+  convergence of the estimates are presented, and the pricing of American
+  options is illustrated by simulated data.%
+    }
+    \field{issn}{0960-1627}
+    \field{number}{3}
+    \field{pages}{383\bibrangedash 410}
+    \field{title}{PRICING OF HIGH‐DIMENSIONAL AMERICAN OPTIONS BY NEURAL
+  NETWORKS}
+    \field{volume}{20}
+    \list{location}{1}{%
+      {Malden, USA}%
+    }
+    \field{journaltitle}{Mathematical finance}
+    \field{year}{2010}
+  \endentry
+
   \entry{lsm}{article}{}
     \name{author}{2}{}{%
       {{hash=LFA}{%

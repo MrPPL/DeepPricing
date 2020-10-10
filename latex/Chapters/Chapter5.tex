@@ -10,8 +10,17 @@ Deep learning can be applied to option valuation in different ways. After the tw
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 \section{Multilayer Perceptrons Regression For Optimal Stopping}
+The first application of neural network is to investigate, if the LSM method can be improved by using MLPs regression to approximate continuation value instead of using the linear model in LSM. This section is influenced by \parencite{lsm,KohlerMichael2010}, where the approximate scheme with only in-the-money paths (ITM) is inspired by \parencite{lsm} and the idea of using neural network instead of the linear model comes from \parencite{KohlerMichael2010}. The algorithm is based on approximating the american put option with one or several underlyings by considering a bermuda option, which converge the the american option by making the equidistant time-steps sufficiently small. \\
 
-
+The continuous time problem for american options is given as a optimal stopping problem:
+\begin{align}
+\sup_{\tau \in \mathcal{T}([0,T])} E^Q[\exp(-r\tau)g(x_{\tau})]
+\end{align}
+Where $\tau$ is a stopping time (definition \ref{StoppingTime}), $\mathcal{T}([0,T])$ is the class og all [0,T]-valued stopping times, g(x) is the intrinsic value of the option when the underlying state is x and the risk neutral state process assumed to be markov $\{x_t \in \mathbb{R}^{d} | 0 \leq t \leq T\}$. The continuous problem is often approximated by a discrete version, where the computational procedures can be applied, hence the american option is approximated by a bermuda option. For simplicity we assume that the state process is time-homogeneous and we model a discrete pricing problem. The reformulation of the optimal stopping problem in discrete time is:
+\begin{align*}
+\sup_{\tau \in \mathcal{T}(0,\ldots,T)} E^Q[\exp(-r\tau)g(x_{\tau})]
+\end{align*}
+We introduce the value function $J_n(x)$ which is the value of the option at time n if the underlying state process is equal to x
 %----------------------------------------------------------------------------------------
 %	SECTION 2
 %----------------------------------------------------------------------------------------
@@ -125,8 +134,8 @@ We test empirically the best hyperparameters for the MLPs, where the validation 
 \label{fig:dataComparisonEuroMLP}
 \end{figure}
 
-From figure \ref{fig:dataComparisonEuroMLP} we see that the the model performs very well for in-sample data with only 1K datapoints, when looking closer at the tensorboard the validation error is not lower for 1M datapoints than 100K and 300K datapoints. The model is only trained once on each datasets, so there is some randomness on each run, but the picture is clear. The model to interpolate prices for european call options in-sample data does not significant improve with gathering more data than 1K-10K datapoints this is good news for using the method on real market data. In the article \parencite{GasparRaquel20} they conduct a study to price american put options with real market data, where they conclude they got better results than for LSM with around 40K datapoints which is in line with the result in figure \ref{fig:dataComparisonEuroMLP}. For our controlled setup with simulated data we can choose arbitrary many datapoints albeit making the method more computational expensive. By above discussion we choose to work with 300K datapoints i.e. the same dataset size as in \parencite{HirsaAli2019} in order to compare results, the new thing compared to \parencite{HirsaAli2019} is that we will also try to price bivariate contingent claims with the MLPs regression method. The main focus in the rest of this section is to train the model for pricing multivariate contigent claims.\\
-\\
+From figure \ref{fig:dataComparisonEuroMLP} we see that the the model performs very well for in-sample data with only 1K datapoints, when looking closer at the tensorboard the validation error is not lower for 1M datapoints than 100K and 300K datapoints. The model is only trained once on each datasets, so there is some randomness on each run, but the picture is clear. The model to interpolate prices for european call options in-sample data does not significant improve with gathering more data than 1K-10K datapoints this is good news for using the method on real market data. In the article \parencite{GasparRaquel20} they conduct a study to price american put options with real market data, where they conclude they got better results than for LSM with around 40K datapoints which is in line with the result in figure \ref{fig:dataComparisonEuroMLP}. Be aware that the simulated data can underestimate the validation error, because we have a controlled setup where the parameter range is within a predetermined range. For our controlled setup with simulated data we can choose arbitrary many datapoints albeit making the method more computational expensive. By above discussion we choose to work with 300K datapoints i.e. the same dataset size as in \parencite{HirsaAli2019} in order to compare results, the new thing compared to \parencite{HirsaAli2019} is that we will also try to price bivariate contingent claims with the MLPs regression method. The main focus in the rest of this section is to train the model for pricing multivariate contigent claims.\\
+
 
 
 \begin{table}[H]

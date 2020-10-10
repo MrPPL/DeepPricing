@@ -329,7 +329,7 @@ The American options adds additional complexity to the pricing problem, because 
 V(t,s)=\sup_{0\leq \tau \leq T-t} E_{t,s}[\exp(-r \tau) (K-S(t+\tau))^+]
 \end{align}
 Equation \ref{optFinite} gives a describtion how to price the american put option, the V(t,s) is the value of the option to time t and given $S(t)=s$. $\tau$ is a stopping time of the GBM.
-\theoremstyle{definition}
+\theoremstyle{definition}\label{StoppingTime}
 \begin{definition}{\textbf{Stopping time}:}
 A random variable $\tau:\Omega \to [0,\infty]$ is called a Markov time if $(\tau \leq t)\in \mathcal{F}_{t}$ for all $t\geq 0$. A Markov time is called a stopping time if $\tau<\infty$ P-a.s.
 (p. 27 \parencite{Shiryaev06})

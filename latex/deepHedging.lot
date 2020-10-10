@@ -7,16 +7,16 @@
 \contentsline {table}{\numberline {3.2}{\ignorespaces Valuation of multivariate contigent claims with two underlyings with K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06.\relax }}{28}{table.caption.109}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Parameter Ranges For MLPs}}{38}{table.caption.128}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Parameter Ranges For MLPs}}{39}{table.caption.129}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Parameter ranges for european call and american put option\relax }}{40}{table.caption.131}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Performance of in-sample and out-of-sample dataset of different sizes for MLPs regression on a european call option\relax }}{43}{table.caption.134}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Prediction results for european call test data for in sample\relax }}{44}{table.caption.137}
-\contentsline {table}{\numberline {5.6}{\ignorespaces Prediction results for european call test data for in sample polynomial regression\relax }}{47}{table.caption.141}
-\contentsline {table}{\numberline {5.7}{\ignorespaces Parameter range\relax }}{47}{table.caption.143}
-\contentsline {table}{\numberline {5.8}{\ignorespaces Performance of predictive strength for different regression models\relax }}{48}{table.caption.144}
-\contentsline {table}{\numberline {5.9}{\ignorespaces Performance of predictive strength for different regression models\relax }}{50}{table.caption.151}
-\contentsline {table}{\numberline {5.10}{\ignorespaces Valuation of American put option with K=40 and r=0.06.\relax }}{54}{table.caption.155}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Parameter Ranges For MLPs}}{39}{table.caption.129}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Parameter Ranges For MLPs}}{39}{table.caption.130}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Parameter ranges for european call and american put option\relax }}{41}{table.caption.132}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Performance of in-sample and out-of-sample dataset of different sizes for MLPs regression on a european call option\relax }}{43}{table.caption.135}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Prediction results for european call test data for in sample polynomial regression\relax }}{46}{table.caption.139}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Prediction results for european call test data for in sample\relax }}{46}{table.caption.141}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Parameter range\relax }}{47}{table.caption.144}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Performance of predictive strength for different regression models\relax }}{48}{table.caption.145}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Performance of predictive strength for different regression models\relax }}{50}{table.caption.152}
+\contentsline {table}{\numberline {5.10}{\ignorespaces Valuation of American put option with K=40 and r=0.06.\relax }}{54}{table.caption.156}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

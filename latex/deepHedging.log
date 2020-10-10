@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  6 OCT 2020 11:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  9 OCT 2020 13:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2515,12 +2515,12 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 [17] [18
 
 ]
-Overfull \hbox (21.97044pt too wide) in alignment at lines 272--294
+Overfull \hbox (21.97044pt too wide) in alignment at lines 275--297
  [] [] [] 
  []
 
 
-Overfull \hbox (21.97044pt too wide) in alignment at lines 294--297
+Overfull \hbox (21.97044pt too wide) in alignment at lines 297--300
  [] [] [] 
  []
 
@@ -2543,7 +2543,7 @@ Chapter 1.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 3.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 10--330
+Underfull \hbox (badness 10000) in paragraph at lines 10--333
 
  []
 
@@ -2868,7 +2868,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 329--331
  []
 
 [27 <./Figures/Three-dimensional-binomial-lattice.png>])
-Overfull \hbox (0.27855pt too wide) in paragraph at lines 356--332
+Overfull \hbox (0.27855pt too wide) in paragraph at lines 356--335
 []\T1/ppl/m/n/10.95 From ta-ble [][]3.2[][] we see that the BEG ap-proach has h
 igh-est ac-cu-racy for 100 equidis-
  []
@@ -3016,7 +3016,13 @@ g
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Overfull \hbox (0.52502pt too wide) in paragraph at lines 13--14
+\T1/ppl/m/n/10.95 us-ing the lin-ear model in LSM. This sec-tion is in-flu-ence
+d by ([]Longstaff and Schwartz,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
@@ -3026,135 +3032,144 @@ Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 29--30
+Underfull \hbox (badness 10000) in paragraph at lines 30--31
 
  []
 
 
-Overfull \hbox (36.82625pt too wide) in paragraph at lines 55--63
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 38--39
+
  []
 
 [38]
-Overfull \hbox (0.18445pt too wide) in paragraph at lines 66--68
+Overfull \hbox (36.82625pt too wide) in paragraph at lines 64--72
+ [][] 
+ []
+
+
+Overfull \hbox (0.18445pt too wide) in paragraph at lines 75--77
 \T1/ppl/m/n/10.95 After the sim-u-la-tion of com-bi-na-tions of the in-put pa-r
 am-e-ters within the given ranges
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 66--68
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 69--70
+Underfull \hbox (badness 10000) in paragraph at lines 75--77
 
  []
 
 [39]
-<Figures/marginalAmerPut.png, id=991, 433.62pt x 289.08pt>
+Underfull \hbox (badness 10000) in paragraph at lines 78--79
+
+ []
+
+<Figures/marginalAmerPut.png, id=998, 433.62pt x 289.08pt>
 File: Figures/marginalAmerPut.png Graphic file (type png)
 <use Figures/marginalAmerPut.png>
-Package pdftex.def Info: Figures/marginalAmerPut.png  used on input line 75.
+Package pdftex.def Info: Figures/marginalAmerPut.png  used on input line 84.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 75--77
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 84--86
  [][] 
  []
 
-[40 <./Figures/marginalAmerPut.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 115--117
+[40] [41 <./Figures/marginalAmerPut.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 124--126
 
  []
 
-<Figures/euroTestDataset.png, id=999, 699.61375pt x 256.96pt>
+<Figures/euroTestDataset.png, id=1010, 699.61375pt x 256.96pt>
 File: Figures/euroTestDataset.png Graphic file (type png)
 <use Figures/euroTestDataset.png>
-Package pdftex.def Info: Figures/euroTestDataset.png  used on input line 122.
+Package pdftex.def Info: Figures/euroTestDataset.png  used on input line 131.
 (pdftex.def)             Requested size: 404.02908pt x 148.3978pt.
-[41] [42 <./Figures/euroTestDataset.png>] [43]
-<Figures/PredictionEuroC.png, id=1024, 433.62pt x 289.08pt>
-File: Figures/PredictionEuroC.png Graphic file (type png)
-<use Figures/PredictionEuroC.png>
-Package pdftex.def Info: Figures/PredictionEuroC.png  used on input line 219.
-(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 219--221
- [][] 
+Underfull \hbox (badness 10000) in paragraph at lines 137--138
+
  []
 
-<Figures/polynomialEuroC.png, id=1027, 433.62pt x 505.89pt>
+[42 <./Figures/euroTestDataset.png>] [43]
+<Figures/polynomialEuroC.png, id=1033, 433.62pt x 505.89pt>
 File: Figures/polynomialEuroC.png Graphic file (type png)
 <use Figures/polynomialEuroC.png>
-Package pdftex.def Info: Figures/polynomialEuroC.png  used on input line 233.
+Package pdftex.def Info: Figures/polynomialEuroC.png  used on input line 210.
 (pdftex.def)             Requested size: 433.61894pt x 505.88875pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 233--235
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 210--212
  [][] 
  []
 
-[44] [45 <./Figures/PredictionEuroC.png>] [46 <./Figures/polynomialEuroC.png>]
-[47]
-<Figures/polynomialOutMoneyEuroC.png, id=1051, 433.62pt x 505.89pt>
+[44] [45 <./Figures/polynomialEuroC.png>]
+<Figures/PredictionEuroC.png, id=1044, 433.62pt x 289.08pt>
+File: Figures/PredictionEuroC.png Graphic file (type png)
+<use Figures/PredictionEuroC.png>
+Package pdftex.def Info: Figures/PredictionEuroC.png  used on input line 262.
+(pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
+
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 262--264
+ [][] 
+ []
+
+[46] [47 <./Figures/PredictionEuroC.png>]
+<Figures/polynomialOutMoneyEuroC.png, id=1058, 433.62pt x 505.89pt>
 File: Figures/polynomialOutMoneyEuroC.png Graphic file (type png)
 <use Figures/polynomialOutMoneyEuroC.png>
 Package pdftex.def Info: Figures/polynomialOutMoneyEuroC.png  used on input lin
-e 310.
+e 321.
 (pdftex.def)             Requested size: 433.61894pt x 505.88875pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 310--312
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 321--323
  [][] 
  []
 
 [48]
-<Figures/PredictionOutMoneyEuroC.png, id=1056, 433.62pt x 289.08pt>
+<Figures/PredictionOutMoneyEuroC.png, id=1063, 433.62pt x 289.08pt>
 File: Figures/PredictionOutMoneyEuroC.png Graphic file (type png)
 <use Figures/PredictionOutMoneyEuroC.png>
 Package pdftex.def Info: Figures/PredictionOutMoneyEuroC.png  used on input lin
-e 318.
+e 329.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 318--320
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 329--331
  [][] 
  []
 
 [49 <./Figures/polynomialOutMoneyEuroC.png>]
-Overfull \hbox (2.00444pt too wide) in paragraph at lines 345--345
+Overfull \hbox (2.00444pt too wide) in paragraph at lines 356--356
 []\T1/ppl/b/n/14.4 Multilayer Per-cep-trons Re-gres-sion For Amer-i-can Op-tion
 s 
  []
 
-<Figures/PredictionAmerP.png, id=1062, 433.62pt x 289.08pt>
+<Figures/PredictionAmerP.png, id=1069, 433.62pt x 289.08pt>
 File: Figures/PredictionAmerP.png Graphic file (type png)
 <use Figures/PredictionAmerP.png>
-Package pdftex.def Info: Figures/PredictionAmerP.png  used on input line 381.
+Package pdftex.def Info: Figures/PredictionAmerP.png  used on input line 392.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 381--383
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 392--394
  [][] 
  []
 
 [50 <./Figures/PredictionOutMoneyEuroC.png>]
-<Figures/PredictionOutMoneyAmerP.png, id=1068, 433.62pt x 289.08pt>
+<Figures/PredictionOutMoneyAmerP.png, id=1076, 433.62pt x 289.08pt>
 File: Figures/PredictionOutMoneyAmerP.png Graphic file (type png)
 <use Figures/PredictionOutMoneyAmerP.png>
 Package pdftex.def Info: Figures/PredictionOutMoneyAmerP.png  used on input lin
-e 389.
+e 400.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 389--391
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 400--402
  [][] 
  []
 
 [51 <./Figures/PredictionAmerP.png>]
-<Figures/PredictionLongTAmerP.png, id=1076, 433.62pt x 289.08pt>
+<Figures/PredictionLongTAmerP.png, id=1083, 433.62pt x 289.08pt>
 File: Figures/PredictionLongTAmerP.png Graphic file (type png)
 <use Figures/PredictionLongTAmerP.png>
-Package pdftex.def Info: Figures/PredictionLongTAmerP.png  used on input line 3
-97.
+Package pdftex.def Info: Figures/PredictionLongTAmerP.png  used on input line 4
+08.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 397--399
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 408--410
  [][] 
  []
 
@@ -3202,14 +3217,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--32
 
 1: section
 [59]) [60]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 358.
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 361.
 
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (13.26485pt too wide) in paragraph at lines 358--358
+Overfull \hbox (13.26485pt too wide) in paragraph at lines 361--361
 [][]\T1/ppl/m/n/10.95 Ekvall, Niklas (1996). ^^P  A lat-tice ap-proach for pric
 -ing of mul-ti-vari-ate con-tin-gent claims^^Q.
+ []
+
+
+Overfull \hbox (5.98878pt too wide) in paragraph at lines 361--361
+[][]\T1/ppl/m/n/10.95 Kohler, Michael, Adam Krzy»ak, and Nebo-jsa Todor-ovic (2
+010). ^^P  PRIC-ING OF HIGH-
  []
 
 1: section
@@ -3217,16 +3238,16 @@ Overfull \hbox (13.26485pt too wide) in paragraph at lines 358--358
 
 
 ] [62]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 362.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 362.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 365.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 365.
  (./deepHedging.aux (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux) (./Chap
 ters/Chapter3.aux) (./Chapters/Chapter4.aux) (./Chapters/Chapter5.aux) (./Chapt
 ers/Chapter6.aux) (./Chapters/Chapter7.aux)
 (./Appendices/AppendixB.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 362.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 362.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 365.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 365.
 Package rerunfilecheck Info: File `deepHedging.out' has not changed.
-(rerunfilecheck)             Checksum: 26674D77E452AC9A944B0684F1F96CDA;11799.
+(rerunfilecheck)             Checksum: 7579126F1087AF60A1619914CA8A1088;11805.
 
 
 LaTeX Warning: There were undefined references.
@@ -3244,10 +3265,10 @@ Package logreq Info: Writing requests to 'deepHedging.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 47707 strings out of 492982
- 979665 string characters out of 6134896
- 1183474 words of memory out of 5000000
- 50256 multiletter control sequences out of 15000+600000
+ 47718 strings out of 492982
+ 980174 string characters out of 6134896
+ 1186223 words of memory out of 5000000
+ 50265 multiletter control sequences out of 15000+600000
  641966 words of font info for 262 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,27n,82p,10384b,2396s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3267,10 +3288,10 @@ ino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on deepHedging.pdf (84 pages, 968684 bytes).
+Output written on deepHedging.pdf (84 pages, 971775 bytes).
 PDF statistics:
- 1267 PDF objects out of 1440 (max. 8388607)
- 1087 compressed objects within 11 object streams
- 277 named destinations out of 1000 (max. 500000)
+ 1276 PDF objects out of 1440 (max. 8388607)
+ 1096 compressed objects within 11 object streams
+ 279 named destinations out of 1000 (max. 500000)
  801 words of extra memory for PDF output out of 10000 (max. 10000000)
 
