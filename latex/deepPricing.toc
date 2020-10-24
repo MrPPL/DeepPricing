@@ -1,0 +1,72 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\contentsline {chapter}{Declaration of Authorship}{iii}{section*.1}
+\contentsline {chapter}{Abstract}{vii}{section*.2}
+\contentsline {chapter}{Acknowledgements}{ix}{section*.3}
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.12}
+\contentsline {chapter}{\numberline {2}Arbitrage Theory In Continuous Time Finance}{3}{chapter.13}
+\contentsline {section}{\numberline {2.1}Financial Markets}{3}{section.14}
+\contentsline {subsection}{\numberline {2.1.1}Contingent Claims}{4}{subsection.16}
+\contentsline {subsection}{\numberline {2.1.2}Self-financing Portfolio (Without Consumption)}{5}{subsection.23}
+\contentsline {subsection}{\numberline {2.1.3}Arbitrage}{6}{subsection.28}
+\contentsline {subsection}{\numberline {2.1.4}Complete Market And Replication}{7}{subsection.31}
+\contentsline {section}{\numberline {2.2}Multidimensional Models}{7}{section.33}
+\contentsline {subsection}{\numberline {2.2.1}Model Assumptions}{7}{subsection.34}
+\contentsline {subsection}{\numberline {2.2.2}Arbitrage Free Model}{9}{subsection.38}
+\contentsline {subsection}{\numberline {2.2.3}Complete model}{10}{subsection.46}
+\contentsline {subsection}{\numberline {2.2.4}Pricing and connection to classical approach}{10}{subsection.49}
+\contentsline {section}{\numberline {2.3}Classical Black-Scholes Formulas}{11}{section.56}
+\contentsline {section}{\numberline {2.4}American Options And Optimal Stopping}{13}{section.65}
+\contentsline {subsection}{\numberline {2.4.1}American Call Without Dividends}{14}{subsection.72}
+\contentsline {subsection}{\numberline {2.4.2}American Put}{15}{subsection.73}
+\contentsline {subsection}{\numberline {2.4.3}Discrete time valuation}{16}{subsection.80}
+\contentsline {chapter}{\numberline {3}Classical numerical results and Benchmarks}{19}{chapter.85}
+\contentsline {section}{\numberline {3.1}Cox Ross Rubenstein Model}{19}{section.86}
+\contentsline {section}{\numberline {3.2}Lattice Approach For Multivariate Contingent Claims}{24}{section.97}
+\contentsline {section}{\numberline {3.3}Least Square Monte Carlo Method}{27}{section.100}
+\contentsline {subsection}{\numberline {3.3.1}The Algorithm}{27}{subsection.101}
+\contentsline {subsection}{\numberline {3.3.2}American Put}{29}{subsection.109}
+\contentsline {subsection}{\numberline {3.3.3}Convergence}{31}{subsection.112}
+\contentsline {subsection}{\numberline {3.3.4}Upper Bound}{32}{subsection.115}
+\contentsline {subsection}{\numberline {3.3.5}LSM Extension To Multivariate Contingent Claims}{33}{subsection.117}
+\contentsline {section}{\numberline {3.4}Closed Form Solutions For European Exotic Options}{34}{section.120}
+\contentsline {subsection}{\numberline {3.4.1}Geometric Basket Call Option}{34}{subsection.121}
+\contentsline {subsection}{\numberline {3.4.2}Options On The Maximum Or The Minimum Of Several Assets}{35}{subsection.126}
+\contentsline {subsubsection}{\numberline {3.4.2.1}Best Of Assets Or Cash}{35}{subsubsection.128}
+\contentsline {subsubsection}{\numberline {3.4.2.2}Call On Max And Call On Min}{37}{subsubsection.138}
+\contentsline {chapter}{\numberline {4}Deep Learning}{39}{chapter.140}
+\contentsline {section}{\numberline {4.1}Machine Learning Basics}{39}{section.141}
+\contentsline {section}{\numberline {4.2}Multilayer Perceptrons}{41}{section.142}
+\contentsline {subsection}{\numberline {4.2.1}A Single Neuron}{41}{subsection.143}
+\contentsline {subsubsection}{\numberline {4.2.1.1}Activation functions}{42}{subsubsection.146}
+\contentsline {subsection}{\numberline {4.2.2}Architecture Of MLPs}{43}{subsection.147}
+\contentsline {subsection}{\numberline {4.2.3}Training The Network}{44}{subsection.153}
+\contentsline {subsection}{\numberline {4.2.4}Regularization}{46}{subsection.154}
+\contentsline {chapter}{\numberline {5}Option Pricing And Deep Learning}{49}{chapter.155}
+\contentsline {section}{\numberline {5.1}Multilayer Perceptrons Regression For Optimal Stopping}{49}{section.156}
+\contentsline {subsection}{\numberline {5.1.1}Recap MLPs}{50}{subsection.157}
+\contentsline {subsection}{\numberline {5.1.2}The Algorithm}{50}{subsection.160}
+\contentsline {subsection}{\numberline {5.1.3}Convergence}{51}{subsection.163}
+\contentsline {subsection}{\numberline {5.1.4}Numerical results}{51}{subsection.164}
+\contentsline {section}{\numberline {5.2}Multilayer Perceptrons Regression Pricing From Existing Methods}{52}{section.166}
+\contentsline {subsection}{\numberline {5.2.1}Data}{52}{subsection.167}
+\contentsline {subsection}{\numberline {5.2.2}Training}{55}{subsection.172}
+\contentsline {subsubsection}{\numberline {5.2.2.1}Hyperparameter Tuning}{58}{subsubsection.175}
+\contentsline {subsubsection}{\numberline {5.2.2.2}Polynomial Regression}{58}{subsubsection.176}
+\contentsline {subsection}{\numberline {5.2.3}Model Performance In-Sample}{60}{subsection.179}
+\contentsline {subsection}{\numberline {5.2.4}Out of sample predictions}{60}{subsection.182}
+\contentsline {section}{\numberline {5.3}Multilayer Perceptrons Regression For American Options}{64}{section.187}
+\contentsline {subsection}{\numberline {5.3.1}Data}{64}{subsection.188}
+\contentsline {subsection}{\numberline {5.3.2}Optimization and cost function}{64}{subsection.189}
+\contentsline {subsection}{\numberline {5.3.3}Model Performance}{64}{subsection.190}
+\contentsline {chapter}{\numberline {6}Discussion and Further Investigation}{69}{chapter.196}
+\contentsline {section}{\numberline {6.1}Numerical Investigation}{69}{section.197}
+\contentsline {section}{\numberline {6.2}Black Scholes Model}{70}{section.200}
+\contentsline {subsection}{\numberline {6.2.1}Neural Networks Vs. Linear Model}{71}{subsection.201}
+\contentsline {subsection}{\numberline {6.2.2}Subsection 2}{71}{subsection.202}
+\contentsline {section}{\numberline {6.3}Main Section 2}{72}{section.203}
+\contentsline {chapter}{\numberline {7}Conclusion}{73}{chapter.204}
+\contentsline {section}{\numberline {7.1}Main Section 1}{73}{section.205}
+\contentsline {subsection}{\numberline {7.1.1}Subsection 1}{73}{subsection.206}
+\contentsline {chapter}{\numberline {A}Mathematical results and definitions}{75}{appendix.207}
+\contentsline {chapter}{Bibliography}{77}{appendix*.220}

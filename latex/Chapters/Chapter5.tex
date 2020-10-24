@@ -10,7 +10,63 @@ Deep learning can be applied to option valuation in different ways. After the tw
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 \section{Multilayer Perceptrons Regression For Optimal Stopping}
-The first application of neural network is to investigate, if the LSM method can be improved by using MLPs regression to approximate continuation value instead of using the linear model in LSM. This section is influenced by \parencite{lsm,KohlerMichael2010}, where the approximate scheme with only in-the-money paths (ITM) is inspired by \parencite{lsm} and the idea of using neural network instead of the linear model comes from \parencite{KohlerMichael2010}. The algorithm is based on approximating the american put option with one or several underlyings by considering a bermuda option, which converge the the american option by making the equidistant time-steps sufficiently small. \\
+The first application of neural network is to investigate, if the LSM method can be improved by using MLPs regression to approximate continuation value instead of using the linear model in LSM. This section is influenced by \parencite{lsm, Lelong19, KohlerMichael2010}, where the approximate scheme with only in-the-money paths (ITM) is inspired by \parencite{lsm} and the idea of using neural network instead of the linear model comes from \parencite{KohlerMichael2010, Lelong19}. The algorithm is based on approximating the american put option with one or several underlyings by considering a bermuda option, which converge the the american option by making the equidistant time-steps sufficiently small. \\
+
+The setup is the same as for the LSM presented in chapter 3, where the difference is the regression to estimate the expected continuation value. We will use the theory of deep learning more specifically MLPs to purpose an alternative to the linear model. The main difference lay in the capacity of the two models, where MLPs through its activation functions can capture non linearty which classical linear regression cannot. Another advantage is that deep learning is known for breaking the curse of dimensionality, hence the MLPs could be better suited for multivariate contingent claims than the classical LSM.
+
+\subsection{Recap MLPs}
+We model the MLPs with a non linear function 
+$$s \in S \in \mathbb{R}^d \mapsto \Psi(s;\theta) \in \mathbb{R}$$
+where $Psi$ is the function decomposition and given by
+\begin{align*}
+\Psi = a_{L+1} \circ g_L \circ a_{L} \circ \cdots \circ g_1 \circ a_1 \quad where \ L\in \mathbb{N}
+\end{align*}
+We refer to chapter \ref{Chapter4} for notation, where $a_l(x)=\matr{W}_l^T \bm{x} + \bm{w}_{0,l}$. We embed all the parameters of different layers into a unique high dimensional parameter
+$$\theta=(\matr{W}_l, \bm{w}_{0,l})_{l=1,\ldots,L+1} \in \mathbb{R}^{N_d} \text{ with } N_d=\sum_{l=1}^{L+1} m^{(l)} (1+ m^{(l-1)})$$. 
+We will restrict our parameter space by a increasing sequence $(\gamma_p)_p$ such that $\lim_{p\to \infty} \gamma_p=\infty$ and $p\in \mathbb{N}$ is the maximum number of neuron in each hidden layer. We define the set:
+$$\Theta_p = \{ \theta \in \mathbb{R} \times \mathbb{R}^p \times (\mathbb{R}^p \times \mathbb{R}^{p \times p})^{L-1} \times \mathbb{R}^{p} \times \mathbb{R}^{p \times p} : |\theta| \leq \gamma_p \}$$
+By the definition of the set we restrict our MLPs to the set:
+$$\mathcal{N} \mathcal{N}_p= \{ \Psi(\cdot;\theta) : \theta \in \Theta_p \}$$
+Unfortunately the $\mathcal{N} \mathcal{N}_p$ is not a vector space, hence the regression cannot be interpreted as an orthogonal projection as for the LSM. The MLPs method is justified by the "Universal Approximate Theorem" (theorem \ref{UniversalApproxTheorem})
+
+\begin{theorem}\label{UniversalApproxTheorem}
+\textbf{Universal Approximation Theorem} Assume that the activation function $g$ is nonconstant and bounded. Let $\mu$ denote the probability measure on $\mathbb{R}^r$, then for any $L\geq 1$, then $\mathcal{N} \mathcal{N}_\infty$ is dense in $L^2(\mathbb{R}^r, \mu)$\\
+where $\mathcal{N} \mathcal{N}_\infty= \cup_{p\in \mathbb{N}} \mathcal{N} \mathcal{N}_\infty$
+(p. 4 \parencite{Lelong19})
+\end{theorem}
+Note that the above theorem can be rephrase in terms of approximating random variables 
+\begin{remark}
+Let Y be a real valued random variable suct that $E[Y^2]< \infty$. Let X be a random variable taking values in $R^r$ and $\mathcal{G}$ be the smallest $\sigma$-algebra such that X is $\mathcal{G}$ measurable. Then, there exists a sequance $(\theta_p)_{p\geq 2} \in \prod_{p=2}^{\infty} \Theta_{p}$ such that $E[|Y-\Psi_p(X;\theta_p)|^2]=0$. Therefore, if for every $p \geq 2$, $\alpha_p \in \Theta_p$ solves
+$$\inf_{\theta\in \Theta_p} E[|\Psi_p(X;\theta)-Y|^2]$$
+Then the sequence ($(\Psi_p(X;\alpha_p))_{p\geq 2}$) converge to $E[Y|X]$ in $L^2(\Omega)$ when $p \to \infty$ (p. 5 \parencite{Lelong19}).
+\end{remark}
+The remarks reveals that the MLPs can be used to approximate the conditional expectation instead of a linear function of the orthogonal basis in LSM.
+
+\subsection{The Algorithm}
+The algorithm is the similar to the LSM, but the regression step is slightly different. We will use the same assumptions as in LSM section and same principles. Recall the optimal stopping problem can be solved with dynamic programming principle on the optimal policy:
+\begin{equation}\label{LSMDynamic3}
+\begin{split}
+\begin{cases}
+          \hat{\tau}_{t_N}^{k,p,K} = t_N\\
+          \hat{\tau}_{t_n}^{k,p,K} = t_n \cdot 1_{\{G(S^{(k)}(t_n)) \geq \Psi_p(S^{(k)}(t_n) ; \hat{\theta}_{t_n}^{p,K} ) \}} + \hat{\tau}_{t_{n+1}}^{k,p,K} \cdot 1_{\{G(S^{(k)}(t_n)) \geq \Psi_p(S^{(k)}(t_n) ; \hat{\theta}_{t_n}^{p,K} ) \}} \quad for \ n={0,\ldots,N-1} \\ 
+\end{cases}
+\end{split}
+\end{equation}
+Where the estimator $\hat{\theta}_{t_n}^{p,M}$ is given by minimizing squared sample distance of the estimated continuation value and the realized continuation value:
+\begin{align*}
+\hat{\theta}_{t_n}^{p,M}= \argmin_{\theta \in \Theta_p} \dfrac{1}{K} \sum_{k=1}^{K} \bigg(G(S^{(n)}(\tau^{k,p,K}_{t_{n+1}}))  - \Psi_p(S^{(k)}(t_n) ; \theta ) \bigg)^2
+\end{align*}
+Finally in analog with the LSM section the approximated time 0 price for the option is
+\begin{equation}
+U^{p,K}(0) = \max \{ G(S(0)), \frac{1}{K} \sum_{k=1}^{K} G(S^{(k)}(\hat{\tau}^{k,p,K}_{t_1}))]\}
+\end{equation}
+
+\subsection{Convergence}
+The Neural Network has the same convergence results presented for the LSM algortihm. 
+
+
+
+\subsection{Numerical results}
 
 The continuous time problem for american options is given as a optimal stopping problem:
 \begin{align}
@@ -25,6 +81,12 @@ We introduce the value function $J_n(x)$ which is the value of the option at tim
 %	SECTION 2
 %----------------------------------------------------------------------------------------
 Universal approximate theorem
+
+The results will vary for each time running the algorithm given the stochastic nature in optimization and in sampling.
+
+\parencite{liaw2018tune}
+
+
 
 \section{Multilayer Perceptrons Regression Pricing From Existing Methods}
 The MLPs pricing method has a different approach than the other methods, because it is only data drivin in the sense it is model free. The MLPs could easily be used to real data, which is investigated in \parencite{GasparRaquel20}. We revisit the work from \parencite{HirsaAli2019}, where we try to extend the pricing models to options with two underlying risky assets. The model will be the classical GBM model presented in earlier chapters. By choosing the GBM model the MLPs pricing method is ready for investigation both for vanilla options and exotic options. We stress that the MLPs pricing method is not restricted to GBM assumption, but can be applied to other models such as Hesten, Variance Gamma and real market data. The advantages with MLPs are the fast calibration and parameter estimation compared to classical methods binomial lattice and LSM. With the increased speed for pricing it can cost accurary specially if the data is sparse, which can arise when using the method for exotic options on real market data. For practical application the accuracy is severe if the predicted price is not within the bid-ask spread, because the aim is to price fast without introducing arbitrage. We will present results for european, american and other exotic options presented in earliar chapters with MLPs pricing methods.\\
@@ -71,7 +133,7 @@ Amer. Put Min. & 1\%-3\% & 1d - 3y & 80-120 & 100 & 100 & 0.05-0.5 & 0.05-0.5 & 
 \end{tabular}
 \end{table}
 
-The simulationen of the parameter ranges is done by quasi-random Halton sequences sampling instead of e.g. random sampling like uniform sampling to obtain lower discrepancy. The Halton sequence covers the space more evenly quicker, because of the lower discrepancy. Like uniform sampling the halton sequence points is between 0 and 1, hence we need to apply a transformation to get the parameter ranges:
+The simulationen of the parameter ranges is done by quasi-random Halton sequences sampling instead of e.g. random sampling like uniform sampling to obtain lower discrepancy. The Halton sequence covers the space more evenly quicker, because of the lower discrepancy. The quasi random sampling differ from ordinary random sampling since they make no attempt to mimic randomness. The quasi sampling seek to increase accuracy specifically by generating points that are too evenly distributed to be random. Like uniform sampling the halton sequence points is between 0 and 1, hence we need to apply a transformation to get the parameter ranges:
 $$r \cdot (range \ of \ parameter) + lowerBound \quad where \ r=halton \ point$$
 After the simulation of combinations of the input parameters within the given ranges the labels can be generated from existing methods. For the european call option the generation of labels is done by the classical B-S formula for call options given in proposition \ref{BS-price-EuroCall}. The B-S pricing formula is well known and has an analytical solution, hence it is relatively fast to generate labels in this model. In the B-S setup in section \ref{classicBS} we assume constant volatility, which is not realistic in terms of the known fact that volatility skew for equity options (p. 458 \parencite{Hull}). The european put minimum option is by the change of numeraire method given in closed form in section \ref{BMHiggerDim}, hence the generation of labels like in the B-S price formula is fast. The american options require numerical methods, hence the generation of labels are more computational expensive. The labels for the american options are generated by CRR for american put option with 1 underlying stock and by BEG for two underlyings presented in chapter \ref{Chapter3}. When the datasets ($\matr{X}$, $\bm{y}$) are generated we are left with a regression task. The regression task is to predict the price $\bm{y}$ from the input parameters $\matr{X}$.\\ 
 
@@ -197,6 +259,8 @@ does not know anything about the function
  , where . The architecture of the network  where in hyperparameter tuning, we will try with elu in each layer instead. The architecture is chosen based on the investigation done in  \parencite{HirsaAli2019}, where we in the next subsection try to see how many samples is needed for good performance. A research area within deep learning is to tune the hyperparameters to the specific task, where both manually search and the automated grid search are used. 
 
 \subsubsection{Hyperparameter Tuning}
+To choose the best hyperparameters there is several choices, where the most basic automated task is random search and grid search. The random search is to define some predefined values to pick randomly from, this method can be effective to discover new hyperparameter values or combination, but it is considerably more computational expensive than the grid search. The grid search is to search in a grid with each hyperparameters in each dimension, this kind of hyperparameter search has fast computational time relative to the random search, but requires some expert knowledge about the hyperparameters.
+\parencite{liaw2018tune}
 
 
 The hyperparameter chosen is based on \parencite{HirsaAli2019}, nevertheless we will try with elu. ELU has linear asymptotes, which is the desired behaviour in valuation problems: financial products are often linearly extrapolated and this behaviour is often enforced. For example, in finite difference methods, we generally work with linear boundary conditions. ELU is also considered a best practice presently in the deep learning community, for very different reasons related to speed and stability of numerical optimization.

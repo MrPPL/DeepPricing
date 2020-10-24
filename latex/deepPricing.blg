@@ -1,0 +1,76 @@
+This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: deepPricing.aux
+The style file: biblatex.bst
+A level-1 auxiliary file: Chapters/Chapter1.aux
+A level-1 auxiliary file: Chapters/Chapter2.aux
+A level-1 auxiliary file: Chapters/Chapter3.aux
+A level-1 auxiliary file: Chapters/Chapter4.aux
+A level-1 auxiliary file: Chapters/Chapter5.aux
+A level-1 auxiliary file: Chapters/Chapter6.aux
+A level-1 auxiliary file: Chapters/Chapter7.aux
+A level-1 auxiliary file: Appendices/AppendixB.aux
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: deepPricing-blx.bib
+Database file #2: thesis.bib
+Warning--I'm ignoring Buffett02's extra "author" field
+--line 150 of file thesis.bib
+Warning--I didn't find a database entry for "Kim02"
+Biblatex version: 3.8
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+You've used 27 entries,
+            6268 wiz_defined-function locations,
+            1396 strings with 15409 characters,
+and the built_in function-call counts, 156033 in all, are:
+= -- 10036
+> -- 4063
+< -- 1150
++ -- 4206
+- -- 1814
+* -- 11455
+:= -- 14693
+add.period$ -- 0
+call.type$ -- 27
+change.case$ -- 685
+chr.to.int$ -- 112
+cite$ -- 52
+duplicate$ -- 16694
+empty$ -- 14281
+format.name$ -- 1795
+if$ -- 32306
+int.to.chr$ -- 0
+int.to.str$ -- 90
+missing$ -- 0
+newline$ -- 968
+num.names$ -- 1558
+pop$ -- 8848
+preamble$ -- 1
+purify$ -- 820
+quote$ -- 0
+skip$ -- 5622
+stack$ -- 0
+substring$ -- 15570
+swap$ -- 4778
+text.length$ -- 796
+text.prefix$ -- 27
+top$ -- 1
+type$ -- 906
+warning$ -- 0
+while$ -- 1737
+width$ -- 0
+write$ -- 942
+(There were 2 warnings)

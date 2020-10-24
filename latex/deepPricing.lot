@@ -1,0 +1,22 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {5.1}{\ignorespaces Parameter Ranges For MLPs}}{53}{table.caption.168}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Parameter Ranges For MLPs}}{53}{table.caption.169}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Parameter ranges for european call and american put option\relax }}{55}{table.caption.171}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Performance of in-sample and out-of-sample dataset of different sizes for MLPs regression on a european call option\relax }}{57}{table.caption.174}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Prediction results for european call test data for in sample polynomial regression\relax }}{60}{table.caption.178}
+\contentsline {table}{\numberline {5.6}{\ignorespaces Prediction results for european call test data for in sample\relax }}{60}{table.caption.180}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Parameter range\relax }}{61}{table.caption.183}
+\contentsline {table}{\numberline {5.8}{\ignorespaces Performance of predictive strength for different regression models\relax }}{62}{table.caption.184}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Performance of predictive strength for different regression models\relax }}{64}{table.caption.191}
+\contentsline {table}{\numberline {5.10}{\ignorespaces Valuation of American put option with K=40 and r=0.06.\relax }}{68}{table.caption.195}
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces Valuation of multivariate contigent claims with two underlyings with K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06.\relax }}{69}{table.caption.198}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Valuation of American put option with K=40 and r=0.06.\relax }}{70}{table.caption.199}
+\addvspace {10\p@ }
+\addvspace {10\p@ }

@@ -8,20 +8,110 @@
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 
-\section{Main Section 1}
+\section{Numerical Investigation}
+In table \ref{tab:multidimTree} we look how the binomial lattice approach to multivariate contingent claims performs compared with the analytical solution also derived in this section. For the exotic european options we have a closed form solution, so we can measure how the binomial lattice approach works in those cases. With solutions from the lattice approach within a small range of the closed form solution gives us confidence in the multivariate binomial model for pricing e.g. american put options, where there is no closed form solution.
+\begin{table}[H]
+\caption{Valuation of multivariate contigent claims with two underlyings with K=40, $S_1(0)=S_2(0)=40$, $\sigma_1=0.2, \sigma_2=0.3$, T=1, $\rho=0.5$  and r=0.06.}
+\label{tab:multidimTree}
+\centering
+\begin{tabular}{l l l l}
+\toprule
+\textbf{Derivative type} & \textbf{Method} & \textbf{No. Steps} & \textbf{Price} \\
+\midrule
+European Put Minimum & BEG & 10 & 4.248 \\
+ & BEG & 50 & 4.341 \\
+ & BEG & 100 & 4.352 \\
+& Analytic form & & 4.363\\
+European Call Minimum & BEG & 100 & 2.475\\
+& Analytic form & & 2.483\\
+European Call Maximum & BEG & 100 & 7.787\\
+& Analytic form & & 7.800\\
+American Put Minimum & BEG & 10 & 3.830\\
+ &  & 50 & 3.884\\
+ &  & 100 & 3.890\\
+\bottomrule\\
+\end{tabular}
+\end{table}
+From table \ref{tab:multidimTree} we see that the BEG approach has highest accuracy for 100 equidistant time-steps hence we choose to price with N=100 for the multivariate binomial model. The biggest absolute difference is 0.013 which is reasonable within the market spread for trading. The results are promising for valuation of american put options based on several underlying assets. This table will serve as reference and benchmark for the more recent approaches with neural networks in chapter \ref{Chapter6}.
 
+The computer is discrete, hence we simulate the stock path as an Bermudan option, where we have 50 time-steps per year. I.e. we approximate the American option with a Bermudan option on same underlying. 
+ We simulate 100.000 paths for the stock.
+By the above two algorithms for valuation, we choose to vary spot, volatility and maturity for pricing an American put option with K=40 and r=0.06. This table will serve as reference for the machine learning algorithm in chapter (!TODO chapter for machine learning). For the binomial tree we use 100 time-steps, which gives stable results (compare to figure \ref{fig:binConv}) and for the LSM we use $10^5$ paths with 50 time-steps per year. The European option is valued by using BS closed form solution for a call option (see proposition \ref{BS-price-EuroCall}) and Put-call parity (see proposition \ref{Put-call-parity}).
+\begin{table}[H]
+\caption{Valuation of American put option with K=40 and r=0.06.}
+\label{tab:treatments}
+\centering
+\begin{tabular}{l l l l l l l }
+\toprule
+\textbf{Spot} & \textbf{$\sigma$} & \textbf{T} & \textbf{Closed form European} & \textbf{Binomial Tree} & \textbf{LSM} & \textbf{abs. diff.} \\
+\midrule
+36 & 0.2 & 1 & 3.844 & 4.488 & 4.478 & 0.010\\
+36 & 0.2 & 2 & 3.763 & 4.846 & 4.828 & 0.018\\
+36 & 0.4 & 1 & 6.711 & 7.119 & 7.092 & 0.027\\
+36 & 0.4 & 2 & 7.700 & 8.508 & 8.500 & 0.008\\
+38 & 0.2 & 1 & 2.852 & 3.260 & 3.245 & 0.015\\
+38 & 0.2 & 2 & 2.991 & 3.748 & 3.735 & 0.013\\
+38 & 0.4 & 1 & 5.834 & 6.165 & 6.144 & 0.021\\
+38 & 0.4 & 2 & 6.979 & 7.689 & 7.665 & 0.024\\
+40 & 0.2 & 1 & 2.066 & 2.316 & 2.313 & 0.003\\
+40 & 0.2 & 2 & 2.356 & 2.885 & 2.881 & 0.004\\
+40 & 0.4 & 1 & 5.060 & 5.310 & 5.326 & 0.016\\
+40 & 0.4 & 2 & 6.326 & 6.914 & 6.908 & 0.006\\
+42 & 0.2 & 1 & 1.465 & 1.622 & 1.622 & 0.000\\
+42 & 0.2 & 2 & 1.841 & 2.217 & 2.212 & 0.005\\
+42 & 0.4 & 1 & 4.379 & 4.602 & 4.596 & 0.006\\
+42 & 0.4 & 2 & 5.736 & 6.264 & 6.243 & 0.021\\
+44 & 0.2 & 1 & 1.017 & 1.117 & 1.113 & 0.004\\
+44 & 0.2 & 2 & 1.429 & 1.697 & 1.688 & 0.009\\
+44 & 0.4 & 1 & 3.783 & 3.956 & 3.962 & 0.006\\
+44 & 0.4 & 2 & 5.202 & 5.656 & 5.649 & 0.007\\
+\bottomrule\\
+\end{tabular}
+\end{table}
+We see the maximum difference between the two algorithms is 0.027 at S=38, $\sigma=0.4$ and T=2. The other obvious fact is that the European put has a lower value than its American counterpart, because the continuous exercise feature adds additional value to the put option. 
+
+
+\section{Black Scholes Model}
+The underlying risky equity assets is assumed in black scholes theory to evolve with a GBM, where the distribution of possible stock prices at the end of any interval is lognormal. Other models could have been considered e.g. the Bachelor model, where the differences in time for a stock are normal distributed. 
+\begin{equation*}
+dS_i=\sigma_i dW_i
+\end{equation*}
+This assumption would simplify the pricing problem of arithmetic basket options, because the problem is essentially one dimensionel like in the case with the geometric basket option for the black scholes model (section \ref{GeoBasket}). A disadvantage with the bachelier model is it can lead to negative stock values, which is not realistic. The Black-Scholes model has some drawbacks where you can question that is the probability distribution of asset prices really lognormal. \\
+
+Empirical real data from markets has not constant volatility, but the volatility depends both on the maturity and strike, hence the investors talks about volatility shew or volatility smiles (chapter 20 \parencite{Hull}). The reason why equity options have shew in the volatility term structure is that investors are more concerned with falling stock prices than rising prices, hence the volatility are instantaneously negative correlated with the stock price. To overcome the issue about assuming constant volatility a model with stochastic variance can be considered. The model becomes more complex with a extra stochastic variable where for simplicity we consider the two factor Heston model. The basic model is given by the stock follow the SDE:
+$$dS(t)=\alpha S(t) dt + \sqrt{V(t)} S(t) dW_S(t)$$
+And the stochastic variance process $V(t)$ is the solution to the SDE:
+$$dV(t)=a(\theta - V(t))dt + \epsilon \sqrt{V(t)} dW_V(t) \quad where a>0,\theta>0, \epsilon>0 \ and \ V(0)>0$$
+Where $W_S(t)$ and $W_V(t)$ have correlation $\rho$. The interpretation of the constants are $\theta$ is long run average price variance, a is the rate which $V(t)$ reverts to $\theta$ and $\epsilon$ is the volatility of the volatility. The implication of $\epsilon$ is that $V(t)$ is more volatile when volatility is high and correlation between the stock and variance process reveals the negative correlation. The negative correlation between the two processes display the real market phenomenon of volatility shew for equity options, hence by assuming stochastic volatility the Heston model overcomes the issue with volatility shew.\\
+
+Other models for describing the stochastic underlying process could be "Constant Elasticity of Variance model", "Merton's Mixed Jump-Diffusion Model", "Variance-Gamma Model"
+
+Another underlying would could be the heston model
+
+pay transaction costs and taxe
+
+Options can be interpreted as corporate securities
+
+credit risk and Mertons model
+
+%----------------------------------------------------------------------------------------
+%	SECTION 1
+%----------------------------------------------------------------------------------------
 
 %-----------------------------------
 %	SUBSECTION 1
 %-----------------------------------
-\subsection{Subsection 1}
-
+\subsection{Neural Networks Vs. Linear Model}
+Remember that neural network does not have curse of dimensionality, hence the method compared to the linear model has advantages when considering multivariate contingent claims.
 
 %-----------------------------------
 %	SUBSECTION 2
 %-----------------------------------
 
 \subsection{Subsection 2}
+Computational time scales exponentially for PDE methods with the number of underlyings and the same goes for the binomial lattice approach, because both methods use dynamic programming. For the monte carlo methods the computational time only scales linear with the number of underlyings, where a smart method is needed for calculating stopping times.
+
+Pricing options with early exercise decisions is not a issue with backward pricing methods.
 
 %----------------------------------------------------------------------------------------
 %	SECTION 2
