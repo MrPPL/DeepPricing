@@ -5,25 +5,26 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Contract Functions}}{5}{figure.caption.22}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Sample Path For Stocks}}{8}{figure.caption.37}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Two Dimensionel Binomial Lattice}}{20}{figure.caption.87}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Binomial Tree}}{22}{figure.caption.94}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Convergence Of Binomial Model}}{23}{figure.caption.96}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Three Dimensionel Binomial Lattice}}{25}{figure.caption.99}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Polynomial Regression Of Continuation Value}}{30}{figure.caption.108}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Optimal Stopping Decision}}{31}{figure.caption.111}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Two Dimensionel Binomial Lattice}}{20}{figure.caption.88}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Binomial Tree}}{22}{figure.caption.95}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Convergence Of Binomial Model}}{23}{figure.caption.97}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Three Dimensionel Binomial Lattice}}{25}{figure.caption.100}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Polynomial Regression Of Continuation Value}}{30}{figure.caption.109}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Optimal Stopping Decision}}{31}{figure.caption.112}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {4.1}{\ignorespaces A single neuron\relax }}{42}{figure.caption.144}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Multilayer perceptrons with $(L+1)$-layers}}{44}{figure.caption.151}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Marginal Distributions For American Put}}{54}{figure.caption.170}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Effect of dataset size}}{56}{figure.caption.173}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{59}{figure.caption.177}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{61}{figure.caption.181}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{63}{figure.caption.185}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{64}{figure.caption.186}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{65}{figure.caption.192}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{66}{figure.caption.193}
-\contentsline {figure}{\numberline {5.9}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{67}{figure.caption.194}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Marginal Distributions For American Put}}{56}{figure.caption.174}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{63}{figure.caption.180}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{64}{figure.caption.186}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{65}{figure.caption.189}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{66}{figure.caption.190}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{66}{figure.caption.193}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{67}{figure.caption.194}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces MLPs Predictions Vs. Actual Prices For American Put}}{67}{figure.caption.195}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {B.1}{\ignorespaces Effect of dataset size}}{80}{figure.caption.227}

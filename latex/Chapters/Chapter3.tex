@@ -298,7 +298,7 @@ The regression performed in LSM is only for in money path for improving the algo
 
 The LSM approach gives a lower bound for the true price of the option given optimal stopping choice:
 \theoremstyle{proposition}
-\begin{proposition}{}\label{BS-price-EuroCall}
+\begin{proposition}{}\label{Lower-Bound-LSM}
 \textbf{Lower Bound To True Value:} For any finite choice of M, K, and vector $\theta\in \mathbb{R}^{M \times (K-1)}$ representing the coefficients for the M basis functions at rach of the K-1 early exercise dates, let $LSM(\omega;M,K)$ denote the discounted cash flow resulting from the following the LSM rule of exercising when the immediate exercise value is positive and greater tahn or equal to $\hat{F}_{M}(\omega_{l};t_{k})$ as defined by $\theta$. Then the following inequality holds almost surely,
 $$V(X)\geq \lim_{N\to \infty} \dfrac{1}{N}\sum_{i=1}^{N} LSM(\omega_i;M,K)$$
 (p. 124 \parencite{lsm})
@@ -380,7 +380,7 @@ Here we restrict ourselves to consider the case with three underlying stocks lik
 \item[•] Best of assets or cash: $\Phi(S(T))=\max\{S_1,S_2,\ldots,S_d,K\}$
 \item[•] Call on max: $\Phi(S(T))=\max\{\max(S_1,S_2,\ldots,S_d)-K,0\}$
 \end{enumerate}
-Assume WLOG\footnote{Without loss of generality} $d$=4 to avoid cumbersome calculations and notation. The section will heavily use the martingale framework developed in section \ref{MultiDimModel} and stochastic calculus (Appendix \ref{AppendixB}) to value these exotic options. The key is to choose the numeraire to a risky assets instead of the bank account. By results from section \ref{MultiDimModel} the processes are still Q-martingales given the numeraire is strictly postive. Under the asssumption of a arbitrage free and complete market it follows from risk neutral valuation formula(RNVF).
+Assume WLOG $d$=4 to avoid cumbersome calculations and notation. The section will heavily use the martingale framework developed in section \ref{MultiDimModel} and stochastic calculus (Appendix \ref{AppendixB}) to value these exotic options. The key is to choose the numeraire to a risky assets instead of the bank account. By results from section \ref{MultiDimModel} the processes are still Q-martingales given the numeraire is strictly postive. Under the asssumption of a arbitrage free and complete market it follows from risk neutral valuation formula(RNVF).
 $$S_0(t)E^{Q_0}_t[\frac{X}{S_0(T)}]=S_1(t)E^{Q_1}_t[\frac{X}{S_1(T)}]$$
 This show that changing the numaraire does not change the price of the above derivative.
 

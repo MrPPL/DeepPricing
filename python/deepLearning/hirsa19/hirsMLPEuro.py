@@ -77,7 +77,7 @@ def prepare_data(dataPath):
     # prepare data loaders
     train_dl = DataLoader(train, batch_size=32, shuffle=True)
     valid_dl = DataLoader(valid, batch_size=32, shuffle=True)
-    test_dl = DataLoader(test, batch_size=1024, shuffle=False)
+    test_dl s DataLoader(test, batch_size=1024, shuffle=False)
     return train_dl, valid_dl, test_dl
 
 def train_model(train_dl, valid_dl, model):
@@ -123,10 +123,7 @@ def train_model(train_dl, valid_dl, model):
         epoch_loss /= len(train_dl)
         val_epoch_loss /= len(valid_dl)
         print(f'Epoch [{epoch+1}/{num_epochs}], Train Loss: {epoch_loss:.9f}')
-        writer.add_scalar("Loss/Train", epoch_loss, epoch)
         print(f'Epoch [{epoch+1}/{num_epochs}], Validation Loss: {val_epoch_loss:.9f}')
-        writer.add_scalar("Loss/Validation", val_epoch_loss, epoch)
-        writer.add_hparams({'lr': learning_rate},{'Loss Train': epoch_loss, 'Loss Validation': val_epoch_loss })
     
 # evaluate the model on test set
 def evaluate_model(test_dl, model):
@@ -173,12 +170,8 @@ batchSize = 64
 learning_rate = 0.01
 
 model = NeuralNet(input_size, hidden_size1, hidden_size2, hidden_size3, outputSize)
-#writer = SummaryWriter('runs/EuroCall/EuroMLP1M')
-writer.add_graph(model, dataset.x_data)
 #train the model
 train_model(train_dl, valid_dl, model)
-writer.flush() # all pending method events has been written to disk
-writer.close()
 # evaluate the model
 # calculate mse
 actuals, predictions = evaluate_model(test_dl, model)
@@ -186,7 +179,7 @@ mse = mean_squared_error(actuals, predictions)
 print('MSE: %.6f, RMSE: %.6f' % (mse, np.sqrt(mse)))
 
 # save model
-#torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/Models/hirsaModel.pth")
+torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/Models/hirsaModel.pth")
 
 
 

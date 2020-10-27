@@ -1,95 +1,139 @@
-% Appendix Template
+% Appendix B
 
-\chapter{Mathematical results and definitions} % Main appendix title
+\chapter{Notation} % Main appendix title
 
-\label{AppendixB} % Change X to a consecutive letter; for referencing this appendix elsewhere, use \ref{AppendixX}
+\label{AppendixB} % For referencing this appendix elsewhere, use \ref{AppendixA}
 
-\begin{theorem}\label{Ito}
-\textbf{Itô's formula multidimensional} Let the n-dimensional process X have dynamics given by:
-\begin{align}
-dX(t)=\mu(t)dt+\sigma(t)dW(t)
-\end{align}
-Then the process $f(t,X(t))$ has stochastic differential given by:
-\begin{equation}
-\begin{split}
-df(t,X(t))=\frac{\partial f(t,X(t))}{\partial t}  dt + \sum_{i=1}^{n} \frac{\partial f(t,X(t))}{\partial x_i}  dX_i(t) + \frac{1}{2} \sum_{i,j=1}^{n} \frac{\partial^2 f(t,X(t))}{\partial x_i \partial x_j}  dX_i(t)dX_j(t)  
-\end{split}
-\end{equation}
-Note: \[ dW_i(t) \cdot dW_j(t)= \begin{cases} 
-      \rho_{ij}dt & \textit{For correlated Weiner processes} \\
-      0 & \textit{For independent Weiner processes} \\
-   \end{cases}
-\]
-(page 58-60 \parencite{finKont})
-\end{theorem}
+We choose grid search with the cartesian product, where b denote the batchsize.
+$$\eta \times b = \{(\eta,b) : \eta \in \{0.0001, 0.001, 0.01 \} \ and \ b \in \{8, 256, 1024\} \}$$
+\begin{table}[th]
+\caption{Hyperparameter tuning of learning rate and batchsize for american put minimum two assets for the interested reader see the tensorboard (link \href{https://tensorboard.dev/experiment/A3oOYhPiQoiDZgsNXVazPg/\#scalars}{tensorboard 3})}
+\label{tab:hyperAmerMin2}
+\centering
+\begin{tabular}{l l l l }
+\toprule
+\textbf{Model} & \textbf{lr} & \textbf{Batch Size} & \textbf{Loss} \\
+\midrule
+MLPs & 0.00010000 & 1024 & 5.7394\\
+&	0.00010000 & 256 & 2.1029\\
+&	0.00010000 & 8 & 0.92074\\
+&	0.00100000 & 1024 & 6.3428\\
+& 	0.00100000 & 256 & 1.2985 \\
+& 	0.00100000 & 8 & 0.070993\\
+&	0.01000000 & 1024 & 6.1258 \\
+& 	0.01000000 & 256 & 1.4931\\
+& 	0.01000000 & 8 & 8.1098\\
+\bottomrule\\
+\end{tabular}
+\end{table}
 
-\begin{theorem}\label{MRT}
-\textbf{The Martingale Representation Theorem} 
-Let W be a k-dimensional Wiener process, and assume that the filtration is defined by:
-$$\mathcal{F}_t=\mathcal{F}_t^W \quad t\in [0,T]$$
-Let M be any $\mathcal{F}_t$-adapted martingale. Then there exist uniquely determined $\mathcal{F}_t$-adapted processes $h_1, \ldots, h_k$ such that M has the representation
-$$M(t)=M(0) + \sum_{i=1}^{k} \int_{0}^{t} h_i(s)dW_i(s) \quad t \in [0,T]$$
-if the martingale M is square integrable, then $h_1, \ldots, h_k$ are in $L^2$ (page 161 \parencite{finKont}).
-\end{theorem}
+\begin{table}[th]
+\caption{Hyperparameter tuning of dataset size and batchsize for american put minimum two assets for the interested reader see the tensorboard (link \href{https://tensorboard.dev/experiment/r6LTlLGaTMCXrKOJpl4Qmg/\#scalars}{tensorboard 4})}
+\label{tab:hyperAmerMin3}
+\centering
+\begin{tabular}{l l l l }
+\toprule
+\textbf{Model} & \textbf{Dataset Size} & \textbf{Batch Size} & \textbf{Loss} \\
+\midrule
+MLPS & 800 & 8 & 7.6495\\
+&	800 & 64 & 36.535\\
+&	80K & 8 & 0.082552\\
+&	80K & 64 & 0.091618 \\
+& 	240K & 8 & 0.073089 \\
+& 	240K & 64 & 0.091618 \\
+\bottomrule\\
+\end{tabular}
+\end{table}
 
-\begin{theorem}\label{Girsanov}
-\textbf{The Girsanov Theorem} 
-Assume the probability space $(\Omega, \mathcal{F}, P, (\mathcal{F}_t^{\bar{W}})_{t \in [0,T]})$ and let the Girsanov kernel $\phi$ be any d-dimensional adapted column vector process. Choose a fixed T and define the process L on $[0,T]$ by:\\
-$dL_t=\phi(t)^T\cdot L_t d\bar{W}_t^P$\\
-$L_0=1$.\\
-Assume that $E^P[L_T]=1$ and define the new probability measure $Q$ on $\mathcal{F}_T$ by:\\
-$$L_T=\frac{dQ}{dP} \quad on \ \mathcal{F}_T$$
-Then
-\begin{align}
-d\bar{W}(t)=\phi(t)dt + dW(t)
-\end{align}
-Where $W(t)$ is the Q-Wiener process and $\bar{W}(t)$ is the P-Wiener process
-(page 164 \parencite{finKont})
-\end{theorem}
 
-\begin{theorem}\label{ConverseGirsanov}
-\textbf{The Converse of the Girsanov Theorem} Let $\bar{W}$ be k-dimensional standard P-Wiener process (i.e. zero drift and unit variance independent components) on $(\Omega,\mathcal{F}, P, (\mathcal{F}_t^{\bar{W}})_{t \in [0,T]})$. Assume that there exits a probability measure $Q$ such that $Q<<P$ on $\mathcal{F}_T^{\bar{W}})$. Then there exists an adapted process $\phi$ such that the likelihood process L has dynamics
-\begin{align*}
-dL(t)=L(t)\phi^T(t)d\bar{W}(t)\\
-L(0)=1
-\end{align*}
-(page 168 \parencite{finKont})
-\end{theorem}
+From the above table we see that the best configuration on this run is for $\eta=0.001$ and $b=8$. LIke for the european option we will investigate if the dataset size matter for the loss of our model. We choose to the learning $\eta=0.001$ by above test and we vary b in the set $b=\{8, 64\}$, beacuse we might suspect a higger batchsize is better for a bigger dataset.
 
-\theoremstyle{definition}
-\begin{definition}{\textbf{Stopping time}:}\label{StoppingTime}
-A random variable $\tau:\Omega \to [0,\infty]$ is called a Markov time if 
-$$(\tau \leq t)\in \mathcal{F}_{t} \quad \forall t \geq 0 $$
-A Markov time is called a stopping time if $\tau<\infty$ P-a.s.
-(p. 27 \parencite{Shiryaev06})
-\end{definition}
 
-\theoremstyle{definition}
-\begin{definition}{Orthogonal vectors: }\label{OrthogonalVec}
-Two vectors $\overrightarrow{a}$ and $\overrightarrow{b}$ are orthogonal, if their dot product is 0:
-$$\overrightarrow{a} \cdot \overrightarrow{b} = 0$$
-We will use the notation:
-\begin{equation}
-\begin{split}
-\overrightarrow{a} \bot \overrightarrow{b}
-\end{split}
-\end{equation}
-\end{definition}
 
-\theoremstyle{definition}
-\begin{definition}{\textbf{Snell envelope}}\label{snellEnvelope}
-Consider a fixed process Y.
-\begin{enumerate}
-\item[•] We say that a process X dominates the process Y if $X_n \geq Y_n \ P-a.s. \ \forall n$.
-\item[•] Assuming that $E[Y_n] < \infty  \ \forall n \leq T$, the Snell envelope S, of the process Y is defined as the smallest supermartingale dominating Y. More precisely: S is a supermartingale dominating Y, and if D is another supermartingale dominating Y, then $S_n\leq D_n \ P-a.s. \ \forall n$.
-\end{enumerate}
-(page 380 \parencite{Bjork19})
-\end{definition}
+From above table \ref{tab:hyperAmerMin2} the training error improves with bigger dataset, hence we choose the dataset with 300.000 samples, where from the training set a validation set of size 60.000 is subsampled. The above study is never complete, but we have seem with grid search the optimal choice for the learning rate, batch size and datasize. Below we will try a different model than MLPs to see if we really need deep learning for this method. 
 
-\begin{theorem}\label{SnellEnvelopeTheorem}
-\textbf{The Snell Envelope Theorem} The optimal value process V is the Snell envelope of the gain process G
-\begin{proof}
-see page 381  \parencite{Bjork19}.
-\end{proof}
-(page 381 \parencite{Bjork19})
-\end{theorem}
+
+\begin{table}[th]
+\caption{Hyperparameter tuning of dataset size and batchsize for american put minimum two assets for the interested reader see the tensorboard}
+\label{tab:fullhyperAmerMin4}
+\centering
+\begin{tabular}{|l|l|l|l|}
+\toprule
+\textbf{Model} & \textbf{Dataset Size} & \textbf{Batch Size} & \textbf{Loss} \\
+\midrule
+300K    & 0.0001 & 8     & 0.015130897983909 \\ \hline
+300K    & 0.001  & 64    & 0.035523075610399 \\ \hline
+100K    & 0.0001 & 8     & 0.064886227250099 \\ \hline
+100K    & 0.001  & 8     & 0.072143875062466 \\ \hline
+300K    & 0.0001 & 64    & 0.075988814234734 \\ \hline
+300K    & 0.001  & 8     & 0.104622706770897 \\ \hline
+300K    & 0.01   & 256   & 0.480043411254883 \\ \hline
+300K    & 0.0001 & 256   & 1.04093873500824  \\ \hline
+300K    & 0.001  & 256   & 1.06809389591217  \\ \hline
+300K    & 0.001  & 512   & 1.08942472934723  \\ \hline
+100K    & 0.001  & 64    & 1.18230485916138  \\ \hline
+300K    & 0.001  & 1024  & 1.30065310001373  \\ \hline
+300K    & 0.01   & 512   & 1.45135951042175  \\ \hline
+100K    & 0.01   & 256   & 1.52623510360718  \\ \hline
+300K    & 0.01   & 64    & 1.75954759120941  \\ \hline
+300K    & 0.01   & 1024  & 1.92213356494904  \\ \hline
+100K    & 0.01   & 512   & 2.01193928718567  \\ \hline
+100K    & 0.01   & 64    & 2.02969717979431  \\ \hline
+300K    & 0.0001 & 1024  & 5.72439670562744  \\ \hline
+300K    & 0.0001 & 512   & 5.72847843170166  \\ \hline
+100K    & 0.0001 & 256   & 5.76278400421143  \\ \hline
+100K    & 0.0001 & 512   & 5.77397203445435  \\ \hline
+100K    & 0.0001 & 64    & 5.80239868164063  \\ \hline
+100K    & 0.0001 & 1024  & 5.90070772171021  \\ \hline
+100K    & 0.001  & 256   & 6.29003953933716  \\ \hline
+100K    & 0.001  & 512   & 6.52896738052368  \\ \hline
+100K    & 0.001  & 1024  & 6.56187915802002  \\ \hline
+1K      & 0.001  & 8     & 7.5845251083374   \\ \hline
+100K    & 0.01   & 8     & 8.07239627838135  \\ \hline
+1K      & 0.01   & 8     & 11.7414264678955  \\ \hline
+100K    & 0.01   & 1024  & 13.4287099838257  \\ \hline
+1K      & 0.01   & 64    & 14.1254253387451  \\ \hline
+1K      & 0.0001 & 8     & 24.0087566375732  \\ \hline
+1K      & 0.001  & 64    & 27.0112972259521  \\ \hline
+1K      & 0.01   & 512   & 40.0226554870605  \\ \hline
+1K      & 0.001  & 512   & 44.841724395752   \\ \hline
+1K      & 0.01   & 256   & 45.8363571166992  \\ \hline
+1K      & 0.01   & 1024  & 49.3933792114258  \\ \hline
+1K      & 0.0001 & 64    & 51.3070755004883  \\ \hline
+1K      & 0.001  & 256   & 52.8623466491699  \\ \hline
+1K      & 0.0001 & 512   & 87.4313125610352  \\ \hline
+1K      & 0.0001 & 256   & 89.8093795776367  \\ \hline
+1K      & 0.0001 & 1024  & 90.8342361450195  \\ \hline
+\bottomrule\\
+\end{tabular}
+\end{table}
+
+\begin{figure}[th]
+\centering
+\includegraphics[width=\textwidth]{Figures/euroTestDataset.png}
+\decoRule
+\caption[Effect of dataset size]{MLPs regression training for european call, where the plot shows the effect of gather more data on training and validation loss, where the x-axis is number of epoch-1 and y-axis is the loss for the training and validation loop. The orange line with the largest error is for 100 datapoints, the grey line for 1000 datapoints, the green line 10K datapoints, the three last lines blends together where it is for 100K,300K and 1M datapoints. More can be seem at tensorboard (link \href{https://tensorboard.dev/experiment/JURHMdo6Ra6MRW5XnlYwkg/\#scalars&run=EuroCall\%2FEuroMLP1K\&\_smoothingWeight=0\&runSelectionState=eyJFdXJvQ2FsbC9FdXJvTUxQMTAwIjp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMTAwLzE2MDE5MjcyNTMuOTkyMTYxMyI6dHJ1ZSwiRXVyb0NhbGwvRXVyb01MUDEwMC8xNjAxOTI3MjU0LjAwODY1NTUiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxMDAvMTYwMTkyNzI1NC4wMjYzMTA3Ijp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMTAwLzE2MDE5MjcyNTQuMDQzODcyIjp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMTAwLzE2MDE5MjcyNTQuMDU3NjkwNCI6dHJ1ZSwiRXVyb0NhbGwvRXVyb01MUDEwMC8xNjAxOTI3MjU0LjA2NzcyOTIiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxMDAvMTYwMTkyNzI1NC4wODIzMDczIjp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMTAwLzE2MDE5MjcyNTQuMDg5ODkzNiI6dHJ1ZSwiRXVyb0NhbGwvRXVyb01MUDEwMC8xNjAxOTI3MjU0LjEwMDA5ODQiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxMDAvMTYwMTkyNzI1NC4xMTk4NSI6dHJ1ZSwiRXVyb0NhbGwvRXVyb01MUDEwMEsiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxMEsiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxSyI6dHJ1ZSwiRXVyb0NhbGwvRXVyb01MUDFNIjp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMU0vMTYwMTkyNzQ4NC44MzczMjQ5Ijp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMU0vMTYwMTkyNzUzMS42OTg0MjciOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxTS8xNjAxOTI3NTgwLjYxOTQwODQiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxTS8xNjAxOTI3NjMxLjEwNjM5ODgiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxTS8xNjAxOTI3Njc3LjEzMTg4MjIiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxTS8xNjAxOTI3NzIyLjg2Nzk2ODMiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxTS8xNjAxOTI3NzY4LjY2MDgwODYiOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAxTS8xNjAxOTI3ODE0LjA0NjU0NiI6dHJ1ZSwiRXVyb0NhbGwvRXVyb01MUDFNLzE2MDE5Mjc4NTkuMDAzNzc5Ijp0cnVlLCJFdXJvQ2FsbC9FdXJvTUxQMU0vMTYwMTkyNzkwNC4xODYyODciOnRydWUsIkV1cm9DYWxsL0V1cm9NTFAzMDBLIjp0cnVlfQ\%3D\%3D}{tensorboard 5})}
+\label{fig:dataComparisonEuroMLP}
+\end{figure}
+
+\begin{table}[th]
+\caption{Performance of in-sample and out-of-sample dataset of different sizes for MLPs regression on a european call option}
+\label{tab:euroDataSize}
+\centering
+\begin{tabular}{l l l l l l l l }
+\toprule
+\textbf{Model} & \textbf{Dataset} & \textbf{MSE} & \textbf{RMSE} & \textbf{MAE} & \textbf{$R^2$} \\
+\midrule
+MLPs & In-sample Training: 800 & 0.000092 & 0.009601 & 0.007214 & 0.989676\\
+MLPs & 8K & 0.000015 & 0.003875 & 0.002999 & 0.998518\\
+MLPs & 80K & 0.000008 & 0.002914 & 0.002466 & 0.999167\\
+MLPs & 240K & 0.000006 & 0.002419 & 0.001966 & 0.99942\\
+MLPs & 800K & 0.000004 & 0.002098 & 0.001742 & 0.999565\\
+MLPs & In-sample Validation: 200 & 0.000092 & 0.009601 & 0.007214 & 0.989676\\
+MLPs & 2K & 0.000015 & 0.003875 & 0.002999 & 0.998518\\
+MLPs & 20K & 0.000008 & 0.002914 & 0.002466 & 0.999167\\
+MLPs & 60K & 0.000006 & 0.002419 & 0.001966 & 0.99942\\
+MLPs & 200K & 0.000004 & 0.002098 & 0.001742 & 0.999565\\
+\bottomrule\\
+\end{tabular}
+\end{table}

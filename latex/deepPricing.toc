@@ -19,19 +19,19 @@
 \contentsline {section}{\numberline {2.4}American Options And Optimal Stopping}{13}{section.65}
 \contentsline {subsection}{\numberline {2.4.1}American Call Without Dividends}{14}{subsection.72}
 \contentsline {subsection}{\numberline {2.4.2}American Put}{15}{subsection.73}
-\contentsline {subsection}{\numberline {2.4.3}Discrete time valuation}{16}{subsection.80}
-\contentsline {chapter}{\numberline {3}Classical numerical results and Benchmarks}{19}{chapter.85}
-\contentsline {section}{\numberline {3.1}Cox Ross Rubenstein Model}{19}{section.86}
-\contentsline {section}{\numberline {3.2}Lattice Approach For Multivariate Contingent Claims}{24}{section.97}
-\contentsline {section}{\numberline {3.3}Least Square Monte Carlo Method}{27}{section.100}
-\contentsline {subsection}{\numberline {3.3.1}The Algorithm}{27}{subsection.101}
-\contentsline {subsection}{\numberline {3.3.2}American Put}{29}{subsection.109}
-\contentsline {subsection}{\numberline {3.3.3}Convergence}{31}{subsection.112}
-\contentsline {subsection}{\numberline {3.3.4}Upper Bound}{32}{subsection.115}
-\contentsline {subsection}{\numberline {3.3.5}LSM Extension To Multivariate Contingent Claims}{33}{subsection.117}
-\contentsline {section}{\numberline {3.4}Closed Form Solutions For European Exotic Options}{34}{section.120}
-\contentsline {subsection}{\numberline {3.4.1}Geometric Basket Call Option}{34}{subsection.121}
-\contentsline {subsection}{\numberline {3.4.2}Options On The Maximum Or The Minimum Of Several Assets}{35}{subsection.126}
+\contentsline {subsection}{\numberline {2.4.3}Discrete time valuation}{16}{subsection.81}
+\contentsline {chapter}{\numberline {3}Classical numerical results and Benchmarks}{19}{chapter.86}
+\contentsline {section}{\numberline {3.1}Cox Ross Rubenstein Model}{19}{section.87}
+\contentsline {section}{\numberline {3.2}Lattice Approach For Multivariate Contingent Claims}{24}{section.98}
+\contentsline {section}{\numberline {3.3}Least Square Monte Carlo Method}{27}{section.101}
+\contentsline {subsection}{\numberline {3.3.1}The Algorithm}{27}{subsection.102}
+\contentsline {subsection}{\numberline {3.3.2}American Put}{29}{subsection.110}
+\contentsline {subsection}{\numberline {3.3.3}Convergence}{31}{subsection.113}
+\contentsline {subsection}{\numberline {3.3.4}Upper Bound}{32}{subsection.116}
+\contentsline {subsection}{\numberline {3.3.5}LSM Extension To Multivariate Contingent Claims}{33}{subsection.118}
+\contentsline {section}{\numberline {3.4}Closed Form Solutions For European Exotic Options}{34}{section.121}
+\contentsline {subsection}{\numberline {3.4.1}Geometric Basket Call Option}{34}{subsection.122}
+\contentsline {subsection}{\numberline {3.4.2}Options On The Maximum Or The Minimum Of Several Assets}{35}{subsection.127}
 \contentsline {subsubsection}{\numberline {3.4.2.1}Best Of Assets Or Cash}{35}{subsubsection.128}
 \contentsline {subsubsection}{\numberline {3.4.2.2}Call On Max And Call On Min}{37}{subsubsection.138}
 \contentsline {chapter}{\numberline {4}Deep Learning}{39}{chapter.140}
@@ -47,26 +47,24 @@
 \contentsline {subsection}{\numberline {5.1.1}Recap MLPs}{50}{subsection.157}
 \contentsline {subsection}{\numberline {5.1.2}The Algorithm}{50}{subsection.160}
 \contentsline {subsection}{\numberline {5.1.3}Convergence}{51}{subsection.163}
-\contentsline {subsection}{\numberline {5.1.4}Numerical results}{51}{subsection.164}
-\contentsline {section}{\numberline {5.2}Multilayer Perceptrons Regression Pricing From Existing Methods}{52}{section.166}
-\contentsline {subsection}{\numberline {5.2.1}Data}{52}{subsection.167}
-\contentsline {subsection}{\numberline {5.2.2}Training}{55}{subsection.172}
-\contentsline {subsubsection}{\numberline {5.2.2.1}Hyperparameter Tuning}{58}{subsubsection.175}
-\contentsline {subsubsection}{\numberline {5.2.2.2}Polynomial Regression}{58}{subsubsection.176}
-\contentsline {subsection}{\numberline {5.2.3}Model Performance In-Sample}{60}{subsection.179}
-\contentsline {subsection}{\numberline {5.2.4}Out of sample predictions}{60}{subsection.182}
-\contentsline {section}{\numberline {5.3}Multilayer Perceptrons Regression For American Options}{64}{section.187}
-\contentsline {subsection}{\numberline {5.3.1}Data}{64}{subsection.188}
-\contentsline {subsection}{\numberline {5.3.2}Optimization and cost function}{64}{subsection.189}
-\contentsline {subsection}{\numberline {5.3.3}Model Performance}{64}{subsection.190}
-\contentsline {chapter}{\numberline {6}Discussion and Further Investigation}{69}{chapter.196}
-\contentsline {section}{\numberline {6.1}Numerical Investigation}{69}{section.197}
-\contentsline {section}{\numberline {6.2}Black Scholes Model}{70}{section.200}
-\contentsline {subsection}{\numberline {6.2.1}Neural Networks Vs. Linear Model}{71}{subsection.201}
-\contentsline {subsection}{\numberline {6.2.2}Subsection 2}{71}{subsection.202}
-\contentsline {section}{\numberline {6.3}Main Section 2}{72}{section.203}
-\contentsline {chapter}{\numberline {7}Conclusion}{73}{chapter.204}
-\contentsline {section}{\numberline {7.1}Main Section 1}{73}{section.205}
-\contentsline {subsection}{\numberline {7.1.1}Subsection 1}{73}{subsection.206}
-\contentsline {chapter}{\numberline {A}Mathematical results and definitions}{75}{appendix.207}
-\contentsline {chapter}{Bibliography}{77}{appendix*.220}
+\contentsline {section}{\numberline {5.2}Multilayer Perceptrons Regression Pricing From Existing Methods}{53}{section.167}
+\contentsline {subsection}{\numberline {5.2.1}Data}{53}{subsection.168}
+\contentsline {subsection}{\numberline {5.2.2}Training}{55}{subsection.175}
+\contentsline {subsubsection}{\numberline {5.2.2.1}Hyperparameter Tuning}{56}{subsubsection.176}
+\contentsline {subsubsection}{\numberline {5.2.2.2}Polynomial Regression}{59}{subsubsection.179}
+\contentsline {subsection}{\numberline {5.2.3}Model Performance}{59}{subsection.182}
+\contentsline {subsubsection}{\numberline {5.2.3.1}European Call Option}{60}{subsubsection.183}
+\contentsline {subsubsection}{\numberline {5.2.3.2}American Put Option}{60}{subsubsection.191}
+\contentsline {subsubsection}{\numberline {5.2.3.3}American Put On Minimum of Two Assets Option}{60}{subsubsection.196}
+\contentsline {chapter}{\numberline {6}Discussion and Further Investigation}{69}{chapter.197}
+\contentsline {section}{\numberline {6.1}Numerical Investigation}{69}{section.198}
+\contentsline {section}{\numberline {6.2}Black Scholes Model}{71}{section.203}
+\contentsline {subsection}{\numberline {6.2.1}Neural Networks Vs. Linear Model}{72}{subsection.204}
+\contentsline {subsection}{\numberline {6.2.2}Subsection 2}{72}{subsection.205}
+\contentsline {section}{\numberline {6.3}Main Section 2}{73}{section.206}
+\contentsline {chapter}{\numberline {7}Conclusion}{75}{chapter.207}
+\contentsline {section}{\numberline {7.1}Main Section 1}{75}{section.208}
+\contentsline {subsection}{\numberline {7.1.1}Subsection 1}{75}{subsection.209}
+\contentsline {chapter}{\numberline {A}Mathematical results and definitions}{77}{appendix.210}
+\contentsline {chapter}{\numberline {B}Notation}{79}{appendix.223}
+\contentsline {chapter}{Bibliography}{83}{appendix*.228}
