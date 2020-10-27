@@ -96,7 +96,7 @@ The last result is the strong law of large numbers for the value function, i.e. 
 
 
 \section{Multilayer Perceptrons Regression Pricing From Existing Methods}
-The MLPs pricing method from existing methods (\textbf{MLPs II}) has a different approach than the other methods, because it is only data drivin. The MLPs could easily be used to real data, which is investigated in \parencite{GasparRaquel20}. We revisit the work from \parencite{HirsaAli2019}, where we try to extend the pricing models to options with two underlying risky assets. The model will be the classical GBM model presented in earlier chapters. By choosing the GBM model the MLPs pricing method is ready for investigation both for vanilla options and exotic options. We stress that the MLPs pricing method is not restricted to GBM assumption, but can be applied to other models such as Hesten, Variance Gamma and real market data. The advantages with MLPs is the fast parameter estimation compared to classical methods binomial lattice and LSM once trained. With the increased speed for pricing it can cost accurary specially if the data is sparse, which can arise when using the method for exotic options on real market data. For practical application the accuracy is severe if the predicted price is not within the bid-ask spread, because the aim is to price fast without introducing arbitrage. We will present results for european call, american put and american put miminum on two assets options presented in earliar chapters with MLPs pricing methods.\\
+The MLPs pricing method from existing methods has a different approach than the other methods, because it is only data drivin. The MLPs could easily be used to real data, which is investigated in \parencite{GasparRaquel20}. We revisit the work from \parencite{HirsaAli2019}, where we try to extend the pricing models to options with two underlying risky assets. The model will be the classical GBM model presented in earlier chapters. By choosing the GBM model the MLPs pricing method is ready for investigation both for vanilla options and exotic options. We stress that the MLPs pricing method is not restricted to GBM assumption, but can be applied to other models such as Hesten, Variance Gamma and real market data. The advantages with MLPs is the fast parameter estimation compared to classical methods binomial lattice and LSM once trained. With the increased speed for pricing it can cost accurary specially if the data is sparse, which can arise when using the method for exotic options on real market data. For practical application the accuracy is severe if the predicted price is not within the bid-ask spread, because the aim is to price fast without introducing arbitrage. We will present results for european call, american put and american put miminum on two assets options presented in earliar chapters with MLPs pricing methods.\\
 
 For deep learning the hyperparameters is important for finding the right model for pricing, where different choices will be empirical presented under training. For the given task polynomial regression can also be used, but we will see later why MLPs regression is preferred. The section is split into three sections "Data", "Training" and "Performance".
 
@@ -124,7 +124,7 @@ Amer. Put & 1\%-3\% & 1d - 3y & 0.8-1.2 & 0.05-0.5\\
 \end{tabular}
 \end{table}
 
-The american put minimum option for two underlyings will require additional parameters, because now we have two spots, two volatilities and correlation between the assets. The first order homegeneity does not hold for multivariate contingent claims, hence the strike and the two spots are also needed. The parameters considered for the bivariate contingent claims are T, r, K, $S_1(0)$, $S_2(0)$, $\sigma_1$, $\sigma_2$ and $\rho$. So a total of 8 parameters and the given parameters ranges are given in table \ref{tab:ExoticParRange}.\\
+The american put minimum option for two underlyings will require additional parameters, because now we have two spots, two volatilities and correlation between the assets. The first order homegeneity does not hold for multivariate contingent claims, hence the strike and the two spots are also needed. The parameters considered for the bivariate contingent claims are T, r, K, $S_1(0)$, $S_2(0)$, $\sigma_1$, $\sigma_2$ and $\rho$. So a total of 8 parameters and the given parameters ranges are given in table \ref{tab:ExoticParRange}, where we reduced the number of combinations by setting the two spots constant to 100 and let the strike be the same for both options.\\
    
 \begin{table}[th]
 \caption[Parameter Ranges For MLPs]{Parameter ranges for exotic european put and american put options}
@@ -140,11 +140,11 @@ Amer. Put Min. & 1\%-3\% & 1d - 3y & 80-120 & 100 & 100 & 0.05-0.5 & 0.05-0.5 & 
 \end{tabular}
 \end{table}
 
-The simulationen of the parameter ranges for the in-sample dataset is done by quasi-random Halton sequences sampling instead of e.g. random sampling like uniform sampling to obtain lower discrepancy. The Halton sequence covers the space more evenly quicker, because of the lower discrepancy. The quasi random sampling differ from the ordinary random sampling since they make no attempt to mimic randomness. The aim for quasi sampling is to increase accuracy specifically by generating points that are too evenly distributed to be random. Like uniform sampling the halton sequence points is between 0 and 1, hence we need to apply a transformation to get the parameter ranges:
+The simulationen of the parameter ranges for the training dataset is done by quasi-random Halton sequences sampling to obtain lower discrepancy, where the test sets are sampled with random uniform sampling. The quasi random sampling differ from the ordinary random sampling since they make no attempt to mimic randomness. The aim for quasi sampling is to increase accuracy specifically by generating points that are too evenly distributed to be random. The halton sequence and uniform sampling generates points between 0 and 1, hence we need to apply a transformation to get the parameter ranges:
 $$r \cdot (range \ of \ parameter) + lowerBound \quad where \ r=halton \ point$$
-After the simulation of combinations of the input parameters within the given ranges the labels can be generated from existing methods. For the european call option the generation of labels is done by the classical B-S formula for call options given in proposition \ref{BS-price-EuroCall}. The B-S pricing formula is well known and has an analytical solution, hence it is relatively fast to generate labels in this model. The american options require numerical methods, hence the generation of labels are more computational expensive. The labels for the american options are generated by CRR for american put option with 1 underlying stock and by BEG for two underlyings presented in chapter \ref{Chapter3}. When the datasets ($\matr{X}$, $\bm{y}$) are generated we are left with a regression task. The regression task is to predict the price $\bm{y}$ from the input parameters $\matr{X}$.\\ 
+After the simulation of combinations of the input parameters within the given ranges the labels can be generated from existing methods. For the european call option the generation of labels is done by the classical B-S formula for call options given in proposition \ref{BS-price-EuroCall}. The B-S pricing formula is well known and has an analytical solution, hence it is relatively fast to generate labels in this model. The american options require numerical methods, hence the generation of labels are more computational expensive. The labels for the american options are generated by CRR for american put option with 1 underlying stock and by BEG for two underlyings with 100 equidistant time-steps presented in chapter \ref{Chapter3}. When the datasets ($\matr{X}$, $\bm{y}$) are generated we are left with a regression task. The regression task is to predict the price $\bm{y}$ from the input parameters $\matr{X}$.\\ 
 
-The datasets generated for training the model will be the in-sample data set. The in-sample dataset are split up into a training and validation dataset in order to approximate model performance on the test set. The training dataset is used to update the parameters internal in the model e.g. weights, biases, et cetera and finetune hyperparameters for choosing the optimal model design. To avoid overfitting and good generalization models the validation set is useful, because the trained model has not seen the data before evaluation on validation set. The validation set is randomly subsampled from the training set, where the validation dataset constitute 20 procent of the training set. To check the robustness of the regression we choose to sample two test datasets out-of-sample, which means we simulate data with modified parameter ranges. \\
+The datasets generated for within the parameter ranges will be referred to as the in-sample data set. The training dataset is a in-sample dataset, which is split up into a training and validation dataset in order to approximate model performance on the test sets. The training dataset is used to update the parameters internal in the model e.g. weights, biases, et cetera and finetune hyperparameters for choosing the optimal model design. To avoid overfitting and good generalization models the validation set is useful, because the trained model has not seen the data before evaluation on the validation set. The validation set is randomly subsampled from the training set, where the validation dataset constitute 20 procent of the training set. To check the robustness of the regression we choose to sample two test out-of-sample datasets, which means we simulate data with modified parameter ranges. \\
 
 The test datasets out-of-sample is simulated by uniform sampling adjusting the parameter range for either moneyness or maturity for the options (table \ref{totalVanillaParRange}). The test dataset has not been seen by the model in the training process, hence we get a unbiased evaluation of the model. The aim with producing different test and validation data sets is to measure the models performance at interpolation and extrapolation. The dataset for the bivariate american contingent claim will be similar to the american put by only adjusting either the strike or the maturity.\\
 
@@ -174,21 +174,26 @@ Longer Maturity & & 0.05-0.5 & 3y-5y & 0.8-1.2 & 1\%-3\%\\
 \label{fig:marginalAmerPut}
 \end{figure}
 
-By above discussion we simulate a training dataset, where the simulation for the american put is visualized in figure \ref{fig:marginalAmerPut}. The marginal distributions shown is for $300.000$ data samples ($\matr{X},y$) generated by halton sequences and the CRR model, where the marginal distributions for the features cover the parameter range almost uniform and the simulated y lies with most values at zero and maximum at 0.387 rounded to three decimals. The marginal distributions shows that we have succesfully generated parameters in the given ranges and the parameters are evenly spaced in the ranges. In the model performance section the out-of-sample dataset will be used to check the extrapolation of the models. The out-of-sample test dataset is 60.000 generated data points with uniform sampling and the parameter ranges for the options with 1 underlying is given in table \ref{tab:totalVanillaParRange}.
+By above discussion we simulate a training dataset, where the simulation for the american put is visualized in figure \ref{fig:marginalAmerPut}. The marginal distributions shown is for $300.000$ data samples ($\matr{X},y$) generated by halton sequences and the CRR model, where the marginal distributions for the features cover the parameter range almost uniform and the simulated y lies with most values at zero and maximum at 0.387 rounded to three decimals. The marginal distributions shows that we have succesfully generated parameters in the given ranges and the parameters are evenly spaced in the ranges. In the model performance section the out-of-sample and in-sample test datasets will be used to check the extrapolation and interpolation of the models. The test datasets are 60.000 generated data points with uniform sampling and the parameter ranges for the options with 1 underlying is given in table \ref{tab:totalVanillaParRange}.
 
 %-----------------------------------
 %	SUBSECTION 2
 %-----------------------------------
 
-\subsection{Training}
+\subsection{Training}\label{Training}
 The aim for training is that the model will learn the pricing function $f^*$. Once the dataset ($\matr{X}, \bm{y}$) is generated the model can be trained to approximate the true function $f^*$. To train the model we use MLPs regression to infer the pricing function from the generated data, hence the approach is model free, because the data is only needed. We will also present a standard linear model to compare the MLPs with the classical regression methods. We want to have a fast, robust and accurate model after training on the training set. To train the model we need a measure for the error, where the standard mean squared error (MSE) for regression is applied. I.e. the cost function is chosen to be the empirical risk function with a quadratic loss function:
 $$J(\theta)= \frac{1}{K} \sum_{k=1}^{K}(y_k-\hat{y}_k)^2$$
-The MSE penalizes outliers stronger than e.g. mean absolute error (MAE), but it penalize small deviations less. To avoid overfitting we regularize using early stopping with a patient of 5 epochs. To update the weights the Adam optimization algorithm is chosen with learning rate $\eta$ found by hyperparameter tuning. \\
+The MSE penalizes outliers stronger than e.g. mean absolute error (MAE), but it penalizes small deviations less. To avoid overfitting we regularize using early stopping with a patient of 5 epochs, but with a maximum of 100 epochs for computational reasons. To update the weights the Adam optimization algorithm is chosen with learning rate $\eta$ found by hyperparameter tuning. \\
 
 \subsubsection{Hyperparameter Tuning}
-A research area within deep learning is to tune the hyperparameters to the specific task, where both manually search and the automated grid search can be used. We test empirically the best hyperparameters for the MLPs, where the validation set is used. For hyperparameter tuning grid search is conducted to find the optimal set of hyperparameters where we will look at dataset size, learning rate and batchsize.\\
+A research area within deep learning is to tune the hyperparameters to the specific task, where both manually search and automated search can be used. To choose the best hyperparameters there is several choices, where the most basic automated task is random search and grid search. The random search is to define a predefined range to pick randomly from. This method can be effective to discover new hyperparameter values or combination, but it can be considerably more computational expensive than the grid search. The grid search is to search in a grid with each hyperparameters in each dimension, this kind of hyperparameter search has fast computational time relative to the random search, but requires some expert knowledge about the hyperparameters.\\
 
-Firstly the european call option regression is investigated, where we vary the dataset size. The Goal is to quantify how large datasets is needed for having a high quality model for european options. The datasets for an european call option considered are in-sample datasets of size 100, 1K, 10K, 100K, 300k, 1M data samples, where the validation set is subsampled from the training data set. By inspiration from \parencite{HirsaAli2019} we choose to test the datasets with a MLPs with 4 layers, 120 neurons in each hidden layer and 1 output. In each layer we choose the activation function leaky ReLU, which is one of the most popular choices for activation functions. The number of data samples is relevant for real data, because for real market data there is not unlimited market data available.
+We test empirically the best hyperparameters for the MLPs, where the validation set is used. For hyperparameter tuning grid search is conducted to find the optimal set of hyperparameters where we will look at dataset size, learning rate and batchsize. \\
+
+Firstly the european call option regression is investigated, where we vary the dataset size and batch size. For the Adam optimization algorithm we choose a learning rate $\eta=0.001$. The goal is to quantify how large a dataset($d$) and batch size($b$) are needed for having a high quality model for the european option. The datasets for an european call option considered are in-sample datasets of size 1K, 10K, 100K, 300k and 1M data samples, where the validation set is subsampled from the training data set. The batch sizes are 64, 256 and 1024, i.e. we have the combinations expressed by the cartesian product:
+$$b \times d = \{(b, d) : b \in \{64, 256, 1024\} \ and \ d \in\{1K,10K,100K,300K,1M \} \}$$
+By inspiration from \parencite{HirsaAli2019} we train a MLPs model with 4 layers, 120 neurons in each hidden layer and 1 neuron in the output layer. In each layer we choose the activation function leaky ReLU, which is one of the most popular choices for activation functions. The number of data samples is relevant for real data, because for real market data there is not unlimited market data available.\\
+
 \begin{table}[th]
 \caption{Hyperparameter tuning of dataset size and batch size for the american put bivariate contingent claim. The table shows validtion loss in ascending order for different hyperparameter combinations and for the interested reader the tensorboard is online (link \href{https://tensorboard.dev/experiment/8pxUoSDmTVGMOxpJWgiZsA/}{tensorboard 1})}
 \label{tab:hyperEuroC1}
@@ -216,11 +221,9 @@ Firstly the european call option regression is investigated, where we vary the d
 \end{tabular}
 \end{table}
 
+Table \ref{tab:hyperEuroC1} shows that the the model performs very well for in-sample data with 10K-300K datapoints, hence the biggest dataset with 1M seems not to be worth the computational cost. The model is only trained once on each datasets, so there is some randomness on each run, but the picture is clear. The model to interpolate prices for european call options in-sample data does not significant improve with gathering more data than 10K-300K datapoints, which is good news for using the method on real market data.  Beaware that the simulated data can underestimate the validation error, because we have a controlled setup where the parameter range is within a predetermined range. For the controlled setup with simulated data we can choose arbitrary many datapoints albeit making the method more computational expensive. By weighting both the computational cost and accurary, we choose to work with 300K datapoints and a batch size of 64 for the european option. \\
 
-
-Table \ref{tab:hyperEuroC1} shows that the the model performs very well for in-sample data with 10K-300K datapoints, hence the biggest dataset with 1M seems to not be worth the computational cost. The model is only trained once on each datasets, so there is some randomness on each run, but the picture is clear. The model to interpolate prices for european call options in-sample data does not significant improve with gathering more data than 10K-100K datapoints this is good news for using the method on real market data. In the article \parencite{GasparRaquel20} they conduct a study to price american put options with real market data, where they conclude they got better results for american options with MLPs than for LSM with around 40K datapoints which is in line with the result in figure \ref{fig:dataComparisonEuroMLP}. Beaware that the simulated data can underestimate the validation error, because we have a controlled setup where the parameter range is within a predetermined range. For the controlled setup with simulated data we can choose arbitrary many datapoints albeit making the method more computational expensive. By weighting both the computational cost and accurary, we choose to work with 300K datapoints and a batch size of 64. \\
-
-The european option needs fewer parameters compared to the american put on minimum on two assets, hence the dataset might need to larger for that study. To choose the best hyperparameters there is several choices, where the most basic automated task is random search and grid search. The random search is to define a predefined range to pick randomly from, this method can be effective to discover new hyperparameter values or combination, but it can be considerably more computational expensive than the grid search. The grid search is to search in a grid with each hyperparameters in each dimension, this kind of hyperparameter search has fast computational time relative to the random search, but requires some expert knowledge about the hyperparameters. We conduct a large grid search with varying the learning rate $\eta$, the batchsize $b$ and the dataset size $d$, where the grid of the cartesian product of $\eta$, $b$ and $d$ is searched.
+The european option needs fewer parameters compared to the american put on minimum of two assets, hence the dataset might need to be larger for that study. We conduct a large grid search with varying the learning rate $\eta$, the batchsize $b$ and the dataset size $d$, where the grid of the cartesian product of $\eta$, $b$ and $d$ is searched.
 $$\eta \times b \times d = \{(\eta,b, d) : \eta \in \{0.0001, 0.001, 0.01 \}, \ b \in \{8, 64, 256, 512, 1024\} \ and \ d \in\{1K,100K,300K \} \}$$
 Besides varying the hyperparameters for $\eta$, $b$ and $d$ the other hyperparameters is the same values as for the european call option.\\
 
@@ -246,17 +249,16 @@ Besides varying the hyperparameters for $\eta$, $b$ and $d$ the other hyperparam
 \end{tabular}
 \end{table}
 
-Looking at table \ref{tab:hyperAmerMin1} the best configuration for both the validation loss and training loss is for $(\eta=0.0001, b=8, d=300K)$, but the computational cost is by far the most expensive by taking an hour for training with these hyperparameters. The reason lay in the lowest batchsize, biggest dataset and the smallest learning rate considered. The learning rate effect the computational speed, because we are training with early stopping regularization. Overall the dataset with 300K performed best for training error, which is expected, since a bigger dataset gives more learning opportunities. The batch size effects heavily the computational speed, since a high batch size gives fewer iterations per epoch. Considering computational cost and the loss the 300K data sets, the learning rate $\eta=0.001$ and a batch size of 64 or 256 are preferred.\\
+Looking at table \ref{tab:hyperAmerMin1} the best configuration for both the validation loss and training loss is for $(\eta=0.0001, b=8, d=300K)$, but the computational cost is by far the most expensive by taking an hour for training with these hyperparameters. The reason lay in the lowest batch size, biggest dataset and the smallest learning rate considered. The learning rate effect the computational speed, because we are training with early stopping regularization. Overall the dataset with 300K performed best for training error, which is expected, since a bigger dataset gives more learning opportunities. The batch size effects heavily the computational speed, since a high batch size gives fewer iterations per epoch. Considering computational cost and the loss the 300K data sets, the learning rate $\eta=0.001$ and a batch size of 64 or 256 are preferred.\\
 
-Hyperparameter tuning is highly computational expensive and there is many opportunities to test out. We have seem with grid search the optimal choice for the learning rate, batch size and datasize. Below we will try a different model than MLPs to see if we really need deep learning for this method. 
-
+Hyperparameter tuning is highly computational expensive and there is many opportunities to test out. We have seem with grid search the optimal choice for the learning rate, batch size and datasize for the european call option and american put on minimum for two assets. The american put option uses the same parameters as the european option, hence we choose the same hyperparameters for the univariate contingent claims. Below we will try a different model than MLPs to see if we really need deep learning for this method. 
 
 \subsubsection{Polynomial Regression}
 To compare MLPs and Polynomial regression the dataset and the performance metrics are the same, but the model training is obvously different. The dataset chosen is the dataset with 300.000 samples and the metric is MSE. For simplicity the european call option is investigated, where we fit polynomials up to degree 6 for comparision of the model capacity and fit.  
 $$y_i=\beta_0 + \beta_1 \cdot x_i + \cdots + \beta_n \cdot x_i^n + \epsilon_i \quad where \ n=1,2,\ldots,6$$
-Plotting the fit actual vs predicted target variable figure \ref{fig:PolynomialEuroC} it is clear, that the in-sample fit improves with the increased model capacity. The linear regression is too simple for pricing european option, but it looks like the 6 order polynomial actually performs better than the MLPs in the in-sample validation set table \ref{tab:euroPerformance}. Keep in mind that we do not only want good interpolation, but we also want good extrapolation for our fitted model.The out-of-sample data will reveal if the high order polynomial or MLPs have overfitted the data.\\
+Plotting the fit actual vs predicted target variable (figure \ref{fig:PolynomialEuroC}) it is clear, that the in-sample fit improves with the increased model capacity. The linear regression is too simple for pricing european option, but it looks like the 6 order polynomial actually performs better than the MLPs in the in-sample validation set table \ref{tab:euroPerformance}. Keep in mind that we do not only want good interpolation, but we also want good extrapolation for our fitted model.The out-of-sample data will reveal if the high order polynomial or MLPs have overfitted the data.\\
 
-\begin{figure}[th]
+\begin{figure}[H]
 \centering
 \includegraphics{Figures/polynomialEuroC.png}
 \decoRule
@@ -265,231 +267,105 @@ Plotting the fit actual vs predicted target variable figure \ref{fig:PolynomialE
 \end{figure}
 
 \begin{table}[th]
-\caption{In-sample validation error for european call for polynomial regression and MLPS}
+\caption{In-sample validation error for polynomial regression and MLPs on european call option}
 \label{tab:euroPerformance}
 \centering
 \begin{tabular}{l l}
 \toprule
-\textbf{Model} & \textbf{Val. Loss} \\
+\textbf{Model} & \textbf{Valalidation Loss} \\
 \midrule
 Linear Reg. & 0.000631 \\
 2. degree  poly.  & 0.000069 \\
+3. degree poly & 0.000013\\
 4. degree poly.  & 0.000004 \\
 5. degree poly.  & 0.000002 \\
+6. degree poly. & 0.000001\\
 MLPs        & 0.000003\\
 \bottomrule\\
 \end{tabular}
 \end{table}
-The table is created to compare the performance for each model. The table confirms that the linear regression has a worse fit than the other models with higher capacity. The difference on the MLPs and best performing polynomial model are less than $1\cdot 10^{-6}$. The difference is negible so the fit for MLPs and polynomial regression of degree 4-6 performs all very well on the data.
-
+Table \ref{tab:euroPerformance} is created to compare the performance for each model. The table confirms that the linear regression has a worse fit than the other models with higher capacity. The difference on the MLPs and best performing polynomial model are less than $1\cdot 10^{-6}$. The difference is negible so the fit for MLPs and polynomial regression of degree 4-6 performs all very well on the in-sample training data in terms of the validation loss.
 
 %-----------------------------------
 %	SUBSECTION 3
 %-----------------------------------
-\subsection{Model Performance}
+\subsection{Performance}
 The model performance is evaluated by MSE, RMSE, MAE and coefficient of determination, where all the measures evaluate how close the model predictions are with the actual targets. The first three measures ranges are $\mathbb{R}^+$, where the goal is to have the lowest value possible. For MSE close to 0 means that the model predictions does not differ a lot from the observed targets. The RMSE and MAE are same kind of measure, but the deviation is measured slightly different. The coefficient of determination has range $(-\infty, 1]$, where a higher value indicate a better model. Coefficient of determination provides a measure of how well observed targets are predicted by the model, based on the proportion of total variation of targets explained by the model.
 
 \subsubsection{European Call Option}
-The european call option is trained with a dataset size of 300.000 samples, $\eta=0.001$ and a batch size of 64. 
+The european call option is trained with the algortihm and hyperparameters described in the training section (section \ref{Training}). By the hyperparameter investigation we choose a batch size of 64, learning rate $\eta = 0.001$ and a dataset of 300K samples. We compare the MLPs regression with the polynomial regression. Table \ref{tab:ComparePolyWithMLPS} shows that the MLPs is superior at extrapolating, because the MLPs performs better on all metrics on the out-of-sample test datasets compared to fitted polynomial regressions with a degree between 1 and 6. For the in-sample test dataset the polynomial regression of order 6 and MLPs perform almost equally well, but the polynomial regression of 6. degree is a classical example of overfitting. The in-sample test data is similar to the in-sample training data, hence we expect the same magnitude of error for the test set as for the training set for in-sample testing. The performance measures show that the polynomial regression that was performing well on the In-Sample dataset was due to overfitting, because the high order polynomial regression does perform poorly on out-of-sample data (table \ref{tab:ComparePolyWithMLPS}). For the 6. order polynomial regression, we see a negative coefficient of determination, which means the model performs worse than the model with the mean as a horizontal line. This means the 6. degree polynomial have bad performance for out-of-sample data. \\
 
 \begin{table}[th]
-\caption{Prediction results for european call test data for in sample}
-\label{tab:euroParRange}
+\caption{Performance comparision of MLPs and polynomial regression on european call option. Shown the best performing regressions in the linear model and the worst performing in terms of MSE for in-sample and out-of-sample datasets}
+\label{tab:ComparePolyWithMLPS}
 \centering
-\begin{tabular}{l l l l l l }
+\begin{tabular}{l l l l l l l }
 \toprule
-\textbf{MSE} & \textbf{RMSE} & \textbf{MAE} & \textbf{Coefficent of Determination} \\
+\textbf{Model} & \textbf{Dataset} & \textbf{MSE} & \textbf{RMSE} & \textbf{MAE} & \textbf{Coefficent of Determination} \\
 \midrule
-0.000006 & 0.002419 & 0.0019661242 & 0.99942\\
+MLPs & In-Sample & 0.000000 & 0.000629 & 0.000486 & 0.999961\\
+& Out-of-Money & 0.000007 & 0.002644 & 0.001551 & 0.995911\\
+& Long Matuiry & 0.000197 & 0.014048 & 0.010061 & 0.986518\\
+6. degree poly. & In-Sample & 0.000001 & 0.000958 & 0.000591 & 0.999909\\
+1. degree poly. &  & 0.000636 & 0.025212 & 0.018326 & 0.936628\\
+2. degree poly. & Long Maturity & 0.001196 & 0.034577 & 0.026287 & 0.918316\\
+6. degree poly. &  & 0.043361 & 0.208233 & 0.111190 & -1.962442\\
+2. degree poly. & Out-Of-Money & 0.000767 & 0.027694 & 0.022203 & 0.551246\\
+1. degree poly. &  & 0.005772 & 0.075973 & 0.060936 & -2.377251\\
 \bottomrule\\
 \end{tabular}
 \end{table}
 
-
-
-The performance measures are generally good, we see MAE, MSE and RMSE all have values less than 0.002419 from zero and a coefficient of determination 0.00058 from 1. 
+The MLPs has high predictive strength compared to the polynomials, because it performs well also on out-of-sample dataset. The MLPs show that it predicts out-of-money call option with less than a MSE with value $10^{-5}$, where the fit for the long maturity test set has a higher MSE. The european options are liquid in the markets, hence the pricing method can easily be trained on real data. The MLPs fit for in-sample data on the european call option is visualized in figure \ref{fig:MLPsInSampleEuroC}, which shows $\frac{c(S_0,K)}{K}$ predicted from the model and observed target values $\bm{y}$ divided by the strike. The figure shows a overall close fit. For the remaining part of this section the MLPs regression will only be considered, because the polynomial regression has shown bad performance for out-of-sample data.
 
 \begin{figure}[th]
 \centering
 \includegraphics{Figures/PredictionEuroC.png}
 \decoRule
-\caption[MLPs Predictions Vs. Actual Prices]{Predicted price based on MLPs model}
-\label{fig:MLPsEuroC}
+\caption[MLPs Performance on in-sample dataset European Call]{MLPs Performance on in-sample dataset on european call}
+\label{fig:MLPsInSampleEuroC}
 \end{figure}
-
-Illustration of the model fit is also provided, where the plot shows $\frac{c(S_0,K)}{K}$ predicted from the model and observed target values. The conclusion from the performance metrics is also present in the figure, where we see the model predicts close to target values over the whole range. Before moving on to pricing for american options, we investigate if polynomial regression can perform as MLPs
-
-\begin{table}[H]
-\caption{Parameter range}
-\label{tab:totalEuroParRange}
-\centering
-\begin{tabular}{l l l l l l l }
-\toprule
-\textbf{Dataset} & \textbf{Moneyness} & \textbf{r} & \textbf{$\sigma$} & \textbf{T} \\
-\midrule
-In-Sample & 0.8-1.2 & 1\%-3\% & 0.05-0.5 & 1/252-3.0\\ 
-Out-Of-Money & 0.6-0.8 & 1\%-3\% & 0.05-0.5 & 1/252-3.0\\ 
-Longer Maturity & 0.8-1.2 & 1\%-3\% & 0.05-0.5 & 3-0-5.0\\ 
-\bottomrule\\
-\end{tabular}
-\end{table}
-
-\begin{table}[th]
-\caption{Performance of predictive strength for different regression models}
-\label{tab:euroPerformanceComparision}
-\centering
-\begin{tabular}{l l l l l l l l }
-\toprule
-\textbf{Model} & \textbf{Dataset} & \textbf{MSE} & \textbf{RMSE} & \textbf{MAE} & \textbf{$R^2$} \\
-\midrule
-Linear Reg. & In-Sample & 0.000631 & 0.025122 & 0.018264 & 0.937445\\
-2. degree &  & 0.000069 & 0.008298 & 0.006136 & 0.993175\\
-4. degree &  & 0.000004 & 0.002059 & 0.001282 & 0.999580\\
-5. degree &  & 0.000002 & 0.001407 & 0.000864 & 0.999804\\
-MLPs &  & 0.000003 & 0.001628 & 0.001337 & 0.999736\\
-Linear Reg. & Out-Of-Money & 0.005772 & 0.075973 & 0.060936 & -2.377251\\
-2. degree &  & 0.000767 & 0.027694 & 0.022203 & 0.551246\\
-4. degree &  & 0.000944 & 0.030724 & 0.020542 & 0.447668\\
-5. degree &  & 0.001812 & 0.042568 & 0.027125 & -0.060261\\
-MLPs &  & 0.000005 & 0.002152 & 0.001569 & 0.997291\\
-Linear Reg. & Longer Maturity & 0.002662 & 0.051593 & 0.041232 & 0.818143\\
-2. degree &  & 0.001196 & 0.034577 & 0.026287 & 0.918316\\
-4. degree &  & 0.003956 & 0.062894 & 0.039932 & 0.729744\\
-5. degree &  & 0.012255 & 0.110702 & 0.064402 & 0.162742\\
-MLPs &  & 0.000066 & 0.008138 & 0.005817 & 0.995475\\
-\bottomrule\\
-\end{tabular}
-\end{table}
-
-
-\begin{figure}[th]
-\centering
-\includegraphics{Figures/polynomialOutMoneyEuroC.png}
-\decoRule
-\caption[Polynomial Regression Predictions Vs. Actual Prices]{Predicted price based on polynomial regression of varying degree}
-\label{fig:PolynomialOutMoneyEuroC}
-\end{figure}
-
-\begin{figure}[th]
-\centering
-\includegraphics{Figures/PredictionOutMoneyEuroC.png}
-\decoRule
-\caption[MLPs Predictions Vs. Actual Prices]{Predicted price based on MLPs model}
-\label{fig:MLPsOutMoneyEuroC}
-\end{figure}
-
-%\begin{figure}[th]
-%\centering
-%\includegraphics{Figures/PredictionLongTEuroC.png}
-%\decoRule
-%\caption[MLPs Predictions Vs. Actual Prices]{Predicted price based on MLPs model}
-%\label{fig:MLPsEuroC}
-%\end{figure}
-
-
-%\begin{figure}[H]
-%\centering
-%\includegraphics{Figures/polynomialLongTEuroC.png}
-%\decoRule
-%\caption[Polynomial Regression Predictions Vs. Actual Prices]{Predicted price based on polynomial regression of varying degree}
-%\label{fig:PolynomialEuroC}
-%\end{figure}
 
 
 \subsubsection{American Put Option}
+The american put option is priced with the same MLPs algorithm as for the european call. Table \ref{tab:AmerPerformanceComparision} shows once a again a good fit, hence, we believe, we have a high quality model for the american put option.
 
 \begin{table}[th]
-\caption{Performance of predictive strength for different regression models}
-\label{tab:euroPerformanceComparision}
+\caption{MLPs Performance on American Put Option}
+\label{tab:AmerPerformanceComparision}
 \centering
-\begin{tabular}{l l l l l l l l }
+\begin{tabular}{l l l l l l l }
 \toprule
-\textbf{Model} & \textbf{Dataset} & \textbf{MSE} & \textbf{RMSE} & \textbf{MAE} & \textbf{$R^2$} \\
+\textbf{Dataset} & \textbf{MSE} & \textbf{RMSE} & \textbf{MAE} & \textbf{$R^2$} \\
 \midrule
-MLPs Reg. & In-Sample & 0.000002 & 0.001562 & 0.001278 & 0.999634\\
-MLPs Reg. & Out-Of-Money & 0.000030 & 0.005503 & 0.003925 & 0.989674\\
-MLPs Reg. & Longer Maturity & 0.000194 & 0.013922 & 0.010731 & 0.980759\\
+In-Sample & 0.000002 & 0.001562 & 0.001278 & 0.999634\\
+Out-Of-Money & 0.000012 & 0.003519 & 0.002290 & 0.995778\\
+Longer Maturity & 0.000193 & 0.013894 & 0.009213 & 0.980835\\
 \bottomrule\\
 \end{tabular}
 \end{table}
 
-\begin{figure}[th]
-\centering
-\includegraphics{Figures/PredictionAmerP.png}
-\decoRule
-\caption[MLPs Predictions Vs. Actual Prices For American Put]{Predicted price based on MLPs model, where the targets are from the binomial model}
-\label{fig:PredictionAmerP}
-\end{figure}
-
-\begin{figure}[th]
-\centering
-\includegraphics{Figures/PredictionOutMoneyAmerP.png}
-\decoRule
-\caption[MLPs Predictions Vs. Actual Prices For American Put]{Predicted price based on MLPs model, where the targets are from the binomial model}
-\label{fig:PredictionOutMoneyAmerP}
-\end{figure}
-
-\begin{figure}[th]
-\centering
-\includegraphics{Figures/PredictionLongTAmerP.png}
-\decoRule
-\caption[MLPs Predictions Vs. Actual Prices For American Put]{Predicted price based on MLPs model, where the targets are from the binomial model}
-\label{fig:PredictionOutMoneyAmerP}
-\end{figure}
-
 \subsubsection{American Put On Minimum of Two Assets Option}
+The american put on minimum of two option has the double amount of parameters compared to the univariate contingent claims, hence the performance might give slightly higher MSE. The other potential problem is the lack of generality when training, because the american put on minimum of two option is not a first order homogeneous function. The error is then on the actual price for the option and not on the price relative to the strike. Table \ref{tab:AmerMinPerformanceComparision} shows a good fit for both in-the-money and longer maturity sample, but the MSE is higher as expected compared to the relative prices for the univariate contingent claims.  
 
+\begin{table}[th]
+\caption{Performance of predictive strength for different regression models}
+\label{tab:AmerMinPerformanceComparision}
+\centering
+\begin{tabular}{l l l l l l l }
+\toprule
+\textbf{Dataset} & \textbf{MSE} & \textbf{RMSE} & \textbf{MAE} & \textbf{$R^2$} \\
+\midrule
+In-Sample(TODO! Numbers) & 0.099621 & 0.315644 & 0.001278 & 0.999634\\
+In-The-Money & 0.510718 & 0.714646 & 0.542326 & 0.988782\\
+Longer Maturity & 3.957424 & 1.989328 & 1.413311 & 0.974056\\
+\bottomrule\\
+\end{tabular}
+\end{table}
 
+The MLPs has shown good performance in terms of our performance measures on all the derivatives considered. Next chapter will compare this MLPs model (henceforth referred to as MLPS II) with the closed form solutions, binomial model, LSM and LSM MLPs (henceforth referred to as MLPS I). All the models in this section considered had good performance on the in-sample dataset except of the too simple models linear regression and 2. degree polynomial regreesion. To test the predictive strength for the models, we tested the models with out-of-sample data. Specifically we consider longer maturity and deep-out-of-money options.\\
 
-
-
-
-
-
-
-
-
-
-The standard measures mean square error (MSE) and root mean square error (RMSE) shows that the MLPs increase its precision for in-sample interpolation, but for the out-of-sample datasets the decreasing error hits a plateau for 80K data samples.  
-
-
-%MLPs & Out-Of-Money: 60K & 0.000075 & 0.008656 & 0.006250 & 0.956157\\
-%MLPs &  & 0.000033 & 0.005702 & 0.004084 & 0.980976\\
-%MLPs &  & 0.000005 & 0.002253 & 0.001770 & 0.997031\\
-%MLPs &  & 0.000005 & 0.002152 & 0.001569 & 0.997291\\
-%MLPs &  & 0.000006 & 0.002371 & 0.001715 & 0.996710\\
-
-
-actual data samples agrees with the model for both in-sample and out-of-sample. The in-sample training is based on the parameter ranges in table \ref{tab:euroParRange}, where the out-of-sample is 60.000 simulated samples, where the moneyness lies between 0.6-0.8 and the other ranges remain the same.  Table \ref{tab:euroDataSize} shows how the validation error for in-sample and the test-error for out-of-sample datasets perform varying the number size of the training dataset. The validation error declines for increasing sample size, but the test error does not improve significantly for 100K up to 1M. The test error decreases for 100K-300K, but it increases for 300K-1M, hence we choose to work with the 300K dataset in the analysis. The 
-RMSE match units - standard deviation of residuals how much spread away from mean
-Coefficient of determinant metric of correlation
-variation around the mean.
-predictic how the regression does compared to only fitting with the mean
-Does our regression fit better the data than the mean
-less variation around the mean. Hence most variation is explained by the regression. some number less variation around the line vs the mean
-agrees fits for most samples, but for 
-
-
-
-The same architecture is applied to each dataset and the Adam optimizer uses minibatches of size 64.
-
-The training algorithm is 
-
-
-All the models considered had good performance on the in-sample dataset except of the too simple models linear regression and 2. degree polynomial regreesion. To test the predictive strength for the models, we test the models with out-of-sample data. Specifically we consider longer maturity and deep-out-of-money options (see table \ref{tab:totalEuroParRange})
-
-The performance measures show that the polynomial regression that was performing better on the In-Sample dataset was due to overfitting, because the high order polynomial regression does perform poorly on out-of-sample data (see table \ref{tab:euroPerformanceComparision} and figure \ref{fig:PolynomialOutMoneyEuroC}). For the 5. order polynomial regression, we see a negative coefficient of determination, which means the model performs worse than the model with the mean as a horizontal line. This means the 5. order polynomial clearly have low predictive strength. 
-
-
-
-We see that the 2. degree polynomial is best on most of the performance measures for our-of-sample data. Notice based on MAE for out-of-money data the 4. degree polynomial performs better than the 2. degree polynomial, but if we look at the MSE the performance is best for the 2. degree polynomial. This is due to that the two measure weight errors in different ways, where the MSE penalize large error more than the MAE. Amoung the polynomial the 2. degree polynoial regression performs best, but gets outperformed by MLPs (see also figure \ref{fig:MLPsOutMoneyEuroC}). The MLPs has high predictive strength compared to the polynomials, because it performs well also on out-of-sample dataset. The section showed how succesfully MLPs can be used in a GBM model setup for pricing european options. The MLPs is not based on a model, it can only see data. This is promising because the MLPs could also be used for actual market data or different models to learn patterns. In the coming sections we will focus on american put options and basket options, where in the basket option case the MLPs benefit for the fact that it does not increase expontially with the dimension to maintain low error compared to polynomial regression. For the american put option the MLPs regression will only be considered, because the polynomial regression have low predictive strength for the simpler european option.
-
-
-
-
-
-The results are promosing, because the MLPs are model free in the sense, that we could have simulated out for any model, where MLPs then learn from data only. By observing this the method can be extended to real market data in fact \parencite{GasparRaquel20} have resently showed good results for a MLPs for real market data. The next section will investigate the curse of dimensionality and the application of MLPs in this context.
-\parencite{FergusonRyan2018}
+The MLPs is not based on a model, it is only trained on the available data. This feature makes the MLPs II pricing method versatile because the MLPs could also be used for actual market data or different models to learn patterns. The fact that the method can be extended to real market data is already shown in \parencite{GasparRaquel20}. This section showed how succesfully MLPs compared to polynomial is in a GBM model setup for pricing derivatives.
 
 
 

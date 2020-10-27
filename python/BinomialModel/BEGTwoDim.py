@@ -2,7 +2,10 @@
 ## Tree method 2-dimensionel inspired by BEG
 ##########
 import numpy as np
+import datetime
 def BEG(Nstep, T, sigma1, sigma2, r, rho, S10, S20, K, amer):
+    # measure time
+    start = datetime.datetime.now()
     # invariant quantities
     N = NStep
     deltaT = T/N
@@ -45,6 +48,8 @@ def BEG(Nstep, T, sigma1, sigma2, r, rho, S10, S20, K, amer):
                     CVals[i,j] = p_uu*CVals[i+1,j+1]+ p_ud*CVals[i+1,j-1]+p_du*CVals[i-1,j+1]+p_dd*CVals[i-1,j-1]
                     
     price = CVals[N,N]
+    finish = datetime.datetime.now()
+    print ("Time taken",finish-start)
     print(price)
     return price
 
@@ -58,6 +63,6 @@ sigma1 = 0.2
 sigma2 = 0.3
 T = 1
 rho = 0.5
-NStep = 100
+NStep = 10
 
-#print(BEG(Nstep=NStep, T=T, sigma1=sigma1, sigma2=sigma2, r=r, rho=rho, S10=S10, S20=S20, K=K, amer=False))
+print(BEG(Nstep=NStep, T=T, sigma1=sigma1, sigma2=sigma2, r=r, rho=rho, S10=S10, S20=S20, K=K, amer=True))

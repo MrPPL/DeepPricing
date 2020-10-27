@@ -1,3 +1,4 @@
+
 import numpy as np
 import torch
 from torch.utils.data import Dataset, DataLoader
@@ -51,9 +52,8 @@ class NeuralNet(nn.Module):
 #####################
 # get dataset
 ###################
-#datasets = ["./deepLearning/hirsa19/data/60KuniCEuroData.csv","./deepLearning/hirsa19/data/outMoneyEuroCData.csv","./deepLearning/hirsa19/data/longMaturityEuroCData.csv"]
-datasets1 = ["./deepLearning/hirsa19/data/outMoneyAmerPData.csv","./deepLearning/hirsa19/data/longTAmerPData.csv"]
-test_dataset = EuroParDataset(datasets1[1])
+datasets = ["./deepLearning/minAmerican/data/InMoneyAmerMinPut.csv","./deepLearning/minAmerican/data/longMatAmerMinPut.csv"]
+test_dataset = EuroParDataset(datasets[0])
 # get first sample and unpack
 first_data = test_dataset[0]
 features, labels = first_data
@@ -73,7 +73,7 @@ outputSize = 1
 loaded_model = NeuralNet(n_features, hidden_size1, hidden_size2, hidden_size3, outputSize)
 #for param in loaded_model.parameters():
 #    print("without training model", param)
-loaded_model.load_state_dict(torch.load("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/python/deepLearning/Models/hirsaModelAM1.pth"))
+loaded_model.load_state_dict(torch.load("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/python/deepLearning/Models/ModelAM_Min1.pth"))
 loaded_model.eval()
 #loaded_model.state_dict()
 #for param in loaded_model.parameters():
@@ -129,14 +129,14 @@ from matplotlib import rcParams
 rcParams['figure.figsize']=5,4
 plt.style.use('ggplot')
 plt.scatter(predictions, actuals, alpha=0.5, s=1)
-plt.xlabel("Predictions Price/Strike Price")
-plt.ylabel("Actual Price/Strike Price")
+plt.xlabel("Predictions Price")
+plt.ylabel("Actual Price")
 plt.title("MLPs Predictions Vs. Actual Targets")
 #plt.legend(loc=2) #location of legend
 #plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
 abline(1,0)
 rcParams['agg.path.chunksize']=10**4
-plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/longTAmerP.png")
+plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/inMoneyAmerMinP.png")
 plt.show()
 
 
@@ -145,17 +145,17 @@ plt.show()
 # Make predictions
 ###########
 # make a class prediction for one row of data
-def predict(row, model):
-    # convert row to data
-    row = torch.tensor([row])
-    # make prediction
-    yhat = model(row)
-    # retrieve numpy array
-    yhat = yhat.detach().numpy()
-    return yhat
-
-row = [0.9,0.02, 0.5, 1]
-yhat = predict(row, loaded_model)
-print('Predicted: %.3f' % yhat)
+#def predict(row, model):
+#    # convert row to data
+#    row = torch.tensor([row])
+#    # make prediction
+#    yhat = model(row)
+#    # retrieve numpy array
+#    yhat = yhat.detach().numpy()
+#    return yhat
+#
+#row = [0.9,0.02, 0.5, 1]
+#yhat = predict(row, loaded_model)
+#print('Predicted: %.3f' % yhat)
 
     

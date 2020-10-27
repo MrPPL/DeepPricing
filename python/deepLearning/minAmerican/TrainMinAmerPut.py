@@ -1,3 +1,4 @@
+
 import torch
 import torch.nn as nn
 import numpy as np
@@ -134,7 +135,7 @@ def train_model(train_dl, valid_dl, model):
             break  # early stop criterion is met, we can stop now
     
 #prepare data
-dataPath = "./deepLearning/hirsa19/data/300KPAmerData.csv"
+dataPath = "./deepLearning/minAmerican/data/300KAmerMinPut.csv"
 dataset = EuroParDataset(dataPath)
 train_dl, valid_dl = prepare_data(dataPath)
 print(len(train_dl.dataset), len(valid_dl.dataset))
@@ -152,14 +153,9 @@ learning_rate = 0.001
 model = NeuralNet(input_size, hidden_size1, hidden_size2, hidden_size3, outputSize)
 #train the model
 train_model(train_dl, valid_dl, model)
-# evaluate the model
-# calculate mse
-#actuals, predictions = evaluate_model(test_dl, model)
-#mse = mean_squared_error(actuals, predictions)
-#print('MSE: %.6f, RMSE: %.6f' % (mse, np.sqrt(mse)))
 
 # save model
-torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/python/deepLearning/Models/hirsaModelAM1.pth")
+torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/python/deepLearning/Models/ModelAM_Min1.pth")
 
 
 

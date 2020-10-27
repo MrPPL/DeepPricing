@@ -2,8 +2,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import torch
 # create dataset
+datasets = ["./deepLearning/hirsa19/data/60KuniCEuroData.csv","./deepLearning/hirsa19/data/outMoneyEuroCData.csv","./deepLearning/hirsa19/data/longMaturityEuroCData.csv"]
 dataTrain = np.loadtxt("./deepLearning/hirsa19/data/mediumCEuroDataTrain.csv", delimiter=',', dtype=np.float32, skiprows=1)
-dataTest = np.loadtxt("./deepLearning/hirsa19/data/outMoneyEuroCData.csv", delimiter=',', dtype=np.float32, skiprows=1)
+dataTest = np.loadtxt(datasets[1], delimiter=',', dtype=np.float32, skiprows=1)
 # here the first column is the class label, the rest are the features
 X_train = torch.from_numpy(dataTrain[:, 2:]) # size [n_samples, n_features]
 Y_train = torch.from_numpy(dataTrain[:, [1]]) # size [n_samples, 1]
@@ -58,17 +59,17 @@ mae_test = [mean_absolute_error(Y_test, model) for model in poly]
 
 print("The model performance for the training set")
 print("-------------------------------------------")
-print ([f'MSE of training set is {x:.6f}' for x in mse_train])
-print ([f'MAE of training set is {x:.6f}' for x in mae_train])
-print ([f'RMSE of training set is {x:.6f}' for x in rmse_train])
-print ([f'R2 of training set is {x:.6f}' for x in r2_train]) 
+print ([f'MSE train {x:.6f}' for x in mse_train])
+print ([f'RMSE train {x:.6f}' for x in rmse_train])
+print ([f'MAE train {x:.6f}' for x in mae_train])
+print ([f'R2 train {x:.6f}' for x in r2_train]) 
 print("\n")
 print("The model performance for the test set")
 print("-------------------------------------------")
-print ([f'MSE of test set is {x:.6f}' for x in mse_test])
-print ([f'MAE of test set is {x:.6f}' for x in mae_test])
-print ([f'RMSE of test set is {x:.6f}' for x in rmse_test])
-print ([f'R2 of test set is {x:.6f}' for x in r2_test]) 
+print ([f'MSE test {x:.6f}' for x in mse_test])
+print ([f'RMSE test {x:.6f}' for x in rmse_test])
+print ([f'MAE test {x:.6f}' for x in mae_test])
+print ([f'R2 test {x:.6f}' for x in r2_test]) 
 # Plot
 from matplotlib import rcParams
 
@@ -83,6 +84,7 @@ for i in [0,1]:
         polIdx = 3*i + j
         ax[i,j].set_title("degree: " + str(1 + polIdx))
         ax[i,j].scatter(poly[polIdx], Y_test, alpha=0.5, s=1)
-#plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/polynomialLongTEuroC.png")
+#savefigName=["polynomialInSampleEuroC", "polynomialOutMoneyEuroC", "polynomialLongTEuroC"]
+#plt.savefig("./../latex/Figures/polynomialOutMoneyEuroC.png")
 plt.show()
 

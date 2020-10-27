@@ -786,6 +786,57 @@
     \field{year}{2018}
   \endentry
 
+  \entry{McDonaldRobert2015}{article}{}
+    \name{author}{2}{}{%
+      {{hash=MR}{%
+         family={McDonald},
+         familyi={M\bibinitperiod},
+         given={Robert},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=PA}{%
+         family={Paulson},
+         familyi={P\bibinitperiod},
+         given={Anna},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {eng}%
+    }
+    \list{publisher}{1}{%
+      {American Economic Association}%
+    }
+    \keyw{Bank assets ; Loans ; Life insurance ; Financial securities ;
+  Subsidiary companies ; Payments ; Collateral ; Credit insurance ; Cash ;
+  Symposia: The Bailouts of 2007–2009 ; Credit default swaps ; Insurance
+  industry ; Finance ; Management ; Studies ; Economic theory ; Economic
+  statistics ; Writedowns ; Economic crisis ; Financial Crises (G01) ; Northern
+  America ; Governmental Loans, Loan Guarantees, Credits, Grants, Bailouts
+  (H81) ; Bank ; Financial Crisis ; Lending ; Insurance ; Bankruptcy,
+  Liquidation (G33) ; Financial Institutions and Services: Government Policy
+  and Regulation (G28) ; U.S ; Insurance, Insurance Companies, Actuarial
+  Studies (G22) ; Bankruptcy}
+    \strng{namehash}{MRPA1}
+    \strng{fullhash}{MRPA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2015}
+    \field{labeldatesource}{year}
+    \field{sortinit}{M}
+    \field{sortinithash}{M}
+    \field{issn}{0895-3309}
+    \field{number}{2}
+    \field{pages}{81\bibrangedash 106}
+    \field{title}{AIG in Hindsight}
+    \field{volume}{29}
+    \list{location}{1}{%
+      {Nashville}%
+    }
+    \field{journaltitle}{The Journal of economic perspectives}
+    \field{year}{2015}
+  \endentry
+
   \entry{Merton73}{article}{}
     \name{author}{1}{}{%
       {{hash=MRC}{%

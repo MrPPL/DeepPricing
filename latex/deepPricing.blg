@@ -33,45 +33,45 @@ Warning--I didn't find a database entry for "Kim02"
 Biblatex version: 3.8
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 27 entries,
+You've used 28 entries,
             6268 wiz_defined-function locations,
-            1397 strings with 15433 characters,
-and the built_in function-call counts, 156033 in all, are:
-= -- 10036
-> -- 4063
-< -- 1150
-+ -- 4206
-- -- 1814
-* -- 11455
-:= -- 14693
+            1409 strings with 16284 characters,
+and the built_in function-call counts, 162491 in all, are:
+= -- 10483
+> -- 4216
+< -- 1218
++ -- 4356
+- -- 1857
+* -- 11893
+:= -- 15200
 add.period$ -- 0
-call.type$ -- 27
-change.case$ -- 685
+call.type$ -- 28
+change.case$ -- 740
 chr.to.int$ -- 112
-cite$ -- 52
-duplicate$ -- 16694
-empty$ -- 14281
-format.name$ -- 1795
-if$ -- 32306
+cite$ -- 54
+duplicate$ -- 17404
+empty$ -- 14857
+format.name$ -- 1865
+if$ -- 33717
 int.to.chr$ -- 0
-int.to.str$ -- 90
+int.to.str$ -- 95
 missing$ -- 0
-newline$ -- 968
-num.names$ -- 1558
-pop$ -- 8848
+newline$ -- 1010
+num.names$ -- 1649
+pop$ -- 9174
 preamble$ -- 1
-purify$ -- 820
+purify$ -- 880
 quote$ -- 0
-skip$ -- 5622
+skip$ -- 5920
 stack$ -- 0
-substring$ -- 15570
-swap$ -- 4778
-text.length$ -- 796
-text.prefix$ -- 27
+substring$ -- 16184
+swap$ -- 5004
+text.length$ -- 824
+text.prefix$ -- 28
 top$ -- 1
-type$ -- 906
+type$ -- 940
 warning$ -- 0
-while$ -- 1737
+while$ -- 1798
 width$ -- 0
-write$ -- 942
+write$ -- 983
 (There were 2 warnings)

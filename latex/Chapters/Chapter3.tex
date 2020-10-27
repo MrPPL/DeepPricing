@@ -454,7 +454,9 @@ The call on max option is then a best of asset or cash option subtracted the str
 \end{equation}
 
 To derive put max we can utilize a put-call-parity (see page 6 \parencite{Ouwehand2006}), but it takes a different form than the one presented in \ref{Chapter2} (see \ref{put-call-parity}). The relationship for the exotic call options:
-$$V_c(K)+K\exp(-r\cdot (T-t)) = V_p(K)+V_c(0)$$
+\begin{equation}\label{putMin}
+V_c(K)+K\exp(-r\cdot (T-t)) = V_p(K)+V_c(0)
+\end{equation}
 Where $V_c(K)$ is the value of the exotic call option and $V_c(0)$ is the best of assets call option.\\
 
 The exotic european options serve as benchmark for the multivariate lattice approach, because if the lattice appproach is close to the european benchmark then it is reasonable to expect a close estimat to the american option. The above section is also a presentation of the martingale approach versatility. 

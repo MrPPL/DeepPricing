@@ -279,14 +279,14 @@ Peter Pommergård Lind
 $\matr{A}$ & matrix notation for matrix A\\
 $\bm{a}$ & vector notation for vector a\\
 c &	European call option price \\
+C &	American Call option price \\
 p &	European put option price \\
+P &	American Put option price \\
 K &	Strike price \\
 T &	Maturity in years \\ 
 $\sigma$ &	Volatility of asset \\
-C &	American Call option price \\
-P &	American Put option price \\
-$S_0$ &	Spot price \\
-$S_T$ & Stock price at maturity \\
+$S(0)$ &	Spot price \\
+$S(T)$ & Stock price at maturity \\
 $S_i(t)$ & i'th stock price at time t\\
 r &	Continuous compounding risk-free yearly interest rate \\
 %Symbol & Name & Unit \\
@@ -299,7 +299,7 @@ $p_{ij}$ & Correlation coefficient between asset i and j\\
 $\mu_i$ & drift of the continuous lognormal distribution\\
 $F(t,S(t))$ & pricing function of S(t) to time t\\
 $d$ & number of risky assets\\
-$\mathbb{N}$ & natural number: $1,2,\ldots$\\
+$\mathbb{N}$ & natural numbers: $1,2,\ldots$\\
 \addlinespace % Gap to separate the Roman symbols from the Greek
 \end{symbols}
 
@@ -381,11 +381,6 @@ It is also a good idea to standardize the hidden covariates as well. This is cal
 
 It is recommended to use batch normalization  in combination with dropout. \\
 
-The Bias vs Variance trade-off
-
-Bias refers to the error due to the model’s simplistic assumptions in fitting the data. A high bias means that the model is unable to capture the patterns in the data and this results in under-fitting.
-
-Variance refers to the error due to the complex model trying to fit the data. High variance means the model passes through most of the data points and it results in over-fitting the data.
 
 By using a dynamic programming argument with three strategies:
 \begin{enumerate}

@@ -1,16 +1,79 @@
 % Chapter Template
 
-\chapter{Discussion and Further Investigation} % Main chapter title
+\chapter{Numerical Investigation and Discussion} % Main chapter title
 
 \label{Chapter6} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+This chapter will compare empirically all the numerical methods presented for different types of contingent claims. The first section looks at the closed form solutions to the european options compared with lattice approch for pricing.
+
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
+\section{European Options}
+European options are simple in the sense, that they can only be exercise at maturity. Thoughout the previous chapters specially chapter \ref{Chapter2} and \ref{Chapter3} we have seen closed form solutions for the european call, call on max, call on min and geometric average options. The lattice model presented is a numerical model to approximate european options and american options. The closed form solutions and the numerical lattice approch can be compared for european options, where a small deviation indicates that the lattice approach gives reasonable prices for the american options.\\
 
-\section{Numerical Investigation}
-In table \ref{tab:multidimTree} we look how the binomial lattice approach to multivariate contingent claims performs compared with the analytical solution also derived in this section. For the exotic european options we have a closed form solution, so we can measure how the binomial lattice approach works in those cases. With solutions from the lattice approach within a small range of the closed form solution gives us confidence in the multivariate binomial model for pricing e.g. american put options, where there is no closed form solution.
-\begin{table}[H]
+First we compare the numerical cost for european put min option by increasing the number of equidistant time-steps, where a trade-off between time and accuracy is investigated. The european put min has a closed form solution\footnote{Equation \eqref{putMin} and \eqref{callMax}}, hence the effect on accuracy is measured by comparision. The computation time is measured in order to discuss the trade-off between speed and accuracy. Tabel \ref{tab:TradeOffEuroMin} shows that the algorithm accuracy increases with the number of equidistant time-steps, but the computational speed dramatically slows down for high number of steps. In MLPs II pricing method we used 100 equidistant time-steps, because we simulated 300.000 datapoints, which is a computational heavy task. We could have chosen more time-steps for a increased accuracy for the true price, but we judged the cost higher in terms of computational time than the benefits. For the other tables will we use BEG with 500 time-steps, because henceforth we need considerable less prices, hence the accuracy weights more.\\
+
+\begin{table}[th]
+\caption{Comparision of speed and accuracy for a european put min option, where the inputs are K=40, $S_1(0)=S_2(0)=40$, $\sigma_1=0.2, \sigma_2=0.3$, T=1, $\rho=0.5$  and r=0.06. Note ms is shorthand for millisecond}
+\label{tab:TradeOffEuroMin}
+\centering
+\begin{tabular}{l l l l}
+\toprule
+\textbf{Method} & \textbf{No. Steps} & \textbf{Price} & \textbf{Time: min:sec.ms} \\
+\midrule
+BEG & 10 & 4.248 & 0:00.003\\
+& 50 & 4.341 & 0:00:097\\
+& 100 & 4.352 & 0:00.591\\
+& 200 & 4.358 & 0:04.121\\
+& 500 & 4.361 & 0:59.337\\
+& 1000 & 4.362 & 9:34.164\\
+Analytic form & & 4.363 & \\
+\bottomrule\\
+\end{tabular}
+\end{table}
+
+\begin{table}[th]
+\caption{Comparision of speed and accuracy for a american put min option, where the inputs are K=40, $S_1(0)=S_2(0)=40$, $\sigma_1=0.2, \sigma_2=0.3$, T=1, $\rho=0.5$  and r=0.06. Note ms is shorthand for millisecond}
+\label{tab:TradeOffAmerMin}
+\centering
+\begin{tabular}{l l l l}
+\toprule
+\textbf{Method} & \textbf{No. Steps} & \textbf{Price} & \textbf{Time: min:sec.ms} \\
+\midrule
+BEG & 10 & 4.524 & 00:00.006\\
+& 50 & 4.594 & 00:00.250\\
+& 100 & 4.602 & 00:01.837\\
+& 200 & 4.605 & 00:14.025\\
+& 500 & 4.608 & 03:35.039\\
+& 1000 & 4.609 & 28:32.584\\
+Analytic form & & 4.363 & \\
+\bottomrule\\
+\end{tabular}
+\end{table}
+
+Table \ref{tab:PriceEuropean} shows that the BEG and CRR model have highest accuracy for 100 equidistant time-steps hence we choose to price with N=100 for the multivariate binomial model. The biggest absolute difference is 0.013 which is reasonable within the bid-ask spread for most options.
+
+\begin{table}[th]
+\caption{Valuation of multivariate contigent claims with two underlyings with K=40, $S_1(0)=S_2(0)=40$, $\sigma_1=0.2, \sigma_2=0.3$, T=1, $\rho=0.5$  and r=0.06.}
+\label{tab:PriceEuropean}
+\centering
+\begin{tabular}{l l l l}
+\toprule
+\textbf{Derivative type} & \textbf{Method} & \textbf{No. Steps} & \textbf{Price} \\
+\midrule
+European Call Minimum & BEG & 100 & 2.475\\
+& Analytic form & & 2.483\\
+European Call Maximum & BEG & 100 & 7.787\\
+& Analytic form & & 7.800\\
+Geometric Average Put & BEG & 100 & \\
+& Analytic form & & \\
+\bottomrule\\
+\end{tabular}
+\end{table}
+
+\begin{table}[th]
 \caption{Valuation of multivariate contigent claims with two underlyings with K=40, $S_1(0)=S_2(0)=40$, $\sigma_1=0.2, \sigma_2=0.3$, T=1, $\rho=0.5$  and r=0.06.}
 \label{tab:multidimTree}
 \centering
@@ -18,21 +81,24 @@ In table \ref{tab:multidimTree} we look how the binomial lattice approach to mul
 \toprule
 \textbf{Derivative type} & \textbf{Method} & \textbf{No. Steps} & \textbf{Price} \\
 \midrule
-European Put Minimum & BEG & 10 & 4.248 \\
- & BEG & 50 & 4.341 \\
- & BEG & 100 & 4.352 \\
-& Analytic form & & 4.363\\
-European Call Minimum & BEG & 100 & 2.475\\
-& Analytic form & & 2.483\\
-European Call Maximum & BEG & 100 & 7.787\\
-& Analytic form & & 7.800\\
 American Put Minimum & BEG & 10 & 3.830\\
  &  & 50 & 3.884\\
  &  & 100 & 3.890\\
 \bottomrule\\
 \end{tabular}
 \end{table}
-From table \ref{tab:multidimTree} we see that the BEG approach has highest accuracy for 100 equidistant time-steps hence we choose to price with N=100 for the multivariate binomial model. The biggest absolute difference is 0.013 which is reasonable within the market spread for trading. The results are promising for valuation of american put options based on several underlying assets. This table will serve as reference and benchmark for the more recent approaches with neural networks in chapter \ref{Chapter6}.
+
+From table \ref{tab:multidimTree} we see that the BEG approach  The results are promising for valuation of american put options based on several underlying assets. This table will serve as reference and benchmark for the more recent approaches with neural networks in chapter \ref{Chapter6}.
+
+
+\section{American Put Option}
+
+\section{Exotic American Options}
+
+
+\section{Numerical Investigation}
+
+
 
 The computer is discrete, hence we simulate the stock path as an Bermudan option, where we have 50 time-steps per year. I.e. we approximate the American option with a Bermudan option on same underlying. 
  We simulate 100.000 paths for the stock.
@@ -174,3 +240,6 @@ Pricing options with early exercise decisions is not a issue with backward prici
 
 \section{Main Section 2}
 \parencite{liaw2018tune}
+\parencite{FergusonRyan2018}
+
+Methods cannot be compared due to lack of code efficientcy. This is something that can be optimized. 

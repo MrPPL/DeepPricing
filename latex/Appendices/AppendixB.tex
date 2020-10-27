@@ -3,6 +3,40 @@
 \chapter{Notation} % Main appendix title
 
 \label{AppendixB} % For referencing this appendix elsewhere, use \ref{AppendixA}
+\begin{figure}[th]
+\centering
+\includegraphics{Figures/outMoneyAmerP.png}
+\decoRule
+\caption[MLPs Performance for Out-of-money datasets on American Put]{MLPs Performance for Out-of-money datasets on American Put, where the targets are from the binomial model}
+\label{fig:MLPsAmerPOutMoney}
+\end{figure}
+
+\begin{figure}[th]
+\centering
+\includegraphics{Figures/longTAmerP.png}
+\decoRule
+\caption[MLPs Performance for Out-of-money datasets on American Put]{MLPs Performance for Out-of-money datasets on American Put, where the targets are from the binomial model}
+\label{fig:MLPsAmerPLongT}
+\end{figure}
+
+\begin{figure}[th]
+\centering
+\includegraphics{Figures/polynomialOutMoneyEuroC.png}
+\decoRule
+\caption[Polynomial Regression Performance on out-of-money dataset European Call]{Polynomial Regression Performance on out of money dataset on european call}
+\label{fig:MLPsEuroCOutOfMoney}
+\end{figure}
+
+
+
+\begin{figure}[th]
+\centering
+\includegraphics{Figures/polynomialLongTEuroC.png}
+\decoRule
+\caption[Polynomial Regression Performance on long maturity dataset European Call]{Polynomial Regression Performance on long maturity dataset on european call}
+\label{fig:MLPsEuroCLongMaturity}
+\end{figure}
+
 
 We choose grid search with the cartesian product, where b denote the batchsize.
 $$\eta \times b = \{(\eta,b) : \eta \in \{0.0001, 0.001, 0.01 \} \ and \ b \in \{8, 256, 1024\} \}$$
@@ -116,24 +150,55 @@ From above table \ref{tab:hyperAmerMin2} the training error improves with bigger
 \label{fig:dataComparisonEuroMLP}
 \end{figure}
 
-\begin{table}[th]
-\caption{Performance of in-sample and out-of-sample dataset of different sizes for MLPs regression on a european call option}
-\label{tab:euroDataSize}
+
+Long maurity polynomial regression:
+['MSE test 0.002662', 'MSE test 0.001196', 'MSE test 0.001654', 'MSE test 0.003956', 'MSE test 0.012255', 'MSE test 0.043361']
+['RMSE test 0.051593', 'RMSE test 0.034577', 'RMSE test 0.040666', 'RMSE test 0.062894', 'RMSE test 0.110702', 'RMSE test 0.208233']
+['MAE test 0.041232', 'MAE test 0.026287', 'MAE test 0.028371', 'MAE test 0.039932', 'MAE test 0.064402', 'MAE test 0.111190']
+['R2 test 0.818143', 'R2 test 0.918316', 'R2 test 0.887014', 'R2 test 0.729744', 'R2 test 0.162742', 'R2 test -1.962442']
+
+In-sample polynomial regression:
+['MSE test 0.000636', 'MSE test 0.000069', 'MSE test 0.000013', 'MSE test 0.000004', 'MSE test 0.000002', 'MSE test 0.000001']
+['RMSE test 0.025212', 'RMSE test 0.008316', 'RMSE test 0.003624', 'RMSE test 0.002052', 'RMSE test 0.001414', 'RMSE test 0.000958']
+['MAE test 0.018326', 'MAE test 0.006141', 'MAE test 0.002561', 'MAE test 0.001280', 'MAE test 0.000867', 'MAE test 0.000591']
+['R2 test 0.936628', 'R2 test 0.993105', 'R2 test 0.998691', 'R2 test 0.999580', 'R2 test 0.999801', 'R2 test 0.999909']
+
+Out-of-money maurity polynomial regression:
+['MSE test 0.005772', 'MSE test 0.000767', 'MSE test 0.000839', 'MSE test 0.000944', 'MSE test 0.001812', 'MSE test 0.004423']
+['RMSE test 0.075973', 'RMSE test 0.027694', 'RMSE test 0.028960', 'RMSE test 0.030724', 'RMSE test 0.042568', 'RMSE test 0.066506']
+['MAE test 0.060936', 'MAE test 0.022203', 'MAE test 0.020288', 'MAE test 0.020542', 'MAE test 0.027125', 'MAE test 0.041315']
+['R2 test -2.377251', 'R2 test 0.551246', 'R2 test 0.509280', 'R2 test 0.447668', 'R2 test -0.060261', 'R2 test -1.588030']
+
+
+\begin{figure}[th]
 \centering
-\begin{tabular}{l l l l l l l l }
-\toprule
-\textbf{Model} & \textbf{Dataset} & \textbf{MSE} & \textbf{RMSE} & \textbf{MAE} & \textbf{$R^2$} \\
-\midrule
-MLPs & In-sample Training: 800 & 0.000092 & 0.009601 & 0.007214 & 0.989676\\
-MLPs & 8K & 0.000015 & 0.003875 & 0.002999 & 0.998518\\
-MLPs & 80K & 0.000008 & 0.002914 & 0.002466 & 0.999167\\
-MLPs & 240K & 0.000006 & 0.002419 & 0.001966 & 0.99942\\
-MLPs & 800K & 0.000004 & 0.002098 & 0.001742 & 0.999565\\
-MLPs & In-sample Validation: 200 & 0.000092 & 0.009601 & 0.007214 & 0.989676\\
-MLPs & 2K & 0.000015 & 0.003875 & 0.002999 & 0.998518\\
-MLPs & 20K & 0.000008 & 0.002914 & 0.002466 & 0.999167\\
-MLPs & 60K & 0.000006 & 0.002419 & 0.001966 & 0.99942\\
-MLPs & 200K & 0.000004 & 0.002098 & 0.001742 & 0.999565\\
-\bottomrule\\
-\end{tabular}
-\end{table}
+\includegraphics{Figures/polynomialOutMoneyEuroC.png}
+\decoRule
+\caption[Polynomial Regression Predictions Vs. Actual Prices]{Predicted price based on polynomial regression of varying degree}
+\label{fig:PolynomialOutMoneyEuroC}
+\end{figure}
+
+\begin{figure}[th]
+\centering
+\includegraphics{Figures/PredictionOutMoneyEuroC.png}
+\decoRule
+\caption[MLPs Predictions Vs. Actual Prices]{Predicted price based on MLPs model}
+\label{fig:MLPsOutMoneyEuroC}
+\end{figure}
+
+\begin{figure}[th]
+\centering
+\includegraphics{Figures/longTAmerMinP.png}
+\decoRule
+\caption[MLPs Performance on long maturity dataset on American bivariate contingent claim]{MLPs Performance on long maturity dataset on American put on minimum of two stocks}
+\label{fig:MLPsEuroC}
+\end{figure}
+
+
+\begin{figure}[th]
+\centering
+\includegraphics{Figures/inMoneyAmerMinP.png}
+\decoRule
+\caption[MLPs Performance on long maturity dataset on American bivariate contingent claim]{MLPs Performance on long maturity dataset on American put on minimum of two stocks}
+\label{fig:MLPsEuroC}
+\end{figure}
