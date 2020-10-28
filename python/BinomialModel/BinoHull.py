@@ -79,8 +79,8 @@ def findPayoff(steps, maturity, spot, vol, strike, r):
     return expecTree
 
 print(findPayoff(steps=100, maturity=2, spot=40, vol=0.2, strike=40, r=0.06)['0.0'])
-a = (findPayoff(steps=100, maturity=2, spot=40/40, vol=0.2, strike=40/40, r=0.06)['0.0'])
-print(a[0]*40)
+#a = (findPayoff(steps=100, maturity=2, spot=40/40, vol=0.2, strike=40/40, r=0.06)['0.0'])
+#print(a[0]*40)
 
 #for S in range(36,46, 2):
 #    print(findPayoff(steps=100, maturity=2, spot=S, vol=0.2, strike=40, r=0.06)['0.0'])

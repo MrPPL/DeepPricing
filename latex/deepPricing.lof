@@ -22,12 +22,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces MLPs Performance for Out-of-money datasets on American Put}}{75}{figure.caption.224}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces MLPs Performance for Out-of-money datasets on American Put}}{76}{figure.caption.225}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces Polynomial Regression Performance on out-of-money dataset European Call}}{78}{figure.caption.226}
-\contentsline {figure}{\numberline {B.4}{\ignorespaces Polynomial Regression Performance on long maturity dataset European Call}}{79}{figure.caption.227}
-\contentsline {figure}{\numberline {B.5}{\ignorespaces Effect of dataset size}}{81}{figure.caption.231}
-\contentsline {figure}{\numberline {B.6}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{82}{figure.caption.232}
-\contentsline {figure}{\numberline {B.7}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{83}{figure.caption.233}
-\contentsline {figure}{\numberline {B.8}{\ignorespaces MLPs Performance on long maturity dataset on American bivariate contingent claim}}{83}{figure.caption.234}
-\contentsline {figure}{\numberline {B.9}{\ignorespaces MLPs Performance on long maturity dataset on American bivariate contingent claim}}{84}{figure.caption.235}
+\contentsline {figure}{\numberline {B.1}{\ignorespaces MLPs Performance for Out-of-money datasets on American Put}}{77}{figure.caption.225}
+\contentsline {figure}{\numberline {B.2}{\ignorespaces MLPs Performance for Out-of-money datasets on American Put}}{78}{figure.caption.226}
+\contentsline {figure}{\numberline {B.3}{\ignorespaces Polynomial Regression Performance on out-of-money dataset European Call}}{80}{figure.caption.227}
+\contentsline {figure}{\numberline {B.4}{\ignorespaces Polynomial Regression Performance on long maturity dataset European Call}}{81}{figure.caption.228}
+\contentsline {figure}{\numberline {B.5}{\ignorespaces Effect of dataset size}}{83}{figure.caption.232}
+\contentsline {figure}{\numberline {B.6}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{84}{figure.caption.233}
+\contentsline {figure}{\numberline {B.7}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{85}{figure.caption.234}
+\contentsline {figure}{\numberline {B.8}{\ignorespaces MLPs Performance on long maturity dataset on American bivariate contingent claim}}{85}{figure.caption.235}
+\contentsline {figure}{\numberline {B.9}{\ignorespaces MLPs Performance on long maturity dataset on American bivariate contingent claim}}{86}{figure.caption.236}

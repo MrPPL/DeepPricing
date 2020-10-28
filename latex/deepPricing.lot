@@ -15,14 +15,16 @@
 \contentsline {table}{\numberline {5.8}{\ignorespaces MLPs Performance on American Put Option\relax }}{62}{table.caption.188}
 \contentsline {table}{\numberline {5.9}{\ignorespaces Performance of predictive strength for different regression models\relax }}{63}{table.caption.190}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Comparision of speed and accuracy for a european put min option, where the inputs are K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06. Note ms is shorthand for millisecond\relax }}{66}{table.caption.194}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Valuation of multivariate contigent claims with two underlyings with K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06.\relax }}{66}{table.caption.195}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Valuation of multivariate contigent claims with two underlyings with K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06.\relax }}{67}{table.caption.196}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Valuation of American put option with K=40 and r=0.06.\relax }}{67}{table.caption.200}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Valuation of American put option with K=40 and r=0.06.\relax }}{68}{table.caption.202}
+\contentsline {table}{\numberline {6.1}{\ignorespaces Comparision of accuracy for the european call option, where the inputs are K=40, $S_1(0)=40$, $\sigma _1=0.2$, T=1 and r=0.06.\relax }}{66}{table.caption.193}
+\contentsline {table}{\numberline {6.2}{\ignorespaces Comparision of speed and accuracy for a european put min option, where the inputs are K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06. Note ms is shorthand for millisecond\relax }}{66}{table.caption.195}
+\contentsline {table}{\numberline {6.3}{\ignorespaces Valuation of bivariate contigent claims with K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06.\relax }}{67}{table.caption.196}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Comparision of speed and accuracy for a american put min option, where the inputs are K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06. Note ms is shorthand for millisecond\relax }}{67}{table.caption.198}
+\contentsline {table}{\numberline {6.5}{\ignorespaces Valuation of multivariate contigent claims with two underlyings with K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06.\relax }}{67}{table.caption.199}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Valuation of American put option with K=40 and r=0.06.\relax }}{68}{table.caption.201}
+\contentsline {table}{\numberline {6.7}{\ignorespaces Valuation of American put option with K=40 and r=0.06.\relax }}{69}{table.caption.203}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {B.1}{\ignorespaces Hyperparameter tuning of learning rate and batchsize for american put minimum two assets for the interested reader see the tensorboard (link \href {https://tensorboard.dev/experiment/A3oOYhPiQoiDZgsNXVazPg/\#scalars}{tensorboard 3})\relax }}{77}{table.caption.228}
-\contentsline {table}{\numberline {B.2}{\ignorespaces Hyperparameter tuning of dataset size and batchsize for american put minimum two assets for the interested reader see the tensorboard (link \href {https://tensorboard.dev/experiment/r6LTlLGaTMCXrKOJpl4Qmg/\#scalars}{tensorboard 4})\relax }}{77}{table.caption.229}
-\contentsline {table}{\numberline {B.3}{\ignorespaces Hyperparameter tuning of dataset size and batchsize for american put minimum two assets for the interested reader see the tensorboard\relax }}{80}{table.caption.230}
+\contentsline {table}{\numberline {B.1}{\ignorespaces Hyperparameter tuning of learning rate and batchsize for american put minimum two assets for the interested reader see the tensorboard (link \href {https://tensorboard.dev/experiment/A3oOYhPiQoiDZgsNXVazPg/\#scalars}{tensorboard 3})\relax }}{79}{table.caption.229}
+\contentsline {table}{\numberline {B.2}{\ignorespaces Hyperparameter tuning of dataset size and batchsize for american put minimum two assets for the interested reader see the tensorboard (link \href {https://tensorboard.dev/experiment/r6LTlLGaTMCXrKOJpl4Qmg/\#scalars}{tensorboard 4})\relax }}{79}{table.caption.230}
+\contentsline {table}{\numberline {B.3}{\ignorespaces Hyperparameter tuning of dataset size and batchsize for american put minimum two assets for the interested reader see the tensorboard\relax }}{82}{table.caption.231}

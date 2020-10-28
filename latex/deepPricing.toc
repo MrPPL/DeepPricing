@@ -58,16 +58,15 @@
 \contentsline {subsubsection}{\numberline {5.2.3.3}American Put On Minimum of Two Assets Option}{62}{subsubsection.189}
 \contentsline {chapter}{\numberline {6}Numerical Investigation and Discussion}{65}{chapter.191}
 \contentsline {section}{\numberline {6.1}European Options}{65}{section.192}
-\contentsline {section}{\numberline {6.2}American Put Option}{66}{section.197}
-\contentsline {section}{\numberline {6.3}Exotic American Options}{66}{section.198}
-\contentsline {section}{\numberline {6.4}Numerical Investigation}{66}{section.199}
-\contentsline {section}{\numberline {6.5}Black Scholes Model}{68}{section.203}
-\contentsline {subsection}{\numberline {6.5.1}Neural Networks Vs. Linear Model}{69}{subsection.204}
-\contentsline {subsection}{\numberline {6.5.2}Subsection 2}{69}{subsection.205}
-\contentsline {section}{\numberline {6.6}Main Section 2}{70}{section.206}
-\contentsline {chapter}{\numberline {7}Conclusion and Further Investigation}{71}{chapter.207}
-\contentsline {section}{\numberline {7.1}Conclusion}{71}{section.208}
-\contentsline {section}{\numberline {7.2}Further Investigation}{71}{section.209}
-\contentsline {chapter}{\numberline {A}Mathematical results and definitions}{73}{appendix.210}
-\contentsline {chapter}{\numberline {B}Notation}{75}{appendix.223}
-\contentsline {chapter}{Bibliography}{85}{appendix*.236}
+\contentsline {section}{\numberline {6.2}American Put Option}{67}{section.197}
+\contentsline {section}{\numberline {6.3}Exotic American Options}{67}{section.200}
+\contentsline {section}{\numberline {6.4}Black Scholes Model}{69}{section.204}
+\contentsline {subsection}{\numberline {6.4.1}Neural Networks Vs. Linear Model}{70}{subsection.205}
+\contentsline {subsection}{\numberline {6.4.2}Subsection 2}{70}{subsection.206}
+\contentsline {section}{\numberline {6.5}Main Section 2}{71}{section.207}
+\contentsline {chapter}{\numberline {7}Conclusion and Further Investigation}{73}{chapter.208}
+\contentsline {section}{\numberline {7.1}Conclusion}{73}{section.209}
+\contentsline {section}{\numberline {7.2}Further Investigation}{73}{section.210}
+\contentsline {chapter}{\numberline {A}Mathematical results and definitions}{75}{appendix.211}
+\contentsline {chapter}{\numberline {B}Notation}{77}{appendix.224}
+\contentsline {chapter}{Bibliography}{87}{appendix*.237}

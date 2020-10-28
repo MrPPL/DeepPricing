@@ -63,6 +63,6 @@ sigma1 = 0.2
 sigma2 = 0.3
 T = 1
 rho = 0.5
-NStep = 10
+NStep = 100
 
 print(BEG(Nstep=NStep, T=T, sigma1=sigma1, sigma2=sigma2, r=r, rho=rho, S10=S10, S20=S20, K=K, amer=True))
