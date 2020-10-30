@@ -5,12 +5,12 @@ import datetime
 
 ## Example 21.1
 # American put option 5 month
-spot = 50
-strike = 50
-r=0.1
-vol = 0.4
-maturity = 0.4167
-steps = 5
+spot = 40
+strike = 40
+r=0.06
+vol = 0.2
+maturity = 1
+steps = 50
 
 
 #Make tree dictionary
@@ -78,11 +78,11 @@ def findPayoff(steps, maturity, spot, vol, strike, r):
     print (finish-start)
     return expecTree
 
-print(findPayoff(steps=100, maturity=2, spot=40, vol=0.2, strike=40, r=0.06)['0.0'])
+#print(findPayoff(steps=1000, maturity=1, spot=100, vol=0.25, strike=110, r=0.1)['0.0'])
 #a = (findPayoff(steps=100, maturity=2, spot=40/40, vol=0.2, strike=40/40, r=0.06)['0.0'])
 #print(a[0]*40)
 
-#for S in range(36,46, 2):
-#    print(findPayoff(steps=100, maturity=2, spot=S, vol=0.2, strike=40, r=0.06)['0.0'])
+for S in range(36,46, 2):
+    print(findPayoff(steps=200, maturity=2, spot=S, vol=0.4, strike=40, r=0.06)['0.0'])
 
  

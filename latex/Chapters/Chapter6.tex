@@ -4,21 +4,21 @@
 
 \label{Chapter6} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-This chapter will compare empirically all the numerical methods presented for different types of contingent claims. The underlying model will be the black scholes dating back to Black Scholes paper \parencite{B-S-Paper} for all the methods, because it has closed form solutions and it is thoroughly researched.\\
+This chapter will compare empirically the numerical and analytical methods presented for different types of contingent claims. The underlying model will be the black scholes model dating back to Black Scholes paper \parencite{B-S-Paper}\footnote{Assumption \ref{BS-Assumption}}, because it has closed form solutions for some European options and it is thoroughly researched.\\
 
-The first section looks at the closed form solutions to the european options compared with lattice approch for pricing.
+The first section looks at the closed form solutions to the European options compared with the binomial lattice approch for pricing. The closed form solution gives a measure of how the binomial lattice model approximate European options. The binomial model is readily extended to American options, hence the section also gives a indication how the binomial model approximates the American options. The American put option is then investigated, where the different numerical methods considered are compared. The last types of options we look at are the exotic American options, where specially the bivariate contingent claim American put minimum will be considered. Futhermore will we compare the LSM and MLPs I pricing methods for American multivariate contingent claims with several underlyings. After the numerical investigation the model assumptions and choices in the thesis are discussed.
 
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
 %----------------------------------------------------------------------------------------
 \section{European Options}
-European options are simple in the sense, that they can only be exercise at maturity. Thoughout the previous chapters specially chapter \ref{Chapter2} and \ref{Chapter3} we have seen closed form solutions for the european call, call on max, call on min and geometric average options. The binomial lattice model presented is a numerical model to approximate european options and american options. The closed form solutions and the numerical lattice approch can be compared for european options, where a small deviation indicates that the lattice approach gives reasonable prices for the american options.\\
+European options are simple in the sense, that they can only be exercised at maturity. Thoughout the previous chapters specially chapter \ref{Chapter2} and \ref{Chapter3} we have seen closed form solutions for the European call, call on max, call on min and geometric average options. The binomial lattice model presented is a numerical model to approximate European options and American options. The closed form solutions and the numerical lattice approch can be compared for European options, where a small deviation between methods for the European options indicates that the lattice approach gives reasonable prices for the American options.\\
 
-The simplest case is the european call option, where we look how the CRR model and the MLPs II pricing model approximate the closed for solution. Table \ref{tab:EuroCall} shows empirically that the CRR model price prediction converge toward the price from the Black-Scholes call formula, which is inline with the theorectical result for the CRR model that it converges to the Black-Scholes model. The MLPs II model overprice the european call option, but it performs better for this example than the CRR with 10, 30 and 50 time-steps. The MLPs II is not practical for european call option, but it shows a relative close approximation, hence the increased speed for exotic options could be beneficial (TODO refer where you got numbers \href{https://www.rocq.inria.fr/mathfi/Premia/index.html}{Online Pricer}).\\
+The simplest case is the European call option, where we look how the CRR model and the MLPs II pricing model approximate the closed form solution. Table \ref{tab:EuroCall} shows empirically that the CRR model price prediction converge toward the price from the Black-Scholes call formula, which is inline with the theorectical result for the CRR model that it converges to the Black-Scholes model. The MLPs II model overprice the European call option, but it performs better for this example than the CRR with 10, 30 and 50 time-steps. The MLPs II is not practical for European call option, but it shows a relative close approximation, hence the increased speed for exotic options could be beneficial (TODO refer where you got numbers \href{https://www.rocq.inria.fr/mathfi/Premia/index.html}{Online Pricer}).\\
 
 \begin{table}[th]
-\caption{Comparision of accuracy for the european call option, where the inputs are K=40, $S_1(0)=40$, $\sigma_1=0.2$, T=1 and r=0.06.}
+\caption{Comparision of accuracy for the European call option, where the inputs are K=40, $S_1(0)=40$, $\sigma_1=0.2$, T=1 and r=0.06.}
 \label{tab:EuroCall}
 \centering
 \begin{tabular}{l l l}
@@ -39,10 +39,10 @@ Analytic form & & 4.358\\
 \end{tabular}
 \end{table}
 
-We have seen that the binomial model converge to the true price for the european call and how the MLPs method perform for that specific option. The natural extension of CRR model is the BEG model, where it is possible to price more exotic options. Chapter \ref{Chapter3} found some closed form solution for exotic options, hence we have a benchmark for the BEG in these special cases. The european put min has a closed form solution\footnote{Equation \eqref{putMin} and \eqref{callMax}}, hence the effect on accuracy is measured by comparision. For the BEG model comparision of numerical cost and accuracy for european put minimum option will be investigate, where we expect the accuracy to increasing with increasing the number of equidistant time-steps.\\
+We see that the binomial model converge to the true price for the European call option. The natural extension of CRR model is the BEG model, where it is possible to price more exotic options. Section \ref{ExoticEuro} showed some closed form solution for exotic European options, hence we have a benchmark for the BEG in these special cases. We choose to look at computation time for European put minimum, which has a closed form solution\footnote{Equation \eqref{putMin} and \eqref{callMax}}. Closed form solutions make it easy to look at the trade-off between accuracy and computational cost for the BEG method. \\
 
 \begin{table}[th]
-\caption{Comparision of speed and accuracy for a european put min option, where the inputs are K=40, $S_1(0)=S_2(0)=40$, $\sigma_1=0.2, \sigma_2=0.3$, T=1, $\rho=0.5$  and r=0.06. Note ms is shorthand for millisecond}
+\caption{Comparision of speed and accuracy for a European put min option, where the inputs are K=40, $S_1(0)=S_2(0)=40$, $\sigma_1=0.2, \sigma_2=0.3$, T=1, $\rho=0.5$  and r=0.06. Note ms is shorthand for millisecond}
 \label{tab:TradeOffEuroMin}
 \centering
 \begin{tabular}{l l l l}
@@ -59,7 +59,7 @@ Analytic form & & 4.363 & \\
 \bottomrule\\
 \end{tabular}
 \end{table}
-Tabel \ref{tab:TradeOffEuroMin} shows that the algorithm accuracy increases with the number of equidistant time-steps, but the computational speed dramatically slows down for high number of step, hence the computational cost become a factor to consider for more exotic options. We applied the BEG method also the european call minimum and european call maximum for 100 time-steps, where the BEG method is within 0.13 of the analytic solution (table \ref{tab:PriceEuropean}).\\
+Tabel \ref{tab:TradeOffEuroMin} shows that the algorithm accuracy increases with the number of equidistant time-steps, but the computational speed dramatically slows down for high number of step, hence the computational cost become a factor to consider for more exotic options\footnote{Note that our implementation is written in python, hence room for improvement of code in terms of computational efficiency}. The BEG method accuracy is also tested on the European call minimum and European call maximum for 100 time-steps, where the BEG method is within 0.13 of the analytic solution (table \ref{tab:PriceEuropean}).\\
 \begin{table}[th]
 \caption{Valuation of bivariate contigent claims with K=40, $S_1(0)=S_2(0)=40$, $\sigma_1=0.2, \sigma_2=0.3$, T=1, $\rho=0.5$  and r=0.06.}
 \label{tab:PriceEuropean}
@@ -76,16 +76,60 @@ European Call Maximum & BEG & 100 & 7.787\\
 \end{tabular}
 \end{table}
  
-The above tables shows that the binomial model pricing model can be used for both univariate and bivariate european contigent claims. The binomial models accuracy are high for european options, hence we expect a similar good approximatation for the american option. The CRR for univariate and BEG for bivariate contingent claims will be used as a benchmark for the american options, where we investigate LSM, MLPs I and MLPs II pricing methods. Note that the BEG is not practical for pricing multivariate contingent claims with many underlyings, because the possible states for the stochastic process increased exponentially. Therefore the bivariate case is important for comparision of the pricing methods.
+The above tables shows that the binomial model pricing model can be used for both univariate and bivariate European contigent claims. The binomial models accuracy are high for European options, hence we expect a similar good approximatation for the American option. The CRR for univariate and BEG for bivariate contingent claims will be used as a benchmark for the American options, where we investigate LSM, MLPs I and MLPs II pricing methods. Note that the BEG is not practical for pricing multivariate contingent claims with many underlyings, because the possible states for the stochastic process increased exponentially. Therefore the bivariate case is important for comparision of the pricing methods.
 
 \section{American Put Option}
-The american put option has no analytically solution, hence numerical methods are required. We present and compare the results for the LSM, MLPs I and MLPs II pricing methods compared to the CRR model.
+The American put option has no analytically solution, hence numerical methods are required. We present and compare the results for the LSM, MLPs I and MLPs II pricing methods compared to the CRR model.\\
+
+The LSM and MLPs I pricing method are almost identical, exept the MLPs tries to utilize deep learning to regress the expected continuation value. We have seen both methods converge to the optimal value process, hence we except numerically that by increasing the computational burden we approach the true price. To compare the two methods we simulate 100.000 paths for the stock under the assumption that the future price of the stock is lognormal. The LSM and MLPs I pricing methods are used on the same simulated paths. The CRR and MLPs II\footnote{Note that we talk about the model after training} are not random in the sense that the output is deterministic, because both methods do not involve Monte Carlo sampling. For the LSM and MLPs I we assume 50 equidistant exercise dates for each year, where for the CRR we use 1000 equidistant time-step for the stock.  \\
+
+The MLPs require us to set some hyperparameters, where we choose the learning rate $\eta=0.001$, batch size of 512 and the Adam optimization algprithm. The architecture is a MLPs with three layers, where the hidden layers are with 40 neurons. The activation function is set to Leaky ReLU with 0.3 negative slope. The choices are partly inspired by the work by \parencite{Lelong19} and empirical testing. The regression in the LSM is done with a polynomial regression of degree 10. The MLPs is trained with hyperparameters.\\
+
+\begin{table}[th]
+\caption{Valuation of American put option with K=40 and r=0.06.}
+\label{tab:treatments}
+\centering
+\begin{tabular}{l l l l l l l }
+\toprule
+\textbf{Spot} & \textbf{$\sigma$} & \textbf{T} & \textbf{CRR} & \textbf{LSM} & \textbf{MLPs I} & \textbf{MLPs II} \\
+\midrule
+36 & 0.2 & 1 & 4.487 & 4.481 & 4.364 & 4.584\\
+36 & 0.2 & 2 & 4.848 & 4.846 & 4.747 & 4.649\\
+36 & 0.4 & 1 & 7.109 & 7.118 & 6.919 & 7.090\\
+36 & 0.4 & 2 & 8.508 & 8.514 & 8.215 & 8.487\\
+38 & 0.2 & 1 & 3.257 & 3.258 & 3.217 & 3.094\\
+38 & 0.2 & 2 & 3.751 & 3.748 & 3.681 & 3.638\\
+38 & 0.4 & 1 & 6.154 & 6.157 & 6.075 & 6.172\\
+38 & 0.4 & 2 & 7.675 & 7.695 & 7.359 & 7.605\\
+40 & 0.2 & 1 & 2.319 & 2.317 & 2.292 & 2.114\\
+40 & 0.2 & 2 & 2.900 & 2.896 & 2.823 & 2.779\\
+40 & 0.4 & 1 & 5.318 & 5.329 & 5.180 & 5.274\\
+40 & 0.4 & 2 & 6.923 & 6.934 & 6.750 & 6.839\\
+42 & 0.2 & 1 & 1.621 & 1.623 & 1.599 & 1.494\\
+42 & 0.2 & 2 & 2.217 & 2.224 & 2.183 & 2.167\\
+42 & 0.4 & 1 & 4.588 & 4.600 & 4.538 & 4.548\\
+42 & 0.4 & 2 & 6.250 & 6.269 & 6.111 & 6.197\\
+44 & 0.2 & 1 & 1.113 & 1.119 & 1.094 & 1.000\\
+44 & 0.2 & 2 & 1.694 & 1.700 & 1.653 & 1.678\\
+44 & 0.4 & 1 & 3.954 & 3.959 & 3.931 & 3.949\\
+44 & 0.4 & 2 & 5.647 & 5.669 & 5.524 & 5.649\\
+\bottomrule\\
+\end{tabular}
+\end{table}
+
+
+By the above two algorithms for valuation, we choose to vary spot, volatility and maturity for pricing an American put option with K=40 and r=0.06. This table will serve as reference for the machine learning algorithm in chapter (!TODO chapter for machine learning). For the binomial tree we use 100 time-steps, which gives stable results (compare to figure \ref{fig:binConv}) and for the LSM we use $10^5$ paths with 50 time-steps per year. The European option is valued by using BS closed form solution for a call option (see proposition \ref{BS-price-EuroCall}) and Put-call parity (see proposition \ref{Put-call-parity}).
+
+We see the maximum difference between the two algorithms is 0.027 at S=38, $\sigma=0.4$ and T=2. The other obvious fact is that the European put has a lower value than its American counterpart, because the continuous exercise feature adds additional value to the put option. 
+
 
 
 
 \section{Exotic American Options}
+
+
 \begin{table}[th]
-\caption{Comparision of speed and accuracy for the american put mininimum option, where the inputs are K=40, $S_1(0)=S_2(0)=40$, $\sigma_1=0.2, \sigma_2=0.3$, T=1, $\rho=0.5$  and r=0.06. Note ms is shorthand for millisecond}
+\caption{Comparision of speed and accuracy for the American put mininimum option, where the inputs are K=40, $S_1(0)=S_2(0)=40$, $\sigma_1=0.2, \sigma_2=0.3$, T=1, $\rho=0.5$  and r=0.06. Note ms is shorthand for millisecond}
 \label{tab:TradeOffAmerMin}
 \centering
 \begin{tabular}{l l l l}
@@ -119,49 +163,14 @@ American Put Minimum & BEG & 10 & 3.830\\
 \end{table}
 
 
-The computer is discrete, hence we simulate the stock path as an Bermudan option, where we have 50 time-steps per year. I.e. we approximate the American option with a Bermudan option on same underlying. 
- We simulate 100.000 paths for the stock.
-By the above two algorithms for valuation, we choose to vary spot, volatility and maturity for pricing an American put option with K=40 and r=0.06. This table will serve as reference for the machine learning algorithm in chapter (!TODO chapter for machine learning). For the binomial tree we use 100 time-steps, which gives stable results (compare to figure \ref{fig:binConv}) and for the LSM we use $10^5$ paths with 50 time-steps per year. The European option is valued by using BS closed form solution for a call option (see proposition \ref{BS-price-EuroCall}) and Put-call parity (see proposition \ref{Put-call-parity}).
-\begin{table}[H]
-\caption{Valuation of American put option with K=40 and r=0.06.}
-\label{tab:treatments}
-\centering
-\begin{tabular}{l l l l l l l }
-\toprule
-\textbf{Spot} & \textbf{$\sigma$} & \textbf{T} & \textbf{Closed form European} & \textbf{Binomial Tree} & \textbf{LSM} & \textbf{abs. diff.} \\
-\midrule
-36 & 0.2 & 1 & 3.844 & 4.488 & 4.478 & 0.010\\
-36 & 0.2 & 2 & 3.763 & 4.846 & 4.828 & 0.018\\
-36 & 0.4 & 1 & 6.711 & 7.119 & 7.092 & 0.027\\
-36 & 0.4 & 2 & 7.700 & 8.508 & 8.500 & 0.008\\
-38 & 0.2 & 1 & 2.852 & 3.260 & 3.245 & 0.015\\
-38 & 0.2 & 2 & 2.991 & 3.748 & 3.735 & 0.013\\
-38 & 0.4 & 1 & 5.834 & 6.165 & 6.144 & 0.021\\
-38 & 0.4 & 2 & 6.979 & 7.689 & 7.665 & 0.024\\
-40 & 0.2 & 1 & 2.066 & 2.316 & 2.313 & 0.003\\
-40 & 0.2 & 2 & 2.356 & 2.885 & 2.881 & 0.004\\
-40 & 0.4 & 1 & 5.060 & 5.310 & 5.326 & 0.016\\
-40 & 0.4 & 2 & 6.326 & 6.914 & 6.908 & 0.006\\
-42 & 0.2 & 1 & 1.465 & 1.622 & 1.622 & 0.000\\
-42 & 0.2 & 2 & 1.841 & 2.217 & 2.212 & 0.005\\
-42 & 0.4 & 1 & 4.379 & 4.602 & 4.596 & 0.006\\
-42 & 0.4 & 2 & 5.736 & 6.264 & 6.243 & 0.021\\
-44 & 0.2 & 1 & 1.017 & 1.117 & 1.113 & 0.004\\
-44 & 0.2 & 2 & 1.429 & 1.697 & 1.688 & 0.009\\
-44 & 0.4 & 1 & 3.783 & 3.956 & 3.962 & 0.006\\
-44 & 0.4 & 2 & 5.202 & 5.656 & 5.649 & 0.007\\
-\bottomrule\\
-\end{tabular}
-\end{table}
-We see the maximum difference between the two algorithms is 0.027 at S=38, $\sigma=0.4$ and T=2. The other obvious fact is that the European put has a lower value than its American counterpart, because the continuous exercise feature adds additional value to the put option. 
 
 
 
-The continuous time problem for american options is given as a optimal stopping problem:
+The continuous time problem for American options is given as a optimal stopping problem:
 \begin{align}
 \sup_{\tau \in \mathcal{T}([0,T])} E^Q[\exp(-r\tau)g(x_{\tau})]
 \end{align}
-Where $\tau$ is a stopping time (definition \ref{StoppingTime}), $\mathcal{T}([0,T])$ is the class og all [0,T]-valued stopping times, g(x) is the intrinsic value of the option when the underlying state is x and the risk neutral state process assumed to be markov $\{x_t \in \mathbb{R}^{d} | 0 \leq t \leq T\}$. The continuous problem is often approximated by a discrete version, where the computational procedures can be applied, hence the american option is approximated by a bermuda option. For simplicity we assume that the state process is time-homogeneous and we model a discrete pricing problem. The reformulation of the optimal stopping problem in discrete time is:
+Where $\tau$ is a stopping time (definition \ref{StoppingTime}), $\mathcal{T}([0,T])$ is the class og all [0,T]-valued stopping times, g(x) is the intrinsic value of the option when the underlying state is x and the risk neutral state process assumed to be markov $\{x_t \in \mathbb{R}^{d} | 0 \leq t \leq T\}$. The continuous problem is often approximated by a discrete version, where the computational procedures can be applied, hence the American option is approximated by a bermuda option. For simplicity we assume that the state process is time-homogeneous and we model a discrete pricing problem. The reformulation of the optimal stopping problem in discrete time is:
 \begin{align*}
 \sup_{\tau \in \mathcal{T}(0,\ldots,T)} E^Q[\exp(-r\tau)g(x_{\tau})]
 \end{align*}
@@ -176,37 +185,7 @@ The results will vary for each time running the algorithm given the stochastic n
 
 To compare the results by 
 
-\begin{table}[th]
-\caption{Valuation of American put option with K=40 and r=0.06.}
-\label{tab:treatments}
-\centering
-\begin{tabular}{l l l l l l l }
-\toprule
-\textbf{Spot} & \textbf{$\sigma$} & \textbf{T} & \textbf{MLPs Regression} & \textbf{Binomial Tree} & \textbf{LSM} & \textbf{abs. diff.} \\
-\midrule
-36 & 0.2 & 1 & 4.584 & 4.488 & 4.478 & 0.010\\
-36 & 0.2 & 2 & 4.649 & 4.846 & 4.828 & 0.018\\
-36 & 0.4 & 1 & 7.090 & 7.119 & 7.092 & 0.027\\
-36 & 0.4 & 2 & 8.487 & 8.508 & 8.500 & 0.008\\
-38 & 0.2 & 1 & 3.094 & 3.260 & 3.245 & 0.015\\
-38 & 0.2 & 2 & 3.638 & 3.748 & 3.735 & 0.013\\
-38 & 0.4 & 1 & 6.172 & 6.165 & 6.144 & 0.021\\
-38 & 0.4 & 2 & 7.605 & 7.689 & 7.665 & 0.024\\
-40 & 0.2 & 1 & 2.114 & 2.316 & 2.313 & 0.003\\
-40 & 0.2 & 2 & 2.779 & 2.885 & 2.881 & 0.004\\
-40 & 0.4 & 1 & 5.274 & 5.310 & 5.326 & 0.016\\
-40 & 0.4 & 2 & 6.839 & 6.914 & 6.908 & 0.006\\
-42 & 0.2 & 1 & 1.494 & 1.622 & 1.622 & 0.000\\
-42 & 0.2 & 2 & 2.167 & 2.217 & 2.212 & 0.005\\
-42 & 0.4 & 1 & 4.548 & 4.602 & 4.596 & 0.006\\
-42 & 0.4 & 2 & 6.197 & 6.264 & 6.243 & 0.021\\
-44 & 0.2 & 1 & 1.000 & 1.117 & 1.113 & 0.004\\
-44 & 0.2 & 2 & 1.678 & 1.697 & 1.688 & 0.009\\
-44 & 0.4 & 1 & 3.949 & 3.956 & 3.962 & 0.006\\
-44 & 0.4 & 2 & 5.649 & 5.656 & 5.649 & 0.007\\
-\bottomrule\\
-\end{tabular}
-\end{table}
+
 \parencite{liaw2018tune}
 
 \section{Black Scholes Model}
@@ -271,3 +250,21 @@ risk management find deltas.
     Pricing and Hedging of Equity Derivatives in Black-Scholes and Heston models
     Pricing and Hedging of Equity Derivatives in Jump models
     Calibration in Jump models
+    
+    but e.g. the LSM regression does not scale well for high dimensional rainbow options
+
+
+
+    Antithetic variates and;
+    Control variates.
+
+
+"By its nature, simulation is a promising alternative to traditional finite difference and binomial techniques and has many advantages as a framework for valuing, risk managing, and optimally exercising American options. For example, simulation is readily applied when the value of the option depends on multiple factors."
+
+
+Inpractice, lots of techniques are used to reduce the variance:
+antithetic variables 
+control variates
+stratified sampling
+importance sampling
+quasi Monte Carlo methods

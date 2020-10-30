@@ -29,13 +29,12 @@ Database file #1: deepPricing-blx.bib
 Database file #2: thesis.bib
 Warning--I'm ignoring Buffett02's extra "author" field
 --line 150 of file thesis.bib
-Warning--I didn't find a database entry for "Kim02"
 Biblatex version: 3.8
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 28 entries,
             6268 wiz_defined-function locations,
-            1409 strings with 16284 characters,
+            1409 strings with 16288 characters,
 and the built_in function-call counts, 162491 in all, are:
 = -- 10483
 > -- 4216
@@ -74,4 +73,4 @@ warning$ -- 0
 while$ -- 1798
 width$ -- 0
 write$ -- 983
-(There were 2 warnings)
+(There was 1 warning)

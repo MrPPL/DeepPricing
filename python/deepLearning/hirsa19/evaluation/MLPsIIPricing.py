@@ -109,4 +109,27 @@ row = [moneyness,T, r, vol]
 yhat = predict(row, loaded_model) * strike
 print('Predicted: %.3f' % yhat)
 
+##############################
+# American Put
+#############################
     
+loaded_model2 = NeuralNet(input_size, hidden_size1, hidden_size2, hidden_size3, outputSize)
+#for param in loaded_model.parameters():
+#    print("without training model", param)
+loaded_model2.load_state_dict(torch.load("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/python/deepLearning/Models/hirsaModelAM1.pth"))
+loaded_model2.eval()
+#row maturity, rate, vol, moneyness
+dataPath = "./deepLearning/hirsa19/data/300KPAmerData.csv"
+dataset = EuroParDataset(dataPath)
+# get first sample and unpack
+first_data = dataset[0]
+features, labels = first_data
+# european call
+vol = 0.25
+moneyness = (100/110)
+strike = 110
+r = 0.06 
+T =1
+row = [moneyness,T, r, vol]
+yhat = predict(row, loaded_model2) * strike
+print('Predicted: %.3f' % yhat)
