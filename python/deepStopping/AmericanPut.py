@@ -142,16 +142,50 @@ def itm(payoff, spot):
 # t=timegrad for simulation
 # df = discounting for a periode
 # fit = fit_quadratic
-for spot in range(36,46,2):
-        npv_american = longstaff_schwartz(X=x*spot, t=t, df=constant_rate_df,
-                                        fit=fit_neural, exercise_payoff=put_payoff, itm_select=itm)
-        npv1_american = algorithm1.longstaff_schwartz(X=x*spot, t=t, df=constant_rate_df,
-                                        fit=fit_quadratic, exercise_payoff=put_payoff, itm_select=itm)
-
-        # Print results
-        print("spot", spot, "vol", sigma, "MLPsI", npv_american)
-        print("spot", spot, "vol", sigma,"LSM", npv1_american)
+#for spot in range(36,46,2):
+#        npv_american = longstaff_schwartz(X=x*spot, t=t, df=constant_rate_df,
+#                                        fit=fit_neural, exercise_payoff=put_payoff, itm_select=itm)
+#        npv1_american = algorithm1.longstaff_schwartz(X=x*spot, t=t, df=constant_rate_df,
+#                                        fit=fit_quadratic, exercise_payoff=put_payoff, itm_select=itm)
+#
+#        # Print results
+#        print("spot", spot, "vol", sigma, "MLPsI", npv_american)
+#        print("spot", spot, "vol", sigma,"LSM", npv1_american)
 
 
 # European put option for comparison
 npv_european = constant_rate_df(t[0], t[-1]) * put_payoff(x[-1]).mean()
+
+import pandas as pd
+def findY(size):
+        Y = np.empty((size,1))
+        Z = np.empty((size,1))
+        global count10 #load model or not
+        # Model parameters
+        t = np.linspace(0, 1, 50)  # timegrid for simulation
+        r = 0.06  # riskless rate
+        sigma = 0.4  # annual volatility of underlying
+        n = 10**5  # number of simulated paths
+        # Payoff (exercise) function
+        strike = 40
+        spot=36
+        gbm = GeometricBrownianMotion(mu=r, sigma=sigma)
+        rnd = np.random.RandomState(100)
+        for i in range(size):
+                # Simulate the underlying
+                x = gbm.simulate(t, n, rnd)  # x.shape == (t.size, n)
+                count10 = 0 
+                #MLPs I
+                Y[i] = longstaff_schwartz(X=x*spot, t=t, df=constant_rate_df,
+                                        fit=fit_neural, exercise_payoff=put_payoff, itm_select=itm)
+                #LSM
+                Z[i] = algorithm1.longstaff_schwartz(X=x*spot, t=t, df=constant_rate_df,
+                                        fit=fit_quadratic, exercise_payoff=put_payoff, itm_select=itm)
+                                        
+                print("spot", spot, "vol", sigma, "MLPsI", Y[i])
+        
+        df = pd.DataFrame({'LSM':Z[:,0],'MLPs I':Y[:,0]})
+        return df
+
+df = findY(100)
+df.to_csv("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/python/deepStopping/SEData/36Spot4vol1Y.csv")

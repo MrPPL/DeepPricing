@@ -5,18 +5,18 @@ import datetime
 
 ## Example 21.1
 # American put option 5 month
-spot = 40
-strike = 40
-r=0.06
-vol = 0.2
-maturity = 1
-steps = 50
+#spot = 40
+#strike = 40
+#r=0.06
+#vol = 0.2
+#maturity = 1
+#steps = 50
 
 
 #Make tree dictionary
-def binStockPath(steps, maturity, spot, vol):
+def binStockPath(stepSize, steps, spot, vol):
     STree = {}
-    stepSize = maturity/steps
+    #stepSize = maturity/steps
     u = np.exp(vol*stepSize**0.5)
     d = np.exp(-vol*stepSize**0.5)
     for i in range(steps+1):
@@ -30,9 +30,9 @@ def binStockPath(steps, maturity, spot, vol):
     return STree
 
 #intrinsic value dictionary for american put option
-def findIntrinsicTree(steps,maturity, spot, vol, strike):
-    stepSize = maturity/steps
-    STree = binStockPath(steps, maturity, spot, vol)
+def findIntrinsicTree(stepSize, steps, spot, vol, strike):
+    #stepSize = maturity/steps
+    STree = binStockPath(stepSize, steps, spot, vol)
     intrinsicTree = {}
     for i in reversed(range(steps+1)):
         if i==0:
@@ -46,7 +46,7 @@ def findIntrinsicTree(steps,maturity, spot, vol, strike):
 def findPayoff(steps, maturity, spot, vol, strike, r):
     start = datetime.datetime.now()
     stepSize = maturity/steps
-    intrinsicTree = findIntrinsicTree(steps, maturity, spot, vol, strike)
+    intrinsicTree = findIntrinsicTree(stepSize, steps, spot, vol, strike)
     u = np.exp(vol*stepSize**0.5)
     d = np.exp(-vol*stepSize**0.5)
     a = np.exp(r*stepSize)
@@ -59,7 +59,6 @@ def findPayoff(steps, maturity, spot, vol, strike, r):
             continue
         else:
             list1 = [None]*(i+1)
-            count=0
             for count in range(i+1):
                 condExp = 0
                 for k in range(count, count+1):
@@ -78,11 +77,16 @@ def findPayoff(steps, maturity, spot, vol, strike, r):
     print (finish-start)
     return expecTree
 
-#print(findPayoff(steps=1000, maturity=1, spot=100, vol=0.25, strike=110, r=0.1)['0.0'])
+print(findPayoff(steps=50, maturity=1, spot=36, vol=0.2, strike=40, r=0.06)['0.0'])
 #a = (findPayoff(steps=100, maturity=2, spot=40/40, vol=0.2, strike=40/40, r=0.06)['0.0'])
 #print(a[0]*40)
 
-for S in range(36,46, 2):
-    print(findPayoff(steps=200, maturity=2, spot=S, vol=0.4, strike=40, r=0.06)['0.0'])
+#for S in range(36,46, 2):
+#    print(findPayoff(steps=200, maturity=2, spot=S, vol=0.4, strike=40, r=0.06)['0.0'])
 
- 
+from longstaff_schwartz.binomial import create_binomial_model, american_put_price, american_put_exercise_barrier_fitted
+sigma=0.2
+S0=36
+strike=40
+mdl = create_binomial_model(sigma=sigma, r=0.06, S0=S0, T=1, n=50)
+print(american_put_price(mdl, strike))

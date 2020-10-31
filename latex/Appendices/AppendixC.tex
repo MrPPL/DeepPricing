@@ -1,0 +1,65 @@
+% Appendix Template
+
+\chapter{Binomial Lattice Model} % Main appendix title
+
+\label{AppendixC} % Change X to a consecutive letter; for referencing this appendix elsewhere, use \ref{AppendixX}
+
+\section{Moment Matching CRR}\label{CRRMM}
+In the CRR the stock multiplication factor for up and down movement is chosen to match the two first moments of the lognormal distribution. By matching the first moments the underlying discrete binomial stochastic process for the stock converge toward the continuous time lognormal distribution for sufficient large equidistant time-steps N. Hence the CRR model will coincide with the Black-Scholes model.\\
+
+The SDE for the Black Scholes under the equivalent martingale measure Q:
+$$dS(t)=rS(t)dt + \sigma S(t) dW(t)$$
+Using Itô's lemma:
+\begin{equation}\label{lnGBM}
+d\ln(S(t)))=(r-\frac{1}{2}))t + \sigma W_t
+\end{equation}
+The solution of equation \ref{lnGBM} is then:
+$$S(t)=S(0)\exp\bigg((r-\dfrac{1}{2}\sigma)t+ \sigma W(t) \bigg)$$
+Note that $W(t)\sim \mathcal{N}(0,t)$ implies:
+$$\ln(\dfrac{S(t)}{S(0)}) \sim \mathcal{N}((r-\dfrac{1}{2}\sigma^2)t, \sigma^2 t)$$
+The two first moments for the lognormal distribution is then:
+\begin{equation}\label{lnMoments}
+\begin{split}
+E[\dfrac{S(t)}{S(0)}]=\exp(rt)\\
+E[(\dfrac{S(t)}{S(0)})^2]=\exp(t\cdot (2r + \sigma^2))
+\end{split}
+\end{equation}
+The above derivation can be used for any time interval.\\
+
+The binomial lattice model has two discrete outcomes from each state, hence the moments are:
+\begin{equation}\label{binMoments}
+\begin{split}
+E[\dfrac{S(t_{n+1})}{S(t_{n})}]=u \cdot Q(\dfrac{S(t_{n+1})}{S(t_{n})} = u) + d \cdot Q(\dfrac{S(t_{n+1})}{S(t_{n})} = d) = u \cdot q + d \cdot (1-q)\\
+E[(\dfrac{S(t_{n+1})}{S(t_{n})})^2]=u^2 \cdot q + d^2 \cdot (1-q)
+\end{split}
+\end{equation}
+We match the moments (equations \eqref{lnMoments} and \eqref{binMoments}) and get two equations with two unknowns, where the time-step is chosen to be $\Delta t$
+\begin{align*}
+\exp(r \Delta t)=u \cdot q + d \cdot (1-q) \quad (i)\\
+\exp(\Delta t \cdot (2r + \sigma^2))=u^2 \cdot q + d^2 \cdot (1-q) \quad (ii)
+\end{align*}
+Multipling $(i)$ with u+d and recognizing $(ii)$:
+\begin{align*}
+(u+d)\exp(r \Delta t)&=u^2 \cdot q + d^2 \cdot (1-q) + ud\\
+\Rightarrow (u+d)\exp(r \Delta t)&\overset{(ii)}{=}\exp(\Delta t \cdot (2r + \sigma^2)) + u d
+\end{align*}
+Remember we choose $u= \frac{1}{d}$ hence we arrive at a quadractic equation by some algebra
+\begin{align*}
+u^2 - u\bigg(\exp(-r \Delta t) + \exp(\Delta t(r+\sigma^2))\bigg)+1=0
+\end{align*}
+We are interesed in that the binomial model converge toward the Black-Scholes model, hence we are looking at small time increment $\Delta t$. This justify the Taylor approximation of the exponential function around zero.
+\begin{align*}
+\exp(r \Delta t + \sigma^2 \Delta t) \approx 1 + (r+\sigma^2)\Delta t + O(t^2)
+\end{align*}
+By Taylor approximation we arrive at a simpler quadratic equation:
+\begin{equation*}
+u^2-u(2+\sigma^2 \Delta t) + 1 = 0
+\end{equation*}
+Solving the quadractic equation above gives
+\begin{align*}
+u&=1+\dfrac{1}{2} \sigma^2 \Delta t \pm  \dfrac{\sqrt{(2+\sigma^2 \Delta t)^2 - 4}}{2}\\
+&=1+\dfrac{1}{2} \sigma^2 \Delta t \pm  \dfrac{\sqrt{(4+\sigma^4 \Delta t^2 + 4 \sigma^2 \Delta t - 4}}{2}\\
+&=1+\dfrac{1}{2} \sigma^2 \Delta t \pm \frac{1}{2} \sigma \sqrt{\Delta t} \sqrt{\sigma^2 \Delta t + 4}\\
+&\approx 1+\dfrac{1}{2} \sigma^2 \Delta t \pm \sigma \sqrt{\Delta t}\\
+&\approx \exp(\pm \sigma \sqrt{\Delta t})\\
+\end{align*}
