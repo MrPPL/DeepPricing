@@ -84,9 +84,3 @@ print(findPayoff(steps=50, maturity=1, spot=36, vol=0.2, strike=40, r=0.06)['0.0
 #for S in range(36,46, 2):
 #    print(findPayoff(steps=200, maturity=2, spot=S, vol=0.4, strike=40, r=0.06)['0.0'])
 
-from longstaff_schwartz.binomial import create_binomial_model, american_put_price, american_put_exercise_barrier_fitted
-sigma=0.2
-S0=36
-strike=40
-mdl = create_binomial_model(sigma=sigma, r=0.06, S0=S0, T=1, n=50)
-print(american_put_price(mdl, strike))

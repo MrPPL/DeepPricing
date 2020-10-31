@@ -26,5 +26,5 @@ plt.title("Price Predictios from LSM and MLPs I")
 CRRPrice = BinoHull.findPayoff(steps=1000, maturity=1, spot=36, vol=0.4, strike=40, r=0.06)['0.0'] 
 plt.axvline(x=CRRPrice,color='black',linestyle='--')
 
-plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/histLSMMLPsI.png")
+#plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/histLSMMLPsI.png")
 plt.show()

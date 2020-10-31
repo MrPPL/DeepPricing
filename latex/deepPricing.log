@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  31 OCT 2020 15:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  31 OCT 2020 17:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3500,23 +3500,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 142--143
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 162--163
+
+ []
+
 [70]
-Underfull \hbox (badness 10000) in paragraph at lines 200--202
+Underfull \hbox (badness 10000) in paragraph at lines 202--204
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--208
+Underfull \hbox (badness 10000) in paragraph at lines 208--210
 
  []
 
-
-Overfull \hbox (14.29988pt too wide) in paragraph at lines 209--210
+[71]
+Overfull \hbox (14.29988pt too wide) in paragraph at lines 211--212
 \T1/ppl/m/n/10.95 stant Elas-tic-ity of Vari-ance model", "Mer-ton's Mixed Jump
 -Diffusion Model", "Variance-
  []
 
-[71]) [72]
+) [72]
 \openout2 = `Chapters/Chapter7.aux'.
 
  (./Chapters/Chapter7.tex
@@ -3576,17 +3581,17 @@ m/m/n/10.95 )[])$\T1/ppl/m/it/10.95 .
 
  (./Appendices/AppendixB.tex
 Appendix B.
-<Figures/outMoneyAmerP.png, id=1445, 361.35pt x 289.08pt>
+<Figures/outMoneyAmerP.png, id=1447, 361.35pt x 289.08pt>
 File: Figures/outMoneyAmerP.png Graphic file (type png)
 <use Figures/outMoneyAmerP.png>
 Package pdftex.def Info: Figures/outMoneyAmerP.png  used on input line 8.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-<Figures/longTAmerP.png, id=1446, 361.35pt x 289.08pt>
+<Figures/longTAmerP.png, id=1448, 361.35pt x 289.08pt>
 File: Figures/longTAmerP.png Graphic file (type png)
 <use Figures/longTAmerP.png>
 Package pdftex.def Info: Figures/longTAmerP.png  used on input line 16.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-<Figures/polynomialOutMoneyEuroC.png, id=1447, 433.62pt x 505.89pt>
+<Figures/polynomialOutMoneyEuroC.png, id=1449, 433.62pt x 505.89pt>
 File: Figures/polynomialOutMoneyEuroC.png Graphic file (type png)
 <use Figures/polynomialOutMoneyEuroC.png>
 Package pdftex.def Info: Figures/polynomialOutMoneyEuroC.png  used on input lin
@@ -3597,7 +3602,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 24--26
  [][] 
  []
 
-<Figures/polynomialLongTEuroC.png, id=1448, 433.62pt x 505.89pt>
+<Figures/polynomialLongTEuroC.png, id=1450, 433.62pt x 505.89pt>
 File: Figures/polynomialLongTEuroC.png Graphic file (type png)
 <use Figures/polynomialLongTEuroC.png>
 Package pdftex.def Info: Figures/polynomialLongTEuroC.png  used on input line 3
@@ -3614,7 +3619,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 34--36
 
 
  <./Figures/outMoneyAmerP.png>]
-<Figures/euroTestDataset.png, id=1459, 699.61375pt x 256.96pt>
+<Figures/euroTestDataset.png, id=1461, 699.61375pt x 256.96pt>
 File: Figures/euroTestDataset.png Graphic file (type png)
 <use Figures/euroTestDataset.png>
 Package pdftex.def Info: Figures/euroTestDataset.png  used on input line 147.
@@ -3647,7 +3652,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 175--177
  [][] 
  []
 
-<Figures/PredictionOutMoneyEuroC.png, id=1462, 433.62pt x 289.08pt>
+<Figures/PredictionOutMoneyEuroC.png, id=1464, 433.62pt x 289.08pt>
 File: Figures/PredictionOutMoneyEuroC.png Graphic file (type png)
 <use Figures/PredictionOutMoneyEuroC.png>
 Package pdftex.def Info: Figures/PredictionOutMoneyEuroC.png  used on input lin
@@ -3658,12 +3663,12 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 183--185
  [][] 
  []
 
-<Figures/longTAmerMinP.png, id=1463, 361.35pt x 289.08pt>
+<Figures/longTAmerMinP.png, id=1465, 361.35pt x 289.08pt>
 File: Figures/longTAmerMinP.png Graphic file (type png)
 <use Figures/longTAmerMinP.png>
 Package pdftex.def Info: Figures/longTAmerMinP.png  used on input line 191.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-<Figures/inMoneyAmerMinP.png, id=1464, 361.35pt x 289.08pt>
+<Figures/inMoneyAmerMinP.png, id=1466, 361.35pt x 289.08pt>
 File: Figures/inMoneyAmerMinP.png Graphic file (type png)
 <use Figures/inMoneyAmerMinP.png>
 Package pdftex.def Info: Figures/inMoneyAmerMinP.png  used on input line 200.
@@ -3777,7 +3782,7 @@ Package logreq Info: Writing requests to 'deepPricing.run.xml'.
 Here is how much of TeX's memory you used:
  48068 strings out of 492982
  987560 string characters out of 6134896
- 1224621 words of memory out of 5000000
+ 1224640 words of memory out of 5000000
  50460 multiletter control sequences out of 15000+600000
  650692 words of font info for 293 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -3799,10 +3804,10 @@ no/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplbi8a.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on deepPricing.pdf (116 pages, 1157340 bytes).
+Output written on deepPricing.pdf (116 pages, 1158059 bytes).
 PDF statistics:
- 1716 PDF objects out of 1728 (max. 8388607)
- 1489 compressed objects within 15 object streams
+ 1718 PDF objects out of 1728 (max. 8388607)
+ 1491 compressed objects within 15 object streams
  402 named destinations out of 1000 (max. 500000)
  896 words of extra memory for PDF output out of 10000 (max. 10000000)
 

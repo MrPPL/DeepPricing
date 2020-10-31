@@ -15,7 +15,7 @@ The first section looks at the closed form solutions to the European options com
 \section{European Options}\label{EuroOption}
 European options are simple in the sense, that they can only be exercised at maturity. Thoughout the previous chapters specially chapter \ref{Chapter2} and \ref{Chapter3} we have seen closed form solutions for the European call, call on max, call on min and geometric average options. The binomial lattice model presented is a numerical model to approximate European options and American options. The closed form solutions and the numerical lattice approch can be compared for European options, where a small deviation between methods for the European options indicates that the lattice approach gives reasonable prices for the American options.\\
 
-The simplest case is the European call option, where we look how the CRR model and the MLPs II pricing model approximate the closed form solution. Table \ref{tab:EuroCall} shows empirically that the CRR model price prediction converge toward the price from the Black-Scholes call formula, which is inline with the theorectical result for the CRR model that it converges to the Black-Scholes model. The MLPs II model overprice the European call option, but it performs better for this example than the CRR with 10, 30 and 50 time-steps. The MLPs II is not practical for European call option, but it shows a relative close approximation, hence the increased speed for exotic options could be beneficial (TODO refer where you got numbers \href{https://www.rocq.inria.fr/mathfi/Premia/index.html}{Online Pricer}).\\
+The simplest case is the European call option, where we look how the CRR model and the MLPs II pricing model approximate the closed form solution. Table \ref{tab:EuroCall} shows empirically that the CRR model price prediction converge toward the price from the Black-Scholes call formula, which is inline with the theorectical result for the CRR model that it converges to the Black-Scholes model. The MLPs II model overprice the European call option, but it performs better for this example than the CRR with 10, 30, 50 and 100 time-steps. The MLPs II is not practical for European call option, but it shows a relative close approximation, hence the increased speed for exotic options could be beneficial.\\
 
 \begin{table}[th]
 \caption{Comparision of accuracy for the European call option, where the inputs are K=40, $S_1(0)=40$, $\sigma_1=0.2$, T=1 and r=0.06.}
@@ -25,16 +25,16 @@ The simplest case is the European call option, where we look how the CRR model a
 \toprule
 \textbf{Method} & \textbf{No. Steps} & \textbf{Price} \\
 \midrule
-CRR & 10 & 4.279\\
-& 30 & 4.331\\
-& 50 & 	4.342\\
-& 100 & 4.350\\
-& 200 & 4.354\\
-& 500 & 4.357\\
-& 1000 & 4.357\\
-& 10000 & 4.358\\
+CRR & 10 & 4.316\\
+& 30 & 4.369\\
+& 50 & 	4.380\\
+& 100 & 4.388\\
+& 200 & 4.392\\
+& 500 & 4.394\\
+& 1000 & 4.395\\
+& 10000 & 4.396\\
 MLPs II & & 4.370\\
-Analytic form & & 4.358\\
+Analytic form & & 4.396\\
 \bottomrule\\
 \end{tabular}
 \end{table}

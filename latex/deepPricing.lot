@@ -20,7 +20,7 @@
 \contentsline {table}{\numberline {6.3}{\ignorespaces Valuation of bivariate contigent claims with K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06.\relax }}{67}{table.caption.200}
 \contentsline {table}{\numberline {6.4}{\ignorespaces Valuation of American put option with K=40 and r=0.06.\relax }}{68}{table.caption.203}
 \contentsline {table}{\numberline {6.5}{\ignorespaces Comparision of speed for the American put mininimum option, where the inputs are K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06. Note ms is shorthand for millisecond\relax }}{70}{table.caption.213}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Valuation of multivariate contigent claims with two underlyings with K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06.\relax }}{70}{table.caption.214}
+\contentsline {table}{\numberline {6.6}{\ignorespaces Valuation of multivariate contigent claims with two underlyings with K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06.\relax }}{71}{table.caption.214}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
