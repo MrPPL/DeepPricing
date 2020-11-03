@@ -112,7 +112,7 @@ headsepline, % Uncomment to get a line under the header
 %----------------------------------------------------------------------------------------
 
 \thesistitle{Classical Option Pricing Theory and Extensions to Deep Learning} % Your thesis title, this is used in the title and abstract, print it elsewhere with \ttitle
-\supervisor{Dr. David \textsc{Skovmand}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
+\supervisor{Associate Professor David \textsc{Skovmand}} % Your supervisor's name, this is used in the title page, print it elsewhere with \supname
 \examiner{} % Your examiner's name, this is not currently used anywhere in the template, print it elsewhere with \examname
 \degree{Master Thesis in Actuarial Mathematics} % Your degree name, this is used in the title page and abstract, print it elsewhere with \degreename
 \author{Peter Pommergård \textsc{Lind}} % Your name, this is used in the title page and abstract, print it elsewhere with \authorname
@@ -222,7 +222,7 @@ headsepline, % Uncomment to get a line under the header
 
 \begin{abstract}
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-The Thesis Abstract is written here (and usually kept to just this page). The page is kept centered vertically so can expand into the blank space above the title too\ldots
+The concepts for option pricing theory is presented and closed form solutions is provided in special cases. The options with no closed form solution is investigated through numerical methods, where both the binomial lattice model and LSM will be presented assuming the underlying Black-Scholes theory. Deep learning is then investigate to look for improvement of the existing models, where we look specifically at the MLPs regression.
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
@@ -458,3 +458,10 @@ We get the optimal stopping strategy by comparing thr continuation value with th
 
 To estimate the condition expectation in equation \ref{continuation-value}, we regres with the basis functions taking on the underlying asset for the option being the independent variable:
  \parencite{lsm}.
+ 
+ \begin{equation*}
+\begin{split}
+S_i(t)=S_i(0) \cdot \exp \bigg( \sum_{j=1}^{d}(\sigma_{i,j} W_j(t) -\frac{1}{2} \sigma_{i,j}^2 t) + rt \bigg) \quad  for \ i=1,\ldots,d
+\end{split}
+\end{equation*}
+Where the Wiener processes are independent and its domain in $\mathbb{R}^+$.

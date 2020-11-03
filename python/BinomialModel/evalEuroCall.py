@@ -1,5 +1,4 @@
-from longstaff_schwartz.binomial import create_binomial_model, european_call_price, american_put_price, american_put_exercise_barrier_fitted
-
+from longstaff_schwartz.binomial import create_binomial_model, european_call_price
 sigma=0.2
 S0=40
 strike=40

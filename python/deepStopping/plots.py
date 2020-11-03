@@ -50,9 +50,9 @@ cashflow = np.maximum(strike - X[-1, :], 0)
 p = Polynomial.fit(X[-2, :], cashflow, 2)
 p
 
+plt.style.use('ggplot')
 plt.figure(figsize=figsize)
 plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
-plt.style.use('ggplot')
 plt.plot(X[-2, :], cashflow, 'g^', zorder=3);
 plt.plot(*p.linspace(), color= "blue", zorder=1);
 plt.plot(X[-2, :], p(X[-2, :]), 'r+', zorder=2);
@@ -61,7 +61,7 @@ plt.legend(['Cashflow',
             'Approximated Continuation Value'])
 plt.xlabel('Stock Price At Time t-1')
 plt.ylabel('Time t Exercise/Continuation Value')
-plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/LSMFit1.png")
+plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/LSMFit1.png")
 plt.show()
 
 #####################

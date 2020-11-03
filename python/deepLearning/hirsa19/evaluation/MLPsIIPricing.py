@@ -107,12 +107,11 @@ r = 0.06
 T =1
 row = [moneyness,T, r, vol]
 yhat = predict(row, loaded_model) * strike
-print('Predicted: %.3f' % yhat)
+print('Predicted European Call: %.3f' % yhat)
 
 ##############################
 # American Put
 #############################
-    
 loaded_model2 = NeuralNet(input_size, hidden_size1, hidden_size2, hidden_size3, outputSize)
 #for param in loaded_model.parameters():
 #    print("without training model", param)
@@ -132,4 +131,38 @@ r = 0.06
 T =1
 row = [moneyness,T, r, vol]
 yhat = predict(row, loaded_model2) * strike
-print('Predicted: %.3f' % yhat)
+print('Predicted American Put: %.3f' % yhat)
+
+
+##############################################
+## American minimum put option
+################################################
+#row maturity, rate, vol, moneyness
+dataPath = "./deepLearning/minAmerican/data/300KAmerMinPut.csv"
+dataset = EuroParDataset(dataPath)
+# get first sample and unpack
+first_data = dataset[0]
+features, labels = first_data
+#hyperparameters
+input_size = dataset.x_data.shape[1]
+hidden_size1 = 120
+hidden_size2 = 120
+hidden_size3 = 120
+outputSize = 1
+loaded_model3 = NeuralNet(input_size, hidden_size1, hidden_size2, hidden_size3, outputSize)
+#for param in loaded_model.parameters():
+#    print("without training model", param)
+loaded_model3.load_state_dict(torch.load("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/python/deepLearning/Models/ModelAM_Min1.pth"))
+loaded_model3.eval()
+# european call
+spot1 = 40
+spot2=40 
+strike = 40
+T =1
+r = 0.06 
+vol1 = 0.2
+vol2 = 0.3
+rho = 0.5
+row = [spot1,spot2,strike,T, r, vol1, vol2, rho]
+yhat = predict(row, loaded_model3)
+print('Predicted American Min: %.3f' % yhat)

@@ -4,7 +4,9 @@
 
 \label{Chapter5} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
 
-Deep learning can be applied to option valuation in different ways. We will investigate to use MLPs regression in the LSM algorithm instead of the linear model. The two methods will be compared numerically to numerous of options. The second use of neural network is to simulate the input variables and use existing methods to value the option i.e. finding the target values. The task is then to learn the pricing formula from the training set ($\matr{X}, \bm{y}$). Both methods fall within supervised regression where we will use MLPs network introduced in section \ref{multilayerPerceptron} to approximate the mappings. The risky assets are modeled with black scholes theory from earlier chapters hence the appropriate simulating methods are already presented (Chapter \ref{Chapter2}, \ref{Chapter3}). The theory in chapter \ref{Chapter4} will be specialized for the specific task and discussed. The advantage of MLPs is that the model scale well to high dimensional data, where e.g. polynomial regression (section \ref{LSM}) is prone to overfitting and slow compared to MLPs for high dimensional tasks. 
+Deep learning can be applied to option pricing theory in different ways. We will investigate two methods using MLPs regression. The first method considered is a modified LSM algorithm, where MLPs regression is used to estimate the expected contuation value instead of the linear model. The second method use MLPs regression on a dataset ($\matr{X}, \bm{y}$) to infer prices. The input parameters $\matr{X}$ are simulated and the target variable $\bm{y}$ is found with existing pricing methods.\\
+
+The two methods will be compared numerically to numerous of options. Both methods fall within supervised regression where we will use MLPs network introduced in section \ref{multilayerPerceptron} to approximate the mappings. The risky assets are modeled with black scholes theory from earlier chapters hence the appropriate simulating methods are already presented (Chapter \ref{Chapter2}, \ref{Chapter3}). The theory in chapter \ref{Chapter4} will be specialized for the specific task and discussed. The advantage of MLPs is that the model scale well to high dimensional data, where e.g. polynomial regression (section \ref{LSM}) is prone to overfitting and slow compared to MLPs for high dimensional tasks. 
 
 %----------------------------------------------------------------------------------------
 %	SECTION 1
@@ -12,7 +14,7 @@ Deep learning can be applied to option valuation in different ways. We will inve
 \section{Multilayer Perceptrons Regression For Optimal Stopping}
 The first application of neural network is to investigate, if the LSM method can be improved by using MLPs regression to approximate continuation value instead of using the linear model in LSM. This section is influenced by \parencite{LSM, Lelong19, KohlerMichael2010}, where the approximate scheme with only in-the-money paths (ITM) is inspired by \parencite{LSM} and the idea of using neural network instead of the linear model comes from \parencite{KohlerMichael2010, Lelong19}. The algorithm is based on approximating the American put option with one or several underlying assets by considering a Bermudan option, which converge to the American option by making the equidistant time-steps sufficiently small. \\
 
-The setup is the same as for the LSM presented in chapter \ref{Chapter3}, where the difference is the regression to estimate the expected continuation value. We will use the theory of deep learning more specifically MLPs to purpose an alternative to the linear model. The main difference lay in the capacity of the two models, where MLPs through its activation functions can capture non linearity which classical linear regression cannot. Another advantage is that deep learning is known for breaking the curse of dimensionality, hence the MLPs could be better suited for multivariate contingent claims than the classical LSM. The method will sometimes be referred to \textbf{MLPs I}.
+The setup is the same as for the LSM presented in chapter \ref{Chapter3}, where the difference is the regression to estimate the expected continuation value. We will use the theory of deep learning more specifically MLPs to purpose an alternative to the linear model. The main difference lay in the capacity of the two models, where MLPs through its activation functions can capture non linearity which classical linear regression cannot. Another advantage is that deep learning is known for breaking the curse of dimensionality, hence the MLPs could be better suited for multivariate contingent claims than the classical LSM.
 
 \subsection{Recap MLPs}
 We model the MLPs with a non linear function 
@@ -21,8 +23,8 @@ where $\Psi$ is the function decomposition and given by
 \begin{align*}
 \Psi = a_{L+1} \circ g_L \circ a_{L} \circ \cdots \circ g_1 \circ a_1 \quad where \ L\in \mathbb{N}
 \end{align*}
-We refer to chapter \ref{Chapter4} for notation, where $a_l(x)=\matr{W}_l^T \bm{x} + \bm{w}_{0,l}$. We embed all the parameters of different layers into a unique high dimensional parameter
-$$\theta=(\matr{W}_l, \bm{w}_{0,l})_{l=1,\ldots,L+1} \in \mathbb{R}^{N_d} \text{ with } N_d=\sum_{l=1}^{L+1} m^{(l)} (1+ m^{(l-1)})$$. 
+We refer to chapter \ref{Chapter4} for notation, where $a_l(x)=\matr{W}_l^T \bm{x} + \bm{w}_{0,l}$. We collect all the parameters of the different layers into a high dimensional parameter
+$$\theta=(\matr{W}_l, \bm{w}_{0,l})_{l=1,\ldots,L+1} \in \mathbb{R}^{N_d} \text{ with } N_d=\sum_{l=1}^{L+1} m^{(l)} (1+ m^{(l-1)})$$.
 We will restrict our parameter space by a increasing sequence $(\gamma_p)_{p\in \mathbb{N}}$ such that $\lim_{p\to \infty} \gamma_p=\infty$ and $p\in \mathbb{N}$ is the maximum number of neuron in each hidden layer. We define the set:
 $$\Theta_p = \{ \theta \in \mathbb{R} \times \mathbb{R}^p \times (\mathbb{R}^p \times \mathbb{R}^{p \times p})^{L-1} \times \mathbb{R}^{p} \times \mathbb{R}^{p \times p} : |\theta| \leq \gamma_p \}$$
 By the definition of the set we restrict our MLPs to the set:
@@ -31,27 +33,28 @@ Unfortunately the $\mathcal{N} \mathcal{N}_p$ is not a vector space, hence the r
 
 \begin{theorem}\label{UniversalApproxTheorem}
 \textbf{Universal Approximation Theorem} Assume that the activation function $g$ is non constant and bounded. Let $\mu$ denote the probability measure on $\mathbb{R}^r$, then for any $L\geq 1$, then $\mathcal{N} \mathcal{N}_\infty$ is dense in $L^2(\mathbb{R}^r, \mu)$\\
-where $\mathcal{N} \mathcal{N}_\infty= \cup_{p\in \mathbb{N}} \mathcal{N} \mathcal{N}_\infty$
-(p. 4 \parencite{Lelong19})
+where $\mathcal{N} \mathcal{N}_\infty= \cup_{p\in \mathbb{N}} \mathcal{N} \mathcal{N}_\infty$\\
+\null \hfill (p. 4 \parencite{Lelong19})
 \end{theorem}
-Note that the above theorem can be rephrase in terms of approximating random variables 
+Note that the above theorem can be rephrase in terms of approximating random variables.
 \begin{remark}
 Let Y be a real valued random variable such that $E[Y^2]< \infty$. Let X be a random variable taking values in $R^r$ and $\mathcal{G}$ be the smallest $\sigma$-algebra such that X is $\mathcal{G}$ measurable. Then, there exists a sequence $(\theta_p)_{p\geq 2} \in \prod_{p=2}^{\infty} \Theta_{p}$ such that $E[|Y-\Psi_p(X;\theta_p)|^2]=0$. Therefore, if for every $p \geq 2$, $\alpha_p \in \Theta_p$ solves
 $$\inf_{\theta\in \Theta_p} E[|\Psi_p(X;\theta)-Y|^2]$$
-Then the sequence ($(\Psi_p(X;\alpha_p))_{p\geq 2}$) converge to $E[Y|X]$ in $L^2(\Omega)$ when $p \to \infty$ (p. 5 \parencite{Lelong19}).
+Then the sequence ($(\Psi_p(X;\alpha_p))_{p\geq 2}$) converge to $E[Y|X]$ in $L^2(\Omega)$ when $p \to \infty$ \\
+\null \hfill (p. 5 \parencite{Lelong19}).
 \end{remark}
-The remarks reveals that the MLPs can be used to approximate the conditional expectation instead of a linear function of the elements of the basis.
+The remarks reveals that the MLPs can be used to approximate the conditional expectation instead of linear model in LSM.
 
 \subsection{The Algorithm}
 The algorithm is similar to the LSM, but the regression step is slightly different. We will use the same assumptions as in LSM section and same principles. Recall the optimal stopping problem can be solved with dynamic programming principle on the optimal policy:
-\begin{equation}\label{LSMDynamic3}
+\begin{equation*}\label{LSMDynamic3}
 \begin{split}
 \begin{cases}
           \hat{\tau}_{t_N}^{k,p,K} = t_N\\
           \hat{\tau}_{t_n}^{k,p,K} = t_n \cdot 1_{\{G(S^{(k)}(t_n)) \geq \Psi_p(S^{(k)}(t_n) ; \hat{\theta}_{t_n}^{p,K} ) \}} + \hat{\tau}_{t_{n+1}}^{k,p,K} \cdot 1_{\{G(S^{(k)}(t_n)) \geq \Psi_p(S^{(k)}(t_n) ; \hat{\theta}_{t_n}^{p,K} ) \}} \quad for \ n={0,\ldots,N-1} \\ 
 \end{cases}
 \end{split}
-\end{equation}
+\end{equation*}
 Where the estimator $\hat{\theta}_{t_n}^{p,M}$ is given by minimizing squared sample distance of the estimated continuation value and the realized continuation value:
 \begin{align*}
 \hat{\theta}_{t_n}^{p,M}= \argmin_{\theta \in \Theta_p} \dfrac{1}{K} \sum_{k=1}^{K} \bigg(G(S^{(k)}(\tau^{k,p,K}_{t_{n+1}}))  - \Psi_p(S^{(k)}(t_n) ; \theta ) \bigg)^2
@@ -61,42 +64,12 @@ Finally in analog with the LSM section the approximated time 0 price for the opt
 U^{p,K}(0) = \max \{ G(S(0)), \frac{1}{K} \sum_{k=1}^{K} G(S^{(k)}(\hat{\tau}^{k,p,K}_{t_1}))]\}
 \end{equation}
 
-\subsection{Convergence}
-The MLPs regression method enjoy the same convergence results presented for the LSM algorithm, i.e.
-\begin{theorem}\label{NNConvergence1}
-Assume that 
-$$E[\max_{0\leq t_n \leq T} |G(S(t_n))|^2]< \infty$$. 
-Then $\lim_{p \to \infty} E^Q[G(S(\tau^{p}_{t_n}))| \mathcal{F}_{t_n}]= E[G(\tau_{t_n})|\mathcal{F}_{t_n}]$ in $L^2(\Omega)$ for all $n \in \{1,2,\ldots, N\}$\\
-Proof p. 7-8 \parencite{Lelong19}
-\end{theorem}
-The above theorem states convergence of the neural network approximation, i.e. $U^{p}(0) \to U(0)$ which is similar to the convergence result for LSM. 
-\begin{theorem}{\textbf{Strong law of large numbers: }}\label{NNConvergence2}
-Assume
-\begin{enumerate}
-\item[A1:] For every $p\in \mathbb{N}$, $p>1$, there exist $q \geq 1$ and $\kappa_p>0$ such that
-$$\forall s \in \mathbb{R}^{R}, \forall \theta \in \Theta_p, \quad |\Psi_p(s,\theta)| \leq \kappa_p (1+|s|^q) $$
-Moreover $\forall n \in \{1,2,\ldots, N-1\}$, a.s. the random functions $\theta \in \Theta_p \mapsto \Psi_p(S(t_n), \theta)$ are continuous. Note $\Theta_p$ is a compact set, hence the continuity is uniform.
-\item[A2:] For $q$ defined in A1, $E^Q[|S(t_n)|^{2q}]<\infty \quad \forall n \in \mathbb{N} \cup 0$
-\item[A3:] $\forall p \in \mathbb{N}$, $p>1$ and $\forall n \in \{1,2,\ldots, N-1\}$, 
-$$P(S(t_n)=\Psi_{p}(S(t_n);\theta_{t_n}^{p})=0$$
-\item[A4:] $\forall p \in \mathbb{N}$, $p>1$ and $\forall n \in \{1,2,\ldots, N-1\}$, if $\theta^{1}$ and $\theta^{2}$ solves 
-\begin{align*}
-\argmin_{\theta \in \Theta_p} E^Q[|\Psi_p(S(t_n); \theta)- S(\tau_{t_{n+1}}^{p})|^2]
-\end{align*}
-then $\Psi_p(s,\theta^{1})=\Psi_p(s,\theta^{2})$ for almost all x.
-\end{enumerate}
-If A1-A4 hold, then for $\zeta\in \{1,2\}$ and every $n\in \{1,2,\ldots,N\}$
-\begin{equation}
-\lim_{K\to \infty} \dfrac{1}{K} \sum_{k=1}^{K} \bigg(G(S(\hat{\tau}_{t_n}^{k,p,K}))\bigg)^{\zeta} = E[\bigg(G(S(\tau_{t_n}^{p}))\bigg)^{\zeta}] \quad a.s.
-\end{equation}
-Proof p. 13-14 \parencite{Lelong19}
-\end{theorem}
-The last result is the strong law of large numbers for the value function, i.e. $U^{p,K}(0) \to U^{p}(0) \ a.s. \quad for \ K \to \infty$
+
 \newpage
 
 
 \section{Multilayer Perceptrons Regression Pricing From Existing Methods}
-The MLPs pricing method from existing methods has a different approach than the other methods, because it is only data driven. The MLPs could easily be used to real data, which is investigated in \parencite{GasparRaquel20}. We revisit the work from \parencite{HirsaAli2019}, where we try to extend the pricing models to options with two underlying risky assets. The model will be the classical GBM model presented in earlier chapters. By choosing the GBM model the MLPs pricing method is ready for investigation both for vanilla options and exotic options. We stress that the MLPs pricing method is not restricted to GBM assumption, but can be applied to other models such as Hesten, Variance Gamma and real market data. The advantages with MLPs is the fast parameter estimation compared to classical methods binomial lattice and LSM once trained. With the increased speed for pricing it can cost accuracy specially if the data is sparse, which can arise when using the method for exotic options on real market data. For practical application the accuracy is severe if the predicted price is not within the bid-ask spread, because the aim is to price fast without introducing arbitrage. We will present results for european call, american put and american put miminum on two assets options presented in earlier chapters with MLPs pricing methods.\\
+The MLPs pricing method from existing methods has a different approach than the other methods, because it is only data driven. The MLPs could easily be used to real data, which is investigated in \parencite{GasparRaquel20}. We revisit the work from \parencite{HirsaAli2019}, where we try to extend the pricing models to options with two underlying risky assets. The model will be the classical GBM model presented in earlier chapters. By choosing the GBM model the MLPs pricing method is ready for investigation both for vanilla options and exotic options. We stress that the MLPs pricing method is not restricted to GBM assumption, but can be applied to other models such as Hesten, Variance Gamma and real market data. The advantages with MLPs is the fast parameter estimation compared to classical methods binomial lattice and LSM once trained. With the increased speed for pricing it can cost accuracy specially if the data is sparse, which can arise when using the method for exotic options on real market data. For practical application the accuracy is severe if the predicted price leads to arbitrage, because the aim is to price fast without introducing arbitrage. We will present results for european call, american put and american put miminum on two assets options presented in earlier chapters.\\
 
 For deep learning the hyperparameters is important for finding the right model for pricing, where different choices will be empirical presented under training. For the given task polynomial regression can also be used, but we will see later why MLPs regression is preferred. The section is split into three sections "Data", "Training" and "Performance".
 
@@ -104,11 +77,11 @@ For deep learning the hyperparameters is important for finding the right model f
 %	SUBSECTION 1
 %-----------------------------------
 \subsection{Data}
-The generation of labels are the computational expensive part of the MLPs method, because the method needs enough samples to approximate the function $f^*$ well. The upside after generation of labels is that the method is computationally fast and easy to implement with basic knowledge of deep learning\footnote{Chapter \ref{Chapter4}}. The labels will be generated by existing methods presented in chapter \ref{Chapter3}, where the input parameters will be uniform sampled or quasi sampled with alton sequences.\\
+The generation of labels are the computational expensive part of the MLPs method, because the method needs enough samples to approximate the function $f^*$ well. The upside after generation of labels is that the method is computationally fast and easy to implement with basic knowledge of deep learning\footnote{Chapter \ref{Chapter4}}. The labels will be generated by existing methods presented in chapter \ref{Chapter3}, where the input parameters will be uniform sampled or quasi sampled with Halton sequences.\\
 
-For both European and the American univariate contingent claims the parameter in-sample will be the same, where we remember the 5 parameters for pricing an  univariate contingent claims\footnote{E.g. the European call proposition \ref{BS-price-EuroCall}}. Note for simulation of labels that the European call and American put options are first order homogeneous function in $(S(0),K)$, hence the valuation formulas can be modified:
+For both European and the American univariate contingent claims the parameter in-sample will be the same, where we remember the 5 parameters for pricing an  univariate contingent claims\footnote{E.g. the European call proposition \ref{BS-price-EuroCall}}. Note for simulation of labels the European call and American put options are first order homogeneous function in $(S(0),K)$, hence the valuation formulas can be modified:
 $$\frac{c(S(0),K)}{K}=c(\frac{S(0)}{K},1) \quad and \quad \frac{P(S(0),K)}{K}=P(\frac{S(0)}{K},1)$$
-The alternative representation above reduces the number of parameters needed for simulation to 4, because instead of simulate both $S$ and $K$, moneyness ($\frac{S(0)}{K}$) is only  simulated. This property is not shared for the American bivariate contingent claim. For the European call and American put the input matrix $\matr{X}$ is different combinations of the 4 parameters within the parameter range (table \ref{tab:vanillaParRange}), where it is assumed the number of trading days are 252 in a year. The parameter ranges are risk free rate of return between 1-3 \%, maturity between 1 day to 3 years, moneyness between 0.8 and 1.2 and volatility between 0.05 and 0.5. \\
+The alternative representation above reduces the number of parameters needed for simulation to 4, because instead of simulate both $S$ and $K$, moneyness ($\frac{S(0)}{K}$) is only  simulated. This property is also shared for the American bivariate contingent claim. For the European call and American put the input matrix $\matr{X}$ is different combinations of the 4 parameters within the parameter range (table \ref{tab:vanillaParRange}), where it is assumed the number of trading days are 252 in a year. The parameter ranges are risk free rate of return between 1-3 \%, maturity between 1 day to 3 years, moneyness between 0.8 and 1.2 and volatility between 0.05 and 0.5. \\
 
 \begin{table}[th]
 \caption[Parameter Ranges For MLPs]{Parameter ranges for American put and European call options}
@@ -124,29 +97,30 @@ Amer. Put & 1\%-3\% & 1d - 3y & 0.8-1.2 & 0.05-0.5\\
 \end{tabular}
 \end{table}
 
-The American put minimum option for two underlying assets will require additional parameters, because now we have two spots, two volatilities and correlation between the assets. The first order homogeneity does not hold for multivariate contingent claims, hence the strike and the two spots are also needed. The parameters considered for the bivariate contingent claims are T, r, K, $S_1(0)$, $S_2(0)$, $\sigma_1$, $\sigma_2$ and $\rho$. So a total of 8 parameters and the given parameters ranges are given in table \ref{tab:ExoticParRange}, where we reduced the number of combinations by setting the two spots constant to 100 and let the strike be the same for both options.\\
+The American put minimum option for two underlying assets will require additional parameters, because now we have two spots, two volatilities and correlation between the assets. The first order homogeneity does also hold for bivariate contingent claims.
+$$\frac{P(S_1(0),S_2(0),K)}{K}=P(\frac{S_1(0)}{K}, \frac{S_2(0)}{K},1)$$
+The parameters considered for the bivariate contingent claims are T, r, $Moneyness_1$, $Moneyness_2$, $\sigma_1$, $\sigma_2$ and $\rho$. So a total of 7 parameters and the given parameters ranges are given in table \ref{tab:ExoticParRange}.\\
    
 \begin{table}[th]
-\caption[Parameter Ranges For MLPs]{Parameter ranges for exotic European put and American put options}
+\caption[Parameter Ranges For MLPs]{Parameter ranges for American put minimum option on two assets}
 \label{tab:ExoticParRange}
 \centering
-\begin{tabular}{l l l l l l l l l l l}
+\begin{tabular}{l l l l l l l l l}
 \toprule
-\textbf{Derivative} & \textbf{r} & \textbf{T} & K & $S_1(0)$ & $S_2(0)$ & $\sigma_1$ & $\sigma_2$ & $\rho$ \\
+\textbf{r} & \textbf{T} & $Moneyness_1$ & $Moneyness_2$ & $\sigma_1$ & $\sigma_2$ & $\rho$ \\
 \midrule
-Euro. Put Min. & 1\%-3\% & 1d - 3y & 80-120 & 100 & 100 & 0.05-0.5 & 0.05-0.5 & 0.05-0.5\\ 
-Amer. Put Min. & 1\%-3\% & 1d - 3y & 80-120 & 100 & 100 & 0.05-0.5 & 0.05-0.5 & 0.05-0.5\\
+1\%-3\% & 1d - 3y & 0.8-1.2 & 0.8-1.2 & 0.05-0.5 & 0.05-0.5 & (-0.5)-0.5\\
 \bottomrule\\
 \end{tabular}
 \end{table}
 
 The simulation of the parameter ranges for the training data set is done by quasi-random Halton sequences sampling to obtain lower discrepancy, where the test sets are sampled with random uniform sampling. The quasi random sampling is different from uniform random sampling since the purpose is not to mimic randomness. Using Halton sequences sampling the aim is to increase accuracy by generating points that are too evenly distributed to be random. The Halton sequence and uniform sampling generates points between 0 and 1, hence we need to apply a transformation to get the parameter ranges:
-$$r \cdot (range \ of \ parameter) + lower bound \quad where \ r=halton \ point$$
-After the simulation of combinations of the input parameters within the given ranges the labels can be generated from existing methods. For the European call option the generation of labels is done by the classical B-S formula for call options given in proposition \ref{BS-price-EuroCall}. The B-S pricing formula is well known and has an analytical solution, hence it is relatively fast to generate labels in this model. The American options require numerical methods, hence the generation of labels are more computational expensive. The labels for the American options are generated by CRR for american put option with 1 underlying stock and by BEG for two underlying assets with 100 equidistant time-steps presented in chapter \ref{Chapter3}. When the data sets ($\matr{X}$, $\bm{y}$) are generated we are left with a regression task. The regression task is to predict the price $\bm{y}$ from the input parameters $\matr{X}$.\\ 
+$$r \cdot (range \ of \ parameter) + lower bound \quad where \ r=Simulated \ point$$
+After the simulation of combinations of the input parameters within the given ranges the labels can be generated from existing methods. For the European call option the generation of labels is done by the classical B-S formula for call options given in proposition \ref{BS-price-EuroCall}. The B-S pricing formula is well known and has an analytical solution, hence it is relatively fast to generate labels in this model. The American options require numerical methods, hence the generation of labels are more computational expensive. The labels for the American options are generated by CRR with 100 equidistant time-steps for the american put option with one underlying stock and by BEG for two underlying assets with 50 equidistant time-steps presented in chapter \ref{Chapter3}. When the data sets ($\matr{X}$, $\bm{y}$) are generated we are left with a regression task. The regression task is to predict the price $\bm{y}$ from the input parameters $\matr{X}$.\\ 
 
-The data sets generated for within the parameter ranges will be referred to as the in-sample data set. The training data set is a in-sample data set, which is split up into a training and validation dataset in order to approximate model performance on the test sets. The training data set is used to update the parameters internal in the model e.g. weights, biases, et cetera and fine-tune hyperparameters for choosing the optimal model design. To avoid overfitting and good generalization models the validation set is useful, because the trained model has not seen the data before evaluation on the validation set. The validation set is randomly subsampled from the training set, where the validation data set constitute 20 percent of the training set. To check the robustness of the regression we choose to sample two test out-of-sample data sets, which means we simulate data with modified parameter ranges. \\
+The data sets generated for within the parameter ranges will be referred to as the in-sample data set. The training data set is a in-sample data set, which is split up into a training and validation dataset in order to approximate model performance on the test sets. The training data set is used to update the parameters internal in the model e.g. weights, biases, et cetera and fine-tune hyperparameters for choosing the optimal model design. To avoid overfitting and good generalization models the validation set is useful, because the trained model has not seen the data before evaluation on the validation set. The validation set is randomly subsampled from the training set, where the validation data set constitute 20 percent of the training set. To check the robustness of the regression we choose to sample three test sets with one in-sample and two out-of-sample data sets. \\
 
-The test data sets out-of-sample is simulated by uniform sampling adjusting the parameter range for either moneyness or maturity for the options (table \ref{totalVanillaParRange}). The test data set has not been seen by the model in the training process, hence we get a unbiased evaluation of the model. The aim with producing different test and validation data sets is to measure the models performance at interpolation and extrapolation. The data set for the bivariate American contingent claim will be similar to the american put by only adjusting either the strike or the maturity.\\
+The test data sets out-of-sample is simulated by uniform sampling adjusting the parameter range for either moneyness or maturity for the options (table \ref{tab:totalVanillaParRange}). The test data set has not been seen by the model in the training process, hence we get a unbiased evaluation of the model. The aim with producing different test and validation data sets is to measure the models performance at interpolation and extrapolation. The data set for the bivariate American contingent claim will be similar to the american put by adjusting either the $moneyness_1$ and $moneyness_2$ or the maturity.\\
 
 \begin{table}[th]
 \caption{Parameter ranges for European call and American put option}
@@ -174,14 +148,14 @@ Longer Maturity & & 0.05-0.5 & 3y-5y & 0.8-1.2 & 1\%-3\%\\
 \label{fig:marginalAmerPut}
 \end{figure}
 
-By above discussion we simulate a training data set, where the simulation for the American put is visualized in figure \ref{fig:marginalAmerPut}. The marginal distributions shown is for $300.000$ data samples ($\matr{X},y$) generated by Halton sequences and the CRR model, where the marginal distributions for the features cover the parameter range almost uniform and the simulated y lies with most values at zero and maximum at 0.387 rounded to three decimals. The marginal distributions shows that we have successfully generated parameters in the given ranges and the parameters are evenly spaced in the ranges. In the model performance section the out-of-sample and in-sample test data sets will be used to check the extrapolation and interpolation of the models. The test datasets are 60.000 generated data points with uniform sampling and the parameter ranges for the options with 1 underlying is given in table \ref{tab:totalVanillaParRange}.
+In figure \ref{fig:marginalAmerPut} we have visualized a simulated training data set for the American put. The marginal distributions shown is for $300.000$ data samples ($\matr{X},y$) generated by Halton sequences and the CRR model, where the marginal distributions for the features cover the parameter range almost uniform and the simulated y lies with most values at zero and maximum at 0.387 rounded to three decimals. The marginal distributions shows that we have successfully generated parameters in the given ranges and the parameters are evenly spaced in the ranges. In the model performance section the out-of-sample and in-sample test data sets will be used to check the extrapolation and interpolation of the models. The test datasets are 60.000 generated data points with uniform sampling and the parameter ranges for the options with one underlying is given in table \ref{tab:totalVanillaParRange}.
 
 %-----------------------------------
 %	SUBSECTION 2
 %-----------------------------------
 
 \subsection{Training}\label{Training}
-The aim for training is that the model will learn the pricing function $f^*$. Once the data set ($\matr{X}, \bm{y}$) is generated the model can be trained to approximate the true function $f^*$. To train the model we use MLPs regression to infer the pricing function from the generated data, hence the approach is model free, because the data is only needed. We will also present a standard linear model to compare the MLPs with the classical regression methods. We want to have a fast, robust and accurate model after training on the training set. To train the model we need a measure for the error, where the standard mean squared error (MSE) for regression is applied. I.e. the cost function is chosen to be the empirical risk function with a quadratic loss function:
+The aim for training is that the model will learn the pricing function $f^*$. Once the data set ($\matr{X}, \bm{y}$) is generated the model can be trained to approximate the true function $f^*$. To train the model we use MLPs regression to infer the pricing function from the generated data, hence the approach is model free, because the data is only needed. We will also present a standard linear model to compare the MLPs with the classical regression methods. We want to have a fast, robust and accurate model after training on the training set. To train the model we need a measure for the error, where the mean squared error (MSE) for regression is applied. I.e. the cost function is chosen to be the empirical risk function with a quadratic loss function:
 $$J(\theta)= \frac{1}{K} \sum_{k=1}^{K}(y_k-\hat{y}_k)^2$$
 The MSE penalizes outliers stronger than e.g. mean absolute error (MAE), but it penalizes small deviations less. To avoid overfitting we regularize using early stopping with a patient of 5 epochs, but with a maximum of 100 epochs for computational reasons. To update the weights the Adam optimization algorithm is chosen with learning rate $\eta$ found by hyperparameter tuning. \\
 
@@ -190,7 +164,7 @@ A research area within deep learning is to fine-tune the hyperparameters to the 
 
 We test empirically the best hyperparameters for the MLPs, where the validation set is used. For hyperparameter tuning grid search is conducted to find the optimal set of hyperparameters where we will look at data set size, learning rate and batch size. \\
 
-Firstly the European call option regression is investigated, where we vary the data set size and batch size. For the Adam optimization algorithm we choose a learning rate $\eta=0.001$. The goal is to quantify how large a data set($d$) and batch size($b$) are needed for having a high quality model for the European option. The data sets for an European call option considered are in-sample data sets of size 1K, 10K, 100K, 300k and 1M data samples, where the validation set isE subsampled from the training data set. The batch sizes are 64, 256 and 1024, i.e. we have the combinations expressed by the Cartesian product:
+Firstly the European call option regression is investigated, where we vary the data set size and batch size. For the Adam optimization algorithm we choose a learning rate $\eta=0.001$. The goal is to quantify how large a data set($d$) and batch size($b$) are needed for having a high quality model for the European option. The data sets for an European call option considered are in-sample data sets of size 1K, 10K, 100K, 300k and 1M data samples, where the validation set is subsampled from the training data set. The batch sizes are 64, 256 and 1024, i.e. we have the combinations expressed by the Cartesian product:
 $$b \times d = \{(b, d) : b \in \{64, 256, 1024\} \ and \ d \in\{1K,10K,100K,300K,1M \} \}$$
 By inspiration from \parencite{HirsaAli2019} we train a MLPs model with 4 layers, 120 neurons in each hidden layer and 1 neuron in the output layer. In each layer we choose the activation function leaky ReLU, which is one of the most popular choices for activation functions. The number of data samples is relevant for real data, because for real market data there is not unlimited market data available.\\
 
@@ -228,7 +202,7 @@ $$\eta \times b \times d = \{(\eta,b, d) : \eta \in \{0.0001, 0.001, 0.01 \}, \ 
 Besides varying the hyperparameters for $\eta$, $b$ and $d$ the other hyperparameters is the same values as for the European call option.\\
 
 \begin{table}[th]
-\caption{Hyperparameter tuning of data set size, learning rate and batch size for the American put bivariate contingent claim. The table shows the top 10 best performing combinations for the training loss and for the interested reader the tensorboard is online (link \href{https://tensorboard.dev/experiment/mQWtOskJRoWrmrFgOIVQ4g/}{tensorboard 2})}
+\caption{Hyperparameter tuning of data set size, learning rate and batch size for the American put bivariate contingent claim. The table shows the top 10 best performing combinations for the training loss and for the interested reader the tensorboard is online (link \href{https://tensorboard.dev/experiment/mQWtOskJRoWrmrFgOIVQ4g/}{tensorboard 2}) and the full table is given in appendix table \ref{tab:fullhyperAmerMin4}}
 \label{tab:hyperAmerMin1}
 \centering
 \begin{tabular}{llllll}
@@ -296,7 +270,7 @@ The model performance is evaluated by MSE, RMSE, MAE and coefficient of determin
 The European call option is trained with the algorithm and hyperparameters described in the training section (section \ref{Training}). By the hyperparameter investigation we choose a batch size of 64, learning rate $\eta = 0.001$ and a data set of 300K samples. We compare the MLPs regression with the polynomial regression. Table \ref{tab:ComparePolyWithMLPS} shows that the MLPs is superior at extrapolating, because the MLPs performs better on all metrics on the out-of-sample test data sets compared to fitted polynomial regressions with a degree between 1 and 6. For the in-sample test data set the polynomial regression of order 6 and MLPs perform almost equally well, but the polynomial regression of 6. degree is a classical example of overfitting. The in-sample test data is similar to the in-sample training data, hence we expect the same magnitude of error for the test set as for the training set for in-sample testing. The performance measures show that the polynomial regression that was performing well on the in-sample data set was due to overfitting, because the high order polynomial regression does perform poorly on out-of-sample data (table \ref{tab:ComparePolyWithMLPS}). For the 6. order polynomial regression, we see a negative coefficient of determination, which means the model performs worse than the model that predicts the sample mean. This means the 6. degree polynomial have bad performance for out-of-sample data. \\
 
 \begin{table}[th]
-\caption{Performance comparison of MLPs and polynomial regression on European call option. Shown the best performing regressions in the linear model and the worst performing in terms of MSE for in-sample and out-of-sample data sets}
+\caption{Performance comparison of MLPs and polynomial regression on European call option. Shown the best performing regressions in the linear model and the worst performing in terms of MSE for in-sample and out-of-sample data sets (The full table for polynomial regression is found in appendix table \ref{tab:fullEuroCall})}
 \label{tab:ComparePolyWithMLPS}
 \centering
 \begin{tabular}{l l l l l l l }
@@ -339,17 +313,17 @@ The American put option is priced with the same MLPs algorithm as for the europe
 \textbf{Data set} & \textbf{MSE} & \textbf{RMSE} & \textbf{MAE} & \textbf{$R^2$} \\
 \midrule
 In-Sample & 0.000002 & 0.001562 & 0.001278 & 0.999634\\
-Out-Of-Money & 0.000012 & 0.003519 & 0.002290 & 0.995778\\
+In-The-Money & 0.000012 & 0.003519 & 0.002290 & 0.995778\\
 Longer Maturity & 0.000193 & 0.013894 & 0.009213 & 0.980835\\
 \bottomrule\\
 \end{tabular}
 \end{table}
 
-\subsubsection{American Put On Minimum of Two Assets Option}
-The American put on minimum of two assets option has the double amount of parameters compared to the univariate contingent claims, hence the performance might give slightly higher MSE. The other potential problem is the lack of generality when training, because the American put on minimum of two option is not a first order homogeneous function. The error is then on the actual price for the option and not on the price relative to the strike. Table \ref{tab:AmerMinPerformanceComparision} shows a good fit for both in-the-money and longer maturity sample, but the MSE is higher as expected compared to the relative prices for the univariate contingent claims.  
+\subsubsection{American Put On Minimum of Two Assets Option TODO! moneyness}
+The American put on minimum of two assets option has almost the double amount of parameters compared to the univariate contingent claims, hence the performance might give slightly higher MSE. Table (TODO: what does the table show and the batchsize chosen) \ref{tab:AmerMinPerformanceComparision} shows a good fit for both in-the-money and longer maturity sample, but the MSE is higher as expected compared to the relative prices for the univariate contingent claims. \\ 
 
 \begin{table}[th]
-\caption{Performance of predictive strength for different regression models}
+\caption{Performance of the bivariate American put minimum contingent claim}
 \label{tab:AmerMinPerformanceComparision}
 \centering
 \begin{tabular}{l l l l l l l }
@@ -363,9 +337,9 @@ Longer Maturity & 3.957424 & 1.989328 & 1.413311 & 0.974056\\
 \end{tabular}
 \end{table}
 
-The MLPs has shown good performance in terms of our performance measures on all the derivatives considered. Next chapter will compare this MLPs model (henceforth referred to as MLPS II) with the closed form solutions, binomial model, LSM and LSM MLPs (henceforth referred to as MLPS I). All the models in this section considered had good performance on the in-sample dataset except of the too simple models linear regression and 2. degree polynomial regression. To test the predictive strength for the models, we tested the models with out-of-sample data. Specifically we consider longer maturity and deep-out-of-money options.\\
+The MLPs has shown good performance in terms of our performance measures on all the derivatives considered. Next chapter will compare this MLPs model (henceforth referred to as MLPS II) with the closed form solutions, binomial model, LSM and LSM MLPs (henceforth referred to as MLPS I). All the models in this section considered had good performance on the in-sample dataset except of the too simple models linear regression and 2. degree polynomial regression. To test the predictive strength for the models, we tested the models with out-of-sample data. Specifically we consider longer maturity and not at-the-money options.\\
 
-The MLPs is not based on a model, it is only trained on the available data. This feature makes the MLPs II pricing method versatile because the MLPs could also be used for actual market data or different models to learn patterns. The fact that the method can be extended to real market data is already shown in \parencite{GasparRaquel20}. This section showed how successfully MLPs compared to polynomial is in a GBM model setup for pricing derivatives.
+The MLPs II is not based on a model, it is only trained on the available data. This feature makes the MLPs II pricing method versatile because the MLPs could also be used for actual market data or different models to learn patterns. The fact that the method can be extended to real market data is already shown in \parencite{GasparRaquel20}. This section showed how the MLPs can be trained to pricing derivatives with Black-Scholes theory and also seen that the MLPs is preferred over polynomial regression.
 
 
 

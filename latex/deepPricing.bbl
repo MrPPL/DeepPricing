@@ -959,6 +959,36 @@
     \field{year}{2007}
   \endentry
 
+  \entry{AntoineSavine}{book}{}
+    \name{author}{1}{}{%
+      {{hash=SA}{%
+         family={Savine},
+         familyi={S\bibinitperiod},
+         given={Antoine},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{language}{1}{%
+      {eng}%
+    }
+    \list{publisher}{1}{%
+      {Wiley}%
+    }
+    \keyw{Mathematical models, Computer simulations and automatic
+  differentiation}
+    \strng{namehash}{SA1}
+    \strng{fullhash}{SA1}
+    \field{labelnamesource}{author}
+    \field{labelyear}{2019}
+    \field{labeldatesource}{year}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{booktitle}{MODERN COMPUTATIONAL FINANCE AAD AND PARALLEL
+  SIMULATIONS}
+    \field{isbn}{978-1-119-53945-2}
+    \field{year}{2019}
+  \endentry
+
   \entry{Shiryaev06}{book}{}
     \name{author}{2}{}{%
       {{hash=SA}{%

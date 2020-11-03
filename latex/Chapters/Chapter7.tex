@@ -9,9 +9,17 @@
 %----------------------------------------------------------------------------------------
 
 \section{Conclusion}
+We have seen different methods for pricing equity options within the Black-Scholes world. We have specifically focused on the European Call, Exotic European, American Put and American Put mininum on two stocks. The closed form solutions and the classical binomial lattice model and LSM were provided for investigating the potential of using deep learning in option pricing theory. \\
+
+The numerical investigation showed that MLPs I and MLPs II pricing methods were inferior in accuracy for univariate and bivariate contigent claims, but the MLPs II had a enhanced speed compare to the classical methods after training. The results for the MLPs I was somewhat discouraging, but the theory tells us we can improve our training algorithm to perform on the same level as LSM. The CRR model was extended to the BEG method with two underlying stocks, which we saw gave a good approximation for European bivariate claims. The BEG method has though its limitations in terms pricing basket options with many underlying stocks, which can be solved with LSM or MLPs I.\\
+
+To sum up the MLPs I needs hyperparameter tuning, but the underlying theory and idea gives hope for finding a better model for high dimensional data than the classical LSM. The BEG has its limitation in high dimensions, hence LSM is perferred for higher dimensions. The MLPs II showed better performance than for polynomial regression at supervised learning. Furthermore can the MLPs II be beneficial in terms of computational speed, but has lower precision for univariate contingent claims than the LSM for our study compared to our CRR benchmark price.
 
 %-----------------------------------
 %	SECTION 2
 %-----------------------------------
 \section{Further Investigation}
-Code in Julia or C++
+The code library is written in python, which could be optimized in terms of computational speed with e.g. Julia or C++. The advantage with python is the libraries for machine learning and specially deep learning. The code could also be more generalized to not only handle specific option contracts by using the object oriented programming paradigm instead of our procedural programming approach.\\
+
+Hyperparameter tuning for the MLPs could also be interesting to investigate further with e.g. the more advanced method Bayesian hyperparameter tuning. The article from \parencite{liaw2018tune} looks at how hyperparameter tuning can be easy implemented, which is worth looking at. Another interesting aspect to investigate is to calculate the derivatives of the pricing function, which gives the risks for the derivative books. It looks like MLPs are supirior in terms of speed to the classical methods, hence an additional gain with using deep learning.
+

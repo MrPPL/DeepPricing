@@ -63,6 +63,12 @@ sigma1 = 0.2
 sigma2 = 0.3
 T = 1
 rho = 0.5
-NStep = 100
+NStep = 500
+for spot in range(30,51,1):
+    print("spot", spot, "BEG", BEG(Nstep=NStep, T=T, sigma1=sigma1, sigma2=sigma2, r=r, rho=rho, S10=spot, S20=spot, K=K, amer=True))
 
-print(BEG(Nstep=NStep, T=T, sigma1=sigma1, sigma2=sigma2, r=r, rho=rho, S10=S10, S20=S20, K=K, amer=True))
+#First order homogeneous function
+#print(BEG(Nstep=50, T=1, sigma1=0.2, sigma2=0.3, r=0.06, rho=-0.5, S10=120, S20=10, K=40, amer=True))
+#a = BEG(Nstep=50, T=1, sigma1=0.2, sigma2=0.3, r=0.06, rho=-0.5, S10=120/40, S20=10/40, K=40/40, amer=True)
+#print(a*40)
+#print(BEG(Nstep=50, T=0.003968, sigma1=0.05, sigma2=0.05, r=0.01, rho=-0.5, S10=0.8, S20=0.8, K=1, amer=True))

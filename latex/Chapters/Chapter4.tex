@@ -17,7 +17,7 @@ The task for machine learning is to learn from data with respect to some perform
 $$\frac{1}{K}\sum_{k=1}^{K} (y_k-\hat{y}_k)^2$$
 There are other methods for measuring performance e.g. mean absolute error (MAE). Another measure to quantify the fit is coefficient of determination:
 $$R^2=1-\frac{\frac{1}{K}\sum_{k=1}^{K} (y_k-\hat{y}_k)^2}{\frac{1}{K}\sum_{k=1}^{K} (y_k-\bar{y})^2} \quad \text{where $\bar{y}$ is the sample mean}$$
-Coefficient of determination explains how well the model explains the data compared to the empirical mean. Some care should be taken by comparing models with different capacity, because the coefficient of determination will tend to prefer the larger models. The experience comes from data, where the data can be given with or without target values $\bm{y}$. In machine learning the task is quite different depending on targets are given or not, hence the algorithms are split into two categories; supervised and unsupervised learning. The terminology supervised comes from a teacher gives you the target values $\bm{y}$ that the algorithms tries to predict from $\matr{X}$.3\\
+Coefficient of determination explains how well the model explains the data compared to the empirical mean. Some care should be taken by comparing models with different capacity, because the coefficient of determination will tend to prefer the larger models. The experience comes from data, where the data can be given with or without target values $\bm{y}$. In machine learning the task is quite different depending on targets are given or not, hence the algorithms are split into two categories; supervised and unsupervised learning. The terminology supervised comes from a teacher gives you the target values $\bm{y}$ that the algorithms tries to predict from $\matr{X}$.\\
 
 Machine learning is not about making overly complex models to fit your data perfectly, because then the model will most likely have poor performance on unseen data. This phenomenon is known as overfitting, but the models can also be too simple known as underfitting. If machine learning only cared about performance on the given data for training, then machine learning would be essentially optimization. The key difference is that machine learning wishes to obtain statistical generalization to unseen data. The practical way to evaluate the model is to measure generalization error on a test set. In machine learning the data is split into test data and training data, where the test set can only be used for evaluation after training. \\
 
@@ -107,7 +107,7 @@ The single neuron has a number $R$ features of inputs $x_r$ and one output $\hat
 
 
 The function from inputs to output for a single neuron is:
-\begin{align}   
+\begin{align*}   
 \hat{y}=g(w_0 + \bm{x}^T \bm{w}) \quad where \quad \bm{x}=\begin{pmatrix}
 x_1 \\
 \vdots\\
@@ -117,7 +117,7 @@ w_1 \\
 \vdots \\
 w_R
 \end{pmatrix}
-\end{align}
+\end{align*}
 The $\bm{w}$ is the weight matrix (this case a vector) and $w_0$ is the bias term. The term inside the function g is the activation of the neuron and it is a affine transformation denoted:
 $$a= w_0 + \bm{x}^T \bm{w}$$
 The function g is the activation function and it is essential for the flexibility of the MLPs. There exists numerous of activation functions only the imagination is the limit. We will list the most common and discuss them.
@@ -163,14 +163,14 @@ With a understanding of a single neuron we continue to the architecture of a MLP
 %-----------------------------------
 \subsection{Architecture Of MLPs}\label{architectureMLPs}
 A MLPs consists of a input layer, where all $R$ features enter, $L$ hidden layers, and an output layer. Each hidden layer and the output layer consists of multiple neurons, where the width of the layer is the number of neurons in that layer ($m^l$) (see figure \ref{fig:multilayer-perceptron}). The networks inputs are called the input layer, the output layer is the output of the neural network. The layers between the input and output layer are hidden layers. This could be an explanation why the field is called Deep learning, because of a deep structure of layers. In each hidden layer a linear combination of the features from the previous layer is made and then an activation function is applied in order to create the new hidden features in that layer (see figure \ref{fig:multilayer-perceptron}). The MLPs is essential a large nested function, where the input layer go through a chain of functions until reaching the output.
-\begin{align}
+\begin{align*}
 \bm{f}(\bm{x};\bm{\theta})=\bm{f}_1 \circ \bm{f}_2 \circ \cdots \circ \bm{f}_{L+1}\\
 where \ \bm{f}_i : \mathbf{R}^{m^{i-1}} \to \mathbf{R}^{m^{i}} \quad i=1,\ldots, L+1
-\end{align}
+\end{align*}
 Each function in the composition of functions corresponds to a layer of neurons.
-\begin{align}
+\begin{align*}
 \bm{f}_i(x)=\bm{g}(\matr{W}^T \bm{x} + \bm{w_0}) \quad x\in \mathbf{R}^{m^{i-1}} \ and \ \matr{W} \in \mathbf{R}^{\bm{m^{i-1}} \times \bm{m^{i}} }
-\end{align}
+\end{align*}
 So the function maps a vector to a vector, the hidden layers will often be denoted $\bm{h}$ where for each single neuron, we map a vector to a scalar by:
 $$h_i=g(\bm{x}^T \cdot \matr{W}_{:,i} + (w_0)_{i})$$
 A layer is a vector of neurons, hence the transformation from one layer to the next can be interpreted as multiple vector to scalar transformations, where each neuron acts in parallelle. The different view motivates the initial presentation of single neuron network (section \ref{singleNeuron}).

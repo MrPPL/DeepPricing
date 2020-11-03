@@ -3,34 +3,31 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Contract Functions}}{5}{figure.caption.20}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Sample Path For Stocks}}{8}{figure.caption.35}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Sample Path For Stocks}}{9}{figure.caption.36}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Two Dimensional Binomial Lattice}}{20}{figure.caption.87}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Binomial Tree}}{22}{figure.caption.94}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Convergence Of Binomial Model}}{23}{figure.caption.97}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Three Dimensional Binomial Lattice}}{25}{figure.caption.100}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Polynomial Regression Of Continuation Value}}{30}{figure.caption.109}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Optimal Stopping Decision}}{31}{figure.caption.113}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Two Dimensional Binomial Lattice}}{20}{figure.caption.84}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Binomial Tree}}{22}{figure.caption.90}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Convergence Of Binomial Model}}{23}{figure.caption.92}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Three Dimensional Binomial Lattice}}{25}{figure.caption.96}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Polynomial Regression Of Continuation Value}}{29}{figure.caption.104}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Optimal Stopping Decision}}{31}{figure.caption.109}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces A single neuron\relax }}{42}{figure.caption.146}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Multilayer perceptrons with $(L+1)$-layers}}{44}{figure.caption.153}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A single neuron\relax }}{40}{figure.caption.129}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Multilayer perceptrons with $(L+1)$-layers}}{42}{figure.caption.132}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Marginal Distributions For American Put}}{56}{figure.caption.176}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{60}{figure.caption.182}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces MLPs Performance on in-sample dataset European Call}}{63}{figure.caption.187}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Marginal Distributions For American Put}}{53}{figure.caption.151}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{57}{figure.caption.157}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces MLPs Performance on in-sample dataset European Call}}{60}{figure.caption.162}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Histogram Price Predictions}}{69}{figure.caption.210}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {B.1}{\ignorespaces MLPs Performance for Out-of-money datasets on American Put}}{77}{figure.caption.236}
-\contentsline {figure}{\numberline {B.2}{\ignorespaces MLPs Performance for Out-of-money datasets on American Put}}{78}{figure.caption.237}
-\contentsline {figure}{\numberline {B.3}{\ignorespaces Polynomial Regression Performance on out-of-money dataset European Call}}{81}{figure.caption.238}
-\contentsline {figure}{\numberline {B.4}{\ignorespaces Polynomial Regression Performance on long maturity dataset European Call}}{82}{figure.caption.239}
-\contentsline {figure}{\numberline {B.5}{\ignorespaces Effect of dataset size}}{84}{figure.caption.243}
-\contentsline {figure}{\numberline {B.6}{\ignorespaces Polynomial Regression Predictions Vs. Actual Prices}}{85}{figure.caption.244}
-\contentsline {figure}{\numberline {B.7}{\ignorespaces MLPs Predictions Vs. Actual Prices}}{86}{figure.caption.245}
-\contentsline {figure}{\numberline {B.8}{\ignorespaces MLPs Performance on long maturity dataset on American bivariate contingent claim}}{86}{figure.caption.246}
-\contentsline {figure}{\numberline {B.9}{\ignorespaces MLPs Performance on long maturity dataset on American bivariate contingent claim}}{87}{figure.caption.247}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Histogram Price Predictions}}{65}{figure.caption.185}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Polynomial Regression Performance for out-of-money data set European Call}}{86}{figure.caption.233}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Polynomial Regression Performance for long maturity data set European call}}{87}{figure.caption.234}
+\contentsline {figure}{\numberline {D.3}{\ignorespaces MLPs Performance for In-the-Money data set on American Put}}{88}{figure.caption.235}
+\contentsline {figure}{\numberline {D.4}{\ignorespaces MLPs Performance for long maturity data set on American Put}}{88}{figure.caption.236}
+\contentsline {figure}{\numberline {D.5}{\ignorespaces MLPs Performance on long maturity data set on American bivariate contingent claim}}{89}{figure.caption.237}
+\contentsline {figure}{\numberline {D.6}{\ignorespaces MLPs Performance on In-the-Money data set on American bivariate contingent claim}}{89}{figure.caption.238}
