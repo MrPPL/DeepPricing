@@ -1,11 +1,36 @@
-% Appendix B
+% Appendix D
 
 \chapter{Additional Tables and Figures} % Main appendix title
 
-\label{AppendixB} % For referencing this appendix elsewhere, use \ref{AppendixA}
+\label{AppendixD} % For referencing this appendix elsewhere, use \ref{AppendixA}
 
 \section{Tables}
-\begin{table}[th]
+
+\begin{table}[H]
+\caption{Polynomial regression result for the European call option}
+\label{tab:fullEuroCall}
+\centering
+\begin{tabular}{llllllll}
+\toprule
+\textbf{Data set} &  \textbf{Measure} & \textbf{1. degree} & \textbf{2. degree} & \textbf{3. degree} & {4. degree} & \textbf{5. degree} & {6. degree}\\
+\midrule
+In-Sample     &	MSE  & 0.000636 & 0.000069 & 0.000013 & 0.000004 & 0.000002 & 0.000001 \\
+		      & RMSE & 0.025212 & 0.008316 & 0.003624 & 0.002052 & 0.001414 & 0.000958 \\
+		      & MAE  & 0.018326 & 0.006141 & 0.002561 & 0.001280 & 0.000867 & 0.000591 \\
+		      & $R^2$& 0.936628 & 0.993105 & 0.998691 & 0.999580 & 0.999801 & 0.999909 \\
+Long Maturity & MSE  & 0.002662 & 0.001196 & 0.001654 & 0.003956 & 0.012255 & 0.043361 \\
+		      & RMSE & 0.051593 & 0.034577 & 0.040666 & 0.062894 & 0.110702 & 0.208233 \\
+		      & MAE  & 0.041232 & 0.026287 & 0.028371 & 0.039932 & 0.064402 & 0.111190 \\
+		      & $R^2$& 0.818143 & 0.918316 & 0.887014 & 0.729744 & 0.162742 & -1.962442 \\
+Out-of-Money  & MSE  & 0.005772 & 0.000767 & 0.000839 & 0.000944 & 0.001812 & 0.004423 \\
+		      & RMSE & 0.075973 & 0.027694 & 0.028960 & 0.030724 & 0.042568 & 0.066506 \\
+		      & MAE  & 0.060936 & 0.022203 & 0.020288 & 0.020542 & 0.027125 & 0.041315\\
+		      & $R^2$& -2.377251 & 0.551246 & 0.509280 & 0.447668 & -0.060261 & -1.588030\\
+\bottomrule\\
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
 \caption{Hyperparameter tuning of dataset size and batchsize for american put minimum two assets for the interested reader see the tensorboard}
 \label{tab:fullhyperAmerMin4}
 \centering
@@ -61,33 +86,11 @@
 \end{table}
 
 
-\begin{table}[th]
-\caption{Polynomial regression result for the European call option}
-\label{tab:fullEuroCall}
-\centering
-\begin{tabular}{llllllll}
-\toprule
-\textbf{Data set} &  \textbf{Measure} & \textbf{1. degree} & \textbf{2. degree} & \textbf{3. degree} & {4. degree} & \textbf{5. degree} & {6. degree}\\
-\midrule
-In-Sample     &	MSE  & 0.000636 & 0.000069 & 0.000013 & 0.000004 & 0.000002 & 0.000001 \\
-		      & RMSE & 0.025212 & 0.008316 & 0.003624 & 0.002052 & 0.001414 & 0.000958 \\
-		      & MAE  & 0.018326 & 0.006141 & 0.002561 & 0.001280 & 0.000867 & 0.000591 \\
-		      & $R^2$& 0.936628 & 0.993105 & 0.998691 & 0.999580 & 0.999801 & 0.999909 \\
-Long Maturity & MSE  & 0.002662 & 0.001196 & 0.001654 & 0.003956 & 0.012255 & 0.043361 \\
-		      & RMSE & 0.051593 & 0.034577 & 0.040666 & 0.062894 & 0.110702 & 0.208233 \\
-		      & MAE  & 0.041232 & 0.026287 & 0.028371 & 0.039932 & 0.064402 & 0.111190 \\
-		      & $R^2$& 0.818143 & 0.918316 & 0.887014 & 0.729744 & 0.162742 & -1.962442 \\
-Out-of-Money  & MSE  & 0.005772 & 0.000767 & 0.000839 & 0.000944 & 0.001812 & 0.004423 \\
-		      & RMSE & 0.075973 & 0.027694 & 0.028960 & 0.030724 & 0.042568 & 0.066506 \\
-		      & MAE  & 0.060936 & 0.022203 & 0.020288 & 0.020542 & 0.027125 & 0.041315\\
-		      & $R^2$& -2.377251 & 0.551246 & 0.509280 & 0.447668 & -0.060261 & -1.588030\\
-\bottomrule\\
-\end{tabular}
-\end{table}
+
 
 \section{Figures}
 
-\begin{figure}[th]
+\begin{figure}[H]
 \centering
 \includegraphics{Figures/polynomialOutMoneyEuroC.png}
 \decoRule
@@ -125,7 +128,7 @@ Out-of-Money  & MSE  & 0.005772 & 0.000767 & 0.000839 & 0.000944 & 0.001812 & 0.
 \includegraphics{Figures/longTAmerMinP.png}
 \decoRule
 \caption[MLPs Performance on long maturity data set on American bivariate contingent claim]{MLPs Performance for long maturity data set on American put on minimum of two stocks}
-\label{fig:MLPsEuroC}
+\label{fig:MLPsAmerMin1}
 \end{figure}
 
 
@@ -134,7 +137,7 @@ Out-of-Money  & MSE  & 0.005772 & 0.000767 & 0.000839 & 0.000944 & 0.001812 & 0.
 \includegraphics{Figures/inMoneyAmerMinP.png}
 \decoRule
 \caption[MLPs Performance on In-the-Money data set on American bivariate contingent claim]{MLPs Performance on In-the-Money data set on American put on minimum of two stocks}
-\label{fig:MLPsEuroC}
+\label{fig:MLPsAmerMin2}
 \end{figure}
 
 

@@ -17,7 +17,7 @@ In the financial markets there are a lot of players and different types of inves
 
 A derivative or a contingent claim is a financial instrument depending on an underlying asset(s), where the dependency is specified in the contract. We will focus on contingent claims with one or two underlying stocks, i.e. univariate and bivariate contingent claims, but the techniques developed can easily be extended to other types of derivatives. \\
 
-To find prices of contingent claims in modeling we restrict our financial market to d risky assets $\bm{S}(t)=(S_1(t), S_2(t),\ldots, S_d(t))$ and a bank account $S_0(t)$ as numéraire. The probability space $(\Omega, \mathcal{F}, P)$ with a filtration $\mathbb{F}=(\mathcal{F}_t)_{t\geq 0}$ is the fundamental for modeling stochastic processes describing asset prices and trading strategies, where in the thesis the filtered probability space $(\Omega, \mathcal{F}, \mathbb{F}, P)$ will be implicit assumed. Intuitively the filtration $\mathcal{F}_t$ is the information observable to time t, where the filtration $\mathbb{F}^{W}$ generated only by the Wiener processes $(W_t)_{0\leq t \leq T}$ will be important for having a complete market.\\
+To find prices of contingent claims in modeling we restrict our financial market to d risky assets $\bm{S}(t)=(S_1(t), S_2(t),\ldots, S_d(t))$ and a bank account $S_0(t)$. The probability space $(\Omega, \mathcal{F}, P)$ with a filtration $\mathbb{F}=(\mathcal{F}_t)_{t\geq 0}$ is the fundamental for modeling stochastic processes describing asset prices and trading strategies, where in the thesis the filtered probability space $(\Omega, \mathcal{F}, \mathbb{F}, P)$ will be implicit assumed. Intuitively the filtration $\mathcal{F}_t$ is the information observable to time t, where the filtration $\mathbb{F}^{W}$ generated only by the Wiener processes $(W_t)_{0\leq t \leq T}$ will be important for having a complete market.\\
 
 The bank account is assumed to be a strictly positive adapted process $S_0=(S_0 (t))_{t \geq 0}$ and $S_0(0)=1$, where the d risky assets are modeled by a $\mathbb{R}^d$ adapted stochastic process $\bm{S}=(\bm{S}(t))_{t\geq 0}$. The risky assets are stocks where the stocks are assumed positive $S_i(t)\geq 0$ P-a.s for all i and $t\geq 0$ by financial reasons. By using the bank account as numéraire i.e. dividing the traded asset by the bank account ($\frac{\bm{S}(t)}{S_0 (t)}$), this amounts to working with \textit{zero interest}. We assume that the our financial market is frictionless.
 \theoremstyle{assumption}
@@ -38,16 +38,16 @@ Besides the assumptions in \parencite{finKont} we assume the market gives same u
 %-----------------------------------
 
 \subsection{Contingent Claims}
-A contingent claim is a contract on a underlying asset or assets, where the price of the claim is contingent on the price behavior of the underlying asset(s). A bivariate contingent claim refers to that the option depends on two risky assets and similar for multivariate contingent claim. We investigate stock derivatives with different types of contracts, where we will mainly divide the derivatives into two classes. 
+A contingent claim is a contract on a underlying asset or assets, where the price of the claim is contingent on the price behavior of the underlying asset(s). A bivariate contingent claim refers to that the option depends on two risky assets\footnote{Similar refers the multivariate contingent claim to that the claim depends on two or more underlying assets}. We investigate stock derivatives with different types of contracts, where we will mainly divide the derivatives into two classes. 
 \begin{enumerate}
-\item Simple equity derivatives (e.g. European options)
-\item Exotic equity derivatives (e.g. American options)
+\item Simple European derivatives
+\item Exotic derivatives (e.g. American options)
 \end{enumerate}
-The first class are simple because you can only exercise them at maturity (time T). Actually, we have a closed form solution for some European options (section \ref{BS-price-EuroCall}). The exotic derivatives are a broad class of functions on the underlying assets, where you can e.g. have an American option where the holder can exercise from inception to maturity (section \ref{AmericanOptions}) or a contract on several underlying stocks.
+Simple European options can only be exercised at maturity (time T) and they depend only on one underlying asset. Actually, we have a closed form solution for the simple European options (section \ref{BS-price-EuroCall}). The exotic derivatives are a broad class of functions on the underlying assets, where you can e.g. have an American option where the holder can exercise from inception to maturity (section \ref{AmericanOptions}) or a contract on several underlying stocks.
 
 \theoremstyle{definition}
 \begin{definition}{\textbf{European Call And Put Options:}}\label{def:CallOptions}
-A European call option is an option where the owner of the option has the option to buy the underlying asset to price K at maturity. If the owner of the option chooses to buy the underlying asset, then the option is exercised. The contract function for the European call option:
+A European call option is an option where the owner of the option has the option to buy the underlying asset to price K at maturity. If the owner of the option chooses to buy the underlying asset, then the option is exercised. The contract function for the European call option is:
 \begin{equation*}
 \begin{split}
 \Phi(S(T))=\max\{S(T)-K, 0\}
@@ -72,7 +72,7 @@ The American option adds the feature to the European option, that you can exerci
 \label{fig:contractfct}
 \end{figure}
 
-Figure \ref{fig:contractfct} shows that the owner of the option has limited downside, but the graph does not take into account the initial price for the option. The profit and loss ($P\& L$) graph is also a common way of illustrating the payoff for an option, where you take the initial cost of buying the option into account. The European call and American put will be the central derivatives considered together with an American bivariate contingent claim. The task ahead is to find the fair price for these contracts, where the concepts of completeness and arbitrage will be central.
+Figure \ref{fig:contractfct} shows that the owner of the option has limited downside, but the graph does not take into account the initial price for the option. The profit and loss ($P\& L$) graph is also a common way of illustrating the payoff for an option, where you take the initial cost of buying the option into account. The European call and American put will be the central derivatives considered together with an American bivariate contingent claim. The task ahead is to find the initial price or the fair price for these contracts, where the concepts of completeness and arbitrage will be central.
 
 %-----------------------------------
 %	SUBSECTION 2
@@ -93,12 +93,12 @@ h(t)=($h_0(t),h_1(t), \dotsc, h_{d}$) is self-financing if:
 dV^{h}(t)=\sum_{i=0}^{d} h_{i}(t) dS_{i}(t)
 \end{split}
 \end{equation*}
-Where $S_{i}$ is the $i'th$ asset in our portfolio, d+1 is the total number of assets in our market model and $V^{h}(t)=\sum_{i=0}^{n} h_{i}(t) S_{i}(t)$.\\ \null \hfill (p. 87 \parencite{finKont})
+Where $S_{i}$ is the $i'th$ asset in our portfolio, d+1 is the total number of assets in our market model and $V^{h}(t)=\sum_{i=0}^{d} h_{i}(t) S_{i}(t)$.\\ \null \hfill (p. 87 \parencite{finKont})
 \end{definition}
-When dealing with discrete time finance the S-F portfolio is actually a budget restriction, this is important intuition for the continuous time version, because the continuous time version can be thought of the limit of the discrete version by letting step sizes in time tending to zero. To avoid pathological effects on the portfolio one often introduce the concept of an admissible portfolio:
+When dealing with discrete time finance the S-F portfolio is actually a budget restriction, this is important intuition for the continuous time version, because the continuous time version can be thought as the limit of the discrete version by letting step sizes in time tending to zero. To avoid pathological effects on the portfolio one often introduce the concept of an admissible portfolio:
 \theoremstyle{definition}
-\begin{definition}{\textbf{A-admissible portfolio: }}
-For $a\geq 0$, a portfolio h is called a-admissible if its value process $V^h(t)$ is uniform bounded from below by -a. A portfolio h is admissible if it is a-admissible for some $a\geq 0$.\\
+\begin{definition}{\textbf{a-admissible portfolio: }}
+For some $a\geq 0$, a portfolio h is called a-admissible if its value process $V^h(t)$ is uniform bounded from below by -a.\\
 \null \hfill (p. 139 \parencite{finKont})
 \end{definition}
 The definition of a-admissible portfolio is to avoid situations as the doubling strategy known from gambling and imposes a limit to the debt arrangement. The important takeaway is that the S-F portfolio is a portfolio where you only reallocate your assets through time within the portfolio.
@@ -155,7 +155,7 @@ Let us consider a filtered probability space $(\Omega, \mathcal{F}, P, (\mathcal
 d\bm{S}(t)&=D[\bm{S}(t)]\bm{\alpha}(t)dt+D[\bm{S}(t)]\bm{\sigma}(t)d\bar{\bm{W}}(t) \quad & S_i(0) &\in \mathbb{R}^+ \label{GBM-P} \\
 dB(t)&=r(t)B(t)dt \quad & B(0) &= 1
 \end{align}
-We assume $\alpha_i(t)$, $\sigma_{ij}(t)$ and the short rate $r(t)$ are adapted processes, this condition are necessary for the stochastic integrals to be well-defined. The evolution of the stocks are described by the geometric brownian motion (GBM) which has a solution to the SDE. The randomness comes from the Wiener process\footnote{A Wiener process is also called a Brownian motion (BM)} in the GBM, which has wildly trajectories. The function $t\mapsto W_{t}(\omega)$ from $[0,\infty)$ to $\mathbb{R}$ is continuosus, but nowhere differentiable. Furthermore the BM has nonzero quadratic variation and infinite variation, which is the reason to stochastic calculus pioneered by Itô. The BM has also well-behaved property e.g. it is a Lévy process, i.e. $W(0)=0 \ a.s$, independent and stationary increments $W(t)-W(s)$ which is normally distributed with mean zero and variance t-s. The Brownian motion in the GBM formalizes "random shocks" $dW$ to the stock return with volatility $\bm{\sigma}(t)$ and drift $\bm{\alpha}(t)$. Figure \ref{fig:BM} illustrates three approximations to sample paths of the stocks with GBM assumption with initial value $S_{i}(0)=36$.\\
+We assume $\alpha_i(t)$, $\sigma_{ij}(t)$ and the short rate $r(t)$ are adapted processes, this condition are necessary for the stochastic integrals to be well-defined. The evolution of the stocks are described by the geometric brownian motion (GBM) which has a solution to the SDE. The randomness comes from the Wiener process\footnote{A Wiener process is also called a Brownian motion (BM)} in the GBM, which has wildly trajectories. The function $t\mapsto W_{t}(\omega)$ from $[0,\infty)$ to $\mathbb{R}$ is continuous, but nowhere differentiable. Furthermore the BM has nonzero quadratic variation and infinite variation, which is the reason to stochastic calculus pioneered by Itô. The BM has also well-behaved property e.g. it is a Lévy process, i.e. $W(0)=0 \ a.s$, independent and stationary increments $W(t)-W(s)$ which is normally distributed with mean zero and variance t-s. The Brownian motion in the GBM formalizes "random shocks" $dW$ to the stock return with volatility $\bm{\sigma}(t)$ and drift $\bm{\alpha}(t)$. Figure \ref{fig:BM} illustrates three approximations to sample paths of the stocks with GBM assumption with initial value $S_{i}(0)=36$.\\
 
 \begin{figure}[th]
 \centering
@@ -165,7 +165,7 @@ We assume $\alpha_i(t)$, $\sigma_{ij}(t)$ and the short rate $r(t)$ are adapted 
 \label{fig:BM}
 \end{figure}
 
-The tool for handling BM is stochastic calculus in continuous time, because the standard calculus will not work for the wildly behaved BM. In the representation of the GBM, we used vector and matrix notation for the GBM process. The stock vector is d dimensional and the Wiener process vector is k dimensional. The volatility matrix is given by $\bm{\sigma}(t)=\{\sigma_{ij}(t)\}_{i=1,\ldots,d,j=1,\ldots,k}$ and the drift is $\alpha(t)=(\alpha_1(t), \alpha_2(t), \ldots, \alpha_d(t))^T$. D(x) denotes a diagonal matrix with vector x as its diagonal and the Wiener processes instantaneous correlation matrix $\rho$ is $Cov(dW_i(t),dW_j(t))=\rho_{ij}dt$.
+The tool for handling BM is stochastic calculus in continuous time, because the standard calculus will not work for the wildly behaved BM. In the representation of the GBM, we used vector and matrix notation for the GBM process. The stock vector is d dimensional and the Wiener process vector is k dimensional. The volatility matrix is given by $\bm{\sigma}(t)=\{\sigma_{ij}(t)\}_{i=1,\ldots,d,j=1,\ldots,k}$ and the drift is $\alpha(t)=(\alpha_1(t), \alpha_2(t), \ldots, \alpha_d(t))^T$. D(x) denotes a diagonal matrix with vector x as its diagonal and the Wiener processes instantaneous correlation matrix $\Sigma$ is given by $Cov(dW_i(t),dW_j(t))=\rho_{ij}dt$.
 
 \subsection{Arbitrage Free Model}
 The first problem we are faced with in arbitrage theory is to create a model with no arbitrage opportunities. The First Fundamental Theorem tells us how to not introduce arbitrage to our market model.
@@ -175,13 +175,13 @@ $$\frac{S_0(t)}{S_0(t)}, \frac{S_1(t)}{S_0(t)}, \cdots, \frac{S_d(t)}{S_0(t)}$$
 are (local)martingales under Q.
 \\ \null \hfill (p. 154 \parencite{finKont})
 \end{theorem}
-The processes are martingales is natural, because a martingale is mathematical formulation that the expected value of the discounted value coincides with the known spot value today\footnote{Assuming $B(0)=1$}. In gambling a martingale resembles a "fair" game. From the FFT1 using the bank account $B(t)$ as numéraire it follows that:
+The processes are martingales is a mathematical formulation that the expected value of the discounted value coincides with the known spot value today\footnote{Assuming $B(0)=1$}. In gambling a martingale resembles a "fair" game. From the FFT1 using the bank account $B(t)$ as numéraire it follows that:
 \theoremstyle{proposition}
 \begin{proposition}{}
 We assume that $B(t)=S_0(t)$ is our numéraire and all the processes randomness comes from the Weiner process, then a equivalent measure $Q \sim P$ is martingale measure if and only if all assets $(B(t), S_1(t), \ldots, S_d(t))$ have the short rate as their local rates of return, i.e.
-\begin{align}
+\begin{align*}
 dS_i(t)=S_i(t)r(t)dt+S_i(t)\sigma_i(t)dW^Q(t)
-\end{align}
+\end{align*}
 \null \hfill (p. 154 \parencite{finKont})
 \end{proposition}
 So to not introduce arbitrage to the model for the financial market, we need to ensure the Q-dynamics of S is:
@@ -200,7 +200,7 @@ We disregard pathological models when doing so the term generically arbitrage fr
 
 \theoremstyle{definition}
 \begin{definition}{\textbf{Generically arbitrage free}:}
-The model in this section is said to be generically arbitrage free if it is arbitrage free for every (sufficiently integrable) choice of $\bm{\alpha}$.
+The model in this section is said to be generically arbitrage free if it is arbitrage free for every (sufficiently integrable) choice of $\bm{\alpha}(t)$.
 \\ \null \hfill (p. 198 \parencite{finKont})
 \end{definition}
 
@@ -208,10 +208,10 @@ Furthermore we assume enough integrability and we have the following useful resu
 \theoremstyle{proposition}
 \begin{proposition}{}\label{arbitrageFreeProp}
 Disregarding integrability problems the model is generically arbitrage free if and only if, for each $t\leq T$ and P-a.s. the mapping:
-$\bm{\sigma}(t):\mathbb{R}^k \to \mathbb{R}^n$ is surjective, i.e. if and only if the volatility matrix $\bm{\sigma}(t)$ has rank n.
+$\bm{\sigma}(t):\mathbb{R}^k \to \mathbb{R}^d$ is surjective, i.e. if and only if the volatility matrix $\bm{\sigma}(t)$ has rank d.
 \\ \null \hfill(p. 198 \parencite{finKont})
 \end{proposition}
-We note that in order not to have arbitrage in our model, we need $k\geq n$, i.e. have at least as many random sources as number of risky assets.
+We note that in order not to have arbitrage in our model, we need $k\geq d$, i.e. have at least as many random sources as number of risky assets.
 
 \subsection{Complete model}
 Second Fundamental Pricing Theorem is key to obtain a complete market model, i.e. a market model with unique prices and every claim can be hedged.
@@ -224,7 +224,7 @@ In our Wiener world we have a unique martingale measure if equation \ref{marketP
 \begin{proposition}{}\label{completeProp}
 Assume that the model is generically arbitrage free and that the filtration is defined by:
 $$\mathcal{F}_t=\mathcal{F}_t^{\bar{W}} \quad t \in [0,T]$$
-Then disregarding integrability problems, the model is complete if and only if k=n and the volatility matrix $\sigma(t)$ is invertible P-a.s. for each $t \leq T$
+Then disregarding integrability problems, the model is complete if and only if k=d and the volatility matrix $\sigma(t)$ is invertible P-a.s. for each $t \leq T$
 \begin{proof}
 The proof is based on martingale representation theorem \ref{MRT} (MRT) and converse of Girsanov theorem \ref{ConverseGirsanov} which uses MRT, hence the assumption about the only randomness comes from the Wiener process. By the two theorems we know every equivalent measure transformation is obtained by Girsanov theorem of the above type. Hence the martingale measure is unique if and only if the solution to \eqref{marketPriceOfRisk} is unique.                                        
 \end{proof}
@@ -233,7 +233,7 @@ The proof is based on martingale representation theorem \ref{MRT} (MRT) and conv
 Intuitively we need one independent traded assets excluding the bank account for every source of randomness (Meta-theorem 8.3.1 \parencite{finKont}).
 
 
-\subsection{Pricing and connection to classical approach}
+\subsection{Pricing and Connection to Classical Approach}
 The pricing formula for arbitrage free market model is the risk neutral valuation formula(RVNF):
 \begin{proposition}{\textbf{Risk Neutral Valuation Formula}}\label{RNVF}
 To avoid arbitrage, $\mathcal{X}$ must be priced according to the formula:
@@ -248,7 +248,7 @@ Note if we choose our numéraire $S_0(t)=B(t)$ then
 \end{proposition}
 Proposition \ref{RNVF} will raise the question if there is more than one fair price for the derivative. The answer is found in FTT2, the market is complete if and only if the measure Q is unique. Intuitively it means that if you can replicate the derivative with a S-F portfolio, then the risk free position should only earn risk free interest rate. The conditional expectation in the RNVF is a natural choice for pricing, because intuitively the conditional expectation is our best estimate given the available information\footnote{Mathematically known as the projection property}.\\
 
-The classical approach in \parencite{B-S-Paper} to arbitrage free and complete market models is based on a Markovian model assumption. For the model to have the Markov property, we assume k=n and the probability space is $(\Omega, \mathcal{F}, P, \mathcal{F}_t^{\bar{W}_t})$. Furthermore we assume $\bm{\alpha}$ and $\bm{\sigma}$ are deterministic and constant over time. $\bm{\sigma}$ is also assumed invertible. Under these more restrictive assumptions the risk neutral valuation formula for a simple T-claim is given by the pricing function:
+The classical approach in \parencite{B-S-Paper} to arbitrage free and complete market models is based on a Markovian model assumption. For the model to have the Markov property, we assume $k=d$ and the probability space is $(\Omega, \mathcal{F}, P, \mathcal{F}_t^{\bar{W}_t})$. Furthermore we assume $\bm{\alpha}$ and $\bm{\sigma}$ are deterministic and constant over time. $\bm{\sigma}$ is also assumed invertible. Under these more restrictive assumptions the risk neutral valuation formula for a simple T-claim is given by the pricing function:
 \begin{align}\label{MarkovRNVF}
 F(t,S(t))=\exp(-r(T-t))E^Q[\mathcal{X}|S(t)]
 \end{align}
@@ -340,7 +340,7 @@ The above formula for the European call option is actually the same for an Ameri
 %----------------------------------------------------------------------------------------
 
 \section{American Options And Optimal Stopping}\label{AmericanOptions}
-The American options adds additional complexity to the pricing problem, because compared to the European option the American option can be exercised at anytime from inception to maturity. The exercise value at time t is also called the intrinsic value of the option. This section is inspired by \parencite{finKont, Shiryaev06,Elliott99} where \parencite{Shiryaev06} is specialized to optimal stopping problems, where the two other references gives the fundamentals for option and arbitrage theory in general.\\
+The American options adds additional complexity to the pricing problem, because compared to the European option the American option can be exercised at anytime from inception to maturity. The exercise value at time t is also called the intrinsic value of the option. This section is inspired by \parencite{finKont, Shiryaev06,Elliott99} where \parencite{Shiryaev06} is specialized to optimal stopping problems and the two other references give the fundamentals for option and arbitrage theory in general.\\
 
 We still assume a diffusion setting that the underlying stochastic process for the stock behaves under the risk neutral measure as a GBM. The exercise feature of the American option raises the problem of rationally to find the optimal stopping time to maximize profit. The value of the option is given by exercising the option at the optimal stopping time, hence it is a optimal stopping problem. We will assume a finite horizon $T\in \mathbb{R}_*^+$ throughout the thesis, because all the derivative will be priced in a finite timeframe. Let the gain function $G:\mathbb{R}\to \mathbb{R}$ be a measurable function satisfying:
 \begin{equation}\label{existAmer}
@@ -428,10 +428,9 @@ Hence the first optimal stopping time after time t for the American put is
 \hat{\tau}= \inf\{u \in [t,T] : P(S(u),u) = (K-S(u))^+ \}
 \end{split}
 \end{equation*}
-Where the stopping time is infinite, if the 
 
 \subsection{Discrete time valuation}\label{DiscreteValueFramework}
-To solve the optimal stopping problem numerical methods are required for the American put option, hence the first step is to discretize exercise dates. In chapter \ref{Chapter3} we show two approaches to price an American put option, where both are based on calculating the conditional expectation of the continuation value. \\
+To solve the optimal stopping problem numerical methods are required for the American put option, hence the first step is to discretize exercise dates. In chapter \ref{Chapter3} we show two approaches to price an American put option, where both are based on calculating the expected continuation value. \\
 
 Suppose the probability space $(\Omega, \mathcal{F}, P)$ is equipped with the natural discrete filtration $(\mathcal{F}_{t_n})_{n=0,1,\ldots,N}$ modeling a financial market. By discretization of time we are actually looking at a Bermudan option, but for sufficient small time steps the Bermudan option approximate the American option well. The tenor structure\footnote{The tenor of an option is the remaining life of the option from today to maturity} is that the time to maturity is divided into a grid of N+1 equidistant points in time $0=t_0\leq t_1\leq t_2, \cdots \leq t_N=T$, where $\Delta t_n = t_n-t_{n-1}=T/N$ for each $n=1, \ldots, N$. A Bermudan option initialized at time $t_0$ has $\mathcal{T}(t_0,t_1,\ldots,t_N)$ exercise dates or decision points, where the option holder chooses to exercise or keep the option alive. \\
 

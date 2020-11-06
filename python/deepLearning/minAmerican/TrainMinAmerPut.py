@@ -135,7 +135,7 @@ def train_model(train_dl, valid_dl, model):
             break  # early stop criterion is met, we can stop now
     
 #prepare data
-dataPath = "./deepLearning/minAmerican/data/300KAmerMinPut.csv"
+dataPath = "./deepLearning/minAmerican/data1/300KAmerMinPut.csv"
 dataset = EuroParDataset(dataPath)
 train_dl, valid_dl = prepare_data(dataPath)
 print(len(train_dl.dataset), len(valid_dl.dataset))
@@ -155,7 +155,7 @@ model = NeuralNet(input_size, hidden_size1, hidden_size2, hidden_size3, outputSi
 train_model(train_dl, valid_dl, model)
 
 # save model
-torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/python/deepLearning/Models/ModelAM_Min1.pth")
+torch.save(model.state_dict(), "/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/python/deepLearning/Models/ModelAM_Min2.pth")
 
 
 

@@ -52,8 +52,8 @@ class NeuralNet(nn.Module):
 #####################
 # get dataset
 ###################
-datasets = ["./deepLearning/minAmerican/data/InMoneyAmerMinPut.csv","./deepLearning/minAmerican/data/longMatAmerMinPut.csv"]
-test_dataset = EuroParDataset(datasets[0])
+datasets = ["./deepLearning/minAmerican/data1/60KUniInSampleAmeriMin.csv", "./deepLearning/minAmerican/data1/60KInMoneyAmerMin.csv","./deepLearning/minAmerican/data1/60KLongTAmeriMin.csv"]
+test_dataset = EuroParDataset(datasets[2])
 # get first sample and unpack
 first_data = test_dataset[0]
 features, labels = first_data
@@ -73,7 +73,7 @@ outputSize = 1
 loaded_model = NeuralNet(n_features, hidden_size1, hidden_size2, hidden_size3, outputSize)
 #for param in loaded_model.parameters():
 #    print("without training model", param)
-loaded_model.load_state_dict(torch.load("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/python/deepLearning/Models/ModelAM_Min1.pth"))
+loaded_model.load_state_dict(torch.load("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/python/deepLearning/Models/ModelAM_Min2.pth"))
 loaded_model.eval()
 #loaded_model.state_dict()
 #for param in loaded_model.parameters():
@@ -136,7 +136,7 @@ plt.title("MLPs Predictions Vs. Actual Targets")
 #plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
 abline(1,0)
 rcParams['agg.path.chunksize']=10**4
-plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/inMoneyAmerMinP.png")
+plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/longTAmerMinP.png")
 plt.show()
 
 

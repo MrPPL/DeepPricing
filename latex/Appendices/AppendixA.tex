@@ -20,7 +20,7 @@ Note: \[ dW_i(t) \cdot dW_j(t)= \begin{cases}
       0 & \textit{For independent Weiner processes} \\
    \end{cases}
 \]
-(p. 58-60 \parencite{finKont})
+\null \hfill (p. 58-60 \parencite{finKont})
 \end{theorem}
 
 \begin{theorem}\label{MRT}
@@ -29,7 +29,8 @@ Let W be a k-dimensional Wiener process, and assume that the filtration is defin
 $$\mathcal{F}_t=\mathcal{F}_t^W \quad t\in [0,T]$$
 Let M be any $\mathcal{F}_t$-adapted martingale. Then there exist uniquely determined $\mathcal{F}_t$-adapted processes $h_1, \ldots, h_k$ such that M has the representation
 $$M(t)=M(0) + \sum_{i=1}^{k} \int_{0}^{t} h_i(s)dW_i(s) \quad t \in [0,T]$$
-if the martingale M is square integrable, then $h_1, \ldots, h_k$ are in $L^2$ (p. 161 \parencite{finKont}).
+if the martingale M is square integrable, then $h_1, \ldots, h_k$ are in $L^2$\\
+\null \hfill (p. 161 \parencite{finKont}).
 \end{theorem}
 
 \begin{theorem}\label{Girsanov}
@@ -43,8 +44,8 @@ Then
 \begin{align}
 d\bar{W}(t)=\phi(t)dt + dW(t)
 \end{align}
-Where $W(t)$ is the Q-Wiener process and $\bar{W}(t)$ is the P-Wiener process
-(p. 164 \parencite{finKont})
+Where $W(t)$ is the Q-Wiener process and $\bar{W}(t)$ is the P-Wiener process.\\
+\null \hfill (p. 164 \parencite{finKont})
 \end{theorem}
 
 \begin{theorem}\label{ConverseGirsanov}
@@ -53,15 +54,15 @@ Where $W(t)$ is the Q-Wiener process and $\bar{W}(t)$ is the P-Wiener process
 dL(t)=L(t)\phi^T(t)d\bar{W}(t)\\
 L(0)=1
 \end{align*}
-(p. 168 \parencite{finKont})
+\null \hfill (p. 168 \parencite{finKont})
 \end{theorem}
 
 \theoremstyle{definition}
 \begin{definition}{\textbf{Stopping time}:}\label{StoppingTime}
 A random variable $\tau:\Omega \to [0,\infty]$ is called a Markov time if 
 $$(\tau \leq t)\in \mathcal{F}_{t} \quad \forall t \geq 0 $$
-A Markov time is called a stopping time if $\tau<\infty$ P-a.s.
-(p. 27 \parencite{Shiryaev06})
+A Markov time is called a stopping time if $\tau<\infty$ P-a.s.\\
+\null \hfill (p. 27 \parencite{Shiryaev06})
 \end{definition}
 
 
@@ -72,9 +73,10 @@ Consider a fixed process Y.
 \item[•] We say that a process X dominates the process Y if $X_n \geq Y_n \ P-a.s. \ \forall n$.
 \item[•] Assuming that $E[Y_n] < \infty  \ \forall n \leq T$, the Snell envelope S, of the process Y is defined as the smallest supermartingale dominating Y. More precisely: S is a supermartingale dominating Y, and if D is another supermartingale dominating Y, then $S_n\leq D_n \ P-a.s. \ \forall n$.
 \end{enumerate}
-(p. 380 \parencite{Bjork19})
+\null \hfill (p. 380 \parencite{Bjork19})
 \end{definition}
 
 \begin{theorem}\label{SnellEnvelopeTheorem}
-\textbf{The Snell Envelope Theorem} The optimal value process V is the Snell envelope of the gain process G (p. 381  \parencite{Bjork19}).
+\textbf{The Snell Envelope Theorem} The optimal value process V is the Snell envelope of the gain process G.\\
+\null \hfill (p. 381  \parencite{Bjork19})
 \end{theorem}

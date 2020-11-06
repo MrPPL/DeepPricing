@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  3 NOV 2020 20:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  6 NOV 2020 10:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1289,19 +1289,59 @@ Package: amsthm 2017/10/31 v2.20.4
 \c@theorem=\count276
 \c@corollary=\count277
 
+(/usr/share/texlive/texmf-dist/tex/latex/wallpaper/wallpaper.sty
+Package: wallpaper 2005/01/18, v1.01 easy wallpaper formatting (MHFW)
 
-Package amsthm Warning: Unknown theoremstyle `assumption' on input line 54.
+(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count278
+\calc@Bcount=\count279
+\calc@Adimen=\dimen181
+\calc@Bdimen=\dimen182
+\calc@Askip=\skip63
+\calc@Bskip=\skip64
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count280
+\calc@Cskip=\skip65
+)
+(/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/atbegshi.sty
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+\wpXoffset=\skip66
+\wpYoffset=\skip67
+\tileXoffset=\skip68
+\tileYoffset=\skip69
+\tilewidth=\skip70
+\tileheight=\skip71
+\tileX=\skip72
+\tileY=\skip73
+)
+
+Package amsthm Warning: Unknown theoremstyle `assumption' on input line 56.
 
 
-Package amsthm Warning: Unknown theoremstyle `proposition' on input line 60.
+Package amsthm Warning: Unknown theoremstyle `proposition' on input line 62.
 
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks27
-\pgfutil@tempdima=\dimen181
-\pgfutil@tempdimb=\dimen182
+\pgfutil@tempdima=\dimen183
+\pgfutil@tempdimb=\dimen184
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-common-lists.t
 ex)) (/usr/share/texlive/texmf-dist/tex/generic/pgf/utilities/pgfutil-latex.def
@@ -1327,20 +1367,20 @@ Package: pgfsys 2014/07/09 v3.0.1a (rcs-revision 1.48)
 ex
 \pgfkeys@tmptoks=\toks30
 ))
-\pgf@x=\dimen183
-\pgf@y=\dimen184
-\pgf@xa=\dimen185
-\pgf@ya=\dimen186
-\pgf@xb=\dimen187
-\pgf@yb=\dimen188
-\pgf@xc=\dimen189
-\pgf@yc=\dimen190
+\pgf@x=\dimen185
+\pgf@y=\dimen186
+\pgf@xa=\dimen187
+\pgf@ya=\dimen188
+\pgf@xb=\dimen189
+\pgf@yb=\dimen190
+\pgf@xc=\dimen191
+\pgf@yc=\dimen192
 \w@pgf@writea=\write3
 \r@pgf@reada=\read2
-\c@pgf@counta=\count278
-\c@pgf@countb=\count279
-\c@pgf@countc=\count280
-\c@pgf@countd=\count281
+\c@pgf@counta=\count281
+\c@pgf@countb=\count282
+\c@pgf@countc=\count283
+\c@pgf@countd=\count284
 \t@pgf@toka=\toks31
 \t@pgf@tokb=\toks32
 \t@pgf@tokc=\toks33
@@ -1359,8 +1399,8 @@ File: pgfsys-common-pdf.def 2013/10/10  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsyssoftpath.code.
 tex
 File: pgfsyssoftpath.code.tex 2013/09/09  (rcs-revision 1.9)
-\pgfsyssoftpath@smallbuffer@items=\count282
-\pgfsyssoftpath@bigbuffer@items=\count283
+\pgfsyssoftpath@smallbuffer@items=\count285
+\pgfsyssoftpath@bigbuffer@items=\count286
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/systemlayer/pgfsysprotocol.code.
 tex
@@ -1373,8 +1413,8 @@ Package: pgfcore 2010/04/11 v3.0.1a (rcs-revision 1.7)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathcalc.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathutil.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathparser.code.tex
-\pgfmath@dimen=\dimen191
-\pgfmath@count=\count284
+\pgfmath@dimen=\dimen193
+\pgfmath@count=\count287
 \pgfmath@box=\box54
 \pgfmath@toks=\toks34
 \pgfmath@stack@operand=\toks35
@@ -1398,37 +1438,37 @@ tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfunctions.integerari
 thmetics.code.tex)))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count285
+\c@pgfmathroundto@lastzeros=\count288
 ))
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepoints.code.te
 x
 File: pgfcorepoints.code.tex 2013/10/07  (rcs-revision 1.27)
-\pgf@picminx=\dimen192
-\pgf@picmaxx=\dimen193
-\pgf@picminy=\dimen194
-\pgf@picmaxy=\dimen195
-\pgf@pathminx=\dimen196
-\pgf@pathmaxx=\dimen197
-\pgf@pathminy=\dimen198
-\pgf@pathmaxy=\dimen199
-\pgf@xx=\dimen256
-\pgf@xy=\dimen257
-\pgf@yx=\dimen258
-\pgf@yy=\dimen259
-\pgf@zx=\dimen260
-\pgf@zy=\dimen261
+\pgf@picminx=\dimen194
+\pgf@picmaxx=\dimen195
+\pgf@picminy=\dimen196
+\pgf@picmaxy=\dimen197
+\pgf@pathminx=\dimen198
+\pgf@pathmaxx=\dimen199
+\pgf@pathminy=\dimen256
+\pgf@pathmaxy=\dimen257
+\pgf@xx=\dimen258
+\pgf@xy=\dimen259
+\pgf@yx=\dimen260
+\pgf@yy=\dimen261
+\pgf@zx=\dimen262
+\pgf@zy=\dimen263
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathconstruct.
 code.tex
 File: pgfcorepathconstruct.code.tex 2013/10/07  (rcs-revision 1.29)
-\pgf@path@lastx=\dimen262
-\pgf@path@lasty=\dimen263
+\pgf@path@lastx=\dimen264
+\pgf@path@lasty=\dimen265
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorepathusage.code
 .tex
 File: pgfcorepathusage.code.tex 2014/11/02  (rcs-revision 1.24)
-\pgf@shorten@end@additional=\dimen264
-\pgf@shorten@start@additional=\dimen265
+\pgf@shorten@end@additional=\dimen266
+\pgf@shorten@start@additional=\dimen267
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorescopes.code.te
 x
@@ -1436,19 +1476,19 @@ File: pgfcorescopes.code.tex 2015/05/08  (rcs-revision 1.46)
 \pgfpic=\box55
 \pgf@hbox=\box56
 \pgf@layerbox@main=\box57
-\pgf@picture@serial@count=\count286
+\pgf@picture@serial@count=\count289
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoregraphicstate.c
 ode.tex
 File: pgfcoregraphicstate.code.tex 2014/11/02  (rcs-revision 1.12)
-\pgflinewidth=\dimen266
+\pgflinewidth=\dimen268
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoretransformation
 s.code.tex
 File: pgfcoretransformations.code.tex 2015/08/07  (rcs-revision 1.20)
-\pgf@pt@x=\dimen267
-\pgf@pt@y=\dimen268
-\pgf@pt@temp=\dimen269
+\pgf@pt@x=\dimen269
+\pgf@pt@y=\dimen270
+\pgf@pt@temp=\dimen271
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2008/10/09  (rcs-revision 1.3)
@@ -1464,12 +1504,12 @@ File: pgfcorepathprocessing.code.tex 2013/09/09  (rcs-revision 1.9)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcorearrows.code.te
 x
 File: pgfcorearrows.code.tex 2015/05/14  (rcs-revision 1.43)
-\pgfarrowsep=\dimen270
+\pgfarrowsep=\dimen272
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2013/07/15  (rcs-revision 1.15)
-\pgf@max=\dimen271
-\pgf@sys@shading@range@num=\count287
+\pgf@max=\dimen273
+\pgf@sys@shading@range@num=\count290
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/basiclayer/pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2013/07/15  (rcs-revision 1.18)
@@ -1500,8 +1540,8 @@ File: pgfmoduleplot.code.tex 2015/08/03  (rcs-revision 1.13)
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-0-65
 .sty
 Package: pgfcomp-version-0-65 2007/07/03 v3.0.1a (rcs-revision 1.7)
-\pgf@nodesepstart=\dimen272
-\pgf@nodesepend=\dimen273
+\pgf@nodesepstart=\dimen274
+\pgf@nodesepend=\dimen275
 )
 (/usr/share/texlive/texmf-dist/tex/latex/pgf/compatibility/pgfcomp-version-1-18
 .sty
@@ -1515,8 +1555,8 @@ Package: pgfcomp-version-1-18 2007/07/23 v3.0.1a (rcs-revision 1.1)
 Package: pgffor 2013/12/13 v3.0.1a (rcs-revision 1.25)
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/math/pgfmath.code.tex)
-\pgffor@iter=\dimen274
-\pgffor@skip=\dimen275
+\pgffor@iter=\dimen276
+\pgffor@skip=\dimen277
 \pgffor@stack=\toks37
 \pgffor@toks=\toks38
 ))
@@ -1526,31 +1566,31 @@ Package: tikz 2015/08/07 v3.0.1a (rcs-revision 1.151)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothandlers
 .code.tex
 File: pgflibraryplothandlers.code.tex 2013/08/31 v3.0.1a (rcs-revision 1.20)
-\pgf@plot@mark@count=\count288
-\pgfplotmarksize=\dimen276
+\pgf@plot@mark@count=\count291
+\pgfplotmarksize=\dimen278
 )
-\tikz@lastx=\dimen277
-\tikz@lasty=\dimen278
-\tikz@lastxsaved=\dimen279
-\tikz@lastysaved=\dimen280
-\tikzleveldistance=\dimen281
-\tikzsiblingdistance=\dimen282
+\tikz@lastx=\dimen279
+\tikz@lasty=\dimen280
+\tikz@lastxsaved=\dimen281
+\tikz@lastysaved=\dimen282
+\tikzleveldistance=\dimen283
+\tikzsiblingdistance=\dimen284
 \tikz@figbox=\box60
 \tikz@figbox@bg=\box61
 \tikz@tempbox=\box62
 \tikz@tempbox@bg=\box63
-\tikztreelevel=\count289
-\tikznumberofchildren=\count290
-\tikznumberofcurrentchild=\count291
-\tikz@fig@count=\count292
+\tikztreelevel=\count292
+\tikznumberofchildren=\count293
+\tikznumberofcurrentchild=\count294
+\tikz@fig@count=\count295
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2013/09/17  (rcs-revision 1.8)
-\pgfmatrixcurrentrow=\count293
-\pgfmatrixcurrentcolumn=\count294
-\pgf@matrix@numberofcolumns=\count295
+\pgfmatrixcurrentrow=\count296
+\pgfmatrixcurrentcolumn=\count297
+\pgf@matrix@numberofcolumns=\count298
 )
-\tikz@expandcount=\count296
+\tikz@expandcount=\count299
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarytopaths.code.tex
@@ -1574,14 +1614,14 @@ zlibrarydecorations.pathreplacing.code.tex
 zlibrarydecorations.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
 e.tex
-\pgfdecoratedcompleteddistance=\dimen283
-\pgfdecoratedremainingdistance=\dimen284
-\pgfdecoratedinputsegmentcompleteddistance=\dimen285
-\pgfdecoratedinputsegmentremainingdistance=\dimen286
-\pgf@decorate@distancetomove=\dimen287
-\pgf@decorate@repeatstate=\count297
-\pgfdecorationsegmentamplitude=\dimen288
-\pgfdecorationsegmentlength=\dimen289
+\pgfdecoratedcompleteddistance=\dimen285
+\pgfdecoratedremainingdistance=\dimen286
+\pgfdecoratedinputsegmentcompleteddistance=\dimen287
+\pgfdecoratedinputsegmentremainingdistance=\dimen288
+\pgf@decorate@distancetomove=\dimen289
+\pgf@decorate@repeatstate=\count300
+\pgfdecorationsegmentamplitude=\dimen290
+\pgfdecorationsegmentlength=\dimen291
 )
 \tikz@lib@dec@box=\box64
 )
@@ -1594,29 +1634,16 @@ File: tikzlibraryarrows.code.tex 2008/01/09 v3.0.1a (rcs-revision 1.1)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.code.
 tex
 File: pgflibraryarrows.code.tex 2013/09/23 v3.0.1a (rcs-revision 1.16)
-\arrowsize=\dimen290
+\arrowsize=\dimen292
 )) (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mathtools.sty
 Package: mathtools 2018/01/08 v1.21 mathematical typesetting tools
 
-(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
-Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count298
-\calc@Bcount=\count299
-\calc@Adimen=\dimen291
-\calc@Bdimen=\dimen292
-\calc@Askip=\skip63
-\calc@Bskip=\skip64
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count300
-\calc@Cskip=\skip65
-)
 (/usr/share/texlive/texmf-dist/tex/latex/mathtools/mhsetup.sty
 Package: mhsetup 2017/03/31 v1.3 programming setup (MH)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip66
+\@mathmargin=\skip74
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -1658,8 +1685,8 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
 \totwidth@=\dimen299
 \lineht@=\dimen300
 \@envbody=\toks41
-\multlinegap=\skip67
-\multlinetaggap=\skip68
+\multlinegap=\skip75
+\multlinetaggap=\skip76
 \mathdisplay@stack=\toks42
 LaTeX Info: Redefining \[ on input line 2817.
 LaTeX Info: Redefining \] on input line 2818.
@@ -1670,7 +1697,7 @@ LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 129.
 LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 129.
 \g_MT_multlinerow_int=\count313
 \l_MT_multwidth_dim=\dimen301
-\origjot=\skip69
+\origjot=\skip77
 \l_MT_shortvdotswithinadjustabove_dim=\dimen302
 \l_MT_shortvdotswithinadjustbelow_dim=\dimen303
 \l_MT_above_intertext_sep=\dimen304
@@ -1686,14 +1713,14 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks44
 \@floatcapt=\box68
 )
-Package scrhack Info: loading float hack on input line 69.
+Package scrhack Info: loading float hack on input line 71.
 
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/float.hak
 File: float.hak 2017/09/07 v3.24 KOMA-Script package (hacking package float)
 
 (/usr/share/texlive/texmf-dist/tex/latex/koma-script/tocbasic.sty
 Package: tocbasic 2017/09/07 v3.24 KOMA-Script package (handling toc-files)
-\scr@dte@tocline@numberwidth=\skip70
+\scr@dte@tocline@numberwidth=\skip78
 \scr@dte@tocline@numbox=\box69
 )
 Package scrhack Info: redefining \newfloat on input line 161.
@@ -1731,15 +1758,9 @@ Package: biblatex 2017/12/19 v3.10 programmable bibliographies (PK/JW/AB)
 Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -1766,9 +1787,6 @@ Package: logreq 2010/08/04 v1.0 xml request logger
 (/usr/share/texlive/texmf-dist/tex/latex/logreq/logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -1819,14 +1837,14 @@ Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 \blx@parenlevel@text=\count355
 \blx@parenlevel@foot=\count356
 \blx@sectionciteorder@0=\count357
-\labelnumberwidth=\skip71
-\labelalphawidth=\skip72
-\biblabelsep=\skip73
-\bibitemsep=\skip74
-\bibnamesep=\skip75
-\bibinitsep=\skip76
-\bibparsep=\skip77
-\bibhang=\skip78
+\labelnumberwidth=\skip79
+\labelalphawidth=\skip80
+\biblabelsep=\skip81
+\bibitemsep=\skip82
+\bibnamesep=\skip83
+\bibinitsep=\skip84
+\bibparsep=\skip85
+\bibhang=\skip86
 \blx@bcfin=\read3
 \blx@bcfout=\write5
 \c@mincomprange=\count358
@@ -1908,12 +1926,12 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 \c@savedoriglanguage=\count426
 \c@pageref=\count427
 \c@savedpageref=\count428
-\shorthandwidth=\skip79
-\shortjournalwidth=\skip80
-\shortserieswidth=\skip81
-\shorttitlewidth=\skip82
-\shortauthorwidth=\skip83
-\shorteditorwidth=\skip84
+\shorthandwidth=\skip87
+\shortjournalwidth=\skip88
+\shortserieswidth=\skip89
+\shorttitlewidth=\skip90
+\shortauthorwidth=\skip91
+\shorteditorwidth=\skip92
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -2033,7 +2051,7 @@ Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
 Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
 Package: xcolor-patch 2016/05/16 xcolor patch
 Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package hobsub Info: Skipping package `atbegshi' (already loaded).
 Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
 )
@@ -2082,7 +2100,7 @@ LaTeX Info: Redefining \pageref on input line 6443.
 )
 Package scrhack Info: hyperref hack deactivated because of
 (scrhack)             detection of hyperref version, that doesn't
-(scrhack)             need that hack, on input line 134.
+(scrhack)             need that hack, on input line 136.
 Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
@@ -2095,19 +2113,19 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip85
+\Hy@SectionHShift=\skip93
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 134.
-Package hyperref Info: Option `hypertexnames' set `false' on input line 134.
-Package hyperref Info: Option `colorlinks' set `true' on input line 134.
-Package hyperref Info: Option `unicode' set `true' on input line 134.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 136.
+Package hyperref Info: Option `hypertexnames' set `false' on input line 136.
+Package hyperref Info: Option `colorlinks' set `true' on input line 136.
+Package hyperref Info: Option `unicode' set `true' on input line 136.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
 File: puenc.def 2018/02/06 v6.86b Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 134.
+Package hyperref Info: Option `breaklinks' set `true' on input line 136.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -2124,31 +2142,28 @@ LaTeX Warning: Label `LSMDynamic3' multiply defined.
 
 ) (./Chapters/Chapter6.aux) (./Chapters/Chapter7.aux)
 (./Appendices/AppendixA.aux) (./Appendices/AppendixB.aux)
-(./Appendices/AppendixC.aux) (./Appendices/AppendixD.aux
-
-LaTeX Warning: Label `fig:MLPsEuroC' multiply defined.
-
-))
+(./Appendices/AppendixC.aux) (./Appendices/AppendixD.aux))
 \openout1 = `deepPricing.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 134.
-LaTeX Font Info:    ... okay on input line 134.
-LaTeX Font Info:    Try loading font information for T1+ppl on input line 134.
- (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 136.
+LaTeX Font Info:    ... okay on input line 136.
+LaTeX Font Info:    Try loading font information for T1+ppl on input line 136.
+
+(/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1ppl.fd
 File: t1ppl.fd 2001/06/04 font definitions for T1/ppl.
 )
 Now handling font encoding TS1 ...
@@ -2276,7 +2291,7 @@ Package caption Info: End \AtBeginDocument code.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * bindingoffset: 14.22636pt
-* modes: includehead includefoot twoside 
+* modes: includehead includefoot 
 * h-part:(L,W,R)=(71.13188pt, 404.02908pt, 108.12054pt)
 * v-part:(T,H,B)=(42.67912pt, 759.6886pt, 42.67912pt)
 * \paperwidth=597.50787pt
@@ -2284,13 +2299,13 @@ Package caption Info: End \AtBeginDocument code.
 * \textwidth=404.02908pt
 * \textheight=693.49821pt
 * \oddsidemargin=13.08826pt
-* \evensidemargin=35.85056pt
+* \evensidemargin=-1.1381pt
 * \topmargin=-29.59087pt
 * \headheight=18.85364pt
 * \headsep=19.8738pt
 * \topskip=11.0pt
 * \footskip=27.46295pt
-* \marginparwidth=116.0pt
+* \marginparwidth=62.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.0pt plus 4.0pt minus 2.0pt
@@ -2298,20 +2313,21 @@ Package caption Info: End \AtBeginDocument code.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
+* \@twosidefalse
+* \@mparswitchfalse
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package scrlayer Info: Setting magic \footheight to \baselineskip while
-(scrlayer)             \begin{document} on input line 134.
-Package scrbase Info: activating english \abbrevname on input line 134.
-Package scrbase Info: activating english \byname on input line 134.
-Package scrbase Info: activating english \acknowledgementname on input line 134
+(scrlayer)             \begin{document} on input line 136.
+Package scrbase Info: activating english \abbrevname on input line 136.
+Package scrbase Info: activating english \byname on input line 136.
+Package scrbase Info: activating english \acknowledgementname on input line 136
 .
-Package scrbase Info: activating english \authorshipname on input line 134.
-Package scrbase Info: activating english \constantsname on input line 134.
-Package scrbase Info: activating english \symbolsname on input line 134.
+Package scrbase Info: activating english \authorshipname on input line 136.
+Package scrbase Info: activating english \constantsname on input line 136.
+Package scrbase Info: activating english \symbolsname on input line 136.
+\AtBeginShipoutBox=\box71
 ABD: EveryShipout initializing macros
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -2345,10 +2361,9 @@ Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                - Invalid format of field 'month'.
 
 )
-Package biblatex Info: Reference section=0 on input line 134.
-Package biblatex Info: Reference segment=0 on input line 134.
-\AtBeginShipoutBox=\box71
-Package hyperref Info: Link coloring ON on input line 134.
+Package biblatex Info: Reference section=0 on input line 136.
+Package biblatex Info: Reference segment=0 on input line 136.
+Package hyperref Info: Link coloring ON on input line 136.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
@@ -2357,107 +2372,105 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count460
 )
-LaTeX Info: Redefining \ref on input line 134.
-LaTeX Info: Redefining \pageref on input line 134.
-LaTeX Info: Redefining \nameref on input line 134.
+LaTeX Info: Redefining \ref on input line 136.
+LaTeX Info: Redefining \pageref on input line 136.
+LaTeX Info: Redefining \nameref on input line 136.
 
 (./deepPricing.out) (./deepPricing.out)
 \@outlinefile=\write6
 \openout6 = `deepPricing.out'.
 
 \c__siunitx_mathsf_int=\count461
-LaTeX Font Info:    Try loading font information for OT1+ppl on input line 134.
+LaTeX Font Info:    Try loading font information for OT1+ppl on input line 136.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ppl.fd
 File: ot1ppl.fd 2001/06/04 font definitions for OT1/ppl.
 )
-LaTeX Font Info:    Try loading font information for OML+zplm on input line 134
+LaTeX Font Info:    Try loading font information for OML+zplm on input line 136
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlzplm.fd
 File: omlzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OML/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMS+zplm on input line 134
+LaTeX Font Info:    Try loading font information for OMS+zplm on input line 136
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omszplm.fd
 File: omszplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMS/zplm.
 )
-LaTeX Font Info:    Try loading font information for OMX+zplm on input line 134
+LaTeX Font Info:    Try loading font information for OMX+zplm on input line 136
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxzplm.fd
 File: omxzplm.fd 2002/09/08 Fontinst v1.914 font definitions for OMX/zplm.
 )
-LaTeX Font Info:    Try loading font information for OT1+zplm on input line 134
+LaTeX Font Info:    Try loading font information for OT1+zplm on input line 136
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1zplm.fd
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
 )
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 134.
+(Font)              scaled to size 11.40997pt on input line 136.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 134.
+(Font)              scaled to size 8.33606pt on input line 136.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 134.
+(Font)              scaled to size 6.25204pt on input line 136.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 11.40997pt on input line 134.
+(Font)              scaled to size 11.40997pt on input line 136.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 8.33606pt on input line 134.
+(Font)              scaled to size 8.33606pt on input line 136.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 6.25204pt on input line 134.
+(Font)              scaled to size 6.25204pt on input line 136.
 \c__siunitx_mathtt_int=\count462
 
 1: section
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 152.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 154.
+<Forside-logo.pdf, id=307, 597.55246pt x 845.07718pt>
+File: Forside-logo.pdf Graphic file (type pdf)
+<use Forside-logo.pdf>
+Package pdftex.def Info: Forside-logo.pdf  used on input line 182.
+(pdftex.def)             Requested size: 597.53275pt x 845.04932pt.
 [1
 
 
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
-
-]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./Forside-logo.pdf>]
 --------------------
  Declaration of Authorship
 --------------------
-LaTeX Font Info:    Try loading font information for OMS+ppl on input line 192.
+LaTeX Font Info:    Try loading font information for OMS+ppl on input line 194.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsppl.fd
 File: omsppl.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 192.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 194.
 
-Underfull \hbox (badness 10000) in paragraph at lines 197--198
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
 
 1: section
-[3] [4
+[1
 
-] [5] [6
+] [2
 
 ]
 --------------------
  Abstract
 --------------------
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 223.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 225.
 1: section
-[7] [8
+[3
 
 ]
 --------------------
  Acknowledgements
 --------------------
-
-Underfull \hbox (badness 10000) in paragraph at lines 234--235
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 236--237
 
@@ -2468,69 +2481,61 @@ Underfull \hbox (badness 10000) in paragraph at lines 238--239
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 240--241
+
+ []
+
 1: section
-[9] [10
+[4
 
 ]
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ppl/b/n' tried instead on input line 247.
+(Font)              Font shape `T1/ppl/b/n' tried instead on input line 249.
  (./deepPricing.toc
 1: section
-[11])
+[5
+
+])
 \tf@toc=\write7
 \openout7 = `deepPricing.toc'.
 
- [12] (./deepPricing.lof)
+ [6] (./deepPricing.lof)
 \tf@lof=\write8
 \openout8 = `deepPricing.lof'.
 
 
 1: section
-[13
+[7
 
-] [14
-
-] (./deepPricing.lot
-Overfull \hbox (1.53285pt too wide) in paragraph at lines 22--22
- [][] [][][]\T1/ppl/m/n/10.95 Comparision of speed for the Amer-i-can put minin
--i-mum op-tion, where 
- []
-
-)
+] (./deepPricing.lot)
 \tf@lot=\write9
 \openout9 = `deepPricing.lot'.
 
 
 1: section
-[15] [16
+[8
 
 ]
 1: section
-[17] [18
+[9
 
 ]
-Overfull \hbox (38.80331pt too wide) in alignment at lines 280--303
+Overfull \hbox (41.24527pt too wide) in alignment at lines 282--305
  [] [] [] 
  []
 
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 307
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 309
 .
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Overfull \hbox (38.80331pt too wide) in alignment at lines 303--319
+Overfull \hbox (41.24527pt too wide) in alignment at lines 305--321
  [] [] [] 
  []
 
 1: section
-[19] [20
-
-]
---------------------
- Dedicatory
---------------------
-1: section
-[21] [22
+[10
 
 ]
 1: section
@@ -2557,6 +2562,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
 1: section
 [1
+
 
 
 ]) [2]
@@ -2601,8 +2607,20 @@ LaTeX Font Info:    Font shape `OMS/ppl/m/it' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <12> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 40.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 41.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 41.
+LaTeX Font Info:    Font shape `U/msa/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 41.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 9.37807pt on input line 41.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 7.29405pt on input line 41.
+LaTeX Font Info:    Font shape `U/msb/m/n' will be
+(Font)              scaled to size 5.21004pt on input line 41.
 [4]
-<Figures/contractfct.png, id=644, 433.62pt x 289.08pt>
+<Figures/contractfct.png, id=628, 433.62pt x 289.08pt>
 File: Figures/contractfct.png Graphic file (type png)
 <use Figures/contractfct.png>
 Package pdftex.def Info: Figures/contractfct.png  used on input line 69.
@@ -2612,27 +2630,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 69--69
  [][] 
  []
 
-[5 <./Figures/contractfct.png>]
-Overfull \hbox (4.10439pt too wide) in paragraph at lines 100--103
-[][]\T1/ppl/b/n/10.95 Definition 2.4. []A-admissible port-fo-lio:  \T1/ppl/m/n/
-10.95 For $\OML/zplm/m/it/10.95 a \OMS/zplm/m/n/10.95 ^^U \OT1/ppl/m/n/10.95 0$
-\T1/ppl/m/n/10.95 , a port-fo-lio h is called a-admissible
- []
-
-[6]
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 131.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 131.
-LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 131.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 131.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 131.
-LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 131.
-
+[5 <./Figures/contractfct.png>] [6]
 Overfull \hbox (11.55177pt too wide) in paragraph at lines 131--133
 \T1/ppl/m/n/10.95 The repli-ca-tion ar-gu-ment in Black-Scholes pa-per ([]Black
  and Sc-holes, [][]1973[][]) was ground-
@@ -2648,7 +2646,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 157--159
 
  []
 
-<Figures/samplePath.png, id=682, 433.62pt x 289.08pt>
+<Figures/samplePath.png, id=667, 433.62pt x 289.08pt>
 File: Figures/samplePath.png Graphic file (type png)
 <use Figures/samplePath.png>
 Package pdftex.def Info: Figures/samplePath.png  used on input line 162.
@@ -2738,35 +2736,35 @@ S/zplm/m/n/10.95 ^^@\OML/zplm/m/it/10.95 r \OMS/zplm/m/n/10.95 ^^A
  []
 
 [15]
-Overfull \hbox (2.17795pt too wide) in paragraph at lines 434--435
+Overfull \hbox (2.17795pt too wide) in paragraph at lines 433--434
 \T1/ppl/m/n/10.95 To solve the op-ti-mal stop-ping prob-lem nu-mer-i-cal meth-o
 ds are re-quired for the Amer-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 434--435
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
 
-Overfull \hbox (31.65587pt too wide) in paragraph at lines 438--439
+Overfull \hbox (31.65587pt too wide) in paragraph at lines 437--438
 []\T1/ppl/m/n/10.95 The un-der-ly-ing pro-cess is as-sumed to be Marko-vian wit
 h state vari-ables $\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 S\OT1/zplm/m/n/10
 .95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 ))[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
 
  []
 
 [16]
-Overfull \hbox (16.40498pt too wide) in paragraph at lines 445--447
+Overfull \hbox (16.40498pt too wide) in paragraph at lines 444--446
 \T1/ppl/m/n/10.95 The Snell en-ve-lope $\OML/zplm/m/it/10.95 U\OT1/zplm/m/n/10.
 95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 )$ \T1/ppl/m/n/10.95 is the sma
 ll-est su-per-martin-gale of the gain pro-cess $\OMS/zplm/m/n/10.95 f\OML/zplm/
@@ -2776,12 +2774,12 @@ L/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 ))\OMS/zplm/m/n/10.95 g$\T1/ppl/m/n/10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 454--456
+Underfull \hbox (badness 10000) in paragraph at lines 453--455
 
  []
 
 
-Overfull \hbox (59.99133pt too wide) detected at line 469
+Overfull \hbox (59.99133pt too wide) detected at line 468
 []
  []
 
@@ -2845,7 +2843,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--81
 
  []
 
-<Figures/BinomialTree.png, id=871, 433.62pt x 361.35pt>
+<Figures/BinomialTree.png, id=855, 433.62pt x 361.35pt>
 File: Figures/BinomialTree.png Graphic file (type png)
 <use Figures/BinomialTree.png>
 Package pdftex.def Info: Figures/BinomialTree.png  used on input line 84.
@@ -2866,7 +2864,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--95
  []
 
 [21]
-<Figures/binConv.png, id=886, 433.62pt x 289.08pt>
+<Figures/binConv.png, id=870, 433.62pt x 289.08pt>
 File: Figures/binConv.png Graphic file (type png)
 <use Figures/binConv.png>
 Package pdftex.def Info: Figures/binConv.png  used on input line 98.
@@ -2898,7 +2896,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--116
  []
 
 [24]
-<Figures/Three-dimensional-binomial-lattice.png, id=913, 853.1875pt x 470.75874
+<Figures/Three-dimensional-binomial-lattice.png, id=897, 853.1875pt x 470.75874
 pt>
 File: Figures/Three-dimensional-binomial-lattice.png Graphic file (type png)
 <use Figures/Three-dimensional-binomial-lattice.png>
@@ -2984,7 +2982,7 @@ Overfull \hbox (103.04659pt too wide) detected at line 214
 []
  []
 
-<Figures/LSMFit1.png, id=950, 433.62pt x 289.08pt>
+<Figures/LSMFit1.png, id=934, 433.62pt x 289.08pt>
 File: Figures/LSMFit1.png Graphic file (type png)
 <use Figures/LSMFit1.png>
 Package pdftex.def Info: Figures/LSMFit1.png  used on input line 222.
@@ -3004,7 +3002,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 252--254
 
  []
 
-<Figures/LSMFit2.png, id=963, 433.62pt x 289.08pt>
+<Figures/LSMFit2.png, id=947, 433.62pt x 289.08pt>
 File: Figures/LSMFit2.png Graphic file (type png)
 <use Figures/LSMFit2.png>
 Package pdftex.def Info: Figures/LSMFit2.png  used on input line 257.
@@ -3015,7 +3013,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 257--259
  []
 
 
-Overfull \hbox (52.27272pt too wide) detected at line 266
+Overfull \hbox (55.70471pt too wide) detected at line 266
 \OML/zplm/m/it/10.95 []\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/
 m/n/10.95 ) = [] [] \OT1/ppl/m/n/10.95 1[][]\OML/zplm/m/it/10.95 G\OT1/zplm/m/n
 /10.95 (\OML/zplm/m/it/10.95 S[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 ^^\[]
@@ -3257,11 +3255,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 308--309
 [44]) [45]
 \openout2 = `Chapters/Chapter5.aux'.
 
- (./Chapters/Chapter5.tex [46
-
-
-
-]
+ (./Chapters/Chapter5.tex
 Chapter 5.
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
@@ -3286,12 +3280,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 15--16
  []
 
 1: section
-[47] [48]
+[46
+
+
+
+] [47]
 Overfull \hbox (71.54338pt too wide) detected at line 57
 []
  []
 
-[49]
+[48]
 Underfull \hbox (badness 10000) in paragraph at lines 72--73
 
  []
@@ -3306,15 +3304,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
-[50]
+[49]
 Underfull \hbox (badness 10000) in paragraph at lines 101--103
 
- []
-
-
-Overfull \hbox (0.18445pt too wide) in paragraph at lines 118--120
-\T1/ppl/m/n/10.95 After the sim-u-la-tion of com-bi-na-tions of the in-put pa-r
-am-e-ters within the given ranges
  []
 
 
@@ -3322,7 +3314,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 118--120
 
  []
 
-[51]
+[50]
 Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
@@ -3332,7 +3324,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-<Figures/marginalAmerPut.png, id=1221, 433.62pt x 289.08pt>
+<Figures/marginalAmerPut.png, id=1202, 433.62pt x 289.08pt>
 File: Figures/marginalAmerPut.png Graphic file (type png)
 <use Figures/marginalAmerPut.png>
 Package pdftex.def Info: Figures/marginalAmerPut.png  used on input line 145.
@@ -3342,7 +3334,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 145--147
  [][] 
  []
 
-[52]
+[51]
 Underfull \hbox (badness 10000) in paragraph at lines 159--161
 
  []
@@ -3352,7 +3344,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 163--164
 
  []
 
-[53 <./Figures/marginalAmerPut.png>]
+[52 <./Figures/marginalAmerPut.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
@@ -3381,12 +3373,12 @@ m/m/it/10.95 K\OT1/ppl/m/n/10.95 , 100\OML/zplm/m/it/10.95 K\OT1/ppl/m/n/10.95
 , 300\OML/zplm/m/it/10.95 K\OMS/zplm/m/n/10.95 gg
  []
 
-[54]
+
 Underfull \hbox (badness 10000) in paragraph at lines 201--203
 
  []
 
-
+[53]
 Overfull \hbox (30.24805pt too wide) in paragraph at lines 208--224
  [][] 
  []
@@ -3396,12 +3388,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 226--227
 
  []
 
-[55]
+[54]
 Underfull \hbox (badness 10000) in paragraph at lines 232--234
 
  []
 
-<Figures/polynomialEuroC.png, id=1253, 433.62pt x 505.89pt>
+<Figures/polynomialEuroC.png, id=1234, 433.62pt x 505.89pt>
 File: Figures/polynomialEuroC.png Graphic file (type png)
 <use Figures/polynomialEuroC.png>
 Package pdftex.def Info: Figures/polynomialEuroC.png  used on input line 237.
@@ -3411,7 +3403,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 237--239
  [][] 
  []
 
-[56] [57 <./Figures/polynomialEuroC.png>]
+[55] [56 <./Figures/polynomialEuroC.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
@@ -3421,8 +3413,8 @@ Overfull \hbox (74.18015pt too wide) in paragraph at lines 276--291
  [][] 
  []
 
-[58]
-<Figures/PredictionEuroC.png, id=1276, 361.35pt x 289.08pt>
+[57]
+<Figures/PredictionEuroC.png, id=1261, 361.35pt x 289.08pt>
 File: Figures/PredictionEuroC.png Graphic file (type png)
 <use Figures/PredictionEuroC.png>
 Package pdftex.def Info: Figures/PredictionEuroC.png  used on input line 297.
@@ -3432,15 +3424,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 323--324
 
  []
 
+[58]
+<Figures/inSampleAmerMinP.png, id=1272, 361.35pt x 289.08pt>
+File: Figures/inSampleAmerMinP.png Graphic file (type png)
+<use Figures/inSampleAmerMinP.png>
+Package pdftex.def Info: Figures/inSampleAmerMinP.png  used on input line 342.
+(pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
 
-[59]) [60 <./Figures/PredictionEuroC.png>]
+[59 <./Figures/PredictionEuroC.png>]) [60 <./Figures/inSampleAmerMinP.png>]
 \openout2 = `Chapters/Chapter6.aux'.
 
- (./Chapters/Chapter6.tex
+
+(./Chapters/Chapter6.tex
 Chapter 6.
 
 Underfull \hbox (badness 10000) in paragraph at lines 7--8
@@ -3470,19 +3469,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 42--43
 LaTeX Font Info:    Font shape `OMS/ppl/m/n' in size <9> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 62.
 
-Underfull \hbox (badness 1248) in paragraph at lines 64--64
- []\T1/ppl/m/sc/10 Table 6.3: |\T1/ppl/m/n/10 Val-u-a-tion of bi-vari-ate con-t
-i-gent claims with K=40, 
- []
-
-
 Overfull \hbox (1.11087pt too wide) in paragraph at lines 62--78
 []\T1/ppl/m/n/10.95 Tabel [][]6.2[][] shows that the al-go-rithm ac-cu-racy in-
 creases with the num-ber of equidis-
  []
 
 [62]
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 79--80
 
  []
 
@@ -3496,23 +3489,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 88--89
 
  []
 
-[63] [64]
-Underfull \hbox (badness 10000) in paragraph at lines 127--128
+
+Underfull \hbox (badness 10000) in paragraph at lines 90--91
 
  []
 
-<Figures/histLSMMLPsI.png, id=1340, 361.35pt x 289.08pt>
+[63] [64]
+Underfull \hbox (badness 10000) in paragraph at lines 129--130
+
+ []
+
+<Figures/histLSMMLPsI.png, id=1334, 361.35pt x 289.08pt>
 File: Figures/histLSMMLPsI.png Graphic file (type png)
 <use Figures/histLSMMLPsI.png>
-Package pdftex.def Info: Figures/histLSMMLPsI.png  used on input line 131.
+Package pdftex.def Info: Figures/histLSMMLPsI.png  used on input line 133.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--141
-
- []
-
-[65 <./Figures/histLSMMLPsI.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 142--143
+Underfull \hbox (badness 10000) in paragraph at lines 139--143
 
  []
 
@@ -3522,21 +3515,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 144--145
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+[65]
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
-
- []
-
-[66]
 Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
  []
 
-
+[66 <./Figures/histLSMMLPsI.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 188--189
 
  []
@@ -3552,28 +3545,34 @@ Underfull \hbox (badness 10000) in paragraph at lines 192--193
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+Underfull \hbox (badness 10000) in paragraph at lines 194--195
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--207
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
 [68]
-Underfull \hbox (badness 10000) in paragraph at lines 208--209
+Underfull \hbox (badness 10000) in paragraph at lines 214--215
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--223
 
  []
 
 ) [69]
 \openout2 = `Chapters/Chapter7.aux'.
 
- (./Chapters/Chapter7.tex [70
-
-
-
-]
+ (./Chapters/Chapter7.tex
 Chapter 7.
 
 Underfull \hbox (badness 10000) in paragraph at lines 12--13
@@ -3586,12 +3585,26 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--15
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--26
 
  []
 
 1: section
-[71]) [72]
+[70
+
+
+
+]) [71]
 \openout2 = `Appendices/AppendixA.aux'.
 
  (./Appendices/AppendixA.tex
@@ -3608,7 +3621,7 @@ Overfull \hbox (6.05663pt too wide) in paragraph at lines 27--29
  []
 
 
-Overfull \hbox (8.00237pt too wide) in paragraph at lines 36--41
+Overfull \hbox (8.00237pt too wide) in paragraph at lines 37--42
 [][]\T1/ppl/b/n/10.95 Theorem A.3. []\T1/ppl/b/it/10.95 The Gir-sanov The-o-rem
  \T1/ppl/m/it/10.95 As-sume the prob-a-bil-ity space $\OT1/zplm/m/n/10.95 (
 \OT1/ppl/m/n/10.95 , \OMS/zplm/m/n/10.95 F\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/1
@@ -3617,17 +3630,17 @@ m/m/n/10.95 )[])$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--41
+Underfull \hbox (badness 10000) in paragraph at lines 37--42
 
  []
 
 1: section
-[73
+[72
 
 
 
 ]
-Overfull \hbox (46.6952pt too wide) in paragraph at lines 51--52
+Overfull \hbox (46.6952pt too wide) in paragraph at lines 52--53
 \T1/ppl/m/it/10.95 P-Wiener pro-cess (i.e. zero drift and unit vari-ance in-de-
 pen-dent com-po-nents) on $\OT1/zplm/m/n/10.95 (
 \OT1/ppl/m/n/10.95 , \OMS/zplm/m/n/10.95 F\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/1
@@ -3635,37 +3648,33 @@ pen-dent com-po-nents) on $\OT1/zplm/m/n/10.95 (
 m/m/n/10.95 )[])$\T1/ppl/m/it/10.95 .
  []
 
-) [74]
+) [73]
 \openout2 = `Appendices/AppendixB.aux'.
 
  (./Appendices/AppendixB.tex
 Appendix B.
 
-Overfull \hbox (20.3432pt too wide) in paragraph at lines 5--6
-\T1/ppl/m/n/10.95 The code is avail-able at my Github repos-i-tory [][]https://
+Overfull \hbox (23.0807pt too wide) in paragraph at lines 5--6
+\T1/ppl/m/n/10.95 The code is avail-able at my GitHub repos-i-tory [][]https://
 github.com/MrPPL/DeepPricing[][].
  []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 16--16
-[][][]\T1/ppl/m/n/9 Note that the LSM is im-ple-mented by us-ing luphord Github
+[][][]\T1/ppl/m/n/9 Note that the LSM is im-ple-mented by us-ing luphord GitHub
  repos-i-tory
  []
 
 )
 1: section
-[75
+[74
 
 
 
 ]
 \openout2 = `Appendices/AppendixC.aux'.
 
- (./Appendices/AppendixC.tex [76
-
-
-
-]
+ (./Appendices/AppendixC.tex
 Appendix C.
 
 Underfull \hbox (badness 10000) in paragraph at lines 8--9
@@ -3678,8 +3687,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--28
  []
 
 1: section
-[77] [78]
-Overfull \hbox (18.08731pt too wide) in paragraph at lines 70--71
+[75
+
+
+
+] [76]
+Overfull \hbox (18.08731pt too wide) in paragraph at lines 71--72
 [][]\T1/ppl/b/n/10.95 Theorem C.1. []\T1/ppl/m/it/10.95 As-sume the se-quence $
 \OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 e[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/i
 t/10.95 S\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 )))[]
@@ -3691,7 +3704,7 @@ L/zplm/m/it/10.95 N \OMS/zplm/m/n/10.95 ^^@
  []
 
 
-Overfull \hbox (18.08731pt too wide) in paragraph at lines 81--84
+Overfull \hbox (18.08731pt too wide) in paragraph at lines 82--85
 [][]\T1/ppl/b/n/10.95 Theorem C.2. []\T1/ppl/m/it/10.95 As-sume the se-quence $
 \OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 e[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/i
 t/10.95 S\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 )))[]
@@ -3702,24 +3715,8 @@ or $\OML/zplm/m/it/10.95 n \OT1/zplm/m/n/10.95 = \OT1/ppl/m/n/10.95 1, [] , \OM
 L/zplm/m/it/10.95 N \OMS/zplm/m/n/10.95 ^^@
  []
 
-
-Overfull \hbox (2.76361pt too wide) in paragraph at lines 86--87
-[]\T1/ppl/m/n/10.95 The two con-ver-gence re-sults shows the con-ver-gence for 
-the LSM al-go-rithm, hence
- []
-
-
-Overfull \hbox (0.51347pt too wide) in paragraph at lines 88--89
-\T1/ppl/m/n/10.95 tin-gale meth-ods that the in-ter-val be-comes smaller when t
-he lower bound ap-proaches
- []
-
-[79]
-
-Package amsthm Warning: Unknown theoremstyle `proposition' on input line 107.
-
-
-Overfull \hbox (0.37305pt too wide) in paragraph at lines 127--129
+[77]
+Overfull \hbox (0.37305pt too wide) in paragraph at lines 102--104
 \T1/ppl/m/it/10.95 Moreover $\OMS/zplm/m/n/10.95 8\OML/zplm/m/it/10.95 n \OMS/z
 plm/m/n/10.95 2 f\OT1/ppl/m/n/10.95 1, 2, [] , \OML/zplm/m/it/10.95 N \OMS/zplm
 /m/n/10.95 ^^@ \OT1/ppl/m/n/10.95 1\OMS/zplm/m/n/10.95 g$\T1/ppl/m/it/10.95 , a
@@ -3729,132 +3726,132 @@ m/it/10.95 S\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 )\
 OT1/ppl/m/n/10.95 , \OML/zplm/m/it/10.95 ^^R\OT1/zplm/m/n/10.95 )$
  []
 
-[80]) [81]
+
+Package amsthm Warning: Unknown theoremstyle `proposition' on input line 123.
+
+) [78]
 \openout2 = `Appendices/AppendixD.aux'.
 
- (./Appendices/AppendixD.tex [82
+ (./Appendices/AppendixD.tex
+Appendix D.
+
+Overfull \hbox (75.4371pt too wide) in paragraph at lines 13--31
+ [][] 
+ []
+
+1: section
+[79
 
 
 
 ]
-Appendix D.
-
-Overfull \hbox (75.4371pt too wide) in paragraph at lines 68--86
- [][] 
- []
-
-<Figures/polynomialOutMoneyEuroC.png, id=1482, 433.62pt x 505.89pt>
+<Figures/polynomialOutMoneyEuroC.png, id=1464, 433.62pt x 505.89pt>
 File: Figures/polynomialOutMoneyEuroC.png Graphic file (type png)
 <use Figures/polynomialOutMoneyEuroC.png>
 Package pdftex.def Info: Figures/polynomialOutMoneyEuroC.png  used on input lin
-e 92.
+e 95.
 (pdftex.def)             Requested size: 433.61894pt x 505.88875pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 92--94
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 95--97
  [][] 
  []
 
-<Figures/polynomialLongTEuroC.png, id=1483, 433.62pt x 505.89pt>
+[80]
+<Figures/polynomialLongTEuroC.png, id=1470, 433.62pt x 505.89pt>
 File: Figures/polynomialLongTEuroC.png Graphic file (type png)
 <use Figures/polynomialLongTEuroC.png>
 Package pdftex.def Info: Figures/polynomialLongTEuroC.png  used on input line 1
-00.
+03.
 (pdftex.def)             Requested size: 433.61894pt x 505.88875pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 100--102
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 103--105
  [][] 
  []
 
-<Figures/outMoneyAmerP.png, id=1484, 361.35pt x 289.08pt>
+<Figures/outMoneyAmerP.png, id=1471, 361.35pt x 289.08pt>
 File: Figures/outMoneyAmerP.png Graphic file (type png)
 <use Figures/outMoneyAmerP.png>
-Package pdftex.def Info: Figures/outMoneyAmerP.png  used on input line 109.
+Package pdftex.def Info: Figures/outMoneyAmerP.png  used on input line 112.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-<Figures/longTAmerP.png, id=1485, 361.35pt x 289.08pt>
+<Figures/longTAmerP.png, id=1472, 361.35pt x 289.08pt>
 File: Figures/longTAmerP.png Graphic file (type png)
 <use Figures/longTAmerP.png>
-Package pdftex.def Info: Figures/longTAmerP.png  used on input line 117.
+Package pdftex.def Info: Figures/longTAmerP.png  used on input line 120.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-<Figures/longTAmerMinP.png, id=1486, 361.35pt x 289.08pt>
+<Figures/longTAmerMinP.png, id=1473, 361.35pt x 289.08pt>
 File: Figures/longTAmerMinP.png Graphic file (type png)
 <use Figures/longTAmerMinP.png>
-Package pdftex.def Info: Figures/longTAmerMinP.png  used on input line 125.
+Package pdftex.def Info: Figures/longTAmerMinP.png  used on input line 128.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-<Figures/inMoneyAmerMinP.png, id=1487, 361.35pt x 289.08pt>
+<Figures/inMoneyAmerMinP.png, id=1474, 361.35pt x 289.08pt>
 File: Figures/inMoneyAmerMinP.png Graphic file (type png)
 <use Figures/inMoneyAmerMinP.png>
-Package pdftex.def Info: Figures/inMoneyAmerMinP.png  used on input line 134.
+Package pdftex.def Info: Figures/inMoneyAmerMinP.png  used on input line 137.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-)
-1: section
-[83] [84] [85] [86 <./Figures/polynomialOutMoneyEuroC.png>] [87 <./Figures/poly
-nomialLongTEuroC.png>] [88 <./Figures/outMoneyAmerP.png> <./Figures/longTAmerP.
-png>] [89 <./Figures/longTAmerMinP.png> <./Figures/inMoneyAmerMinP.png>]
-[90
+) [81 <./Figures/polynomialOutMoneyEuroC.png>] [82 <./Figures/polynomialLongTEu
+roC.png>] [83 <./Figures/outMoneyAmerP.png> <./Figures/longTAmerP.png>]
+[84 <./Figures/longTAmerMinP.png> <./Figures/inMoneyAmerMinP.png>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 376.
 
 
-]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 381.
-
- (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
+(/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (13.26485pt too wide) in paragraph at lines 381--381
+Overfull \hbox (13.26485pt too wide) in paragraph at lines 376--376
 [][]\T1/ppl/m/n/10.95 Ekvall, Niklas (1996). ^^P  A lat-tice ap-proach for pric
 -ing of mul-ti-vari-ate con-tin-gent claims^^Q.
  []
 
 
-Overfull \hbox (5.98878pt too wide) in paragraph at lines 381--381
+Overfull \hbox (5.98878pt too wide) in paragraph at lines 376--376
 [][]\T1/ppl/m/n/10.95 Kohler, Michael, Adam Krzy»ak, and Nebo-jsa Todor-ovic (2
 010). ^^P  PRIC-ING OF HIGH-
  []
 
 1: section
-[91]
-Overfull \hbox (33.32887pt too wide) in paragraph at lines 381--381
+[85
+
+
+]
+Overfull \hbox (33.32887pt too wide) in paragraph at lines 376--376
 \T1/ppl/m/n/10.95 space the-ory, ap-prox-i-ma-tion al-go-rithms, and an ap-pli-
 ca-tion to pric-ing high-dimensional
  []
 
 
-Overfull \hbox (15.19618pt too wide) in paragraph at lines 381--381
+Overfull \hbox (15.19618pt too wide) in paragraph at lines 376--376
 \T1/ppl/m/n/10.95 fi-nan-cial deriva-tives^^Q. eng. In: \T1/ppl/m/it/10.95 IEEE
  Trans-ac-tions on Au-to-matic Con-trol \T1/ppl/m/n/10.95 44.10, pp. 1840^^U
  []
 
-[92]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 385.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 385.
+[86]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 380.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 380.
  (./deepPricing.aux (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux)
 (./Chapters/Chapter3.aux) (./Chapters/Chapter4.aux) (./Chapters/Chapter5.aux)
 (./Chapters/Chapter6.aux) (./Chapters/Chapter7.aux) (./Appendices/AppendixA.aux
 ) (./Appendices/AppendixB.aux) (./Appendices/AppendixC.aux)
 (./Appendices/AppendixD.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 385.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 385.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 380.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 380.
 Package rerunfilecheck Info: File `deepPricing.out' has not changed.
-(rerunfilecheck)             Checksum: EF1ED052159E24E648D17C4FDDA63F0F;13572.
+(rerunfilecheck)             Checksum: A147B830ECFED73099A31CD30FC33690;13901.
 
 
 LaTeX Warning: There were multiply-defined labels.
-
-
-Package biblatex Warning: Please rerun LaTeX.
-(biblatex)                Page breaks have changed.
 
 Package logreq Info: Writing requests to 'deepPricing.run.xml'.
 \openout1 = `deepPricing.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48045 strings out of 492982
- 987129 string characters out of 6134896
- 1205557 words of memory out of 5000000
- 50458 multiletter control sequences out of 15000+600000
- 650947 words of font info for 294 fonts, out of 8000000 for 9000
+ 48191 strings out of 492982
+ 989892 string characters out of 6134896
+ 1206090 words of memory out of 5000000
+ 50606 multiletter control sequences out of 15000+600000
+ 649270 words of font info for 292 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,23n,81p,10384b,2396s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,23n,78p,10384b,2404s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -3873,10 +3870,10 @@ super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb
 r/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on deepPricing.pdf (114 pages, 1117327 bytes).
+Output written on deepPricing.pdf (97 pages, 1200004 bytes).
 PDF statistics:
- 1693 PDF objects out of 1728 (max. 8388607)
- 1472 compressed objects within 15 object streams
- 382 named destinations out of 1000 (max. 500000)
- 886 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1661 PDF objects out of 1728 (max. 8388607)
+ 1450 compressed objects within 15 object streams
+ 367 named destinations out of 1000 (max. 500000)
+ 904 words of extra memory for PDF output out of 10000 (max. 10000000)
 

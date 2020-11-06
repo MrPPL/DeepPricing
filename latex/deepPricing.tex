@@ -24,7 +24,7 @@
 
 \documentclass[
 11pt, % The default document font size, options: 10pt, 11pt, 12pt
-%oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
+oneside, % Two side (alternating margins) for binding by default, uncomment to switch to one side
 english, % ngerman for German
 singlespacing, % Single line spacing, alternatives: onehalfspacing or doublespacing
 %draft, % Uncomment to enable draft mode (no pictures, no links, overfull hboxes indicated)
@@ -38,6 +38,7 @@ headsepline, % Uncomment to get a line under the header
 %consistentlayout, % Uncomment to change the layout of the declaration, abstract and acknowledgements pages to match the default layout
 ]{MastersDoctoralThesis} % The class file specifying the document structure
 
+
 \usepackage[utf8]{inputenc} % Required for inputting international characters
 \usepackage[T1]{fontenc} % Output font encoding for international characters
 
@@ -50,6 +51,7 @@ headsepline, % Uncomment to get a line under the header
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
 
+\usepackage{wallpaper}
 
 \theoremstyle{assumption}
 \newtheorem{assumption}[theorem]{Assumption}
@@ -143,7 +145,7 @@ headsepline, % Uncomment to get a line under the header
 
 \begin{titlepage}
 \begin{center}
-
+\ThisCenterWallPaper{1}{Forside-logo.pdf}
 \vspace*{.06\textheight}
 {\scshape\LARGE \univname\par}\vspace{1.5cm} % University name
 \textsc{\Large Master Thesis}\\[0.5cm] % Thesis type
@@ -155,16 +157,16 @@ headsepline, % Uncomment to get a line under the header
 \begin{minipage}[t]{0.4\textwidth}
 \begin{flushleft} \large
 \emph{Author:}\\
-\href{http://www.johnsmith.com}{\authorname} % Author name - remove the \href bracket to remove the link
+\href{https://www.linkedin.com/in/Peter-Pommergaard-Lind}{\authorname} % Author name - remove the \href bracket to remove the link
 \end{flushleft}
 \end{minipage}
 \begin{minipage}[t]{0.4\textwidth}
 \begin{flushright} \large
 \emph{Supervisor:} \\
-\href{http://www.jamessmith.com}{\supname} % Supervisor name - remove the \href bracket to remove the link  
+\href{https://www.math.ku.dk/english/staff/faculty/?pure=en/persons/499763}{\supname} % Supervisor name - remove the \href bracket to remove the link  
 \end{flushright}
-\end{minipage}\\[3cm]
- 
+\end{minipage}\\[10.0cm]
+
 \vfill
 
 \large \textit{A thesis submitted in fulfillment of the requirements\\ for the degree of \degreename}\\[0.3cm] % University requirement text
@@ -222,7 +224,7 @@ headsepline, % Uncomment to get a line under the header
 
 \begin{abstract}
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-The concepts for option pricing theory is presented and closed form solutions is provided in special cases. The options with no closed form solution is investigated through numerical methods, where both the binomial lattice model and LSM will be presented assuming the underlying Black-Scholes theory. Deep learning is then investigate to look for improvement of the existing models, where we look specifically at the MLPs regression.
+The concepts for option pricing theory are presented and closed form solutions are provided in special cases. The options with no closed form solution are investigated through numerical methods, where both the binomial lattice model and LSM will be presented assuming the underlying Black-Scholes theory. Deep learning is then investigated to look for improvement of the existing models, where we look specifically at the MLPs regression. Our numerically study did not found any improvement in using MLPs I instead of LSM, but we beleive the MLPs I can be improved with further investigation. The MLPs II was very fast, but lack the accuracy of the classical methods.
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
@@ -310,7 +312,7 @@ $\mathbb{R}^+$ & real positive numbers including 0\\
 $\mathbb{R}_*^+$ & real positive numbers excluding 0\\
 $\sim \mathcal{N}(\mu, \sigma^2)$ & Normal distributed with mean $\mu$ and variance $\sigma^2$\\
 \addlinespace % Gap to separate the Roman symbols from the Greek
-\textbf{Organization}\\
+\textbf{Organization examples}\\
 Chapter \ref{Chapter2} & All the references are interactive marked with red lettering\\
 Section \ref{FinMarket} & Under each chapter there are several sections\\
 \parencite{finKont} & References to litteratur are in parenthesis\\
@@ -330,13 +332,6 @@ Link \href{https://tensorboard.dev/experiment/8pxUoSDmTVGMOxpJWgiZsA/}{tensorboa
 %Constant Name & $Symbol$ & $Constant Value$ with units\\
 
 %\end{constants}
-
-
-%----------------------------------------------------------------------------------------
-%	DEDICATION
-%----------------------------------------------------------------------------------------
-
-\dedicatory{For/Dedicated to/To my\ldots} 
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - CHAPTERS
