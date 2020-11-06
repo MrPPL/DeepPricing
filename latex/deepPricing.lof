@@ -21,14 +21,15 @@
 \contentsline {figure}{\numberline {5.4}{\ignorespaces MLPs Performance on in-sample dataset American put on minimum on two assets}}{60}{figure.caption.167}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Histogram Price Predictions}}{66}{figure.caption.186}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Compare BEG and MLPs II}}{68}{figure.caption.190}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {D.1}{\ignorespaces Polynomial Regression Performance for out-of-money data set European Call}}{81}{figure.caption.235}
-\contentsline {figure}{\numberline {D.2}{\ignorespaces Polynomial Regression Performance for long maturity data set European call}}{82}{figure.caption.236}
-\contentsline {figure}{\numberline {D.3}{\ignorespaces MLPs Performance for In-the-Money data set on American Put}}{83}{figure.caption.237}
-\contentsline {figure}{\numberline {D.4}{\ignorespaces MLPs Performance for long maturity data set on American Put}}{83}{figure.caption.238}
-\contentsline {figure}{\numberline {D.5}{\ignorespaces MLPs Performance on long maturity data set on American bivariate contingent claim}}{84}{figure.caption.239}
-\contentsline {figure}{\numberline {D.6}{\ignorespaces MLPs Performance on In-the-Money data set on American bivariate contingent claim}}{84}{figure.caption.240}
+\contentsline {figure}{\numberline {D.1}{\ignorespaces Polynomial Regression Performance for out-of-money data set European Call}}{83}{figure.caption.236}
+\contentsline {figure}{\numberline {D.2}{\ignorespaces Polynomial Regression Performance for long maturity data set European call}}{84}{figure.caption.237}
+\contentsline {figure}{\numberline {D.3}{\ignorespaces MLPs Performance for In-the-Money data set on American Put}}{85}{figure.caption.238}
+\contentsline {figure}{\numberline {D.4}{\ignorespaces MLPs Performance for long maturity data set on American Put}}{85}{figure.caption.239}
+\contentsline {figure}{\numberline {D.5}{\ignorespaces MLPs Performance on long maturity data set on American bivariate contingent claim}}{86}{figure.caption.240}
+\contentsline {figure}{\numberline {D.6}{\ignorespaces MLPs Performance on In-the-Money data set on American bivariate contingent claim}}{86}{figure.caption.241}

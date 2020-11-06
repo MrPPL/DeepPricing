@@ -20,11 +20,10 @@
 \contentsline {table}{\numberline {6.3}{\ignorespaces Valuation of bivariate contingent claims with K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06.\relax }}{63}{table.caption.175}
 \contentsline {table}{\numberline {6.4}{\ignorespaces Valuation of American put option with K=40 and r=0.06.\relax }}{64}{table.caption.179}
 \contentsline {table}{\numberline {6.5}{\ignorespaces Comparision of speed for the American put minimum option, where the inputs are K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06. Note ms is shorthand for millisecond\relax }}{67}{table.caption.188}
-\contentsline {table}{\numberline {6.6}{\ignorespaces Valuation of multivariate contingent claims with two underlying assets with K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06.\relax }}{67}{table.caption.189}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {D.1}{\ignorespaces Polynomial regression result for the European call option\relax }}{79}{table.caption.232}
-\contentsline {table}{\numberline {D.2}{\ignorespaces Hyperparameter tuning of dataset size and batchsize for american put minimum two assets for the interested reader see the tensorboard\relax }}{80}{table.caption.233}
+\contentsline {table}{\numberline {D.1}{\ignorespaces Polynomial regression result for the European call option\relax }}{81}{table.caption.233}
+\contentsline {table}{\numberline {D.2}{\ignorespaces Hyperparameter tuning of dataset size and batchsize for american put minimum two assets for the interested reader see the tensorboard\relax }}{82}{table.caption.234}

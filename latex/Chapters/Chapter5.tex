@@ -269,7 +269,7 @@ The model performance is evaluated by MSE, RMSE, MAE and coefficient of determin
 \subsubsection{European Call Option}
 The European call option is trained with the algorithm and hyperparameters described in the training section (section \ref{Training}). By the hyperparameter investigation we choose a batch size of 64, learning rate $\eta = 0.001$ and a data set of 300K samples. We compare the MLPs regression with the polynomial regression. Table \ref{tab:ComparePolyWithMLPS} shows that the MLPs is superior at extrapolating, because the MLPs performs better on all metrics on the out-of-sample test data sets compared to fitted polynomial regressions with a degree between 1 and 6\footnote{The out-of-sample fits for the European call with polynomial regression are illustated in figure \ref{fig:MLPsEuroCOutOfMoney} and figure \ref{fig:MLPsEuroCLongMaturity}}. For the in-sample test data set the polynomial regression of order 6 and MLPs perform almost equally well, but the polynomial regression of 6. degree is a classical example of overfitting. Note the in-sample test data is similar to the in-sample training data, hence we expect the same magnitude of error for the test set as for the training set for in-sample testing. The performance measures show that the polynomial regression that was performing well on the in-sample data set was due to overfitting, because the high order polynomial regression does perform poorly on out-of-sample data (table \ref{tab:ComparePolyWithMLPS}). For the 6. order polynomial regression, we see a negative coefficient of determination, which means the model performs worse than the model that predicts the sample mean. \\
 
-\begin{table}[th]
+\begin{table}[H]
 \caption{Performance comparison of MLPs and polynomial regression on European call option. Shown the best performing regressions in the linear model and the worst performing in terms of MSE for in-sample and out-of-sample data sets (The full table for polynomial regression is found in appendix table \ref{tab:fullEuroCall})}
 \label{tab:ComparePolyWithMLPS}
 \centering
@@ -319,8 +319,8 @@ Longer Maturity & 0.000193 & 0.013894 & 0.009213 & 0.980835\\
 \end{tabular}
 \end{table}
 
-\subsubsection{American Put On Minimum of Two Assets Option TODO! moneyness}
-The American put on minimum of two assets option has almost the double amount of parameters compared to the univariate contingent claims, hence the performance might give slightly higher MSE. Table (TODO: what does the table show and the batchsize chosen) \ref{tab:AmerMinPerformanceComparision} shows a good fit for both in-the-money and longer maturity sample, but the MSE is higher as expected compared to the relative prices for the univariate contingent claims. \\ 
+\subsubsection{American Put On Minimum of Two Assets Option moneyness}
+The American put on minimum of two assets option has almost the double amount of parameters compared to the univariate contingent claims, hence the performance might give slightly higher MSE. For training we used a batch size of 64 based on earlier discussions. Table \ref{tab:AmerMinPerformanceComparision} and figure \ref{fig:MLPsInSampleAmerMin} show that the MLPs also fit well the American put minimum option on two assets. \\ 
 
 \begin{table}[th]
 \caption{Performance of the bivariate American put minimum contingent claim}
@@ -330,14 +330,14 @@ The American put on minimum of two assets option has almost the double amount of
 \toprule
 \textbf{Data set} & \textbf{MSE} & \textbf{RMSE} & \textbf{MAE} & \textbf{$R^2$} \\
 \midrule
-In-Sample(Numbers) & 0.000002 & 0.001361 & 0.001008 & 0.999794\\
+In-Sample & 0.000002 & 0.001361 & 0.001008 & 0.999794\\
 In-The-Money & 0.000143 & 0.011973 & 0.009208 & 0.964370\\
 Longer Maturity & 0.000112 & 0.010565 & 0.007319 & 0.989863\\
 \bottomrule\\
 \end{tabular}
 \end{table}
 
-\begin{figure}[th]
+\begin{figure}[H]
 \centering
 \includegraphics{Figures/inSampleAmerMinP.png}
 \decoRule

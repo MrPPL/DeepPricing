@@ -7,7 +7,7 @@ def BEG(Nstep, T, sigma1, sigma2, r, rho, S10, S20, K, amer):
     # measure time
     start = datetime.datetime.now()
     # invariant quantities
-    N = NStep
+    N = Nstep
     deltaT = T/N
     nu1 = r - 0.5*sigma1**2
     nu2 = r - 0.5*sigma2**2
@@ -63,9 +63,11 @@ sigma1 = 0.2
 sigma2 = 0.3
 T = 1
 rho = 0.5
-NStep = 500
+NStep = 50
 for spot in range(30,51,1):
-    print("spot", spot, "BEG", BEG(Nstep=NStep, T=T, sigma1=sigma1, sigma2=sigma2, r=r, rho=rho, S10=spot, S20=spot, K=K, amer=True))
+    print("spot", spot, "BEG", BEG(Nstep=50, T=T, sigma1=sigma1, sigma2=sigma2, r=r, rho=rho, S10=spot, S20=spot, K=K, amer=True))
+
+print("spot", 49, "BEG500", BEG(Nstep=500, T=T, sigma1=sigma1, sigma2=sigma2, r=r, rho=rho, S10=49, S20=49, K=K, amer=True))
 
 #First order homogeneous function
 #print(BEG(Nstep=50, T=1, sigma1=0.2, sigma2=0.3, r=0.06, rho=-0.5, S10=120, S20=10, K=40, amer=True))

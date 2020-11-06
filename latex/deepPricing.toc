@@ -20,7 +20,7 @@
 \contentsline {subsection}{\numberline {2.4.1}American Call Without Dividends}{15}{subsection.68}
 \contentsline {subsection}{\numberline {2.4.2}American Put}{15}{subsection.69}
 \contentsline {subsection}{\numberline {2.4.3}Discrete time valuation}{16}{subsection.74}
-\contentsline {chapter}{\numberline {3}Classical numerical results and Benchmarks}{19}{chapter.80}
+\contentsline {chapter}{\numberline {3}Classical Numerical Results and Benchmarks}{19}{chapter.80}
 \contentsline {section}{\numberline {3.1}Cox Ross Rubenstein Model}{19}{section.81}
 \contentsline {section}{\numberline {3.2}Binomial Lattice Model For Multivariate Contingent Claims}{24}{section.92}
 \contentsline {section}{\numberline {3.3}Least Square Monte Carlo Method}{27}{section.96}
@@ -52,25 +52,25 @@
 \contentsline {subsection}{\numberline {5.2.3}Performance}{57}{subsection.157}
 \contentsline {subsubsection}{\numberline {5.2.3.1}European Call Option}{57}{subsubsection.158}
 \contentsline {subsubsection}{\numberline {5.2.3.2}American Put Option}{58}{subsubsection.162}
-\contentsline {subsubsection}{\numberline {5.2.3.3}American Put On Minimum of Two Assets Option TODO! moneyness}{58}{subsubsection.165}
+\contentsline {subsubsection}{\numberline {5.2.3.3}American Put On Minimum of Two Assets Option moneyness}{58}{subsubsection.165}
 \contentsline {chapter}{\numberline {6}Numerical Investigation and Discussion}{61}{chapter.168}
 \contentsline {section}{\numberline {6.1}European Options}{61}{section.171}
 \contentsline {section}{\numberline {6.2}American Put Option}{63}{section.176}
-\contentsline {section}{\numberline {6.3}Bivariate American put minimum Option}{65}{section.187}
-\contentsline {section}{\numberline {6.4}Discussion of Pricing Methods}{67}{section.190}
-\contentsline {section}{\numberline {6.5}Discussion of the Black-Scholes model}{68}{section.195}
-\contentsline {chapter}{\numberline {7}Conclusion and Further Investigation}{70}{chapter.198}
-\contentsline {section}{\numberline {7.1}Conclusion}{70}{section.199}
-\contentsline {section}{\numberline {7.2}Further Investigation}{70}{section.200}
-\contentsline {chapter}{\numberline {A}Stochastic Calculus and Probability Theory}{72}{appendix.201}
-\contentsline {chapter}{\numberline {B}Code Implementation}{74}{appendix.212}
-\contentsline {chapter}{\numberline {C}Additional Material for CRR, LSM and MLPs I}{75}{appendix.215}
-\contentsline {section}{\numberline {C.1}Moment Matching CRR}{75}{section.216}
-\contentsline {section}{\numberline {C.2}Convergence for LSM and MLPs I}{77}{section.220}
-\contentsline {subsection}{\numberline {C.2.1}LSM}{77}{subsection.221}
-\contentsline {subsection}{\numberline {C.2.2}MLPs I}{77}{subsection.224}
-\contentsline {section}{\numberline {C.3}LSM Lower Bound}{78}{section.228}
-\contentsline {chapter}{\numberline {D}Additional Tables and Figures}{79}{appendix.230}
-\contentsline {section}{\numberline {D.1}Tables}{79}{section.231}
-\contentsline {section}{\numberline {D.2}Figures}{81}{section.234}
-\contentsline {chapter}{Bibliography}{85}{appendix*.241}
+\contentsline {section}{\numberline {6.3}Bivariate American put minimum Option}{66}{section.187}
+\contentsline {section}{\numberline {6.4}Discussion of Pricing Methods}{68}{section.191}
+\contentsline {section}{\numberline {6.5}Discussion of the Black-Scholes model}{69}{section.196}
+\contentsline {chapter}{\numberline {7}Conclusion and Further Investigation}{72}{chapter.199}
+\contentsline {section}{\numberline {7.1}Conclusion}{72}{section.200}
+\contentsline {section}{\numberline {7.2}Further Investigation}{72}{section.201}
+\contentsline {chapter}{\numberline {A}Stochastic Calculus and Probability Theory}{74}{appendix.202}
+\contentsline {chapter}{\numberline {B}Code Implementation}{76}{appendix.213}
+\contentsline {chapter}{\numberline {C}Additional Material for CRR, LSM and MLPs I}{77}{appendix.216}
+\contentsline {section}{\numberline {C.1}Moment Matching CRR}{77}{section.217}
+\contentsline {section}{\numberline {C.2}Convergence for LSM and MLPs I}{79}{section.221}
+\contentsline {subsection}{\numberline {C.2.1}LSM}{79}{subsection.222}
+\contentsline {subsection}{\numberline {C.2.2}MLPs I}{79}{subsection.225}
+\contentsline {section}{\numberline {C.3}LSM Lower Bound}{80}{section.229}
+\contentsline {chapter}{\numberline {D}Additional Tables and Figures}{81}{appendix.231}
+\contentsline {section}{\numberline {D.1}Tables}{81}{section.232}
+\contentsline {section}{\numberline {D.2}Figures}{83}{section.235}
+\contentsline {chapter}{Bibliography}{87}{appendix*.242}

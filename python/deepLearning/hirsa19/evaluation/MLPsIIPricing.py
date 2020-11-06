@@ -155,6 +155,9 @@ loaded_model3 = NeuralNet(input_size, hidden_size1, hidden_size2, hidden_size3, 
 loaded_model3.load_state_dict(torch.load("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/python/deepLearning/Models/ModelAM_Min2.pth"))
 loaded_model3.eval()
 # american min put
+
+import datetime
+start = datetime.datetime.now()
 strike = 40
 spot = 50
 moneyness1 = spot/strike
@@ -167,3 +170,5 @@ rho = 0.5
 row = [moneyness1,moneyness2,T, r, vol1, vol2, rho]
 yhat = predict(row, loaded_model3)*strike
 print('Predicted American Min: %.3f' % yhat)
+finish = datetime.datetime.now()
+print (finish-start)
