@@ -1,7 +1,3 @@
-'''
-Video explanation: https://youtu.be/RLqsxWaQdHE
-'''
-
 # Imports
 import torch
 import torchvision
@@ -79,7 +75,7 @@ def prepare_data(batchSize):
     return train_dl, valid_dl
 
 #prepare data
-dataPath = "./deepLearning/minAmerican/data/1KAmerMinPut.csv"
+dataPath = "./deepLearning/minAmerican/data1/1KAmerMinPut.csv"
 dataset = EuroParDataset(dataPath)
 #define network
 #hyperparameters
@@ -94,7 +90,7 @@ num_epochs = 10
 # and more learning rates!
 batch_sizes = [8, 64, 256, 512, 1024]
 learning_rates = [0.01,0.001, 0.0001]
-dataPath = ["./deepLearning/minAmerican/data/1KAmerMinPut.csv","./deepLearning/minAmerican/data/100KAmerMinPut.csv","./deepLearning/minAmerican/data/300KAmerMinPut.csv"]
+dataPath = ["./deepLearning/minAmerican/data1/1KAmerMinPut.csv","./deepLearning/minAmerican/data1/100KAmerMinPut.csv","./deepLearning/minAmerican/data1/300KAmerMinPut.csv"]
 #dataPath = ["./deepLearning/minAmerican/data/100KAmerMinPut.csv"]
 #dataset = EuroParDataset(dataPath[0])
 
@@ -114,7 +110,7 @@ for DataPath in dataPath:
             scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
                 optimizer, patience=5, verbose=True
             )
-            tb = SummaryWriter(f'runs/AmerMinPut3/batch_size={batchSize} lr={learning_rate} dataset={DataPath}')
+            tb = SummaryWriter(f'runs/AmerMinPutfinal/batch_size={batchSize} lr={learning_rate} dataset={DataPath}')
 
             # Visualize model in TensorBoard
             features, _ = next(iter(train_loader))
@@ -155,8 +151,6 @@ for DataPath in dataPath:
                     tb.add_histogram(name, param, epoch)
                     tb.add_histogram(f'{name}.grad', param.grad, epoch)
                     
-                if es.step(mean_loss):
-                    break  # early stop criterion is met, we can stop now
                 
                 # Eval
                 model.eval()  # IMPORTANT
@@ -183,6 +177,8 @@ for DataPath in dataPath:
                 tb.add_scalar('Validation Loss', total_loss/n_samples, epoch)
                 #tb.add_hparams({'lr': learning_rate, 'bsize': batchSize}, 
                 #       {'loss': total_loss/n_samples})
+                if es.step(total_loss/n_samples):
+                    break  # early stop criterion is met, we can stop now
             
             tb.add_hparams({'DataSet': DataPath,'lr': learning_rate, 'bsize': batchSize},{'loss': mean_loss})
 

@@ -5,25 +5,25 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Parameter Ranges For MLPs}}{50}{table.caption.146}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Parameter Ranges For MLPs}}{50}{table.caption.147}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Parameter ranges for European call and American put option\relax }}{51}{table.caption.148}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Hyperparameter tuning of data set size and batch size for the American put bivariate contingent claim. The table shows validation loss in ascending order for different hyperparameter combinations and for the interested reader the tensorboard is online (link \href {https://tensorboard.dev/experiment/8pxUoSDmTVGMOxpJWgiZsA/}{tensorboard 1})\relax }}{54}{table.caption.152}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Hyperparameter tuning of data set size, learning rate and batch size for the American put bivariate contingent claim. The table shows the top 10 best performing combinations for the training loss and for the interested reader the tensorboard is online (link \href {https://tensorboard.dev/experiment/mQWtOskJRoWrmrFgOIVQ4g/}{tensorboard 2}) and the full table is given in appendix table \ref {tab:fullhyperAmerMin4}\relax }}{55}{table.caption.153}
-\contentsline {table}{\numberline {5.6}{\ignorespaces In-sample validation error for polynomial regression and MLPs on European call option\relax }}{57}{table.caption.156}
-\contentsline {table}{\numberline {5.7}{\ignorespaces Performance comparison of MLPs and polynomial regression on European call option. Shown the best performing regressions in the linear model and the worst performing in terms of MSE for in-sample and out-of-sample data sets (The full table for polynomial regression is found in appendix table \ref {tab:fullEuroCall})\relax }}{58}{table.caption.160}
-\contentsline {table}{\numberline {5.8}{\ignorespaces MLPs Performance on American Put Option\relax }}{58}{table.caption.164}
-\contentsline {table}{\numberline {5.9}{\ignorespaces Performance of the bivariate American put minimum contingent claim\relax }}{59}{table.caption.166}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Parameter Ranges In-sample for MLPs on Univariate Contingent Claims}}{50}{table.caption.143}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Parameter Ranges In-sample for MLPs on Bivariate Contingent Claim}}{50}{table.caption.144}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Parameter Ranges in Test Data Set for European Call and American Put Option\relax }}{51}{table.caption.145}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Grid Search for European Call\relax }}{54}{table.caption.149}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Grid Search for American Put Minimum on two Stocks\relax }}{55}{table.caption.150}
+\contentsline {table}{\numberline {5.6}{\ignorespaces European Call Validation Error\relax }}{57}{table.caption.153}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Test Error for European Call Option\relax }}{58}{table.caption.157}
+\contentsline {table}{\numberline {5.8}{\ignorespaces MLPs Performance on American Put Option\relax }}{58}{table.caption.161}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Performance of the Bivariate American Put Contingent Claim\relax }}{59}{table.caption.163}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces Comparison of accuracy for the European call option, where the inputs are K=40, $S(0)=40$, $\sigma =0.2$, T=1 and r=0.06.\relax }}{62}{table.caption.172}
-\contentsline {table}{\numberline {6.2}{\ignorespaces Comparison of speed and accuracy for a European put min option, where the inputs are K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06. Note ms is shorthand for millisecond\relax }}{62}{table.caption.173}
-\contentsline {table}{\numberline {6.3}{\ignorespaces Valuation of bivariate contingent claims with K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06.\relax }}{63}{table.caption.175}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Valuation of American put option with K=40 and r=0.06.\relax }}{64}{table.caption.179}
-\contentsline {table}{\numberline {6.5}{\ignorespaces Comparision of speed for the American put minimum option, where the inputs are K=40, $S_1(0)=S_2(0)=40$, $\sigma _1=0.2, \sigma _2=0.3$, T=1, $\rho =0.5$ and r=0.06. Note ms is shorthand for millisecond\relax }}{67}{table.caption.188}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces CRR, MLPs II, and B-S Call Formula Comparison\relax }}{62}{table.caption.168}
+\contentsline {table}{\numberline {6.2}{\ignorespaces BEG Accuracy and Speed\relax }}{62}{table.caption.169}
+\contentsline {table}{\numberline {6.3}{\ignorespaces BEG and Exotic European Options\relax }}{63}{table.caption.171}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Valuation of American Put Option\relax }}{64}{table.caption.175}
+\contentsline {table}{\numberline {6.5}{\ignorespaces BEG for the American Bivariate Contingent Claim\relax }}{66}{table.caption.184}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {D.1}{\ignorespaces Polynomial regression result for the European call option\relax }}{81}{table.caption.233}
-\contentsline {table}{\numberline {D.2}{\ignorespaces Hyperparameter tuning of dataset size and batchsize for american put minimum two assets for the interested reader see the tensorboard\relax }}{82}{table.caption.234}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {D.1}{\ignorespaces Polynomial Regression for European Call\relax }}{80}{table.caption.229}
+\contentsline {table}{\numberline {D.2}{\ignorespaces Grid Search for American Bivariate Contingent Claim\relax }}{81}{table.caption.230}

@@ -1,11 +1,11 @@
 % Appendix Template
 
-\chapter{Additional Material for CRR, LSM and MLPs I} % Main appendix title
+\chapter{Additional Material for CRR, LSM, and MLPs I} % Main appendix title
 
 \label{AppendixC} % Change X to a consecutive letter; for referencing this appendix elsewhere, use \ref{AppendixX}
 
 \section{Moment Matching CRR}\label{CRRMM}
-In the CRR the stock multiplication factor for up and down movement is chosen to match the two first moments of the lognormal distribution. By matching the first moments the underlying discrete binomial stochastic process for the stock converge toward the continuous time lognormal distribution for sufficient large equidistant time-steps N. Hence the CRR model will coincide with the Black-Scholes model.\\
+In the CRR the stock multiplication factor for up and down movement is chosen to match the two first moments of the lognormal distribution. By matching the first moments the underlying discrete binomial stochastic process for the stock converge toward the continuous time lognormal distribution for sufficient large equidistant time-steps N. Hence, the CRR model will coincide with the Black-Scholes model.\\
 
 The SDE for the Black Scholes under the equivalent martingale measure Q:
 $$dS(t)=rS(t)dt + \sigma S(t) dW(t)$$
@@ -17,7 +17,7 @@ The solution of equation \ref{lnGBM} is then:
 $$S(t)=S(0)\exp\bigg((r-\dfrac{1}{2}\sigma)t+ \sigma W(t) \bigg)$$
 Note that $W(t)\sim \mathcal{N}(0,t)$ implies:
 $$\ln(\dfrac{S(t)}{S(0)}) \sim \mathcal{N}((r-\dfrac{1}{2}\sigma^2)t, \sigma^2 t)$$
-The two first moments for the lognormal distribution is then:
+The two first moments for the lognormal distribution are then:
 \begin{equation}\label{lnMoments}
 \begin{split}
 E[\dfrac{S(t)}{S(0)}]=\exp(rt)\\
@@ -26,7 +26,7 @@ E[(\dfrac{S(t)}{S(0)})^2]=\exp(t\cdot (2r + \sigma^2))
 \end{equation}
 The above derivation can be used for any time interval.\\
 
-The binomial lattice model has two discrete outcomes from each state, hence the moments are:
+The binomial lattice model has two discrete outcomes from each state and the moments are:
 \begin{equation}\label{binMoments}
 \begin{split}
 E[\dfrac{S(t_{n+1})}{S(t_{n})}]=u \cdot Q(\dfrac{S(t_{n+1})}{S(t_{n})} = u) + d \cdot Q(\dfrac{S(t_{n+1})}{S(t_{n})} = d) = u \cdot q + d \cdot (1-q)\\
@@ -43,11 +43,11 @@ Multipling $(i)$ with u+d and recognizing $(ii)$:
 (u+d)\exp(r \Delta t)&=u^2 \cdot q + d^2 \cdot (1-q) + ud\\
 \Rightarrow (u+d)\exp(r \Delta t)&\overset{(ii)}{=}\exp(\Delta t \cdot (2r + \sigma^2)) + u d
 \end{align*}
-Remember we choose $u= \frac{1}{d}$ hence we arrive at a quadratic equation by some algebra.
+Remember, we choose $u= \frac{1}{d}$ and arrive at a quadratic equation through algebra.
 \begin{align*}
 u^2 - u\bigg(\exp(-r \Delta t) + \exp(\Delta t(r+\sigma^2))\bigg)+1=0
 \end{align*}
-We are interested in that the binomial model converge toward the Black-Scholes model, hence we are looking at small time increment $\Delta t$. This justify the Taylor approximation of the exponential function around zero.
+We are interested in that the binomial model converge toward the Black-Scholes model. Therefore, we are looking at small time increment $\Delta t$. This justify the Taylor approximation of the exponential function around zero.
 \begin{align*}
 \exp(r \Delta t + \sigma^2 \Delta t) \approx 1 + (r+\sigma^2)\Delta t + O(t^2)
 \end{align*}
@@ -55,7 +55,7 @@ By Taylor approximation we arrive at a simpler quadratic equation:
 \begin{equation*}
 u^2-u(2+\sigma^2 \Delta t) + 1 = 0
 \end{equation*}
-Solving the quadratic equation above gives
+Solving the quadratic equation above gives:
 \begin{align*}
 u&=1+\dfrac{1}{2} \sigma^2 \Delta t \pm  \dfrac{\sqrt{(2+\sigma^2 \Delta t)^2 - 4}}{2}\\
 &=1+\dfrac{1}{2} \sigma^2 \Delta t \pm  \dfrac{\sqrt{(4+\sigma^4 \Delta t^2 + 4 \sigma^2 \Delta t - 4}}{2}\\
@@ -63,16 +63,16 @@ u&=1+\dfrac{1}{2} \sigma^2 \Delta t \pm  \dfrac{\sqrt{(2+\sigma^2 \Delta t)^2 - 
 &\approx 1+\dfrac{1}{2} \sigma^2 \Delta t \pm \sigma \sqrt{\Delta t}\\
 &\approx \exp(\pm \sigma \sqrt{\Delta t})
 \end{align*}
-Both approximations use that the time-step is small.
+Both approximations exploit that the time-step is small.
 \section{Convergence for LSM and MLPs I}\label{Convergence}
 \subsection{LSM}
-In the rigorous approach in \parencite{analysisLSM} they show convergence results for the optimal value process or the Snell envelope $U$. We will present that $U(0)^{m,K}$ converges almost surely to $U(0)^{m}$ for K goes to infinity, i.e. the approximate value process by simulation and regression on a finite set of functions converge to the approximated value process with truncated orthogonal basis by letting the sample size go to infinity. Furthermore it can be shown that $U(0)^{m}$ converge to $U(0)$ for m goes to infinity. The second result is that the regressed value function converge to the expected continuation value by letting the number of basis function goes to infinity. The latter result is shown using the expected continuation values.
+In the rigorous approach in \parencite{analysisLSM} they show convergence results for the optimal value process or the Snell envelope $U$. We will present that $U(0)^{m,K}$ converges almost surely to $U(0)^{m}$ for K goes to infinity, i.e. the approximate value process by simulation and regression on a finite set of functions converge to the approximated value process with truncated orthogonal basis by letting the sample size go to infinity. Furthermore, it can be shown that $U(0)^{m}$ converges to $U(0)$ for m goes to infinity. The second result is that the regressed value function converges to the expected continuation value by letting the number of basis functions go to infinity. The latter result is shown using the expected continuation values.
 \begin{theorem}\label{LSMConvergence1}
 Assume the sequence $(e_{j}(S(t_n)))_{j\geq 1}$ is total in $L^2(\sigma(S(t_n)))$ for $n=1,\ldots,N-1$. Then for $n=0,\ldots,N$ we have
 $$\lim_{m\to +\infty} E^Q[G(S(\tau_{t_n}^{[m]})) |\mathcal{F}_{t_n}]=E^Q[G(S(\tau_{t_n})) |\mathcal{F}_{t_n}]$$
 in $L^2$
 \begin{proof}
-The proof is given by induction, where the orthogonal basis is total in $L^2$ is important, because $||P^m_{t_n}(E^Q[G(S(\tau_{t_{n+1}}))|\mathcal{F}_{t_n}])- E^Q[G(S(\tau_{t_{n+1}}))|\mathcal{F}_{t_n}]||_2 \to 0 \quad for \ m \to \infty$.
+The proof is given by induction, where the orthogonal basis is total in $L^2$ is important because $||P^m_{t_n}(E^Q[G(S(\tau_{t_{n+1}}))|\mathcal{F}_{t_n}])- E^Q[G(S(\tau_{t_{n+1}}))|\mathcal{F}_{t_n}]||_2 \to 0 \quad for \ m \to \infty$.
 (more details on p. 6-7 \parencite{analysisLSM})
 \end{proof}
 \end{theorem}
@@ -84,7 +84,7 @@ Then $U^{m,K}(0)$ converges almost surely to $U^{m}(0)$ as K goes to infinity.\\
 The proof is out of scope for this thesis, see the article \parencite{analysisLSM} for a proof in details. 
 \end{theorem}
 
-The two convergence results show that the convergence for the LSM algorithm, hence the LSM will approximate the optimal value process well for sufficient large sample sets and enough basis functions.
+The two convergence results show the convergence for the LSM algorithm, hence, the LSM will approximate the optimal value process well for sufficiently large sample sets and enough basis functions.
 
 \subsection{MLPs I}
 The MLPs regression method enjoys the same convergence results presented for the LSM algorithm, i.e.
@@ -100,7 +100,7 @@ Assume
 \begin{enumerate}
 \item[A1:] For every $p\in \mathbb{N}$, $p>1$, there exist $q \geq 1$ and $\kappa_p>0$ such that
 $$\forall s \in \mathbb{R}^{R}, \forall \theta \in \Theta_p, \quad |\Psi_p(s,\theta)| \leq \kappa_p (1+|s|^q) $$
-Moreover $\forall n \in \{1,2,\ldots, N-1\}$, a.s. the random functions $\theta \in \Theta_p \mapsto \Psi_p(S(t_n), \theta)$ are continuous. Note $\Theta_p$ is a compact set, hence the continuity is uniform.
+Moreover $\forall n \in \{1,2,\ldots, N-1\}$, a.s. the random functions $\theta \in \Theta_p \mapsto \Psi_p(S(t_n), \theta)$ are continuous. Note $\Theta_p$ is a compact set, hence, the continuity is uniform.
 \item[A2:] For $q$ defined in A1, $E^Q[|S(t_n)|^{2q}]<\infty \quad \forall n \in \mathbb{N} \cup 0$
 \item[A3:] $\forall p \in \mathbb{N}$, $p>1$ and $\forall n \in \{1,2,\ldots, N-1\}$, 
 $$P(S(t_n)=\Psi_{p}(S(t_n);\theta_{t_n}^{p})=0$$
@@ -121,8 +121,8 @@ The last result is the strong law of large numbers for the value function, i.e. 
 \section{LSM Lower Bound}\label{LSMLowerBound}
 The LSM approach gives a lower bound for the true price of the option given optimal stopping choice:
 \theoremstyle{proposition}
-\begin{proposition}{}\label{Lower-Bound-LSM}
-\textbf{Lower Bound To True Value:} For any finite choice of M, K, and vector $\theta\in \mathbb{R}^{M \times (K-1)}$ representing the coefficients for the M basis functions at each of the K-1 early exercise dates, let $LSM(\omega;M,K)$ denote the discounted cash flow resulting from the following the LSM rule of exercising when the immediate exercise value is positive and greater than or equal to $\hat{F}_{M}(\omega_{l};t_{k})$ as defined by $\theta$. Then the following inequality holds almost surely,
+\begin{proposition}{\textbf{Lower Bound To True Value: }}\label{Lower-Bound-LSM}
+For any finite choice of M, K, and vector $\theta\in \mathbb{R}^{M \times (K-1)}$ representing the coefficients for the M basis functions at each of the K-1 early exercise dates, let $LSM(\omega;M,K)$ denote the discounted cash flow resulting from the following the LSM rule of exercising when the immediate exercise value is positive and greater than or equal to $\hat{F}_{M}(\omega_{l};t_{k})$ as defined by $\theta$. Then the following inequality almost surely holds,
 $$V(X)\geq \lim_{N\to \infty} \dfrac{1}{N}\sum_{i=1}^{N} LSM(\omega_i;M,K)$$
 \null \hfill (p. 124 \parencite{LSM})
 \end{proposition}

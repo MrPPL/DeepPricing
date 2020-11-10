@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  6 NOV 2020 16:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  10 NOV 2020 23:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2504,7 +2504,13 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 \tf@toc=\write7
 \openout7 = `deepPricing.toc'.
 
- [6] (./deepPricing.lof)
+ [6] (./deepPricing.lof
+Overfull \hbox (5.05917pt too wide) in paragraph at lines 34--34
+ [][] [][][]\T1/ppl/m/n/10.95 MLPs Per-for-mance for In-the-Money Data Set Bi-v
+ari-ate Amer-i-can Con- 
+ []
+
+)
 \tf@lof=\write8
 \openout8 = `deepPricing.lof'.
 
@@ -2525,16 +2531,16 @@ LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <24.88> not available
 [9
 
 ]
-Overfull \hbox (41.24527pt too wide) in alignment at lines 282--305
+Overfull \hbox (41.24527pt too wide) in alignment at lines 279--302
  [] [] [] 
  []
 
-LaTeX Font Info:    Try loading font information for U+fplmbb on input line 309
+LaTeX Font Info:    Try loading font information for U+fplmbb on input line 307
 .
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Overfull \hbox (41.24527pt too wide) in alignment at lines 305--321
+Overfull \hbox (41.24527pt too wide) in alignment at lines 302--319
  [] [] [] 
  []
 
@@ -2601,15 +2607,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
+
+Package amsthm Warning: Unknown theoremstyle `assumption' on input line 23.
+
 1: section
 [3
 
 
 
 ]
-
-Package amsthm Warning: Unknown theoremstyle `assumption' on input line 23.
-
 LaTeX Font Info:    Font shape `T1/ppl/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/ppl/b/it' tried instead on input line 24.
 LaTeX Font Info:    Font shape `OMS/ppl/m/it' in size <10.95> not available
@@ -2628,8 +2634,8 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 7.29405pt on input line 41.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 41.
-[4]
-<Figures/contractfct.png, id=626, 433.62pt x 289.08pt>
+ [4]
+<Figures/contractfct.png, id=603, 433.62pt x 289.08pt>
 File: Figures/contractfct.png Graphic file (type png)
 <use Figures/contractfct.png>
 Package pdftex.def Info: Figures/contractfct.png  used on input line 69.
@@ -2640,103 +2646,105 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 69--69
  []
 
 [5 <./Figures/contractfct.png>] [6]
-Overfull \hbox (11.55177pt too wide) in paragraph at lines 131--133
+Overfull \hbox (11.55177pt too wide) in paragraph at lines 131--132
 \T1/ppl/m/n/10.95 The repli-ca-tion ar-gu-ment in Black-Scholes pa-per ([]Black
  and Sc-holes, [][]1973[][]) was ground-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 153--154
+Underfull \hbox (badness 10000) in paragraph at lines 131--132
 
  []
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 157--159
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
-<Figures/samplePath.png, id=665, 433.62pt x 289.08pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--161
+
+ []
+
+<Figures/samplePath.png, id=642, 433.62pt x 289.08pt>
 File: Figures/samplePath.png Graphic file (type png)
 <use Figures/samplePath.png>
-Package pdftex.def Info: Figures/samplePath.png  used on input line 162.
+Package pdftex.def Info: Figures/samplePath.png  used on input line 164.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 162--164
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 164--166
  [][] 
  []
 
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 164.
+(Font)              scaled to size 10.42007pt on input line 166.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 164.
+(Font)              scaled to size 7.91925pt on input line 166.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 10.42007pt on input line 164.
+(Font)              scaled to size 10.42007pt on input line 166.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.91925pt on input line 164.
+(Font)              scaled to size 7.91925pt on input line 166.
+[8]
 
-Overfull \hbox (24.97441pt too wide) in paragraph at lines 168--169
-\T1/ppl/m/n/10.95 trix is given by $\OML/zplm/b/it/10.95 ^^[\OT1/zplm/m/n/10.95
- (\OML/zplm/m/it/10.95 t\OT1/zplm/m/n/10.95 ) = \OMS/zplm/m/n/10.95 f\OML/zplm/
-m/it/10.95 ^^[[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t\OT1/zplm/m/n/10.95 
-)\OMS/zplm/m/n/10.95 g[]$ \T1/ppl/m/n/10.95 and the drift is $\OML/zplm/m/it/10
-.95 \OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t\OT1/zplm/m/n/10.95 ) = (\OML/z
-plm/m/it/10.95 []\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t\OT1/zplm/m/n/10.9
-5 )\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/10.95 []\OT1/zplm/m/n/10.95 (\OML/zplm/
-m/it/10.95 t\OT1/zplm/m/n/10.95 )\OT1/ppl/m/n/10.95 , [] , \OML/zplm/m/it/10.95
- []\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t\OT1/zplm/m/n/10.95 ))[]$\T1/ppl
-/m/n/10.95 .
+Package amsthm Warning: Unknown theoremstyle `proposition' on input line 181.
+
+[9 <./Figures/samplePath.png>]
+Overfull \hbox (4.18073pt too wide) in paragraph at lines 204--207
+\T1/ppl/m/n/10.95 gener-i-cally arbitrage-free if it is arbitrage-free for ev-e
+ry (suf-fi-ciently in-te-grable) choice
  []
 
 
-Package amsthm Warning: Unknown theoremstyle `proposition' on input line 179.
-
-[8] [9 <./Figures/samplePath.png>]
-Overfull \hbox (1.04913pt too wide) in paragraph at lines 202--205
-\T1/ppl/m/n/10.95 gener-i-cally ar-bi-trage free if it is ar-bi-trage free for 
-ev-ery (suf-fi-ciently in-te-grable) choice
- []
+Package amsthm Warning: Unknown theoremstyle `proposition' on input line 210.
 
 
-Package amsthm Warning: Unknown theoremstyle `proposition' on input line 208.
-
-
-Overfull \hbox (8.26996pt too wide) in paragraph at lines 219--221
+Overfull \hbox (8.26996pt too wide) in paragraph at lines 221--223
 [][]\T1/ppl/b/n/10.95 Theorem 2.11. []\T1/ppl/b/it/10.95 Sec-ond Fun-da-men-tal
  Pric-ing The-o-rem of Math-e-mat-i-cal Fi-nance(FFT2):
  []
 
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 249--250
+Underfull \hbox (badness 10000) in paragraph at lines 251--252
 
+ []
+
+
+Overfull \hbox (12.53546pt too wide) in paragraph at lines 253--254
+\T1/ppl/m/n/10.95 have the Markov prop-erty, we as-sume $\OML/zplm/m/it/10.95 k
+ \OT1/zplm/m/n/10.95 = \OML/zplm/m/it/10.95 d$ \T1/ppl/m/n/10.95 and the prob-a
+-bil-ity space is $\OT1/zplm/m/n/10.95 (
+\OT1/ppl/m/n/10.95 , \OMS/zplm/m/n/10.95 F\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/1
+0.95 P\OT1/ppl/m/n/10.95 , \OMS/zplm/m/n/10.95 F[]\OT1/zplm/m/n/10.95 )$\T1/ppl
+/m/n/10.95 .
  []
 
 [11]
 
-Package amsthm Warning: Unknown theoremstyle `assumption' on input line 276.
+Package amsthm Warning: Unknown theoremstyle `assumption' on input line 278.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 287--288
+Underfull \hbox (badness 10000) in paragraph at lines 289--290
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 304--306
+Underfull \hbox (badness 10000) in paragraph at lines 306--308
 
  []
 
 
-Package amsthm Warning: Unknown theoremstyle `proposition' on input line 308.
+Package amsthm Warning: Unknown theoremstyle `proposition' on input line 310.
 
 
-Package amsthm Warning: Unknown theoremstyle `proposition' on input line 323.
+Package amsthm Warning: Unknown theoremstyle `proposition' on input line 325.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 343--344
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 345--346
 
  []
 
-[13] [14]
-Overfull \hbox (0.95868pt too wide) in paragraph at lines 387--389
+[14]
+Overfull \hbox (0.95868pt too wide) in paragraph at lines 389--391
 \T1/ppl/m/n/10.95 Recall that the dis-counted price pro-cess $[]\OT1/zplm/m/n/1
 0.95 (\OMS/zplm/m/n/10.95 ^^@\OML/zplm/m/it/10.95 r \OMS/zplm/m/n/10.95 ^^A \OM
 L/zplm/m/it/10.95 t\OT1/zplm/m/n/10.95 ) \OMS/zplm/m/n/10.95 ^^A \OML/zplm/m/it
@@ -2745,14 +2753,14 @@ S/zplm/m/n/10.95 ^^@\OML/zplm/m/it/10.95 r \OMS/zplm/m/n/10.95 ^^A
  []
 
 [15]
-Overfull \hbox (2.17795pt too wide) in paragraph at lines 433--434
-\T1/ppl/m/n/10.95 To solve the op-ti-mal stop-ping prob-lem nu-mer-i-cal meth-o
-ds are re-quired for the Amer-
+Underfull \hbox (badness 10000) in paragraph at lines 414--415
+
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
-
+Overfull \hbox (2.17795pt too wide) in paragraph at lines 435--436
+\T1/ppl/m/n/10.95 To solve the op-ti-mal stop-ping prob-lem nu-mer-i-cal meth-o
+ds are re-quired for the Amer-
  []
 
 
@@ -2761,19 +2769,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 435--436
  []
 
 
-Overfull \hbox (31.65587pt too wide) in paragraph at lines 437--438
+Underfull \hbox (badness 10000) in paragraph at lines 437--438
+
+ []
+
+[16]
+Overfull \hbox (31.65587pt too wide) in paragraph at lines 439--440
 []\T1/ppl/m/n/10.95 The un-der-ly-ing pro-cess is as-sumed to be Marko-vian wit
 h state vari-ables $\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 S\OT1/zplm/m/n/10
 .95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 ))[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 437--438
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
 
  []
 
-[16]
-Overfull \hbox (16.40498pt too wide) in paragraph at lines 444--446
+
+Overfull \hbox (16.40498pt too wide) in paragraph at lines 446--448
 \T1/ppl/m/n/10.95 The Snell en-ve-lope $\OML/zplm/m/it/10.95 U\OT1/zplm/m/n/10.
 95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 )$ \T1/ppl/m/n/10.95 is the sma
 ll-est su-per-martin-gale of the gain pro-cess $\OMS/zplm/m/n/10.95 f\OML/zplm/
@@ -2783,12 +2796,12 @@ L/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 ))\OMS/zplm/m/n/10.95 g$\T1/ppl/m/n/10
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 453--455
+Underfull \hbox (badness 10000) in paragraph at lines 455--457
 
  []
 
 
-Overfull \hbox (59.99133pt too wide) detected at line 468
+Overfull \hbox (59.99133pt too wide) detected at line 470
 []
  []
 
@@ -2800,6 +2813,16 @@ Chapter 3.
 
 Underfull \hbox (badness 10000) in paragraph at lines 11--12
 
+ []
+
+
+Overfull \hbox (2.19296pt too wide) in paragraph at lines 13--14
+\T1/ppl/m/n/10.95 no-mial pro-cess in dis-crete time. We work with the fi-nan-c
+ial mar-ket $\OT1/zplm/m/n/10.95 (
+\OT1/ppl/m/n/10.95 , \OMS/zplm/m/n/10.95 F\OT1/ppl/m/n/10.95 , \U/fplmbb/m/n/10
+.95 F\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/10.95 P\OT1/ppl/m/n/10.95 , \OML/zplm/
+m/it/10.95 B\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/10.95 S[]\OT1/zplm/m/n/10.95 )$
+\T1/ppl/m/n/10.95 ,
  []
 
 1: section
@@ -2842,6 +2865,14 @@ Overfull \hbox (10.19395pt too wide) in paragraph at lines 37--37
 1/zplm/m/n/10.95 )$ 
  []
 
+
+Overfull \hbox (2.1332pt too wide) in paragraph at lines 59--61
+\T1/ppl/m/n/10.95 is com-plete. Re-mem-ber the mar-ket ($\OML/zplm/m/it/10.95 B
+\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 )\OT1/ppl/m/n/
+10.95 , \OML/zplm/m/it/10.95 S[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t[]\O
+T1/zplm/m/n/10.95 )$\T1/ppl/m/n/10.95 ) for the bi-no-mial model is arbitrage-
+ []
+
 [20]
 Overfull \hbox (4.27206pt too wide) detected at line 79
 []
@@ -2852,7 +2883,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--81
 
  []
 
-<Figures/BinomialTree.png, id=853, 433.62pt x 361.35pt>
+<Figures/BinomialTree.png, id=831, 433.62pt x 361.35pt>
 File: Figures/BinomialTree.png Graphic file (type png)
 <use Figures/BinomialTree.png>
 Package pdftex.def Info: Figures/BinomialTree.png  used on input line 84.
@@ -2873,7 +2904,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 93--95
  []
 
 [21]
-<Figures/binConv.png, id=868, 433.62pt x 289.08pt>
+<Figures/binConv.png, id=843, 433.62pt x 289.08pt>
 File: Figures/binConv.png Graphic file (type png)
 <use Figures/binConv.png>
 Package pdftex.def Info: Figures/binConv.png  used on input line 98.
@@ -2888,15 +2919,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-[22 <./Figures/BinomialTree.png>] [23 <./Figures/binConv.png>]
-Overfull \hbox (17.528pt too wide) in paragraph at lines 112--112
-[]\T1/ppl/b/n/14.4 Binomial Lat-tice Model For Mul-ti-vari-ate Con-tin-gent Cla
-ims 
+
+Underfull \hbox (badness 10000) in paragraph at lines 106--107
+
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 113--114
-
+[22 <./Figures/BinomialTree.png>] [23 <./Figures/binConv.png>]
+Overfull \hbox (15.12315pt too wide) in paragraph at lines 114--114
+[]\T1/ppl/b/n/14.4 Binomial Lat-tice Model for Mul-ti-vari-ate Con-tin-gent Cla
+ims 
  []
 
 
@@ -2904,49 +2935,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--116
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 117--118
+
+ []
+
 [24]
-<Figures/Three-dimensional-binomial-lattice.png, id=895, 853.1875pt x 470.75874
+<Figures/Three-dimensional-binomial-lattice.png, id=870, 853.1875pt x 470.75874
 pt>
 File: Figures/Three-dimensional-binomial-lattice.png Graphic file (type png)
 <use Figures/Three-dimensional-binomial-lattice.png>
 Package pdftex.def Info: Figures/Three-dimensional-binomial-lattice.png  used o
-n input line 134.
+n input line 136.
 (pdftex.def)             Requested size: 404.02908pt x 222.93033pt.
 
-Overfull \hbox (12.5644pt too wide) detected at line 144
+Overfull \hbox (15.6976pt too wide) detected at line 145
 \OML/zplm/m/it/10.95 J[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/
 m/n/10.95 ) = []\OMS/zplm/m/n/10.95 f\OT1/zplm/m/n/10.95 ^^H(\OML/zplm/m/it/10.
-95 t\OT1/ppl/m/n/10.95 , \OML/zplm/b/it/10.95 S\OT1/zplm/m/n/10.95 (\OML/zplm/m
-/it/10.95 t[]\OT1/zplm/m/n/10.95 ))\OT1/ppl/m/n/10.95 , []\OT1/zplm/m/n/10.95 (
-\OMS/zplm/m/n/10.95 ^^@\OML/zplm/m/it/10.95 r\OT1/zplm/m/n/10.95 ^^A\OML/zplm/m
-/it/10.95 t\OT1/zplm/m/n/10.95 )[]\OML/zplm/m/it/10.95 p[]J[]\OT1/zplm/m/n/10.9
-5 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 ) + [] + \OML/zplm/m/it/10.95 p[
-]J[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 )[]\OMS/zp
-lm/m/n/10.95 g
+95 t[]\OT1/ppl/m/n/10.95 , \OML/zplm/b/it/10.95 S\OT1/zplm/m/n/10.95 (\OML/zplm
+/m/it/10.95 t[]\OT1/zplm/m/n/10.95 ))\OT1/ppl/m/n/10.95 , []\OT1/zplm/m/n/10.95
+ (\OMS/zplm/m/n/10.95 ^^@\OML/zplm/m/it/10.95 r\OT1/zplm/m/n/10.95 ^^A\OML/zplm
+/m/it/10.95 t\OT1/zplm/m/n/10.95 )[]\OML/zplm/m/it/10.95 q[]J[]\OT1/zplm/m/n/10
+.95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 ) + [] + \OML/zplm/m/it/10.95 
+q[]J[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 )[]\OMS/
+zplm/m/n/10.95 g
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 144--146
+Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
  []
 
 [25 <./Figures/Three-dimensional-binomial-lattice.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 147--148
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
 
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 154--155
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--157
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
 
  []
 
 
-Overfull \hbox (53.82924pt too wide) in paragraph at lines 164--166
+Overfull \hbox (53.82924pt too wide) in paragraph at lines 165--167
 \T1/ppl/m/n/10.95 where $\OMS/zplm/m/n/10.95 T\OT1/zplm/m/n/10.95 (\OT1/ppl/m/n
 /10.95 0, [] , \OML/zplm/m/it/10.95 T\OT1/zplm/m/n/10.95 )$ \T1/ppl/m/n/10.95 i
 s a class of all $\OT1/zplm/m/n/10.95 (\OT1/ppl/m/n/10.95 0, [] , \OML/zplm/m/i
@@ -2958,71 +2994,62 @@ t/10.95 T\OT1/zplm/m/n/10.95 )$\T1/ppl/m/n/10.95 -valued stop-ping times and $[
  []
 
 [27]
-Overfull \hbox (83.01529pt too wide) detected at line 177
+Overfull \hbox (83.01529pt too wide) detected at line 178
 []
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 177--179
+Underfull \hbox (badness 10000) in paragraph at lines 178--180
 
  []
 
 
-Overfull \hbox (44.87823pt too wide) detected at line 194
+Overfull \hbox (45.7872pt too wide) detected at line 196
 []
  []
 
 
-Overfull \hbox (2.34137pt too wide) in paragraph at lines 196--199
-\T1/ppl/m/n/10.95 and the $\OMS/zplm/m/n/10.95 ^^A$ \T1/ppl/m/n/10.95 on the ri
-ght hand side is the usual in-ner prod-uct in $\U/fplmbb/m/n/10.95 R[]$ \T1/ppl
-/m/n/10.95 and $\OML/zplm/m/it/10.95 e[] \OT1/zplm/m/n/10.95 = (\OML/zplm/m/it/
-10.95 e[]\OT1/ppl/m/n/10.95 , [] , \OML/zplm/m/it/10.95 e[]\OT1/zplm/m/n/10.95 
-)$\T1/ppl/m/n/10.95 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 199--201
+Underfull \hbox (badness 10000) in paragraph at lines 201--203
 
  []
 
 [28]
-Overfull \hbox (103.04659pt too wide) detected at line 214
+Overfull \hbox (103.04659pt too wide) detected at line 216
 []
  []
 
-<Figures/LSMFit1.png, id=932, 433.62pt x 289.08pt>
+<Figures/LSMFit1.png, id=911, 433.62pt x 289.08pt>
 File: Figures/LSMFit1.png Graphic file (type png)
 <use Figures/LSMFit1.png>
-Package pdftex.def Info: Figures/LSMFit1.png  used on input line 222.
+Package pdftex.def Info: Figures/LSMFit1.png  used on input line 224.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 222--224
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 224--226
  [][] 
  []
 
 [29 <./Figures/LSMFit1.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 240--242
+Underfull \hbox (badness 10000) in paragraph at lines 242--244
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 252--254
+Underfull \hbox (badness 10000) in paragraph at lines 254--256
 
  []
 
-<Figures/LSMFit2.png, id=945, 433.62pt x 289.08pt>
+<Figures/LSMFit2.png, id=924, 433.62pt x 289.08pt>
 File: Figures/LSMFit2.png Graphic file (type png)
 <use Figures/LSMFit2.png>
-Package pdftex.def Info: Figures/LSMFit2.png  used on input line 257.
+Package pdftex.def Info: Figures/LSMFit2.png  used on input line 259.
 (pdftex.def)             Requested size: 433.61894pt x 289.07928pt.
 
-Overfull \hbox (29.58986pt too wide) in paragraph at lines 257--259
+Overfull \hbox (29.58986pt too wide) in paragraph at lines 259--261
  [][] 
  []
 
 
-Overfull \hbox (55.70471pt too wide) detected at line 266
+Overfull \hbox (55.70471pt too wide) detected at line 268
 \OML/zplm/m/it/10.95 []\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/
 m/n/10.95 ) = [] [] \OT1/ppl/m/n/10.95 1[][]\OML/zplm/m/it/10.95 G\OT1/zplm/m/n
 /10.95 (\OML/zplm/m/it/10.95 S[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 ^^\[]
@@ -3034,41 +3061,32 @@ zplm/m/it/10.95 N \OMS/zplm/m/n/10.95 ^^@ \OT1/ppl/m/n/10.95 1
  []
 
 [30]
-Overfull \hbox (2.08528pt too wide) in paragraph at lines 266--268
-\T1/ppl/m/n/10.95 value it-er-a-tion. Fur-ther-more in ([]Tsit-sik-lis and Roy,
- [][]1999[][]) they set $\OML/zplm/m/it/10.95 U\OT1/zplm/m/n/10.95 (\OML/zplm/m
-/it/10.95 t[]\OT1/zplm/m/n/10.95 ) = 	(\OML/zplm/m/it/10.95 S\OT1/zplm/m/n/10.9
-5 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 )\OT1/ppl/m/n/10.95 ; \OML/zplm/
-m/it/10.95 \OT1/zplm/m/n/10.95 )$
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 266--268
+Underfull \hbox (badness 10000) in paragraph at lines 268--270
 
  []
 
 [31 <./Figures/LSMFit2.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 289--291
+Underfull \hbox (badness 10000) in paragraph at lines 291--293
 
  []
 
 [32] [33]
-Underfull \hbox (badness 10000) in paragraph at lines 335--337
+Underfull \hbox (badness 10000) in paragraph at lines 337--339
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
  []
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 373--375
+Underfull \hbox (badness 10000) in paragraph at lines 376--378
 
  []
 
 
-Overfull \hbox (40.71971pt too wide) detected at line 387
+Overfull \hbox (40.71971pt too wide) detected at line 390
 \OML/zplm/m/it/10.95 Q[]\OT1/zplm/m/n/10.95 [[]([]) \OML/zplm/m/it/10.95 < \OT1
 /ppl/m/n/10.95 0, []\OT1/zplm/m/n/10.95 ([]) \OML/zplm/m/it/10.95 < \OT1/ppl/m/
 n/10.95 0, []\OT1/zplm/m/n/10.95 ([]) \OML/zplm/m/it/10.95 < \OT1/ppl/m/n/10.95
@@ -3081,7 +3099,7 @@ lm/m/it/10.95 d[]\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/10.95 ^^Z[]\OT1/ppl/m/n/10
  []
 
 
-Overfull \hbox (18.88824pt too wide) in paragraph at lines 396--398
+Overfull \hbox (18.88824pt too wide) in paragraph at lines 399--401
 \T1/ppl/m/n/10.95 We can ex-tend the above re-sult to best of as-sets and cash 
 by let-ting $\OML/zplm/m/it/10.95 S[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 
 t\OT1/zplm/m/n/10.95 ) = \OML/zplm/m/it/10.95 K []\OT1/zplm/m/n/10.95 (\OMS/zpl
@@ -3090,7 +3108,7 @@ T \OMS/zplm/m/n/10.95 ^^@
  []
 
 [35]
-Overfull \hbox (8.85909pt too wide) detected at line 409
+Overfull \hbox (8.85909pt too wide) detected at line 412
 []\OMS/zplm/m/n/10.95 f[]f\OML/zplm/m/it/10.95 S[]\OT1/ppl/m/n/10.95 , \OML/zpl
 m/m/it/10.95 S[]\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/10.95 S[]\OMS/zplm/m/n/10.9
 5 g ^^@ \OML/zplm/m/it/10.95 K\OT1/ppl/m/n/10.95 , 0\OMS/zplm/m/n/10.95 g \OT1/
@@ -3104,7 +3122,7 @@ MS/zplm/m/n/10.95 g ^^@ \OML/zplm/m/it/10.95 K
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--435
+Underfull \hbox (badness 10000) in paragraph at lines 436--438
 
  []
 
@@ -3130,9 +3148,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
 
 
 ]
-Overfull \hbox (1.36824pt too wide) in paragraph at lines 17--19
-\T1/ppl/m/n/10.95 There are other meth-ods for mea-sur-ing per-for-mance e.g. m
-ean ab-so-lute er-ror (MAE).
+Overfull \hbox (4.23714pt too wide) in paragraph at lines 17--19
+\T1/ppl/m/n/10.95 There are other meth-ods for mea-sur-ing per-for-mance, e.g. 
+mean ab-so-lute er-ror (MAE).
  []
 
 
@@ -3193,12 +3211,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--136
 
  []
 
-[40]
+
 Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
 
-[41]
+[40] [41]
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryfadings.code.tex
 File: tikzlibraryfadings.code.tex 2009/11/15 v3.0.1a (rcs-revision 1.2)
@@ -3217,6 +3235,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 268--269
  []
 
 [42]
+Overfull \hbox (4.26892pt too wide) in paragraph at lines 279--281
+\T1/ppl/m/n/10.95 The loss func-tion $\OML/zplm/m/it/10.95 L$ \T1/ppl/m/n/10.95
+ in the em-pir-i-cal risk func-tion for train-ing is cho-sen to be quadratic,
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 279--281
 
  []
@@ -3272,18 +3296,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 7--8
  []
 
 
-Overfull \hbox (0.40623pt too wide) in paragraph at lines 14--14
-[]\T1/ppl/b/n/14.4 Multilayer Per-cep-trons Re-gres-sion For Op-ti-mal Stop-pin
-g 
- []
-
-
-Overfull \hbox (0.52502pt too wide) in paragraph at lines 15--16
-\T1/ppl/m/n/10.95 us-ing the lin-ear model in LSM. This sec-tion is in-flu-ence
-d by ([]Longstaff and Schwartz,
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
@@ -3333,7 +3345,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-<Figures/marginalAmerPut.png, id=1200, 433.62pt x 289.08pt>
+<Figures/marginalAmerPut.png, id=1177, 433.62pt x 289.08pt>
 File: Figures/marginalAmerPut.png Graphic file (type png)
 <use Figures/marginalAmerPut.png>
 Package pdftex.def Info: Figures/marginalAmerPut.png  used on input line 145.
@@ -3388,7 +3400,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--203
  []
 
 [53]
-Overfull \hbox (30.24805pt too wide) in paragraph at lines 208--224
+Overfull \hbox (30.24805pt too wide) in paragraph at lines 205--224
  [][] 
  []
 
@@ -3402,7 +3414,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--234
 
  []
 
-<Figures/polynomialEuroC.png, id=1232, 433.62pt x 505.89pt>
+<Figures/polynomialEuroC.png, id=1204, 433.62pt x 505.89pt>
 File: Figures/polynomialEuroC.png Graphic file (type png)
 <use Figures/polynomialEuroC.png>
 Package pdftex.def Info: Figures/polynomialEuroC.png  used on input line 237.
@@ -3418,12 +3430,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 270--271
  []
 
 
-Overfull \hbox (74.18015pt too wide) in paragraph at lines 276--291
+Overfull \hbox (74.18015pt too wide) in paragraph at lines 273--291
  [][] 
  []
 
 [57]
-<Figures/PredictionEuroC.png, id=1259, 361.35pt x 289.08pt>
+<Figures/PredictionEuroC.png, id=1230, 361.35pt x 289.08pt>
 File: Figures/PredictionEuroC.png Graphic file (type png)
 <use Figures/PredictionEuroC.png>
 Package pdftex.def Info: Figures/PredictionEuroC.png  used on input line 297.
@@ -3434,7 +3446,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 323--324
  []
 
 [58]
-<Figures/inSampleAmerMinP.png, id=1271, 361.35pt x 289.08pt>
+<Figures/inSampleAmerMinP.png, id=1242, 361.35pt x 289.08pt>
 File: Figures/inSampleAmerMinP.png Graphic file (type png)
 <use Figures/inSampleAmerMinP.png>
 Package pdftex.def Info: Figures/inSampleAmerMinP.png  used on input line 342.
@@ -3507,17 +3519,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
-<Figures/histLSMMLPsI.png, id=1333, 361.35pt x 289.08pt>
+<Figures/histLSMMLPsI.png, id=1301, 361.35pt x 289.08pt>
 File: Figures/histLSMMLPsI.png Graphic file (type png)
 <use Figures/histLSMMLPsI.png>
 Package pdftex.def Info: Figures/histLSMMLPsI.png  used on input line 133.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-[65]
+
 Underfull \hbox (badness 10000) in paragraph at lines 139--143
 
  []
 
-
+[65 <./Figures/histLSMMLPsI.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
  []
@@ -3527,62 +3539,63 @@ Underfull \hbox (badness 10000) in paragraph at lines 146--147
 
  []
 
-[66 <./Figures/histLSMMLPsI.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 166--167
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
-<Figures/compareBEGMLPsII.png, id=1354, 361.35pt x 289.08pt>
+[66]
+<Figures/compareBEGMLPsII.png, id=1321, 361.35pt x 289.08pt>
 File: Figures/compareBEGMLPsII.png Graphic file (type png)
 <use Figures/compareBEGMLPsII.png>
-Package pdftex.def Info: Figures/compareBEGMLPsII.png  used on input line 172.
+Package pdftex.def Info: Figures/compareBEGMLPsII.png  used on input line 173.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-[67]
-Underfull \hbox (badness 10000) in paragraph at lines 184--185
+
+Underfull \hbox (badness 10000) in paragraph at lines 185--186
+
+ []
+
+[67 <./Figures/compareBEGMLPsII.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 186--187
-
- []
-
-[68 <./Figures/compareBEGMLPsII.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 189--190
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 190--191
+Underfull \hbox (badness 10000) in paragraph at lines 191--192
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 192--193
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+[68]
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
 
 [69]
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+Underfull \hbox (badness 10000) in paragraph at lines 220--222
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 219--221
-
- []
-
-[70]) [71]
+) [70]
 \openout2 = `Chapters/Chapter7.aux'.
 
  (./Chapters/Chapter7.tex
@@ -3603,21 +3616,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
 
  []
 
 1: section
-[72
+[71
 
 
 
-]) [73]
+]
+Underfull \hbox (badness 10000) in paragraph at lines 26--27
+
+ []
+
+) [72]
 \openout2 = `Appendices/AppendixA.aux'.
 
  (./Appendices/AppendixA.tex
@@ -3628,15 +3641,9 @@ Overfull \hbox (1.13211pt too wide) detected at line 17
  []
 
 
-Overfull \hbox (6.05663pt too wide) in paragraph at lines 27--29
-[][]\T1/ppl/b/n/10.95 Theorem A.2. []\T1/ppl/b/it/10.95 The Mar-tin-gale Rep-re
--sen-ta-tion The-o-rem \T1/ppl/m/it/10.95 Let W be a k-dimensional Wiener
- []
-
-
-Overfull \hbox (8.00237pt too wide) in paragraph at lines 37--42
+Overfull \hbox (14.7913pt too wide) in paragraph at lines 37--42
 [][]\T1/ppl/b/n/10.95 Theorem A.3. []\T1/ppl/b/it/10.95 The Gir-sanov The-o-rem
- \T1/ppl/m/it/10.95 As-sume the prob-a-bil-ity space $\OT1/zplm/m/n/10.95 (
+:  \T1/ppl/m/it/10.95 As-sume the prob-a-bil-ity space $\OT1/zplm/m/n/10.95 (
 \OT1/ppl/m/n/10.95 , \OMS/zplm/m/n/10.95 F\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/1
 0.95 P\OT1/ppl/m/n/10.95 , \OT1/zplm/m/n/10.95 (\OMS/zplm/m/n/10.95 F[]\OT1/zpl
 m/m/n/10.95 )[])$
@@ -3648,20 +3655,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 37--42
  []
 
 1: section
-[74
+[73
 
 
 
 ]
-Overfull \hbox (46.6952pt too wide) in paragraph at lines 52--53
-\T1/ppl/m/it/10.95 P-Wiener pro-cess (i.e. zero drift and unit vari-ance in-de-
-pen-dent com-po-nents) on $\OT1/zplm/m/n/10.95 (
+Overfull \hbox (68.84685pt too wide) in paragraph at lines 52--53
+\T1/ppl/m/it/10.95 dard P-Wiener pro-cess (i.e. zero drift and unit vari-ance i
+n-de-pen-dent com-po-nents) on $\OT1/zplm/m/n/10.95 (
 \OT1/ppl/m/n/10.95 , \OMS/zplm/m/n/10.95 F\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/1
 0.95 P\OT1/ppl/m/n/10.95 , \OT1/zplm/m/n/10.95 (\OMS/zplm/m/n/10.95 F[]\OT1/zpl
 m/m/n/10.95 )[])$\T1/ppl/m/it/10.95 .
  []
 
-) [75]
+) [74]
 \openout2 = `Appendices/AppendixB.aux'.
 
  (./Appendices/AppendixB.tex
@@ -3680,7 +3687,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--16
 
 )
 1: section
-[76
+[75
 
 
 
@@ -3700,11 +3707,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--28
  []
 
 1: section
-[77
+[76
 
 
 
-] [78]
+] [77]
 Overfull \hbox (18.08731pt too wide) in paragraph at lines 71--72
 [][]\T1/ppl/b/n/10.95 Theorem C.1. []\T1/ppl/m/it/10.95 As-sume the se-quence $
 \OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 e[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/i
@@ -3728,7 +3735,13 @@ or $\OML/zplm/m/it/10.95 n \OT1/zplm/m/n/10.95 = \OT1/ppl/m/n/10.95 1, [] , \OM
 L/zplm/m/it/10.95 N \OMS/zplm/m/n/10.95 ^^@
  []
 
-[79]
+
+Overfull \hbox (0.85832pt too wide) in paragraph at lines 87--88
+[]\T1/ppl/m/n/10.95 The two con-ver-gence re-sults show the con-ver-gence for t
+he LSM al-go-rithm, hence,
+ []
+
+[78]
 Overfull \hbox (0.37305pt too wide) in paragraph at lines 102--104
 \T1/ppl/m/it/10.95 Moreover $\OMS/zplm/m/n/10.95 8\OML/zplm/m/it/10.95 n \OMS/z
 plm/m/n/10.95 2 f\OT1/ppl/m/n/10.95 1, 2, [] , \OML/zplm/m/it/10.95 N \OMS/zplm
@@ -3742,23 +3755,23 @@ OT1/ppl/m/n/10.95 , \OML/zplm/m/it/10.95 ^^R\OT1/zplm/m/n/10.95 )$
 
 Package amsthm Warning: Unknown theoremstyle `proposition' on input line 123.
 
-) [80]
+) [79]
 \openout2 = `Appendices/AppendixD.aux'.
 
  (./Appendices/AppendixD.tex
 Appendix D.
 
-Overfull \hbox (75.4371pt too wide) in paragraph at lines 13--31
+Overfull \hbox (75.4371pt too wide) in paragraph at lines 10--31
  [][] 
  []
 
 1: section
-[81
+[80
 
 
 
 ]
-<Figures/polynomialOutMoneyEuroC.png, id=1476, 433.62pt x 505.89pt>
+<Figures/polynomialOutMoneyEuroC.png, id=1439, 433.62pt x 505.89pt>
 File: Figures/polynomialOutMoneyEuroC.png Graphic file (type png)
 <use Figures/polynomialOutMoneyEuroC.png>
 Package pdftex.def Info: Figures/polynomialOutMoneyEuroC.png  used on input lin
@@ -3769,8 +3782,8 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 95--97
  [][] 
  []
 
-[82]
-<Figures/polynomialLongTEuroC.png, id=1481, 433.62pt x 505.89pt>
+[81]
+<Figures/polynomialLongTEuroC.png, id=1444, 433.62pt x 505.89pt>
 File: Figures/polynomialLongTEuroC.png Graphic file (type png)
 <use Figures/polynomialLongTEuroC.png>
 Package pdftex.def Info: Figures/polynomialLongTEuroC.png  used on input line 1
@@ -3781,74 +3794,74 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 103--105
  [][] 
  []
 
-<Figures/outMoneyAmerP.png, id=1482, 361.35pt x 289.08pt>
+<Figures/outMoneyAmerP.png, id=1445, 361.35pt x 289.08pt>
 File: Figures/outMoneyAmerP.png Graphic file (type png)
 <use Figures/outMoneyAmerP.png>
 Package pdftex.def Info: Figures/outMoneyAmerP.png  used on input line 112.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-<Figures/longTAmerP.png, id=1483, 361.35pt x 289.08pt>
+<Figures/longTAmerP.png, id=1446, 361.35pt x 289.08pt>
 File: Figures/longTAmerP.png Graphic file (type png)
 <use Figures/longTAmerP.png>
 Package pdftex.def Info: Figures/longTAmerP.png  used on input line 120.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-<Figures/longTAmerMinP.png, id=1484, 361.35pt x 289.08pt>
-File: Figures/longTAmerMinP.png Graphic file (type png)
-<use Figures/longTAmerMinP.png>
-Package pdftex.def Info: Figures/longTAmerMinP.png  used on input line 128.
-(pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-<Figures/inMoneyAmerMinP.png, id=1485, 361.35pt x 289.08pt>
+<Figures/inMoneyAmerMinP.png, id=1447, 361.35pt x 289.08pt>
 File: Figures/inMoneyAmerMinP.png Graphic file (type png)
 <use Figures/inMoneyAmerMinP.png>
-Package pdftex.def Info: Figures/inMoneyAmerMinP.png  used on input line 137.
+Package pdftex.def Info: Figures/inMoneyAmerMinP.png  used on input line 128.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-) [83 <./Figures/polynomialOutMoneyEuroC.png>] [84 <./Figures/polynomialLongTEu
-roC.png>] [85 <./Figures/outMoneyAmerP.png> <./Figures/longTAmerP.png>]
-[86 <./Figures/longTAmerMinP.png> <./Figures/inMoneyAmerMinP.png>]
-LaTeX Font Info:    Try loading font information for T1+cmtt on input line 376.
+<Figures/longTAmerMinP.png, id=1448, 361.35pt x 289.08pt>
+File: Figures/longTAmerMinP.png Graphic file (type png)
+<use Figures/longTAmerMinP.png>
+Package pdftex.def Info: Figures/longTAmerMinP.png  used on input line 136.
+(pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
+) [82 <./Figures/polynomialOutMoneyEuroC.png>] [83 <./Figures/polynomialLongTEu
+roC.png>] [84 <./Figures/outMoneyAmerP.png> <./Figures/longTAmerP.png>]
+[85 <./Figures/inMoneyAmerMinP.png> <./Figures/longTAmerMinP.png>]
+LaTeX Font Info:    Try loading font information for T1+cmtt on input line 374.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-Overfull \hbox (13.26485pt too wide) in paragraph at lines 376--376
+Overfull \hbox (13.26485pt too wide) in paragraph at lines 374--374
 [][]\T1/ppl/m/n/10.95 Ekvall, Niklas (1996). ^^P  A lat-tice ap-proach for pric
 -ing of mul-ti-vari-ate con-tin-gent claims^^Q.
  []
 
 
-Overfull \hbox (5.98878pt too wide) in paragraph at lines 376--376
+Overfull \hbox (5.98878pt too wide) in paragraph at lines 374--374
 [][]\T1/ppl/m/n/10.95 Kohler, Michael, Adam Krzy»ak, and Nebo-jsa Todor-ovic (2
 010). ^^P  PRIC-ING OF HIGH-
  []
 
 1: section
-[87
+[86
 
 
 ]
-Overfull \hbox (33.32887pt too wide) in paragraph at lines 376--376
+Overfull \hbox (33.32887pt too wide) in paragraph at lines 374--374
 \T1/ppl/m/n/10.95 space the-ory, ap-prox-i-ma-tion al-go-rithms, and an ap-pli-
 ca-tion to pric-ing high-dimensional
  []
 
 
-Overfull \hbox (15.19618pt too wide) in paragraph at lines 376--376
+Overfull \hbox (15.19618pt too wide) in paragraph at lines 374--374
 \T1/ppl/m/n/10.95 fi-nan-cial deriva-tives^^Q. eng. In: \T1/ppl/m/it/10.95 IEEE
  Trans-ac-tions on Au-to-matic Con-trol \T1/ppl/m/n/10.95 44.10, pp. 1840^^U
  []
 
-[88]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 380.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 380.
+[87]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 378.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 378.
  (./deepPricing.aux (./Chapters/Chapter1.aux) (./Chapters/Chapter2.aux)
 (./Chapters/Chapter3.aux) (./Chapters/Chapter4.aux) (./Chapters/Chapter5.aux)
 (./Chapters/Chapter6.aux) (./Chapters/Chapter7.aux) (./Appendices/AppendixA.aux
 ) (./Appendices/AppendixB.aux) (./Appendices/AppendixC.aux)
 (./Appendices/AppendixD.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 380.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 380.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 378.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 378.
 Package rerunfilecheck Info: File `deepPricing.out' has not changed.
-(rerunfilecheck)             Checksum: 0F953187D8ED1312597B2CF0243AD81F;13868.
+(rerunfilecheck)             Checksum: 179364E648CA75BD2F675F5A0103B471;13980.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -3858,13 +3871,13 @@ Package logreq Info: Writing requests to 'deepPricing.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48198 strings out of 492982
- 990049 string characters out of 6134896
- 1205745 words of memory out of 5000000
- 50609 multiletter control sequences out of 15000+600000
+ 48196 strings out of 492982
+ 990076 string characters out of 6134896
+ 1201283 words of memory out of 5000000
+ 50611 multiletter control sequences out of 15000+600000
  649270 words of font info for 292 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 64i,23n,78p,10384b,2404s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 64i,23n,81p,10384b,2404s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
 e/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/t
 ype1/public/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
@@ -3883,10 +3896,10 @@ super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb
 r/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on deepPricing.pdf (99 pages, 1220148 bytes).
+Output written on deepPricing.pdf (98 pages, 1219519 bytes).
 PDF statistics:
- 1672 PDF objects out of 1728 (max. 8388607)
- 1457 compressed objects within 15 object streams
- 370 named destinations out of 1000 (max. 500000)
+ 1635 PDF objects out of 1728 (max. 8388607)
+ 1424 compressed objects within 15 object streams
+ 366 named destinations out of 1000 (max. 500000)
  909 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -5,7 +5,7 @@
 \label{AppendixA} % Change X to a consecutive letter; for referencing this appendix elsewhere, use \ref{AppendixX}
 
 \begin{theorem}\label{Ito}
-\textbf{Itô's formula multidimensional} Let the n-dimensional process X have dynamics given by:
+\textbf{Itô's formula multidimensional: } Let the n-dimensional process X have dynamics given by:
 \begin{align}
 dX(t)=\mu(t)dt+\sigma(t)dW(t)
 \end{align}
@@ -24,7 +24,7 @@ Note: \[ dW_i(t) \cdot dW_j(t)= \begin{cases}
 \end{theorem}
 
 \begin{theorem}\label{MRT}
-\textbf{The Martingale Representation Theorem} 
+\textbf{The Martingale Representation Theorem: } 
 Let W be a k-dimensional Wiener process, and assume that the filtration is defined by:
 $$\mathcal{F}_t=\mathcal{F}_t^W \quad t\in [0,T]$$
 Let M be any $\mathcal{F}_t$-adapted martingale. Then there exist uniquely determined $\mathcal{F}_t$-adapted processes $h_1, \ldots, h_k$ such that M has the representation
@@ -34,12 +34,12 @@ if the martingale M is square integrable, then $h_1, \ldots, h_k$ are in $L^2$\\
 \end{theorem}
 
 \begin{theorem}\label{Girsanov}
-\textbf{The Girsanov Theorem} 
-Assume the probability space $(\Omega, \mathcal{F}, P, (\mathcal{F}_t^{\bar{W}})_{t \in [0,T]})$ and let the Girsanov kernel $\phi$ be any d-dimensional adapted column vector process. Choose a fixed T and define the process L on $[0,T]$ by:\\
-$dL_t=\phi(t)^T\cdot L_t d\bar{W}_t^P$\\
-$L_0=1$.\\
-Assume that $E^P[L_T]=1$ and define the new probability measure $Q$ on $\mathcal{F}_T$ by:\\
-$$L_T=\frac{dQ}{dP} \quad on \ \mathcal{F}_T$$
+\textbf{The Girsanov Theorem: } 
+Assume the probability space $(\Omega, \mathcal{F}, P, (\mathcal{F}_t^{\bar{W}})_{t \in [0,T]})$ and let the Girsanov kernel $\phi$ be any d-dimensional adapted column vector process. Choose a fixed T and define the likelihood process L on $[0,T]$ by:\\
+$dL(t)=\phi(t)^T L(t) d\bar{W}(t)$\\
+$L(0)=1$.\\
+Assume that $E^P[L(T)]=1$ and define the new probability measure $Q$ on $\mathcal{F}_T$ by:\\
+$$L(T)=\frac{dQ}{dP} \quad on \ \mathcal{F}_T$$
 Then
 \begin{align}
 d\bar{W}(t)=\phi(t)dt + dW(t)
@@ -49,16 +49,16 @@ Where $W(t)$ is the Q-Wiener process and $\bar{W}(t)$ is the P-Wiener process.\\
 \end{theorem}
 
 \begin{theorem}\label{ConverseGirsanov}
-\textbf{The Converse of the Girsanov Theorem} Let $\bar{W}$ be k-dimensional standard P-Wiener process (i.e. zero drift and unit variance independent components) on $(\Omega,\mathcal{F}, P, (\mathcal{F}_t^{\bar{W}})_{t \in [0,T]})$. Assume that there exits a probability measure $Q$ such that $Q<<P$ on $\mathcal{F}_T^{\bar{W}})$. Then there exists an adapted process $\phi$ such that the likelihood process L has dynamics
+\textbf{The Converse of the Girsanov Theorem: } Let $\bar{W}$ be k-dimensional standard P-Wiener process (i.e. zero drift and unit variance independent components) on $(\Omega,\mathcal{F}, P, (\mathcal{F}_t^{\bar{W}})_{t \in [0,T]})$. Assume that there exits a probability measure $Q$ such that $Q<<P$ on $\mathcal{F}_T^{\bar{W}}$. Then there exists an adapted process $\phi$ such that the likelihood process L has dynamics
 \begin{align*}
-dL(t)=L(t)\phi^T(t)d\bar{W}(t)\\
+dL(t)=\phi^T(t) L(t)d\bar{W}(t)\\
 L(0)=1
 \end{align*}
 \null \hfill (p. 168 \parencite{finKont})
 \end{theorem}
 
 \theoremstyle{definition}
-\begin{definition}{\textbf{Stopping time}:}\label{StoppingTime}
+\begin{definition}{\textbf{Stopping time: }}\label{StoppingTime}
 A random variable $\tau:\Omega \to [0,\infty]$ is called a Markov time if 
 $$(\tau \leq t)\in \mathcal{F}_{t} \quad \forall t \geq 0 $$
 A Markov time is called a stopping time if $\tau<\infty$ P-a.s.\\
@@ -67,7 +67,7 @@ A Markov time is called a stopping time if $\tau<\infty$ P-a.s.\\
 
 
 \theoremstyle{definition}
-\begin{definition}{\textbf{Snell envelope}}\label{snellEnvelope}
+\begin{definition}{\textbf{Snell envelope: }}\label{snellEnvelope}
 Consider a fixed process Y.
 \begin{enumerate}
 \item[•] We say that a process X dominates the process Y if $X_n \geq Y_n \ P-a.s. \ \forall n$.
@@ -77,6 +77,6 @@ Consider a fixed process Y.
 \end{definition}
 
 \begin{theorem}\label{SnellEnvelopeTheorem}
-\textbf{The Snell Envelope Theorem} The optimal value process V is the Snell envelope of the gain process G.\\
+\textbf{The Snell Envelope Theorem: } The optimal value process V is the Snell envelope of the gain process G.\\
 \null \hfill (p. 381  \parencite{Bjork19})
 \end{theorem}

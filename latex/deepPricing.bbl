@@ -592,6 +592,42 @@
     \warn{\item Invalid format of field 'month'}
   \endentry
 
+  \entry{KIM}{article}{}
+    \name{author}{3}{}{%
+      {{hash=K}{%
+         family={Kim},
+         familyi={K\bibinitperiod},
+      }}%
+      {{hash=L}{%
+         family={Lee},
+         familyi={L\bibinitperiod},
+      }}%
+      {{hash=A}{%
+         family={An},
+         familyi={A\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{KLA1}
+    \strng{fullhash}{KLA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{labelyear}{2020}
+    \field{labeldatesource}{year}
+    \field{sortinit}{K}
+    \field{sortinithash}{K}
+    \verb{doi}
+    \verb 10.3390/en13030622
+    \endverb
+    \field{pages}{622}
+    \field{title}{Real Option Valuation of the R\&D Investment in Renewable
+  Energy Considering the Effects of the Carbon Emission Trading Market: A
+  Korean Case}
+    \field{volume}{13}
+    \field{journaltitle}{Energies}
+    \field{month}{02}
+    \field{year}{2020}
+  \endentry
+
   \entry{KohlerMichael2010}{article}{}
     \name{author}{3}{}{%
       {{hash=KM}{%

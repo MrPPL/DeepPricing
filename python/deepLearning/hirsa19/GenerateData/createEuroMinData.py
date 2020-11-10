@@ -59,25 +59,24 @@ def findY(X):
 
 
 #parameter ranges for european options
-spot1 = (80,120)
-spot2 = (80,120)
-K = (100,100)
+moneyness1 = (0.8,1.2)
+moneyness2 = (0.8,1.2)
 T = (1/252,3.0)
 r = (0.01,0.03)
 vol1 = (0.05,0.5)
 vol2 = (0.05,0.5)
-rho = (0.05,0.5)
-parVec = [spot1, spot2, K, T, r, vol1, vol2, rho]
+rho = (-0.5,0.5)
+parVec = [moneyness1, moneyness2, T, r, vol1, vol2, rho]
 
 # number of samples
-nSamp= 3* 10**5
+nSamp= 1* 10**3
 #make data
 X = quasiSampling(parVec, nSamp)
 Y = findY(X)
 
 import pandas as pd
-df = pd.DataFrame({'y':Y[:,0],'spot1':X[:,0],'spot2':X[:,1], 'K':X[:,2], 'T':X[:,3],'r':X[:,4], 'vol1':X[:,5], 'vol2':X[:,6], 'rho':X[:,7]})
-df.to_csv("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/python/deepLearning/hirsa19/data/300KEuroMinPut.csv")
+df = pd.DataFrame({'y':Y[:,0],'moneyness1':X[:,0],'moneyness2':X[:,1], 'T':X[:,2],'r':X[:,3], 'vol1':X[:,4], 'vol2':X[:,5], 'rho':X[:,6]})
+df.to_csv("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/python/deepLearning/hirsa19/data/1KEuroMinPut.csv")
 
 
     

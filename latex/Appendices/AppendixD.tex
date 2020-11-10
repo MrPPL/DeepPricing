@@ -7,7 +7,7 @@
 \section{Tables}
 
 \begin{table}[H]
-\caption{Polynomial regression result for the European call option}
+\caption{Polynomial Regression for European Call}{Polynomial regression result for the European call option}
 \label{tab:fullEuroCall}
 \centering
 \begin{tabular}{llllllll}
@@ -31,7 +31,7 @@ Out-of-Money  & MSE  & 0.005772 & 0.000767 & 0.000839 & 0.000944 & 0.001812 & 0.
 \end{table}
 
 \begin{table}[H]
-\caption{Hyperparameter tuning of dataset size and batchsize for american put minimum two assets for the interested reader see the tensorboard}
+\caption{Grid Search for American Bivariate Contingent Claim}{Hyperparameter tuning of dataset size and batch size for American put minimum two assets, for the interested reader see the tensorboard}
 \label{tab:fullhyperAmerMin4}
 \centering
 \begin{tabular}{llll}
@@ -94,7 +94,7 @@ Out-of-Money  & MSE  & 0.005772 & 0.000767 & 0.000839 & 0.000944 & 0.001812 & 0.
 \centering
 \includegraphics{Figures/polynomialOutMoneyEuroC.png}
 \decoRule
-\caption[Polynomial Regression Performance for out-of-money data set European Call]{Polynomial Regression Performance for out of money data set on the European call}
+\caption[Polynomial Regression Performance for Out-of-money Data Set European Call]{Polynomial regression performance for out of money data set on the European call}
 \label{fig:MLPsEuroCOutOfMoney}
 \end{figure}
 
@@ -102,7 +102,7 @@ Out-of-Money  & MSE  & 0.005772 & 0.000767 & 0.000839 & 0.000944 & 0.001812 & 0.
 \centering
 \includegraphics{Figures/polynomialLongTEuroC.png}
 \decoRule
-\caption[Polynomial Regression Performance for long maturity data set European call]{Polynomial Regression Performance for long maturity data set on European call}
+\caption[Polynomial Regression Performance for Long Maturity Data Set European Call]{Polynomial regression performance for long maturity data set on European call}
 \label{fig:MLPsEuroCLongMaturity}
 \end{figure}
 
@@ -111,7 +111,7 @@ Out-of-Money  & MSE  & 0.005772 & 0.000767 & 0.000839 & 0.000944 & 0.001812 & 0.
 \centering
 \includegraphics{Figures/outMoneyAmerP.png}
 \decoRule
-\caption[MLPs Performance for In-the-Money data set on American Put]{MLPs Performance for In-the-Money data set on American Put}
+\caption[MLPs Performance for In-the-Money Data Set American Put]{MLPs performance for in-the-money data set on American put}
 \label{fig:MLPsAmerPOutMoney}
 \end{figure}
 
@@ -119,26 +119,28 @@ Out-of-Money  & MSE  & 0.005772 & 0.000767 & 0.000839 & 0.000944 & 0.001812 & 0.
 \centering
 \includegraphics{Figures/longTAmerP.png}
 \decoRule
-\caption[MLPs Performance for long maturity data set on American Put]{MLPs Performance for long maturity data set on American Put}
+\caption[MLPs Performance for Long Maturity Data Set American Put]{MLPs performance for long maturity data set on American put}
 \label{fig:MLPsAmerPLongT}
+\end{figure}
+
+\begin{figure}[th]
+\centering
+\includegraphics{Figures/inMoneyAmerMinP.png}
+\decoRule
+\caption[MLPs Performance for In-the-Money Data Set Bivariate American Contingent Claim]{MLPs performance on in-the-money data set on American put on minimum of two stocks}
+\label{fig:MLPsAmerMin2}
 \end{figure}
 
 \begin{figure}[th]
 \centering
 \includegraphics{Figures/longTAmerMinP.png}
 \decoRule
-\caption[MLPs Performance on long maturity data set on American bivariate contingent claim]{MLPs Performance for long maturity data set on American put on minimum of two stocks}
+\caption[MLPs Performance for Long Maturity Data Set Bivariate American Contingent Claim]{MLPs performance for long maturity data set on American put on minimum of two stocks}
 \label{fig:MLPsAmerMin1}
 \end{figure}
 
 
-\begin{figure}[th]
-\centering
-\includegraphics{Figures/inMoneyAmerMinP.png}
-\decoRule
-\caption[MLPs Performance on In-the-Money data set on American bivariate contingent claim]{MLPs Performance on In-the-Money data set on American put on minimum of two stocks}
-\label{fig:MLPsAmerMin2}
-\end{figure}
+
 
 
 

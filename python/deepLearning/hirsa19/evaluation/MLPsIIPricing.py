@@ -159,7 +159,7 @@ loaded_model3.eval()
 import datetime
 start = datetime.datetime.now()
 strike = 40
-spot = 50
+spot = 40
 moneyness1 = spot/strike
 moneyness2=spot/strike
 T =1

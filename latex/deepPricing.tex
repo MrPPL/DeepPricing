@@ -194,7 +194,7 @@ headsepline, % Uncomment to get a line under the header
 \item This work was done wholly or mainly while in candidature for a research degree at this University.
 \item Where any part of this thesis has previously been submitted for a degree or any other qualification at this University or any other institution, this has been clearly stated.
 \item Where I have consulted the published work of others, this is always clearly attributed.
-\item Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my own work.
+\item Where I have quoted from the work of others, the source is always given. With the exception of such quotations, this thesis is entirely my work.
 \item I have acknowledged all main sources of help.
 \item Where the thesis is based on work done by myself jointly with others, I have made clear exactly what was done by others and what I have contributed myself.\\
 \end{itemize}
@@ -224,7 +224,7 @@ headsepline, % Uncomment to get a line under the header
 
 \begin{abstract}
 \addchaptertocentry{\abstractname} % Add the abstract to the table of contents
-The concepts for option pricing theory are presented and closed form solutions are provided in special cases. The options with no closed form solution are investigated through numerical methods, where both the binomial lattice model and LSM will be presented assuming the underlying Black-Scholes theory. Deep learning is then investigated to look for improvement of the existing models, where we look specifically at the MLPs regression. Our numerically study did not find any improvement in using MLPs I instead of LSM, but we believe the MLPs I can be improved with further investigation. The MLPs II was very fast, but lack the accuracy of the classical methods. Therefore the MLPs II could be beneficial in some circumstances were speed weights more than precision.
+The concepts for option pricing theory are presented and closed form solutions are provided in special cases. The options with no closed form solution are investigated through numerical methods, where both the binomial lattice model and LSM will be presented assuming the underlying Black-Scholes theory. Deep learning is then investigated to look for improvement of the existing methods, where we look specifically at the MLPs regression. Our numerical study did not find any improvement in using MLPs I instead of LSM. The MLPs II was very fast, but lack the accuracy of the classical methods. Therefore, the MLPs II could be beneficial in some circumstances where speed weighs more than precision. Even though the low accuracy for both deep learning methods, we believe MLPs I and II can become an alternative for the classical methods with further investigation.
 \end{abstract}
 
 %----------------------------------------------------------------------------------------
@@ -233,11 +233,11 @@ The concepts for option pricing theory are presented and closed form solutions a
 
 \begin{acknowledgements}
 \addchaptertocentry{\acknowledgementname} % Add the acknowledgements to the table of contents
-I would first like to thank my thesis advisor Associate Professor David Skovmand of the department of Mathematical Science at University of Copenhagen. Prof. Skovmand consistently allowed this paper to be my own work, but steered me in the right the direction whenever he thought I needed it.\\
+I would first like to thank my thesis advisor Associate Professor David Skovmand of the Department of Mathematical Science at University of Copenhagen. Prof. Skovmand consistently allowed this paper to be my own work, but steered me in the right direction whenever he thought I needed it.\\
 
-I would also like to thank Joakim Pagels and Emil Petersen for providing useful discussions in the process. A special thanks go to senior lecturer Mark Laplante at University of Wisconsin Madison for be such an inspiring lecturer and discovering my interest in finance.\\
+I would also like to thank Joakim Pagels and Emil Petersen for providing useful discussions in the process. A special thanks goes to senior lecturer Mark Laplante at the University of Wisconsin Madison for being such an inspiring lecturer and discovering my interest in finance.\\
 
-Finally, I must express my very profound gratitude to my parents and to my family and friends for providing me with unfailing support and continuous encouragement throughout my years of study and through the process of researching and writing this thesis. This accomplishment would not have been possible without them. Thank you.\\
+Finally, I must express my very profound gratitude to my parents and my family and friends for providing me with unfailing support and continuous encouragement throughout my years of study and through the process of researching and writing this thesis. This accomplishment would not have been possible without them. Thank you.\\
 
 Peter Pommergård Lind
 \end{acknowledgements}
@@ -257,18 +257,15 @@ Peter Pommergård Lind
 %----------------------------------------------------------------------------------------
 
 \begin{abbreviations}{ll} % Include a list of abbreviations (a table of two columns)
-\textbf{ATM} & \textbf{A}t \textbf{T}he \textbf{M}oney\\
 \textbf{B-S} & \textbf{B}lack-\textbf{S}choles\\
-\textbf{BM} & \textbf{B}rownian \textbf{M}otion\\
 \textbf{FPT1} & \textbf{F}undamental \textbf{P}ricing \textbf{T}heorem \textbf{I}\\
 \textbf{FPT2} & \textbf{F}undamental \textbf{P}ricing \textbf{T}heorem \textbf{II}\\
 \textbf{GBM} & \textbf{G}eometric \textbf{B}rownian \textbf{M}otion\\
 \textbf{ITM} & \textbf{I}n \textbf{T}he \textbf{M}oney\\
 \textbf{LIBOR} & \textbf{L}ondon \textbf{I}nter\textbf{b}ank \textbf{O}ffered \textbf{R}ate\\
-\textbf{LSM} & \textbf{L}east \textbf{S}quare Monte Carlo \textbf{M}ethod\\
+\textbf{LSM} & \textbf{L}east \textbf{S}quares Monte Carlo \textbf{M}ethod\\
 \textbf{MLPs} & \textbf{M}ulti\textbf{L}ayer \textbf{P}erceptron\textbf{s}\\
 \textbf{MRT} & \textbf{M}artingale \textbf{R}epresentation  \textbf{T}heorem \\
-\textbf{OTM} & \textbf{O}ut \textbf{T}he \textbf{M}oney\\
 \textbf{RNVF} & \textbf{R}isk \textbf{N}eutral \textbf{V}aluation \textbf{F}ormula\\
 \textbf{PDE} & \textbf{P}artial \textbf{D}ifferential \textbf{E}quation\\
 \textbf{SDE} & \textbf{S}tochastic \textbf{D}ifferential \textbf{E}quation\\
@@ -297,12 +294,13 @@ $V^{h}(\cdot)$ & Value process of portfolio h\\
 $X$ & Simple Derivative\\
 $\Phi(\cdot)$ & Contract function\\
 $p_{ij}$ & Correlation coefficient between asset i and j\\
-$\mu_i$ & drift of the continuous lognormal distribution of asset i\\
+$\alpha_i$ & drift of the continuous lognormal distribution of asset i\\
 $F(t,S(t))$ & pricing function of derivative depending on S(t) and time t\\
 $d$ & number of risky assets\\
 \addlinespace % Gap to separate the Roman symbols from the Greek
 \textbf{Mathematical symbols}\\
 $\matr{A}$ & matrix notation for matrix A\\
+$\matr{A}_{:,i}$ & i'th column of matrix A\\
 $\bm{a}$ & vector notation for vector a\\
 $W_t$ & Weiner process under martingale measure Q \\
 $\bar{W}_t$ & Weiner process under probabilty measure P\\
