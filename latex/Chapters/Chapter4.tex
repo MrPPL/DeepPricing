@@ -267,7 +267,7 @@ A layer is a vector of neurons, hence, the transformation from one layer to the 
 
 So the MLPs is not like the linear model in section \ref{LSM}, where a single transformation from input to output is applied. The unique attribute of neural network is the ability to approximate any kind of function\footnote{Universal Approximate Theorem page 194 \parencite{Goodfellow-et-al-2016}}, because of the flexibility with applying multiple functions to the input layer. The neural network has a lot of different design options, where e.g. hidden layers, layer width, depth, activation functions etc., are hyperparameters. In general, it is recommended to use many hidden covariates (neurons) rather than too few. The danger of overfitting is than avoided by introducing some kind of penalty to avoid that the model becomes overly complex, which we will discuss further in section \ref{regularization}.\\
 
-To measure the performance of the model, we need a function to measure the difference between the approximation $f(\bm{x};\bm{\theta})$ and the target values $f^*(\bm{x})$. The function used to quantify this approximation is the cost function. The cost function is key to improving our model in machine learning lingo training the model and the next section will show why(TODO står det rigtigt?).
+To measure the performance of the model, we need a function to measure the difference between the approximation $f(\bm{x};\bm{\theta})$ and the target values $f^*(\bm{x})$. The function used to quantify this approximation is the cost function. The cost function is key to improving our model, in machine learning lingo training the model, and the next section will show why.
 
 %-----------------------------------
 %	SUBSECTION 3

@@ -203,7 +203,7 @@ For pricing we utilize the Black-Scholes theory, where we assume constant volati
 A possible reason for the volatility shew is that investors are more concerned with falling stock prices than rising prices, hence, the volatility is instantaneously negatively correlated with the stock price. To overcome the issue about assuming constant volatility, a model with stochastic variance can be considered. The model becomes more complex with an extra stochastic variable, where for simplicity we mention the two factor Heston model. The basic model is given by the stock follow the SDE:
 $$dS(t)=\alpha S(t) dt + \sqrt{V(t)} S(t) dW_S(t)$$
 And the stochastic variance process $V(t)$ is the solution to the SDE:
-$$dV(t)=a(\theta - V(t))dt + \epsilon \sqrt{V(t)} dW_V(t) \quad where a>0,\theta>0, \epsilon>0 \ and \ V(0)>0$$
+$$dV(t)=a(\theta - V(t))dt + \epsilon \sqrt{V(t)} dW_V(t) \quad where \ a>0,\theta>0, \epsilon>0, \ and \ V(0)>0$$
 Where $W_S(t)$ and $W_V(t)$ have correlation $\rho$. The interpretation of the constants is:
 \begin{enumerate}
 \item[•] $\theta$ is long run average price variance

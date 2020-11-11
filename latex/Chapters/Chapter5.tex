@@ -202,28 +202,28 @@ $$\eta \times b \times d = \{(\eta,b, d) : \eta \in \{0.0001, 0.001, 0.01 \}, \ 
 Besides varying the hyperparameters for $\eta$, $b$ and $d$, the other hyperparameters are the same values as for the European call option.\\
 
 \begin{table}[th]
-\caption{Grid Search for American Put Minimum on two Stocks}{Hyperparameter tuning of data set size, learning rate and batch size for the American put bivariate contingent claim. The table shows the top 10 best performing combinations for the training loss and for the interested reader the tensorboard is online (link \href{https://tensorboard.dev/experiment/mQWtOskJRoWrmrFgOIVQ4g/}{tensorboard 2}) and the full table is given in appendix table \ref{tab:fullhyperAmerMin4}}
+\caption{Grid Search for American Put Minimum on two Stocks}{Hyperparameter tuning of data set size, learning rate and batch size for the American put bivariate contingent claim. The table shows the top 10 best performing combinations for the training loss and for the interested reader the tensorboard is online (link \href{https://tensorboard.dev/experiment/ECWCP8nPTJWoXKVdBcQSaw/#scalars}{tensorboard 2}) and the full table is given in appendix table \ref{tab:fullhyperAmerMin4}}
 \label{tab:hyperAmerMin1}
 \centering
 \begin{tabular}{llllll}
 \toprule
 \textbf{Data set Size} & \textbf{Learning Rate} & \textbf{Batch Size} & \textbf{Train Loss} & \textbf{Val. Loss} & \textbf{Time: min:sec} \\
 \midrule
-300K    & 0.0001 & 8     & 0.0151 & $3.615\cdot 10^{-3}$ & 60:41\\ 
-300K    & 0.001  & 64    & 0.0355 & $6.676\cdot 10^{-3}$ & 11:04\\ 
-100K    & 0.0001 & 8     & 0.0649 & 0.0473 & 20:44\\ 
-100K    & 0.001  & 8     & 0.0721 & 0.0373 & 21:41\\ 
-300K    & 0.0001 & 64    & 0.0760 & 0.1548 & 13:51\\ 
-300K    & 0.001  & 8     & 0.1046 & 8.8420 & 26:41\\ 
-300K    & 0.01   & 256   & 0.4800 & 0.1400 & 2:37\\ 
-300K    & 0.0001 & 256   & 1.0409 & 0.9533 & 6:40\\ 
-300K    & 0.001  & 256   & 1.0681 & 0.9156 & 2:27 \\ 
-300K    & 0.001  & 512   & 1.0894 & 0.9345 & 3:11 \\ 
+300K     & 0.0001 & 64    & $1.350 \cdot 10^{-6}$   & $2.287 \cdot 10^{-6}$ & 4:50 \\ 
+300K     & 0.001 & 64     & $2.170 \cdot 10^{-6}$   & $1.633 \cdot 10^{-6}$ & 2:13 \\ 
+300K     & 0.0001 & 8     & $2.734 \cdot 10^{-6}$   & $2.638 \cdot 10^{-6}$ & 6:17\\ 
+300K     & 0.0001 & 256   & $2.943 \cdot 10^{-6}$   & $2.850 \cdot 10^{-6}$ & 4:04\\ 
+300K     & 0.001 & 256    & $3.685 \cdot 10^{-6}$   & $3.335 \cdot 10^{-6}$ & 1:26\\ 
+100K     & 0.0001 & 64    & $4.081 \cdot 10^{-6}$   & $3.575 \cdot 10^{-6}$ & 1:44\\ 
+100K     & 0.001 & 64     & $4.817 \cdot 10^{-6}$   & $5.615 \cdot 10^{-6}$ & 0:57\\ 
+100K     & 0.0001 & 256   & $5.182 \cdot 10^{-6}$   & $6.367 \cdot 10^{-6}$ & 1:52\\ 
+300K     & 0.0001 & 1024  & $5.534 \cdot 10^{-6}$   & $6.473 \cdot 10^{-6}$ & 3:42\\ 
+300K     & 0.001 & 8      & $5.798 \cdot 10^{-6}$   & $4.284 \cdot 10^{-6}$ & 5:40\\ 
 \bottomrule\\
 \end{tabular}
 \end{table}
 
-Looking at table \ref{tab:hyperAmerMin1} the best configuration for both the validation loss and training loss is for $(\eta=0.0001, b=8, d=300K)$, but the computational cost is by far the most expensive by taking an hour for training with these hyperparameters. The reason lies in the lowest batch size, biggest data set, and the smallest learning rate considered. The learning rate effects the computational speed because we are training with early stopping regularization. Overall the data set with 300K performed best, which is expected, since a bigger data set gives more learning opportunities. The batch size effects heavily the computational speed, since a high batch size gives fewer iterations per epoch. Considering computational cost and the loss; the 300K data sets, the learning rate $\eta=0.001$ and a batch size of 64 or 256 are preferred.\\
+Looking at table \ref{tab:hyperAmerMin1} the best configuration for the training loss is for $(\eta=0.0001, b=64, d=300K)$, where the best configuration in terms of validation loss is $(\eta=0.001, b=64, d=300K)$. The computational burden increases when training with a bigger data set, smaller learning rate, and smaller batch sizes. The learning rate effects the computational speed because we are training with early stopping regularization. The batch size effects also the computational speed, since a high batch size gives fewer iterations per epoch. Overall the data set with 300K performed best, which is expected, since a bigger data set gives more learning opportunities. Considering computational cost and the loss; the 300K data sets, the learning rate $\eta=0.001$ and a batch size of 64 are preferred.\\
 
 Hyperparameter tuning is highly computationally expensive and there are many combinations to test out. With grid search we have seen a possible optimal choice for the learning rate, batch size, and data set size for the European call option and American put minimum on two assets. The American put option uses the same parameters as the European option, therefore,  we choose the same hyperparameters for the univariate contingent claims. Below, we will try a different model than MLPs to see if we really need deep learning for this method. 
 
@@ -320,7 +320,7 @@ Longer Maturity & 0.000193 & 0.013894 & 0.009213 & 0.980835\\
 \end{table}
 
 \subsubsection{American Put on Minimum of two Assets Option}
-The American put on minimum of two assets option has almost double the number of parameters compared to the univariate contingent claims. Hence, the performance might produce a slightly higher MSE. For training we use a batch size of 64 based on earlier discussions. Table \ref{tab:AmerMinPerformanceComparision} and figure \ref{fig:MLPsInSampleAmerMin} show that the MLPs also fits the American put minimum option on two assets well. \\ 
+The American put on minimum of two assets option has almost double the number of parameters compared to the univariate contingent claims. Hence, the performance might produce a slightly higher MSE. Table \ref{tab:AmerMinPerformanceComparision} and figure \ref{fig:MLPsInSampleAmerMin} show that the MLPs also fits the American put minimum option on two assets well. The performance seems similar to the univariate case, hence we see that the MLPs can easily fit bivariate contingent claims as well. \\ 
 
 \begin{table}[th]
 \caption{Performance of the Bivariate American Put Contingent Claim}

@@ -13,11 +13,11 @@ We begin by introducing the financial markets and key concepts for building a ar
 %----------------------------------------------------------------------------------------
 
 \section{Financial Markets}\label{FinMarket}
-In the financial markets, there are many players and different types of investments. The classical investment types are bonds and stocks, where the big players in the markets are commercial banks, investment banks, insurance companies, and pension funds. Derivatives provide additional options for investment.\\
+In the financial markets, there are many agents and different types of investments. The classical investment types are bonds and stocks, where the big players in the markets are commercial banks, investment banks, insurance companies, and pension funds. Derivatives provide additional options for investment.\\
 
 A derivative or a contingent claim is a financial instrument depending on an underlying asset(s), where the dependency is specified in the contract. We will focus on contingent claims with one or two underlying stocks, i.e. univariate and bivariate contingent claims, but the techniques developed can easily be extended to other types of derivatives. \\
 
-To find prices of contingent claims in modeling we restrict our financial market to d risky assets $\bm{S}(t)=(S_1(t), S_2(t),\ldots, S_d(t))$ and a bank account $S_0(t)$. The probability space $(\Omega, \mathcal{F}, P)$ with a filtration $\mathbb{F}=(\mathcal{F}_t)_{t\geq 0}$ is fundamental for modeling stochastic processes describing asset prices and trading strategies, where, in the thesis, the filtered probability space $(\Omega, \mathcal{F}, \mathbb{F}, P)$ will be implicitly assumed. Intuitively the filtration $\mathcal{F}_t$ is the information observable to time t, where the filtration $\mathbb{F}^{W}$ generated only by the Wiener processes $(W_t)_{0\leq t \leq T}$ will be important for having a complete market.\\
+In a general setting, to find prices of contingent claims we restrict our financial market to d risky assets $\bm{S}(t)=(S_1(t), S_2(t),\ldots, S_d(t))$ and a bank account $S_0(t)$. The probability space $(\Omega, \mathcal{F}, P)$ with a filtration $\mathbb{F}=(\mathcal{F}_t)_{t\geq 0}$ is fundamental for modeling stochastic processes describing asset prices and trading strategies, where, in the thesis, the filtered probability space $(\Omega, \mathcal{F}, \mathbb{F}, P)$ will be implicitly assumed. Intuitively the filtration $\mathcal{F}_t$ is the information observable at time t, where the filtration $\mathbb{F}^{W}$ generated only by the Wiener processes $(W_t)_{0\leq t \leq T}$ will be important for having a complete market.\\
 
 The bank account is assumed to be a strictly positive adapted process $S_0=(S_0 (t))_{t \geq 0}$ and $S_0(0)=1$, where the d risky assets are modeled by a $\mathbb{R}^d$ adapted stochastic process $\bm{S}=(\bm{S}(t))_{t\geq 0}$. The risky assets are stocks where the stocks are assumed positive $S_i(t)\geq 0$ P-a.s for all i and $t\geq 0$ for financial reasons. By using the bank account as numéraire, i.e. dividing the traded asset by the bank account ($\frac{\bm{S}(t)}{S_0 (t)}$), amounts to working with \textit{zero interest}. We assume that our financial market is frictionless.
 \theoremstyle{assumption}
@@ -47,7 +47,7 @@ Simple European options can only be exercised at maturity (time T) and they depe
 
 \theoremstyle{definition}
 \begin{definition}{\textbf{European Call and Put Options:}}\label{def:CallOptions}
-A European call option is an option where the owner of the option has the option to buy the underlying asset to price K at maturity. If the owner of the option chooses to buy the underlying asset, then the option is exercised. The contract function for the European call option is:
+A European call option is an option where the owner has the right to buy the underlying asset to price K at maturity. If the owner of the option chooses to buy the underlying asset, then the option is exercised. The contract function for the European call option is:
 \begin{equation*}
 \begin{split}
 \Phi(S(T))=\max\{S(T)-K, 0\}
@@ -62,7 +62,7 @@ The put option is the right to sell the underlying asset to price K at maturity,
 Where S(T) is the price of the underlying asset at maturity and K is the agreed strike price.
 \end{definition}
 
-The American option adds the feature to the European option, that you can exercise at anytime between the inception of the contract until maturity (section \ref{AmericanOptions}). For the American put option, the payoff function at the stopping time is the same as for the European put at maturity (figure \ref{fig:contractfct}). 
+The American option adds the feature to the European option, that you can exercise at anytime between the inception of the contract until maturity (section \ref{AmericanOptions}). The payoff function is the same for the European and American option. The difference between the European and American option lies in the exercise opportunities. Figure \ref{fig:contractfct} illustrates the European call and put options payoff at maturity. 
 
 \begin{figure}[H]
 \centering
@@ -93,7 +93,7 @@ h(t)=($h_0(t),h_1(t), \dotsc, h_{d}$) is self-financing if:
 dV^{h}(t)=\sum_{i=0}^{d} h_{i}(t) dS_{i}(t)
 \end{split}
 \end{equation*}
-Where $S_{i}$ is the $i'th$ asset in our portfolio, d+1 is the total number of assets in our market model and $V^{h}(t)=\sum_{i=0}^{d} h_{i}(t) S_{i}(t)$.\\ \null \hfill (p. 87 \parencite{finKont})
+Where $S_{i}$ is the $i'th$ asset in our portfolio.\\ \null \hfill (p. 87 \parencite{finKont})
 \end{definition}
 When dealing with discrete time finance the S-F portfolio is a budget restriction. This is important intuition for the continuous time version because the continuous time version can be thought of as the limit of the discrete version by letting step sizes in time tending to zero. To avoid pathological effects on the portfolio one often introduces the concept of an admissible portfolio:
 \theoremstyle{definition}
@@ -130,7 +130,7 @@ From the above definition we see that arbitrage is a natural financial requireme
 \subsection{Complete Market and Replication}
 The replication argument in Black-Scholes paper \parencite{B-S-Paper} was groundbreaking in the sense that the attitude to risk was irrelevant for pricing because by continuous trading in the underlying asset(s) the cash flow from the contingent claim could be replicated. The replication argument shows that the price is unique under the assumption that investors prefer more to less.\\
 
-Replication is also important for risk management of the derivative books because it tells you how to risk neutralizes your exposure. A hedge\footnote{Note there is a subtle difference between to hegde or replicate a cash flow. The hedge gives minus the cash flow from replication} is simply a risk neutralization action to minimize the overall risk. (TODO!)A investor with a portfolio of a S-F hedged portfolio of the derivative and the derivative is then a risk-free position and the position should only earn risk-free interest rate. In the definition below, we define a replication for a simple T-claim\footnote{Options only exercisable at maturity}.
+Replication is also important for risk management of the derivative books because it tells you how to risk neutralizes your exposure\footnote{Note there is a subtle difference between to hegde or replicate a cash flow. The hedge gives minus the cash flow from replication}. In the definition below, we define a replication for a simple T-claim\footnote{Options only exercisable at maturity}.
 \theoremstyle{definition}
 \begin{definition}{\textbf{Replication and completeness for T-claim: }}
 A T-claim X can be replicated, if there exists a self-financing portfolio h such that:
@@ -157,7 +157,14 @@ Let us consider a filtered probability space $(\Omega, \mathcal{F}, P, (\mathcal
 d\bm{S}(t)&=D[\bm{S}(t)]\bm{\alpha}(t)dt+D[\bm{S}(t)]\bm{\sigma}(t)d\bar{\bm{W}}(t) \quad & S_i(0) &\in \mathbb{R}^+ \label{GBM-P} \\
 dB(t)&=r(t)B(t)dt \quad & B(0) &= 1
 \end{align}
-We assume $\alpha_i(t)$, $\sigma_{ij}(t)$ and the short rate $r(t)$ are adapted processes, these conditions are necessary for the stochastic integrals to be well-defined. The evolution of the stocks are described by the geometric Brownian motion (GBM) which has a solution to the SDE. The randomness comes from the Wiener process\footnote{A Wiener process is also called a Brownian motion} in the GBM, which has wild trajectories. The function $t\mapsto W(t,\omega)$ from $[0,\infty)$ to $\mathbb{R}$ is continuous but nowhere differentiable. Furthermore, the Wiener process has nonzero quadratic variation and infinite variation, which is the reason for stochastic calculus pioneered by Itô. The Wiener process also has well-behaved property, e.g. it is a Lévy process, i.e. $W(0)=0 \ a.s$, independent and stationary increments $W(t)-W(s)$ which is normally distributed with mean zero and variance t-s. The Wiener process in the GBM formalizes "random shocks" $dW$ to the stock return with volatility $\bm{\sigma}(t)$ and drift $\bm{\alpha}(t)$. Figure \ref{fig:BM} illustrates three approximations to sample paths of the stocks with GBM assumption and initial value $S_{i}(0)=36$.\\
+We assume $\alpha_i(t)$, $\sigma_{ij}(t)$ and the short rate $r(t)$ are adapted and bounded processes, these conditions are necessary for the stochastic integrals to be well-defined. The evolution of the stocks are described by the geometric Brownian motion (GBM) which has a solution to the SDE. The randomness comes from the Wiener process\footnote{A Wiener process is also called a Brownian motion} in the GBM, which has wild trajectories. The function $t\mapsto W(t,\omega)$ from $[0,\infty)$ to $\mathbb{R}$ is continuous but nowhere differentiable. Furthermore, the Wiener process has nonzero quadratic variation and infinite variation, which is the reason for stochastic calculus pioneered by Itô. The Wiener process also has well-behaved property, e.g. it is a Lévy process:
+\begin{enumerate}
+\item[•] $W(0)=0 \quad a.s$
+\item[•] Independent and stationary increments $W(t)-W(s)$ which is normally distributed with mean zero and variance t-s
+\item[•] W has continuous trajectories\\
+\null \hfill (p. 40 \parencite{finKont})
+\end{enumerate}
+The Wiener process in the GBM formalizes \textsl{"random shocks"} $dW$ to the stock return with volatility $\bm{\sigma}(t)$ and drift $\bm{\alpha}(t)$. Figure \ref{fig:BM} illustrates three approximations to sample paths of the stocks with GBM assumption and initial value $S_{i}(0)=36$.\\
 
 \begin{figure}[th]
 \centering
@@ -180,9 +187,9 @@ are (local)martingales under Q.
 Assuming $S_0(t)$ is the bank account $B(t)$, then the martingale property for the discounted price processes is a mathematical formulation that the expected discounted value coincides with the known spot value today\footnote{Assuming $B(0)=1$}. In gambling, a martingale resembles a \textsl{"fair"} game. From the FFT1 using the bank account $B(t)$ as numéraire, it follows that:
 \theoremstyle{proposition}
 \begin{proposition}{}
-We assume that $B(t)=S_0(t)$ is our numéraire and all the processes' randomness comes from the Weiner process, then an equivalent measure $Q \sim P$ is martingale measure if and only if all assets $(B(t), S_1(t), \ldots, S_d(t))$ have the short rate as their local rates of return, i.e.
+We assume that $B(t)=S_0(t)$ is our numéraire and all the processes' randomness comes from the Weiner process, then an equivalent measure $Q \sim P$ is a martingale measure if and only if all assets $(B(t), S_1(t), \ldots, S_d(t))$ have the short rate as their local rates of return, i.e.
 \begin{align*}
-dS_i(t)=S_i(t)r(t)dt+S_i(t)\bm{\sigma}_i(t)d\bm{W}^Q(t)
+dS_i(t)=S_i(t)r(t)dt+S_i(t)\bm{\sigma}_i(t)d\bm{W}(t)
 \end{align*}
 \null \hfill (p. 154 \parencite{finKont})
 \end{proposition}
