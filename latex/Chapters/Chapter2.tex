@@ -66,7 +66,7 @@ The American option adds the feature to the European option, that you can exerci
 
 \begin{figure}[H]
 \centering
-\includegraphics{Figures/contractfct.png}\\
+\includegraphics{Figures/contractfct.pdf}\\
 \decoRule
 \caption[Contract Functions]{European options payoff at maturity with strike K=100}
 \label{fig:contractfct}
@@ -121,7 +121,7 @@ P(V^{h}(T)>0)>1
 The financial market $\bm{S}$ is called arbitrage-free if there exists no arbitrage opportunities.\\
 \null \hfill (p. 96 \parencite{finKont})
 \end{definition}
-From the above definition we see that arbitrage is a natural financial requirement for a financial market model because the investor in an arbitrage portfolio can start with 0 dollars, and without injecting any money, the investor is certain of not losing any money. In addition, he has a positive probability of ending up with more than 0 at maturity. This cannot be a well-functioning market for both buyers and sellers. To price the derivatives fair in the model, the derivative should not introduce arbitrage to the market. An arbitrage-free market is not the only desirable property for the market, we would also like to have a unique price for the derivatives. We can obtain a unique price by replication of the cash flow from the derivative with the other assets in the market model. If every derivative can be replicated the market is complete. 
+From the above definition we see that arbitrage is a natural financial requirement for a financial market model because the investor in an arbitrage portfolio can start with 0 dollars, and without injecting any money, the investor is certain of not losing any money. In addition, the investor has a positive probability of ending up with more than 0 at maturity. This cannot be a well-functioning market for both buyers and sellers. To price the derivatives fair in the model, the derivative should not introduce arbitrage to the market. An arbitrage-free market is not the only desirable property for the market, we would also like to have a unique price for the derivatives. We can obtain a unique price by replication of the cash flow from the derivative with the other assets in the market model. If every derivative can be replicated the market is complete. 
 
 %-----------------------------------
 %	SUBSECTION 4
@@ -152,7 +152,7 @@ By introducing the basic concepts for how to price fairly and protect ourselves 
 There are two main methods for building a arbitrage-free and complete market model. The classical approach is the delta hedging approach \parencite{B-S-Paper} and \parencite{CRR}). The more advanced mathematical approach is the martingale approach  \parencite{finKont}. In this section, we focus on the martingale approach and show that the delta hedging approach coincides with the more general martingale theory. For the martingale approach, the First and Second Fundamental Theorems of Mathematical Finance will be the key to obtain a fair market. Besides the financial market assumptions in section \ref{FinMarket} will we assume specific model assumptions.
 
 \subsection{Model Assumptions}
-Let us consider a filtered probability space $(\Omega, \mathcal{F}, P, (\mathcal{F}_t^{\bar{W}})_{t \in [0,T]})$. Note the assumption that the filtration is generated from the Wiener process and we consider a finite horizon. We assume $\bar{W}_i$ is k-dimensional and $\bar{W}$ is the only random source. A priori we assume a market $(B(t),S_1(t), S_2(t),\ldots, S_d(t))$, where ${S_i(t)}_{i=1,2,\ldots,d}$ are d risky assets and B(t) is the risk-free asset\footnote{B(t) is often called the bank account}. By assumptions their dynamics are given by:\\
+Let us consider a filtered probability space $(\Omega, \mathcal{F}, P, (\mathcal{F}_t^{\bar{W}})_{t \in [0,T]})$. Note the assumption that the filtration is generated from the Wiener process and we consider a finite horizon. We assume $\bar{W}_i$ is k-dimensional and $\bar{W}$ is the only random source. A priori we assume a market $(B(t),S_1(t), S_2(t),\ldots, S_d(t))$, where ${S_i(t)}_{i=1,2,\ldots,d}$ are d risky assets and B(t) is the risk-free asset\footnote{B(t) is often called the bank account}. We assume the bank account and risky dynamics are given by:\\
 \begin{align}
 d\bm{S}(t)&=D[\bm{S}(t)]\bm{\alpha}(t)dt+D[\bm{S}(t)]\bm{\sigma}(t)d\bar{\bm{W}}(t) \quad & S_i(0) &\in \mathbb{R}^+ \label{GBM-P} \\
 dB(t)&=r(t)B(t)dt \quad & B(0) &= 1
@@ -168,13 +168,13 @@ The Wiener process in the GBM formalizes \textsl{"random shocks"} $dW$ to the st
 
 \begin{figure}[th]
 \centering
-\includegraphics{Figures/samplePath.png}
+\includegraphics{Figures/samplePath.pdf}
 \decoRule
 \caption[Sample Path for Stocks]{Three sample paths for a stock under GBM assumption, where the spot is \$36, $\sigma$=0.2, and $\alpha$=0.06}
 \label{fig:BM}
 \end{figure}
 
-The tool for handling Wiener processes is stochastic calculus in continuous time because the standard calculus will not work for the wildly behaved Wiener process. In the representation of the GBM, we used vector and matrix notation. The stock vector is d dimensional and the Wiener process vector is k dimensional. The volatility matrix is given by $\bm{\sigma}(t)=\{\sigma_{ij}(t)\}_{i=1,\ldots,d,j=1,\ldots,k}$ and the drift is $\bm{\alpha}(t)=(\alpha_1(t), \alpha_2(t), \ldots, \alpha_d(t))^T$. D(x) denotes a diagonal matrix with vector x as its diagonal and the Wiener processes instantaneous correlation matrix $\Sigma$ is given by $Cov(dW_i(t),dW_j(t))=E(dW_i(t)dW_j(t))=\rho_{ij}dt$.
+The tool for handling Wiener processes is stochastic calculus in continuous time because the standard calculus will not work for the wildly behaved Wiener process. In the representation of the GBM, we used vector and matrix notation. The stock vector is d dimensional and the Wiener process vector is k dimensional. The volatility matrix is given by $\bm{\sigma}(t)=\{\sigma_{ij}(t)\}_{i=1,\ldots,d,j=1,\ldots,k}$ and the drift is $\bm{\alpha}(t)=(\alpha_1(t), \alpha_2(t), \ldots, \alpha_d(t))^T$. D(x) denotes a diagonal matrix with vector x as its diagonal and the Wiener processes instantaneous correlation matrix $\bm{\rho}$ is given by $Cov(dW_i(t),dW_j(t))=E(dW_i(t)dW_j(t))=\rho_{ij}dt$.
 
 \subsection{Arbitrage-free Model}
 The first problem we are faced with in arbitrage theory is to create a model with no arbitrage opportunities. The First Fundamental Theorem tells us how to not introduce arbitrage to our market model.
@@ -318,7 +318,7 @@ The closed form solution for the European call can be derived from solving the B
 \begin{proposition}{}\label{BS-price-EuroCall}
 \textbf{Black-Scholes formula for a call option: } The price of a European call option with strike K and maturity T is given by the formula  $\Pi(t)=F(t,S(t)$, where
 \begin{align*}
-F(t,s)=c(t,s)=s \cdot N(d_1(t,s)) - e^{-r(T-t)}\cdot K \cdot N(d_2(t,s))
+F(t,s)=c(t,s)=s \cdot N(d_1(t,s)) - \exp(-r(T-t)) \cdot K \cdot N(d_2(t,s))
 \end{align*}
 N is the cumulative distribution function of a standard normal distribution $\mathcal{N}(0,1)$ and
 \begin{align*}
@@ -340,7 +340,7 @@ p(t,s)=K\cdot \exp(-r(T-t))+c(t,s)-s
 \end{proposition}
 
 The aim of this thesis is to price American put options, but the European option provides a reference price in a closed form. The put-call-parity holds only for European options, where for the American option there is a bound on price difference:
-$$S_0 - K \leq C-P \leq S_0 - K \cdot e^{-rT}$$
+$$S_0 - K \leq C-P \leq S_0 - K \cdot \exp(-rT)$$
 
 The above formula for the European call option is the same for an American call option, but is not true for an American put option or call options with underlying stock paying dividends. The result for the American call option was shown by Merton \parencite{Merton73}, that the intrinsic value is never greater than the worth of the option given by the risk-neutral valuation formula. In section \ref{AmericanOptions} we will show a martingale approach to prove the value of a European and American call coincides when the underlying is a non-dividend paying stock.
 
@@ -355,7 +355,7 @@ We still assume a diffusion setting that the underlying stochastic process for t
 \begin{equation}\label{existAmer}
 E_{x}[\sup_{0\leq t \leq T}|G(S(t))|] < \infty
 \end{equation}
-where $S$ is the underlying stochastic process. If the integrability condition is satisfied on a finite interval $[0,T]$ (equation \eqref{existAmer}) then the optimal stopping problem for gain function G and $x \in \mathbb{R}$ is well defined. We assumed that the underlying stochastic S(t) process is time-homogeneous, but the assumption can be relaxed. If S(t) is a time-inhomegenous we can extend the underlying process S(t) by time, albeit increasing the underlying process dimension\footnote{This trick is seen in life insurance for models with state duration, where you include the duration process}. We define the optimal value process in terms of the gain process.
+where $S$ is the underlying stochastic process. If the integrability condition is satisfied on a finite interval $[0,T]$ (equation \eqref{existAmer}) then the optimal stopping problem for gain function G and $x \in \mathbb{R}$ is well defined. We assumed that the underlying stochastic S(t) process is time-homogeneous, but the assumption can be relaxed. If S(t) is a time-inhomogenous we can extend the underlying process S(t) by time, albeit increasing the underlying process dimension\footnote{This trick is seen in life insurance for models with state duration, where you include the duration process}. We define the optimal value process in terms of the gain process.
 
 \theoremstyle{definition}
 \begin{definition}{}\label{optValFunc}
@@ -388,7 +388,7 @@ P(t,x)=\sup_{\tau \in \mathcal{T}_t^T} E^Q[\exp(-r(\tau-t)) (K-S(\tau))^+|S(t)=x
 
 
 \subsection{American Call without Dividends}\label{AmericanCall}
-The American call option is a special case, because the optimal stopping time is always at the maturity of the options. With martingale machinery, this means the gain function is a submartingale which implies that $\hat{\tau}=T$ (proposition \ref{TrivialMG}). Remember the optimal stopping problem for an American call option:
+The American call option is a special case, because the optimal stopping time is always at the maturity of the option. With martingale machinery, this means the gain function is a submartingale which implies that $\hat{\tau}=T$ (proposition \ref{TrivialMG}). Remember the optimal stopping problem for an American call option:
 $$C(t,x)=\sup_{\tau \in \mathcal{T}_0^{T-t}} E_{t,x}^Q[\exp(-r\tau) (S(t+\tau)-K)^+]$$
 Looking at the gain function:
 \begin{equation*}
@@ -404,7 +404,7 @@ P(x,t)=\sup_{\tau \in \mathcal{T}_t^T} E^Q[\exp(-r(\tau-t)) (K-S(\tau))^+|S(t)=x
 For the American put, we need computational methods because the American and European put do not coincide as for the call option.
 
 \begin{proposition}{}
-Consider the European put and American put options with same maturity T and strike K. If the risk-free rate $r\in \mathbb{R}_*^+$, then for any $t<T$
+Consider the European and American put option with same maturity T and strike K. If the risk-free rate $r\in \mathbb{R}_*^+$, then for any $t<T$
 \begin{equation}
 \begin{split}
 p(x,t)<P(x,t)
@@ -439,9 +439,9 @@ Hence the first optimal stopping time after time t for the American put is
 \end{equation*}
 
 \subsection{Discrete Time Valuation}\label{DiscreteValueFramework}
-To solve the optimal stopping problem numerical methods are required for the American put option. Hence, the first step is to discretize exercise dates. In chapter \ref{Chapter3} we show two approaches to price an American put option, where both are based on calculating the expected continuation value. \\
+To solve the optimal stopping problem numerical methods are required for the American put option. The computer is discrete by nature, hence we choose to either approximate the Black-Scholes model with a discrete time model or only consider discrete time exercise opportunities. The first approach is the lattice approach, where the binomial model describes the evolution of the stock. The second approach is to approximate the American put option by the Bermudan option. Either way, we will consider a discrete time probability space and the discrete time optimal stoppping problem.\\
 
-Suppose the probability space $(\Omega, \mathcal{F}, P)$ is equipped with the natural discrete filtration $(\mathcal{F}_{t_n})_{n=0,1,\ldots,N}$ modeling a financial market. By discretization of time we are actually looking at a Bermudan option, but for sufficient small time steps the Bermudan option approximates the American option well. The tenor structure\footnote{The tenor of an option is the remaining life of the option from today to maturity} is that the time to maturity is divided into a grid of N+1 equidistant points in time $0=t_0\leq t_1\leq t_2, \cdots \leq t_N=T$, where $\Delta t_n = t_n-t_{n-1}=T/N$ for each $n=1, \ldots, N$. A Bermudan option initialized at time $t_0$ has $\mathcal{T}(t_0,t_1,\ldots,t_N)$ exercise dates or decision points, where the option holder chooses to exercise or keep the option alive. \\
+Suppose the probability space $(\Omega, \mathcal{F}, P)$ is equipped with the natural discrete filtration $(\mathcal{F}_{t_n})_{n=0,1,\ldots,N}$ modeling a financial market. The tenor structure\footnote{The tenor of an option is the remaining life of the option from today to maturity} is that the time to maturity is divided into a grid of N+1 equidistant points in time $0=t_0\leq t_1\leq t_2, \cdots \leq t_N=T$, where $\Delta t_n = t_n-t_{n-1}=T/N$ for each $n=1, \ldots, N$. At each grid point or exercise date the option holder chooses to exercise or keep the option alive. \\
 
 The underlying process is assumed to be Markovian with state variables $(S(t_n))_{n=0,1,\ldots,N}$ recording all necessary information about relevant financial variables adapted to the natural filtration in order to solve the optimal stopping problem with the dynamic programming principle. Furthermore, the gain process is adapted to the filtration and square integrable $E[\max_{0\leq n \leq N} |G(S(t_n))|^2]<\infty$, which is a necessary condition for using regression (section \ref{LSM}).\\
 
@@ -462,7 +462,7 @@ The Snell envelope $U(t_n)$ is the smallest supermartingale of the gain process 
 \end{equation}
 Where $U(t_n)$ is the discounted option value at time $t_n$ not previously exercised and $G(S(t_n))$ is the discounted exercise value.\\
 
-Equation \eqref{valueIteration} is known as value iteration and indicates that the holder should exercise the first time $G(S(t_n))> E^Q[U(t_{n+1})|S(t_n)]$ to maximize the profit from the option. Therefore, the strategy gives the first optimal stopping time. Note that an optimal stopping time will always exist in discrete time when $T<\infty$, but there is though no guarantee that the stopping time is unique. The value iteration provides the optimal value process of the gain process $G(S(t))$ (theorem \ref{SnellEnvelopeTheorem}). So 
+Equation \eqref{valueIteration} is known as value iteration and indicates that the holder should exercise the first time $G(S(t_n))> E^Q[U(t_{n+1})|S(t_n)]$ to maximize the profit from the option. Therefore, the strategy gives the first optimal stopping time. Note that an optimal stopping time will always exist in discrete time when $T<\infty$, but there is no guarantee that the stopping time is unique. The value iteration provides the optimal value process of the gain process $G(S(t))$ (theorem \ref{SnellEnvelopeTheorem}). So 
 $$U(t_n)=E^Q[G(S(\tau_{t_n})|S(t_n)]$$ with 
 $$\tau_{t_n}=\min \{ k \geq n : U(t_k) = G(S(t_k)) \}$$ and 
 $$E^Q[U(0)]= \sup_{\tau \in \mathcal{T}(0,\ldots, T)} E^Q[G(S(\tau))]=E^Q[G(S(\hat{\tau}))]$$ 
@@ -476,17 +476,17 @@ The optimal stopping problem can also be solved in terms of stopping times inste
 \end{split}
 \end{equation}
 
-The first approach in chapter \ref{Chapter3}, the binomial model, uses the idea of dynamic programming. The underlying stochastic process is approximated by a discrete binomial recombining tree, which is ready to work backward in time to calculate both European and American option prices. The American put option can be solved recursively in the binomial model with value iteration: 
+The first approach in chapter \ref{Chapter3}, the binomial model, uses the idea of value iteration. The underlying stochastic process is a discrete binomial recombining tree, which is ready to work backward in time to calculate both European and American option prices. The American put option can be solved recursively in the binomial model.
 \begin{equation}\label{BellmanEq}
 \begin{split}
 \begin{cases}
-          P(t_i) = max\{ (K-S(t_i))^+, \exp(-r\cdot \Delta t) E^Q[P(t_{i+1})|S(t_i)\} \quad for \ i={0,\ldots,N-1} \\
+          P(t_i) = max\{ (K-S(t_i))^+, \exp(-r\cdot \Delta t) E^Q[P(t_{i+1})|S(t_i)]\} \quad for \ i={0,\ldots,N-1} \\
           P(t_N) = (K-S(t_N))^+ 
 \end{cases}
 \end{split}
 \end{equation}
 
-The second approach, Least squares Monte Carlo method (LSM), is to combine dynamic programming and Monte Carlo simulation, but this method uses policy iteration instead of value iteration. The method uses regression to calculate the expected continuation value of simulated paths instead of discretization of the underlying stochastic process. LSM overcomes the challenge with a pure simulation method by using regression, because it provides an effective way to evaluate a series of conditional expectations. Both methods will be explained in details in chapter \ref{Chapter3}.
+The second approach, Least squares Monte Carlo method (LSM), is to combine policy iteration and Monte Carlo simulation. We are actually looking at a Bermudan option instead of the American option, because we have discrete exercise dates. A Bermudan option initialized at time $t_0$ has $\mathcal{T}(t_0,t_1,\ldots,t_N)$ exercise dates\footnote{Will also be called decision points} and for sufficient many exercise dates the Bermudan option approximates the American option well. The method uses regression to calculate the expected continuation value of the simulated path. LSM overcomes the challenge with a pure simulation method by using regression, because it provides an effective way to evaluate a series of conditional expectations. Both methods will be explained in details in chapter \ref{Chapter3}.
 
 
 

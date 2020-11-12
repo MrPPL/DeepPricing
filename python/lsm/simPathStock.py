@@ -62,7 +62,7 @@ import simPathStock
 spot=36
 r=0.06
 vol=0.2
-timePointsYear=50
+timePointsYear=1000
 T=1
 n= 10**4
 strike = 40  
@@ -94,18 +94,12 @@ for i in range(steps):
 ##############
 import matplotlib.pyplot as plt
 from matplotlib import rcParams
+rcParams['figure.figsize']=5,4
+plt.style.use('ggplot')
 plt.plot(tim,S[0],tim,S[1],tim,S[2])
 plt.xlabel("Time")
 plt.ylabel("Price")
-plt.style.use('ggplot')
-rcParams['figure.figsize']=6,4
-plt.title("Sample paths for stocks using GBM assumption")
-#plt.legend(loc=2) #location of legend
-plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
-#plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/samplePath.png")
-#plt.show()
+plt.title("Sample paths for stock")
+#plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/samplePath.pdf")
+plt.show()
 
-############
-## data
-############
-stockMatrix = S

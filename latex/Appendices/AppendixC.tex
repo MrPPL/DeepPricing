@@ -1,6 +1,6 @@
 % Appendix Template
 
-\chapter{Additional Material for CRR, LSM, and MLPs I} % Main appendix title
+\chapter{Additional Material for CRR, LSM, and MLP I} % Main appendix title
 
 \label{AppendixC} % Change X to a consecutive letter; for referencing this appendix elsewhere, use \ref{AppendixX}
 
@@ -64,7 +64,7 @@ u&=1+\dfrac{1}{2} \sigma^2 \Delta t \pm  \dfrac{\sqrt{(2+\sigma^2 \Delta t)^2 - 
 &\approx \exp(\pm \sigma \sqrt{\Delta t})
 \end{align*}
 Both approximations exploit that the time-step is small.
-\section{Convergence for LSM and MLPs I}\label{Convergence}
+\section{Convergence for LSM and MLP I}\label{Convergence}
 \subsection{LSM}
 In the rigorous approach in \parencite{analysisLSM} they show convergence results for the optimal value process or the Snell envelope $U$. We will present that $U(0)^{m,K}$ converges almost surely to $U(0)^{m}$ for K goes to infinity, i.e. the approximate value process by simulation and regression on a finite set of functions converge to the approximated value process with truncated orthogonal basis by letting the sample size go to infinity. Furthermore, it can be shown that $U(0)^{m}$ converges to $U(0)$ for m goes to infinity. The second result is that the regressed value function converges to the expected continuation value by letting the number of basis functions go to infinity. The latter result is shown using the expected continuation values.
 \begin{theorem}\label{LSMConvergence1}
@@ -86,8 +86,8 @@ The proof is out of scope for this thesis, see the article \parencite{analysisLS
 
 The two convergence results show the convergence for the LSM algorithm, hence, the LSM will approximate the optimal value process well for sufficiently large sample sets and enough basis functions.
 
-\subsection{MLPs I}
-The MLPs regression method enjoys the same convergence results presented for the LSM algorithm, i.e.
+\subsection{MLP I}
+The MLP regression method enjoys the same convergence results presented for the LSM algorithm, i.e.
 \begin{theorem}\label{NNConvergence1}
 Assume that 
 $$E[\max_{0\leq t_n \leq T} |G(S(t_n))|^2]< \infty$$. 
