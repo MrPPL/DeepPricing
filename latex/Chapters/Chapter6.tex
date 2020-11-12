@@ -87,7 +87,7 @@ The American put option has no analytical solution in the Black-Scholes model, t
 
 The LSM and MLP I pricing method are almost identical, except the MLP tries to utilize deep learning to regress the expected continuation value. Both pricing methods converge to the optimal value process\footnote{See appendix \ref{Convergence}}, hence, we numerically expect that by increasing the computational burden we approach the true price. To compare the two methods we simulate $10^5$ paths for the stock under the assumption that the future price of the stock is lognormal. The LSM and MLP I pricing methods are used on the same simulated paths, but produce a different result each time due to the Monte Carlo simulations. The CRR and MLP II\footnote{Note that we talk about the model after training} are not random in the sense that the output is deterministic, because both approaches do not involve Monte Carlo simulation. For the LSM and MLP I we assume 50 equidistant exercise dates for each year, where for the CRR we use 1000 equidistant time-step for the stock.  \\
 
-The MLP I require us to set some hyperparameters, where we choose the learning rate $\eta=0.001$, batch size of 512 and the Adam optimization algorithm. The architecture of the MLP is three layers, where the hidden layers are with 40 neurons and the output layer has one neuron. The activation functions are set to Leaky ReLU with 0.3 negative slope and the trained model is reused at each decision point by inspiration from \parencite{Lelong19}. The choices are partly inspired by the work by \parencite{Lelong19} and empirical testing. The regression in the LSM is done with a polynomial regression of degree 10. Remember the MLP II is trained with the same hyperparameters as for the European call option and the CRR with 100 time-steps is used to generate labels.\\
+The MLP I requires us to set some hyperparameters, where we choose the learning rate $\eta=0.001$, batch size of 512 and the Adam optimization algorithm. The architecture of the MLP is three layers, where the hidden layers are with 40 neurons and the output layer has one neuron. The activation functions are set to Leaky ReLU with 0.3 negative slope and the trained model is reused at each decision point by inspiration from \parencite{Lelong19}. The choices are partly inspired by the work by \parencite{Lelong19} and empirical testing. The regression in the LSM is done with a polynomial regression of degree 10. Remember the MLP II is trained with the same hyperparameters as for the European call option and the CRR with 100 time-steps is used to generate labels.\\
 
 \begin{table}[th]
 \caption{Valuation of American Put Option}{We choose the fixed parameters K=40 and r=0.06}
@@ -126,13 +126,13 @@ $$\bar{x}= \frac{1}{n}\sum_{i=1}^{n} x_i$$
 and the standard error of the mean
 $$\sigma_{\bar{x}}= \frac{\sigma}{\sqrt{n}} \quad where \ \sigma=\sqrt{\frac{1}{n-1}\sum_{i=1}^{n} (x_i-\bar{x})}$$
  
-The histogram (figure \ref{fig:histLSMMLPI}) shows the variation in the estimates where the CRR price is the dashed black line. We see that the the MLP I has higher standard error than the LSM and the center of the distribution\footnote{Sample mean is 6.9048} is lower than the CRR price\footnote{CRR price is 7.1094}. The LSM, on the other hand, has less variability and the center\footnote{Sample mean is 7.1074} is around the CRR price. Hence in term of numerical stability, computational speed and accuracy the LSM is superior for the American put. The reason for the numerical instability for the MLP I is that the optimization algorithm is random on each run compared to the linear model\footnote{E.g. polynomial regression where the solution is exact and unique}.\\
+The histogram (figure \ref{fig:histLSMMLPI}) shows the variation in the estimates where the CRR price is the dashed black line. We see that the MLP I has higher standard error than the LSM and the center of the distribution\footnote{Sample mean is 6.9048} is lower than the CRR price\footnote{CRR price is 7.1094}. The LSM, on the other hand, has less variability and the center\footnote{Sample mean is 7.1074} is around the CRR price. Hence in term of numerical stability, computational speed and accuracy the LSM is superior for the American put. The reason for the numerical instability for the MLP I is that the optimization algorithm is random on each run compared to the linear model\footnote{E.g. polynomial regression where the solution is exact and unique}.\\
 
 \begin{figure}[H]
 \centering
-\includegraphics{Figures/histLSMMLPsI.png}
+\includegraphics{Figures/histLSMMLPsI.pdf}
 \decoRule
-\caption[Histogram Price Predictions]{Predicted prices for American put option with LSM and MLP. Parameters are T=1, $\sigma=0.4$, $r=0.06$, $S(0)=36$, and $K=40$. Note CRR price is the dashed black line.}
+\caption[Histogram Price Predictions]{100 predicted prices for American put option with LSM and MLP I. Parameters are T=1, $\sigma=0.4$, $r=0.06$, $S(0)=36$, and $K=40$. Note CRR price is the dashed black line.}
 \label{fig:histLSMMLPI}
 \end{figure}
 
@@ -170,7 +170,7 @@ For visualization we plot the BEG50, BEG500, and MLP II for varying spots with f
 
 \begin{figure}[H]
 \centering
-\includegraphics{Figures/compareBEGMLPsII.png}
+\includegraphics{Figures/compareBEGMLPsII.pdf}
 \decoRule
 \caption[Compare BEG and MLP II]{Scatter plot of predicted prices for American put minimum on two assets option with BEG and MLP II. Parameters are T=1, $\sigma_1=0.2$, $\sigma_2=0.3$, $r=0.06$, $K=40$ and $\rho=0.5$. Note BEG is showed for 50 time-steps and 500 time-steps.}
 \label{fig:BEGMLPII}
@@ -188,7 +188,7 @@ Remember, the binomial lattice model also has its limitations in terms of comput
 
 The MLP II is somewhat better, but it still relies on existing option pricing methods or real market data. Therefore, it does not solve the curse of dimensionality for basket options with many underlying assets. The MLP II however, has the advantage of the increased speed after training, which could be beneficial in some circumstances. The MLP could also be used on real data and it is versatile enough to capture the volatility shew\footnote{Explanation below in section "Discussion of the Black-Scholes model"} for equity options. One drawback is that there should be enough data samples, which is relevant if the method is used on real market data. Another drawback is that the trained model would need to be calibrated regularly, because financial scenarios can change dramatically, e.g. the financial crisis in 2007-2009.\\
 
-In the training phase of the neural networks the derivatives of the model parameters are used for minimizing the loss function. The derivatives are calculated efficiently with backpropagation, which is important for risk management. Potentially, the neural networks can speed up the risk management of the derivative books and give real time risks. Deep learning for risk management is investigated in \parencite{AntoineSavine}. It should be mentioned, that the above-mentioned methods cannot only be used for equity options, the LSM is e.g. widely used for fixed income\footnote{E.g. Libor Market Model}.\\
+In the training phase of the neural networks the derivatives of the model parameters are used for minimizing the loss function. The derivatives are calculated efficiently with back propagation, which is important for risk management. Potentially, the neural networks can speed up the risk management of the derivative books and give real time risks. Deep learning for risk management is investigated in \parencite{AntoineSavine}. It should be mentioned, that the above-mentioned methods cannot only be used for equity options, the LSM is e.g. widely used for fixed income\footnote{E.g. Libor Market Model}.\\
 
 The results from the MLP I were a bit discouraging, because it was inferior to the LSM. The computational cost is higher for the MLP I for low dimensional problems, hence, an accuracy on the same level as for the LSM would make it attractive to investigate for higher dimensional problems. One explanation could be wrong hyperparameters for the model, which would require a time consuming hyperparameter search. The grid search might have its shortcomings in this aspect, because it requires some knowledge about possible well-suited hyperparameters for the optimal stopping problem. A random search or Bayesian search could be beneficial in this aspect, but it would also require many computational resources.\\
 

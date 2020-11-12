@@ -129,9 +129,9 @@ from matplotlib import rcParams
 rcParams['figure.figsize']=5,4
 plt.style.use('ggplot')
 plt.scatter(predictions, actuals, alpha=0.5, s=1)
-plt.xlabel("Predictions Price")
+plt.xlabel("Predicted Price")
 plt.ylabel("Actual Price")
-plt.title("MLPs Predictions Vs. Actual Targets")
+plt.title("MLP Predictions Vs. Actual Targets")
 #plt.legend(loc=2) #location of legend
 #plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
 abline(1,0)

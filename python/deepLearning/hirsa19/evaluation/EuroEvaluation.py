@@ -53,7 +53,7 @@ class NeuralNet(nn.Module):
 ###################
 #datasets = ["./deepLearning/hirsa19/data/60KuniCEuroData.csv","./deepLearning/hirsa19/data/outMoneyEuroCData.csv","./deepLearning/hirsa19/data/longMaturityEuroCData.csv"]
 datasets1 = ["./deepLearning/hirsa19/data/outMoneyAmerPData.csv","./deepLearning/hirsa19/data/longTAmerPData.csv"]
-test_dataset = EuroParDataset(datasets1[1])
+test_dataset = EuroParDataset(datasets1[0])
 # get first sample and unpack
 first_data = test_dataset[0]
 features, labels = first_data
@@ -131,12 +131,12 @@ plt.style.use('ggplot')
 plt.scatter(predictions, actuals, alpha=0.5, s=1)
 plt.xlabel("Predictions Price/Strike Price")
 plt.ylabel("Actual Price/Strike Price")
-plt.title("MLPs Predictions Vs. Actual Targets")
+plt.title("MLP Predictions Vs. Actual Targets")
 #plt.legend(loc=2) #location of legend
 #plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
 abline(1,0)
 rcParams['agg.path.chunksize']=10**4
-plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/longTAmerP.png")
+plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/inMoneyAmerPut.png")
 plt.show()
 
 

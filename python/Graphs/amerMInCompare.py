@@ -15,13 +15,13 @@ sum(abs(df.BEG500-df.MLPsII))/21
 rcParams['figure.figsize']=5,4
 plt.style.use('ggplot')
 plt.xlabel("Spot for both stocks")
-plt.ylabel("Predicted Price")
-plt.title("Price Predictions from BEG and MLPs II")
+plt.ylabel("Predicted price")
+plt.title("Price predictions from BEG and MLP II")
 plt.scatter(df.Spot, df.BEG500, label='BEG500', marker='^', color='blue')
 plt.scatter(df.Spot, df.BEG50, label='BEG50', marker='*', color='red')
 plt.scatter(df.Spot, df.MLPsII, label='MLPsII', marker='+', color='green')
 plt.legend()
-#plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/compareBEGMLPsII.png")
+plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/compareBEGMLPsII.pdf")
 plt.show() 
 
 

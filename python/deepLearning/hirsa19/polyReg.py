@@ -4,7 +4,7 @@ import torch
 # create dataset
 datasets = ["./deepLearning/hirsa19/data/60KuniCEuroData.csv","./deepLearning/hirsa19/data/outMoneyEuroCData.csv","./deepLearning/hirsa19/data/longMaturityEuroCData.csv"]
 dataTrain = np.loadtxt("./deepLearning/hirsa19/data/mediumCEuroDataTrain.csv", delimiter=',', dtype=np.float32, skiprows=1)
-dataTest = np.loadtxt(datasets[1], delimiter=',', dtype=np.float32, skiprows=1)
+dataTest = np.loadtxt(datasets[2], delimiter=',', dtype=np.float32, skiprows=1)
 # here the first column is the class label, the rest are the features
 X_train = torch.from_numpy(dataTrain[:, 2:]) # size [n_samples, n_features]
 Y_train = torch.from_numpy(dataTrain[:, [1]]) # size [n_samples, 1]
@@ -85,6 +85,6 @@ for i in [0,1]:
         ax[i,j].set_title("degree: " + str(1 + polIdx))
         ax[i,j].scatter(poly[polIdx], Y_test, alpha=0.5, s=1)
 #savefigName=["polynomialInSampleEuroC", "polynomialOutMoneyEuroC", "polynomialLongTEuroC"]
-#plt.savefig("./../latex/Figures/polynomialOutMoneyEuroC.png")
+#plt.savefig("./../latex/Figures/polynomialLongTEuroC.pdf")
 plt.show()
 

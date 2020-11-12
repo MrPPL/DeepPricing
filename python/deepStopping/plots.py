@@ -52,16 +52,15 @@ p
 
 plt.style.use('ggplot')
 plt.figure(figsize=figsize)
-plt.grid(True, color='k', linestyle=':') # make black grid and linestyle
 plt.plot(X[-2, :], cashflow, 'g^', zorder=3);
 plt.plot(*p.linspace(), color= "blue", zorder=1);
 plt.plot(X[-2, :], p(X[-2, :]), 'r+', zorder=2);
 plt.legend(['Cashflow',
             'Fitted Polynomial',
             'Approximated Continuation Value'])
-plt.xlabel('Stock Price At Time t-1')
-plt.ylabel('Time t Exercise/Continuation Value')
-plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/LSMFit1.png")
+plt.xlabel('Stock price at time t-1')
+plt.ylabel('Time t exercise/continuation value')
+plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/LSMFit1.pdf")
 plt.show()
 
 #####################
@@ -149,15 +148,15 @@ plt.figure(figsize=figsize)
 plt.style.use('ggplot')
 for i in range(n_paths):
     handle_path, = plt.plot(t[0:first_exercise_idx[i]+1], X[0:first_exercise_idx[i]+1, i], '-', color='olivedrab');
-    handle_stopped_path, = plt.plot(t[first_exercise_idx[i]:], X[first_exercise_idx[i]:, i], '--', color=grey);
+    handle_stopped_path, = plt.plot(t[first_exercise_idx[i]:], X[first_exercise_idx[i]:, i], '--', color='white');
     if first_exercise_idx[i] < n_timesteps:
         handle_first_ex, = plt.plot(t[first_exercise_idx[i]], X[first_exercise_idx[i], i], 'c^');
 
 plt.legend([handle_path, handle_stopped_path, handle_first_ex],
            ['Path before exercise', 'Path after exercise', 'First favourable exercise'])
 plt.xlabel('Time t')
-plt.ylabel('Stock Value')
-plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepHedging/latex/Figures/LSMFit2.png")
+plt.ylabel('Stock value')
+plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/LSMFit2.pdf")
 plt.show()
 
 ####################

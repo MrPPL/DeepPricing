@@ -77,11 +77,11 @@ Theorem \ref{RNVF-Discrete} gives a simple mathematical framework for pricing Eu
 \end{cases}
 \end{split}
 \end{equation*}
-Note that the binomial lattice model has a recursive structure, where the one-step transition probabilities are the same in each node. The idea is to, at each decision point, either exercise to gain the intrinsic value if it is greater than the expected continuation value or hold the option alive for another period. The dynamic choice to exercise or to keep the option alive gives a exercise barrier $b$ (Figure \ref{fig:BinomialTree}).\\
+Note that the binomial lattice model has a recursive structure, where the one-step transition probabilities are the same in each node. The idea is to, at each decision point, either exercise to gain the intrinsic value if it is greater than the expected continuation value or hold the option alive for another period. The dynamic choice to exercise or to keep the option alive gives an exercise barrier $b$ (Figure \ref{fig:BinomialTree}).\\
 
 \begin{figure}[th]
 \centering
-\includegraphics{Figures/BinomialTree.png}
+\includegraphics{Figures/BinomialTree.pdf}
 \decoRule
 \caption[Binomial Tree]{A valuation tree of an American put option price based on the binomial model, where the color indicates the value and the dots mark the continuation nodes. The parameters are S(0)=40, N=30, $\Delta t =$ 1 day, K=40 and u=1.0106}
 \label{fig:BinomialTree}
@@ -145,7 +145,7 @@ Where $J$ is the value of the option to time $t_n$ and i is the number of times 
 $$J_{i_1,\ldots, i_d}(t_n)=\max\{\Phi(t_n,\bm{S}(t_n)), \exp(-r\Delta t) \bigg(q_1 J_{i_1+1,\ldots, i_d +1}(t_{n+1}) + \cdots + q_{2^d} J_{i_1,\ldots, i_d}(t_{n+1}) \bigg)\}$$
 With the recursive formulas we can valuate multivariate contingent claims for a variety of exotic options including the American put option with several underlying risky assets. \\
 
-The computational required resources increases with the number of underlying assets for the binomial lattice methods. For the BEG method we have $2^d$ number of one-step transition probabilities. To reduce the number of transition probabilities, it had been tried in \parencite{NEK}, to set all the probabilities equal to 0.5 and then calculate the jump sizes. This is the reversed process compared to the BEG method, where the jump sizes are set first and then one-step probabilities are calculated. Choosing one-step probabilities and then the jump sizes has overcome the issue with negative probabilities for higher dimensions and in \parencite{NEK} the algorithm also seems to have faster convergence. The reserved algorithm of BEG is called the NEK method.\\
+The computational required resources increases with the number of underlying assets for the binomial lattice methods. For the BEG method we have $2^d$ number of one-step transition probabilities. To reduce the number of transition probabilities, it has been tried in \parencite{NEK}, to set all the probabilities equal to 0.5 and then calculate the jump sizes. This is the reversed process compared to the BEG method, where the jump sizes are set first and then one-step probabilities are calculated. Choosing one-step probabilities and then the jump sizes has overcome the issue with negative probabilities for higher dimensions and in \parencite{NEK} the algorithm also seems to have faster convergence. The reserved algorithm of BEG is called the NEK method.\\
 
 The NEK and BEG approaches are both good in terms of both accuracy and computational speed for low dimensional option problems, but both still suffer from the curse of dimensionality. The simulations methods on the other hand, have somewhat of an advantage for higher dimensions. We choose to present the BEG approach, because it is a natural extension of the already presented CRR model, which we already build intuition upon. The key for the BEG approach is that we approximate a multivariate lognormal distribution with a discrete jump distribution. 
 
@@ -227,9 +227,9 @@ U^{m,K}(0) = \max \{ G(S(0)), \frac{1}{K} \sum_{k=1}^{K} G(S^{(k)}(\hat{\tau}^{k
 
 \begin{figure}[th]
 \centering
-\includegraphics{Figures/LSMFit1.png}
+\includegraphics{Figures/LSMFit1.pdf}
 \decoRule
-\caption[Polynomial Regression of Continuation Value]{By zooming in on a specific point of time in the dynamic programming approach, we see how the algorithm regress the continuation value. In the illustration we used second order polynomial regression}
+\caption[Polynomial Regression of Continuation Value]{By zooming in on a specific point of time in the dynamic programming approach, we see how the algorithm regress the continuation value. In the illustration we used a second order polynomial regression}
 \label{fig:LSM1}
 \end{figure}
 
@@ -258,13 +258,13 @@ e_j(S) &= \exp(-S/2) \dfrac{\exp(S)}{j!} \frac{d^j}{dS^j}(S^j \exp(-S))
 \end{align*} 
 This kind of regression is a nonlinear expansion of the linear model\footnote{Prediction is a linear function of the coefficients}. We define regressed conditional expectation by:
 $$\Psi(S(t_n); \alpha)= \sum_{j=0}^p \alpha_j \cdot e_j(S(t_n)) $$
-where $\alpha$ is the coefficient for the regression, e is the basis function, where the argument is the underlying Markovian process $S$. By using this iterative method, we arrive at the pathwise optimal stopping policy, where in figure \ref{fig:LSM2} an example of pathwise optimal stopping times are shown. The figure illustrates that the option only can be exercised once, hence, the gray lines after the triangles.\\
+where $\alpha$ is the coefficient for the regression, e is the basis function, where the argument is the underlying Markovian process $S$. By using this iterative method, we arrive at the pathwise optimal stopping policy, where in figure \ref{fig:LSM2} an example of pathwise optimal stopping times are shown. The figure illustrates that the option only can be exercised once, hence, the white lines after the triangles.\\
 
 \begin{figure}[th]
 \centering
-\includegraphics{Figures/LSMFit2.png}
+\includegraphics{Figures/LSMFit2.pdf}
 \decoRule
-\caption[Optimal Stopping Decision]{The optimal stopping decisions by the Least Squares Monte Carlo Method}
+\caption[Optimal Stopping Decision]{The optimal stopping decisions by the least squares Monte Carlo method}
 \label{fig:LSM2}
 \end{figure}
 

@@ -177,14 +177,14 @@ The Wiener process in the GBM formalizes \textsl{"random shocks"} $dW$ to the st
 The tool for handling Wiener processes is stochastic calculus in continuous time because the standard calculus will not work for the wildly behaved Wiener process. In the representation of the GBM, we used vector and matrix notation. The stock vector is d dimensional and the Wiener process vector is k dimensional. The volatility matrix is given by $\bm{\sigma}(t)=\{\sigma_{ij}(t)\}_{i=1,\ldots,d,j=1,\ldots,k}$ and the drift is $\bm{\alpha}(t)=(\alpha_1(t), \alpha_2(t), \ldots, \alpha_d(t))^T$. D(x) denotes a diagonal matrix with vector x as its diagonal and the Wiener processes instantaneous correlation matrix $\bm{\rho}$ is given by $Cov(dW_i(t),dW_j(t))=E(dW_i(t)dW_j(t))=\rho_{ij}dt$.
 
 \subsection{Arbitrage-free Model}
-The first problem we are faced with in arbitrage theory is to create a model with no arbitrage opportunities. The First Fundamental Theorem tells us how to not introduce arbitrage to our market model.
+The first problem we are faced with in arbitrage theory is to create a model with no arbitrage opportunities. The first fundamental pricing theorem tells us how to not introduce arbitrage to our market model.
 \begin{theorem}\label{FFT1}
-\textbf{First Fundamental Pricing Theorem of Mathematical Finance(FFT1): } The market model is free of arbitrage if and only if there exists an equivalent martingale measure, i.e. a measure $Q\sim P$ such that the processes:
+\textbf{First fundamental pricing theorem of mathematical finance(FPT1): } The market model is free of arbitrage if and only if there exists an equivalent martingale measure, i.e. a measure $Q\sim P$ such that the processes:
 $$\frac{S_0(t)}{S_0(t)}, \frac{S_1(t)}{S_0(t)}, \cdots, \frac{S_d(t)}{S_0(t)}$$
 are (local)martingales under Q.
 \\ \null \hfill (p. 154 \parencite{finKont})
 \end{theorem}
-Assuming $S_0(t)$ is the bank account $B(t)$, then the martingale property for the discounted price processes is a mathematical formulation that the expected discounted value coincides with the known spot value today\footnote{Assuming $B(0)=1$}. In gambling, a martingale resembles a \textsl{"fair"} game. From the FFT1 using the bank account $B(t)$ as numéraire, it follows that:
+Assuming $S_0(t)$ is the bank account $B(t)$, then the martingale property for the discounted price processes is a mathematical formulation that the expected discounted value coincides with the known spot value today\footnote{Assuming $B(0)=1$}. In gambling, a martingale resembles a \textsl{"fair"} game. From the FPT1 using the bank account $B(t)$ as numéraire, it follows that:
 \theoremstyle{proposition}
 \begin{proposition}{}
 We assume that $B(t)=S_0(t)$ is our numéraire and all the processes' randomness comes from the Weiner process, then an equivalent measure $Q \sim P$ is a martingale measure if and only if all assets $(B(t), S_1(t), \ldots, S_d(t))$ have the short rate as their local rates of return, i.e.
@@ -201,7 +201,7 @@ The tool to obtain the dynamics in equation \eqref{Q-dym} is the Girsanov theore
 $$d\bm{\bar{W}}(t)=\bm{\phi}(t)dt + d\bm{W}(t)$$
 When applying to eq. (\ref{GBM-P}):
 $$d\bm{S}(t)=D[\bm{S}(t)](\bm{\alpha}(t)+\bm{\sigma}(t)\bm{\phi}(t))dt+D[\bm{S}(t)]\bm{\sigma}(t)d\bm{W}(t)$$
-Going back to the FFT1 and the proposition hereof, we know that Q is a martingale measure if and only if:
+Going back to the FPT1 and the proposition hereof, we know that Q is a martingale measure if and only if:
 \begin{align}\label{marketPriceOfRisk}
 \bm{\alpha}(t)+\bm{\sigma}(t)\bm{\phi}(t)=\textbf{r}(t) \quad holds \ with \ probability \ 1 \ for \ each \ t
 \end{align}
@@ -223,9 +223,9 @@ $\bm{\sigma}(t):\mathbb{R}^k \to \mathbb{R}^d$ is surjective, i.e. if and only i
 We note that to have an arbitrage-free model, we need $k\geq d$, i.e. have at least as many random sources as the number of risky assets. 
 
 \subsection{Complete model}
-Second Fundamental Pricing Theorem is key to obtain a complete market model, i.e. a market model with unique prices where every claim can be hedged.
+Second fundamental pricing theorem is key to obtain a complete market model, i.e. a market model with unique prices where every claim can be hedged.
 \begin{theorem}\label{FFT2}
-\textbf{Second Fundamental Pricing Theorem of Mathematical Finance(FFT2): } Assuming absence of arbitrage, the market model is complete if and only if the martingale measure $Q$ is unique.
+\textbf{Second fundamental pricing theorem of mathematical finance(FPT2): } Assuming absence of arbitrage, the market model is complete if and only if the martingale measure $Q$ is unique.
 \\ \null \hfill (p. 155 \parencite{finKont})
 \end{theorem}
 In our Wiener world, we have a unique martingale measure if equation \ref{marketPriceOfRisk} has a unique solution. The proof of proposition \ref{completeProp} will shortly reveal why the Wiener world assumption is required. If we had more random sources e.g. a Poisson process\footnote{The Merton's Mixed Jump-Diffusion Model is an example}, then there is no guarantee that the equivalent measure transformation is of the Girsanov type above. 

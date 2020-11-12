@@ -97,9 +97,9 @@ from matplotlib import rcParams
 rcParams['figure.figsize']=5,4
 plt.style.use('ggplot')
 plt.plot(tim,S[0],tim,S[1],tim,S[2])
-plt.xlabel("Time")
-plt.ylabel("Price")
+plt.xlabel("Time t")
+plt.ylabel("Stock value")
 plt.title("Sample paths for stock")
-#plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/samplePath.pdf")
+plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/samplePath.pdf")
 plt.show()
 

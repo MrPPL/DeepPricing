@@ -33,5 +33,5 @@ y1 = [EuroPut(100, S) for S in x]
 ax[1].set_title('Put With Strike K=100')
 ax[1].set_xlabel("S(T)")
 ax[1].plot(x1, y1, 'c', linewidth=1)
-plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/contractfct.pdf")
+#plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/contractfct.pdf")
 plt.show()
