@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  12 NOV 2020 21:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.9.28)  13 NOV 2020 10:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2428,7 +2428,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 1: section
 LaTeX Font Info:    Font shape `T1/ppl/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ppl/b/n' tried instead on input line 154.
-<Forside-logo.pdf, id=307, 597.55246pt x 845.07718pt>
+<Forside-logo.pdf, id=311, 597.55246pt x 845.07718pt>
 File: Forside-logo.pdf Graphic file (type pdf)
 <use Forside-logo.pdf>
 Package pdftex.def Info: Forside-logo.pdf  used on input line 182.
@@ -2527,7 +2527,7 @@ ri-ate Amer-i-can Con-
 [9
 
 ]
-Overfull \hbox (41.24527pt too wide) in alignment at lines 279--302
+Overfull \hbox (44.89157pt too wide) in alignment at lines 279--302
  [] [] [] 
  []
 
@@ -2536,7 +2536,7 @@ LaTeX Font Info:    Try loading font information for U+fplmbb on input line 307
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ufplmbb.fd
 File: ufplmbb.fd 2003/10/30 Fontinst v1.914 font definitions for U/fplmbb.
 )
-Overfull \hbox (41.24527pt too wide) in alignment at lines 302--319
+Overfull \hbox (44.89157pt too wide) in alignment at lines 302--319
  [] [] [] 
  []
 
@@ -2631,7 +2631,7 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 5.21004pt on input line 41.
  [4]
-<Figures/contractfct.pdf, id=603, 433.62pt x 289.08pt>
+<Figures/contractfct.pdf, id=608, 433.62pt x 289.08pt>
 File: Figures/contractfct.pdf Graphic file (type pdf)
 <use Figures/contractfct.pdf>
 Package pdftex.def Info: Figures/contractfct.pdf  used on input line 69.
@@ -2662,7 +2662,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
-<Figures/samplePath.pdf, id=676, 361.35pt x 289.08pt>
+<Figures/samplePath.pdf, id=678, 361.35pt x 289.08pt>
 File: Figures/samplePath.pdf Graphic file (type pdf)
 <use Figures/samplePath.pdf>
 Package pdftex.def Info: Figures/samplePath.pdf  used on input line 171.
@@ -2688,19 +2688,15 @@ ry (suf-fi-ciently in-te-grable) choice
 
 Package amsthm Warning: Unknown theoremstyle `proposition' on input line 217.
 
+
+Overfull \hbox (9.4854pt too wide) in paragraph at lines 228--230
+[][]\T1/ppl/b/n/10.95 Theorem 2.11. []\T1/ppl/b/it/10.95 Sec-ond Fun-da-men-tal
+ Pric-ing The-o-rem of Math-e-mat-i-cal Fi-nance(FPT2):
+ []
+
 [10]
 Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
- []
-
-
-Overfull \hbox (12.53546pt too wide) in paragraph at lines 260--261
-\T1/ppl/m/n/10.95 have the Markov prop-erty, we as-sume $\OML/zplm/m/it/10.95 k
- \OT1/zplm/m/n/10.95 = \OML/zplm/m/it/10.95 d$ \T1/ppl/m/n/10.95 and the prob-a
--bil-ity space is $\OT1/zplm/m/n/10.95 (
-\OT1/ppl/m/n/10.95 , \OMS/zplm/m/n/10.95 F\OT1/ppl/m/n/10.95 , \OML/zplm/m/it/1
-0.95 P\OT1/ppl/m/n/10.95 , \OMS/zplm/m/n/10.95 F[]\OT1/zplm/m/n/10.95 )$\T1/ppl
-/m/n/10.95 .
  []
 
 [11]
@@ -2723,12 +2719,12 @@ Package amsthm Warning: Unknown theoremstyle `proposition' on input line 317.
 
 Package amsthm Warning: Unknown theoremstyle `proposition' on input line 332.
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 352--353
+
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
 
  []
 
-[14]
+[13] [14]
 Overfull \hbox (0.95868pt too wide) in paragraph at lines 396--398
 \T1/ppl/m/n/10.95 Recall that the dis-counted price pro-cess $[]\OT1/zplm/m/n/1
 0.95 (\OMS/zplm/m/n/10.95 ^^@\OML/zplm/m/it/10.95 r \OMS/zplm/m/n/10.95 ^^A \OM
@@ -2743,22 +2739,16 @@ Underfull \hbox (badness 10000) in paragraph at lines 421--422
  []
 
 
-Overfull \hbox (2.17795pt too wide) in paragraph at lines 442--443
-\T1/ppl/m/n/10.95 To solve the op-ti-mal stop-ping prob-lem nu-mer-i-cal meth-o
-ds are re-quired for the Amer-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 442--443
 
  []
 
-
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 444--445
 
  []
 
-[16]
+
 Overfull \hbox (31.65587pt too wide) in paragraph at lines 446--447
 []\T1/ppl/m/n/10.95 The un-der-ly-ing pro-cess is as-sumed to be Marko-vian wit
 h state vari-ables $\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 S\OT1/zplm/m/n/10
@@ -2840,14 +2830,6 @@ Overfull \hbox (10.19395pt too wide) in paragraph at lines 37--37
 1/zplm/m/n/10.95 )$ 
  []
 
-
-Overfull \hbox (2.1332pt too wide) in paragraph at lines 59--61
-\T1/ppl/m/n/10.95 is com-plete. Re-mem-ber the mar-ket ($\OML/zplm/m/it/10.95 B
-\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 )\OT1/ppl/m/n/
-10.95 , \OML/zplm/m/it/10.95 S[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t[]\O
-T1/zplm/m/n/10.95 )$\T1/ppl/m/n/10.95 ) for the bi-no-mial model is arbitrage-
- []
-
 [20]
 Overfull \hbox (4.27206pt too wide) detected at line 79
 []
@@ -2858,7 +2840,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 79--81
 
  []
 
-<Figures/BinomialTree.pdf, id=895, 433.62pt x 361.35pt>
+<Figures/BinomialTree.pdf, id=893, 433.62pt x 361.35pt>
 File: Figures/BinomialTree.pdf Graphic file (type pdf)
 <use Figures/BinomialTree.pdf>
 Package pdftex.def Info: Figures/BinomialTree.pdf  used on input line 84.
@@ -2874,18 +2856,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 90--91
  []
 
 
-Overfull \hbox (1.83823pt too wide) in paragraph at lines 93--95
-\T1/ppl/m/n/10.95 pro-ce-dure we de-rive present value of the Amer-i-can op-tio
-n in the dis-crete time model.
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 93--95
 
  []
 
 [21]
-<Figures/binConv.pdf, id=907, 361.35pt x 289.08pt>
+<Figures/binConv.pdf, id=905, 361.35pt x 289.08pt>
 File: Figures/binConv.pdf Graphic file (type pdf)
 <use Figures/binConv.pdf>
 Package pdftex.def Info: Figures/binConv.pdf  used on input line 98.
@@ -2895,12 +2871,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 104--105
 
  []
 
-
+[22 <./Figures/BinomialTree.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 106--107
 
  []
 
-[22 <./Figures/BinomialTree.pdf>] [23 <./Figures/binConv.pdf>]
+[23 <./Figures/binConv.pdf>]
 Overfull \hbox (15.12315pt too wide) in paragraph at lines 114--114
 []\T1/ppl/b/n/14.4 Binomial Lat-tice Model for Mul-ti-vari-ate Con-tin-gent Cla
 ims 
@@ -2917,7 +2893,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 117--118
  []
 
 [24]
-<Figures/Three-dimensional-binomial-lattice.png, id=1010, 853.1875pt x 470.7587
+<Figures/Three-dimensional-binomial-lattice.png, id=1007, 853.1875pt x 470.7587
 4pt>
 File: Figures/Three-dimensional-binomial-lattice.png Graphic file (type png)
 <use Figures/Three-dimensional-binomial-lattice.png>
@@ -2937,12 +2913,12 @@ q[]J[]\OT1/zplm/m/n/10.95 (\OML/zplm/m/it/10.95 t[]\OT1/zplm/m/n/10.95 )[]\OMS/
 zplm/m/n/10.95 g
  []
 
-
+[25 <./Figures/Three-dimensional-binomial-lattice.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 145--147
 
  []
 
-[25 <./Figures/Three-dimensional-binomial-lattice.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 148--149
 
  []
@@ -2994,7 +2970,7 @@ Overfull \hbox (103.04659pt too wide) detected at line 222
 []
  []
 
-<Figures/LSMFit1.pdf, id=1052, 433.62pt x 289.08pt>
+<Figures/LSMFit1.pdf, id=1049, 433.62pt x 289.08pt>
 File: Figures/LSMFit1.pdf Graphic file (type pdf)
 <use Figures/LSMFit1.pdf>
 Package pdftex.def Info: Figures/LSMFit1.pdf  used on input line 230.
@@ -3004,18 +2980,17 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 230--232
  [][] 
  []
 
-
+[29 <./Figures/LSMFit1.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 248--250
 
  []
 
-[29]
+
 Underfull \hbox (badness 10000) in paragraph at lines 260--262
 
  []
 
-[30 <./Figures/LSMFit1.pdf>]
-<Figures/LSMFit2.pdf, id=1116, 433.62pt x 289.08pt>
+<Figures/LSMFit2.pdf, id=1103, 433.62pt x 289.08pt>
 File: Figures/LSMFit2.pdf Graphic file (type pdf)
 <use Figures/LSMFit2.pdf>
 Package pdftex.def Info: Figures/LSMFit2.pdf  used on input line 265.
@@ -3037,7 +3012,7 @@ ML/zplm/m/it/10.95 for n \OT1/zplm/m/n/10.95 = \OT1/ppl/m/n/10.95 1, [] , \OML/
 zplm/m/it/10.95 N \OMS/zplm/m/n/10.95 ^^@ \OT1/ppl/m/n/10.95 1
  []
 
-
+[30]
 Underfull \hbox (badness 10000) in paragraph at lines 274--276
 
  []
@@ -3063,6 +3038,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 371--372
  []
 
 [34]
+Underfull \hbox (badness 10000) in paragraph at lines 383--385
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 389--391
 
  []
@@ -3250,7 +3230,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 292--293
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 302--303
+Underfull \hbox (badness 10000) in paragraph at lines 295--297
 
  []
 
@@ -3269,7 +3249,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 308--309
 
  []
 
-[44]) [45]
+[44]
+Underfull \hbox (badness 10000) in paragraph at lines 310--311
+
+ []
+
+) [45]
 \openout2 = `Chapters/Chapter5.aux'.
 
  (./Chapters/Chapter5.tex
@@ -3329,12 +3314,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 123--124
 
  []
 
-<Figures/marginalAmerPut.pdf, id=1398, 361.35pt x 289.08pt>
+<Figures/marginalAmerPut.pdf, id=1390, 361.35pt x 289.08pt>
 File: Figures/marginalAmerPut.pdf Graphic file (type pdf)
 <use Figures/marginalAmerPut.pdf>
 Package pdftex.def Info: Figures/marginalAmerPut.pdf  used on input line 145.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
 [51]
+Overfull \hbox (0.67816pt too wide) in paragraph at lines 159--161
+\T1/ppl/m/n/10.95 but with a max-i-mum of 100 epochs for com-pu-ta-tional rea-s
+ons. To up-date the weights
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 159--161
 
  []
@@ -3359,7 +3350,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 198--199
 
  []
 
-
+[53]
 Overfull \hbox (76.49315pt too wide) detected at line 201
 \OML/zplm/m/it/10.95 ^^Q \OMS/zplm/m/n/10.95 ^^B \OML/zplm/m/it/10.95 b \OMS/zp
 lm/m/n/10.95 ^^B \OML/zplm/m/it/10.95 d \OT1/zplm/m/n/10.95 = \OMS/zplm/m/n/10.
@@ -3378,7 +3369,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 201--203
 
  []
 
-[53]
+
 Overfull \hbox (33.31319pt too wide) in paragraph at lines 205--224
  [][] 
  []
@@ -3401,7 +3392,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 232--234
 
  []
 
-<Figures/polynomialEuroC.png, id=1430, 433.62pt x 505.89pt>
+<Figures/polynomialEuroC.png, id=1422, 433.62pt x 505.89pt>
 File: Figures/polynomialEuroC.png Graphic file (type png)
 <use Figures/polynomialEuroC.png>
 Package pdftex.def Info: Figures/polynomialEuroC.png  used on input line 237.
@@ -3417,15 +3408,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 270--271
  []
 
 
-Overfull \hbox (74.18015pt too wide) in paragraph at lines 273--291
+Overfull \hbox (82.37056pt too wide) in paragraph at lines 273--291
  [][] 
  []
 
 [57]
-<Figures/PredictionEuroC.png, id=1456, 361.35pt x 289.08pt>
-File: Figures/PredictionEuroC.png Graphic file (type png)
-<use Figures/PredictionEuroC.png>
-Package pdftex.def Info: Figures/PredictionEuroC.png  used on input line 297.
+<Figures/PredictionEuroC.pdf, id=1448, 361.35pt x 289.08pt>
+File: Figures/PredictionEuroC.pdf Graphic file (type pdf)
+<use Figures/PredictionEuroC.pdf>
+Package pdftex.def Info: Figures/PredictionEuroC.pdf  used on input line 297.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 323--324
@@ -3433,17 +3424,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 323--324
  []
 
 [58]
-<Figures/inSampleAmerMinP.png, id=1468, 361.35pt x 289.08pt>
-File: Figures/inSampleAmerMinP.png Graphic file (type png)
-<use Figures/inSampleAmerMinP.png>
-Package pdftex.def Info: Figures/inSampleAmerMinP.png  used on input line 342.
+<Figures/inSampleAmerMinP.pdf, id=1460, 361.35pt x 289.08pt>
+File: Figures/inSampleAmerMinP.pdf Graphic file (type pdf)
+<use Figures/inSampleAmerMinP.pdf>
+Package pdftex.def Info: Figures/inSampleAmerMinP.pdf  used on input line 342.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
- [59 <./Figures/PredictionEuroC.png>]
+ [59 <./Figures/PredictionEuroC.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 348--349
 
  []
 
-) [60 <./Figures/inSampleAmerMinP.png>]
+) [60 <./Figures/inSampleAmerMinP.pdf>]
 \openout2 = `Chapters/Chapter6.aux'.
 
  (./Chapters/Chapter6.tex
@@ -3507,16 +3498,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--130
 
  []
 
-<Figures/histLSMMLPsI.pdf, id=1528, 361.35pt x 289.08pt>
+<Figures/histLSMMLPsI.pdf, id=1590, 361.35pt x 289.08pt>
 File: Figures/histLSMMLPsI.pdf Graphic file (type pdf)
 <use Figures/histLSMMLPsI.pdf>
 Package pdftex.def Info: Figures/histLSMMLPsI.pdf  used on input line 133.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 139--143
-
- []
-
 [65 <./Figures/histLSMMLPsI.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 144--145
 
@@ -3533,7 +3519,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 167--168
  []
 
 [66]
-<Figures/compareBEGMLPsII.pdf, id=1585, 361.35pt x 289.08pt>
+Underfull \hbox (badness 10000) in paragraph at lines 169--170
+
+ []
+
+<Figures/compareBEGMLPsII.pdf, id=1647, 361.35pt x 289.08pt>
 File: Figures/compareBEGMLPsII.pdf Graphic file (type pdf)
 <use Figures/compareBEGMLPsII.pdf>
 Package pdftex.def Info: Figures/compareBEGMLPsII.pdf  used on input line 173.
@@ -3759,7 +3749,11 @@ Overfull \hbox (75.4371pt too wide) in paragraph at lines 10--31
 
 
 ]
-<Figures/polynomialOutMoneyEuroC.png, id=1746, 433.62pt x 505.89pt>
+Overfull \vbox (2.65898pt too high) has occurred while \output is active []
+
+
+[81]
+<Figures/polynomialOutMoneyEuroC.png, id=1812, 433.62pt x 505.89pt>
 File: Figures/polynomialOutMoneyEuroC.png Graphic file (type png)
 <use Figures/polynomialOutMoneyEuroC.png>
 Package pdftex.def Info: Figures/polynomialOutMoneyEuroC.png  used on input lin
@@ -3770,8 +3764,7 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 97--99
  [][] 
  []
 
-[81]
-<Figures/polynomialLongTEuroC.png, id=1751, 433.62pt x 505.89pt>
+<Figures/polynomialLongTEuroC.png, id=1813, 433.62pt x 505.89pt>
 File: Figures/polynomialLongTEuroC.png Graphic file (type png)
 <use Figures/polynomialLongTEuroC.png>
 Package pdftex.def Info: Figures/polynomialLongTEuroC.png  used on input line 1
@@ -3782,22 +3775,22 @@ Overfull \hbox (29.58986pt too wide) in paragraph at lines 105--107
  [][] 
  []
 
-<Figures/inMoneyAmerPut.png, id=1752, 361.35pt x 289.08pt>
+<Figures/inMoneyAmerPut.png, id=1814, 361.35pt x 289.08pt>
 File: Figures/inMoneyAmerPut.png Graphic file (type png)
 <use Figures/inMoneyAmerPut.png>
 Package pdftex.def Info: Figures/inMoneyAmerPut.png  used on input line 114.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-<Figures/longTAmerP.png, id=1753, 361.35pt x 289.08pt>
+<Figures/longTAmerP.png, id=1815, 361.35pt x 289.08pt>
 File: Figures/longTAmerP.png Graphic file (type png)
 <use Figures/longTAmerP.png>
 Package pdftex.def Info: Figures/longTAmerP.png  used on input line 122.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-<Figures/inMoneyAmerMinP.png, id=1754, 361.35pt x 289.08pt>
+<Figures/inMoneyAmerMinP.png, id=1816, 361.35pt x 289.08pt>
 File: Figures/inMoneyAmerMinP.png Graphic file (type png)
 <use Figures/inMoneyAmerMinP.png>
 Package pdftex.def Info: Figures/inMoneyAmerMinP.png  used on input line 130.
 (pdftex.def)             Requested size: 361.34912pt x 289.07928pt.
-<Figures/longTAmerMinP.png, id=1755, 361.35pt x 289.08pt>
+<Figures/longTAmerMinP.png, id=1817, 361.35pt x 289.08pt>
 File: Figures/longTAmerMinP.png Graphic file (type png)
 <use Figures/longTAmerMinP.png>
 Package pdftex.def Info: Figures/longTAmerMinP.png  used on input line 138.
@@ -3849,7 +3842,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 378.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 378.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 378.
 Package rerunfilecheck Info: File `deepPricing.out' has not changed.
-(rerunfilecheck)             Checksum: 7D1E5F51BC2B59C9B6764D1A178AB57C;13955.
+(rerunfilecheck)             Checksum: DF930294EAAA0E554D52E6F53A5E9FC6;14075.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -3859,11 +3852,11 @@ Package logreq Info: Writing requests to 'deepPricing.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 48196 strings out of 492982
- 990298 string characters out of 6134896
- 1202385 words of memory out of 5000000
- 50612 multiletter control sequences out of 15000+600000
- 649270 words of font info for 292 fonts, out of 8000000 for 9000
+ 48192 strings out of 492982
+ 990293 string characters out of 6134896
+ 1202404 words of memory out of 5000000
+ 50614 multiletter control sequences out of 15000+600000
+ 651204 words of font info for 295 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,23n,81p,10384b,2404s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texliv
@@ -3884,10 +3877,10 @@ super/sftt1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplb
 r/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on deepPricing.pdf (98 pages, 1054741 bytes).
+Output written on deepPricing.pdf (98 pages, 2882754 bytes).
 PDF statistics:
- 1942 PDF objects out of 2073 (max. 8388607)
- 1479 compressed objects within 15 object streams
- 365 named destinations out of 1000 (max. 500000)
- 909 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2002 PDF objects out of 2073 (max. 8388607)
+ 1486 compressed objects within 15 object streams
+ 357 named destinations out of 1000 (max. 500000)
+ 917 words of extra memory for PDF output out of 10000 (max. 10000000)
 

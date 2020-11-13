@@ -55,9 +55,9 @@ plt.figure(figsize=figsize)
 plt.plot(X[-2, :], cashflow, 'g^', zorder=3);
 plt.plot(*p.linspace(), color= "blue", zorder=1);
 plt.plot(X[-2, :], p(X[-2, :]), 'r+', zorder=2);
-plt.legend(['Cashflow',
-            'Fitted Polynomial',
-            'Approximated Continuation Value'])
+plt.legend(['Cash flow',
+            'Fitted polynomial',
+            'Approximated continuation value'])
 plt.xlabel('Stock price at time t-1')
 plt.ylabel('Time t exercise/continuation value')
 plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/LSMFit1.pdf")
@@ -153,7 +153,7 @@ for i in range(n_paths):
         handle_first_ex, = plt.plot(t[first_exercise_idx[i]], X[first_exercise_idx[i], i], 'c^');
 
 plt.legend([handle_path, handle_stopped_path, handle_first_ex],
-           ['Path before exercise', 'Path after exercise', 'First favourable exercise'])
+           ['Path before exercise', 'Path after exercise', 'First favorable exercise'])
 plt.xlabel('Time t')
 plt.ylabel('Stock value')
 plt.savefig("/home/ppl/Documents/Universitet/KUKandidat/Speciale/DeepPricing/latex/Figures/LSMFit2.pdf")

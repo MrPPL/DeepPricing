@@ -5,25 +5,25 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {5.1}{\ignorespaces Parameter Ranges In-sample for MLP on Univariate Contingent Claims}}{50}{table.caption.142}
-\contentsline {table}{\numberline {5.2}{\ignorespaces Parameter Ranges In-sample for MLP on Bivariate Contingent Claim}}{50}{table.caption.143}
-\contentsline {table}{\numberline {5.3}{\ignorespaces Parameter Ranges in Test Data Set for European Call and American Put Option\relax }}{51}{table.caption.144}
-\contentsline {table}{\numberline {5.4}{\ignorespaces Grid Search for European Call\relax }}{54}{table.caption.148}
-\contentsline {table}{\numberline {5.5}{\ignorespaces Grid Search for American Put Minimum on two Stocks\relax }}{55}{table.caption.149}
-\contentsline {table}{\numberline {5.6}{\ignorespaces European Call Validation Error\relax }}{57}{table.caption.152}
-\contentsline {table}{\numberline {5.7}{\ignorespaces Test Error for European Call Option\relax }}{58}{table.caption.156}
-\contentsline {table}{\numberline {5.8}{\ignorespaces MLP Performance on American Put Option\relax }}{58}{table.caption.160}
-\contentsline {table}{\numberline {5.9}{\ignorespaces Performance of the Bivariate American Put Contingent Claim\relax }}{59}{table.caption.162}
+\contentsline {table}{\numberline {5.1}{\ignorespaces Parameter Ranges In-sample for MLP on Univariate Contingent Claims}}{50}{table.caption.134}
+\contentsline {table}{\numberline {5.2}{\ignorespaces Parameter Ranges In-sample for MLP on Bivariate Contingent Claim}}{50}{table.caption.135}
+\contentsline {table}{\numberline {5.3}{\ignorespaces Parameter Ranges in Test Data Set for European Call and American Put Option\relax }}{51}{table.caption.136}
+\contentsline {table}{\numberline {5.4}{\ignorespaces Grid Search for European Call\relax }}{53}{table.caption.140}
+\contentsline {table}{\numberline {5.5}{\ignorespaces Grid Search for American Put Minimum on two Stocks\relax }}{54}{table.caption.141}
+\contentsline {table}{\numberline {5.6}{\ignorespaces European Call Validation Error\relax }}{57}{table.caption.144}
+\contentsline {table}{\numberline {5.7}{\ignorespaces Test Error for European Call Option\relax }}{58}{table.caption.148}
+\contentsline {table}{\numberline {5.8}{\ignorespaces MLP Performance on American Put Option\relax }}{58}{table.caption.152}
+\contentsline {table}{\numberline {5.9}{\ignorespaces Performance of the Bivariate American Put Contingent Claim\relax }}{59}{table.caption.154}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {6.1}{\ignorespaces CRR, MLP II, and B-S Call Formula Comparison\relax }}{62}{table.caption.167}
-\contentsline {table}{\numberline {6.2}{\ignorespaces BEG Accuracy and Speed\relax }}{62}{table.caption.168}
-\contentsline {table}{\numberline {6.3}{\ignorespaces BEG and Exotic European Options\relax }}{63}{table.caption.170}
-\contentsline {table}{\numberline {6.4}{\ignorespaces Valuation of American Put Option\relax }}{64}{table.caption.174}
-\contentsline {table}{\numberline {6.5}{\ignorespaces BEG for the American Bivariate Contingent Claim\relax }}{66}{table.caption.183}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces CRR, MLP II, and B-S Call Formula Comparison\relax }}{62}{table.caption.159}
+\contentsline {table}{\numberline {6.2}{\ignorespaces BEG Accuracy and Speed\relax }}{62}{table.caption.160}
+\contentsline {table}{\numberline {6.3}{\ignorespaces BEG and Exotic European Options\relax }}{63}{table.caption.162}
+\contentsline {table}{\numberline {6.4}{\ignorespaces Valuation of American Put Option\relax }}{64}{table.caption.166}
+\contentsline {table}{\numberline {6.5}{\ignorespaces BEG for the American Bivariate Contingent Claim\relax }}{66}{table.caption.175}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {D.1}{\ignorespaces Polynomial Regression for European Call\relax }}{80}{table.caption.228}
-\contentsline {table}{\numberline {D.2}{\ignorespaces Grid Search for American Bivariate Contingent Claim\relax }}{81}{table.caption.229}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {D.1}{\ignorespaces Polynomial Regression for European Call\relax }}{80}{table.caption.220}
+\contentsline {table}{\numberline {D.2}{\ignorespaces Grid Search for American Bivariate Contingent Claim\relax }}{81}{table.caption.221}

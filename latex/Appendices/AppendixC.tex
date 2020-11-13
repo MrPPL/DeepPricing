@@ -5,7 +5,7 @@
 \label{AppendixC} % Change X to a consecutive letter; for referencing this appendix elsewhere, use \ref{AppendixX}
 
 \section{Moment Matching CRR}\label{CRRMM}
-In the CRR the stock multiplication factor for up and down movement is chosen to match the two first moments of the lognormal distribution. By matching the first moments the underlying discrete binomial stochastic process for the stock converge toward the continuous time lognormal distribution for sufficient large equidistant time-steps N. Hence, the CRR model will coincide with the Black-Scholes model.\\
+In the CRR the stock multiplication factor for up and down movement is chosen to match the two first moments of the lognormal distribution. By matching the first moments the underlying discrete binomial stochastic process for the stock converge toward the continuous time lognormal distribution for sufficient small equidistant time-steps N. Hence, the CRR model will coincide with the Black-Scholes model.\\
 
 The SDE for the Black Scholes under the equivalent martingale measure Q:
 $$dS(t)=rS(t)dt + \sigma S(t) dW(t)$$
@@ -38,7 +38,7 @@ We match the moments (equations \eqref{lnMoments} and \eqref{binMoments}) and ge
 \exp(r \Delta t)=u \cdot q + d \cdot (1-q) \quad (i)\\
 \exp(\Delta t \cdot (2r + \sigma^2))=u^2 \cdot q + d^2 \cdot (1-q) \quad (ii)
 \end{align*}
-Multipling $(i)$ with u+d and recognizing $(ii)$:
+Multiplying $(i)$ with u+d and recognizing $(ii)$:
 \begin{align*}
 (u+d)\exp(r \Delta t)&=u^2 \cdot q + d^2 \cdot (1-q) + ud\\
 \Rightarrow (u+d)\exp(r \Delta t)&\overset{(ii)}{=}\exp(\Delta t \cdot (2r + \sigma^2)) + u d
@@ -66,7 +66,7 @@ u&=1+\dfrac{1}{2} \sigma^2 \Delta t \pm  \dfrac{\sqrt{(2+\sigma^2 \Delta t)^2 - 
 Both approximations exploit that the time-step is small.
 \section{Convergence for LSM and MLP I}\label{Convergence}
 \subsection{LSM}
-In the rigorous approach in \parencite{analysisLSM} they show convergence results for the optimal value process or the Snell envelope $U$. We will present that $U(0)^{m,K}$ converges almost surely to $U(0)^{m}$ for K goes to infinity, i.e. the approximate value process by simulation and regression on a finite set of functions converge to the approximated value process with truncated orthogonal basis by letting the sample size go to infinity. Furthermore, it can be shown that $U(0)^{m}$ converges to $U(0)$ for m goes to infinity. The second result is that the regressed value function converges to the expected continuation value by letting the number of basis functions go to infinity. The latter result is shown using the expected continuation values.
+In the rigorous approach in \parencite{analysisLSM} they show convergence results for the optimal value process or the Snell envelope $U$. We will present that $U(0)^{m,K}$ converges almost surely to $U(0)^{m}$ for K goes to infinity, i.e. the approximate value process by simulation and regression on a finite set of functions converge to the approximated value process with truncated orthogonal basis by letting the sample size go to infinity. Furthermore, it can be shown that $U(0)^{m}$ converges to $U(0)$ for m goes to infinity. The second result is that the projection converges to the expected continuation value by letting the number of basis functions go to infinity. The latter result is shown using the expected continuation values.
 \begin{theorem}\label{LSMConvergence1}
 Assume the sequence $(e_{j}(S(t_n)))_{j\geq 1}$ is total in $L^2(\sigma(S(t_n)))$ for $n=1,\ldots,N-1$. Then for $n=0,\ldots,N$ we have
 $$\lim_{m\to +\infty} E^Q[G(S(\tau_{t_n}^{[m]})) |\mathcal{F}_{t_n}]=E^Q[G(S(\tau_{t_n})) |\mathcal{F}_{t_n}]$$

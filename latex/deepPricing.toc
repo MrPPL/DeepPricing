@@ -10,67 +10,68 @@
 \contentsline {subsection}{\numberline {2.1.2}Self-financing Portfolio (Without Consumption)}{5}{subsection.21}
 \contentsline {subsection}{\numberline {2.1.3}Arbitrage}{6}{subsection.24}
 \contentsline {subsection}{\numberline {2.1.4}Complete Market and Replication}{7}{subsection.26}
-\contentsline {section}{\numberline {2.2}Multidimensional Models}{7}{section.30}
+\contentsline {section}{\numberline {2.2}Multidimensional Model}{7}{section.30}
 \contentsline {subsection}{\numberline {2.2.1}Model Assumptions}{8}{subsection.31}
 \contentsline {subsection}{\numberline {2.2.2}Arbitrage-free Model}{8}{subsection.37}
 \contentsline {subsection}{\numberline {2.2.3}Complete model}{10}{subsection.45}
 \contentsline {subsection}{\numberline {2.2.4}Pricing and Connection to Classical Approach}{11}{subsection.49}
 \contentsline {section}{\numberline {2.3}Classical Black-Scholes Theory}{12}{section.56}
-\contentsline {section}{\numberline {2.4}American Options and Optimal Stopping}{14}{section.63}
-\contentsline {subsection}{\numberline {2.4.1}American Call without Dividends}{15}{subsection.69}
-\contentsline {subsection}{\numberline {2.4.2}American Put}{15}{subsection.70}
-\contentsline {subsection}{\numberline {2.4.3}Discrete Time Valuation}{16}{subsection.75}
-\contentsline {chapter}{\numberline {3}Classical Numerical Pricing Methods and Closed Form Solutions}{19}{chapter.82}
-\contentsline {section}{\numberline {3.1}Cox Ross Rubenstein Model}{19}{section.83}
-\contentsline {section}{\numberline {3.2}Binomial Lattice Model for Multivariate Contingent Claims}{24}{section.91}
-\contentsline {section}{\numberline {3.3}Least Squares Monte Carlo Method}{27}{section.95}
-\contentsline {subsection}{\numberline {3.3.1}The Algorithm}{27}{subsection.96}
-\contentsline {subsection}{\numberline {3.3.2}American Put}{29}{subsection.102}
-\contentsline {subsection}{\numberline {3.3.3}LSM Extension to Multivariate Contingent Claims}{32}{subsection.108}
-\contentsline {section}{\numberline {3.4}Closed Form Solutions for European Exotic Options}{33}{section.109}
-\contentsline {subsection}{\numberline {3.4.1}Geometric Mean Basket Call Option}{33}{subsection.110}
-\contentsline {subsection}{\numberline {3.4.2}Options on the Maximum or the Minimum of Several Assets}{34}{subsection.112}
-\contentsline {subsubsection}{\numberline {3.4.2.1}Best of Assets or Cash}{34}{subsubsection.113}
-\contentsline {subsubsection}{\numberline {3.4.2.2}Call on Max and Call on Min}{36}{subsubsection.118}
-\contentsline {chapter}{\numberline {4}Deep Learning}{37}{chapter.121}
-\contentsline {section}{\numberline {4.1}Machine Learning Basics}{37}{section.122}
-\contentsline {section}{\numberline {4.2}Multilayer Perceptrons}{39}{section.123}
-\contentsline {subsection}{\numberline {4.2.1}A Single Neuron}{39}{subsection.124}
-\contentsline {subsubsection}{\numberline {4.2.1.1}Activation Functions}{40}{subsubsection.127}
-\contentsline {subsection}{\numberline {4.2.2}Architecture of MLP}{41}{subsection.128}
-\contentsline {subsection}{\numberline {4.2.3}Training the Network}{42}{subsection.131}
-\contentsline {subsection}{\numberline {4.2.4}Regularization}{44}{subsection.132}
-\contentsline {chapter}{\numberline {5}Option Pricing and Deep Learning}{46}{chapter.133}
-\contentsline {section}{\numberline {5.1}Multilayer Perceptrons Regression for Optimal Stopping}{46}{section.134}
-\contentsline {subsection}{\numberline {5.1.1}Recap MLP}{47}{subsection.135}
-\contentsline {subsection}{\numberline {5.1.2}The Algorithm}{48}{subsection.138}
-\contentsline {section}{\numberline {5.2}Multilayer Perceptrons Regression Pricing from Existing Methods}{49}{section.139}
-\contentsline {subsection}{\numberline {5.2.1}Data}{49}{subsection.140}
-\contentsline {subsection}{\numberline {5.2.2}Training}{51}{subsection.146}
-\contentsline {subsubsection}{\numberline {5.2.2.1}Hyperparameter Tuning}{52}{subsubsection.147}
-\contentsline {subsubsection}{\numberline {5.2.2.2}Polynomial Regression}{54}{subsubsection.150}
-\contentsline {subsection}{\numberline {5.2.3}Performance}{57}{subsection.153}
-\contentsline {subsubsection}{\numberline {5.2.3.1}European Call Option}{57}{subsubsection.154}
-\contentsline {subsubsection}{\numberline {5.2.3.2}American Put Option}{58}{subsubsection.158}
-\contentsline {subsubsection}{\numberline {5.2.3.3}American Put on Minimum of two Assets Option}{58}{subsubsection.161}
-\contentsline {chapter}{\numberline {6}Numerical Investigation and Discussion}{61}{chapter.164}
-\contentsline {section}{\numberline {6.1}European Options}{61}{section.166}
-\contentsline {section}{\numberline {6.2}American Put Option}{63}{section.171}
-\contentsline {section}{\numberline {6.3}American Put Minimum on two Assets Option}{66}{section.182}
-\contentsline {section}{\numberline {6.4}Discussion of Pricing Methods}{68}{section.186}
-\contentsline {section}{\numberline {6.5}Discussion of the Black-Scholes model}{69}{section.191}
-\contentsline {chapter}{\numberline {7}Conclusion and Further Investigation}{71}{chapter.194}
-\contentsline {section}{\numberline {7.1}Conclusion}{71}{section.195}
-\contentsline {section}{\numberline {7.2}Further Investigation}{71}{section.196}
-\contentsline {chapter}{\numberline {A}Stochastic Calculus and Probability Theory}{73}{appendix.197}
-\contentsline {chapter}{\numberline {B}Code Implementation}{75}{appendix.208}
-\contentsline {chapter}{\numberline {C}Additional Material for CRR, LSM, and MLP I}{76}{appendix.211}
-\contentsline {section}{\numberline {C.1}Moment Matching CRR}{76}{section.212}
-\contentsline {section}{\numberline {C.2}Convergence for LSM and MLP I}{78}{section.216}
-\contentsline {subsection}{\numberline {C.2.1}LSM}{78}{subsection.217}
-\contentsline {subsection}{\numberline {C.2.2}MLP I}{78}{subsection.220}
-\contentsline {section}{\numberline {C.3}LSM Lower Bound}{79}{section.224}
-\contentsline {chapter}{\numberline {D}Additional Tables and Figures}{80}{appendix.226}
-\contentsline {section}{\numberline {D.1}Tables}{80}{section.227}
-\contentsline {section}{\numberline {D.2}Figures}{82}{section.230}
-\contentsline {chapter}{Bibliography}{86}{appendix*.237}
+\contentsline {section}{\numberline {2.4}American Options and Optimal Stopping}{14}{section.64}
+\contentsline {subsection}{\numberline {2.4.1}Optimal Stopping}{14}{subsection.65}
+\contentsline {subsection}{\numberline {2.4.2}American Call without Dividends}{15}{subsection.70}
+\contentsline {subsection}{\numberline {2.4.3}American Put}{15}{subsection.71}
+\contentsline {subsection}{\numberline {2.4.4}Discrete Time Valuation}{16}{subsection.74}
+\contentsline {chapter}{\numberline {3}Classical Numerical Pricing Methods and Closed Form Solutions}{19}{chapter.78}
+\contentsline {section}{\numberline {3.1}Cox Ross Rubinstein Model}{19}{section.79}
+\contentsline {section}{\numberline {3.2}Binomial Lattice Model for Multivariate Contingent Claims}{24}{section.87}
+\contentsline {section}{\numberline {3.3}Least Squares Monte Carlo Method}{27}{section.91}
+\contentsline {subsection}{\numberline {3.3.1}The Algorithm}{27}{subsection.92}
+\contentsline {subsection}{\numberline {3.3.2}American Put}{30}{subsection.97}
+\contentsline {subsection}{\numberline {3.3.3}Pricing Multivariate Contingent Claims with LSM}{32}{subsection.102}
+\contentsline {section}{\numberline {3.4}Closed Form Solutions for European Exotic Options}{33}{section.103}
+\contentsline {subsection}{\numberline {3.4.1}Geometric Mean Basket Call Option}{33}{subsection.104}
+\contentsline {subsection}{\numberline {3.4.2}Options on the Maximum or the Minimum of Several Assets}{34}{subsection.106}
+\contentsline {subsubsection}{\numberline {3.4.2.1}Best of Assets or Cash}{34}{subsubsection.107}
+\contentsline {subsubsection}{\numberline {3.4.2.2}Call on Max and Call on Min}{36}{subsubsection.111}
+\contentsline {chapter}{\numberline {4}Deep Learning}{37}{chapter.113}
+\contentsline {section}{\numberline {4.1}Machine Learning Basics}{37}{section.114}
+\contentsline {section}{\numberline {4.2}Multilayer Perceptron}{39}{section.115}
+\contentsline {subsection}{\numberline {4.2.1}A Single Neuron}{39}{subsection.116}
+\contentsline {subsubsection}{\numberline {4.2.1.1}Activation Functions}{40}{subsubsection.119}
+\contentsline {subsection}{\numberline {4.2.2}Architecture of MLP}{41}{subsection.120}
+\contentsline {subsection}{\numberline {4.2.3}Training the Network}{42}{subsection.123}
+\contentsline {subsection}{\numberline {4.2.4}Regularization}{44}{subsection.124}
+\contentsline {chapter}{\numberline {5}Option Pricing and Deep Learning}{46}{chapter.125}
+\contentsline {section}{\numberline {5.1}Multilayer Perceptron Regression for Optimal Stopping}{46}{section.126}
+\contentsline {subsection}{\numberline {5.1.1}Recap MLP}{47}{subsection.127}
+\contentsline {subsection}{\numberline {5.1.2}The Algorithm}{48}{subsection.130}
+\contentsline {section}{\numberline {5.2}Multilayer Perceptron Regression Pricing from Existing Methods}{49}{section.131}
+\contentsline {subsection}{\numberline {5.2.1}Data}{49}{subsection.132}
+\contentsline {subsection}{\numberline {5.2.2}Training}{51}{subsection.138}
+\contentsline {subsubsection}{\numberline {5.2.2.1}Hyperparameter Tuning}{52}{subsubsection.139}
+\contentsline {subsubsection}{\numberline {5.2.2.2}Polynomial Regression}{55}{subsubsection.142}
+\contentsline {subsection}{\numberline {5.2.3}Performance}{57}{subsection.145}
+\contentsline {subsubsection}{\numberline {5.2.3.1}European Call Option}{57}{subsubsection.146}
+\contentsline {subsubsection}{\numberline {5.2.3.2}American Put Option}{58}{subsubsection.150}
+\contentsline {subsubsection}{\numberline {5.2.3.3}American Put on Minimum of two Assets Option}{58}{subsubsection.153}
+\contentsline {chapter}{\numberline {6}Numerical Investigation and Discussion}{61}{chapter.156}
+\contentsline {section}{\numberline {6.1}European Options}{61}{section.158}
+\contentsline {section}{\numberline {6.2}American Put Option}{63}{section.163}
+\contentsline {section}{\numberline {6.3}American Put Minimum on two Assets Option}{66}{section.174}
+\contentsline {section}{\numberline {6.4}Discussion of Pricing Methods}{68}{section.178}
+\contentsline {section}{\numberline {6.5}Discussion of the Black-Scholes model}{69}{section.183}
+\contentsline {chapter}{\numberline {7}Conclusion and Further Investigation}{71}{chapter.186}
+\contentsline {section}{\numberline {7.1}Conclusion}{71}{section.187}
+\contentsline {section}{\numberline {7.2}Further Investigation}{71}{section.188}
+\contentsline {chapter}{\numberline {A}Stochastic Calculus and Probability Theory}{73}{appendix.189}
+\contentsline {chapter}{\numberline {B}Code Implementation}{75}{appendix.200}
+\contentsline {chapter}{\numberline {C}Additional Material for CRR, LSM, and MLP I}{76}{appendix.203}
+\contentsline {section}{\numberline {C.1}Moment Matching CRR}{76}{section.204}
+\contentsline {section}{\numberline {C.2}Convergence for LSM and MLP I}{78}{section.208}
+\contentsline {subsection}{\numberline {C.2.1}LSM}{78}{subsection.209}
+\contentsline {subsection}{\numberline {C.2.2}MLP I}{78}{subsection.212}
+\contentsline {section}{\numberline {C.3}LSM Lower Bound}{79}{section.216}
+\contentsline {chapter}{\numberline {D}Additional Tables and Figures}{80}{appendix.218}
+\contentsline {section}{\numberline {D.1}Tables}{80}{section.219}
+\contentsline {section}{\numberline {D.2}Figures}{82}{section.222}
+\contentsline {chapter}{Bibliography}{86}{appendix*.229}
