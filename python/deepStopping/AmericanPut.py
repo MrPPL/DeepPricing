@@ -1,3 +1,24 @@
+"""
+///////////////////////// TOP OF FILE COMMENT BLOCK ////////////////////////////
+//
+// Title:           LSM and MLP I pricing methods
+// Course:          Master's thesis, 2020
+//
+// Author:          Peter Pommergård Lind
+// Email:           ppl_peter@protonmail.com
+// Encoding:        utf-8
+///////////////////////////////// CITATIONS ////////////////////////////////////
+//
+// Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron Courville
+// Neural network regression for Bermudan option pricing 
+// by Bernard Lapeyre and Jérôme Lelong
+// Valuing American Options by Simulation: A Simple Least-Squares Approach
+// by Francis A. Longstaff and Eduardo S. Schwartz
+// Build on Luphord's Github: https://github.com/luphord/longstaff_schwartz
+//
+/////////////////////////////// 80 COLUMNS WIDE ////////////////////////////////
+"""
+
 
 from longstaff_schwartz.algorithm import longstaff_schwartz
 import sys 

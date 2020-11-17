@@ -1,3 +1,20 @@
+"""
+///////////////////////// TOP OF FILE COMMENT BLOCK ////////////////////////////
+//
+// Title:           Plot of LSM regression and stopping time
+// Course:          Master's thesis, 2020
+//
+// Author:          Peter Pommergård Lind
+// Email:           ppl_peter@protonmail.com
+// Encoding:        utf-8
+///////////////////////////////// CITATIONS ////////////////////////////////////
+//
+// Valuing American Options by Simulation: A Simple Least-Squares Approach
+// by Francis A. Longstaff and Eduardo S. Schwartz
+// Build on Luphord's Github: https://github.com/luphord/longstaff_schwartz
+//
+/////////////////////////////// 80 COLUMNS WIDE ////////////////////////////////
+"""
 import numpy as np
 from numpy.random import RandomState
 from numpy.polynomial import Polynomial

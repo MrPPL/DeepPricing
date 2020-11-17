@@ -1,6 +1,19 @@
-##########
-## Tree method 2-dimensionel inspired by BEG
-##########
+"""
+///////////////////////// TOP OF FILE COMMENT BLOCK ////////////////////////////
+//
+// Title:           BEG model with two underlying stocks
+// Course:          Master's thesis, 2020
+//
+// Author:          Peter Pommergård Lind
+// Email:           ppl_peter@protonmail.com
+// Encoding:        utf-8
+///////////////////////////////// CITATIONS ////////////////////////////////////
+//
+// Numerical Evaluation of Multivariate Contingent Claims 
+// by Phelim P. Boyle, Jeremy Evnine, and Stephen Gibbs
+//
+/////////////////////////////// 80 COLUMNS WIDE ////////////////////////////////
+"""
 import numpy as np
 import datetime
 def BEG(Nstep, T, sigma1, sigma2, r, rho, S10, S20, K, amer):

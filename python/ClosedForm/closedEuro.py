@@ -1,8 +1,8 @@
 """
 ///////////////////////// TOP OF FILE COMMENT BLOCK ////////////////////////////
 //
-// Title:           Monte Carlo simulation of stock with constant volatility and risk free rate
-// Course:          Master thesis, 2020
+// Title:           European call and European put pricing in Black-Scholes Model
+// Course:          Master's thesis, 2020
 //
 // Author:          Peter Pommergård Lind
 // Email:           ppl_peter@protonmail.com

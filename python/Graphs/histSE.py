@@ -1,3 +1,23 @@
+"""
+///////////////////////// TOP OF FILE COMMENT BLOCK ////////////////////////////
+//
+// Title:           Plot of price predictions from CRR, MLP I and LSM
+// Course:          Master's thesis, 2020
+//
+// Author:          Peter Pommergård Lind
+// Email:           ppl_peter@protonmail.com
+// Encoding:        utf-8
+///////////////////////////////// CITATIONS ////////////////////////////////////
+//
+// Option Pricing: A Simplified Approach 
+// by John C. Cox, Stephen A. Ross, and Mark Rubinstein
+// Neural network regression for Bermudan option pricing 
+// by Bernard Lapeyre and Jérôme Lelong
+// Valuing American Options by Simulation: A Simple Least-Squares Approach
+// by Francis A. Longstaff and Eduardo S. Schwartz
+//
+/////////////////////////////// 80 COLUMNS WIDE ////////////////////////////////
+"""
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt

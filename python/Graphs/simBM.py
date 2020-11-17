@@ -1,9 +1,17 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Sat May  2 10:32:53 2020
-
-@author: ppl
+///////////////////////// TOP OF FILE COMMENT BLOCK ////////////////////////////
+//
+// Title:           Simulation of Wiener Process
+// Course:          Master's thesis, 2020
+//
+// Author:          Peter Pommergård Lind
+// Email:           ppl_peter@protonmail.com
+// Encoding:        utf-8
+///////////////////////////////// CITATIONS ////////////////////////////////////
+//
+// Arbitrage Theory in Continuous Time Finance by Tomas Björk
+//
+/////////////////////////////// 80 COLUMNS WIDE ////////////////////////////////
 """
 import numpy as np
 import matplotlib.pyplot as plt

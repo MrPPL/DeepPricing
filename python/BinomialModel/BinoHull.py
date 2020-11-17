@@ -1,3 +1,19 @@
+"""
+///////////////////////// TOP OF FILE COMMENT BLOCK ////////////////////////////
+//
+// Title:           CRR pricing model
+// Course:          Master's thesis, 2020
+//
+// Author:          Peter Pommergård Lind
+// Email:           ppl_peter@protonmail.com
+// Encoding:        utf-8
+///////////////////////////////// CITATIONS ////////////////////////////////////
+//
+// Option Pricing: A Simplified Approach 
+// by John C. Cox, Stephen A. Ross, and Mark Rubinstein
+//
+/////////////////////////////// 80 COLUMNS WIDE ////////////////////////////////
+"""
 #Binomial tree in Hull p 453 
 #packages
 import numpy as np

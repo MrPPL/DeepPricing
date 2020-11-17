@@ -1,3 +1,22 @@
+"""
+///////////////////////// TOP OF FILE COMMENT BLOCK ////////////////////////////
+//
+// Title:           Price predictions based on trained models for European call,
+//                  American put, and American put minimum on two stocks
+// Course:          Master's thesis, 2020
+//
+// Author:          Peter Pommergård Lind
+// Email:           ppl_peter@protonmail.com
+// Encoding:        utf-8
+///////////////////////////////// CITATIONS ////////////////////////////////////
+//
+// Deep Learning by Ian Goodfellow, Yoshua Bengio, and Aaron Courville
+// Supervised Deep Neural Networks (DNNs) for Pricing/Calibration of 
+// Vanilla/Exotic Options Under Various Different Processes
+// by Tugce Karatas, Amir Oskoui, and Ali Hirsa
+//
+/////////////////////////////// 80 COLUMNS WIDE ////////////////////////////////
+"""
 
 import numpy as np
 import torch

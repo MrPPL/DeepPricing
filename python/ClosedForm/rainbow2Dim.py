@@ -1,5 +1,20 @@
-#article http://finmod.co.za/Pricing%20Rainbow%20Options.pdf
-#rainbow options
+"""
+///////////////////////// TOP OF FILE COMMENT BLOCK ////////////////////////////
+//
+// Title:           Pricing of Maximum call, minimum call, and minimum put with two
+//                  assets
+// Course:          Master's thesis, 2020
+//
+// Author:          Peter Pommergård Lind
+// Email:           ppl_peter@protonmail.com
+// Encoding:        utf-8
+///////////////////////////////// CITATIONS ////////////////////////////////////
+//
+// Pricing Rainbow Options
+// URL: http://finmod.co.za/Pricing%20Rainbow%20Options.pdf
+//
+/////////////////////////////// 80 COLUMNS WIDE ////////////////////////////////
+"""
 import numpy as np
 from scipy.stats import multivariate_normal
 

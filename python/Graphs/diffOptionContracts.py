@@ -1,14 +1,19 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
-Created on Thu May 14 21:57:02 2020
-
-@author: ppl
+///////////////////////// TOP OF FILE COMMENT BLOCK ////////////////////////////
+//
+// Title:           Plot of European call and European put pricing in B-S Model
+// Course:          Master's thesis, 2020
+//
+// Author:          Peter Pommergård Lind
+// Email:           ppl_peter@protonmail.com
+// Encoding:        utf-8
+///////////////////////////////// CITATIONS ////////////////////////////////////
+//
+// Options, Futures, and Other Derivatives by John C. Hull 10th edition
+//
+/////////////////////////////// 80 COLUMNS WIDE ////////////////////////////////
 """
 import numpy as np
-
-
-"""This file is basically to graph all the option pricing contracts"""
 
 def EuroCall(K,S):
     return ( max(S-K, 0))
